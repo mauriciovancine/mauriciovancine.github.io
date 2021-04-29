@@ -5,12 +5,20 @@
     <link>https://mauriciovancine.github.io/</link>
       <atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Maurício Vancine</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Maurício Vancine 2021</copyright><lastBuildDate>Fri, 02 Apr 2021 14:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Maurício Vancine 2021</copyright><lastBuildDate>Fri, 16 Apr 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mauriciovancine.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Maurício Vancine</title>
       <link>https://mauriciovancine.github.io/</link>
     </image>
+    
+    <item>
+      <title>Distribution of macroalgal epiphytes and host species from the Cuban marine shelf inferred from ecological modelling</title>
+      <link>https://mauriciovancine.github.io/publication/2021-jover-etal/</link>
+      <pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publication/2021-jover-etal/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cartography Applications for Spatial Ecology</title>
@@ -311,14 +319,6 @@
       <link>https://mauriciovancine.github.io/publication/2017-beca-etal/</link>
       <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/publication/2017-beca-etal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Distribution of macroalgal epiphytes and host species from the Cuban marine shelf inferred from ecological modelling</title>
-      <link>https://mauriciovancine.github.io/publication/2021-capote-etal/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mauriciovancine.github.io/publication/2021-capote-etal/</guid>
       <description></description>
     </item>
     
