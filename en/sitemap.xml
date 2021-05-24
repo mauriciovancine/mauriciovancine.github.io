@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://mauriciovancine.github.io/publication-type/2/</loc>
-    <lastmod>2021-04-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -14,6 +14,141 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://mauriciovancine.github.io/publication-type/2/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://mauriciovancine.github.io/authors/</loc>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://mauriciovancine.github.io/pt/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mauriciovancine.github.io/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://mauriciovancine.github.io/author/erison-carlos-monteiro/</loc>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://mauriciovancine.github.io/pt/author/erison-carlos-monteiro/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mauriciovancine.github.io/author/erison-carlos-monteiro/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://mauriciovancine.github.io/publication/2021-monteiro-etal/</loc>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://mauriciovancine.github.io/pt/publication/2021-monteiro-etal/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mauriciovancine.github.io/publication/2021-monteiro-etal/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://mauriciovancine.github.io/author/marco-aurelio-pizo/</loc>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://mauriciovancine.github.io/pt/author/marco-aurelio-pizo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mauriciovancine.github.io/author/marco-aurelio-pizo/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://mauriciovancine.github.io/author/mauricio-h.-vancine/</loc>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://mauriciovancine.github.io/pt/author/mauricio-h.-vancine/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mauriciovancine.github.io/author/mauricio-h.-vancine/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://mauriciovancine.github.io/</loc>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://mauriciovancine.github.io/pt/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mauriciovancine.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://mauriciovancine.github.io/author/milton-cezar-ribeiro/</loc>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://mauriciovancine.github.io/pt/author/milton-cezar-ribeiro/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mauriciovancine.github.io/author/milton-cezar-ribeiro/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://mauriciovancine.github.io/publication_types/</loc>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://mauriciovancine.github.io/pt/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mauriciovancine.github.io/publication_types/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://mauriciovancine.github.io/publication/</loc>
+    <lastmod>2021-05-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://mauriciovancine.github.io/pt/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mauriciovancine.github.io/publication/"
                 />
   </url>
   
@@ -78,21 +213,6 @@
   </url>
   
   <url>
-    <loc>https://mauriciovancine.github.io/authors/</loc>
-    <lastmod>2021-04-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://mauriciovancine.github.io/pt/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mauriciovancine.github.io/authors/"
-                />
-  </url>
-  
-  <url>
     <loc>https://mauriciovancine.github.io/publication/2021-jover-etal/</loc>
     <lastmod>2021-04-16T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -134,66 +254,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://mauriciovancine.github.io/author/jose-lucas-perez-llorens/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://mauriciovancine.github.io/author/mauricio-h.-vancine/</loc>
-    <lastmod>2021-04-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://mauriciovancine.github.io/pt/author/mauricio-h.-vancine/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mauriciovancine.github.io/author/mauricio-h.-vancine/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://mauriciovancine.github.io/</loc>
-    <lastmod>2021-04-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://mauriciovancine.github.io/pt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mauriciovancine.github.io/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://mauriciovancine.github.io/publication_types/</loc>
-    <lastmod>2021-04-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://mauriciovancine.github.io/pt/publication_types/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mauriciovancine.github.io/publication_types/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://mauriciovancine.github.io/publication/</loc>
-    <lastmod>2021-04-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://mauriciovancine.github.io/pt/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mauriciovancine.github.io/publication/"
                 />
   </url>
   
@@ -633,21 +693,6 @@
   </url>
   
   <url>
-    <loc>https://mauriciovancine.github.io/author/marco-aurelio-pizo/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://mauriciovancine.github.io/pt/author/marco-aurelio-pizo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mauriciovancine.github.io/author/marco-aurelio-pizo/"
-                />
-  </url>
-  
-  <url>
     <loc>https://mauriciovancine.github.io/author/natalia-stefanini-da-silveira/</loc>
     <lastmod>2021-01-24T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -944,21 +989,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://mauriciovancine.github.io/author/lucas-augusto-pereira/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://mauriciovancine.github.io/author/milton-cezar-ribeiro/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://mauriciovancine.github.io/pt/author/milton-cezar-ribeiro/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mauriciovancine.github.io/author/milton-cezar-ribeiro/"
                 />
   </url>
   
