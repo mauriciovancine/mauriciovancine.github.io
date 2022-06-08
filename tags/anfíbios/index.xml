@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anfíbios on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/anf%C3%ADbios/</link>
+    <description>Recent content in Anfíbios on Maurício Vancine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 03 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/anf%C3%ADbios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Atlantic Amphibians</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-amphibians/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/project/atlantic-amphibians/</guid>
+      <description>Tachyons is a design system that allows you to design gorgeous interfaces in the browser with little effort.      Because Speed     Building this static site generator theme was the first time I used an Atomic (or Functional) CSS system like Tachyons. It&amp;rsquo;s a design system that provides very small (which means fast) CSS modules that you can use in your HTML. So, rather than writing every line of CSS, you apply the style you need as you write your HTML with easy to understand shorthand class names.</description>
+    </item>
+    
+    <item>
+      <title>Land-use changes and the expansion of biofuel crops threaten the giant anteater in southeastern Brazil</title>
+      <link>https://mauriciovancine.github.io/publications/anteater-sp/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/anteater-sp/</guid>
+      <description>Mapeamos a adequabilidade de habitat da população de tamanduás-bandeira no estado de São Paulo, avaliando a contribuição dos principais preditores à adequabilidade, e quantificamos esses habitat em áreas de proteção ambiental e em áreas ameaçadas pela expansão da cana-de-açúcar.</description>
+    </item>
+    
+    <item>
+      <title>ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America</title>
+      <link>https://mauriciovancine.github.io/publications/af-amp/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/af-amp/</guid>
+      <description>Compilamos comunidades de anfíbios ao longo do Bioma da Mata Atântica.</description>
+    </item>
+    
+    <item>
+      <title>Impacts of mining activities on the potential geographic distribution of eastern Brazil mountaintop endemic species</title>
+      <link>https://mauriciovancine.github.io/publications/div-mining-mg/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/div-mining-mg/</guid>
+      <description>Utilizamos Modelagem de Distribuição de Espécies para avaliar como as cavas de mineração podem impactar a diversidade de espécies de anfíbios e aves endêmicas da Serra do Espinhaço em Minas Gerais.</description>
+    </item>
+    
+  </channel>
+</rss>

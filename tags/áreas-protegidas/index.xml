@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Áreas protegidas on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/%C3%A1reas-protegidas/</link>
+    <description>Recent content in Áreas protegidas on Maurício Vancine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 23 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/%C3%A1reas-protegidas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Climate change impacts on the Copernicia alba and Copernicia prunifera (Arecaceae) distribution in South America</title>
+      <link>https://mauriciovancine.github.io/publications/palms-climate-change/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/palms-climate-change/</guid>
+      <description>Analisamos como as mudanças climáticas afetam a distribuição de duas palmeiras do gênero Copernicia na América do Sul.</description>
+    </item>
+    
+    <item>
+      <title>Effects of climate change on distribution and areas that protect two neotropical marsupials associated with aquatic environments</title>
+      <link>https://mauriciovancine.github.io/publications/mammals-climate-change/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/mammals-climate-change/</guid>
+      <description>Analisamos como as mudanças climáticas afetam a distribuição de duas espécies de mamíferos marsupiais aquáticos na América do Sul.</description>
+    </item>
+    
+    <item>
+      <title>Efficiency of protected areas in Amazon and Atlantic Forest conservation: A spatio-temporal view</title>
+      <link>https://mauriciovancine.github.io/publications/af-ma-forest-conservation/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/af-ma-forest-conservation/</guid>
+      <description>Testamos a eficiência das áreas protegidas atuais em manter áreas climaticamente estáveis nos Biomas da Amazônia e Mata Atlântica.</description>
+    </item>
+    
+  </channel>
+</rss>

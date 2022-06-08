@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Palestra on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/categories/palestra/</link>
+    <description>Recent content in Palestra on Maurício Vancine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 04 Nov 2021 14:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/categories/palestra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modelos em Ecologia: extrapolando nosso conhecimento sobre a distribuição das espécies</title>
+      <link>https://mauriciovancine.github.io/talk/talk-sdm-uff/</link>
+      <pubDate>Thu, 04 Nov 2021 14:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/talk/talk-sdm-uff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aplicações da Cartografia para a Ecologia Espacial</title>
+      <link>https://mauriciovancine.github.io/talk/talk-espacial-uff/</link>
+      <pubDate>Fri, 02 Apr 2021 14:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/talk/talk-espacial-uff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introdução à Modelagem de Nicho Ecológico</title>
+      <link>https://mauriciovancine.github.io/talk/talk-enm-gggc/</link>
+      <pubDate>Thu, 16 Jul 2020 10:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/talk/talk-enm-gggc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modelos de Distribuição de Espécies: uma visão geral</title>
+      <link>https://mauriciovancine.github.io/talk/talk-sdm-gggc/</link>
+      <pubDate>Thu, 05 Mar 2020 09:30:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/talk/talk-sdm-gggc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ATLANTIC AMPHIBIANS: Conjunto de Dados de Comunidades de Anfíbios da Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/talk/talk-data-paper-amphibians-anfoco/</link>
+      <pubDate>Sat, 04 Aug 2018 16:30:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/talk/talk-data-paper-amphibians-anfoco/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
