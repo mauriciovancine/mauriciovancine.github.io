@@ -2,10 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mauriciovancine.github.io/tags/book/</loc>
-    <lastmod>2022-05-31T00:00:00+00:00</lastmod>
+    <loc>https://mauriciovancine.github.io/categories/artigo/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/categories/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/publications/palms-cc/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/conserva%C3%A7%C3%A3o/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/modelagem-de-nicho-ecol%C3%B3gico/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/mudan%C3%A7as-clim%C3%A1ticas/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/palmeiras/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/publications/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/%C3%A1reas-protegidas/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/book/</loc>
     <lastmod>2022-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/paper/</loc>
@@ -14,14 +44,8 @@
     <loc>https://mauriciovancine.github.io/publication/</loc>
     <lastmod>2022-05-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/tags/</loc>
-    <lastmod>2022-05-31T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/talk/podcast-desabracando-arveores-r/</loc>
     <lastmod>2022-05-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/categories/</loc>
-    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/talk/</loc>
     <lastmod>2022-05-15T00:00:00+00:00</lastmod>
@@ -35,44 +59,20 @@
     <loc>https://mauriciovancine.github.io/categories/v%C3%ADdeo/</loc>
     <lastmod>2022-05-13T13:13:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/categories/artigo/</loc>
-    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
+    <loc>https://mauriciovancine.github.io/publications/mammals-cc/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/mam%C3%ADferos/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/morcegos/</loc>
-    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/mudan%C3%A7as-clim%C3%A1ticas/</loc>
     <lastmod>2022-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/publications/bat-sarbeco/</loc>
     <lastmod>2022-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/publications/</loc>
-    <lastmod>2022-04-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/tags/sarbecov%C3%ADrus/</loc>
     <lastmod>2022-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/publications/palms-climate-change/</loc>
-    <lastmod>2022-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/conserva%C3%A7%C3%A3o/</loc>
-    <lastmod>2022-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/publications/mammals-climate-change/</loc>
-    <lastmod>2022-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/mam%C3%ADferos/</loc>
-    <lastmod>2022-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/modelagem-de-nicho-ecol%C3%B3gico/</loc>
-    <lastmod>2022-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/palmeiras/</loc>
-    <lastmod>2022-02-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/%C3%A1reas-protegidas/</loc>
-    <lastmod>2022-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/publications/eco-r/</loc>
     <lastmod>2022-02-22T00:00:00+00:00</lastmod>
@@ -110,7 +110,7 @@
     <loc>https://mauriciovancine.github.io/tags/evolu%C3%A7%C3%A3o/</loc>
     <lastmod>2022-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/publications/palms-climate-change/</loc>
+    <loc>https://mauriciovancine.github.io/publications/network-seed-af/</loc>
     <lastmod>2022-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/fragmenta%C3%A7%C3%A3o/</loc>
@@ -152,29 +152,68 @@
     <loc>https://mauriciovancine.github.io/categories/palestra/</loc>
     <lastmod>2021-11-04T14:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/talk/video-fmsr-grass-sr/</loc>
-    <lastmod>2021-09-22T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/tags/mam%C3%ADgero/</loc>
-    <lastmod>2021-09-03T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/paisagem/</loc>
-    <lastmod>2021-09-03T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/perda-e-fragmenta%C3%A7%C3%A3o-de-habitat/</loc>
-    <lastmod>2021-09-03T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/publications/ungulate-landscape/</loc>
-    <lastmod>2021-09-03T00:00:00+00:00</lastmod>
+    <loc>https://mauriciovancine.github.io/publications/frag-ung/</loc>
+    <lastmod>2021-11-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/%C3%A1reas-priorit%C3%A1rias/</loc>
-    <lastmod>2021-09-03T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/argentina/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/boar/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/invasion/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/publications/boar-ung-inv/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/modelos-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/ungulate/</loc>
+    <lastmod>2021-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/talk/video-fmsr-grass-sr/</loc>
+    <lastmod>2021-09-22T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/talk/video-geocast-grass-intro/</loc>
     <lastmod>2021-08-18T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/talk/video-geocast-apero/</loc>
     <lastmod>2021-07-30T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/cuba/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/publications/algae-cuba/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/epifitismo/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/macroalga/</loc>
+    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/am%C3%A9rica-do-sul/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/aves/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/publications/birds-cc/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/talk/video-geocast-curso-r-geokrigagem/</loc>
     <lastmod>2021-04-13T00:00:00+00:00</lastmod>
@@ -211,6 +250,21 @@
   </url><url>
     <loc>https://mauriciovancine.github.io/categories/tutorial/</loc>
     <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/comunidades/</loc>
+    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/global/</loc>
+    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/publications/bird-mite-wl/</loc>
+    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/macroecologia/</loc>
+    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/%C3%A1caro-de-penas-de-aves/</loc>
+    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/blog/geo-crs-datum/</loc>
     <lastmod>2021-02-20T00:00:00+00:00</lastmod>
@@ -287,6 +341,24 @@
     <loc>https://mauriciovancine.github.io/talk/talk-sdm-gggc/</loc>
     <lastmod>2020-03-05T09:30:00+00:00</lastmod>
   </url><url>
+    <loc>https://mauriciovancine.github.io/publications/palms-inv-af/</loc>
+    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/mata-atl%C3%A2ntica/</loc>
+    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/mudan%C3%A7a-clim%C3%A1tica/</loc>
+    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/borboletas/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/publications/butter-af/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/publications/seed-af/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mauriciovancine.github.io/tags/callithrix/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -296,7 +368,7 @@
     <loc>https://mauriciovancine.github.io/tags/modelagem-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/publications/primates-hibrid/</loc>
+    <loc>https://mauriciovancine.github.io/publications/prim-hibrid/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/primatas/</loc>
@@ -321,9 +393,6 @@
     <lastmod>2019-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/project/lsmetrics/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/mata-atl%C3%A2ntica/</loc>
     <lastmod>2019-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/m%C3%A9tricas-de-paisagem/</loc>
@@ -353,9 +422,6 @@
     <loc>https://mauriciovancine.github.io/tags/amostragem/</loc>
     <lastmod>2019-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/tags/comunidades/</loc>
-    <lastmod>2019-04-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/publications/anteater-sp/</loc>
     <lastmod>2019-04-24T00:00:00+00:00</lastmod>
   </url><url>
@@ -368,12 +434,6 @@
     <loc>https://mauriciovancine.github.io/form/</loc>
     <lastmod>2019-02-25T13:38:41-06:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/publications/af-lim/</loc>
-    <lastmod>2018-10-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/limite-geogr%C3%A1fico/</loc>
-    <lastmod>2018-10-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/publications/trypanosoma-pr/</loc>
     <lastmod>2018-10-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -383,7 +443,7 @@
     <loc>https://mauriciovancine.github.io/talk/talk-data-paper-amphibians-anfoco/</loc>
     <lastmod>2018-08-04T16:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/publications/af-amp/</loc>
+    <loc>https://mauriciovancine.github.io/publications/atlantic-amphibians/</loc>
     <lastmod>2018-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/biodiversidade-neotropical/</loc>
@@ -404,20 +464,23 @@
     <loc>https://mauriciovancine.github.io/categories/tese/</loc>
     <lastmod>2018-06-29T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mauriciovancine.github.io/publications/limit-af/</loc>
+    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/limite-geogr%C3%A1fico/</loc>
+    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mauriciovancine.github.io/tags/amaz%C3%B4nia/</loc>
     <lastmod>2018-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/publications/af-ma-forest-conservation/</loc>
+    <loc>https://mauriciovancine.github.io/publications/forest-cons-af-am/</loc>
     <lastmod>2018-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/publications/mammals-landscape-sc/</loc>
+    <loc>https://mauriciovancine.github.io/publications/frag-mm-sc/</loc>
     <lastmod>2017-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/santa-catarina/</loc>
     <lastmod>2017-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/aves/</loc>
-    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/publications/div-mining-mg/</loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
@@ -431,7 +494,7 @@
     <loc>https://mauriciovancine.github.io/tags/diversidade-beta/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/publications/mammals-landscape-sp/</loc>
+    <loc>https://mauriciovancine.github.io/publications/frag-mm-sp/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/adequabilidade-de-habitat/</loc>

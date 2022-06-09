@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modelos de Distribuição de Espécies on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/modelos-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/</link>
+    <description>Recent content in Modelos de Distribuição de Espécies on Maurício Vancine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/modelos-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Invasive wild boar’s distribution overlap with threatened native ungulate in Patagonia</title>
+      <link>https://mauriciovancine.github.io/publications/boar-ung-inv/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/boar-ung-inv/</guid>
+      <description>Predizemos a expansão da distribuição e a potencial sobresição geográfico entre espécis de Callithrix nos Biomas da Mata Atlântica e Cerraso e discutimos estratégias de manejo.</description>
+    </item>
+    
+    <item>
+      <title>Effects of landscape modification on species richness patterns of fruit-feeding butterflies in Brazilian Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/butter-af/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/butter-af/</guid>
+      <description>Predizemos a expansão da distribuição e a potencial sobresição geográfico entre espécis de Callithrix nos Biomas da Mata Atlântica e Cerraso e discutimos estratégias de manejo</description>
+    </item>
+    
+    <item>
+      <title>Fragmented tropical forests lose mutualistic plant-animal interactions</title>
+      <link>https://mauriciovancine.github.io/publications/seed-af/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/seed-af/</guid>
+      <description>Avaliamos como a fragmentaçãoa influencia as interações par-a-par entre 407 espécies de dispersores de sementes e 1424 espécies de árvores em um hotspot de biodiversidade altamente fragmentado</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,8 @@
+Skin = {
+
+    PRIMARY_COLOR: "#007D00",
+    PRIMARY_COLOR_LIGHT: "#00bc00",
+    PRIMARY_COLOR_DARK: "#004b00",
+    LINK_COLOR: "#007D00"
+
+};

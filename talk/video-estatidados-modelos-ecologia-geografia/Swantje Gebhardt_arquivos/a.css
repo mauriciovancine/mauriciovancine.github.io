@@ -1,0 +1,283 @@
+/****************************
+* Primary color
+****************************/
+
+/* Backgrounds image */
+#page-header .primary {
+  background-image: none;
+}
+
+#search_banner {
+  background-image: url(/skin/savedSearchBannerImage/);
+}
+
+@media (min-width: 480px) {
+  #page-header .primary-right-background {
+    background-image: none;
+  }
+}
+
+.page-section-header-home-index.has-backdrop-image,
+.page-section-header-home-index.improvedLayout.has-backdrop-image {
+  background-image: url(/skin/searchBackdropImage/);
+}
+
+/* Backgrounds color */
+#page-header .primary,
+#back-to-top .icon,
+.pages .currentStep,
+.btn-primary:hover,
+.btn-primary:focus,
+.sub-logo-banner.improvedLayout,
+.about-text.improvedLayout,
+.share-box {
+  background-color: #007D00;
+}
+
+/* Community Portal Banner */
+.community-portal-banner {
+  background-color: #000000;
+}
+
+.community-portal-banner a:link, .community-portal-banner a:visited {
+  color: #ffffff;
+}
+
+/* Colors */
+.button-row > li > a:hover,
+.button-row > li.selected a,
+.content-profile-navigation nav li.selected i.icon,
+.page-section-content-home-index ul.home-menu li a:hover .icon,
+.page-section-content-home-index ul.home-menu li a:focus .icon,
+.page-section-content-home-index div.secondary li a:hover .icon,
+.page-section-content-home-index div.secondary li a:focus .icon,
+.global-search .search-submit button:hover .icon,
+.global-search .search-filter-toggle a:hover,
+.global-search .search-filter-toggle a.enabled,
+.global-search-wrapper .search-cp-link a:hover .icon,
+.content-icon-menu ul li a:hover .icon,
+.content-icon-menu ul li a:focus .icon,
+.dropdown-menu strong,
+.dropdown-menu strong,
+.content-navigation ul.has-overflow-navigation li a:hover i,
+.content-navigation ul.has-overflow-navigation li a:focus i,
+.content-navigation ul.has-overflow-navigation li button:hover i.icon,
+.content-navigation ul.has-overflow-navigation li button:focus i.icon,
+.tooltip-container button:hover i,
+.tooltip-container button:focus i
+.btn-search-filter-popup, .btn-search-filter-show-more, .btn-search-filter-show-less,
+.search-result-top .search-tools li.search-orderings button, .btn-search-filter-popup,
+.toggle-responsive-map:hover:after{
+  color: #007D00;
+}
+
+/* Borders */
+.btn-primary,
+#page-header .secondary nav.content-navigation li.selected a,
+.content-profile-navigation nav li.selected a {
+  border-color: #007D00;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+/****************************
+* Primary color (light)
+****************************/
+
+.global-search.focus,
+.search-cp-link a:focus {
+  box-shadow: 0 0 5px 0 rgba(0, 188, 0, 0.2);
+}
+
+/****************************
+* Link color
+****************************/
+
+/* Backgrounds */
+.dropdown-container > ul .selected > a,
+.dropdown-container > ul .selected > a:hover,
+.dropdown-container > ul > .selected > a:focus,
+.dropdown-container [role="option"].selected,
+.dropdown-container [role="option"].selected:hover,
+.dropdown-container [role="option"].selected:focus,
+.custom-select > ul li.selected,
+.custom-select > ul li.selected:hover,
+.custom-select > ul > li.selected:focus,
+.inline-trend-graph .bar,
+.skip-content a {
+  background-color: #007D00;
+}
+
+/****************************
+* Link color visited
+****************************/
+a:visited {
+  color: #007D00
+}
+
+/****************************
+* Link color focus
+****************************/
+.page-section.welcome a:focus,
+.search-all-content:hover, .search-all-content:focus, .media .ref a:hover,
+button.popup-collaborators:hover, button.popup-collaborators:focus {
+  text-decoration: underline;
+}
+
+#back-to-top button:focus i {
+  background: #007D00;
+}
+
+/****************************
+* Concept search
+****************************/
+.search-concept-result {
+  border: 1px solid #007D00;
+  background-color: rgba(0, 188, 0, 0.1);
+}
+
+/* Colors */
+a, .btn-primary, .search-concept-result a:visited, .portal_link, .author-link, .language_btn, .has-overflow-navigation button, ul.tabs li, #main-search .global-search .form-field-dropdown .btn, .rendering_equipment_equipmentownerportal a, .search-menu a:visited, #search_banner a p.linktext,
+[role="tab"], #main-search .global-search .form-field-dropdown .btn, .rendering_equipment_equipmentownerportal a, #publication-trends, ul.content-statistics button, button.popup-collaborators {
+  color: #007D00;
+}
+
+#page-footer {
+  border-top: 2px solid #007D00;
+}
+
+ul.has-overflow-navigation.li.dropdown-overflow {
+  color: #007D00;
+}
+
+ul.has-overflow-navigation.li.dropdown-overflow {
+  color: #007D00;
+}
+
+.tooltip-container .icon.activate,
+.tooltip-container button:hover .icon,
+.tooltip-container button:focus .icon {
+  color: #007D00;
+}
+
+/*
+rendering_person_personsocialmediaorcidrendererportal - is here to support backwards compatibility
+*/
+.rendering_person_personsocialmediaorcidrendererportal, .rendering_person_personsocialmediarendererportal {
+  .link:hover {
+    color: #007D00 !important;
+  }
+}
+
+.slick-next, .slick-next:before, .slick-prev, .slick-prev:before {
+  color: #007D00 !important;
+}
+
+.has-overflow-navigation.improvedLayout li {
+  a:hover {
+    color: #007D00 !important;
+  }
+}
+
+.page-section-header-home-index.improvedLayout, .improvedLayout-section .page-section.page-section-home.page-section-home-index.improvedLayout {
+  background-image: none;
+  background-color: #007D00;
+}
+
+ul.improvedLayout-menu li.selected a {
+  border-bottom: solid 2px #007D00;
+
+}
+
+ul.improvedLayout-menu li.selected a:hover {
+  color: #007D00;
+}
+
+.improvedLayout-colloboration-map .form-field-dropdown.dropdown {
+  border: 2px solid #007D00;
+}
+
+/****************************
+* OneTrust Cookie consent
+* v6.10.0
+****************************/
+
+/* General link color */
+body div#onetrust-consent-sdk a,
+body div#onetrust-consent-sdk .ot-host-expand,
+#showCountries,
+.country-list button:hover, .country-list button[aria-expanded="true"],
+button#ot-sdk-btn.ot-sdk-show-settings{
+  color:#007D00 !important;
+}
+
+body #onetrust-pc-sdk .ot-chkbox input[type=checkbox]:checked+label::after {
+  color: #007D00 !important;
+}
+
+#onetrust-pc-sdk #filter-btn-handler{
+  background:#007D00 !important;
+}
+body div#onetrust-consent-sdk path {
+  fill: #fff !important;
+}
+
+/* General styling for cookie consent buttons & svg + hover/focus */
+body div#onetrust-consent-sdk button,
+body #onetrust-pc-sdk .ot-chkbox label::before {
+  background:#fff !important;
+  color:#007D00 !important;
+  border: #007D00 !important;
+  border-width: 2px!important;
+  border-style: solid!important;
+}
+
+/* svg path color */
+div#onetrust-pc-sdk #filter-btn-handler path, div#onetrust-pc-sdk #filter-btn-handler:hover path{
+  fill:#fff !important;
+}
+
+div#onetrust-pc-sdk .ot-link-btn.back-btn-handler path{
+  fill: #007D00!important;
+}
+div#onetrust-pc-sdk .ot-link-btn.back-btn-handler:hover path,
+div#onetrust-pc-sdk .ot-link-btn.back-btn-handler:focus path,
+div#onetrust-consent-sdk #filter-btn-handler:hover path,
+div#onetrust-consent-sdk #filter-btn-handler:focus path{
+  fill: #fff!important;
+}
+
+/* Accept and settings button + hover/focus */
+
+body div#onetrust-consent-sdk #onetrust-accept-btn-handler{
+  background:#fff !important;
+  color:#007D00 !important;
+  border-color: #007D00 !important;
+  border-width: 2px!important;
+  border-style: solid!important;
+}
+
+body div#onetrust-consent-sdk #onetrust-pc-btn-handler{
+  border:none!important;
+  color:#007D00 !important;
+}
+
+body div#onetrust-consent-sdk #onetrust-accept-btn-handler:hover,
+body div#onetrust-consent-sdk #onetrust-accept-btn-handler:focus,
+body div#onetrust-consent-sdk #onetrust-pc-btn-handler:hover,
+body div#onetrust-consent-sdk #onetrust-pc-btn-handler:focus,
+body div#onetrust-consent-sdk .category-host-list-handler:hover,
+body div#onetrust-consent-sdk .category-host-list-handler:focus,
+body div#onetrust-consent-sdk .save-preference-btn-handler:hover,
+body div#onetrust-consent-sdk .save-preference-btn-handler:focus,
+body div#onetrust-consent-sdk .back-btn-handler:hover,
+body div#onetrust-consent-sdk .back-btn-handler:focus,
+body div#onetrust-consent-sdk #clear-filters-handler:hover,
+body div#onetrust-consent-sdk #clear-filters-handler:focus,
+body div#onetrust-consent-sdk #filter-apply-handler:hover,
+body div#onetrust-consent-sdk #filter-apply-handler:focus,
+body div#onetrust-consent-sdk #filter-cancel-handler:hover,
+body div#onetrust-consent-sdk #filter-cancel-handler:focus{
+  background:#007D00 !important;
+  color: #fff!important;
+}

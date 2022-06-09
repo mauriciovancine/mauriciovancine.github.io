@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>gizmo-expand</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="16x16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gizmo-expand" fill-rule="nonzero" fill="#000000">
+            <g transform="translate(1.000000, 1.000000)" id="Shape">
+                <path d="M7.38857143,0.0431428571 L7.38857143,1.47171429 L11.52,1.47171429 L7.02571429,5.966 L8.03714286,6.97628571 L12.5314286,2.482 L12.5314286,6.61342857 L13.96,6.61342857 L13.96,0.042 L7.38857143,0.042 M6.16942857,6.81628571 L1.67514286,11.3105714 L1.67514286,7.17914286 L0.246571429,7.17914286 L0.246571429,13.7505714 L6.818,13.7505714 L6.818,12.322 L2.68657143,12.322 L7.18085714,7.82485714 L6.16942857,6.81342857"></path>
+            </g>
+        </g>
+    </g>
+</svg>

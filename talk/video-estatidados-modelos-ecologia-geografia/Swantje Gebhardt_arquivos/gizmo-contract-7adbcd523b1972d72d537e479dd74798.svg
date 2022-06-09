@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>gizmo-contract</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="16x16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gizmo-contract" fill-rule="nonzero" fill="#000000">
+            <g transform="translate(1.000000, 1.000000)" id="Shape">
+                <path d="M0.492153846,8.65307692 L4.38523077,8.65307692 L0.150230769,12.8880769 L1.10330769,13.8400769 L5.33830769,9.60507692 L5.33830769,13.4981538 L6.68446154,13.4981538 L6.68446154,7.30584615 L0.492153846,7.30584615 L0.492153846,8.652 M13.7517692,1.18623077 L12.7986923,0.2345 L8.56369231,4.4695 L8.56369231,0.576423077 L7.21753846,0.576423077 L7.21753846,6.76873077 L13.4098462,6.76873077 L13.4098462,5.42257692 L9.51407692,5.42257692 L13.7517692,1.18488462"></path>
+            </g>
+        </g>
+    </g>
+</svg>
