@@ -16,5 +16,14 @@
       <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R.</description>
     </item>
     
+    <item>
+      <title>GeoR: Dados Geoespaciais com o R</title>
+      <link>https://mauriciovancine.github.io/teaching/geor/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/geor/</guid>
+      <description>Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R e seu uso para manipulação e visualização de dados tabulares e geoespaciais. Serão abordados temas como controle de versão, git e GitHub; funcionamento da linguagem R; estrutura e manipulação de dados no R; visão geral do tidyverse; visualização de dados tabulares; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.    </description>
+    </item>
+    
   </channel>
 </rss>

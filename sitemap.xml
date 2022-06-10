@@ -74,6 +74,9 @@
     <loc>https://mauriciovancine.github.io/tags/sarbecov%C3%ADrus/</loc>
     <lastmod>2022-04-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mauriciovancine.github.io/tags/an%C3%A1lises-de-dados/</loc>
+    <lastmod>2022-02-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mauriciovancine.github.io/publications/eco-r/</loc>
     <lastmod>2022-02-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -92,14 +95,14 @@
     <loc>https://mauriciovancine.github.io/categories/livro/</loc>
     <lastmod>2022-02-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/tags/projeto/</loc>
-    <lastmod>2022-02-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/categories/projeto/</loc>
     <lastmod>2022-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/project/</loc>
     <lastmod>2022-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/r/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/conectividade/</loc>
     <lastmod>2022-02-01T00:00:00+00:00</lastmod>
@@ -116,6 +119,15 @@
     <loc>https://mauriciovancine.github.io/tags/fragmenta%C3%A7%C3%A3o/</loc>
     <lastmod>2022-02-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mauriciovancine.github.io/project/lsmetrics/</loc>
+    <lastmod>2022-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/m%C3%A9trica-de-paisagem/</loc>
+    <lastmod>2022-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/pacote/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mauriciovancine.github.io/tags/redes-de-intera%C3%A7%C3%A3o/</loc>
     <lastmod>2022-02-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -129,12 +141,6 @@
     <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/categories/geoespacial/</loc>
-    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/pacote/</loc>
-    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/r/</loc>
     <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/categories/r/</loc>
@@ -275,13 +281,13 @@
     <loc>https://mauriciovancine.github.io/talk/video-estatidados-modelos-ecologia-geografia/</loc>
     <lastmod>2020-11-23T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/talk/video-werlive-15/</loc>
+    <loc>https://mauriciovancine.github.io/talk/video-werlive-16/</loc>
     <lastmod>2020-09-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/talk/video-abe-analise-dados/</loc>
     <lastmod>2020-09-17T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/talk/video-werlive-16/</loc>
+    <loc>https://mauriciovancine.github.io/talk/video-werlive-15/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/blog/r-errors/</loc>
@@ -296,7 +302,7 @@
     <loc>https://mauriciovancine.github.io/talk/video-werlive-14/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/talk/video-werlive-10/</loc>
+    <loc>https://mauriciovancine.github.io/talk/video-werlive-13/</loc>
     <lastmod>2020-08-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/talk/video-werlive-11/</loc>
@@ -305,7 +311,7 @@
     <loc>https://mauriciovancine.github.io/talk/talk-enm-gggc/</loc>
     <lastmod>2020-07-16T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/talk/video-werlive-13/</loc>
+    <loc>https://mauriciovancine.github.io/talk/video-werlive-10/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/talk/video-werlive-09/</loc>
@@ -377,49 +383,19 @@
     <loc>https://mauriciovancine.github.io/talk/video-geocast-metricas-paisagem/</loc>
     <lastmod>2019-09-27T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/tags/anf%C3%ADbios/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/project/atlantic-amphibians/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/project/atlantic-spatial/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
+    <loc>https://mauriciovancine.github.io/categories/disciplina/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/teaching/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/hugo-site/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/project/lsmetrics/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/m%C3%A9tricas-de-paisagem/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/categories/package/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/categories/projetos/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/teaching/giraffes/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/categories/theme-features/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/project/gymnophionas/</loc>
-    <lastmod>2019-07-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/teaching/penguins/</loc>
-    <lastmod>2019-07-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/teaching/geor/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/amostragem/</loc>
+    <lastmod>2019-04-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/anf%C3%ADbios/</loc>
     <lastmod>2019-04-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/publications/anteater-sp/</loc>
@@ -433,6 +409,15 @@
   </url><url>
     <loc>https://mauriciovancine.github.io/form/</loc>
     <lastmod>2019-02-25T13:38:41-06:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/project/gymnophionas/</loc>
+    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/hugo-site/</loc>
+    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/categories/projetos/</loc>
+    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/publications/trypanosoma-pr/</loc>
     <lastmod>2018-10-26T00:00:00+00:00</lastmod>
@@ -497,6 +482,12 @@
     <loc>https://mauriciovancine.github.io/publications/frag-mm-sp/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mauriciovancine.github.io/project/atlantic-spatial/</loc>
+    <lastmod>2017-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/m%C3%A9tricas-de-paisagem/</loc>
+    <lastmod>2017-03-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mauriciovancine.github.io/tags/adequabilidade-de-habitat/</loc>
     <lastmod>2015-03-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -511,6 +502,12 @@
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/multiescala/</loc>
     <lastmod>2015-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/project/atlantic-amphibians/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/tra%C3%A7os-funcionais/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/license/</loc>
   </url><url>

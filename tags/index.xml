@@ -98,6 +98,15 @@
     </item>
     
     <item>
+      <title>Análises de dados</title>
+      <link>https://mauriciovancine.github.io/tags/an%C3%A1lises-de-dados/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/an%C3%A1lises-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ecologia</title>
       <link>https://mauriciovancine.github.io/tags/ecologia/</link>
       <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
@@ -125,11 +134,11 @@
     </item>
     
     <item>
-      <title>Projeto</title>
-      <link>https://mauriciovancine.github.io/tags/projeto/</link>
+      <title>R</title>
+      <link>https://mauriciovancine.github.io/tags/r/</link>
       <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/tags/projeto/</guid>
+      <guid>https://mauriciovancine.github.io/tags/r/</guid>
       <description></description>
     </item>
     
@@ -170,6 +179,24 @@
     </item>
     
     <item>
+      <title>Métrica de paisagem</title>
+      <link>https://mauriciovancine.github.io/tags/m%C3%A9trica-de-paisagem/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/m%C3%A9trica-de-paisagem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pacote</title>
+      <link>https://mauriciovancine.github.io/tags/pacote/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/pacote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Redes de interação</title>
       <link>https://mauriciovancine.github.io/tags/redes-de-intera%C3%A7%C3%A3o/</link>
       <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
@@ -184,24 +211,6 @@
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/tags/geoespacial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pacote</title>
-      <link>https://mauriciovancine.github.io/tags/pacote/</link>
-      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/tags/pacote/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://mauriciovancine.github.io/tags/r/</link>
-      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/tags/r/</guid>
       <description></description>
     </item>
     
@@ -494,33 +503,6 @@
     </item>
     
     <item>
-      <title>Anfíbios</title>
-      <link>https://mauriciovancine.github.io/tags/anf%C3%ADbios/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/tags/anf%C3%ADbios/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo-site</title>
-      <link>https://mauriciovancine.github.io/tags/hugo-site/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/tags/hugo-site/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Métricas de paisagem</title>
-      <link>https://mauriciovancine.github.io/tags/m%C3%A9tricas-de-paisagem/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/tags/m%C3%A9tricas-de-paisagem/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Amostragem</title>
       <link>https://mauriciovancine.github.io/tags/amostragem/</link>
       <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
@@ -530,11 +512,29 @@
     </item>
     
     <item>
+      <title>Anfíbios</title>
+      <link>https://mauriciovancine.github.io/tags/anf%C3%ADbios/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/anf%C3%ADbios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Mata Atlantica</title>
       <link>https://mauriciovancine.github.io/tags/mata-atlantica/</link>
       <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/tags/mata-atlantica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo-site</title>
+      <link>https://mauriciovancine.github.io/tags/hugo-site/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/hugo-site/</guid>
       <description></description>
     </item>
     
@@ -638,6 +638,15 @@
     </item>
     
     <item>
+      <title>Métricas de paisagem</title>
+      <link>https://mauriciovancine.github.io/tags/m%C3%A9tricas-de-paisagem/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/m%C3%A9tricas-de-paisagem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Adequabilidade de habitat</title>
       <link>https://mauriciovancine.github.io/tags/adequabilidade-de-habitat/</link>
       <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
@@ -670,6 +679,15 @@
       <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/tags/multiescala/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Traços funcionais</title>
+      <link>https://mauriciovancine.github.io/tags/tra%C3%A7os-funcionais/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/tra%C3%A7os-funcionais/</guid>
       <description></description>
     </item>
     

@@ -24,12 +24,12 @@
   
     
   
-<meta name="description" content="A tachyon /ˈtæki.ɒn/ or tachyonic particle is a hypothetical particle that always moves faster than light.">
+<meta name="description" content="Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS.">
 
 
 <meta property="og:site_name" content="Maurício Vancine">
 <meta property="og:title" content="LSmetrics | Maurício Vancine">
-<meta property="og:description" content="A tachyon /ˈtæki.ɒn/ or tachyonic particle is a hypothetical particle that always moves faster than light." />
+<meta property="og:description" content="Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS." />
 <meta property="og:type" content="page" />
 <meta property="og:url" content="https://mauriciovancine.github.io/project/lsmetrics/" />
 <meta property="og:locale" content="pt-br">
@@ -44,10 +44,11 @@
     
     
   <meta itemprop="name" content="LSmetrics">
-<meta itemprop="description" content="Tachyons is a design system that allows you to design gorgeous interfaces in the browser with little effort.      Because Speed     Building this static site generator theme was the first time I used an Atomic (or Functional) CSS system like Tachyons. It&rsquo;s a design system that provides very small (which means fast) CSS modules that you can use in your HTML. So, rather than writing every line of CSS, you apply the style you need as you write your HTML with easy to understand shorthand class names."><meta itemprop="datePublished" content="2019-07-03T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2019-07-03T00:00:00+00:00" />
-<meta itemprop="wordCount" content="637"><meta itemprop="image" content="https://mauriciovancine.github.io/project/lsmetrics/featured-hex.png">
-<meta itemprop="keywords" content="hugo-site," />
+<meta itemprop="description" content="Mais informações em breve.
+ "><meta itemprop="datePublished" content="2022-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-02-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="4"><meta itemprop="image" content="https://mauriciovancine.github.io/project/lsmetrics/featured-hex.png">
+<meta itemprop="keywords" content="R,Pacote,Métrica de paisagem," />
   
   
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -117,178 +118,66 @@
     <article class="post-content pa0 ph4-l">
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">LSmetrics</h1>
-        <h4 class="f4 mt0 mb4 lh-title measure">A tachyon /ˈtæki.ɒn/ or tachyonic particle is a hypothetical particle that always moves faster than light.</h4>
-        <p class="f6 measure lh-copy mv1">Por Eric Anderson em <a href="https://mauriciovancine.github.io/categories/theme-features">Theme Features</a>  <a href="https://mauriciovancine.github.io/categories/r">R</a>  <a href="https://mauriciovancine.github.io/categories/package">package</a> </p>
-        <p class="f7 db mv0 ttu">July 3, 2019</p>
+        <h4 class="f4 mt0 mb4 lh-title measure">Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS.</h4>
+        <p class="f6 measure lh-copy mv1">Por Bernardo Niebuhr, Mauricio Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro em <a href="https://mauriciovancine.github.io/categories/projeto">Projeto</a> </p>
+        <p class="f7 db mv0 ttu">February 1, 2022</p>
 
+      
+      <div class="ph0 pt5">
+        
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://github.com/LEEClab/lsmetricsr" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>code</a>
+
+
+      </div>
       
 
       </header>
       <section class="post-body pt5 pb4">
-        <p><img src="tachyons-logo-script.png" alt="Tachyons Logo Script"></p>
-
-
-
-
-<h2 id="tachyonshttptachyonsio-is-a-design-system-that-allows-you-to-design-gorgeous-interfaces-in-the-browser-with-little-effort">
-<a href="http://tachyons.io" target="_blank" rel="noopener">Tachyons</a> is a design system that allows you to design gorgeous interfaces in the browser with little effort.
-  <a href="#tachyonshttptachyonsio-is-a-design-system-that-allows-you-to-design-gorgeous-interfaces-in-the-browser-with-little-effort"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0h24v24H0z" fill="currentColor"></path>
-      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
-    </svg></a>
-</h2>
+        <p>Mais informações em breve.</p>
 <hr>
 
-
-
-
-<h3 id="because-speed">Because Speed
-  <a href="#because-speed"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0h24v24H0z" fill="currentColor"></path>
-      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
-    </svg></a>
-</h3>
-<p>Building this static site generator theme was the first time I used an Atomic
-(or Functional) CSS system like Tachyons. It&rsquo;s a design system that provides
-very small (which means fast) CSS modules that you can use in your HTML. So,
-rather than writing every line of CSS, you apply the style you need as you write
-your HTML with easy to understand shorthand class names. This makes for a very
-powerful way to style, in the browser, or while building a static site like this
-one – since you can see every change with every save. <strong>It&rsquo;s a joy to use.</strong></p>
-<p>In using this theme for your next static website project, you won&rsquo;t need to know
-anything about Tachyons &hellip; so, don&rsquo;t freak out. Even though I used it to style
-the theme, you won&rsquo;t need to change a thing. BUT, if you do want to play around
-with it, you can make massive changes very easily. Just familiarize yourself
-with the 
-<a href="http://tachyons.io/docs/" target="_blank" rel="noopener">clear documentation on the design system</a>.
-Once you dive in, you&rsquo;ll recognize all the classes I&rsquo;m using in the markup.</p>
-
-
-
-
-<h3 id="byotachyons">BYOTachyons
-  <a href="#byotachyons"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0h24v24H0z" fill="currentColor"></path>
-      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
-    </svg></a>
-</h3>
-<p>One of the best features of Tachyons is the exhaustive 
-<a href="https://www.tachyonstemplates.com/components/?selectedKind=AboutPages&amp;selectedStory=AboutUs&amp;full=0&amp;down=0&amp;left=1&amp;panelRight=0" target="_blank" rel="noopener">component
-library</a>
-contributed by the community. All those components are built to work with the
-Tachyons classes, so they will work in this theme too! You can copy/paste
-components in order to quickly block out a page, then fill in your content.</p>
-
-
-
-
-<h3 id="taste-the-rainbow">Taste the Rainbow
-  <a href="#taste-the-rainbow"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0h24v24H0z" fill="currentColor"></path>
-      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
-    </svg></a>
-</h3>
-<p>We&rsquo;ve leveraged the 
-<a href="http://tachyons.io/docs/themes/skins/" target="_blank" rel="noopener">accessible color
-combinations</a> included with Tachyons to
-offer an easy way for you to setup your site using your favorite colors. In the
-site configuration file (<code>config.toml</code>), there is a full set of color parameters
-giving you control over the theme color scheme. For an option like <code>siteBgColor</code>
-for example, you can just type one of the predefined color names from Tachyons
-and save the file. You can totally customize the theme colors within minutes of
-installing the theme.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># basic color options: use only color names as shown in the</span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># &#34;Color Palette&#34; section of http://tachyons.io/docs/themes/skins/</span>
-</span></span><span style="display:flex;"><span>siteBgColor = <span style="color:#d14">&#34;near-white&#34;</span>
-</span></span><span style="display:flex;"><span>sidebarBgColor = <span style="color:#d14">&#34;light-gray&#34;</span>
-</span></span><span style="display:flex;"><span>headingColor = <span style="color:#d14">&#34;black&#34;</span>
-</span></span><span style="display:flex;"><span>textColor = <span style="color:#d14">&#34;dark-gray&#34;</span>
-</span></span><span style="display:flex;"><span>sidebarTextColor = <span style="color:#d14">&#34;mid-gray&#34;</span>
-</span></span><span style="display:flex;"><span>bodyLinkColor = <span style="color:#d14">&#34;blue&#34;</span>
-</span></span><span style="display:flex;"><span>navLinkColor = <span style="color:#d14">&#34;near-black&#34;</span>
-</span></span><span style="display:flex;"><span>sidebarLinkColor = <span style="color:#d14">&#34;near-black&#34;</span>
-</span></span><span style="display:flex;"><span>footerTextColor = <span style="color:#d14">&#34;silver&#34;</span>
-</span></span><span style="display:flex;"><span>buttonTextColor = <span style="color:#d14">&#34;near-white&#34;</span>
-</span></span><span style="display:flex;"><span>buttonBgColor = <span style="color:#d14">&#34;black&#34;</span>
-</span></span><span style="display:flex;"><span>buttonHoverTextColor = <span style="color:#d14">&#34;white&#34;</span>
-</span></span><span style="display:flex;"><span>buttonHoverBgColor = <span style="color:#d14">&#34;blue&#34;</span>
-</span></span><span style="display:flex;"><span>borderColor = <span style="color:#d14">&#34;moon-gray&#34;</span>
-</span></span></code></pre></div>
-
-
-
-<h3 id="dig-deeper">Dig Deeper
-  <a href="#dig-deeper"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0h24v24H0z" fill="currentColor"></path>
-      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
-    </svg></a>
-</h3>
-<p>Let&rsquo;s say you have a style guide to follow and <code>washed-blue</code> just won&rsquo;t cut the
-mustard. We built Blogophonic for you, too. There is a bypass of these
-predefined colors built in, you just need to dig a little deeper. In the theme
-assets, locate and open the main SCSS file (<code>/assets/main.scss</code>). After the
-crazy looking variables you probably don&rsquo;t recognize and directly following the
-Tachyons import (<code>@import 'tachyons';</code>) you&rsquo;ll see a comment that looks just
-like this:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// uncomment the import below to activate custom-colors
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// add your own colors at the top of the imported file
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// @import &#39;custom-colors&#39;;
-</span></span></span></code></pre></div><p>Once you uncomment the <code>custom-colors</code> import, it will look like this:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// uncomment the import below to activate custom-colors
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// add your own colors at the top of the imported file
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">@import</span> <span style="color:#d14">&#34;custom-colors&#34;</span>;
-</span></span></code></pre></div><p>Save that change, and now the color options in the <code>config.toml</code> are no longer
-active – they&rsquo;ve been bypassed. To customize the colors, locate and open the
-<code>custom-colors</code> file found in the theme assets (<code>/assets/custom-colors.scss</code>).
-At the top of that file, you&rsquo;ll find a whole new set of variables for all the
-same color options, but this time you get to assign your own HEX codes.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// set your custom colors here
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#008080">$siteBgColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#e3e3da</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$sidebarBgColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#dbdbd2</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$textColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#666260</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$sidebarTextColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#666260</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$headingColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#103742</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$bodyLinkColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#c4001a</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$navLinkColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#c4001a</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$sidebarLinkColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#c4001a</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$footerTextColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#918f8d</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$buttonTextColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#f7f7f4</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$buttonHoverTextColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#f9f9f8</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$buttonBgColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#103742</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$buttonHoverBgColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#c4001a</span>;
-</span></span><span style="display:flex;"><span><span style="color:#008080">$borderColorCustom</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#099">#c4beb9</span>;
-</span></span></code></pre></div>
         
         <details closed class="f6 fw7 input-reset">
   <dl class="f6 lh-copy">
     <dt class="fw7">Postado em:</dt>
-    <dd class="fw5 ml0">3 July 2019</dd>
+    <dd class="fw5 ml0">1 February 2022</dd>
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Comprimento:</dt>
-    <dd class="fw5 ml0">3 minutos de leitura, 637 palavras</dd>
+    <dd class="fw5 ml0">1 minutos de leitura, 4 palavras</dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Categorias:</dt>
-    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/theme-features">Theme Features</a>  <a href="https://mauriciovancine.github.io/categories/r">R</a>  <a href="https://mauriciovancine.github.io/categories/package">package</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/projeto">Projeto</a> </dd>
   </dl>
   
   
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Tags:</dt>
-    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/hugo-site">hugo-site</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/r">R</a>  <a href="https://mauriciovancine.github.io/tags/pacote">Pacote</a>  <a href="https://mauriciovancine.github.io/tags/m%C3%A9trica-de-paisagem">Métrica de paisagem</a> </dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Veja também:</dt>
     
-    <dd class="fw5 ml0"><a href="/teaching/giraffes/">Tachyons for Style</a></dd>
+    <dd class="fw5 ml0"><a href="/project/ecologia-r/">Ecologia no R</a></dd>
     
-    <dd class="fw5 ml0"><a href="/teaching/penguins/">Palmer Penguins</a></dd>
+    <dd class="fw5 ml0"><a href="/blog/geodados-fonte/">Fonte de dados geoespaciais</a></dd>
     
-    <dd class="fw5 ml0"><a href="/project/gymnophionas/">Gymnophionas</a></dd>
+    <dd class="fw5 ml0"><a href="/teaching/geor/">GeoR: Dados Geoespaciais com o R</a></dd>
     
   </dl>
 </details>
@@ -299,7 +188,7 @@ same color options, but this time you get to assign your own HEX codes.</p>
   
   
     <a class="prev dtc pr2 tl v-top fw6"
-    href="https://mauriciovancine.github.io/project/atlantic-spatial/">&larr; Atlantic Spatial</a>
+    href="https://mauriciovancine.github.io/project/ecologia-r/">&larr; Ecologia no R</a>
   
   
   

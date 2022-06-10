@@ -17,15 +17,6 @@
     </item>
     
     <item>
-      <title>Atlantic Spatial</title>
-      <link>https://mauriciovancine.github.io/project/atlantic-spatial/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/project/atlantic-spatial/</guid>
-      <description>Tachyons is a design system that allows you to design gorgeous interfaces in the browser with little effort.      Because Speed     Building this static site generator theme was the first time I used an Atomic (or Functional) CSS system like Tachyons. It&amp;rsquo;s a design system that provides very small (which means fast) CSS modules that you can use in your HTML. So, rather than writing every line of CSS, you apply the style you need as you write your HTML with easy to understand shorthand class names.</description>
-    </item>
-    
-    <item>
       <title>Spatial prediction of risk areas for vector transmission of Trypanosoma cruzi in the State of Paraná, southern Brazil</title>
       <link>https://mauriciovancine.github.io/publications/trypanosoma-pr/</link>
       <pubDate>Fri, 26 Oct 2018 00:00:00 +0000</pubDate>
@@ -50,6 +41,15 @@
       
       <guid>https://mauriciovancine.github.io/publications/frag-mm-sp/</guid>
       <description>Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de São Paulo</description>
+    </item>
+    
+    <item>
+      <title>Atlantic Spatial</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-spatial/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/project/atlantic-spatial/</guid>
+      <description>Mais informações em breve.</description>
     </item>
     
   </channel>

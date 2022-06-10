@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.96.0" />
-<title>We R Live 13: Introdução à Estatística Espacial - Análise de dados agregados I | Maurício Vancine</title>
+<title>We R Live 10 - Join como associar dados à vetores | Maurício Vancine</title>
 
 
 <meta property="twitter:site" content="@mauriciovancine">
@@ -24,12 +24,12 @@
   
     
   
-<meta name="description" content="Seguindo a série de lives de introdução à estatística espacial, falaremos um pouco sobre análise de dados agregados ou dados de área. Enfim, os famosos polígonos. Vamos entender um pouco sobre a natureza deles e como identificar estatisticamente se os dados observados apresentam correlação espacial e do que se trata isso.">
+<meta name="description" content="Uma das atividades mais comuns ao manejar dados é a vinculação de duas tabelas à partir de uma campo semelhante (em geral, um identificador único). Falaremos sobre isso e sobre o poder dos dados geográficos que nos permitem vincular dados a partir de sua localização.">
 
 
 <meta property="og:site_name" content="Maurício Vancine">
-<meta property="og:title" content="We R Live 13: Introdução à Estatística Espacial - Análise de dados agregados I | Maurício Vancine">
-<meta property="og:description" content="Seguindo a série de lives de introdução à estatística espacial, falaremos um pouco sobre análise de dados agregados ou dados de área. Enfim, os famosos polígonos. Vamos entender um pouco sobre a natureza deles e como identificar estatisticamente se os dados observados apresentam correlação espacial e do que se trata isso." />
+<meta property="og:title" content="We R Live 10 - Join como associar dados à vetores | Maurício Vancine">
+<meta property="og:description" content="Uma das atividades mais comuns ao manejar dados é a vinculação de duas tabelas à partir de uma campo semelhante (em geral, um identificador único). Falaremos sobre isso e sobre o poder dos dados geográficos que nos permitem vincular dados a partir de sua localização." />
 <meta property="og:type" content="page" />
 <meta property="og:url" content="https://mauriciovancine.github.io/talk/video-werlive-10/" />
 <meta property="og:locale" content="pt-br">
@@ -43,9 +43,9 @@
         <meta name="twitter:image" content="https://mauriciovancine.github.io/talk/video-werlive-10/featured.jpg" >
     
     
-  <meta itemprop="name" content="We R Live 13: Introdução à Estatística Espacial - Análise de dados agregados I">
-<meta itemprop="description" content="   "><meta itemprop="datePublished" content="2020-08-18T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-08-18T00:00:00+00:00" />
+  <meta itemprop="name" content="We R Live 10 - Join como associar dados à vetores">
+<meta itemprop="description" content="   "><meta itemprop="datePublished" content="2020-07-14T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-07-14T00:00:00+00:00" />
 <meta itemprop="wordCount" content="0"><meta itemprop="image" content="https://mauriciovancine.github.io/talk/video-werlive-10/featured.jpg">
 <meta itemprop="keywords" content="" />
   
@@ -116,10 +116,10 @@
   <section class="page-content mw7 center">
     <article class="post-content pa0 ph4-l">
       <header class="post-header">
-        <h1 class="f1 lh-solid measure-narrow mb3 fw4">We R Live 13: Introdução à Estatística Espacial - Análise de dados agregados I</h1>
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">We R Live 10 - Join como associar dados à vetores</h1>
         
         <p class="f6 measure lh-copy mv1">Por Maurício Vancine em <a href="https://mauriciovancine.github.io/categories/v%C3%ADdeo">Vídeo</a> </p>
-        <p class="f7 db mv0 ttu">August 18, 2020</p>
+        <p class="f7 db mv0 ttu">July 14, 2020</p>
       
         <div class="ph0 pt5">
           
@@ -134,7 +134,7 @@
     
       
       
-  <a class="btn-links mr2 ba dib" href="https://youtu.be/IsOJvaWdyXE" target="_blank" rel="noopener"><i class="fas fa-video fa-lg fa-fw mr2"></i>video</a>
+  <a class="btn-links mr2 ba dib" href="https://youtu.be/BvURukaIDM0" target="_blank" rel="noopener"><i class="fas fa-video fa-lg fa-fw mr2"></i>video</a>
 
     
     
@@ -147,7 +147,7 @@
     
       
       
-  <a class="btn-links mr2 ba dib" href="https://werlive.netlify.app/werlive13/werlive13" target="_blank" rel="noopener"><i class="fas fa-images fa-lg fa-fw mr2"></i>slides</a>
+  <a class="btn-links mr2 ba dib" href="https://werlive.netlify.app/werlive10/werlive10" target="_blank" rel="noopener"><i class="fas fa-images fa-lg fa-fw mr2"></i>slides</a>
 
     
     
@@ -160,7 +160,7 @@
     
       
       
-  <a class="btn-links mr2 ba dib" href="https://gitlab.com/geocastbrasil/liver/-/tree/master/static/werlive13" target="_blank" rel="noopener"><i class="fab fa-gitlab fa-lg fa-fw mr2"></i>material</a>
+  <a class="btn-links mr2 ba dib" href="https://gitlab.com/geocastbrasil/liver/-/tree/master/static/werlive10" target="_blank" rel="noopener"><i class="fab fa-gitlab fa-lg fa-fw mr2"></i>material</a>
 
 
         </div>
@@ -171,7 +171,7 @@
     <h5 class="row-label">Resumo</h5>
   </div>
   <div class="second-column">
-    <p class="row-details">Seguindo a série de lives de introdução à estatística espacial, falaremos um pouco sobre análise de dados agregados ou dados de área. Enfim, os famosos polígonos. Vamos entender um pouco sobre a natureza deles e como identificar estatisticamente se os dados observados apresentam correlação espacial e do que se trata isso.</p>
+    <p class="row-details">Uma das atividades mais comuns ao manejar dados é a vinculação de duas tabelas à partir de uma campo semelhante (em geral, um identificador único). Falaremos sobre isso e sobre o poder dos dados geográficos que nos permitem vincular dados a partir de sua localização.</p>
   </div>
   
   
@@ -187,7 +187,7 @@
 
   
   
-      August 18, 2020
+      July 14, 2020
   
   
 </p>
@@ -233,7 +233,7 @@
       <section class="post-body pt5 pb4">
         
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube-nocookie.com/embed/IsOJvaWdyXE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/BvURukaIDM0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
 
@@ -241,7 +241,7 @@
         <details closed class="f6 fw7 input-reset">
   <dl class="f6 lh-copy">
     <dt class="fw7">Postado em:</dt>
-    <dd class="fw5 ml0">18 August 2020</dd>
+    <dd class="fw5 ml0">14 July 2020</dd>
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Comprimento:</dt>
@@ -267,12 +267,12 @@
   
   
     <a class="prev dtc pr2 tl v-top fw6"
-    href="https://mauriciovancine.github.io/talk/video-werlive-14/">&larr; We R Live ESPECIAL: Geoestatística com Jorge Kazuo Yamamoto</a>
+    href="https://mauriciovancine.github.io/talk/talk-enm-gggc/">&larr; Introdução à Modelagem de Nicho Ecológico</a>
   
   
   
     <a class="next dtc pl2 tr v-top fw6"
-    href="https://mauriciovancine.github.io/talk/video-werlive-11/">We R Live 11 - florestal - Pacote para inventário florestal no R &rarr;</a>
+    href="https://mauriciovancine.github.io/talk/video-werlive-09/">We R Live 09: Introdução à estatística Espacial - Processos Pontuais III &rarr;</a>
   
 </div>
 

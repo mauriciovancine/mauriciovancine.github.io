@@ -90,6 +90,16 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
+      <title>LSmetrics</title>
+      <link>https://mauriciovancine.github.io/project/lsmetrics/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/project/lsmetrics/</guid>
+      <description>Mais informações em breve.
+ </description>
+    </item>
+    
+    <item>
       <title>Fonte de dados geoespaciais</title>
       <link>https://mauriciovancine.github.io/blog/geodados-fonte/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
@@ -244,10 +254,10 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     
     <item>
       <title>We R Live 16: R Markdown: usando o R para comunicar seus resultados</title>
-      <link>https://mauriciovancine.github.io/talk/video-werlive-15/</link>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-16/</link>
       <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/talk/video-werlive-15/</guid>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-16/</guid>
       <description>   </description>
     </item>
     
@@ -261,11 +271,11 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>We R Live 15 - Introdução à estatística Espacial V</title>
-      <link>https://mauriciovancine.github.io/talk/video-werlive-16/</link>
+      <title>We R Live 15: Introdução à estatística Espacial V</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-15/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/talk/video-werlive-16/</guid>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-15/</guid>
       <description>   </description>
     </item>
     
@@ -279,7 +289,7 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>We R Live ESPECIAL: Geoestatística com Jorge Kazuo Yamamoto</title>
+      <title>We R Live 14 (ESPECIAL): Geoestatística com Jorge Kazuo Yamamoto</title>
       <link>https://mauriciovancine.github.io/talk/video-werlive-14/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -289,15 +299,15 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     
     <item>
       <title>We R Live 13: Introdução à Estatística Espacial - Análise de dados agregados I</title>
-      <link>https://mauriciovancine.github.io/talk/video-werlive-10/</link>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-13/</link>
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/talk/video-werlive-10/</guid>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-13/</guid>
       <description>   </description>
     </item>
     
     <item>
-      <title>We R Live 11 - florestal - Pacote para inventário florestal no R</title>
+      <title>We R Live 11: florestal - Pacote para inventário florestal no R</title>
       <link>https://mauriciovancine.github.io/talk/video-werlive-11/</link>
       <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -316,10 +326,10 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     
     <item>
       <title>We R Live 10 - Join como associar dados à vetores</title>
-      <link>https://mauriciovancine.github.io/talk/video-werlive-13/</link>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-10/</link>
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/talk/video-werlive-13/</guid>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-10/</guid>
       <description>   </description>
     </item>
     
@@ -333,7 +343,7 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>We R Live 08 - Introdução à Estatística Espacial II</title>
+      <title>We R Live 08: Introdução à Estatística Espacial II</title>
       <link>https://mauriciovancine.github.io/talk/video-werlive-08/</link>
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -360,7 +370,7 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>We R Live 05 - Manipulando dados raster no R II</title>
+      <title>We R Live 05: Manipulando dados raster no R II</title>
       <link>https://mauriciovancine.github.io/talk/video-werlive-05/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -378,7 +388,7 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>We R Live 04 - Manipulando dados raster no R</title>
+      <title>We R Live 04: Manipulando dados raster no R</title>
       <link>https://mauriciovancine.github.io/talk/video-werlive-04/</link>
       <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
       
@@ -387,7 +397,7 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>We R Live 03 - Elaborando mapa no R com tmap</title>
+      <title>We R Live 03: Elaborando mapa no R com tmap</title>
       <link>https://mauriciovancine.github.io/talk/video-werlive-03/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
       
@@ -396,7 +406,7 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>We R Live 02 - Elaborando mapas no R</title>
+      <title>We R Live 02: Elaborando mapas no R</title>
       <link>https://mauriciovancine.github.io/talk/video-werlive-02/</link>
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
       
@@ -405,7 +415,7 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>We R Live 01 - Como começar no R</title>
+      <title>We R Live 01: Como começar no R</title>
       <link>https://mauriciovancine.github.io/talk/video-werlive-01/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -468,68 +478,12 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>Atlantic Amphibians</title>
-      <link>https://mauriciovancine.github.io/project/atlantic-amphibians/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/project/atlantic-amphibians/</guid>
-      <description>Tachyons is a design system that allows you to design gorgeous interfaces in the browser with little effort.      Because Speed     Building this static site generator theme was the first time I used an Atomic (or Functional) CSS system like Tachyons. It&amp;rsquo;s a design system that provides very small (which means fast) CSS modules that you can use in your HTML. So, rather than writing every line of CSS, you apply the style you need as you write your HTML with easy to understand shorthand class names.</description>
-    </item>
-    
-    <item>
-      <title>Atlantic Spatial</title>
-      <link>https://mauriciovancine.github.io/project/atlantic-spatial/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/project/atlantic-spatial/</guid>
-      <description>Tachyons is a design system that allows you to design gorgeous interfaces in the browser with little effort.      Because Speed     Building this static site generator theme was the first time I used an Atomic (or Functional) CSS system like Tachyons. It&amp;rsquo;s a design system that provides very small (which means fast) CSS modules that you can use in your HTML. So, rather than writing every line of CSS, you apply the style you need as you write your HTML with easy to understand shorthand class names.</description>
-    </item>
-    
-    <item>
-      <title>LSmetrics</title>
-      <link>https://mauriciovancine.github.io/project/lsmetrics/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/project/lsmetrics/</guid>
-      <description>Tachyons is a design system that allows you to design gorgeous interfaces in the browser with little effort.      Because Speed     Building this static site generator theme was the first time I used an Atomic (or Functional) CSS system like Tachyons. It&amp;rsquo;s a design system that provides very small (which means fast) CSS modules that you can use in your HTML. So, rather than writing every line of CSS, you apply the style you need as you write your HTML with easy to understand shorthand class names.</description>
-    </item>
-    
-    <item>
-      <title>Tachyons for Style</title>
-      <link>https://mauriciovancine.github.io/teaching/giraffes/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/teaching/giraffes/</guid>
-      <description>Tachyons is a design system that allows you to design gorgeous interfaces in the browser with little effort.      Because Speed     Building this static site generator theme was the first time I used an Atomic (or Functional) CSS system like Tachyons. It&amp;rsquo;s a design system that provides very small (which means fast) CSS modules that you can use in your HTML. So, rather than writing every line of CSS, you apply the style you need as you write your HTML with easy to understand shorthand class names.</description>
-    </item>
-    
-    <item>
-      <title>Gymnophionas</title>
-      <link>https://mauriciovancine.github.io/project/gymnophionas/</link>
-      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/project/gymnophionas/</guid>
-      <description>“Grid is the very first CSS module created specifically to solve the layout problems we&amp;rsquo;ve all been hacking our way around for as long as we&amp;rsquo;ve been making websites.”     — Chris House, A Complete Guide to CSS Grid Layout 1
- Since I began building websites in Y2K, I&amp;rsquo;ve lost count how many times the phrase &amp;ldquo;&amp;hellip;there&amp;rsquo;s got to be a better way to do this&amp;rdquo; has passed my lips.</description>
-    </item>
-    
-    <item>
-      <title>Palmer Penguins</title>
-      <link>https://mauriciovancine.github.io/teaching/penguins/</link>
-      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/teaching/penguins/</guid>
-      <description>“Grid is the very first CSS module created specifically to solve the layout problems we&amp;rsquo;ve all been hacking our way around for as long as we&amp;rsquo;ve been making websites.”     — Chris House, A Complete Guide to CSS Grid Layout 1
- Since I began building websites in Y2K, I&amp;rsquo;ve lost count how many times the phrase &amp;ldquo;&amp;hellip;there&amp;rsquo;s got to be a better way to do this&amp;rdquo; has passed my lips.</description>
-    </item>
-    
-    <item>
-      <title>GeoR</title>
+      <title>GeoR: Dados Geoespaciais com o R</title>
       <link>https://mauriciovancine.github.io/teaching/geor/</link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/teaching/geor/</guid>
-      <description>Formspree makes it easy to receive submissions from HTML forms on your static website.      Functional Form     This theme has a form-to-email feature built in, thanks to the simple Formspree integration. All you need to activate the form is a valid recipient email address saved in the front matter of the form (/content/forms/contact.md). Of course, the example shown below (your@email.here) must not be used.</description>
+      <description>Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R e seu uso para manipulação e visualização de dados tabulares e geoespaciais. Serão abordados temas como controle de versão, git e GitHub; funcionamento da linguagem R; estrutura e manipulação de dados no R; visão geral do tidyverse; visualização de dados tabulares; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.    </description>
     </item>
     
     <item>
@@ -549,6 +503,16 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
       <guid>https://mauriciovancine.github.io/contact/</guid>
       <description>** Contact page don&amp;rsquo;t contain a body, just the front matter above. See form.html in the layouts folder.
 Formspree requires a (free) account and new form to be set up. The link is made on the final published url in the field: Restrict to Domain. It is possible to register up to 2 emails free and you can select which one you want the forms to go to within Formspree in the Settings tab.</description>
+    </item>
+    
+    <item>
+      <title>Gymnophionas</title>
+      <link>https://mauriciovancine.github.io/project/gymnophionas/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/project/gymnophionas/</guid>
+      <description>Mais informações em breve.
+ </description>
     </item>
     
     <item>
@@ -633,12 +597,30 @@ Formspree requires a (free) account and new form to be set up. The link is made 
     </item>
     
     <item>
+      <title>Atlantic Spatial</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-spatial/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/project/atlantic-spatial/</guid>
+      <description>Mais informações em breve.</description>
+    </item>
+    
+    <item>
       <title>Efeito da fragmentação sobre a persistência de anfíbios anuros (Amphibia: Anura) na Mata Atlântica</title>
       <link>https://mauriciovancine.github.io/publications/anfibios-persistencia/</link>
       <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/publications/anfibios-persistencia/</guid>
       <description>Trabalho de Conclusão de Curso, onde testamos o efeito da estrutura da paisagem, em escala regional, sobre a persistência na paisagem de espécies de anuros florestais com reprodução terrestre</description>
+    </item>
+    
+    <item>
+      <title>Atlantic Amphibians</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-amphibians/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/project/atlantic-amphibians/</guid>
+      <description>Mais informações em breve.</description>
     </item>
     
     <item>
