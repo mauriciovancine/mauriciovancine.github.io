@@ -37,6 +37,24 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
+      <title>Introdução à linguagem R para manipulação e visualização de dados</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2021/</link>
+      <pubDate>Wed, 10 Nov 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2021/</guid>
+      <description>Introdução à linguagem R realizado na XXXII Semana de Estudos da Ecologia</description>
+    </item>
+    
+    <item>
+      <title>Introdução à modelagem de distribuição de espécies usando a linguagem R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm-moco-2021/</link>
+      <pubDate>Sat, 25 Sep 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm-moco-2021/</guid>
+      <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no Mastozóologos Organizados em uma Conferência Online (MOCÓ)</description>
+    </item>
+    
+    <item>
       <title>Help me help you: um bestiário para entender erros e pedir ajuda no R</title>
       <link>https://mauriciovancine.github.io/blog/r-errors/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
@@ -46,12 +64,30 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>GeoR: Dados Geoespaciais com o R</title>
-      <link>https://mauriciovancine.github.io/teaching/geor/</link>
-      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <title>Introdução à linguagem R: manipulação e visualização de dados</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2019/</link>
+      <pubDate>Wed, 06 Nov 2019 08:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/teaching/geor/</guid>
-      <description>Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R e seu uso para manipulação e visualização de dados tabulares e geoespaciais. Serão abordados temas como controle de versão, git e GitHub; funcionamento da linguagem R; estrutura e manipulação de dados no R; visão geral do tidyverse; visualização de dados tabulares; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.    </description>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2019/</guid>
+      <description>Introdução à linguagem R realizado na XXX Semana de Estudos da Ecologia</description>
+    </item>
+    
+    <item>
+      <title>Introdução à linguagem R: manipulação e visualização de dados</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-biology-2019/</link>
+      <pubDate>Wed, 23 Oct 2019 14:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-biology-2019/</guid>
+      <description>Introdução à linguagem R realizado na 30ª Semana de Estudos da Biologia</description>
+    </item>
+    
+    <item>
+      <title>Introdução à modelagem de distribuição de espécies usando a linguagem R: teoria e prática</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm-cbh-2019/</link>
+      <pubDate>Mon, 22 Jul 2019 08:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm-cbh-2019/</guid>
+      <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no IX Congresso Brasileiro de Herpetologia</description>
     </item>
     
   </channel>

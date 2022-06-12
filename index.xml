@@ -109,6 +109,15 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
+      <title>Introdução à linguagem R para manipulação e visualização de dados</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2021/</link>
+      <pubDate>Wed, 10 Nov 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2021/</guid>
+      <description>Introdução à linguagem R realizado na XXXII Semana de Estudos da Ecologia</description>
+    </item>
+    
+    <item>
       <title>Modelos em Ecologia: extrapolando nosso conhecimento sobre a distribuição das espécies</title>
       <link>https://mauriciovancine.github.io/talk/talk-sdm-uff/</link>
       <pubDate>Thu, 04 Nov 2021 14:00:00 +0000</pubDate>
@@ -127,12 +136,30 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
+      <title>Introdução ao geoprocessamento com QGIS</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-qgis-unesp-biology-2021/</link>
+      <pubDate>Fri, 08 Oct 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-qgis-unesp-biology-2021/</guid>
+      <description>Introdução ao geoprocessamento com QGIS na 32ª Semana de Estudos da Biologia</description>
+    </item>
+    
+    <item>
       <title>Invasive wild boar’s distribution overlap with threatened native ungulate in Patagonia</title>
       <link>https://mauriciovancine.github.io/publications/boar-ung-inv/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/publications/boar-ung-inv/</guid>
       <description>Predizemos a expansão da distribuição e a potencial sobresição geográfico entre espécis de Callithrix nos Biomas da Mata Atlântica e Cerraso e discutimos estratégias de manejo.</description>
+    </item>
+    
+    <item>
+      <title>Introdução à modelagem de distribuição de espécies usando a linguagem R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm-moco-2021/</link>
+      <pubDate>Sat, 25 Sep 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm-moco-2021/</guid>
+      <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no Mastozóologos Organizados em uma Conferência Online (MOCÓ)</description>
     </item>
     
     <item>
@@ -205,6 +232,15 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
       
       <guid>https://mauriciovancine.github.io/blog/geo-join-rasterize/</guid>
       <description>Um passo a passo para gerar rasters de dados socio-econômicos para municípios do Brasil</description>
+    </item>
+    
+    <item>
+      <title>Introdução ao controle de versão com git, GitHub e RStudio</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-git-github-rstudio-2021/</link>
+      <pubDate>Wed, 17 Mar 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-git-github-rstudio-2021/</guid>
+      <description>Apresentar os principais conceitos sobre o controle de versão usando git, GitHub e RStudio</description>
     </item>
     
     <item>
@@ -460,6 +496,24 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
+      <title>Introdução à linguagem R: manipulação e visualização de dados</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2019/</link>
+      <pubDate>Wed, 06 Nov 2019 08:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2019/</guid>
+      <description>Introdução à linguagem R realizado na XXX Semana de Estudos da Ecologia</description>
+    </item>
+    
+    <item>
+      <title>Introdução à linguagem R: manipulação e visualização de dados</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-biology-2019/</link>
+      <pubDate>Wed, 23 Oct 2019 14:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-biology-2019/</guid>
+      <description>Introdução à linguagem R realizado na 30ª Semana de Estudos da Biologia</description>
+    </item>
+    
+    <item>
       <title>Predicting the potential hybridization zones between native and invasive marmosets within Neotropical biodiversity</title>
       <link>https://mauriciovancine.github.io/publications/prim-hibrid/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
@@ -478,12 +532,12 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     </item>
     
     <item>
-      <title>GeoR: Dados Geoespaciais com o R</title>
-      <link>https://mauriciovancine.github.io/teaching/geor/</link>
-      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <title>Introdução à modelagem de distribuição de espécies usando a linguagem R: teoria e prática</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm-cbh-2019/</link>
+      <pubDate>Mon, 22 Jul 2019 08:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/teaching/geor/</guid>
-      <description>Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R e seu uso para manipulação e visualização de dados tabulares e geoespaciais. Serão abordados temas como controle de versão, git e GitHub; funcionamento da linguagem R; estrutura e manipulação de dados no R; visão geral do tidyverse; visualização de dados tabulares; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.    </description>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm-cbh-2019/</guid>
+      <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no IX Congresso Brasileiro de Herpetologia</description>
     </item>
     
     <item>

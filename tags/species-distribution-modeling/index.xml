@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>species distribution modeling on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/species-distribution-modeling/</link>
+    <description>Recent content in species distribution modeling on Maurício Vancine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 25 Sep 2021 09:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/species-distribution-modeling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução à modelagem de distribuição de espécies usando a linguagem R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm-moco-2021/</link>
+      <pubDate>Sat, 25 Sep 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm-moco-2021/</guid>
+      <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no Mastozóologos Organizados em uma Conferência Online (MOCÓ)</description>
+    </item>
+    
+    <item>
+      <title>Introdução à modelagem de distribuição de espécies usando a linguagem R: teoria e prática</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm-cbh-2019/</link>
+      <pubDate>Mon, 22 Jul 2019 08:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm-cbh-2019/</guid>
+      <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no IX Congresso Brasileiro de Herpetologia</description>
+    </item>
+    
+  </channel>
+</rss>

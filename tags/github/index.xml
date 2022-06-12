@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/github/</link>
+    <description>Recent content in github on Maurício Vancine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 17 Mar 2021 09:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução ao controle de versão com git, GitHub e RStudio</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-git-github-rstudio-2021/</link>
+      <pubDate>Wed, 17 Mar 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-git-github-rstudio-2021/</guid>
+      <description>Apresentar os principais conceitos sobre o controle de versão usando git, GitHub e RStudio</description>
+    </item>
+    
+  </channel>
+</rss>

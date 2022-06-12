@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>workshop on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/workshop/</link>
+    <description>Recent content in workshop on Maurício Vancine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 10 Nov 2021 09:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/workshop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução à linguagem R para manipulação e visualização de dados</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2021/</link>
+      <pubDate>Wed, 10 Nov 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2021/</guid>
+      <description>Introdução à linguagem R realizado na XXXII Semana de Estudos da Ecologia</description>
+    </item>
+    
+    <item>
+      <title>Introdução ao geoprocessamento com QGIS</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-qgis-unesp-biology-2021/</link>
+      <pubDate>Fri, 08 Oct 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-qgis-unesp-biology-2021/</guid>
+      <description>Introdução ao geoprocessamento com QGIS na 32ª Semana de Estudos da Biologia</description>
+    </item>
+    
+    <item>
+      <title>Introdução à modelagem de distribuição de espécies usando a linguagem R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm-moco-2021/</link>
+      <pubDate>Sat, 25 Sep 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm-moco-2021/</guid>
+      <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no Mastozóologos Organizados em uma Conferência Online (MOCÓ)</description>
+    </item>
+    
+    <item>
+      <title>Introdução ao controle de versão com git, GitHub e RStudio</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-git-github-rstudio-2021/</link>
+      <pubDate>Wed, 17 Mar 2021 09:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-git-github-rstudio-2021/</guid>
+      <description>Apresentar os principais conceitos sobre o controle de versão usando git, GitHub e RStudio</description>
+    </item>
+    
+    <item>
+      <title>Introdução à linguagem R: manipulação e visualização de dados</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2019/</link>
+      <pubDate>Wed, 06 Nov 2019 08:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2019/</guid>
+      <description>Introdução à linguagem R realizado na XXX Semana de Estudos da Ecologia</description>
+    </item>
+    
+    <item>
+      <title>Introdução à linguagem R: manipulação e visualização de dados</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-biology-2019/</link>
+      <pubDate>Wed, 23 Oct 2019 14:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-biology-2019/</guid>
+      <description>Introdução à linguagem R realizado na 30ª Semana de Estudos da Biologia</description>
+    </item>
+    
+    <item>
+      <title>Introdução à modelagem de distribuição de espécies usando a linguagem R: teoria e prática</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm-cbh-2019/</link>
+      <pubDate>Mon, 22 Jul 2019 08:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm-cbh-2019/</guid>
+      <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no IX Congresso Brasileiro de Herpetologia</description>
+    </item>
+    
+  </channel>
+</rss>
