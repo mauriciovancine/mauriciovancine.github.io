@@ -188,7 +188,7 @@
     </item>
     
     <item>
-      <title>pacote</title>
+      <title>Pacote</title>
       <link>https://mauriciovancine.github.io/tags/pacote/</link>
       <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
       
@@ -206,7 +206,7 @@
     </item>
     
     <item>
-      <title>geoespacial</title>
+      <title>Geoespacial</title>
       <link>https://mauriciovancine.github.io/tags/geoespacial/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -215,7 +215,16 @@
     </item>
     
     <item>
-      <title>raster</title>
+      <title>Geoprocessamento</title>
+      <link>https://mauriciovancine.github.io/tags/geoprocessamento/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/geoprocessamento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raster</title>
       <link>https://mauriciovancine.github.io/tags/raster/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -224,7 +233,7 @@
     </item>
     
     <item>
-      <title>vetor</title>
+      <title>Vetor</title>
       <link>https://mauriciovancine.github.io/tags/vetor/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -233,11 +242,29 @@
     </item>
     
     <item>
-      <title>workshop</title>
-      <link>https://mauriciovancine.github.io/tags/workshop/</link>
-      <pubDate>Wed, 10 Nov 2021 09:00:00 +0000</pubDate>
+      <title>Manipulação de dados</title>
+      <link>https://mauriciovancine.github.io/tags/manipula%C3%A7%C3%A3o-de-dados/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/tags/workshop/</guid>
+      <guid>https://mauriciovancine.github.io/tags/manipula%C3%A7%C3%A3o-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programação</title>
+      <link>https://mauriciovancine.github.io/tags/programa%C3%A7%C3%A3o/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/programa%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualização de dados</title>
+      <link>https://mauriciovancine.github.io/tags/visualiza%C3%A7%C3%A3o-de-dados/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/visualiza%C3%A7%C3%A3o-de-dados/</guid>
       <description></description>
     </item>
     
@@ -278,9 +305,9 @@
     </item>
     
     <item>
-      <title>qgis</title>
+      <title>QGIS</title>
       <link>https://mauriciovancine.github.io/tags/qgis/</link>
-      <pubDate>Fri, 08 Oct 2021 08:00:00 +0000</pubDate>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/tags/qgis/</guid>
       <description></description>
@@ -332,15 +359,6 @@
     </item>
     
     <item>
-      <title>species distribution modeling</title>
-      <link>https://mauriciovancine.github.io/tags/species-distribution-modeling/</link>
-      <pubDate>Sat, 25 Sep 2021 09:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/tags/species-distribution-modeling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Cuba</title>
       <link>https://mauriciovancine.github.io/tags/cuba/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
@@ -386,56 +404,47 @@
     </item>
     
     <item>
-      <title>rspatial</title>
-      <link>https://mauriciovancine.github.io/tags/rspatial/</link>
-      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
+      <title>Controle de versão</title>
+      <link>https://mauriciovancine.github.io/tags/controle-de-vers%C3%A3o/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/tags/rspatial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>spatial</title>
-      <link>https://mauriciovancine.github.io/tags/spatial/</link>
-      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/tags/spatial/</guid>
+      <guid>https://mauriciovancine.github.io/tags/controle-de-vers%C3%A3o/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
       <link>https://mauriciovancine.github.io/tags/git/</link>
-      <pubDate>Wed, 17 Mar 2021 09:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>github</title>
+      <title>GitHub</title>
       <link>https://mauriciovancine.github.io/tags/github/</link>
-      <pubDate>Wed, 17 Mar 2021 09:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>courses</title>
-      <link>https://mauriciovancine.github.io/tags/courses/</link>
+      <title>Aulas</title>
+      <link>https://mauriciovancine.github.io/tags/aulas/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/tags/courses/</guid>
+      <guid>https://mauriciovancine.github.io/tags/aulas/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tutorial</title>
-      <link>https://mauriciovancine.github.io/tags/tutorial/</link>
+      <title>Tutoriais</title>
+      <link>https://mauriciovancine.github.io/tags/tutoriais/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/tags/tutorial/</guid>
+      <guid>https://mauriciovancine.github.io/tags/tutoriais/</guid>
       <description></description>
     </item>
     
@@ -476,11 +485,11 @@
     </item>
     
     <item>
-      <title>rstats</title>
-      <link>https://mauriciovancine.github.io/tags/rstats/</link>
+      <title>Erros</title>
+      <link>https://mauriciovancine.github.io/tags/erros/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/tags/rstats/</guid>
+      <guid>https://mauriciovancine.github.io/tags/erros/</guid>
       <description></description>
     </item>
     
@@ -548,6 +557,24 @@
     </item>
     
     <item>
+      <title>species distribution modeling</title>
+      <link>https://mauriciovancine.github.io/tags/species-distribution-modeling/</link>
+      <pubDate>Mon, 22 Jul 2019 08:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/species-distribution-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workshop</title>
+      <link>https://mauriciovancine.github.io/tags/workshop/</link>
+      <pubDate>Mon, 22 Jul 2019 08:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/workshop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Amostragem</title>
       <link>https://mauriciovancine.github.io/tags/amostragem/</link>
       <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
@@ -575,11 +602,20 @@
     </item>
     
     <item>
-      <title>hugo-site</title>
-      <link>https://mauriciovancine.github.io/tags/hugo-site/</link>
+      <title>Gymnophiona</title>
+      <link>https://mauriciovancine.github.io/tags/gymnophiona/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/tags/hugo-site/</guid>
+      <guid>https://mauriciovancine.github.io/tags/gymnophiona/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neotrópico</title>
+      <link>https://mauriciovancine.github.io/tags/neotr%C3%B3pico/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/tags/neotr%C3%B3pico/</guid>
       <description></description>
     </item>
     

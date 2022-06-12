@@ -6,67 +6,41 @@
     <description>Recent content in Ensino on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 10 Nov 2021 09:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Introdução à linguagem R para manipulação e visualização de dados</title>
-      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2021/</link>
-      <pubDate>Wed, 10 Nov 2021 09:00:00 +0000</pubDate>
+      <title>Introdução à linguagem R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-intror/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2021/</guid>
-      <description>Introdução à linguagem R realizado na XXXII Semana de Estudos da Ecologia</description>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-intror/</guid>
+      <description>O minicurso oferece alguns dos principais conceitos práticos da Linguagem R: (1) introdução e funcionamento da linguagem R e do software RStudio, (2) estrutura e manipulação de dados tabulares, (3) introdução ao tidyverse e (4) visualização de dados. Ao final do curso, espera-se que os participantes tenham uma noção geral do funcionamento da linguagem e das potenciais aplicações dentro da área de análise de dados.
+O minicurso apresentará os fundamentos da linguagem R e IDE RStudio para a manipulação e visualização de dados através do tidyverse.</description>
     </item>
     
     <item>
-      <title>Introdução ao geoprocessamento com QGIS</title>
-      <link>https://mauriciovancine.github.io/teaching/workshop-qgis-unesp-biology-2021/</link>
-      <pubDate>Fri, 08 Oct 2021 08:00:00 +0000</pubDate>
+      <title>Geoprocessamento com QGIS</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-qgis/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/teaching/workshop-qgis-unesp-biology-2021/</guid>
-      <description>Introdução ao geoprocessamento com QGIS na 32ª Semana de Estudos da Biologia</description>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-qgis/</guid>
+      <description>O minicurso oferece alguns dos principais conceitos teórico-práticos para manipulação e visualização de dados geoespaciais no QGIS. São abordados os seguintes tópicos: (1) conceitos gerais de geoprocessamento, (2) interface e projeto do QGIS, (3) importação, criação e edição de dados vetoriais, (4) importação, criação e edição de dados matriciais e, (5) composição de mapas. Após a realização do minicurso espera-se que os alunes adquiram conceitos gerais da estrutura, manipulação e visualização de dados geoespaciais, assim como habilidades básicas para produção de mapas simples usando o QGIS.</description>
     </item>
     
     <item>
-      <title>Introdução à modelagem de distribuição de espécies usando a linguagem R</title>
-      <link>https://mauriciovancine.github.io/teaching/workshop-sdm-moco-2021/</link>
-      <pubDate>Sat, 25 Sep 2021 09:00:00 +0000</pubDate>
+      <title>Controle de versão com git, GitHub e RStudio</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-git/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm-moco-2021/</guid>
-      <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no Mastozóologos Organizados em uma Conferência Online (MOCÓ)</description>
-    </item>
-    
-    <item>
-      <title>Introdução ao controle de versão com git, GitHub e RStudio</title>
-      <link>https://mauriciovancine.github.io/teaching/workshop-git-github-rstudio-2021/</link>
-      <pubDate>Wed, 17 Mar 2021 09:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/teaching/workshop-git-github-rstudio-2021/</guid>
-      <description>Apresentar os principais conceitos sobre o controle de versão usando git, GitHub e RStudio</description>
-    </item>
-    
-    <item>
-      <title>Introdução à linguagem R: manipulação e visualização de dados</title>
-      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2019/</link>
-      <pubDate>Wed, 06 Nov 2019 08:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-ecology-2019/</guid>
-      <description>Introdução à linguagem R realizado na XXX Semana de Estudos da Ecologia</description>
-    </item>
-    
-    <item>
-      <title>Introdução à linguagem R: manipulação e visualização de dados</title>
-      <link>https://mauriciovancine.github.io/teaching/workshop-r-unesp-biology-2019/</link>
-      <pubDate>Wed, 23 Oct 2019 14:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/teaching/workshop-r-unesp-biology-2019/</guid>
-      <description>Introdução à linguagem R realizado na 30ª Semana de Estudos da Biologia</description>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-git/</guid>
+      <description>O minicurso oferece alguns dos principais conceitos práticos o controle de versão usando git, GitHub e RStudio. São abordados os seguintes tópicos: (1) controle de versão, (2) git e GitHub, (3) Fork, (4) configuração do git, (5) iniciando localmente, (6) iniciando remotamente, (7) versionamento (8) ignorar no versionamento, (9) histórico do versionamento, (10) desfazer versionamento, (11) ramificações em versionamento, (12) funcionamento do repositório remoto, (13) detalhes do respositório do GitHub e (14) interface gráfica do RStudio.</description>
     </item>
     
     <item>
       <title>Introdução à modelagem de distribuição de espécies usando a linguagem R: teoria e prática</title>
-      <link>https://mauriciovancine.github.io/teaching/workshop-sdm-cbh-2019/</link>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm/</link>
       <pubDate>Mon, 22 Jul 2019 08:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm-cbh-2019/</guid>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm/</guid>
       <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no IX Congresso Brasileiro de Herpetologia</description>
     </item>
     

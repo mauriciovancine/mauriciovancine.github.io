@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manipulação de dados on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/manipula%C3%A7%C3%A3o-de-dados/</link>
+    <description>Recent content in Manipulação de dados on Maurício Vancine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 10 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/manipula%C3%A7%C3%A3o-de-dados/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução à linguagem R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-intror/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-intror/</guid>
+      <description>O minicurso oferece alguns dos principais conceitos práticos da Linguagem R: (1) introdução e funcionamento da linguagem R e do software RStudio, (2) estrutura e manipulação de dados tabulares, (3) introdução ao tidyverse e (4) visualização de dados. Ao final do curso, espera-se que os participantes tenham uma noção geral do funcionamento da linguagem e das potenciais aplicações dentro da área de análise de dados.
+O minicurso apresentará os fundamentos da linguagem R e IDE RStudio para a manipulação e visualização de dados através do tidyverse.</description>
+    </item>
+    
+  </channel>
+</rss>

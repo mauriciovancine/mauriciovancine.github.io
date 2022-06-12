@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>geoespacial on Maurício Vancine</title>
+    <title>Geoespacial on Maurício Vancine</title>
     <link>https://mauriciovancine.github.io/tags/geoespacial/</link>
-    <description>Recent content in geoespacial on Maurício Vancine</description>
+    <description>Recent content in Geoespacial on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/geoespacial/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,25 @@
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/blog/geodados-fonte/</guid>
-      <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R.</description>
+      <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R</description>
+    </item>
+    
+    <item>
+      <title>Gerando rasters de dados socioeconômicos</title>
+      <link>https://mauriciovancine.github.io/blog/geo-join-rasterize/</link>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/blog/geo-join-rasterize/</guid>
+      <description>Um passo a passo para gerar rasters de dados socioeconômicos para municípios do Brasil</description>
+    </item>
+    
+    <item>
+      <title>Sistemas de Referência de Coordenadas e Datum</title>
+      <link>https://mauriciovancine.github.io/blog/geo-crs-datum/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/blog/geo-crs-datum/</guid>
+      <description>Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum</description>
     </item>
     
   </channel>

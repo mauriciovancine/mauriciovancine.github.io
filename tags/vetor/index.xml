@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vetor on Maurício Vancine</title>
+    <title>Vetor on Maurício Vancine</title>
     <link>https://mauriciovancine.github.io/tags/vetor/</link>
-    <description>Recent content in vetor on Maurício Vancine</description>
+    <description>Recent content in Vetor on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/vetor/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/blog/geodados-fonte/</guid>
-      <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R.</description>
+      <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R</description>
     </item>
     
   </channel>

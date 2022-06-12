@@ -53,27 +53,18 @@
     </item>
     
     <item>
-      <title>geoespacial</title>
-      <link>https://mauriciovancine.github.io/categories/geoespacial/</link>
+      <title>Blog</title>
+      <link>https://mauriciovancine.github.io/categories/blog/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/categories/geoespacial/</guid>
+      <guid>https://mauriciovancine.github.io/categories/blog/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R</title>
-      <link>https://mauriciovancine.github.io/categories/r/</link>
-      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/categories/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>workshop</title>
+      <title>Workshop</title>
       <link>https://mauriciovancine.github.io/categories/workshop/</link>
-      <pubDate>Wed, 10 Nov 2021 09:00:00 +0000</pubDate>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/categories/workshop/</guid>
       <description></description>
@@ -85,51 +76,6 @@
       <pubDate>Thu, 04 Nov 2021 14:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/categories/palestra/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rspatial</title>
-      <link>https://mauriciovancine.github.io/categories/rspatial/</link>
-      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/categories/rspatial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>spatial</title>
-      <link>https://mauriciovancine.github.io/categories/spatial/</link>
-      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/categories/spatial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>courses</title>
-      <link>https://mauriciovancine.github.io/categories/courses/</link>
-      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/categories/courses/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://mauriciovancine.github.io/categories/tutorial/</link>
-      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/categories/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>r tutorial</title>
-      <link>https://mauriciovancine.github.io/categories/r-tutorial/</link>
-      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/categories/r-tutorial/</guid>
       <description></description>
     </item>
     

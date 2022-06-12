@@ -13,24 +13,24 @@
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/blog/geodados-fonte/</guid>
-      <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R.</description>
+      <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R</description>
     </item>
     
     <item>
-      <title>Gerando rasters de dados socio-econômicos</title>
+      <title>Gerando rasters de dados socioeconômicos</title>
       <link>https://mauriciovancine.github.io/blog/geo-join-rasterize/</link>
       <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/blog/geo-join-rasterize/</guid>
-      <description>Um passo a passo para gerar rasters de dados socio-econômicos para municípios do Brasil</description>
+      <description>Um passo a passo para gerar rasters de dados socioeconômicos para municípios do Brasil</description>
     </item>
     
     <item>
       <title>Disciplinas de graduação e pós-graduação on-line</title>
-      <link>https://mauriciovancine.github.io/blog/geral-cursos-online/</link>
+      <link>https://mauriciovancine.github.io/blog/geo-join-rasterize/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/blog/geral-cursos-online/</guid>
+      <guid>https://mauriciovancine.github.io/blog/geo-join-rasterize/</guid>
       <description>Listagem de disciplinas de graduação e pós-graduação oferecidas on-line</description>
     </item>
     
@@ -45,10 +45,10 @@
     
     <item>
       <title>Help me help you: um bestiário para entender erros e pedir ajuda no R</title>
-      <link>https://mauriciovancine.github.io/blog/r-errors/</link>
+      <link>https://mauriciovancine.github.io/blog/r-erros/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/blog/r-errors/</guid>
+      <guid>https://mauriciovancine.github.io/blog/r-erros/</guid>
       <description>Um guia para entender erros e pedir ajuda no R</description>
     </item>
     
