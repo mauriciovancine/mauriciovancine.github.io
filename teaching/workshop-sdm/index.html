@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.96.0" />
-<title>Introdução à modelagem de distribuição de espécies usando a linguagem R: teoria e prática | Maurício Vancine</title>
+<title>Modelagem de distribuição de espécies | Maurício Vancine</title>
 
 
 <meta property="twitter:site" content="@mauriciovancine">
@@ -24,12 +24,12 @@
   
     
   
-<meta name="description" content="Maurício Humberto Vancine, João Gabriel Ribeiro Giovanelli">
+<meta name="description" content="Minicurso: Introdução à modelagem de distribuição de espécies">
 
 
 <meta property="og:site_name" content="Maurício Vancine">
-<meta property="og:title" content="Introdução à modelagem de distribuição de espécies usando a linguagem R: teoria e prática | Maurício Vancine">
-<meta property="og:description" content="Maurício Humberto Vancine, João Gabriel Ribeiro Giovanelli" />
+<meta property="og:title" content="Modelagem de distribuição de espécies | Maurício Vancine">
+<meta property="og:description" content="Minicurso: Introdução à modelagem de distribuição de espécies" />
 <meta property="og:type" content="page" />
 <meta property="og:url" content="https://mauriciovancine.github.io/teaching/workshop-sdm/" />
 <meta property="og:locale" content="pt-br">
@@ -43,11 +43,11 @@
         <meta name="twitter:image" content="https://mauriciovancine.github.io/teaching/workshop-sdm/featured-hex.png" >
     
     
-  <meta itemprop="name" content="Introdução à modelagem de distribuição de espécies usando a linguagem R: teoria e prática">
-<meta itemprop="description" content="Introdução à Modelos Distribuição de Espécies (SDMs) realizado no IX Congresso Brasileiro de Herpetologia"><meta itemprop="datePublished" content="2020-03-07T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2019-07-22T08:00:00+00:00" />
-<meta itemprop="wordCount" content="250"><meta itemprop="image" content="https://mauriciovancine.github.io/teaching/workshop-sdm/featured-hex.png">
-<meta itemprop="keywords" content="workshop,species distribution modeling,r," />
+  <meta itemprop="name" content="Modelagem de distribuição de espécies">
+<meta itemprop="description" content="Descrição     O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e background), avaliação dos modelos (ROC, AUC e TSS), limites de corte (thresholds) e consenso de modelos (ensembles)."><meta itemprop="datePublished" content="2021-10-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-10-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="139"><meta itemprop="image" content="https://mauriciovancine.github.io/teaching/workshop-sdm/featured-hex.png">
+<meta itemprop="keywords" content="Nicho Ecológico,Modelagem Ecológica,Modelagem de Distribuição de Espécies," />
   
   
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -64,7 +64,7 @@
   <script src="/main.min.91fddab6ebf2fe40a08504545a4867f6ecd6b11a5d3d2a137f57c20c1380b9d9.js" type="text/javascript"></script>
 </head>
 <body>
-      <div class="grid-container">
+      <div class="grid-container single">
 <header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
   <nav class="site-nav db dt-l w-100" role="navigation">
     <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://mauriciovancine.github.io/" title="Home">
@@ -116,8 +116,8 @@
   <section class="page-content mw7 center">
     <article class="post-content pa0 ph4-l">
       <header class="post-header">
-        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Introdução à modelagem de distribuição de espécies usando a linguagem R: teoria e prática</h1>
-        <h4 class="f4 mt0 mb4 lh-title measure">Maurício Humberto Vancine, João Gabriel Ribeiro Giovanelli</h4>
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Modelagem de distribuição de espécies</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Minicurso: Introdução à modelagem de distribuição de espécies</h4>
         
         
 
@@ -135,7 +135,7 @@
     
       
       
-  <a class="btn-links mr2 ba dib" href="https://9cbh.galoa.com.br/" target="_blank" rel="noopener"><i class="fas fa-link fa-lg fa-fw mr2"></i>evento</a>
+  <a class="btn-links mr2 ba dib" href="https://mauriciovancine.github.io/workshop-r-sdm/01_slides/slides_workshop_r_sdm.html#1" target="_blank" rel="noopener"><i class="fas fa-chalkboard-teacher fa-lg fa-fw mr2"></i>slides</a>
 
     
     
@@ -148,7 +148,7 @@
     
       
       
-  <a class="btn-links mr2 ba dib" href="https://github.com/mauriciovancine/workshop-sdm-9-cbh" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>material</a>
+  <a class="btn-links mr2 ba dib" href="https://github.com/mauriciovancine/workshop-r-sdm" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>material</a>
 
 
       </div>
@@ -159,33 +159,65 @@
         
 
 
-<p>A ampla disponibilidade de dados sobre a biodiversidade e variáveis ambientais, tem permitido a utilização de diversas análises biogeográficas e macroecológicas, dentre elas, os modelos de distribuição de espécies ou Species Distribution Modeling (SDMs). Esse minicurso tem como intuito oferecer uma introdução teórica e prática à técnica de SDMs, utilizando a linguagem R. Primeiramente serão apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, serão apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (presença e ausência – GLM, GAM e Random Forest, apenas presença – BIOCLIM, Mahalanobis e Gower, e presença e background – Maxent e SVM), avaliação dos modelos (ROC, AUC e TSS), limites de corte (thresholds) e algumas abordagens de consenso de modelos (ensembles). A parte prática será focada na construção dos modelos através da linguagem R. Inicialmente será feito uma introdução à programação e manejo de dados espaciais na linguagem R, utilizando os pacotes <em>raster</em> e <em>rgdal</em>. Em seguida, será apresentado como obter dados de ocorrências e variáveis ambientais, através dos pacotes <em>spocc</em> e <em>dismo</em>. Uma vez adquiridos os dados, serão feitas análises preliminares dos mesmos, como seleção de ocorrências (um ponto por célula) e de variáveis (correlação, PCA, análise fatorial e VIF). Por fim, serão construídos modelos utilizando os algoritmos mencionados acima, além do cálculo das métricas de avaliação dos mesmos, utilizando os pacotes <em>dismo</em>, <em>randomForest</em> e <em>kernlab</em>.</p>
+
+<h2 id="descrição">Descrição
+  <a href="#descri%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e <em>background</em>), avaliação dos modelos (ROC, AUC e TSS), limites de corte (<em>thresholds</em>) e consenso de modelos (<em>ensembles</em>). A parte prática será focada na construção dos modelos através da linguagem R.</p>
+
+
+
+
+<h2 id="oferecimento">Oferecimento
+  <a href="#oferecimento"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<ol>
+<li>
+<p>
+<a href="">Mastozóologos Organizados em uma Conferência Online (MOCÓ)</a>. (2021). 
+<a href="https://sbmz.org/" target="_blank" rel="noopener">Sociedade Brasileira de Mastozoologia (SBMz)</a>. Online.</p>
+</li>
+<li>
+<p>
+<a href="https://9cbh.galoa.com.br/" target="_blank" rel="noopener">9º Congresso Brasileiro de Herpetologia</a>. (2019). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil</p>
+</li>
+</ol>
 
         
         <details closed class="f6 fw7 input-reset">
   <dl class="f6 lh-copy">
     <dt class="fw7">Postado em:</dt>
-    <dd class="fw5 ml0">7 March 2020</dd>
+    <dd class="fw5 ml0">8 October 2021</dd>
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Comprimento:</dt>
-    <dd class="fw5 ml0">2 minutos de leitura, 250 palavras</dd>
+    <dd class="fw5 ml0">1 minutos de leitura, 139 palavras</dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Categorias:</dt>
-    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/workshop">workshop</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/workshop">Workshop</a> </dd>
   </dl>
   
   
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Tags:</dt>
-    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/workshop">workshop</a>  <a href="https://mauriciovancine.github.io/tags/species-distribution-modeling">species distribution modeling</a>  <a href="https://mauriciovancine.github.io/tags/r">r</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/nicho-ecol%C3%B3gico">Nicho Ecológico</a>  <a href="https://mauriciovancine.github.io/tags/modelagem-ecol%C3%B3gica">Modelagem Ecológica</a>  <a href="https://mauriciovancine.github.io/tags/modelagem-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies">Modelagem de Distribuição de Espécies</a> </dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Veja também:</dt>
+    
+    <dd class="fw5 ml0"><a href="/publications/prim-hibrid/">Predicting the potential hybridization zones between native and invasive marmosets within Neotropical biodiversity</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/publications/div-mining-mg/">Impacts of mining activities on the potential geographic distribution of eastern Brazil mountaintop endemic species</a></dd>
     
   </dl>
 </details>
@@ -196,9 +228,12 @@
   
   
     <a class="prev dtc pr2 tl v-top fw6"
-    href="https://mauriciovancine.github.io/teaching/workshop-git/">&larr; Controle de versão com git, GitHub e RStudio</a>
+    href="https://mauriciovancine.github.io/teaching/workshop-qgis/">&larr; Geoprocessamento com QGIS</a>
   
   
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://mauriciovancine.github.io/teaching/workshop-git/">Controle de versão com git, GitHub e RStudio &rarr;</a>
   
 </div>
 

@@ -17,6 +17,16 @@
     </item>
     
     <item>
+      <title>GeoR: Dados Geoespaciais com o R</title>
+      <link>https://mauriciovancine.github.io/teaching/course-geor/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/course-geor/</guid>
+      <description>Descrição     Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como controle de versão, git e GitHub; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.
+Oferecimento        Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2021).</description>
+    </item>
+    
+    <item>
       <title>Gerando rasters de dados socioeconômicos</title>
       <link>https://mauriciovancine.github.io/blog/geo-join-rasterize/</link>
       <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>

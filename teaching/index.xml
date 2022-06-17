@@ -13,7 +13,17 @@
       <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/teaching/workshop-intror/</guid>
-      <description>O minicurso apresenta os fundamentos da linguagem R e IDE RStudio para a manipulação e visualização de dados através do tidyverse. São abordados os seguintes temas: (1) funcionamento da linguagem R, (2) estrutura e manipulação de objetos, (3) tidyverse e (4) visualização de dados. Ao final do minicurso espera-se que os participantes adquiram conhecimentos introdutórios do funcionamento da linguagem, assim como na manipulação e visualização de dados tabu</description>
+      <description>Descrição     O minicurso apresenta os fundamentos da linguagem R e do IDE RStudio para a manipulação e visualização de dados através do tidyverse. São abordados os seguintes temas: (1) funcionamento da linguagem R, (2) estrutura e manipulação de objetos, (3) tidyverse e (4) visualização de dados. Ao final do minicurso espera-se que os participantes adquiram conhecimentos introdutórios sobre o funcionamento da linguagem R, assim como a manipulação e visualização de dados tabulares.</description>
+    </item>
+    
+    <item>
+      <title>GeoR: Dados Geoespaciais com o R</title>
+      <link>https://mauriciovancine.github.io/teaching/course-geor/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/course-geor/</guid>
+      <description>Descrição     Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como controle de versão, git e GitHub; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.
+Oferecimento        Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2021).</description>
     </item>
     
     <item>
@@ -22,7 +32,16 @@
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/teaching/workshop-qgis/</guid>
-      <description>O minicurso oferece alguns dos principais conceitos teórico-práticos para manipulação e visualização de dados geoespaciais no QGIS. São abordados os seguintes tópicos: (1) conceitos gerais de geoprocessamento, (2) interface e projeto do QGIS, (3) importação, criação e edição de dados vetoriais, (4) importação, criação e edição de dados matriciais e, (5) composição de mapas. Após a realização do minicurso espera-se que os alunes adquiram conceitos gerais da estrutura, manipulação e visualização de dados geoespaciais, assim como habilidades básicas para produção de mapas simples usando o QGIS.</description>
+      <description>Descrição     O minicurso oferece alguns dos principais conceitos teórico-práticos sobre a manipulação e visualização de dados geoespaciais no QGIS. São abordados os seguintes tópicos: (1) conceitos gerais de geoprocessamento, (2) interface e projeto do QGIS, (3) importação, criação e edição de dados vetoriais, (4) importação, criação e edição de dados matriciais e, (5) composição de mapas. Após a realização do minicurso espera-se que os alunes adquiram conceitos gerais da estrutura, manipulação e visualização de dados geoespaciais, assim como habilidades básicas para produção de mapas simples usando o QGIS.</description>
+    </item>
+    
+    <item>
+      <title>Modelagem de distribuição de espécies</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm/</guid>
+      <description>Descrição     O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e background), avaliação dos modelos (ROC, AUC e TSS), limites de corte (thresholds) e consenso de modelos (ensembles).</description>
     </item>
     
     <item>
@@ -31,16 +50,7 @@
       <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/teaching/workshop-git/</guid>
-      <description>O minicurso oferece alguns dos principais conceitos práticos o controle de versão usando git, GitHub e RStudio. São abordados os seguintes tópicos: (1) controle de versão, (2) git e GitHub, (3) Fork, (4) configuração do git, (5) iniciando localmente, (6) iniciando remotamente, (7) versionamento (8) ignorar no versionamento, (9) histórico do versionamento, (10) desfazer versionamento, (11) ramificações em versionamento, (12) funcionamento do repositório remoto, (13) detalhes do respositório do GitHub e (14) interface gráfica do RStudio.</description>
-    </item>
-    
-    <item>
-      <title>Introdução à modelagem de distribuição de espécies usando a linguagem R: teoria e prática</title>
-      <link>https://mauriciovancine.github.io/teaching/workshop-sdm/</link>
-      <pubDate>Mon, 22 Jul 2019 08:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm/</guid>
-      <description>Introdução à Modelos Distribuição de Espécies (SDMs) realizado no IX Congresso Brasileiro de Herpetologia</description>
+      <description>Descrição     O minicurso oferece alguns dos principais conceitos práticos o controle de versão usando git, GitHub e RStudio. São abordados os seguintes tópicos: (1) controle de versão, (2) git e GitHub, (3) Fork, (4) configuração do git, (5) iniciando localmente, (6) iniciando remotamente, (7) versionamento (8) ignorar no versionamento, (9) histórico do versionamento, (10) desfazer versionamento, (11) ramificações em versionamento, (12) funcionamento do repositório remoto, (13) detalhes do respositório do GitHub e (14) interface gráfica do RStudio.</description>
     </item>
     
   </channel>

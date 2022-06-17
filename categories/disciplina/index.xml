@@ -6,14 +6,15 @@
     <description>Recent content in Disciplina on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/categories/disciplina/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/categories/disciplina/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GeoR: Dados Geoespaciais com o R</title>
-      <link>https://mauriciovancine.github.io/teaching/geor/</link>
-      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <link>https://mauriciovancine.github.io/teaching/course-geor/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/teaching/geor/</guid>
-      <description>Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R e seu uso para manipulação e visualização de dados tabulares e geoespaciais. Serão abordados temas como controle de versão, git e GitHub; funcionamento da linguagem R; estrutura e manipulação de dados no R; visão geral do tidyverse; visualização de dados tabulares; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.    </description>
+      <guid>https://mauriciovancine.github.io/teaching/course-geor/</guid>
+      <description>Descrição     Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como controle de versão, git e GitHub; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.
+Oferecimento        Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2021).</description>
     </item>
     
   </channel>
