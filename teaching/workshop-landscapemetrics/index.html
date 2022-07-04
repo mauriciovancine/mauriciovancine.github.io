@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.96.0" />
-<title>Workshop | Maurício Vancine</title>
+<title>Modelagem de distribuição de espécies | Maurício Vancine</title>
 
 
 <meta property="twitter:site" content="@mauriciovancine">
@@ -24,33 +24,35 @@
   
     
   
-<meta name="description" content="Website pessoal de Maurício Vancine.">
+<meta name="description" content="Minicurso: Introdução à modelagem de distribuição de espécies">
 
 
 <meta property="og:site_name" content="Maurício Vancine">
-<meta property="og:title" content="Workshop | Maurício Vancine">
-<meta property="og:description" content="Website pessoal de Maurício Vancine." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://mauriciovancine.github.io/categories/workshop/" />
+<meta property="og:title" content="Modelagem de distribuição de espécies | Maurício Vancine">
+<meta property="og:description" content="Minicurso: Introdução à modelagem de distribuição de espécies" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/" />
 <meta property="og:locale" content="pt-br">
 
 
 
 
     
-        <meta property="og:image" content="https://mauriciovancine.github.io/img/papillons.jpg" >
-        <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="https://mauriciovancine.github.io/img/papillons.jpg" >
+        <meta property="og:image" content="https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/featured-hex.png" >
+        <meta property="twitter:card" content="summary">
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/featured-hex.png" >
     
-  <meta itemprop="name" content="Workshop">
-<meta itemprop="description" content="Website pessoal de Maurício Vancine.">
+    
+  <meta itemprop="name" content="Modelagem de distribuição de espécies">
+<meta itemprop="description" content="Descrição     O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e background), avaliação dos modelos (ROC, AUC e TSS), limites de corte (thresholds) e consenso de modelos (ensembles)."><meta itemprop="datePublished" content="2021-10-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-10-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="139"><meta itemprop="image" content="https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/featured-hex.png">
+<meta itemprop="keywords" content="Nicho Ecológico,Modelagem Ecológica,Modelagem de Distribuição de Espécies," />
   
   
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-  
-    <link rel="alternate" type="application/rss+xml" href="https://mauriciovancine.github.io/categories/workshop/index.xml" title="Maurício Vancine" />
   
   
   <link rel="stylesheet" href="/style.main.min.c71d44b34cc801858d9fd8ace8a2a4a40607dd4eadb9caf65f0e36a2d736f9c2.css" integrity="sha256-xx1Es0zIAYWNn9is6KKkpAYH3U6tucr2Xw42otc2&#43;cI=" media="screen">
@@ -62,7 +64,7 @@
   <script src="/main.min.91fddab6ebf2fe40a08504545a4867f6ecd6b11a5d3d2a137f57c20c1380b9d9.js" type="text/javascript"></script>
 </head>
 <body>
-      <div class="grid-container">
+      <div class="grid-container single">
 <header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
   <nav class="site-nav db dt-l w-100" role="navigation">
     <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://mauriciovancine.github.io/" title="Home">
@@ -93,7 +95,7 @@
         
         
         
-      <a class="link f6 f5-l dib pv1 ph2 " href="/teaching/" title="Ensino">Ensino</a>
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/teaching/" title="Ensino">Ensino</a>
       
         
         
@@ -110,139 +112,136 @@
   </nav>
 </header>
 
-
 <main class="page-main pa4" role="main">
-  <section class="blog-intro mw7 center mb5">
-    <h1 class="f2 f1-ns fw4 lh-solid tc center i">Workshop</h1>
-    <p class="f6 f5-ns measure lh-copy tc center"></p>
-  </section>
-  <section class="blog-content mw7 center">
-  
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Modelagem de distribuição de espécies</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Minicurso: Introdução à modelagem de distribuição de espécies</h4>
+        
+        
+
+      
+      <div class="ph0 pt5">
+        
     
-                               
-     
-     
-<article class="mv4 mv5-l bb">
-
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/teaching/workshop-intror/" class="db">Introdução à linguagem R</a></h1>
-      
-    </header>
-      
-      <p class="lh-copy mb4">Minicurso: Introdução à linguagem R para manipulação e visualização de dados</p>
-    <footer>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-  
     
-                               
-     
-     
-<article class="mv4 mv5-l bb">
-
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/teaching/workshop-sdm/" class="db">Modelagem de distribuição de espécies</a></h1>
-      
-    </header>
-      
-      <p class="lh-copy mb4">Minicurso: Introdução à modelagem de distribuição de espécies</p>
-    <footer>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-  
     
-                               
-     
-     
-<article class="mv4 mv5-l bb">
-
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/teaching/workshop-landscapemetrics/" class="db">Modelagem de distribuição de espécies</a></h1>
       
-    </header>
-      
-      <p class="lh-copy mb4">Minicurso: Introdução à modelagem de distribuição de espécies</p>
-    <footer>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-  
     
-                               
-     
-     
-<article class="mv4 mv5-l bb">
-
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/teaching/workshop-qgis/" class="db">Geoprocessamento com QGIS</a></h1>
-      
-    </header>
-      
-      <p class="lh-copy mb4">Minicurso: Introdução ao geoprocessamento com QGIS</p>
-    <footer>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-  
     
-                               
-     
-     
-<article class="mv4 mv5-l bb">
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://mauriciovancine.github.io/workshop-r-sdm/01_slides/slides_workshop_r_sdm.html#1" target="_blank" rel="noopener"><i class="fas fa-chalkboard-teacher fa-lg fa-fw mr2"></i>slides</a>
 
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/teaching/workshop-git/" class="db">Controle de versão com git, GitHub e RStudio</a></h1>
+    
+    
+    
       
-    </header>
-      
-      <p class="lh-copy mb4">Minicurso: Controle de versão com git, GitHub e RStudio</p>
-    <footer>
-      
+    
+    
+    
+    
+    
       
       
-    </footer>
-  </div>
-  
-</article>
+  <a class="btn-links mr2 ba dib" href="https://github.com/mauriciovancine/workshop-r-sdm" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>material</a>
 
+
+      </div>
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h2 id="descrição">Descrição
+  <a href="#descri%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e <em>background</em>), avaliação dos modelos (ROC, AUC e TSS), limites de corte (<em>thresholds</em>) e consenso de modelos (<em>ensembles</em>). A parte prática será focada na construção dos modelos através da linguagem R.</p>
+
+
+
+
+<h2 id="oferecimento">Oferecimento
+  <a href="#oferecimento"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<ol>
+<li>
+<p>
+<a href="">Mastozóologos Organizados em uma Conferência Online (MOCÓ)</a>. (2021). 
+<a href="https://sbmz.org/" target="_blank" rel="noopener">Sociedade Brasileira de Mastozoologia (SBMz)</a>. Online.</p>
+</li>
+<li>
+<p>
+<a href="https://9cbh.galoa.com.br/" target="_blank" rel="noopener">9º Congresso Brasileiro de Herpetologia</a>. (2019). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil</p>
+</li>
+</ol>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Postado em:</dt>
+    <dd class="fw5 ml0">8 October 2021</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Comprimento:</dt>
+    <dd class="fw5 ml0">1 minutos de leitura, 139 palavras</dd>
+  </dl>
   
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categorias:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/workshop">Workshop</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/nicho-ecol%C3%B3gico">Nicho Ecológico</a>  <a href="https://mauriciovancine.github.io/tags/modelagem-ecol%C3%B3gica">Modelagem Ecológica</a>  <a href="https://mauriciovancine.github.io/tags/modelagem-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies">Modelagem de Distribuição de Espécies</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Veja também:</dt>
+    
+    <dd class="fw5 ml0"><a href="/teaching/workshop-sdm/">Modelagem de distribuição de espécies</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/publications/prim-hibrid/">Predicting the potential hybridization zones between native and invasive marmosets within Neotropical biodiversity</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/publications/div-mining-mg/">Impacts of mining activities on the potential geographic distribution of eastern Brazil mountaintop endemic species</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://mauriciovancine.github.io/teaching/workshop-qgis/">&larr; Geoprocessamento com QGIS</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://mauriciovancine.github.io/teaching/workshop-sdm/">Modelagem de distribuição de espécies &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
   </section>
 </main>
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">

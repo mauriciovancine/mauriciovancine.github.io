@@ -9,6 +9,15 @@
     <lastBuildDate>Fri, 08 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/nicho-ecol%C3%B3gico/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Modelagem de distribuição de espécies</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</guid>
+      <description>Descrição     O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e background), avaliação dos modelos (ROC, AUC e TSS), limites de corte (thresholds) e consenso de modelos (ensembles).</description>
+    </item>
+    
+    <item>
+      <title>Modelagem de distribuição de espécies</title>
       <link>https://mauriciovancine.github.io/teaching/workshop-sdm/</link>
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
       
