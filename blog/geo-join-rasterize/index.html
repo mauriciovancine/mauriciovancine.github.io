@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.96.0" />
-<title>Disciplinas de graduação e pós-graduação on-line | Maurício Vancine</title>
+<title>Gerando rasters de dados socioeconômicos | Maurício Vancine</title>
 
 
 <meta property="twitter:site" content="@mauriciovancine">
@@ -24,12 +24,12 @@
   
     
   
-<meta name="description" content="Listagem de disciplinas de graduação e pós-graduação oferecidas on-line">
+<meta name="description" content="Um passo a passo para gerar rasters de dados socioeconômicos para municípios do Brasil">
 
 
 <meta property="og:site_name" content="Maurício Vancine">
-<meta property="og:title" content="Disciplinas de graduação e pós-graduação on-line | Maurício Vancine">
-<meta property="og:description" content="Listagem de disciplinas de graduação e pós-graduação oferecidas on-line" />
+<meta property="og:title" content="Gerando rasters de dados socioeconômicos | Maurício Vancine">
+<meta property="og:description" content="Um passo a passo para gerar rasters de dados socioeconômicos para municípios do Brasil" />
 <meta property="og:type" content="page" />
 <meta property="og:url" content="https://mauriciovancine.github.io/blog/geo-join-rasterize/" />
 <meta property="og:locale" content="pt-br">
@@ -38,16 +38,16 @@
 
 
     
-        <meta property="og:image" content="https://mauriciovancine.github.io/blog/geo-join-rasterize/featured.jpg" >
+        <meta property="og:image" content="https://mauriciovancine.github.io/blog/geo-join-rasterize/featured.png" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="https://mauriciovancine.github.io/blog/geo-join-rasterize/featured.jpg" >
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/blog/geo-join-rasterize/featured.png" >
     
     
-  <meta itemprop="name" content="Disciplinas de graduação e pós-graduação on-line">
-<meta itemprop="description" content="Listagem de disciplinas de graduação e pós-graduação oferecidas on-line"><meta itemprop="datePublished" content="2021-03-07T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-03-07T00:00:00+00:00" />
-<meta itemprop="wordCount" content="578"><meta itemprop="image" content="https://mauriciovancine.github.io/blog/geo-join-rasterize/featured.jpg">
-<meta itemprop="keywords" content="R,Aulas,Tutoriais," />
+  <meta itemprop="name" content="Gerando rasters de dados socioeconômicos">
+<meta itemprop="description" content="Um passo a passo para gerar rasters de dados socioeconômicos para municípios do Brasil"><meta itemprop="datePublished" content="2021-03-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="938"><meta itemprop="image" content="https://mauriciovancine.github.io/blog/geo-join-rasterize/featured.png">
+<meta itemprop="keywords" content="R,Geoespacial,Raster," />
   
   
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -116,10 +116,10 @@
   <section class="page-content mw7 center">
     <article class="post-content pa0 pr3-l">
       <header class="post-header">
-        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Disciplinas de graduação e pós-graduação on-line</h1>
-        <h4 class="f4 mt0 mb4 lh-title measure">Listagem de disciplinas de graduação e pós-graduação oferecidas on-line</h4>
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Gerando rasters de dados socioeconômicos</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Um passo a passo para gerar rasters de dados socioeconômicos para municípios do Brasil</h4>
         <p class="f6 measure lh-copy mv1">Por Maurício Vancine em <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </p>
-        <p class="f7 db mv0 ttu">March 7, 2021</p>
+        <p class="f7 db mv0 ttu">March 23, 2021</p>
       </header>
       <section class="post-body pt5 pb4">
         
@@ -132,173 +132,244 @@
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
-<p>A pandemia de COVID-19 iniciou-se com o primeiro caso no Brasil no dia <strong>26 de fevereiro de 2020</strong>. Desde de então, acredito que todo professor(a), seja ele(a) de qualquer nível, do maternal a pós-graduação, se viu em meio à necessidade de <strong>ministrar aulas remotamente</strong>.</p>
-<p>Ano passado tive o prazer de oferecer duas disciplinas remotamente: uma na graduação em Ecologia (&ldquo;Modelos Estatísticos em Ecologia&rdquo;) e outra na Pós-Graduação em Ecologia, Evolução e Biodiversidade (
-<a href="https://mauriciovancine.github.io/pt/courses/course-geospatial-analisys-r/" target="_blank" rel="noopener">&ldquo;Introdução ao uso de dados geoespaciais no R&rdquo;</a>), ambas na UNESP-Rio Claro. A UNESP fez um plano emergencial de adotar todas as ferramentas do 
-<a href="https://classroom.google.com" target="_blank" rel="noopener">Google Classroom</a>, como acredito que grande parte das universidades e escolas adotaram.</p>
-<p>Infelizmente, apesar de eu ter gravado ambas para repassar aos alunos, não pensei como seria uma oportunidade fantástica para manter esse material permanente e disponível à qualquer pessoa no YouTube, pode exemplo. Para isso, eu teria de editar horas e mais horas de vídeos, e não disponho desse tempo para isso, não pelo menos agora&hellip;</p>
-<p>Entretanto, desde o início do ano passado, comecei a fazer parte do canal no YouTube 
-<a href="https://www.youtube.com/channel/UCLAeX4dyujMoy4xqHvxSDpQ" target="_blank" rel="noopener">GeoCast Brasil</a>. Eu e o 
-<a href="https://felipesbarros.github.io/" target="_blank" rel="noopener">Felipe Sodré Mendes Barros</a> fizemos diversas lives de R focando na parte espacial, 
-<a href="https://mauriciovancine.github.io/pt/video/werlive/" target="_blank" rel="noopener">We R Live</a>, com vários convidados e convidadas muito legais. Esse ano está complicado de retomarmos por conta de vários projetos, doutorado e trabalho&hellip;</p>
-<p>Desse projeto nasceu um resumo muito legal que publicamos no 
-<a href="https://inde.gov.br/simposio-12-anos/sbide-home.html" target="_blank" rel="noopener">II Simpósio Brasileiro de Infraestrutura de Dados Espaciais - SBIDE</a>, entitulado <strong>Ensino e gestão do conhecimento em geotecnologias para um “Novo Normal”: reflexões a partir das iniciativas do GeoCast Brasil</strong>, onde comentamos os desafios de ensino remoto e como as liver de R foram desafiadoras e nos fizeram pensar em formas alternativas de ensino. Deixo a 
-<a href="https://mauriciovancine.github.io/slides/talk-sbide.pdf" target="_blank" rel="noopener">apresentação</a> e 
-<a href="https://mauriciovancine.github.io/pdf/2021-anais-sbide.pdf" target="_blank" rel="noopener">resumo</a> disponíveis para quem quiser passar os olhos.</p>
-<p>Já que não pensei em como deixar minhas aulas disponíveis, mas sei de professores(as) mais organizados(as) que eu, o intuito desse post é justamente listar disciplinas de graduação e pós-graduação, disponibilizadas de forma remota e aberta no YouTube.</p>
-<p>Este é um post colaborativo, ficarei feliz demais em receber ajuda para aumentar essa listagem.</p>
+<p>Faz um tempo que interajo com o povo da Universidade Federal Rural de Pernambuco (UFRPE) de Recife, mas especificamente do Lab. 
+<a href="https://thiagocalvesouza.wixsite.com/ecoffun" target="_blank" rel="noopener">ECOFFUN</a> do Prof. Thiago Gonçalves-Souza, também conhecido como Toyoyo.</p>
+<p>Mais recentemente um dos seus alunos, o Arthur, que inclusive revisou esse post, comentou que precisava de variáveis socioeconômicas para usar em Modelos de Distribuição de Espécies para modelar doenças no Brasil, um projeto superinteressante. Bem, como preparei um script para isso, resolvi escrever um post do passo a passo de como estruturamos.</p>
+<p>A ideia aqui será baixar dados sócioeconômicos do 
+<a href="https://sidra.ibge.gov.br" target="_blank" rel="noopener"><strong>Sistema IBGE de Recuperação Automática - SIDRA</strong></a>, fazer a associação para os polígonos dos municípios e depois rasterizar com base em uma variável do WorldClim.</p>
+<p>Para fazer esses passos, vamos precisar desses pacotes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># packages</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(sidrar)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(geobr)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(raster)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(fasterize)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(tmap)
+</span></span></code></pre></div>
 
 
 
-
-<h2 id="linguagem-r">Linguagem R
-  <a href="#linguagem-r"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h2 id="dados-tabulares">Dados tabulares
+  <a href="#dados-tabulares"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
-<ul>
-<li>
-<p>
-<a href="https://youtube.com/playlist?list=PLg7_KQP14uSF8SRTbha-ezqu4lH-ATxb3" target="_blank" rel="noopener">EcoR: Introdução à Linguagem R - Prof. Alexandre Adalardo de Oliveira (USP)</a></p>
-</li>
-<li>
-<p>
-<a href="https://youtube.com/playlist?list=PL3U7PUKvYnzAZAEoFcjGLVkIML2ZGGl6t" target="_blank" rel="noopener">Curso de Programação em R - Prof. Bruno Vilela (UFBA)</a></p>
-</li>
-<li>
-<p>
-<a href="https://youtube.com/playlist?list=PLy2rjqiD2VP6p7RNCZ7lGU4j3CqjJDuWX" target="_blank" rel="noopener">Linguagem de Programação Estatística para Biologia - Prof. Diogo Borges Provete (UFMS)</a></p>
-</li>
-<li>
-<p>
-<a href="https://www.youtube.com/playlist?list=PLukH_mmOY4zpd1B83Cuo7vhK17lhTDrw1" target="_blank" rel="noopener">PEA - Curso - R - Manipulação de Dados Ecológicos - Profs. Danielle Katharine Petsch e Roger Paulo Mormul (UEM)</a></p>
-</li>
-</ul>
+<p>Primeiramente, vamos usar o pacote 
+<a href="https://cran.r-project.org/web/packages/sidrar/index.html" target="_blank" rel="noopener"><em>sidrar</em></a>, que é uma interface para o API do SIDRA. Esse pacote possui três funções:</p>
+<ol>
+<li><code>sidrar::search_sidra()</code>: pesquisa tabelas do SIDRA com determinado(s) termo(s)</li>
+<li><code>sidrar::info_sidra()</code>: lista as variáveis de uma tabela do SIDRA</li>
+<li><code>sidrar::get_sidra()</code>: faz o download de uma tabela do SIDRA</li>
+</ol>
+<p>O banco de dados do SIDRA é absurdamente enorme. Aqui vou explorar apenas uma tabela, mas existem muitas possibilidades para explorar.</p>
+<p>Vamos começar procurando tabelas com o termo &ldquo;abastecimento&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># search</span>
+</span></span><span style="display:flex;"><span>sidrar<span style="color:#719e07">::</span><span style="color:#268bd2">search_sidra</span>(<span style="color:#2aa198">&#34;abastecimento&#34;</span>)[1<span style="color:#719e07">:</span><span style="color:#2aa198">5</span>]
+</span></span></code></pre></div><p>Vou selecionar a tabela &ldquo;Tabela 3218: Domicílios particulares permanentes, por forma de abastecimento de água, segundo a existência de banheiro ou sanitário e esgotamento sanitário, o destino do lixo e a existência de energia elétrica&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># information</span>
+</span></span><span style="display:flex;"><span>sidrar<span style="color:#719e07">::</span><span style="color:#268bd2">info_sidra</span>(x <span style="color:#719e07">=</span> <span style="color:#2aa198">3218</span>) <span style="color:#719e07">%&gt;%</span> <span style="color:#268bd2">names</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># classific category</span>
+</span></span><span style="display:flex;"><span>sidrar<span style="color:#719e07">::</span><span style="color:#268bd2">info_sidra</span>(x <span style="color:#719e07">=</span> <span style="color:#2aa198">3218</span>)<span style="color:#719e07">$</span>classific_category <span style="color:#719e07">%&gt;%</span> <span style="color:#268bd2">names</span>()
+</span></span></code></pre></div><p>Agora começam as complicações, pois o API só permite o download de 50000 linhas de dados (foi o que entendi até o momento). Então, tive que ir fazendo download específicos para as diferentes categorias.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># get data</span>
+</span></span><span style="display:flex;"><span>da_agua <span style="color:#719e07">&lt;-</span> sidrar<span style="color:#719e07">::</span><span style="color:#268bd2">get_sidra</span>(x <span style="color:#719e07">=</span> <span style="color:#2aa198">3218</span>,
+</span></span><span style="display:flex;"><span>                             variable <span style="color:#719e07">=</span> <span style="color:#2aa198">1000096</span>,
+</span></span><span style="display:flex;"><span>                             period <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;last&#34;</span>,
+</span></span><span style="display:flex;"><span>                             classific <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;c61&#34;</span>),
+</span></span><span style="display:flex;"><span>                             geo <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;City&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>da_banheiro <span style="color:#719e07">&lt;-</span> sidrar<span style="color:#719e07">::</span><span style="color:#268bd2">get_sidra</span>(x <span style="color:#719e07">=</span> <span style="color:#2aa198">3218</span>,
+</span></span><span style="display:flex;"><span>                                 variable <span style="color:#719e07">=</span> <span style="color:#2aa198">1000096</span>,
+</span></span><span style="display:flex;"><span>                                 period <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;last&#34;</span>,
+</span></span><span style="display:flex;"><span>                                 classific <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;c299&#34;</span>),
+</span></span><span style="display:flex;"><span>                                 geo <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;City&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>da_lixo <span style="color:#719e07">&lt;-</span> sidrar<span style="color:#719e07">::</span><span style="color:#268bd2">get_sidra</span>(x <span style="color:#719e07">=</span> <span style="color:#2aa198">3218</span>,
+</span></span><span style="display:flex;"><span>                             variable <span style="color:#719e07">=</span> <span style="color:#2aa198">1000096</span>,
+</span></span><span style="display:flex;"><span>                             period <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;last&#34;</span>,
+</span></span><span style="display:flex;"><span>                             classific <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;c67&#34;</span>),
+</span></span><span style="display:flex;"><span>                             geo <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;City&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>da_luz <span style="color:#719e07">&lt;-</span> sidrar<span style="color:#719e07">::</span><span style="color:#268bd2">get_sidra</span>(x <span style="color:#719e07">=</span> <span style="color:#2aa198">3218</span>,
+</span></span><span style="display:flex;"><span>                            variable <span style="color:#719e07">=</span> <span style="color:#2aa198">1000096</span>,
+</span></span><span style="display:flex;"><span>                            period <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;last&#34;</span>,
+</span></span><span style="display:flex;"><span>                            classific <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;c309&#34;</span>),
+</span></span><span style="display:flex;"><span>                            geo <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;City&#34;</span>)
+</span></span></code></pre></div><p>Podemos olhar esses dados usando a função <code>dplyr::glimpse()</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># glimpse</span>
+</span></span><span style="display:flex;"><span>dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">glimpse</span>(da_agua)
+</span></span><span style="display:flex;"><span>dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">glimpse</span>(da_banheiro)
+</span></span><span style="display:flex;"><span>dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">glimpse</span>(da_lixo)
+</span></span><span style="display:flex;"><span>dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">glimpse</span>(da_luz)
+</span></span></code></pre></div><p>Para facilitar nossa vida com as variáveis, fiz alguns filtros, transformei os dados, selecionei colunas e renomeei outras para que a associação com os municípios fosse mais simples. No final, combinei as colunas para simplificar os dados em um único <code>tibble</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># filter and selection</span>
+</span></span><span style="display:flex;"><span>da_agua_sel <span style="color:#719e07">&lt;-</span> da_agua <span style="color:#719e07">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">filter</span>(`Forma de abastecimento de água` <span style="color:#719e07">==</span> <span style="color:#2aa198">&#34;Rede geral&#34;</span>) <span style="color:#719e07">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">mutate</span>(code_muni <span style="color:#719e07">=</span> <span style="color:#268bd2">as.numeric</span>(<span style="color:#268bd2">`Município </span>(Código)`)) %&gt;%
+</span></span><span style="display:flex;"><span>  dplyr::select(code_muni, Valor) %&gt;% 
+</span></span><span style="display:flex;"><span>  dplyr::rename(agua_rede = Valor)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>da_banheiro_sel &lt;- da_banheiro %&gt;% 
+</span></span><span style="display:flex;"><span>  dplyr::filter(`Existência de banheiro ou sanitário e esgotamento sanitário` == &#34;Não tinham banheiro nem sanitário&#34;) %&gt;% 
+</span></span><span style="display:flex;"><span>  dplyr::mutate(code_muni = as.numeric(`<span style="color:#268bd2">Município </span>(Código)`)) %&gt;%
+</span></span><span style="display:flex;"><span>  dplyr::select(code_muni, Valor) %&gt;%
+</span></span><span style="display:flex;"><span>  dplyr::rename(sem_banheiro = Valor)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>da_lixo_sel &lt;- da_lixo %&gt;% 
+</span></span><span style="display:flex;"><span>  dplyr::filter(`Destino do lixo` == &#34;Coletado&#34;) %&gt;% 
+</span></span><span style="display:flex;"><span>  dplyr::mutate(code_muni = as.numeric(`<span style="color:#268bd2">Município </span>(Código)`)) %&gt;%
+</span></span><span style="display:flex;"><span>  dplyr::select(code_muni, Valor) %&gt;%
+</span></span><span style="display:flex;"><span>  dplyr::rename(lixo_coletado = Valor)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>da_luz_sel &lt;- da_luz %&gt;% 
+</span></span><span style="display:flex;"><span>  dplyr::filter(`Existência de energia elétrica` == &#34;Tinham&#34;) %&gt;% 
+</span></span><span style="display:flex;"><span>  dplyr::mutate(code_muni = as.numeric(`<span style="color:#268bd2">Município </span>(Código)`)) <span style="color:#719e07">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">select</span>(code_muni, Valor) <span style="color:#719e07">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">rename</span>(luz <span style="color:#719e07">=</span> Valor)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>da_data <span style="color:#719e07">&lt;-</span> dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">bind_cols</span>(da_agua_sel, 
+</span></span><span style="display:flex;"><span>                            sem_banheiro <span style="color:#719e07">=</span> da_banheiro_sel<span style="color:#719e07">$</span>sem_banheiro, 
+</span></span><span style="display:flex;"><span>                            lixo_coletado <span style="color:#719e07">=</span> da_lixo_sel<span style="color:#719e07">$</span>lixo_coletado, 
+</span></span><span style="display:flex;"><span>                            luz <span style="color:#719e07">=</span> da_luz_sel<span style="color:#719e07">$</span>luz)
+</span></span><span style="display:flex;"><span>dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">glimpse</span>(da_data)
+</span></span></code></pre></div>
 
 
 
-
-<h2 id="estatística">Estatística
-  <a href="#estat%c3%adstica"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h2 id="dados-vetoriais">Dados vetoriais
+  <a href="#dados-vetoriais"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
-<ul>
-<li>
-<p>
-<a href="https://youtube.com/playlist?list=PLg7_KQP14uSGMKE9bmnVINkB4TXMdv0XO" target="_blank" rel="noopener">PlAnEco: Planejamento e Análise de dados em Ecologia - Prof. Alexandre Adalardo de Oliveira (USP)</a></p>
-</li>
-<li>
-<p>
-<a href="https://www.youtube.com/playlist?list=PL3U7PUKvYnzCiT8rb3Tv25R-dZo6YYzut" target="_blank" rel="noopener">Estatística Aplicada à Ecologia - Prof. Pavel Dodonov (UFBA)</a></p>
-</li>
-<li>
-<p>
-<a href="https://www.youtube.com/playlist?list=PL3U7PUKvYnzAtEU1znfx2MQTjirVVCs0Z" target="_blank" rel="noopener">Estatística Aplicada à Biologia - Prof. Pavel Dodonov (UFBA)</a></p>
-</li>
-<li>
-<p>
-<a href="https://www.youtube.com/playlist?list=PLy2rjqiD2VP5G6pqMo_QlWo7I3yu-uFTk" target="_blank" rel="noopener">Análises Multidimensionais - Prof. Diogo Borges Provete (UFMS)</a></p>
-</li>
-<li>
-<p>
-<a href="http://estat.bio.br/" target="_blank" rel="noopener">Curso de Estatistica para Pesquisa Científica - Prof. Thiago Rangel (UFG)</a></p>
-</li>
-<li>
-<p>
-<a href="https://www.youtube.com/channel/UCwVcL3wtVJNmgFZdNickiqw" target="_blank" rel="noopener">Regressão Linear - Prof. Walmes Zeviani (UFPR)</a></p>
-</li>
-<li>
-<p>
-<a href="https://www.youtube.com/playlist?list=PL0kdakqHgSlb5wRkeqM3Vr6R9Db2LFXIt" target="_blank" rel="noopener">Meta-análise em Ecologia e Evolução -  Prof. Eduardo Santos (USP)</a></p>
-</li>
-<li>
-<p>
-<a href="https://www.youtube.com/playlist?list=PL-20Z1XFWKR1JGnotqkqH98I2xMrVqpv-" target="_blank" rel="noopener">Estatística e Probabilidade (Ensino remoto, 2021.1 UFSJ) - Prof. Ben Deivide</a></p>
-</li>
-</ul>
+<p>Agora precisamos dos municípios. Vamos usar os dados oficiais do IBGE, baixando os dados para o mesmo ano (2010), usando a função <code>geobr::read_municipality()</code> do pacote 
+<a href="https://cran.r-project.org/web/packages/geobr/index.html" target="_blank" rel="noopener"><em>geobr</em></a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># vetor</span>
+</span></span><span style="display:flex;"><span>mun <span style="color:#719e07">&lt;-</span> geobr<span style="color:#719e07">::</span><span style="color:#268bd2">read_municipality</span>(code_muni <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;all&#34;</span>, year <span style="color:#719e07">=</span> <span style="color:#2aa198">2013</span>, showProgress <span style="color:#719e07">=</span> <span style="color:#cb4b16">FALSE</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># map</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(mun) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_polygons</span>()
+</span></span></code></pre></div>
 
 
 
-
-<h2 id="ecologia">Ecologia
-  <a href="#ecologia"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h2 id="join">Join
+  <a href="#join"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
-<ul>
-<li>
-<p>
-<a href="https://youtube.com/playlist?list=PL3U7PUKvYnzDPjJYBEzwVBqiQHcKYAiOd" target="_blank" rel="noopener">Ecologia Espacial - Prof. Pavel Dodonov (UFBA)</a></p>
-</li>
-<li>
-<p>
-<a href="https://www.youtube.com/playlist?list=PL2T3g_8Bm49S-ATCZQ118JnjXjoIG_r1Z" target="_blank" rel="noopener">Ecologia Geral - Prof. Kleber Del Claro (UFU)</a></p>
-</li>
-<li>
-<p>
-<a href="https://www.youtube.com/playlist?list=PL2T3g_8Bm49TbMxbXnC2u0qmO5CHPahH" target="_blank" rel="noopener">Ecologia Comportamental - Prof. Kleber Del Claro (UFU)</a></p>
-</li>
-</ul>
+<p>Agora que temos os dois dados (tabular e vetorial), vamos fazer a associação entre eles usando a função <code>dplyr::left_join()</code> do pacote 
+<a href="https://dplyr.tidyverse.org/" target="_blank" rel="noopener"><em>dplyr</em></a>, usando a coluna &ldquo;code_muni&rdquo; como a coluna chave.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># join</span>
+</span></span><span style="display:flex;"><span>mun_da <span style="color:#719e07">&lt;-</span> dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">left_join</span>(x <span style="color:#719e07">=</span> mun, y <span style="color:#719e07">=</span> da_data, by <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;code_muni&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># data</span>
+</span></span><span style="display:flex;"><span>dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">glimpse</span>(mun_da)
+</span></span></code></pre></div>
 
 
 
-
-<h2 id="geoprocessamento">Geoprocessamento
-  <a href="#geoprocessamento"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h2 id="raster">Raster
+  <a href="#raster"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
-<ul>
-<li>
-<p>
-<a href="https://youtube.com/playlist?list=PLo25BjoudnByh9PGT8JqqFtwf2M5w8CxU" target="_blank" rel="noopener">SIG para estudos de biodiversidade e conservação - Profs. Luara Tourinho (UFBA) e Prof. Bruno Vilela (UFBA)</a></p>
-</li>
-<li>
-<p>
-<a href="https://www.youtube.com/playlist?list=PL9GztlLGb7RpQbw2_W9MxVdBfDtPKSy-G" target="_blank" rel="noopener">Introdução ao SIG com Software Livre - Prof. Carlos H. Grohmann (USP)</a></p>
-</li>
-<li>
-<p>
-<a href="https://youtube.com/playlist?list=PLBvhnPO-uwWKPLXm1-ZUBk2Pr-0yIOWSz" target="_blank" rel="noopener">Uso de dados espaciais em estudos ambientais - Profa. Ângela Terumi Fushita e Vitor Vieira Vasconcelos (UFABC)</a></p>
-</li>
-</ul>
+<p>Agora que temos os limites dos municípios com os dados associados, vamos usar um raster de modelo para rasterizar os polígonos. Para isso, vamos baixar os dados raster do 
+<a href="https://www.worldclim.org/" target="_blank" rel="noopener"><strong>WorldClim</strong></a>, usando a função <code>raster::getData()</code> do pacote 
+<a href="https://rspatial.org/raster/pkg/index.html" target="_blank" rel="noopener"><em>raster</em></a>.</p>
+<p>Também vamos adequar o raster do WorldClim para a extensão e limite do Brasil com as funções <code>raster::crop()</code> e <code>raster::mask()</code>, respectivamente.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># raster</span>
+</span></span><span style="display:flex;"><span>bio <span style="color:#719e07">&lt;-</span> raster<span style="color:#719e07">::</span><span style="color:#268bd2">getData</span>(name <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;worldclim&#34;</span>, var <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;bio&#34;</span>, res <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># extension and limit</span>
+</span></span><span style="display:flex;"><span>bio_br <span style="color:#719e07">&lt;-</span> bio<span style="color:#719e07">$</span>bio1 <span style="color:#719e07">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  raster<span style="color:#719e07">::</span><span style="color:#268bd2">crop</span>(mun_da) <span style="color:#719e07">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  raster<span style="color:#719e07">::</span><span style="color:#268bd2">mask</span>(mun_da)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># map</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(bio_br) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_raster</span>(pal <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Spectral&#34;</span>, title <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;BIO01&#34;</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_layout</span>(legend.position <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;left&#34;</span>, <span style="color:#2aa198">&#34;bottom&#34;</span>))
+</span></span></code></pre></div>
 
 
 
-
-<h2 id="agradecimentos">Agradecimentos
-  <a href="#agradecimentos"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h2 id="rasterização">Rasterização
+  <a href="#rasteriza%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
-<p>Como forma de agradecimento, vou listando as pessoas que contrinuíram aqui.</p>
-<ul>
-<li>
-<a href="https://thiagocalvesouza.wixsite.com/ecoffun" target="_blank" rel="noopener">Prof. Thiago Gonçalves-Souza</a></li>
-<li>
-<a href="https://beatrizmilz.com/" target="_blank" rel="noopener">Bea Milz</a></li>
-<li>
-<a href="https://twitter.com/pedroasena" target="_blank" rel="noopener">Pedro Sena</a></li>
-</ul>
+<p>Agora sim, podemos fazer a rasterização dos polígonos dos municípios usando o raster que criamos como modelo, usando a função <code>fasterize::fasterize()</code>, também do pacote 
+<a href="https://cran.r-project.org/web/packages/fasterize/index.html" target="_blank" rel="noopener"><em>fasterize</em></a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># rasterize</span>
+</span></span><span style="display:flex;"><span>mun_agua_raster <span style="color:#719e07">&lt;-</span> fasterize<span style="color:#719e07">::</span><span style="color:#268bd2">fasterize</span>(sf <span style="color:#719e07">=</span> mun_da, raster <span style="color:#719e07">=</span> bio_br, field <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;agua_rede&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mun_sem_banheiro_raster <span style="color:#719e07">&lt;-</span> fasterize<span style="color:#719e07">::</span><span style="color:#268bd2">fasterize</span>(sf <span style="color:#719e07">=</span> mun_da, raster <span style="color:#719e07">=</span> bio_br, field <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;sem_banheiro&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mun_lixo_raster <span style="color:#719e07">&lt;-</span> fasterize<span style="color:#719e07">::</span><span style="color:#268bd2">fasterize</span>(sf <span style="color:#719e07">=</span> mun_da, raster <span style="color:#719e07">=</span> bio_br, field <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;lixo_coletado&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mun_luz_raster <span style="color:#719e07">&lt;-</span> fasterize<span style="color:#719e07">::</span><span style="color:#268bd2">fasterize</span>(sf <span style="color:#719e07">=</span> mun_da, raster <span style="color:#719e07">=</span> bio_br, field <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;luz&#34;</span>)
+</span></span></code></pre></div><p>Vamos fazer os mapas para ver os resultados.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># maps</span>
+</span></span><span style="display:flex;"><span>map_agua <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">tm_shape</span>(mun_agua_raster) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_raster</span>(pal <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Blues&#34;</span>, title <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Água de rede geral (%)&#34;</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_layout</span>(legend.position <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;left&#34;</span>, <span style="color:#2aa198">&#34;bottom&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>map_banheiro <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">tm_shape</span>(mun_sem_banheiro_raster) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_raster</span>(pal <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;RdYlGn&#34;</span>, title <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Sem banheiro (%)&#34;</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_layout</span>(legend.position <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;left&#34;</span>, <span style="color:#2aa198">&#34;bottom&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>map_lixo <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">tm_shape</span>(mun_lixo_raster) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_raster</span>(pal <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Greys&#34;</span>, title <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Lixo coletado (%)&#34;</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_layout</span>(legend.position <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;left&#34;</span>, <span style="color:#2aa198">&#34;bottom&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>map_luz <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">tm_shape</span>(mun_luz_raster) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_raster</span>(pal <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Oranges&#34;</span>, title <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Luz (%)&#34;</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tm_layout</span>(legend.position <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;left&#34;</span>, <span style="color:#2aa198">&#34;bottom&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tmap_arrange</span>(map_agua, map_banheiro, map_lixo, map_luz)
+</span></span></code></pre></div>
 
+
+
+<h2 id="exportar">Exportar
+  <a href="#exportar"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>E por fim, vamos exportar nossos rasters no formato GeoTiff e comprimidos com a função <code>raster::writeRaster()</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># stack</span>
+</span></span><span style="display:flex;"><span>mun_raster <span style="color:#719e07">&lt;-</span> raster<span style="color:#719e07">::</span><span style="color:#268bd2">stack</span>(mun_agua_raster, mun_sem_banheiro_raster, mun_lixo_raster, mun_luz_raster)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># export</span>
+</span></span><span style="display:flex;"><span>raster<span style="color:#719e07">::</span><span style="color:#268bd2">writeRaster</span>(x <span style="color:#719e07">=</span> mun_raster, 
+</span></span><span style="display:flex;"><span>                    filename <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;var&#34;</span>,
+</span></span><span style="display:flex;"><span>                    suffix <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;agua&#34;</span>, <span style="color:#2aa198">&#34;banheiro&#34;</span>, <span style="color:#2aa198">&#34;lixo&#34;</span>, <span style="color:#2aa198">&#34;luz&#34;</span>),
+</span></span><span style="display:flex;"><span>                    bylayer <span style="color:#719e07">=</span> <span style="color:#cb4b16">TRUE</span>, 
+</span></span><span style="display:flex;"><span>                    options <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;COMPRESS=DEFLATE&#34;</span>, <span style="color:#2aa198">&#34;TFW=TRUE&#34;</span>), 
+</span></span><span style="display:flex;"><span>                    format <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;GTiff&#34;</span>, 
+</span></span><span style="display:flex;"><span>                    progress <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;text&#34;</span>,
+</span></span><span style="display:flex;"><span>                    overwrite <span style="color:#719e07">=</span> <span style="color:#cb4b16">TRUE</span>)
+</span></span></code></pre></div>
       </section>
       <footer class="post-footer">
         <div class="post-pagination dt w-100 mt4 mb2">
   
   
     <a class="prev dtc pr2 tl v-top fw6"
-    href="https://mauriciovancine.github.io/blog/geo-join-rasterize/">&larr; Gerando rasters de dados socioeconômicos</a>
+    href="https://mauriciovancine.github.io/blog/geodados-fonte/">&larr; Fonte de dados geoespaciais</a>
   
   
   
     <a class="next dtc pl2 tr v-top fw6"
-    href="https://mauriciovancine.github.io/blog/geo-crs-datum/">Sistemas de Referência de Coordenadas e Datum &rarr;</a>
+    href="https://mauriciovancine.github.io/blog/geo-join-rasterize/">Disciplinas de graduação e pós-graduação on-line &rarr;</a>
   
 </div>
 
@@ -360,11 +431,11 @@
   <details open class="f6 fw7 input-reset">
   <dl class="f6 lh-copy">
     <dt class="fw7">Postado em:</dt>
-    <dd class="fw5 ml0">7 March 2021</dd>
+    <dd class="fw5 ml0">23 March 2021</dd>
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Comprimento:</dt>
-    <dd class="fw5 ml0">3 minutos de leitura, 578 palavras</dd>
+    <dd class="fw5 ml0">5 minutos de leitura, 938 palavras</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -376,7 +447,7 @@
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Tags:</dt>
-    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/r">R</a>  <a href="https://mauriciovancine.github.io/tags/aulas">Aulas</a>  <a href="https://mauriciovancine.github.io/tags/tutoriais">Tutoriais</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/r">R</a>  <a href="https://mauriciovancine.github.io/tags/geoespacial">Geoespacial</a>  <a href="https://mauriciovancine.github.io/tags/raster">Raster</a> </dd>
   </dl>
   
   <dl class="f6 lh-copy">
