@@ -6,7 +6,16 @@
     <description>Recent content in R on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 22 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distância de pontos a linhas</title>
+      <link>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</guid>
+      <description>Cálculo da distância de pontos a linhas no R e no QGIS</description>
+    </item>
+    
     <item>
       <title>Ecologia no R</title>
       <link>https://mauriciovancine.github.io/project/ecologia-r/</link>
@@ -25,15 +34,6 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
       <guid>https://mauriciovancine.github.io/project/lsmetrics/</guid>
       <description>Mais informações em breve.
  </description>
-    </item>
-    
-    <item>
-      <title>Fonte de dados geoespaciais</title>
-      <link>https://mauriciovancine.github.io/blog/geodados-fonte/</link>
-      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/geodados-fonte/</guid>
-      <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R</description>
     </item>
     
     <item>

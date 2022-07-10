@@ -2,8 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mauriciovancine.github.io/categories/blog/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/blog/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mauriciovancine.github.io/categories/</loc>
-    <lastmod>2022-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/dist%C3%A2ncia/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/geoespacial/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/geoprocessamento/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/r/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/ecologida-da-paisagem/</loc>
     <lastmod>2022-07-03T00:00:00+00:00</lastmod>
@@ -11,16 +38,10 @@
     <loc>https://mauriciovancine.github.io/teaching/</loc>
     <lastmod>2022-07-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/</loc>
-    <lastmod>2022-07-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/tags/m%C3%A9tricas-da-paisagem/</loc>
     <lastmod>2022-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</loc>
-    <lastmod>2022-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/</loc>
     <lastmod>2022-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/categories/workshop/</loc>
@@ -116,9 +137,6 @@
     <loc>https://mauriciovancine.github.io/project/</loc>
     <lastmod>2022-02-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/tags/r/</loc>
-    <lastmod>2022-02-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/tags/conectividade/</loc>
     <lastmod>2022-02-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -146,22 +164,7 @@
     <loc>https://mauriciovancine.github.io/tags/redes-de-intera%C3%A7%C3%A3o/</loc>
     <lastmod>2022-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/categories/blog/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/blog/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/blog/geodados-fonte/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/blog/geodados-fonte/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/geoespacial/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/geoprocessamento/</loc>
     <lastmod>2022-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/raster/</loc>
