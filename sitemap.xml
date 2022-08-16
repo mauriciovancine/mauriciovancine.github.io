@@ -2,13 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mauriciovancine.github.io/tags/amaz%C3%B4nia/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/categories/artigo/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/bacia-tapaj%C3%B3s/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/categories/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/fragmenta%C3%A7%C3%A3o/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/publications/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/publications/landscape-am-trb/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mauriciovancine.github.io/categories/blog/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/blog/</loc>
-    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/categories/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/dist%C3%A2ncia/</loc>
@@ -23,13 +47,7 @@
     <loc>https://mauriciovancine.github.io/tags/geoprocessamento/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/</loc>
-    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/tags/r/</loc>
-    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/ecologida-da-paisagem/</loc>
@@ -47,9 +65,6 @@
     <loc>https://mauriciovancine.github.io/categories/workshop/</loc>
     <lastmod>2022-07-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/categories/artigo/</loc>
-    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/publications/palms-cc/</loc>
     <lastmod>2022-06-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -63,9 +78,6 @@
     <lastmod>2022-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/palmeiras/</loc>
-    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/publications/</loc>
     <lastmod>2022-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/%C3%A1reas-protegidas/</loc>
@@ -147,9 +159,6 @@
     <lastmod>2022-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/publications/network-seed-af/</loc>
-    <lastmod>2022-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/fragmenta%C3%A7%C3%A3o/</loc>
     <lastmod>2022-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/project/lsmetrics/</loc>
@@ -493,9 +502,6 @@
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/limite-geogr%C3%A1fico/</loc>
     <lastmod>2018-05-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/amaz%C3%B4nia/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/publications/forest-cons-af-am/</loc>
     <lastmod>2018-02-01T00:00:00+00:00</lastmod>
