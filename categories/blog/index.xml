@@ -9,19 +9,10 @@
     <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Distância de pontos a linhas</title>
-      <link>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</link>
+      <link>https://mauriciovancine.github.io/blog/eco-espa-distancia-ponto-linha/</link>
       <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</guid>
-      <description>Cálculo da distância de pontos a linhas no R e no QGIS</description>
-    </item>
-    
-    <item>
-      <title>Distância de pontos a linhas</title>
-      <link>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</link>
-      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</guid>
+      <guid>https://mauriciovancine.github.io/blog/eco-espa-distancia-ponto-linha/</guid>
       <description>Cálculo da distância de pontos a linhas no R e no QGIS</description>
     </item>
     
@@ -36,10 +27,10 @@
     
     <item>
       <title>Disciplinas de graduação e pós-graduação on-line</title>
-      <link>https://mauriciovancine.github.io/blog/geo-join-rasterize/</link>
+      <link>https://mauriciovancine.github.io/blog/geral-cursos-online/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/blog/geo-join-rasterize/</guid>
+      <guid>https://mauriciovancine.github.io/blog/geral-cursos-online/</guid>
       <description>Listagem de disciplinas de graduação e pós-graduação oferecidas on-line</description>
     </item>
     
