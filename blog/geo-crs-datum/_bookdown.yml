@@ -1,9 +1,0 @@
-book_filename: "livro_r_ecologia"
-delete_merged_file: true
-language:
-  label:
-    fig: 'Figura '
-    tab: 'Tabela '
-    eq: 'Equação '
-  ui:
-    chapter_name: "Capítulo "
