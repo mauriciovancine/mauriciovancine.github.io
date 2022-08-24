@@ -6,7 +6,25 @@
     <description>Recent content on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mammals in São Paulo State: diversity, distribution, ecology, and conservation</title>
+      <link>https://mauriciovancine.github.io/publications/mammals-sp/</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/mammals-sp/</guid>
+      <description>Analisamos como as mudanças climáticas afetam a distribuição de duas espécies de mamíferos marsupiais aquáticos na América do Sul</description>
+    </item>
+    
+    <item>
+      <title>Publicações</title>
+      <link>https://mauriciovancine.github.io/publication/</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publication/</guid>
+      <description>Livros    Da Silva, F. R., Gonçalves-Souza, T., Paterno, G. B., Provete, D. B., &amp;amp; Vancine, M. H. (2022). Análises Ecológicas no R. Recife: Nupeea; Bauru, SP: Canal 6. ISBN 978-85-7917-563-3.  Artigos     Beca, G., Vancine, M. H., Carvalho, C. S., Pedrosa, F., Alves, R. S. C., Buscariol, D., &amp;hellip; &amp;amp; Galetti, M. (2017). High mammal species turnover in forest patches immersed in biofuel plantations.</description>
+    </item>
+    
     <item>
       <title>The fate of vegetation remnants  in the southern Amazon&#39;s largest threatened hotspot: part (I) a 33-year analysis of LULCC in the Tapajos River basin, Brazil</title>
       <link>https://mauriciovancine.github.io/publications/landscape-am-trb/</link>
@@ -14,6 +32,15 @@
       
       <guid>https://mauriciovancine.github.io/publications/landscape-am-trb/</guid>
       <description>Analisarmos a perda e fragmentação de habitat da Bacia do Rio Tapajós ao longo de três décadas e meia</description>
+    </item>
+    
+    <item>
+      <title>Distância de pontos a linhas</title>
+      <link>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</guid>
+      <description>Cálculo da distância de pontos a linhas no R e no QGIS</description>
     </item>
     
     <item>
@@ -42,15 +69,6 @@ Oferecimento       Laboratório de Ecologia Espacial e Conservação (LEEC). (20
       
       <guid>https://mauriciovancine.github.io/publications/palms-cc/</guid>
       <description>Analisamos como as mudanças climáticas afetam a distribuição de duas palmeiras do gênero Copernicia na América do Sul</description>
-    </item>
-    
-    <item>
-      <title>Publicações</title>
-      <link>https://mauriciovancine.github.io/publication/</link>
-      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/publication/</guid>
-      <description>Livros    Da Silva, F. R., Gonçalves-Souza, T., Paterno, G. B., Provete, D. B., &amp;amp; Vancine, M. H. (2022). Análises Ecológicas no R. Recife: Nupeea; Bauru, SP: Canal 6. ISBN 978-85-7917-563-3.  Artigos     Beca, G., Vancine, M. H., Carvalho, C. S., Pedrosa, F., Alves, R. S. C., Buscariol, D., &amp;hellip; &amp;amp; Galetti, M. (2017). High mammal species turnover in forest patches immersed in biofuel plantations.</description>
     </item>
     
     <item>
@@ -261,15 +279,6 @@ Oferecimento        Programa de Pós-graduação em Ecologia, Evolução e Biodi
       
       <guid>https://mauriciovancine.github.io/talk/talk-espacial-uff/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Gerando rasters de dados socioeconômicos</title>
-      <link>https://mauriciovancine.github.io/blog/geo-join-rasterize/</link>
-      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/geo-join-rasterize/</guid>
-      <description>Um passo a passo para gerar rasters de dados socioeconômicos para municípios do Brasil</description>
     </item>
     
     <item>

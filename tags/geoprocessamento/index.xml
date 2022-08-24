@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Distância de pontos a linhas</title>
+      <link>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/blog/geoanalise-distancia-ponto-linha/</guid>
+      <description>Cálculo da distância de pontos a linhas no R e no QGIS</description>
+    </item>
+    
+    <item>
       <title>Fonte de dados geoespaciais</title>
       <link>https://mauriciovancine.github.io/blog/geodados-fonte/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
