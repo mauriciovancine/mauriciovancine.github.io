@@ -6,7 +6,16 @@
     <description>Recent content on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dinâmica de mudança de cobertura da terra e Diagrama de Sankey</title>
+      <link>https://mauriciovancine.github.io/blog/geo-cob-terra-sankey/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/blog/geo-cob-terra-sankey/</guid>
+      <description>Código para gerar uma tabela contabilizando as mudanças de quantidade e área de classes de cobertura da terra e sua presentação através de um Diagrama de Sankey</description>
+    </item>
+    
     <item>
       <title>Mammals in São Paulo State: diversity, distribution, ecology, and conservation</title>
       <link>https://mauriciovancine.github.io/publications/mammals-sp/</link>

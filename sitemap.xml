@@ -2,13 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mauriciovancine.github.io/categories/blog/</loc>
+    <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/blog/</loc>
+    <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/categories/</loc>
+    <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/blog/geo-cob-terra-sankey/</loc>
+    <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/geoprocessamento/</loc>
+    <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/mapbiomas/</loc>
+    <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/</loc>
+    <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/mudan%C3%A7a-de-cobertura-da-terra/</loc>
+    <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/r/</loc>
+    <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/</loc>
+    <lastmod>2022-08-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mauriciovancine.github.io/categories/artigo/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/book/</loc>
-    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/categories/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/conserva%C3%A7%C3%A3o/</loc>
@@ -18,9 +45,6 @@
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/mam%C3%ADferos/</loc>
-    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/paper/</loc>
@@ -33,9 +57,6 @@
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/s%C3%A3o-paulo/</loc>
-    <lastmod>2022-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/</loc>
     <lastmod>2022-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/%C3%A1reas-protegidas/</loc>
@@ -53,12 +74,6 @@
     <loc>https://mauriciovancine.github.io/publications/landscape-am-trb/</loc>
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/categories/blog/</loc>
-    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/blog/</loc>
-    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/tags/dist%C3%A2ncia/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -66,12 +81,6 @@
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/geoespacial/</loc>
-    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/geoprocessamento/</loc>
-    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/r/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/ecologida-da-paisagem/</loc>
