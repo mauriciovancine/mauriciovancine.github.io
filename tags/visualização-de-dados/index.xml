@@ -6,14 +6,14 @@
     <description>Recent content in Visualização de dados on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 10 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/visualiza%C3%A7%C3%A3o-de-dados/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/visualiza%C3%A7%C3%A3o-de-dados/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introdução à linguagem R</title>
       <link>https://mauriciovancine.github.io/teaching/workshop-intror/</link>
-      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/teaching/workshop-intror/</guid>
-      <description>Descrição     O minicurso apresenta os fundamentos da linguagem R e do IDE RStudio para a manipulação e visualização de dados através do tidyverse. São abordados os seguintes temas: (1) funcionamento da linguagem R, (2) estrutura e manipulação de objetos, (3) tidyverse e (4) visualização de dados. Ao final do minicurso espera-se que os participantes adquiram conhecimentos introdutórios sobre o funcionamento da linguagem R, assim como a manipulação e visualização de dados tabulares.</description>
+      <description>Descrição     O minicurso apresenta os principais conceitos da linguagem R e do IDE RStudio para a manipulação e visualização de dados através do tidyverse. O tidyverse é um conjunto de pacotes e funções que compartilham uma mesma estrutura e sintaxe, com o intuito de criar códigos eficientes e organizados. Os pacotes são focados principalmente na organização (leitura, filtragem, organização, seleção e resumo) e visualização de dados (gráficos).</description>
     </item>
     
   </channel>
