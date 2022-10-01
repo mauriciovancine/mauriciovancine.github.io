@@ -6,7 +6,16 @@
     <description>Recent content on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 10 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Natural forest regeneration on anthropized landscapes could overcome climate change effects on the endangered maned sloth (Bradypus torquatus, Illiger 1811)</title>
+      <link>https://mauriciovancine.github.io/publications/sloth-af/</link>
+      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/sloth-af/</guid>
+      <description>Avaliamos a adequabilidade ambiental atual e futura para a preguiça-guará, Bradypus torquatus, sob cenários futuros de clima e restauração florestal, usando modelagem de nicho ecológico</description>
+    </item>
+    
     <item>
       <title>Introdução à linguagem R</title>
       <link>https://mauriciovancine.github.io/teaching/workshop-intror/</link>
@@ -315,6 +324,15 @@ Oferecimento        Programa de Pós-graduação em Ecologia, Evolução e Biodi
       
       <guid>https://mauriciovancine.github.io/publications/bird-mite-wl/</guid>
       <description>Consideramos os fatores abióticos (clima) e bióticos (diversidade de espécies de aves) para determinar os padrões de riqueza de ácaros de penas no mundo todos</description>
+    </item>
+    
+    <item>
+      <title>Sistemas de Referência de Coordenadas e Datum</title>
+      <link>https://mauriciovancine.github.io/blog/geo-crs-datum/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/blog/geo-crs-datum/</guid>
+      <description>Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum</description>
     </item>
     
     <item>

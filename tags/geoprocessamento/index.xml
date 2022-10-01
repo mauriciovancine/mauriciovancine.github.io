@@ -52,5 +52,14 @@
       <description>Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum</description>
     </item>
     
+    <item>
+      <title>Sistemas de Referência de Coordenadas e Datum</title>
+      <link>https://mauriciovancine.github.io/blog/geo-crs-datum/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/blog/geo-crs-datum/</guid>
+      <description>Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum</description>
+    </item>
+    
   </channel>
 </rss>
