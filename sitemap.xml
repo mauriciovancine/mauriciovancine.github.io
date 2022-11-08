@@ -2,13 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mauriciovancine.github.io/categories/artigo/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/categories/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+    <lastmod>2022-11-07T16:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/</loc>
+    <lastmod>2022-11-07T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/categories/mesa-redonda/</loc>
+    <lastmod>2022-11-07T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/talk/</loc>
+    <lastmod>2022-11-07T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/talk/talk-ecologo-unesp/</loc>
+    <lastmod>2022-11-07T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/categories/artigo/</loc>
     <lastmod>2022-09-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/modelagem-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/</loc>
@@ -138,9 +147,6 @@
     <lastmod>2022-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/talk/podcast-desabracando-arveores-r/</loc>
-    <lastmod>2022-05-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/talk/</loc>
     <lastmod>2022-05-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/categories/podcast/</loc>
