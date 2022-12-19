@@ -183,10 +183,10 @@ Como ajudar     É importante ressaltar que tudo isso é (e sempre será!</descr
     
     <item>
       <title>Fonte de dados geoespaciais</title>
-      <link>https://mauriciovancine.github.io/blog/geodados-fonte/</link>
+      <link>https://mauriciovancine.github.io/blog/geo-fonte-dados/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/blog/geodados-fonte/</guid>
+      <guid>https://mauriciovancine.github.io/blog/geo-fonte-dados/</guid>
       <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R</description>
     </item>
     
@@ -342,15 +342,6 @@ Oferecimento        Programa de Pós-graduação em Ecologia, Evolução e Biodi
       
       <guid>https://mauriciovancine.github.io/publications/bird-mite-wl/</guid>
       <description>Consideramos os fatores abióticos (clima) e bióticos (diversidade de espécies de aves) para determinar os padrões de riqueza de ácaros de penas no mundo todos</description>
-    </item>
-    
-    <item>
-      <title>Sistemas de Referência de Coordenadas e Datum</title>
-      <link>https://mauriciovancine.github.io/blog/geo-crs-datum/</link>
-      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/geo-crs-datum/</guid>
-      <description>Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum</description>
     </item>
     
     <item>

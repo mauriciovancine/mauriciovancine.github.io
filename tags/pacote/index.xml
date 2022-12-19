@@ -19,10 +19,10 @@
     
     <item>
       <title>Fonte de dados geoespaciais</title>
-      <link>https://mauriciovancine.github.io/blog/geodados-fonte/</link>
+      <link>https://mauriciovancine.github.io/blog/geo-fonte-dados/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/blog/geodados-fonte/</guid>
+      <guid>https://mauriciovancine.github.io/blog/geo-fonte-dados/</guid>
       <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R</description>
     </item>
     

@@ -18,10 +18,10 @@
     
     <item>
       <title>Fonte de dados geoespaciais</title>
-      <link>https://mauriciovancine.github.io/blog/geodados-fonte/</link>
+      <link>https://mauriciovancine.github.io/blog/geo-fonte-dados/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/blog/geodados-fonte/</guid>
+      <guid>https://mauriciovancine.github.io/blog/geo-fonte-dados/</guid>
       <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R</description>
     </item>
     
@@ -33,15 +33,6 @@
       <guid>https://mauriciovancine.github.io/teaching/course-geor/</guid>
       <description>Descrição     Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como controle de versão, git e GitHub; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.
 Oferecimento        Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2021).</description>
-    </item>
-    
-    <item>
-      <title>Sistemas de Referência de Coordenadas e Datum</title>
-      <link>https://mauriciovancine.github.io/blog/geo-crs-datum/</link>
-      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/geo-crs-datum/</guid>
-      <description>Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum</description>
     </item>
     
     <item>

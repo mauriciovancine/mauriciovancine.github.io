@@ -27,10 +27,10 @@
     
     <item>
       <title>Fonte de dados geoespaciais</title>
-      <link>https://mauriciovancine.github.io/blog/geodados-fonte/</link>
+      <link>https://mauriciovancine.github.io/blog/geo-fonte-dados/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/blog/geodados-fonte/</guid>
+      <guid>https://mauriciovancine.github.io/blog/geo-fonte-dados/</guid>
       <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R</description>
     </item>
     
@@ -41,15 +41,6 @@
       
       <guid>https://mauriciovancine.github.io/teaching/workshop-qgis/</guid>
       <description>Descrição     O minicurso oferece alguns dos principais conceitos teórico-práticos sobre a manipulação e visualização de dados geoespaciais no QGIS. São abordados os seguintes tópicos: (1) conceitos gerais de geoprocessamento, (2) interface e projeto do QGIS, (3) importação, criação e edição de dados vetoriais, (4) importação, criação e edição de dados matriciais e, (5) composição de mapas. Após a realização do minicurso espera-se que os alunes adquiram conceitos gerais da estrutura, manipulação e visualização de dados geoespaciais, assim como habilidades básicas para produção de mapas simples usando o QGIS.</description>
-    </item>
-    
-    <item>
-      <title>Sistemas de Referência de Coordenadas e Datum</title>
-      <link>https://mauriciovancine.github.io/blog/geo-crs-datum/</link>
-      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/geo-crs-datum/</guid>
-      <description>Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum</description>
     </item>
     
     <item>
