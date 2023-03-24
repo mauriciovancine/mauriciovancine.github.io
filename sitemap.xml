@@ -2,10 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mauriciovancine.github.io/tags/an%C3%A1lises-de-dados/</loc>
-    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
+    <loc>https://mauriciovancine.github.io/project/amphibr/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/anf%C3%ADbios/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/categories/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/lista-de-esp%C3%A9cies/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/categories/projetos/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/project/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/taxonomia/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/tra%C3%A7os-funcionais/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/tags/an%C3%A1lises-de-dados/</loc>
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/ensino/</loc>
@@ -17,19 +44,10 @@
     <loc>https://mauriciovancine.github.io/project/gere/</loc>
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/</loc>
-    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/categories/projeto/</loc>
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/project/</loc>
-    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/tags/r/</loc>
-    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/</loc>
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/am%C3%A9rica-do-sul/</loc>
@@ -515,9 +533,6 @@
     <loc>https://mauriciovancine.github.io/tags/amostragem/</loc>
     <lastmod>2019-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mauriciovancine.github.io/tags/anf%C3%ADbios/</loc>
-    <lastmod>2019-04-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mauriciovancine.github.io/publications/anteater-sp/</loc>
     <lastmod>2019-04-24T00:00:00+00:00</lastmod>
   </url><url>
@@ -537,9 +552,6 @@
     <lastmod>2019-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/neotr%C3%B3pico/</loc>
-    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/categories/projetos/</loc>
     <lastmod>2019-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/publications/trypanosoma-pr/</loc>
@@ -636,9 +648,6 @@
     <lastmod>2015-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/project/atlantic-amphibians/</loc>
-    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/tags/tra%C3%A7os-funcionais/</loc>
     <lastmod>2013-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/contributors/</loc>

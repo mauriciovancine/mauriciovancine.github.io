@@ -6,7 +6,19 @@
     <description>Recent content on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>amphiBR</title>
+      <link>https://mauriciovancine.github.io/project/amphibr/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/project/amphibr/</guid>
+      <description>amphiBR      
+Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.
+O dataset foi extraído da publicação por Segalla et al (2021) na Revista Brasileira de Herpetologia, e disponível também no link https://zenodo.org/record/4716176
+O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.</description>
+    </item>
+    
     <item>
       <title>Grupo de Estudos em R e Estatística (GERE)</title>
       <link>https://mauriciovancine.github.io/project/gere/</link>
