@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>Blog</title>
+      <link>https://mauriciovancine.github.io/categories/blog/</link>
+      <pubDate>Sun, 22 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Monografias</title>
       <link>https://mauriciovancine.github.io/categories/monografias/</link>
       <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
@@ -62,20 +71,20 @@
     </item>
     
     <item>
+      <title>Dissertação</title>
+      <link>https://mauriciovancine.github.io/categories/disserta%C3%A7%C3%A3o/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/categories/disserta%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Workshop</title>
       <link>https://mauriciovancine.github.io/categories/workshop/</link>
       <pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/categories/workshop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>https://mauriciovancine.github.io/categories/blog/</link>
-      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/categories/blog/</guid>
       <description></description>
     </item>
     

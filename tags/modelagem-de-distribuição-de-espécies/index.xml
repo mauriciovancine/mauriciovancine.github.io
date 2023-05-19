@@ -6,7 +6,16 @@
     <description>Recent content in Modelagem de Distribuição de Espécies on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/modelagem-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/modelagem-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conhecimento atual, distribuição potencial e conservação de cecílias (Amphibia: Gymnophiona) na Região Neotropical</title>
+      <link>https://mauriciovancine.github.io/publications/gymnophiona-neotropical/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/gymnophiona-neotropical/</guid>
+      <description>Dissertação, onde compilamos trabalhos e ocorrências das espécies de Gymnophiona para o Brasil e criamos modelos de distribuição de espécies para encontrar a distribuição potencial para direcionar esforços de amostragem em trabalhos de campo</description>
+    </item>
+    
     <item>
       <title>Natural forest regeneration on anthropized landscapes could overcome climate change effects on the endangered maned sloth (Bradypus torquatus, Illiger 1811)</title>
       <link>https://mauriciovancine.github.io/publications/sloth-af/</link>
@@ -23,15 +32,6 @@
       
       <guid>https://mauriciovancine.github.io/teaching/workshop-sdm/</guid>
       <description>Descrição     O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e background), avaliação dos modelos (ROC, AUC e TSS), limites de corte (thresholds) e consenso de modelos (ensembles).</description>
-    </item>
-    
-    <item>
-      <title>Modelagem da distribuição das Cecílias (Amphibia: Gymnophiona) do Brasil: subsídios para conservação e amostragens de campo</title>
-      <link>https://mauriciovancine.github.io/publications/gymnophionas-conservacao-amostragem/</link>
-      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/publications/gymnophionas-conservacao-amostragem/</guid>
-      <description>Trabalho de Conclusão de Curso, onde compilamos trabalhos e ocorrências das espécies de Gymnophiona para o Brasil e criamos modelos de distribuição de espécies para encontrar a distribuição potencial para direcionar esforços de amostragem em trabalhos de campo</description>
     </item>
     
     <item>

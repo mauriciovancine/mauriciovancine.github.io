@@ -38,6 +38,15 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
     </item>
     
     <item>
+      <title>Principais revistas de ecologia</title>
+      <link>https://mauriciovancine.github.io/blog/pub-revistas-eco/</link>
+      <pubDate>Sun, 22 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/blog/pub-revistas-eco/</guid>
+      <description>Lista das principais revistas de ecologia</description>
+    </item>
+    
+    <item>
       <title>Comparação da distribuição de espécies inferidos por modelos de nicho ecológicos e mapas de especialistas da IUCN para anfíbios anuros da América do Sul</title>
       <link>https://mauriciovancine.github.io/publications/anfibios-iucn-america-sul/</link>
       <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
@@ -62,6 +71,15 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
       
       <guid>https://mauriciovancine.github.io/talk/talk-ecologo-unesp/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Conhecimento atual, distribuição potencial e conservação de cecílias (Amphibia: Gymnophiona) na Região Neotropical</title>
+      <link>https://mauriciovancine.github.io/publications/gymnophiona-neotropical/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/gymnophiona-neotropical/</guid>
+      <description>Dissertação, onde compilamos trabalhos e ocorrências das espécies de Gymnophiona para o Brasil e criamos modelos de distribuição de espécies para encontrar a distribuição potencial para direcionar esforços de amostragem em trabalhos de campo</description>
     </item>
     
     <item>
@@ -615,15 +633,6 @@ Oferecimento        Programa de Pós-graduação em Ecologia, Evolução e Biodi
       
       <guid>https://mauriciovancine.github.io/publications/seed-af/</guid>
       <description>Avaliamos como a fragmentaçãoa influencia as interações par-a-par entre 407 espécies de dispersores de sementes e 1424 espécies de árvores em um hotspot de biodiversidade altamente fragmentado</description>
-    </item>
-    
-    <item>
-      <title>Modelagem da distribuição das Cecílias (Amphibia: Gymnophiona) do Brasil: subsídios para conservação e amostragens de campo</title>
-      <link>https://mauriciovancine.github.io/publications/gymnophionas-conservacao-amostragem/</link>
-      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/publications/gymnophionas-conservacao-amostragem/</guid>
-      <description>Trabalho de Conclusão de Curso, onde compilamos trabalhos e ocorrências das espécies de Gymnophiona para o Brasil e criamos modelos de distribuição de espécies para encontrar a distribuição potencial para direcionar esforços de amostragem em trabalhos de campo</description>
     </item>
     
     <item>
