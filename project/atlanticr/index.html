@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.96.0" />
-<title>Atlantic Spatial | Maurício Vancine</title>
+<title>atlanticr | Maurício Vancine</title>
 
 
 <meta property="twitter:site" content="@mauriciovancine">
@@ -24,30 +24,33 @@
   
     
   
-<meta name="description" content="Compilação dados geoespaciais e cálculo de métricas de paisagem para o Bioma da Mata Atlântica">
+<meta name="description" content="Pacote R para facilitar o acesso aos dados do ATLANTIC, uma série de data papers sobre biodiversidade da Mata Atlântica">
 
 
 <meta property="og:site_name" content="Maurício Vancine">
-<meta property="og:title" content="Atlantic Spatial | Maurício Vancine">
-<meta property="og:description" content="Compilação dados geoespaciais e cálculo de métricas de paisagem para o Bioma da Mata Atlântica" />
+<meta property="og:title" content="atlanticr | Maurício Vancine">
+<meta property="og:description" content="Pacote R para facilitar o acesso aos dados do ATLANTIC, uma série de data papers sobre biodiversidade da Mata Atlântica" />
 <meta property="og:type" content="page" />
-<meta property="og:url" content="https://mauriciovancine.github.io/project/atlantic-spatial/" />
+<meta property="og:url" content="https://mauriciovancine.github.io/project/atlanticr/" />
 <meta property="og:locale" content="pt-br">
 
 
 
 
     
-        <meta property="og:image" content="https://mauriciovancine.github.io/project/atlantic-spatial/featured-hex.png" >
+        <meta property="og:image" content="https://mauriciovancine.github.io/project/atlanticr/featured-hex.png" >
         <meta property="twitter:card" content="summary">
-        <meta name="twitter:image" content="https://mauriciovancine.github.io/project/atlantic-spatial/featured-hex.png" >
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/project/atlanticr/featured-hex.png" >
     
     
-  <meta itemprop="name" content="Atlantic Spatial">
-<meta itemprop="description" content="Mais informações em breve."><meta itemprop="datePublished" content="2017-03-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2017-03-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="4"><meta itemprop="image" content="https://mauriciovancine.github.io/project/atlantic-spatial/featured-hex.png">
-<meta itemprop="keywords" content="Mata Atlântica,Métricas de paisagem,Fragmentação," />
+  <meta itemprop="name" content="atlanticr">
+<meta itemprop="description" content="atlanticr   Instalação     O pacote pode ser instalado diretamente do github:
+# install.packages(&#34;pak&#34;) pak::pkg_install(&#34;mauriciovancine/atlanticr&#34;)  Dataset     Atualmente, existem 16 conjuntos de dados: nove sobre vertebrados, dois sobre traits de vertebrados, dois sobre invertebrados, dois sobre interações animais-plantas, um sobre plantas e um sobre dados espaciais.
+Vertebrados
+  atlantic_amphibians: ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America  atlantic_bats: ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America  atlantic_birds:  atlantic_camtraps:  atlantic_mammals: ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America  atlantic_nonvolant_mammals:  atlantic_primates:  atlantic_small_mammal:  atlantic_small_mammal_abundance:  Traits de vertebrados"><meta itemprop="datePublished" content="2023-09-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-09-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="165"><meta itemprop="image" content="https://mauriciovancine.github.io/project/atlanticr/featured-hex.png">
+<meta itemprop="keywords" content="Mata Atlântica,Biodiversidade,Dados," />
   
   
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -116,10 +119,10 @@
   <section class="page-content mw7 center">
     <article class="post-content pa0 ph4-l">
       <header class="post-header">
-        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Atlantic Spatial</h1>
-        <h4 class="f4 mt0 mb4 lh-title measure">Compilação dados geoespaciais e cálculo de métricas de paisagem para o Bioma da Mata Atlântica</h4>
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">atlanticr</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Pacote R para facilitar o acesso aos dados do ATLANTIC, uma série de data papers sobre biodiversidade da Mata Atlântica</h4>
         <p class="f6 measure lh-copy mv1">Por Maurício Vancine em <a href="https://mauriciovancine.github.io/categories/projetos">Projetos</a> </p>
-        <p class="f7 db mv0 ttu">March 1, 2017</p>
+        <p class="f7 db mv0 ttu">September 9, 2023</p>
 
       
       <div class="ph0 pt5">
@@ -135,7 +138,20 @@
     
       
       
-  <a class="btn-links mr2 ba dib" href="https://github.com/LEEClab/AtlanticSpatialData" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>code</a>
+  <a class="btn-links mr2 ba dib" href="https://mauriciovancine.github.io/atlanticr/" target="_blank" rel="noopener"><i class="fas fa-link fa-lg fa-fw mr2"></i>site</a>
+
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://github.com/mauriciovancine/atlanticr/" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>code</a>
 
 
       </div>
@@ -143,17 +159,100 @@
 
       </header>
       <section class="post-body pt5 pb4">
-        <p>Mais informações em breve.</p>
+        
+
+
+
+<h1 id="atlanticr-img-srcfeatured-hexpng-alignright-width30-min-width120px"><strong>atlanticr</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+  <a href="#atlanticr-img-srcfeatured-hexpng-alignright-width30-min-width120px"></a>
+</h1>
+
+
+
+
+<h2 id="instalação">Instalação
+  <a href="#instala%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>O pacote pode ser instalado diretamente do github:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># install.packages(&#34;pak&#34;)</span>
+</span></span><span style="display:flex;"><span>pak<span style="color:#719e07">::</span><span style="color:#268bd2">pkg_install</span>(<span style="color:#2aa198">&#34;mauriciovancine/atlanticr&#34;</span>)
+</span></span></code></pre></div>
+
+
+
+<h2 id="dataset">Dataset
+  <a href="#dataset"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Atualmente, existem 16 conjuntos de dados: nove sobre vertebrados, dois sobre traits de vertebrados, dois sobre invertebrados, dois sobre interações animais-plantas, um sobre plantas e um sobre dados espaciais.</p>
+<p><strong>Vertebrados</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html" target="_blank" rel="noopener"><code>atlantic_amphibians</code></a>: ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html" target="_blank" rel="noopener"><code>atlantic_bats</code></a>: ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html" target="_blank" rel="noopener"><code>atlantic_birds</code></a>:</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html" target="_blank" rel="noopener"><code>atlantic_camtraps</code></a>:</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html" target="_blank" rel="noopener"><code>atlantic_mammals</code></a>: ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html" target="_blank" rel="noopener"><code>atlantic_nonvolant_mammals</code></a>:</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html" target="_blank" rel="noopener"><code>atlantic_primates</code></a>:</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html" target="_blank" rel="noopener"><code>atlantic_small_mammal</code></a>:</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html" target="_blank" rel="noopener"><code>atlantic_small_mammal_abundance</code></a>:</li>
+</ul>
+<p><strong>Traits de vertebrados</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html" target="_blank" rel="noopener"><code>atlantic_bird_traits</code></a>:</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html" target="_blank" rel="noopener"><code>atlantic_mammal_traits</code></a>: ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America</li>
+</ul>
+<p><strong>Invertebrados</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_ants.html" target="_blank" rel="noopener"><code>atlantic_ants</code></a>: ATLANTIC ANTS: a data set of ant communities from the Atlantic Forests of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html" target="_blank" rel="noopener"><code>atlantic_butterflies</code></a>: Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests</li>
+</ul>
+<p><strong>Interações animais-plantas</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html" target="_blank" rel="noopener"><code>atlantic_frugivory</code></a>:</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html" target="_blank" rel="noopener"><code>atlantic_pollination</code></a>:</li>
+</ul>
+<p><strong>Plantas</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html" target="_blank" rel="noopener"><code>atlantic_epiphytes</code></a>:</li>
+</ul>
+<p><strong>Dados espaciais</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html" target="_blank" rel="noopener"><code>atlantic_spatial</code></a>:</li>
+</ul>
+<hr>
 
         
         <details closed class="f6 fw7 input-reset">
   <dl class="f6 lh-copy">
     <dt class="fw7">Postado em:</dt>
-    <dd class="fw5 ml0">1 March 2017</dd>
+    <dd class="fw5 ml0">9 September 2023</dd>
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Comprimento:</dt>
-    <dd class="fw5 ml0">1 minutos de leitura, 4 palavras</dd>
+    <dd class="fw5 ml0">1 minutos de leitura, 165 palavras</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -165,17 +264,17 @@
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Tags:</dt>
-    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/mata-atl%C3%A2ntica">Mata Atlântica</a>  <a href="https://mauriciovancine.github.io/tags/m%C3%A9tricas-de-paisagem">Métricas de paisagem</a>  <a href="https://mauriciovancine.github.io/tags/fragmenta%C3%A7%C3%A3o">Fragmentação</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/mata-atl%C3%A2ntica">Mata Atlântica</a>  <a href="https://mauriciovancine.github.io/tags/biodiversidade">Biodiversidade</a>  <a href="https://mauriciovancine.github.io/tags/dados">Dados</a> </dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Veja também:</dt>
     
-    <dd class="fw5 ml0"><a href="/project/atlanticr/">atlanticr</a></dd>
+    <dd class="fw5 ml0"><a href="/publications/anfibios-padroes-reprodutivos/">Distribuição do padrão reprodutivo em comunidades de anuros na Mata Atlântica</a></dd>
     
-    <dd class="fw5 ml0"><a href="/publications/landscape-pa-am/">Dinâmica da paisagem e fragmentação de ecossistemas em três bacias hidrográficas na Amazônia Oriental entre 1985 e 2019</a></dd>
+    <dd class="fw5 ml0"><a href="/publications/palms-inv-af/">Environmental niche and functional role similarity between invasive and native palms in the Atlantic Forest</a></dd>
     
-    <dd class="fw5 ml0"><a href="/publications/landscape-am-trb/">The fate of vegetation remnants  in the southern Amazon&#39;s largest threatened hotspot: part (I) a 33-year analysis of LULCC in the Tapajos River basin, Brazil</a></dd>
+    <dd class="fw5 ml0"><a href="/publications/seed-af/">Fragmented tropical forests lose mutualistic plant-animal interactions</a></dd>
     
   </dl>
 </details>
@@ -185,13 +284,10 @@
         <div class="post-pagination dt w-100 mt4 mb2">
   
   
-    <a class="prev dtc pr2 tl v-top fw6"
-    href="https://mauriciovancine.github.io/project/gymnophionas/">&larr; Gymnophionas</a>
-  
   
   
     <a class="next dtc pl2 tr v-top fw6"
-    href="https://mauriciovancine.github.io/project/atlantic-amphibians/">Atlantic Amphibians &rarr;</a>
+    href="https://mauriciovancine.github.io/project/amphibr/">amphiBR &rarr;</a>
   
 </div>
 
