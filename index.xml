@@ -6,7 +6,34 @@
     <description>Recent content on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publicações</title>
+      <link>https://mauriciovancine.github.io/publication/</link>
+      <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publication/</guid>
+      <description>Livros    Da Silva, F. R., Gonçalves-Souza, T., Paterno, G. B., Provete, D. B., &amp;amp; Vancine, M. H. (2022). Análises Ecológicas no R. Recife: Nupeea; Bauru, SP: Canal 6. ISBN 978-85-7917-563-3.  Artigos     Beca, G., Vancine, M. H., Carvalho, C. S., Pedrosa, F., Alves, R. S. C., Buscariol, D., &amp;hellip; &amp;amp; Galetti, M. (2017). High mammal species turnover in forest patches immersed in biofuel plantations.</description>
+    </item>
+    
+    <item>
+      <title>Climate-driven loss of taxonomic and functional richness in Atlantic Forest anurans</title>
+      <link>https://mauriciovancine.github.io/publications/amp-af-cc/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/amp-af-cc/</guid>
+      <description>Avaliamos os efeitos potenciais das mudanças climáticas na riqueza taxonômica e funcional dos anfíbios na Mata Atlântica do Brasil, e testamos se espécies dependentes de florestas e de habitat aberto responderam de maneira diferente aos estressores climáticos</description>
+    </item>
+    
+    <item>
+      <title>The Atlantic Forest of South America: spatiotemporal dynamics of remaining vegetation and implications for conservation</title>
+      <link>https://mauriciovancine.github.io/publications/af-spatiotemporal/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/af-spatiotemporal/</guid>
+      <description>Analisamos a dinâmica espaço-temporal da estrutura da paisagem da vegetação na Mata Atlântica a cada cinco anos de 1986-2020</description>
+    </item>
+    
     <item>
       <title>atlanticr</title>
       <link>https://mauriciovancine.github.io/project/atlanticr/</link>
@@ -17,6 +44,15 @@
 # install.packages(&amp;#34;pak&amp;#34;) pak::pkg_install(&amp;#34;mauriciovancine/atlanticr&amp;#34;)  Dataset     Atualmente, existem 16 conjuntos de dados: nove sobre vertebrados, dois sobre traits de vertebrados, dois sobre invertebrados, dois sobre interações animais-plantas, um sobre plantas e um sobre dados espaciais.
 Vertebrados
   atlantic_amphibians: ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America  atlantic_bats: ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America  atlantic_birds:  atlantic_camtraps:  atlantic_mammals: ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America  atlantic_nonvolant_mammals:  atlantic_primates:  atlantic_small_mammal:  atlantic_small_mammal_abundance:  Traits de vertebrados</description>
+    </item>
+    
+    <item>
+      <title>Where do they live? Predictive geographic distribution of Tadarida brasiliensis (Chiroptera, Molossidae) in South America</title>
+      <link>https://mauriciovancine.github.io/publications/bat-sa/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/bat-sa/</guid>
+      <description>Inferimos a distribuição potencial de T. brasiliensis em todo o continente Sulaméricanos, indicando as variáveis com maior influência em sua distribuição</description>
     </item>
     
     <item>
@@ -137,15 +173,6 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
       
       <guid>https://mauriciovancine.github.io/publications/mammals-sp/</guid>
       <description>Analisamos como as mudanças climáticas afetam a distribuição de duas espécies de mamíferos marsupiais aquáticos na América do Sul</description>
-    </item>
-    
-    <item>
-      <title>Publicações</title>
-      <link>https://mauriciovancine.github.io/publication/</link>
-      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/publication/</guid>
-      <description>Livros    Da Silva, F. R., Gonçalves-Souza, T., Paterno, G. B., Provete, D. B., &amp;amp; Vancine, M. H. (2022). Análises Ecológicas no R. Recife: Nupeea; Bauru, SP: Canal 6. ISBN 978-85-7917-563-3.  Artigos     Beca, G., Vancine, M. H., Carvalho, C. S., Pedrosa, F., Alves, R. S. C., Buscariol, D., &amp;hellip; &amp;amp; Galetti, M. (2017). High mammal species turnover in forest patches immersed in biofuel plantations.</description>
     </item>
     
     <item>

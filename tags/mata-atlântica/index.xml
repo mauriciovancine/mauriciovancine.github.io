@@ -6,7 +6,25 @@
     <description>Recent content in Mata Atlântica on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/mata-atl%C3%A2ntica/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/mata-atl%C3%A2ntica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Climate-driven loss of taxonomic and functional richness in Atlantic Forest anurans</title>
+      <link>https://mauriciovancine.github.io/publications/amp-af-cc/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/amp-af-cc/</guid>
+      <description>Avaliamos os efeitos potenciais das mudanças climáticas na riqueza taxonômica e funcional dos anfíbios na Mata Atlântica do Brasil, e testamos se espécies dependentes de florestas e de habitat aberto responderam de maneira diferente aos estressores climáticos</description>
+    </item>
+    
+    <item>
+      <title>The Atlantic Forest of South America: spatiotemporal dynamics of remaining vegetation and implications for conservation</title>
+      <link>https://mauriciovancine.github.io/publications/af-spatiotemporal/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/af-spatiotemporal/</guid>
+      <description>Analisamos a dinâmica espaço-temporal da estrutura da paisagem da vegetação na Mata Atlântica a cada cinco anos de 1986-2020</description>
+    </item>
+    
     <item>
       <title>atlanticr</title>
       <link>https://mauriciovancine.github.io/project/atlanticr/</link>
