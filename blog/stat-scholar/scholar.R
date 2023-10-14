@@ -57,7 +57,7 @@ ggplot(n_pub, aes(x = forcats::as_factor(year), y = publications, group = 1)) +
   geom_text(aes(label = publications), size = 6, vjust = .5, color = "white") +
   labs(x = "", y = "Publicações",
        title = "Número de publicações no Google Scholar",
-       subtitle = paste0(perfil$name, " (", min(cites$year), "-", max(cites$year), ")")) +
+       subtitle = paste0(perfil$name, " (", min(n_cites$year), "-", max(n_cites$year), ")")) +
   theme_bw(base_size = 20)
 ggsave("~/Downloads/publicacoes.png", width = 25, height = 20, units = "cm", dpi = 300)
 
@@ -65,7 +65,7 @@ ggplot(pub_journal, aes(x = forcats::as_factor(journal), y = publications)) +
   geom_bar(stat = "identity") +
   labs(x = "", y = "Publicações",
        title = "Número de publicações por revista",
-       subtitle = paste0(perfil$name, " (", min(cites$year), "-", max(cites$year), ")")) +
+       subtitle = paste0(perfil$name, " (", min(n_cites$year), "-", max(n_cites$year), ")")) +
   theme_bw(base_size = 20) +
   theme(axis.text.x = element_text(size = 15, angle = 90, hjust = 1, vjust = .4))
 ggsave("~/Downloads/publicacoes.png", width = 25, height = 20, units = "cm", dpi = 300)
