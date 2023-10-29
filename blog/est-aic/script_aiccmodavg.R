@@ -1,6 +1,6 @@
 library(AICcmodavg)
 
-##Mazerolle (2006) frog water loss example
+## Mazerolle (2006) frog water loss example
 data(dry.frog)
 head(dry.frog)
 
