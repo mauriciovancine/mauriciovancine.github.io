@@ -6,7 +6,16 @@
     <description>Recent content in Artigo on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/categories/artigo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/categories/artigo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/af-data-paper/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/af-data-paper/</guid>
+      <description>Disponibilizamos informações espaciais integradas e em escala precisa (resolução = 30 m) para toda a extensão da Mata Atlântica para o ano de 2020</description>
+    </item>
+    
     <item>
       <title>Climate-driven loss of taxonomic and functional richness in Atlantic Forest anurans</title>
       <link>https://mauriciovancine.github.io/publications/amp-af-cc/</link>

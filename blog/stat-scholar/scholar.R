@@ -94,5 +94,3 @@ scholar::plot_coauthors(coautores, size_labels = 5)
 ggsave("~/Downloads/coautores.png", width = 25, height = 20, units = "cm", dpi = 300)
 
 # end ---------------------------------------------------------------------
-
-
