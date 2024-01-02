@@ -46,11 +46,11 @@
   <meta itemprop="name" content="amphiBR">
 <meta itemprop="description" content="amphiBR      
 Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.
-O dataset foi extraído da publicação por Segalla et al (2021) na Revista Brasileira de Herpetologia, e disponível também no link https://zenodo.org/record/4716176
+O dataset foi extraído da publicação por Segalla et al. (2021) na Revista Brasileira de Herpetologia, e disponível também no link https://zenodo.org/record/4716176
 O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento."><meta itemprop="datePublished" content="2023-03-15T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-03-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="280"><meta itemprop="image" content="https://mauriciovancine.github.io/project/amphibr/featured-hex.png">
-<meta itemprop="keywords" content="Anfíbios,Taxonomia,Lista de espécies,Traços funcionais," />
+<meta itemprop="wordCount" content="461"><meta itemprop="image" content="https://mauriciovancine.github.io/project/amphibr/featured-hex.png">
+<meta itemprop="keywords" content="Anfíbios,Taxonomia,Lista de espécies," />
   
   
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -121,7 +121,7 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">amphiBR</h1>
         <h4 class="f4 mt0 mb4 lh-title measure">Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia</h4>
-        <p class="f6 measure lh-copy mv1">Por Paulo Barros de Abreu Junior, Diogo Provete, Maurício Vancine, Juliana Zin em <a href="https://mauriciovancine.github.io/categories/projetos">Projetos</a> </p>
+        <p class="f6 measure lh-copy mv1">Por Paulo Barros de Abreu Junior, Diogo Provete, Maurício Vancine, Juliana Zina em <a href="https://mauriciovancine.github.io/categories/projetos">Projetos</a> </p>
         <p class="f7 db mv0 ttu">March 15, 2023</p>
 
       
@@ -175,7 +175,7 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
 <a href="https://nubank.com.br/pagar/v67wv/tuh5iRS2YJ" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Apoie%20com-PIX-brightgreen" alt="pix"></a></p>
 <!-- badges: end -->
 <p>Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.</p>
-<p>O dataset foi extraído da publicação por Segalla et al (2021) na Revista Brasileira de Herpetologia, e disponível também no link 
+<p>O dataset foi extraído da publicação por Segalla et al. (2021) na Revista Brasileira de Herpetologia, e disponível também no link 
 <a href="https://zenodo.org/record/4716176" target="_blank" rel="noopener">https://zenodo.org/record/4716176</a></p>
 <p>O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.</p>
 <p>Dúvidas, críticas e sugestões são sempre bem-vindas!</p>
@@ -191,10 +191,8 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
     </svg></a>
 </h2>
 <p>O pacote pode ser instalado diretamente do github:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75">#install.packages(&#34;devtools&#34;)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>devtools<span style="color:#719e07">::</span><span style="color:#268bd2">install_github</span>(<span style="color:#2aa198">&#39;paulobarros/amphiBR&#39;</span>)
-</span></span><span style="display:flex;"><span>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># install.packages(&#34;devtools&#34;)</span>
+</span></span><span style="display:flex;"><span>devtools<span style="color:#719e07">::</span><span style="color:#268bd2">install_github</span>(<span style="color:#2aa198">&#34;paulobarros/amphiBR&#34;</span>)
 </span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(amphiBR)
 </span></span></code></pre></div>
 
@@ -206,7 +204,7 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
-<p>O dataset consiste de <strong>1188</strong> linhas com 10 colunas:</p>
+<p>O dataset consiste de <strong>1188</strong> linhas com 49 colunas:</p>
 <p><code>order</code> - Ordem</p>
 <p><code>family</code> - Família</p>
 <p><code>subfamily</code> - Subfamília</p>
@@ -218,21 +216,24 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
 <p><code>status</code> - Observações</p>
 <p><code>category</code> - Cateogoria de Ameaça pela Portaria MMA 300/2022</p>
 <p>O dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#719e07">&gt;</span> amphibiansBR
-</span></span><span style="display:flex;"><span><span style="color:#586e75"># A tibble: 1,188 × 8</span>
-</span></span><span style="display:flex;"><span>   order family        subfamily     sp_num genus       epithet        author status
-</span></span><span style="display:flex;"><span>   <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span> <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>         <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>         <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>  <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>       <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>          <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>  <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span> 
-</span></span><span style="display:flex;"><span> <span style="color:#2aa198">1</span> Anura Allophrynidae <span style="color:#cb4b16">NA</span>            <span style="color:#2aa198">1</span>      Allophryne  relicta        Caram… <span style="color:#cb4b16">NA</span>    
-</span></span><span style="display:flex;"><span> <span style="color:#2aa198">2</span> Anura Allophrynidae <span style="color:#cb4b16">NA</span>            <span style="color:#2aa198">2</span>      Allophryne  resplendens    Castr… <span style="color:#cb4b16">NA</span>    
-</span></span><span style="display:flex;"><span> <span style="color:#2aa198">3</span> Anura Allophrynidae <span style="color:#cb4b16">NA</span>            <span style="color:#2aa198">3</span>      Allophryne  ruthveni       Gaige… <span style="color:#cb4b16">NA</span>    
-</span></span><span style="display:flex;"><span> <span style="color:#2aa198">4</span> Anura Alsodidae     <span style="color:#cb4b16">NA</span>            <span style="color:#2aa198">4</span>      Limnomedusa <span style="color:#268bd2">macroglossa    </span>(Dumé… <span style="color:#cb4b16">NA</span>    
-</span></span><span style="display:flex;"><span> <span style="color:#2aa198">5</span> Anura <span style="color:#268bd2">Aromobatidae  </span>(Allobatinae) <span style="color:#2aa198">5</span>      Allobates   bacurau        Simõe… <span style="color:#cb4b16">NA</span>    
-</span></span><span style="display:flex;"><span> <span style="color:#2aa198">6</span> Anura <span style="color:#268bd2">Aromobatidae  </span>(Allobatinae) <span style="color:#2aa198">6</span>      Allobates   <span style="color:#268bd2">brunneus       </span>(Cope… <span style="color:#cb4b16">NA</span>    
-</span></span><span style="display:flex;"><span> <span style="color:#2aa198">7</span> Anura <span style="color:#268bd2">Aromobatidae  </span>(Allobatinae) <span style="color:#2aa198">7</span>      Allobates   caeruleodacty… (Lima… <span style="color:#cb4b16">NA</span>    
-</span></span><span style="display:flex;"><span> <span style="color:#2aa198">8</span> Anura <span style="color:#268bd2">Aromobatidae  </span>(Allobatinae) <span style="color:#2aa198">8</span>      Allobates   caldwellae     Lima,… recen…
-</span></span><span style="display:flex;"><span> <span style="color:#2aa198">9</span> Anura <span style="color:#268bd2">Aromobatidae  </span>(Allobatinae) <span style="color:#2aa198">9</span>      Allobates   carajas        Simõe… <span style="color:#cb4b16">NA</span>    
-</span></span><span style="display:flex;"><span><span style="color:#2aa198">10</span> Anura <span style="color:#268bd2">Aromobatidae  </span>(Allobatinae) <span style="color:#2aa198">10</span>     Allobates   <span style="color:#268bd2">conspicuus     </span>(Mora… <span style="color:#cb4b16">NA</span>    
-</span></span><span style="display:flex;"><span><span style="color:#586e75"># … with 1,178 more rows</span>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#719e07">&gt;</span> segalla2021
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># A tibble: 1,188 × 49</span>
+</span></span><span style="display:flex;"><span>   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">&lt;</span>dbl<span style="color:#719e07">&gt;</span> <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span> <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>   <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>     <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span> <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>   <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>   <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>  <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>  <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>          <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>    <span style="color:#719e07">&lt;</span>chr<span style="color:#719e07">&gt;</span>      <span style="color:#719e07">&lt;</span>dbl<span style="color:#719e07">&gt;</span> <span style="color:#719e07">&lt;</span>dbl<span style="color:#719e07">&gt;</span> <span style="color:#719e07">&lt;</span>dbl<span style="color:#719e07">&gt;</span> <span style="color:#719e07">&lt;</span>dbl<span style="color:#719e07">&gt;</span> <span style="color:#719e07">&lt;</span>dbl<span style="color:#719e07">&gt;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">1</span>          <span style="color:#2aa198">1</span> Anura Alloph… <span style="color:#cb4b16">NA</span>        Allo… relicta Alloph… Caram… <span style="color:#cb4b16">NA</span>     <span style="color:#cb4b16">NA</span>             DD       Yes            <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">2</span>          <span style="color:#2aa198">2</span> Anura Alloph… <span style="color:#cb4b16">NA</span>        Allo… resple… Alloph… Castr… <span style="color:#cb4b16">NA</span>     Resplendent <span style="color:#268bd2">F</span>… LC       No             <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">1</span>     <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">3</span>          <span style="color:#2aa198">3</span> Anura Alloph… <span style="color:#cb4b16">NA</span>        Allo… ruthve… Alloph… Gaige… <span style="color:#cb4b16">NA</span>     <span style="color:#cb4b16">NA</span>             LC       No             <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">1</span>     <span style="color:#2aa198">1</span>     <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">4</span>          <span style="color:#2aa198">4</span> Anura Alsodi… <span style="color:#cb4b16">NA</span>        Limn… macrog… Limnom… (Dumé… <span style="color:#cb4b16">NA</span>     Rãzinha<span style="color:#719e07">-</span>de<span style="color:#719e07">-</span>co… LC       No             <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">5</span>          <span style="color:#2aa198">5</span> Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… <span style="color:#cb4b16">NA</span>     <span style="color:#cb4b16">NA</span>             LC       Yes            <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">1</span>     <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">6</span>          <span style="color:#2aa198">6</span> Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… <span style="color:#cb4b16">NA</span>     Chapada Rocke… NT       Yes            <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">7</span>          <span style="color:#2aa198">7</span> Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… <span style="color:#cb4b16">NA</span>     <span style="color:#cb4b16">NA</span>             LC       Yes            <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">1</span>     <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">8</span>          <span style="color:#2aa198">8</span> Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… <span style="color:#cb4b16">NA</span>             <span style="color:#cb4b16">NA</span>       <span style="color:#cb4b16">NA</span>            <span style="color:#cb4b16">NA</span>    <span style="color:#cb4b16">NA</span>    <span style="color:#cb4b16">NA</span>    <span style="color:#cb4b16">NA</span>    <span style="color:#cb4b16">NA</span>
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">9</span>          <span style="color:#2aa198">9</span> Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… <span style="color:#cb4b16">NA</span>     <span style="color:#cb4b16">NA</span>             <span style="color:#cb4b16">NA</span>       <span style="color:#cb4b16">NA</span>            <span style="color:#cb4b16">NA</span>    <span style="color:#cb4b16">NA</span>    <span style="color:#cb4b16">NA</span>    <span style="color:#cb4b16">NA</span>    <span style="color:#cb4b16">NA</span>
+</span></span><span style="display:flex;"><span><span style="color:#2aa198">10</span>         <span style="color:#2aa198">10</span> Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… <span style="color:#cb4b16">NA</span>     <span style="color:#cb4b16">NA</span>             LC       No             <span style="color:#2aa198">1</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>     <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># ℹ 1,178 more rows</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#586e75"># ℹ Use `print(n = ...)` to see more rows</span>
 </span></span></code></pre></div><hr>
 
@@ -244,7 +245,7 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Comprimento:</dt>
-    <dd class="fw5 ml0">2 minutos de leitura, 280 palavras</dd>
+    <dd class="fw5 ml0">3 minutos de leitura, 461 palavras</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -256,7 +257,7 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Tags:</dt>
-    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/anf%C3%ADbios">Anfíbios</a>  <a href="https://mauriciovancine.github.io/tags/taxonomia">Taxonomia</a>  <a href="https://mauriciovancine.github.io/tags/lista-de-esp%C3%A9cies">Lista de espécies</a>  <a href="https://mauriciovancine.github.io/tags/tra%C3%A7os-funcionais">Traços funcionais</a> </dd>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/anf%C3%ADbios">Anfíbios</a>  <a href="https://mauriciovancine.github.io/tags/taxonomia">Taxonomia</a>  <a href="https://mauriciovancine.github.io/tags/lista-de-esp%C3%A9cies">Lista de espécies</a> </dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -310,7 +311,7 @@ O objetivo deste pacote é facilitar a geração de listas de espécie para proj
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
   <nav class="db dt-l w-100">
     <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
-      &copy; 2023 Maurício Vancine
+      &copy; 2024 Maurício Vancine
       <span class="middot-divider"></span>
       Feito com <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
       <br />

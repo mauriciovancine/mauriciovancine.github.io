@@ -27,7 +27,7 @@ Vertebrados
       <guid>https://mauriciovancine.github.io/project/amphibr/</guid>
       <description>amphiBR      
 Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.
-O dataset foi extraído da publicação por Segalla et al (2021) na Revista Brasileira de Herpetologia, e disponível também no link https://zenodo.org/record/4716176
+O dataset foi extraído da publicação por Segalla et al. (2021) na Revista Brasileira de Herpetologia, e disponível também no link https://zenodo.org/record/4716176
 O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.</description>
     </item>
     
