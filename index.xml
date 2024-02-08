@@ -6,7 +6,16 @@
     <description>Recent content on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 30 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Atlantic Forest of South America: spatiotemporal dynamics of remaining vegetation and implications for conservation</title>
+      <link>https://mauriciovancine.github.io/publications/af-spatiotemporal/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/publications/af-spatiotemporal/</guid>
+      <description>Analisamos a dinâmica espaço-temporal da estrutura da paisagem da vegetação na Mata Atlântica a cada cinco anos de 1986-2020</description>
+    </item>
+    
     <item>
       <title>The Protected Areas network may be insufficient to protect bird diversity in a fragmented tropical hotspot under different climate scenarios</title>
       <link>https://mauriciovancine.github.io/publications/bird-af-pa/</link>
@@ -27,10 +36,10 @@
     
     <item>
       <title>ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest</title>
-      <link>https://mauriciovancine.github.io/publications/af-data-paper/</link>
+      <link>https://mauriciovancine.github.io/publications/af-spatial-data-paper-preprint/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/publications/af-data-paper/</guid>
+      <guid>https://mauriciovancine.github.io/publications/af-spatial-data-paper-preprint/</guid>
       <description>Disponibilizamos informações espaciais integradas e em escala precisa (resolução = 30 m) para toda a extensão da Mata Atlântica para o ano de 2020</description>
     </item>
     
@@ -55,10 +64,10 @@
     
     <item>
       <title>The Atlantic Forest of South America: spatiotemporal dynamics of remaining vegetation and implications for conservation</title>
-      <link>https://mauriciovancine.github.io/publications/af-spatiotemporal/</link>
+      <link>https://mauriciovancine.github.io/publications/af-spatiotemporal-preprint/</link>
       <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mauriciovancine.github.io/publications/af-spatiotemporal/</guid>
+      <guid>https://mauriciovancine.github.io/publications/af-spatiotemporal-preprint/</guid>
       <description>Analisamos a dinâmica espaço-temporal da estrutura da paisagem da vegetação na Mata Atlântica a cada cinco anos de 1986-2020</description>
     </item>
     
