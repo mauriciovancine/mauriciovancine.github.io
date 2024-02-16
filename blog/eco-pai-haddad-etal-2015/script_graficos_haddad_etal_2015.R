@@ -1,16 +1,17 @@
 library(tidyverse)
 library(terra)
 
-rc <- terra::rast("~/Downloads/rio_claro/rc_habitat.tif")
+rc <- terra::rast("raster.tif")
 rc
+
 plot(rc)
 
 # edge
-rc_na <- terra::ifel(rc == 1, 1, NA) 
+rc_na <- terra::ifel(rc == 3, 1, NA) 
 rc_na
 plot(rc_na)
 
-rc_matrix <- terra::ifel(rc == 1, NA, 1)
+rc_matrix <- terra::ifel(rc != 3, 1, NA)
 rc_matrix
 plot(rc_matrix)
 
