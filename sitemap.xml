@@ -2,13 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mauriciovancine.github.io/talk/talk-r-geospatial/</loc>
+    <lastmod>2024-03-12T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/categories/</loc>
+    <lastmod>2024-03-12T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/</loc>
+    <lastmod>2024-03-12T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/categories/palestra/</loc>
+    <lastmod>2024-03-12T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/talk/</loc>
+    <lastmod>2024-03-12T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-wwf/</loc>
+    <lastmod>2024-03-07T19:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mauriciovancine.github.io/categories/artigo/</loc>
     <lastmod>2024-02-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/borda/</loc>
-    <lastmod>2024-02-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/categories/</loc>
     <lastmod>2024-02-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/conectividade/</loc>
@@ -21,9 +36,6 @@
     <lastmod>2024-02-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/mata-atl%C3%A2ntica/</loc>
-    <lastmod>2024-02-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/</loc>
     <lastmod>2024-02-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/tags/m%C3%A9tricas-de-paisagem/</loc>
@@ -171,12 +183,6 @@
     <lastmod>2022-11-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/talk/talk-sdm-ufpe/</loc>
-    <lastmod>2022-11-09T14:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/categories/palestra/</loc>
-    <lastmod>2022-11-09T14:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mauriciovancine.github.io/talk/</loc>
     <lastmod>2022-11-09T14:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mauriciovancine.github.io/categories/mesa-redonda/</loc>

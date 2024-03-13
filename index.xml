@@ -6,7 +6,25 @@
     <description>Recent content on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 08 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Mar 2024 19:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Análise de dados geoespaciais no R</title>
+      <link>https://mauriciovancine.github.io/talk/talk-r-geospatial/</link>
+      <pubDate>Tue, 12 Mar 2024 19:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/talk/talk-r-geospatial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dinâmica espaço-temporal da vegetação florestal e natural da Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-wwf/</link>
+      <pubDate>Thu, 07 Mar 2024 19:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-wwf/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation</title>
       <link>https://mauriciovancine.github.io/publications/af-spatiotemporal/</link>

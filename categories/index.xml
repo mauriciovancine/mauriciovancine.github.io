@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 08 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Mar 2024 19:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Palestra</title>
+      <link>https://mauriciovancine.github.io/categories/palestra/</link>
+      <pubDate>Tue, 12 Mar 2024 19:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/categories/palestra/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Artigo</title>
       <link>https://mauriciovancine.github.io/categories/artigo/</link>
@@ -40,15 +49,6 @@
       <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mauriciovancine.github.io/categories/monografias/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Palestra</title>
-      <link>https://mauriciovancine.github.io/categories/palestra/</link>
-      <pubDate>Wed, 09 Nov 2022 14:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/categories/palestra/</guid>
       <description></description>
     </item>
     
