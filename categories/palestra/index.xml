@@ -6,7 +6,16 @@
     <description>Recent content in Palestra on Maurício Vancine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 12 Mar 2024 19:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/categories/palestra/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Mar 2024 10:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/categories/palestra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dinámica espacio-temporal de la vegetación forestal y natural en el Bosque Atlántico e implicaciones para la conservación</title>
+      <link>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-red/</link>
+      <pubDate>Mon, 25 Mar 2024 10:00:00 +0000</pubDate>
+      
+      <guid>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-red/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Análise de dados geoespaciais no R</title>
       <link>https://mauriciovancine.github.io/talk/talk-r-geospatial/</link>
