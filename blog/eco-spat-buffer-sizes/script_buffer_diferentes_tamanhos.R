@@ -29,6 +29,8 @@ tm_shape(rc) +
 pt_buffer <- sf::st_buffer(pt, dist = pt$dist_buffer)
 pt_buffer
 
+point_buffer <- purrr::map_dfr(c(seq(200, 2000, 200), 2500), ~sf::st_buffer(point_utm, .x))
+
 tm_shape(rc) +
     tm_polygons() +
     tm_shape(pt_buffer) +
