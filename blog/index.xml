@@ -4,71 +4,58 @@
     <title>Blog on Maurício Vancine</title>
     <link>https://mauriciovancine.github.io/blog/</link>
     <description>Recent content in Blog on Maurício Vancine</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 04 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reinstalar pacotes depois de atualizar o R</title>
-      <link>https://mauriciovancine.github.io/blog/r-reinstall-packages/</link>
+      <link>https://mauriciovancine.github.io/blog/2024-06-r-reinstall-packages/</link>
       <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/r-reinstall-packages/</guid>
+      <guid>https://mauriciovancine.github.io/blog/2024-06-r-reinstall-packages/</guid>
       <description>Depois de atualizar o R, vem a parte chata de reinstalar todos os pacotes, mas o R mesmo pode te ajudar</description>
     </item>
-    
     <item>
       <title>Dinâmica de mudança de cobertura da terra e Diagrama de Sankey</title>
-      <link>https://mauriciovancine.github.io/blog/geo-cob-terra-sankey/</link>
+      <link>https://mauriciovancine.github.io/blog/2022-08-geo-cob-terra-sankey/</link>
       <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/geo-cob-terra-sankey/</guid>
+      <guid>https://mauriciovancine.github.io/blog/2022-08-geo-cob-terra-sankey/</guid>
       <description>Contabilização das mudanças de quantidade e área de classes de cobertura da terra ao longo do tempo e sua representação através de um Diagrama de Sankey</description>
     </item>
-    
     <item>
       <title>Distância de pontos a linhas</title>
-      <link>https://mauriciovancine.github.io/blog/eco-espa-distancia-ponto-linha/</link>
+      <link>https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/</link>
       <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/eco-espa-distancia-ponto-linha/</guid>
+      <guid>https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/</guid>
       <description>Cálculo da distância de pontos a linhas no R e no QGIS</description>
     </item>
-    
     <item>
       <title>Fonte de dados geoespaciais</title>
-      <link>https://mauriciovancine.github.io/blog/geo-fonte-dados/</link>
+      <link>https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/geo-fonte-dados/</guid>
+      <guid>https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/</guid>
       <description>Listagem das principais bases de dados vetoriais e raster de dados geoespaciais, assim como pacotes do R</description>
     </item>
-    
     <item>
       <title>Disciplinas de graduação e pós-graduação on-line</title>
-      <link>https://mauriciovancine.github.io/blog/academic-online-courses/</link>
+      <link>https://mauriciovancine.github.io/blog/2021-03-academic-online-courses/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/academic-online-courses/</guid>
+      <guid>https://mauriciovancine.github.io/blog/2021-03-academic-online-courses/</guid>
       <description>Listagem de disciplinas de graduação e pós-graduação oferecidas on-line</description>
     </item>
-    
     <item>
       <title>Sistemas de Referência de Coordenadas e Datum</title>
-      <link>https://mauriciovancine.github.io/blog/geo-crs-datum/</link>
+      <link>https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/</link>
       <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/geo-crs-datum/</guid>
+      <guid>https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/</guid>
       <description>Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum</description>
     </item>
-    
     <item>
       <title>Help me help you: um bestiário para entender erros e pedir ajuda no R</title>
-      <link>https://mauriciovancine.github.io/blog/r-erros/</link>
+      <link>https://mauriciovancine.github.io/blog/2020-08-r-erros/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/r-erros/</guid>
+      <guid>https://mauriciovancine.github.io/blog/2020-08-r-erros/</guid>
       <description>Um guia para entender erros e pedir ajuda no R</description>
     </item>
-    
   </channel>
 </rss>

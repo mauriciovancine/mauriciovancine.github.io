@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quantidade De Habitat on Maurício Vancine</title>
+    <link>http://localhost:3606/tags/quantidade-de-habitat/</link>
+    <description>Recent content in Quantidade De Habitat on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:3606/tags/quantidade-de-habitat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Métrica de paisagem: quantidade de habitat usando vetores</title>
+      <link>http://localhost:3606/blog/2024-02-landscape-habitat-amount-vetor/</link>
+      <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2024-02-landscape-habitat-amount-vetor/</guid>
+      <description>Cálculo da quantidade de hatbiat no R usando vetores</description>
+    </item>
+    <item>
+      <title>Métrica de paisagem: quantidade de habitat usando vetores</title>
+      <link>http://localhost:3606/blog/2024-02-landscape-habitat-amount-vetor/</link>
+      <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2024-02-landscape-habitat-amount-vetor/</guid>
+      <description>Cálculo da quantidade de hatbiat no R usando vetores</description>
+    </item>
+  </channel>
+</rss>

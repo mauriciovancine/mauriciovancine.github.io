@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cobertura Florestal on Maurício Vancine</title>
+    <link>http://localhost:3606/tags/cobertura-florestal/</link>
+    <description>Recent content in Cobertura Florestal on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:3606/tags/cobertura-florestal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bases de dados de cobertura florestal</title>
+      <link>http://localhost:3606/blog/2022-01-eco-pai-metricas-geodata/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2022-01-eco-pai-metricas-geodata/</guid>
+      <description>Listagem e comparação de diferente bases de dados de cobertura florestal para métricas de paisagem</description>
+    </item>
+  </channel>
+</rss>

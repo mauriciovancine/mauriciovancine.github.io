@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emacs on Maurício Vancine</title>
+    <link>http://localhost:3606/tags/emacs/</link>
+    <description>Recent content in Emacs on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:3606/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Positron</title>
+      <link>http://localhost:3606/blog/2024-05-r-emacs/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2024-05-r-emacs/</guid>
+      <description>Nova IDE para R e Python</description>
+    </item>
+    <item>
+      <title>R no Emacs</title>
+      <link>http://localhost:3606/blog/2024-05-r-emacs/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2024-05-r-emacs/</guid>
+      <description>Configuração e uso do R no Emacs</description>
+    </item>
+    <item>
+      <title>R no Emacs</title>
+      <link>http://localhost:3606/blog/2024-05-r-emacs/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2024-05-r-emacs/</guid>
+      <description>Configuração e uso do R no Emacs</description>
+    </item>
+    <item>
+      <title>R no Emacs</title>
+      <link>http://localhost:3606/blog/2024-05-r-emacs/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2024-05-r-emacs/</guid>
+      <description>Configuração e uso do R no Emacs</description>
+    </item>
+  </channel>
+</rss>

@@ -4,17 +4,16 @@
     <title>Morcegos on Maurício Vancine</title>
     <link>https://mauriciovancine.github.io/tags/morcegos/</link>
     <description>Recent content in Morcegos on Maurício Vancine</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 01 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/morcegos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/morcegos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Present and future distribution of bat hosts of sarbecoviruses: implications for conservation and public health</title>
       <link>https://mauriciovancine.github.io/publications/bat-sarbeco/</link>
       <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mauriciovancine.github.io/publications/bat-sarbeco/</guid>
       <description>Avaliamos o viés de amostragem e modelagmos as distribuições de morcegos hospedeiros dos Sarbecovírus baseados em relação climáticas e de paisagem e projetamos para cenários futuros para encontrar adensamentos desses hospedeiros</description>
     </item>
-    
   </channel>
 </rss>

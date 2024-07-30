@@ -1,0 +1,101 @@
+
+13/09/2021 12:19 - Diogo Provete: buenas ! perguntinha rápida: aquele artigo de vcs Muylaert et al. 2018 dos limites da FA. Vc tá usando pro teu projeto o consenso?
+13/09/2021 12:20 - Diogo Provete: to perguntando porque tem diferenças grandes mesmo entre os mapas, mas ao mesmo tempo retira algumas cosias estranhas, tipo considerar FA as matas do centro de Goiás.
+13/09/2021 12:21 - Diogo Provete: na última fig vcs colocam aqueles pins pra mostrar as principais diferenças mas não tem tanto detalhação
+13/09/2021 12:23 - Maurício Vancine: Opa, cara, complicado, eu ainda não parei para averiguar o limite que vou considerar para as comunidades
+13/09/2021 12:23 - Maurício Vancine: Provavelmente vou usar o da Lei da Mata Atlântica, por excluir áreas de Cerrado e por classificar os tipos de vegetação
+13/09/2021 12:23 - Maurício Vancine: Que pode ser uma variável interessante
+13/09/2021 12:24 - Maurício Vancine: Na vdd, eu fui o primeiro que indagou isso no lab: que mapa vamos considerar povo? E numa discussão, a Renata levou isso para frente, eu estava sem tempo
+13/09/2021 12:25 - Maurício Vancine: Mas cara, aqueles não são os únicos limites, se vc ler o cap. do livro da Mata Atlântica, tem muito mais
+13/09/2021 12:26 - Maurício Vancine: Saca
+13/09/2021 12:26 - Maurício Vancine: ‎IMG-20210913-WA0000.jpg (arquivo anexado)
+13/09/2021 12:26 - Maurício Vancine: E isso pq quase ninguém sabe da existência desse livro
+13/09/2021 12:27 - Maurício Vancine: ‎IMG-20210913-WA0001.jpg (arquivo anexado)
+13/09/2021 12:28 - Maurício Vancine: Eles pegaram os dominios mofoclimáticos do Ab'Saber e refizeram os biomas
+13/09/2021 12:28 - Maurício Vancine: ‎IMG-20210913-WA0002.jpg (arquivo anexado)
+13/09/2021 12:28 - Maurício Vancine: ‎IMG-20210913-WA0003.jpg (arquivo anexado)
+13/09/2021 12:29 - Maurício Vancine: https://drive.google.com/file/d/1Bq7zVgYp8SQtWqIxB3bExfKAxMJdAxB4/view?usp=sharing
+13/09/2021 12:29 - Maurício Vancine: https://drive.google.com/file/d/1FqT3mxZJl_oGmjnncXLTuwJOgYCaCoxn/view?usp=sharing
+13/09/2021 12:30 - Maurício Vancine: Essa história de limite é treta cara e te falar que foi o Miltinho que complicou tudo, quando usou o limite do Silva e Casteleti (2003)
+13/09/2021 12:32 - Maurício Vancine: ‎IMG-20210913-WA0004.jpg (arquivo anexado)
+13/09/2021 12:32 - Maurício Vancine: E é isso tudo que sei de Limites da Mata Atlântica...
+13/09/2021 12:33 - Maurício Vancine: https://drive.google.com/file/d/1LFsMtRNYlh11fAxXutVyz1lobGV6NTpg/view?usp=sharing
+13/09/2021 13:01 - Diogo Provete: Esse é o do MMA?
+13/09/2021 13:01 - Maurício Vancine: Não
+13/09/2021 13:02 - Maurício Vancine: E vale lembrar que o IBGE mudou os limites dos Biomas em 2019 tb
+13/09/2021 13:02 - Maurício Vancine: MMA (2004)
+13/09/2021 13:03 - Maurício Vancine: ‎IMG-20210913-WA0005.jpg (arquivo anexado)
+13/09/2021 13:03 - Maurício Vancine: MMA (2019)
+13/09/2021 13:03 - Diogo Provete: Oh céus 😩
+13/09/2021 13:03 - Maurício Vancine: é foda cara
+13/09/2021 13:03 - Maurício Vancine: pior que taxonomia kkk
+13/09/2021 13:04 - Maurício Vancine: Deixa eu selecionar o da Mata Atlântica aqui para vc
+13/09/2021 13:04 - Diogo Provete: Eita
+13/09/2021 13:04 - Diogo Provete: Esse é aquele recente né?
+13/09/2021 13:04 - Maurício Vancine: Isso
+13/09/2021 13:05 - Maurício Vancine: MMA (2019)
+13/09/2021 13:05 - Maurício Vancine: ‎IMG-20210913-WA0006.jpg (arquivo anexado)
+13/09/2021 13:05 - Diogo Provete: É bicho… mas ele considera umas coisas que e meio bizarro… por exemplo chamando as matas lá de São Carlos de FA e não cerrado
+13/09/2021 13:06 - Maurício Vancine: Sim, o Célio brigava comigo por isso kkk
+13/09/2021 13:06 - Maurício Vancine: E por um monte de outra coisas
+13/09/2021 13:06 - Diogo Provete: Tô vendo 😂 fiz uma pergunta simples e veio uma tese de mestrado 😅
+13/09/2021 13:06 - Maurício Vancine: ops
+13/09/2021 13:06 - Diogo Provete: Meu Deus
+13/09/2021 13:07 - Maurício Vancine: Cara, estudei isso, pq chegou um momento que eu tinha que compilar isso e jogar na mesa para o povo: o que a gente faz seus capetas
+13/09/2021 13:07 - Maurício Vancine: por isso a nota
+13/09/2021 13:07 - Diogo Provete: Sim pô porque não faz sentido, aquilo é cerrado mesmo
+13/09/2021 13:07 - Maurício Vancine: Ah, e ainda esqueci do Morrone
+13/09/2021 13:08 - Diogo Provete: Não pô, obrigado por mandar tudo isso!! Tô dizendo que superou as expectativas 😉
+13/09/2021 13:08 - Diogo Provete: Putz é mesmo , tem isso
+13/09/2021 13:08 - Maurício Vancine: Sem problemas cara
+13/09/2021 13:08 - Maurício Vancine: ‎IMG-20210913-WA0007.jpg (arquivo anexado)
+13/09/2021 13:08 - Maurício Vancine: Eu ainda vou organizar os shapefiles de tudo isso e disponibilizar num post
+13/09/2021 13:09 - Maurício Vancine: Só terminar de montar um curso, livro, projeto, artifo e doutorado... kkk
+13/09/2021 13:09 - Diogo Provete: Sim, foi uma boa discussão. Só que não tem bala de prata, como eu imaginava que teria 😅
+13/09/2021 13:09 - Diogo Provete: 🤣🤣
+13/09/2021 13:09 - Maurício Vancine: Pior, vc vai ter de matar diferentes bichos com diferentes armas cara...
+13/09/2021 13:10 - Maurício Vancine: Agora imagina qnd o SOS MA me fala que tem 7% de floresta
+13/09/2021 13:10 - Diogo Provete: Ah, não é tão complicado assim. Só joga lá e deixa o povo se virar
+13/09/2021 13:10 - Diogo Provete: Pois é…
+13/09/2021 13:10 - Maurício Vancine: Automaticamente eu pergunto: para que limite e usando que base de mapeamento? Floresta contínua ou fragmentada? É foda
+13/09/2021 13:11 - Maurício Vancine: Sim, vou compilar essas refs, jogar esses shapes num github e que comecem as tretas
+13/09/2021 13:11 - Maurício Vancine: Se bem que seria massa mais uma nota listando mais limites... Mas tenho de ver com a Rê
+13/09/2021 13:12 - Maurício Vancine: Mas para responder à primeira pergunta
+13/09/2021 13:12 - Maurício Vancine: Vou usar esse limite
+13/09/2021 13:12 - Maurício Vancine: ‎IMG-20210913-WA0008.jpg (arquivo anexado)
+13/09/2021 13:12 - Maurício Vancine: Só tenho dados confiáveis de floresta, riachos e corpos d'água para o Brasil, então vou fechar aqui e seguir
+13/09/2021 13:13 - Diogo Provete: O objetivo da gente agora é biogeografia mesmo, mapear diversidade functional, riqueza e diversificação. Não seria legal que o limite fosse muito amplo, pegando áreas típicas de cerrado, mas também algo muito restrito é ruim pra enxergar padrões
+13/09/2021 13:14 - Diogo Provete: Exato! Já levantaria a discussão e ajudaria um monte a galera
+13/09/2021 13:14 - Diogo Provete: Ter tudo num lugar só
+13/09/2021 13:14 - Maurício Vancine: Cara, nesse sentido, eu acredito que o limite do Morrone parece mais interessante
+13/09/2021 13:15 - Maurício Vancine: Pq é definido com base nas biorregiões da Am. do Sul
+13/09/2021 13:15 - Maurício Vancine: Masssssssss
+13/09/2021 13:15 - Maurício Vancine: É muito impreciso
+13/09/2021 13:15 - Diogo Provete: No seu caso é de boa porque é point occurrence, mas no nosso é grid e polígono de distribuição
+13/09/2021 13:16 - Maurício Vancine: Eu ainda usaria o Olsen et al. (2017) [não é essa ref.], que teve uma atualização do Olsen et al. (2001)
+13/09/2021 13:16 - Maurício Vancine: Sim, mas pretendo extrapolar as coisas
+13/09/2021 13:16 - Diogo Provete: Da ecorregião né?
+13/09/2021 13:17 - Diogo Provete: Acho que prefiro esse mesmo ao Morrone
+13/09/2021 13:17 - Maurício Vancine: Isso
+13/09/2021 13:17 - Maurício Vancine: ‎IMG-20210913-WA0009.jpg (arquivo anexado)
+13/09/2021 13:17 - Maurício Vancine: Mas compara e faz uma subtração dos dois, um clip
+13/09/2021 13:17 - Maurício Vancine: Aí vc consegue avaliar melhor
+13/09/2021 13:18 - Maurício Vancine: Seria esse
+13/09/2021 13:18 - Maurício Vancine: https://www.biotaxa.org/Zootaxa/article/view/zootaxa.3782.1.1
+13/09/2021 13:19 - Diogo Provete: Eu gosto dessa, por um lado inclui os brejos NE e florestas e de Goiás, mas não inclui outras coisas mais pro interior
+13/09/2021 13:19 - Maurício Vancine: o shape: http://www.neotropico.com.br/shapefile
+13/09/2021 13:20 - Diogo Provete: O foda desse é que inclui floreta aqui no Pantanal que já é outra coisa
+13/09/2021 13:20 - Maurício Vancine: Sim, é complicado essa coisa do que inclui
+13/09/2021 13:20 - Diogo Provete: Sim, tô ligado
+13/09/2021 13:20 - Maurício Vancine: O ideal seria entender o que usaram para definir os limites
+13/09/2021 13:20 - Diogo Provete: Exato
+13/09/2021 13:21 - Maurício Vancine: Aqui, se for usar: https://ecoregions.appspot.com/
+13/09/2021 13:21 - Maurício Vancine: E a publicação: https://academic.oup.com/bioscience/article/67/6/534/3102935
+13/09/2021 13:22 - Maurício Vancine: Outra coisa seria criar os grides para cada limite e analisar
+13/09/2021 13:22 - Maurício Vancine: Seria muito massa um artigo simples considerando os polígonos da IUCN mesmo, sobre como os diferentes limites mudam análises simples de diversidade
+13/09/2021 13:24 - Maurício Vancine: Ah, e isso nos levou: vamos fazer um limite consensual (que é intersecção dos 4 limites) e a expansão (que é a união dos 4 limites)
+13/09/2021 13:25 - Maurício Vancine: Mas hj vejo que seria mais interessante indicar o uso dos limites para diferentes finalidades: anaĺiases macro|biogeográficas, anĺiases de distribuição, análises de decisões políticas...
+13/09/2021 13:25 - Maurício Vancine: Enfim, tem muita coisa bacana ainda
+13/09/2021 14:17 - Diogo Provete: Esse eu conheço
+13/09/2021 14:17 - Diogo Provete: Isso seria muito legal
+

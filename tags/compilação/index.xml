@@ -2,28 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Compilação on Maurício Vancine</title>
-    <link>https://mauriciovancine.github.io/tags/compila%C3%A7%C3%A3o/</link>
+    <link>http://localhost:3606/tags/compila%C3%A7%C3%A3o/</link>
     <description>Recent content in Compilação on Maurício Vancine</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 22 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mauriciovancine.github.io/tags/compila%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:3606/tags/compila%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Principais revistas de ecologia</title>
-      <link>https://mauriciovancine.github.io/blog/pub-revistas-eco/</link>
-      <pubDate>Sun, 22 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/pub-revistas-eco/</guid>
+      <link>http://localhost:3606/blog/2025-01-pub-revistas-eco/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2025-01-pub-revistas-eco/</guid>
       <description>Lista das principais revistas de ecologia</description>
     </item>
-    
     <item>
-      <title>Principais revistas de ecologia</title>
-      <link>https://mauriciovancine.github.io/blog/pub-revistas-eco/</link>
-      <pubDate>Sun, 22 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mauriciovancine.github.io/blog/pub-revistas-eco/</guid>
-      <description>Lista das principais revistas de ecologia</description>
+      <title>Fonte de dados biodiversidade</title>
+      <link>http://localhost:3606/blog/2022-08-eco-dados-biodiversidade/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2022-08-eco-dados-biodiversidade/</guid>
+      <description>Listagem das principais bases de dados biodiversidade, assim como pacotes do R</description>
     </item>
-    
+    <item>
+      <title>Fonte de dados biodiversidade</title>
+      <link>http://localhost:3606/blog/2022-08-eco-dados-biodiversidade/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2022-08-eco-dados-biodiversidade/</guid>
+      <description>Listagem das principais bases de dados biodiversidade, assim como pacotes do R</description>
+    </item>
   </channel>
 </rss>

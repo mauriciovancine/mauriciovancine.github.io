@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Repositório on Maurício Vancine</title>
+    <link>http://localhost:3606/tags/reposit%C3%B3rio/</link>
+    <description>Recent content in Repositório on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:3606/tags/reposit%C3%B3rio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Principais revistas de ecologia</title>
+      <link>http://localhost:3606/blog/2023-12-pub-repositorios-dados/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3606/blog/2023-12-pub-repositorios-dados/</guid>
+      <description>Lista das principais repositórios de dados para publicação</description>
+    </item>
+  </channel>
+</rss>
