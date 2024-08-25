@@ -9,11 +9,11 @@
     <lastBuildDate>Sat, 24 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mauriciovancine.github.io/tags/big-data/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Big Data no R: como ler um dado maior que a RAM</title>
+      <title>Big Data no R: como ler um conjunto de dados maior que a RAM</title>
       <link>https://mauriciovancine.github.io/blog/2024-08-r-big-data/</link>
       <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/blog/2024-08-r-big-data/</guid>
-      <description>Importar e manejar &amp;lsquo;Big Data&amp;rsquo; no R</description>
+      <description>Importar e manejar grandes volumes de dados no R</description>
     </item>
   </channel>
 </rss>
