@@ -48,7 +48,7 @@
   <meta itemprop="description" content="Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum">
   <meta itemprop="datePublished" content="2021-02-20T00:00:00+00:00">
   <meta itemprop="dateModified" content="2021-02-20T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1775">
+  <meta itemprop="wordCount" content="1800">
   <meta itemprop="image" content="https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/featured.jpg">
   <meta itemprop="keywords" content="Geoprocessamento,Geoespacial">
   
@@ -178,7 +178,7 @@
 <div class="figure" style="text-align: center">
 <img src="img/geo_geographic.png" alt="Sistema de Coordenadas Geográficas. Fonte: Documentação do QGIS." width="70%" />
 <p class="caption">
-Figure 1: Sistema de Coordenadas Geográficas. Fonte: Documentação do QGIS.
+<span id="fig:fig-geo"></span>Figure 1: Sistema de Coordenadas Geográficas. Fonte: Documentação do QGIS.
 </p>
 </div>
 
@@ -210,28 +210,28 @@ Figure 1: Sistema de Coordenadas Geográficas. Fonte: Documentação do QGIS.
 <div class="figure" style="text-align: center">
 <img src="img/geo_proj_families.jpg" alt="Sistema de Referência de Coordenadas Projetadas, dividido em três grupos: plana, cônica e cilíndrica. Fonte: Geographic Information System Basics." width="60%" />
 <p class="caption">
-Figure 2: Sistema de Referência de Coordenadas Projetadas, dividido em três grupos: plana, cônica e cilíndrica. Fonte: Geographic Information System Basics.
+<span id="fig:fig-proj"></span>Figure 2: Sistema de Referência de Coordenadas Projetadas, dividido em três grupos: plana, cônica e cilíndrica. Fonte: Geographic Information System Basics.
 </p>
 </div>
 <p>Na <strong>projeção plana</strong>, também denominada <strong>Projeção Azimutal</strong>, o mapeamento toca o globo em um ponto ou ao longo de uma linha de tangência, sendo normalmente usado no mapeamento de regiões polares, sendo a mais comum a <strong>Projeção Azimutal Equidistante</strong>, a mesma utilizada na bandeira da ONU (Figura <a href="#fig:fig-plana">3</a>).</p>
 <div class="figure" style="text-align: center">
 <img src="img/geo_proj_plana.jpg" alt="Projeção plana. Fonte: Atlas Escolar IBGE." width="70%" />
 <p class="caption">
-Figure 3: Projeção plana. Fonte: Atlas Escolar IBGE.
+<span id="fig:fig-plana"></span>Figure 3: Projeção plana. Fonte: Atlas Escolar IBGE.
 </p>
 </div>
 <p>Na <strong>projeção cônica</strong>, a superfície da Terra é projetada em um <strong>cone</strong> ao longo de uma linha ou duas linhas de tangência, de modo que as distorções são minimizadas ao longo das linhas e aumentam com a distância das mesmas, sendo portanto, mais adequada para mapear áreas de latitudes médias, tendo como exemplo mais conhecidos a <strong>Projeção Cônica Equivalente de Albers</strong> e a <strong>Projeção Cônica Conforme de Lambert</strong> (Figura <a href="#fig:fig-conica">4</a>).</p>
 <div class="figure" style="text-align: center">
 <img src="img/geo_proj_conica.jpg" alt="Projeção cônica. Fonte: Atlas Escolar IBGE." width="100%" />
 <p class="caption">
-Figure 4: Projeção cônica. Fonte: Atlas Escolar IBGE.
+<span id="fig:fig-conica"></span>Figure 4: Projeção cônica. Fonte: Atlas Escolar IBGE.
 </p>
 </div>
 <p>Na <strong>projeção cilíndrica</strong>, a superfície da Terra é mapeada em um <strong>cilindro</strong>, sendo também criada tocando a superfície da Terra ao longo de uma ou duas linhas de tangência, sendo utilizada com mais frequência para mapear todo o globo, tendo como exemplo mais conhecido a <strong>Projeção Universal Transversa de Mercator (UTM)</strong>, <strong>Projeção de Winkel Tripel</strong> e <strong>Projeção de Mollweide</strong>(Figura <a href="#fig:fig-cilindrica">5</a>).</p>
 <div class="figure" style="text-align: center">
 <img src="img/geo_proj_cilindrica.jpg" alt="Projeção cilíndrica. Fonte: Atlas Escolar IBGE." width="100%" />
 <p class="caption">
-Figure 5: Projeção cilíndrica. Fonte: Atlas Escolar IBGE.
+<span id="fig:fig-cilindrica"></span>Figure 5: Projeção cilíndrica. Fonte: Atlas Escolar IBGE.
 </p>
 </div>
 
@@ -248,14 +248,14 @@ Figure 5: Projeção cilíndrica. Fonte: Atlas Escolar IBGE.
 <div class="figure" style="text-align: center">
 <img src="img/geo_datum_eli_geo.png" alt="Datum, Geoide, Esferoide e Elipsoide. Fonte: Ciência Hoje e Lapig." width="100%" />
 <p class="caption">
-Figure 6: Datum, Geoide, Esferoide e Elipsoide. Fonte: Ciência Hoje e Lapig.
+<span id="fig:fig-datum"></span>Figure 6: Datum, Geoide, Esferoide e Elipsoide. Fonte: Ciência Hoje e Lapig.
 </p>
 </div>
 <p>Existem dois tipos de datum: geocêntrico e local (Figura <a href="#fig:fig-datum-geo-local">7</a>). Para um <strong>datum geocêntrico</strong>, como o <strong>WGS84 - World Geodetic System 1984</strong>, o centro do elipsoide é o centro de gravidade da Terra e a precisão das projeções não é otimizada para um local específico do globo. Já em um <strong>datum local</strong>, como o <strong>SAD69 - South American Datum 1969</strong>, o elipsoide de referência é deslocado para se alinhar com a superfície em um determinado local, como por exemplo, na América do Sul para o SAD69 (Figura <a href="#fig:fig-datum-geo-local">7</a>).</p>
 <div class="figure" style="text-align: center">
 <img src="img/geo_datum_global_local.jpeg" alt="Datum global e datum local. Fonte: Aulas de Cartografia para Geoprocessamento do Programa de Pós-graduação em Computação, ênfase Geomática, UERJ." width="90%" />
 <p class="caption">
-Figure 7: Datum global e datum local. Fonte: Aulas de Cartografia para Geoprocessamento do Programa de Pós-graduação em Computação, ênfase Geomática, UERJ.
+<span id="fig:fig-datum-geo-local"></span>Figure 7: Datum global e datum local. Fonte: Aulas de Cartografia para Geoprocessamento do Programa de Pós-graduação em Computação, ênfase Geomática, UERJ.
 </p>
 </div>
 <p>No Brasil, desde 2015, o 
@@ -264,14 +264,14 @@ Figure 7: Datum global e datum local. Fonte: Aulas de Cartografia para Geoproces
 <div class="figure" style="text-align: center">
 <img src="img/geo_proj_sirgas2000.png" alt="Sistema de Referencia Geocéntrico para las Américas (SIRGAS). Fonte: SIRGAS" width="50%" />
 <p class="caption">
-Figure 8: Sistema de Referencia Geocéntrico para las Américas (SIRGAS). Fonte: SIRGAS
+<span id="fig:fig-sirgas"></span>Figure 8: Sistema de Referencia Geocéntrico para las Américas (SIRGAS). Fonte: SIRGAS
 </p>
 </div>
 <p>Comparando os <strong>datum SAD69 e SIRGAS2000</strong>, podemos notar uma <strong>diferença de cerca de 65 metros</strong>, que à depender do mapeamento pode fazer uma <strong>grande diferença</strong>, a exemplo da planta de uma casa ou a construção de uma ponte (Figura <a href="#fig:fig-datum-comp">9</a>)</p>
 <div class="figure" style="text-align: center">
 <img src="img/geo_datum_sad_sirgas.jpg" alt="Discrepância entre um mesmo ponto em SAD69 e SIRGAS2000 em regiões urbanas. Fonte: 'SIRGAS 2000, quando iniciar a sua utilização?'" width="70%" />
 <p class="caption">
-Figure 9: Discrepância entre um mesmo ponto em SAD69 e SIRGAS2000 em regiões urbanas. Fonte: ‘SIRGAS 2000, quando iniciar a sua utilização?’
+<span id="fig:fig-datum-comp"></span>Figure 9: Discrepância entre um mesmo ponto em SAD69 e SIRGAS2000 em regiões urbanas. Fonte: ‘SIRGAS 2000, quando iniciar a sua utilização?’
 </p>
 </div>
 
@@ -316,9 +316,11 @@ Figure 9: Discrepância entre um mesmo ponto em SAD69 e SIRGAS2000 em regiões u
 <div class="figure" style="text-align: center">
 <img src="img/geo_epsg.png" alt="Site epsg.io com códigos EPSG. Fonte: epsg.io." width="150%" />
 <p class="caption">
-Figure 10: Site epsg.io com códigos EPSG. Fonte: epsg.io.
+<span id="fig:fig-epsg"></span>Figure 10: Site epsg.io com códigos EPSG. Fonte: epsg.io.
 </p>
 </div>
+<p>Vale também se aprofundar no 
+<a href="https://proj.org/index.html" target="_blank" rel="noopener">PROJ</a>, que é um software de transformação de coordenadas. Há diversas projeções, com mais detalhamentos.</p>
 
 
 
@@ -346,6 +348,8 @@ Figure 10: Site epsg.io com códigos EPSG. Fonte: epsg.io.
 <p>Duarte, P. A. (2002). Fundamentos de cartografia. Ed. UFSC.</p>
 </li>
 </ul>
+<p>Fonte da imagem: 
+<a href="https://unsplash.com/pt-br/fotografias/foto-de-foco-seletivo-do-globo-de-mesa-qoKTJo2zpRs" target="_blank" rel="noopener">Sara Riaño/Unsplash</a>.</p>
 
       </section>
       <footer class="post-footer">
@@ -423,7 +427,7 @@ Figure 10: Site epsg.io com códigos EPSG. Fonte: epsg.io.
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">9 minute read, 1775 words</dd>
+    <dd class="fw5 ml0">9 minute read, 1800 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">

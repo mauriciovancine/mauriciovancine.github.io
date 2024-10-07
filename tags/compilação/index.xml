@@ -16,11 +16,11 @@
       <description>Lista das principais revistas de ecologia</description>
     </item>
     <item>
-      <title>Fonte de dados biodiversidade</title>
-      <link>http://localhost:4321/blog/2022-08-eco-dados-biodiversidade/</link>
-      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/blog/2022-08-eco-dados-biodiversidade/</guid>
-      <description>Listagem das principais bases de dados biodiversidade, assim como pacotes do R</description>
+      <title>Fontes de dados biodiversidade</title>
+      <link>http://localhost:4321/blog/2024-10-eco-dados-biodiversidade/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/blog/2024-10-eco-dados-biodiversidade/</guid>
+      <description>Lista das principais fontes de dados e pacotes do R de biodiversidade</description>
     </item>
     <item>
       <title>Fonte de dados biodiversidade</title>
