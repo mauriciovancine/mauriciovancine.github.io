@@ -6,8 +6,15 @@
     <description>Recent content in Blog on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 27 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mauriciovancine.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fontes de dados biodiversidade</title>
+      <link>https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/</guid>
+      <description>Lista das principais fontes de dados e pacotes do R de biodiversidade</description>
+    </item>
     <item>
       <title>Paletas de cores no R</title>
       <link>https://mauriciovancine.github.io/blog/2024-09-r-color-pallets/</link>
