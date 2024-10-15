@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Enmeval on Maurício Vancine</title>
-    <link>http://localhost:4321/tags/enmeval/</link>
+    <link>http://localhost:5372/tags/enmeval/</link>
     <description>Recent content in Enmeval on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 20 Aug 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:4321/tags/enmeval/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:5372/tags/enmeval/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ENMeval: tunando o MaxEnt</title>
-      <link>http://localhost:4321/blog/2022-08-sdm-enmeval/</link>
+      <link>http://localhost:5372/blog/2022-08-sdm-enmeval/</link>
       <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/blog/2022-08-sdm-enmeval/</guid>
+      <guid>http://localhost:5372/blog/2022-08-sdm-enmeval/</guid>
       <description>Introdução ao pacote ENMeval para criar modelos de distribuição de espécies</description>
     </item>
   </channel>
