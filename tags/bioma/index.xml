@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bioma on Maurício Vancine</title>
-    <link>http://localhost:5372/tags/bioma/</link>
+    <link>http://localhost:4321/tags/bioma/</link>
     <description>Recent content in Bioma on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 10 Aug 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:5372/tags/bioma/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:4321/tags/bioma/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Limites da Mata Atlântica</title>
-      <link>http://localhost:5372/blog/2022-08-eco-pai-limites-mata-atlantica/</link>
+      <link>http://localhost:4321/blog/2022-08-eco-pai-limites-mata-atlantica/</link>
       <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:5372/blog/2022-08-eco-pai-limites-mata-atlantica/</guid>
+      <guid>http://localhost:4321/blog/2022-08-eco-pai-limites-mata-atlantica/</guid>
       <description>Uma comparação dos diversos limites da Mata Atlântica para diferentes finalidades</description>
     </item>
     <item>
       <title>Limites da Mata Atlântica</title>
-      <link>http://localhost:5372/blog/2022-08-grass-intro/</link>
+      <link>http://localhost:4321/blog/2022-08-grass-intro/</link>
       <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:5372/blog/2022-08-grass-intro/</guid>
+      <guid>http://localhost:4321/blog/2022-08-grass-intro/</guid>
       <description>Uma comparação dos diversos limites da Mata Atlântica para diferentes finalidades</description>
     </item>
     <item>
       <title>Limites da Mata Atlântica</title>
-      <link>http://localhost:5372/blog/2022-08-eco-pai-lsconnect/</link>
+      <link>http://localhost:4321/blog/2022-08-eco-pai-lsconnect/</link>
       <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:5372/blog/2022-08-eco-pai-lsconnect/</guid>
+      <guid>http://localhost:4321/blog/2022-08-eco-pai-lsconnect/</guid>
       <description>Uma comparação dos diversos limites da Mata Atlântica para diferentes finalidades</description>
     </item>
   </channel>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linguagem De Programacao on Maurício Vancine</title>
-    <link>http://localhost:5372/tags/linguagem-de-programacao/</link>
+    <link>http://localhost:4321/tags/linguagem-de-programacao/</link>
     <description>Recent content in Linguagem De Programacao on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 12 Jul 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:5372/tags/linguagem-de-programacao/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:4321/tags/linguagem-de-programacao/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Usando julia na Ecologia</title>
-      <link>http://localhost:5372/blog/2022-07-julia-eco/</link>
+      <link>http://localhost:4321/blog/2022-07-julia-eco/</link>
       <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:5372/blog/2022-07-julia-eco/</guid>
+      <guid>http://localhost:4321/blog/2022-07-julia-eco/</guid>
       <description>Introdução à linguagem Julia para Ecologia</description>
     </item>
     <item>
       <title>Usando julia na Ecologia</title>
-      <link>http://localhost:5372/blog/2022-07-julia-eco/</link>
+      <link>http://localhost:4321/blog/2022-07-julia-eco/</link>
       <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:5372/blog/2022-07-julia-eco/</guid>
+      <guid>http://localhost:4321/blog/2022-07-julia-eco/</guid>
       <description>Introdução à linguagem Julia para Ecologia</description>
     </item>
     <item>
       <title>Usando julia na Ecologia</title>
-      <link>http://localhost:5372/blog/2022-07-r-plot-dois-eixos/</link>
+      <link>http://localhost:4321/blog/2022-07-r-plot-dois-eixos/</link>
       <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:5372/blog/2022-07-r-plot-dois-eixos/</guid>
+      <guid>http://localhost:4321/blog/2022-07-r-plot-dois-eixos/</guid>
       <description>Introdução à linguagem Julia para Ecologia</description>
     </item>
   </channel>
