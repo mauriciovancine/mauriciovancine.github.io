@@ -12,7 +12,7 @@ sticker(imgurl,
         p_color = "gray30",
         s_x = .94, s_y = .75, 
         s_width = 1.1, s_height = 1.1,
-        h_fill = "#dbe3e2",
+        h_fill = "#dae3e2",
         h_color = "#df715d",
         filename = "content/teaching/workshop-prog-r/featured-hex.png")
 
