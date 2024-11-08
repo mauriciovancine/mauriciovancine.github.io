@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.130.0">
-<title>Positron | Maurício Vancine</title>
+<title>R no Emacs | Maurício Vancine</title>
 
 
 <meta property="twitter:site" content="@mauriciovancine">
@@ -24,12 +24,12 @@
   
     
   
-<meta name="description" content="Nova IDE para R e Python">
+<meta name="description" content="Configuração e uso do R no Emacs">
 
 
 <meta property="og:site_name" content="Maurício Vancine">
-<meta property="og:title" content="Positron | Maurício Vancine">
-<meta property="og:description" content="Nova IDE para R e Python" />
+<meta property="og:title" content="R no Emacs | Maurício Vancine">
+<meta property="og:description" content="Configuração e uso do R no Emacs" />
 <meta property="og:type" content="page" />
 <meta property="og:url" content="http://localhost:4321/blog/2024-05-r-emacs/" />
 <meta property="og:locale" content="pt-br">
@@ -38,18 +38,17 @@
 
 
     
-        <meta property="og:image" content="http://localhost:4321/blog/2024-05-r-emacs/featured.png" >
+        <meta property="og:image" content="http://localhost:4321/blog/sidebar.jpg" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="http://localhost:4321/blog/2024-05-r-emacs/featured.png" >
+        <meta name="twitter:image" content="http://localhost:4321/blog/sidebar.jpg" >
     
     
   
-  <meta itemprop="name" content="Positron">
-  <meta itemprop="description" content="Nova IDE para R e Python">
+  <meta itemprop="name" content="R no Emacs">
+  <meta itemprop="description" content="Configuração e uso do R no Emacs">
   <meta itemprop="datePublished" content="2024-05-01T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-05-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="5">
-  <meta itemprop="image" content="http://localhost:4321/blog/2024-05-r-emacs/featured.png">
+  <meta itemprop="wordCount" content="20">
   <meta itemprop="keywords" content="R,Emacs">
   
   
@@ -126,8 +125,8 @@
   <section class="page-content mw7 center">
     <article class="post-content pa0 pr3-l">
       <header class="post-header">
-        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Positron</h1>
-        <h4 class="f4 mt0 mb4 lh-title measure">Nova IDE para R e Python</h4>
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">R no Emacs</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Configuração e uso do R no Emacs</h4>
         <p class="f6 measure lh-copy mv1">By Maurício Vancine in <a href="http://localhost:4321/categories/blog">Blog</a> </p>
         <p class="f7 db mv0 ttu">May 1, 2024</p>
       </header>
@@ -146,8 +145,8 @@
 
 
 
-<h2 id="positron">Positron
-  <a href="#positron"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h2 id="emacs">Emacs
+  <a href="#emacs"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
@@ -156,14 +155,42 @@
 
 
 
-<h2 id="saber-mais">Saber mais
-  <a href="#saber-mais"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h2 id="r-no-emacs">R no Emacs
+  <a href="#r-no-emacs"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
 <p>
-<a href="https://www.appsilon.com/post/introducing-positron" target="_blank" rel="noopener">https://www.appsilon.com/post/introducing-positron</a></p>
+<a href="https://guangchuangyu.github.io/2013/11/run-remote-r-in-emacs-with-ess/" target="_blank" rel="noopener">https://guangchuangyu.github.io/2013/11/run-remote-r-in-emacs-with-ess/</a>
+
+<a href="https://plantarum.ca/2020/06/16/emacs-tutorial-01/" target="_blank" rel="noopener">https://plantarum.ca/2020/06/16/emacs-tutorial-01/</a>
+
+<a href="https://plantarum.ca/2020/06/17/emacs-tutorial-02/" target="_blank" rel="noopener">https://plantarum.ca/2020/06/17/emacs-tutorial-02/</a>
+
+<a href="https://plantarum.ca/tutorials/emacs-tutorial-03/" target="_blank" rel="noopener">https://plantarum.ca/tutorials/emacs-tutorial-03/</a>
+
+<a href="https://opensource.com/article/20/5/r-emacs-data-science" target="_blank" rel="noopener">https://opensource.com/article/20/5/r-emacs-data-science</a>
+
+<a href="https://ess.r-project.org/index.php?Section=home" target="_blank" rel="noopener">https://ess.r-project.org/index.php?Section=home</a>
+
+<a href="https://www.youtube.com/watch?v=M9jNksn3pNM" target="_blank" rel="noopener">https://www.youtube.com/watch?v=M9jNksn3pNM</a>
+
+<a href="https://confunguido.github.io/blog/20190317_emacs_for_R.html" target="_blank" rel="noopener">https://confunguido.github.io/blog/20190317_emacs_for_R.html</a>
+
+<a href="http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs/" target="_blank" rel="noopener">http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs/</a>
+
+<a href="https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html" target="_blank" rel="noopener">https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html</a>
+
+<a href="https://www2.stat.duke.edu/courses/Spring09/sta244/computing/R-ESS.html" target="_blank" rel="noopener">https://www2.stat.duke.edu/courses/Spring09/sta244/computing/R-ESS.html</a>
+
+<a href="https://www.r-bloggers.com/2018/06/using-r-with-emacs-and-ess/" target="_blank" rel="noopener">https://www.r-bloggers.com/2018/06/using-r-with-emacs-and-ess/</a>
+
+<a href="https://www.youtube.com/watch?v=So1LYzSk9o0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=So1LYzSk9o0</a>
+
+<a href="https://gist.github.com/davebraze/ff95762bea2868f52942c0bb2d247b29" target="_blank" rel="noopener">https://gist.github.com/davebraze/ff95762bea2868f52942c0bb2d247b29</a>
+
+<a href="https://www.youtube.com/playlist?list=PLwc48KSH3D1Onsed66FPLywMSIQmAhUYJ" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLwc48KSH3D1Onsed66FPLywMSIQmAhUYJ</a></p>
 
       </section>
       <footer class="post-footer">
@@ -171,7 +198,7 @@
   
   
     <a class="prev dtc pr2 tl v-top fw6"
-    href="http://localhost:4321/blog/2024-06-r-reinstall-packages/">&larr; Reinstalar pacotes depois de atualizar o R</a>
+    href="http://localhost:4321/blog/2024-05-r-emacs/">&larr; R no Emacs</a>
   
   
   
@@ -241,7 +268,7 @@
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">1 minute read, 5 words</dd>
+    <dd class="fw5 ml0">1 minute read, 20 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -263,7 +290,7 @@
     
     <dd class="fw5 ml0"><a href="/blog/2025-07-eco-espa-div-beta/">Kernel</a></dd>
     
-    <dd class="fw5 ml0"><a href="/blog/2024-09-r-color-pallets/">Paletas de cores no R</a></dd>
+    <dd class="fw5 ml0"><a href="/blog/2024-11-r-qrcode/">Gerando QR code no R</a></dd>
     
   </dl>
 </details>
