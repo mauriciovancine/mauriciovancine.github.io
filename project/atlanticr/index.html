@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.130.0">
+<title>atlanticr | Maurício Vancine</title>
+
+
+<meta property="twitter:site" content="@mauriciovancine">
+<meta property="twitter:creator" content="@mauriciovancine">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Pacote R para acessar dados do ATLANTIC Series, um conjunto de data papers sobre biodiversidade e dados geoespaciais da Mata Atlântica">
+
+
+<meta property="og:site_name" content="Maurício Vancine">
+<meta property="og:title" content="atlanticr | Maurício Vancine">
+<meta property="og:description" content="Pacote R para acessar dados do ATLANTIC Series, um conjunto de data papers sobre biodiversidade e dados geoespaciais da Mata Atlântica" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://mauriciovancine.github.io/project/atlanticr/" />
+<meta property="og:locale" content="pt-br">
+
+
+
+
+    
+        <meta property="og:image" content="https://mauriciovancine.github.io/project/atlanticr/featured-hex.png" >
+        <meta property="twitter:card" content="summary">
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/project/atlanticr/featured-hex.png" >
+    
+    
+  
+  <meta itemprop="name" content="atlanticr">
+  <meta itemprop="description" content="atlanticr Instalação O pacote pode ser instalado diretamente do github:
+# install.packages(&#34;remotes&#34;) remotes::install_github(&#34;mauriciovancine/atlanticr&#34;) Datasets Vertebrados
+atlantic_amphibians ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America atlantic_bats ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America atlantic_birds ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest atlantic_camtraps ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America camera_trap_surveys Camera trap surveys of Atlantic Forest mammals: A data set for analyses considering imperfect detection (2004–2020) atlantic_mammals ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America atlantic_nonvolant_mammalsNon-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil atlantic_primates ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America atlantic_small_mammal Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America atlantic_small_mammal_abundance Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns Vertebrados - atributos funcionais">
+  <meta itemprop="datePublished" content="2023-09-09T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-09-09T00:00:00+00:00">
+  <meta itemprop="wordCount" content="362">
+  <meta itemprop="image" content="https://mauriciovancine.github.io/project/atlanticr/featured-hex.png">
+  <meta itemprop="keywords" content="Mata Atlântica,Biodiversidade,Métricas,Paisagem,Perda E Fragmentação De Habitat,Topografia,Dados">
+  
+  
+
+
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.f039f41e61940aa743e97653edd07c8b48e7fbd36c8c465f1ea9f0e4d4ad1073.css" integrity="sha256-8Dn0HmGUCqdD6XZT7dB8i0jn&#43;9NsjEZfHqnw5NStEHM=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.43a16206850df307a9ecc165118c6e7eab95cf24ab4cf99d6388dc7971e9b6ce.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://mauriciovancine.github.io/" title="Home">
+      <img src="/img/favicon.png" class="dib db-l h2 w-auto" alt="Maurício Vancine">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="Sobre">Sobre</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/project/" title="Projetos">Projetos</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Palestras">Palestras</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/teaching/" title="Ensino">Ensino</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publication/" title="Publicações">Publicações</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/cv/cv-academic.pdf" title="">CV</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/resume/resume.pdf" title="">Resumé</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">atlanticr</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Pacote R para acessar dados do ATLANTIC Series, um conjunto de data papers sobre biodiversidade e dados geoespaciais da Mata Atlântica</h4>
+        <p class="f6 measure lh-copy mv1">By Maurício Vancine in <a href="https://mauriciovancine.github.io/categories/projetos">Projetos</a> </p>
+        <p class="f7 db mv0 ttu">September 9, 2023</p>
+
+      
+      <div class="ph0 pt5">
+        
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://mauriciovancine.github.io/atlanticr/" target="_blank" rel="noopener"><i class="fas fa-link fa-lg fa-fw mr2"></i>site</a>
+
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://github.com/mauriciovancine/atlanticr/" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>code</a>
+
+
+      </div>
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h1 id="atlanticr-img-srcfeatured-hexpng-alignright-width30-min-width120px"><strong>atlanticr</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+  <a href="#atlanticr-img-srcfeatured-hexpng-alignright-width30-min-width120px"></a>
+</h1>
+
+
+
+
+<h2 id="instalação">Instalação
+  <a href="#instala%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>O pacote pode ser instalado diretamente do github:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># install.packages(&#34;remotes&#34;)</span>
+</span></span><span style="display:flex;"><span>remotes<span style="color:#719e07">::</span><span style="color:#268bd2">install_github</span>(<span style="color:#2aa198">&#34;mauriciovancine/atlanticr&#34;</span>)
+</span></span></code></pre></div>
+
+
+
+<h2 id="datasets">Datasets
+  <a href="#datasets"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p><strong>Vertebrados</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html" target="_blank" rel="noopener"><code>atlantic_amphibians</code></a> ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html" target="_blank" rel="noopener"><code>atlantic_bats</code></a> ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html" target="_blank" rel="noopener"><code>atlantic_birds</code></a> ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html" target="_blank" rel="noopener"><code>atlantic_camtraps</code></a> ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/camera_trap_surveys.html" target="_blank" rel="noopener"><code>camera_trap_surveys</code></a> Camera trap surveys of Atlantic Forest mammals: A data set for analyses considering imperfect detection (2004–2020)</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html" target="_blank" rel="noopener"><code>atlantic_mammals</code></a> ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html" target="_blank" rel="noopener"><code>atlantic_nonvolant_mammals</code></a>Non-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html" target="_blank" rel="noopener"><code>atlantic_primates</code></a> ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html" target="_blank" rel="noopener"><code>atlantic_small_mammal</code></a> Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html" target="_blank" rel="noopener"><code>atlantic_small_mammal_abundance</code></a> Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns</li>
+</ul>
+<p><strong>Vertebrados - atributos funcionais</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibian_traits.html" target="_blank" rel="noopener"><code>atlantic_amphibian_traits</code></a> ATLANTIC AMPHIBIAN TRAITS: a data set of morphological and ecological traits of amphibians in the Atlantic Forest of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html" target="_blank" rel="noopener"><code>atlantic_bird_traits</code></a> ATLANTIC BIRD TRAITS: a data set of bird morphological traits from the Atlantic forests of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html" target="_blank" rel="noopener"><code>atlantic_mammal_traits</code></a> ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America</li>
+</ul>
+<p><strong>Invertebrados</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_ants.html" target="_blank" rel="noopener"><code>atlantic_ants</code></a> ATLANTIC ANTS: a data set of ant communities from the Atlantic Forests of South America</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html" target="_blank" rel="noopener"><code>atlantic_butterflies</code></a> Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests</li>
+</ul>
+<p><strong>Interação animais-plantas</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html" target="_blank" rel="noopener"><code>atlantic_frugivory</code></a> Atlantic frugivory: a plant–frugivore interaction data set for the Atlantic Forest</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html" target="_blank" rel="noopener"><code>atlantic_pollination</code></a> ATLANTIC POLLINATION: a data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest</li>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_flower_invertebrate_interactions.html" target="_blank" rel="noopener"><code>atlantic_flower_invertebrate_interactions</code></a> Atlantic flower–invertebrate interactions: A data
+set of occurrence and frequency of floral visits</li>
+</ul>
+<p><strong>Plantas</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html" target="_blank" rel="noopener"><code>atlantic_epiphytes</code></a> ATLANTIC EPIPHYTES: a data set of vascular and non-vascular epiphyte plants and lichens from the Atlantic Forest</li>
+</ul>
+<p><strong>Espacial</strong></p>
+<ul>
+<li>
+<a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html" target="_blank" rel="noopener"><code>atlantic_spatial</code></a>
+ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic
+Forest</li>
+</ul>
+<hr>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">September 9, 2023</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">2 minute read, 362 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/projetos">Projetos</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/mata-atl%C3%A2ntica">Mata Atlântica</a>  <a href="https://mauriciovancine.github.io/tags/biodiversidade">Biodiversidade</a>  <a href="https://mauriciovancine.github.io/tags/m%C3%A9tricas">Métricas</a>  <a href="https://mauriciovancine.github.io/tags/paisagem">Paisagem</a>  <a href="https://mauriciovancine.github.io/tags/perda-e-fragmenta%C3%A7%C3%A3o-de-habitat">Perda e fragmentação de habitat</a>  <a href="https://mauriciovancine.github.io/tags/topografia">Topografia</a>  <a href="https://mauriciovancine.github.io/tags/dados">Dados</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/2024-10-eco-dados-biodiversidade/">Fontes de dados de biodiversidade</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/publications/anfibios-paisagem/">Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/publications/af-spatiotemporal/">The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://mauriciovancine.github.io/project/amphibr/">amphiBR &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      <div class="post-comments pa0 pa4-l mt4">
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2024 Maurício Vancine
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/mauriciovancine" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://bsky.app/profile/mauriciovancine.bsky.social" title="bluesky" target="_blank" rel="me noopener">
+      <i class="fab fa-bluesky fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://mastodon.social/@mauriciovancine" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/mauriciovancine" title="x-twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-x-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.researchgate.net/profile/Mauricio-Vancine" title="researchgate" target="_blank" rel="me noopener">
+      <i class="ai ai-researchgate fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ" title="google-scholar" target="_blank" rel="me noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0001-9650-7575" title="orcid" target="_blank" rel="me noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.webofscience.com/wos/author/record/837504" title="researcherid" target="_blank" rel="me noopener">
+      <i class="ai ai-researcherid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888" title="scopus" target="_blank" rel="me noopener">
+      <i class="ai ai-scopus fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://osf.io/k8mxe/" title="osf" target="_blank" rel="me noopener">
+      <i class="ai ai-osf fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://figshare.com/authors/Mauricio_Vancine/2842289" title="figshare" target="_blank" rel="me noopener">
+      <i class="ai ai-figshare fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.zotero.org/mauriciovancine" title="zotero" target="_blank" rel="me noopener">
+      <i class="ai ai-zotero fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://lattes.cnpq.br/9761288418931193" title="lattes" target="_blank" rel="me noopener">
+      <i class="ai ai-lattes fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/mauricio-vancine/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">Licença</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contato">Contato</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Financiamento">Financiamento</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

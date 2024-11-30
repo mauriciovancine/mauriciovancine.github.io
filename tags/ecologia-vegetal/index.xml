@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ecologia Vegetal on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/ecologia-vegetal/</link>
+    <description>Recent content in Ecologia Vegetal on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 01 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/ecologia-vegetal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Planejamento sistemático de conservação no contexto do projeto BIOTA/FAPESP</title>
+      <link>https://mauriciovancine.github.io/publications/conservacao-biota-fapesp/</link>
+      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/conservacao-biota-fapesp/</guid>
+      <description>Trabalho de Conclusão de Curso, onde aplicamos o Planejamento Sistemático de Conservação com a finalidade de revisão e/ou refinamento dos mapas de áreas prioritárias para conservação e restauração do BIOTA/FAPESP</description>
+    </item>
+  </channel>
+</rss>

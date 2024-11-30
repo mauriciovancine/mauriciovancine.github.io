@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aulas on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/aulas/</link>
+    <description>Recent content in Aulas on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/aulas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Disciplinas de graduação e pós-graduação on-line</title>
+      <link>https://mauriciovancine.github.io/blog/2021-03-academic-online-courses/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2021-03-academic-online-courses/</guid>
+      <description>Lista de disciplinas de graduação e pós-graduação oferecidas on-line</description>
+    </item>
+  </channel>
+</rss>

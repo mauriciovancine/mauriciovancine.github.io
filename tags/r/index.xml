@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/r/</link>
+    <description>Recent content in R on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 08 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gerando QR code no R</title>
+      <link>https://mauriciovancine.github.io/blog/2024-11-r-qrcode/</link>
+      <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-11-r-qrcode/</guid>
+      <description>Pacote para gerar QR code no R</description>
+    </item>
+    <item>
+      <title>Paletas de cores no R</title>
+      <link>https://mauriciovancine.github.io/blog/2024-09-r-color-pallets/</link>
+      <pubDate>Fri, 27 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-09-r-color-pallets/</guid>
+      <description>Lista dos principais pacotes de paletas de cores no R</description>
+    </item>
+    <item>
+      <title>Big Data no R: como ler um conjunto de dados maior que a RAM</title>
+      <link>https://mauriciovancine.github.io/blog/2024-08-r-big-data/</link>
+      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-08-r-big-data/</guid>
+      <description>Importar e manejar grandes volumes de dados no R</description>
+    </item>
+    <item>
+      <title>Reinstalar pacotes depois de atualizar o R</title>
+      <link>https://mauriciovancine.github.io/blog/2024-06-r-reinstall-packages/</link>
+      <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-06-r-reinstall-packages/</guid>
+      <description>Depois de atualizar o R, vem a parte chata de reinstalar todos os pacotes, mas o R mesmo pode te ajudar</description>
+    </item>
+    <item>
+      <title>Grupo de Estudos em R e Estatística (GERE)</title>
+      <link>https://mauriciovancine.github.io/project/gere/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/gere/</guid>
+      <description>Descrição do projeto Através da difusão e capacitação no uso da linguagem R e sua aplicação em abordagem quantitativas e estatísticas, o GERE busca aprimorar a formação técnico-científica e humanística dos graduandos e pós-graduandos, bem como fomentar um espaço de convivência e aprendizado entre os membros da comunidade unespiana.</description>
+    </item>
+    <item>
+      <title>Dinâmica de mudança de cobertura da terra e Diagrama de Sankey</title>
+      <link>https://mauriciovancine.github.io/blog/2022-08-geo-cob-terra-sankey/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2022-08-geo-cob-terra-sankey/</guid>
+      <description>Contabilização das mudanças de quantidade e área de classes de cobertura da terra ao longo do tempo e sua representação através de um Diagrama de Sankey</description>
+    </item>
+    <item>
+      <title>Distância de pontos a linhas</title>
+      <link>https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/</guid>
+      <description>Cálculo da distância de pontos a linhas no R e no QGIS</description>
+    </item>
+    <item>
+      <title>Ecologia no R</title>
+      <link>https://mauriciovancine.github.io/project/ecologia-r/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/ecologia-r/</guid>
+      <description>Descrição do projeto A ideia do projeto é atualizar e ampliar o livro Análises Ecológicas no R ao longo do tempo. A ideia mais interessante é que não pretendemos investir somente na produção do livro, mas também oferecer cursos em universidades e regiões com pouco investimento e recursos, criar podcasts e vídeos no YouTube, entre outras ideias.&#xA;Como ajudar É importante ressaltar que tudo isso é (e sempre será!) feito gratuitamente, em um projeto totalmente aberto e sem fins lucrativos.</description>
+    </item>
+    <item>
+      <title>LSmetrics</title>
+      <link>https://mauriciovancine.github.io/project/lsmetrics/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/lsmetrics/</guid>
+      <description>Mais informações em breve.</description>
+    </item>
+    <item>
+      <title>Fonte de dados geoespaciais</title>
+      <link>https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/</guid>
+      <description>Lista das principais fontes de dados e pacotes do R de dados geoespaciais</description>
+    </item>
+    <item>
+      <title>GeoR: Dados Geoespaciais com o R</title>
+      <link>https://mauriciovancine.github.io/teaching/course-geor/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/course-geor/</guid>
+      <description>Descrição Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como controle de versão, git e GitHub; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.&#xA;Oferecimento Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2021). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.&#xA;Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade.</description>
+    </item>
+    <item>
+      <title>Disciplinas de graduação e pós-graduação on-line</title>
+      <link>https://mauriciovancine.github.io/blog/2021-03-academic-online-courses/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2021-03-academic-online-courses/</guid>
+      <description>Lista de disciplinas de graduação e pós-graduação oferecidas on-line</description>
+    </item>
+    <item>
+      <title>Help me help you: um bestiário para entender erros e pedir ajuda no R</title>
+      <link>https://mauriciovancine.github.io/blog/2020-08-r-erros/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2020-08-r-erros/</guid>
+      <description>Um guia para entender erros e pedir ajuda no R</description>
+    </item>
+  </channel>
+</rss>

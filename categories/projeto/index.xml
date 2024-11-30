@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projeto on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/categories/projeto/</link>
+    <description>Recent content in Projeto on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/categories/projeto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grupo de Estudos em R e Estatística (GERE)</title>
+      <link>https://mauriciovancine.github.io/project/gere/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/gere/</guid>
+      <description>Descrição do projeto Através da difusão e capacitação no uso da linguagem R e sua aplicação em abordagem quantitativas e estatísticas, o GERE busca aprimorar a formação técnico-científica e humanística dos graduandos e pós-graduandos, bem como fomentar um espaço de convivência e aprendizado entre os membros da comunidade unespiana.</description>
+    </item>
+    <item>
+      <title>Ecologia no R</title>
+      <link>https://mauriciovancine.github.io/project/ecologia-r/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/ecologia-r/</guid>
+      <description>Descrição do projeto A ideia do projeto é atualizar e ampliar o livro Análises Ecológicas no R ao longo do tempo. A ideia mais interessante é que não pretendemos investir somente na produção do livro, mas também oferecer cursos em universidades e regiões com pouco investimento e recursos, criar podcasts e vídeos no YouTube, entre outras ideias.&#xA;Como ajudar É importante ressaltar que tudo isso é (e sempre será!) feito gratuitamente, em um projeto totalmente aberto e sem fins lucrativos.</description>
+    </item>
+    <item>
+      <title>LSmetrics</title>
+      <link>https://mauriciovancine.github.io/project/lsmetrics/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/lsmetrics/</guid>
+      <description>Mais informações em breve.</description>
+    </item>
+  </channel>
+</rss>

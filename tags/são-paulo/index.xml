@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>São Paulo on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/s%C3%A3o-paulo/</link>
+    <description>Recent content in São Paulo on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/s%C3%A3o-paulo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mammals in São Paulo State: diversity, distribution, ecology, and conservation</title>
+      <link>https://mauriciovancine.github.io/publications/mammals-sp/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/mammals-sp/</guid>
+      <description>Este estudo responde a cinco perguntas principais sobre a diversidade, distribuição, impacto, adaptação e futuro dos mamíferos silvestres no Estado de São Paulo</description>
+    </item>
+    <item>
+      <title>Spatial prediction of risk areas for vector transmission of Trypanosoma cruzi in the State of Paraná, southern Brazil</title>
+      <link>https://mauriciovancine.github.io/publications/trypanosoma-pr/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/trypanosoma-pr/</guid>
+      <description>Analisamos como o clima e a estrutura da paisagem explicam a adequabilidade ambiental de Triatomas que podem estar infestados com Trypanosoma cruzi em municípios do Estado do Paraná</description>
+    </item>
+    <item>
+      <title>High mammal species turnover in forest patches immersed in biofuel plantations</title>
+      <link>https://mauriciovancine.github.io/publications/frag-mm-sp/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-mm-sp/</guid>
+      <description>Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de São Paulo</description>
+    </item>
+  </channel>
+</rss>

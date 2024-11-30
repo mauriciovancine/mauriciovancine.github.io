@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Biogegrafia on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/biogegrafia/</link>
+    <description>Recent content in Biogegrafia on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 06 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/biogegrafia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fontes de dados de biodiversidade</title>
+      <link>https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/</guid>
+      <description>Lista das principais fontes e pacotes do R de dados de biodiversidade</description>
+    </item>
+  </channel>
+</rss>

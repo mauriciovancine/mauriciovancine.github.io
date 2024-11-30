@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.130.0">
+<title>Análises Ecológicas no R | Maurício Vancine</title>
+
+
+<meta property="twitter:site" content="@mauriciovancine">
+<meta property="twitter:creator" content="@mauriciovancine">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="O livro Análises Ecológicas no R é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R">
+
+
+<meta property="og:site_name" content="Maurício Vancine">
+<meta property="og:title" content="Análises Ecológicas no R | Maurício Vancine">
+<meta property="og:description" content="O livro Análises Ecológicas no R é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://mauriciovancine.github.io/publications/eco-r/" />
+<meta property="og:locale" content="pt-br">
+
+
+
+
+    
+        <meta property="og:image" content="https://mauriciovancine.github.io/publications/eco-r/featured.jpeg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/publications/eco-r/featured.jpeg" >
+    
+    
+  
+  <meta itemprop="name" content="Análises Ecológicas no R">
+  <meta itemprop="description" content="O livro Análises Ecológicas no R é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R">
+  <meta itemprop="datePublished" content="2022-02-22T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2022-02-22T00:00:00+00:00">
+  <meta itemprop="wordCount" content="384">
+  <meta itemprop="image" content="https://mauriciovancine.github.io/publications/eco-r/featured.jpeg">
+  <meta itemprop="keywords" content="Ecologia,Linguagem R,Estatística">
+  
+  
+
+
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.f039f41e61940aa743e97653edd07c8b48e7fbd36c8c465f1ea9f0e4d4ad1073.css" integrity="sha256-8Dn0HmGUCqdD6XZT7dB8i0jn&#43;9NsjEZfHqnw5NStEHM=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.43a16206850df307a9ecc165118c6e7eab95cf24ab4cf99d6388dc7971e9b6ce.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://mauriciovancine.github.io/" title="Home">
+      <img src="/img/favicon.png" class="dib db-l h2 w-auto" alt="Maurício Vancine">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="Sobre">Sobre</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Projetos">Projetos</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Palestras">Palestras</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/teaching/" title="Ensino">Ensino</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publication/" title="Publicações">Publicações</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/cv/cv-academic.pdf" title="">CV</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/resume/resume.pdf" title="">Resumé</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Análises Ecológicas no R</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">O livro Análises Ecológicas no R é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R</h4>
+        
+        
+
+      
+      <div class="ph0 pt5">
+        
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://analises-ecologicas.com/" target="_blank" rel="noopener"><i class="fas fa-link fa-lg fa-fw mr2"></i>bookdown</a>
+
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://canal6.com.br/livreacesso/livro/analises-ecologicas-no-r/" target="_blank" rel="noopener"><i class="fas fa-file-pdf fa-lg fa-fw mr2"></i>pdf</a>
+
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://clubedeautores.com.br/livro/analises-ecologicas-no-r-2" target="_blank" rel="noopener"><i class="fas fa-book fa-lg fa-fw mr2"></i>livro</a>
+
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://www.amazon.com.br/An%C3%A1lises-ecol%C3%B3gicas-Ferdo-Rodrigues-Silva/dp/857917564X/ref=sr_1_1?keywords=9788579175640&amp;qid=1654379366&amp;sr=8-1" target="_blank" rel="noopener"><i class="fab fa-amazon fa-lg fa-fw mr2"></i>amazon</a>
+
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://github.com/paternogbc/livro_aer" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>code</a>
+
+
+      </div>
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <img src="featured.jpeg" width="50%" />
+
+
+
+
+<h2 id="visão-geral">Visão geral
+  <a href="#vis%c3%a3o-geral"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>O livro é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R. Ele descreve como os códigos devem ser consequências das perguntas que a pesquisa pretende responder. Essa visão tem como consequência um livro que do começo ao fim conecta teoria ecológica, métodos científicos, análises quantitativas e programação.</p>
+<p>Isso é feito de modo explícito através de exemplos claros e didáticos que apresentam contexto e dados reais, um ou mais exemplos de perguntas que poderiam ser feitas, predições relacionadas às perguntas e a teoria em questão, além das variáveis que poderiam ser utilizadas nas análises.</p>
+<p>O texto que descreve essas partes é intercalado com pedaços organizados e claros de código e gráficos, o que torna a leitura dos capítulos bastante fluida e dinâmica, principalmente para quem gosta de executar os códigos no seu computador conforme lê os capítulos. É como uma aula prática guiada.</p>
+
+
+
+
+<h2 id="conteúdo">Conteúdo
+  <a href="#conte%c3%bado"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Capítulo 1: Introdução<br>
+Capítulo 2: Voltando ao básico: como dominar a arte de fazer perguntas cientificamente relevantes</p>
+<p><em>Parte 1: Funcionamento da linguagem R</em></p>
+<p>Capítulo 3: Pré-requisitos<br>
+Capítulo 4: Introdução ao R<br>
+Capítulo 5: Tidyverse<br>
+Capítulo 6: Visualização de dados</p>
+<p><em>Parte 2: Análise de dados ecológicos</em></p>
+<p>Capítulo 7: Modelos lineares<br>
+Capítulo 8: Modelos Lineares Generalizados<br>
+Capítulo 9: Análises Multidimensionais<br>
+Capítulo 10: Rarefação<br>
+Capítulo 11: Estimadores de riqueza<br>
+Capítulo 12: Diversidade Taxonômica<br>
+Capítulo 13: Diversidade Filogenética<br>
+Capítulo 14: Diversidade Funcional<br>
+Capítulo 15: Dados geoespaciais</p>
+
+
+
+
+<h2 id="código-e-dados">Código e dados
+  <a href="#c%c3%b3digo-e-dados"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>A maioria dos exemplos do livro utilizam dados reais extraídos de artigos científicos que já foram publicados ou dados que foram coletados por um dos autores deste livro. Todos os dados, publicados ou simulados, estão disponíveis no pacote 
+<a href="https://paternogbc.github.io/ecodados/" target="_blank" rel="noopener">ecodados</a>.</p>
+<p>Além disso, em cada capítulo fazemos uma breve descrição dos dados para facilitar a compreensão sobre o que é variável resposta ou preditora, como essas variáveis estão relacionadas com as perguntas e predições do exemplo.</p>
+
+
+
+
+<h2 id="citação">Citação
+  <a href="#cita%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<pre tabindex="0"><code>@book{da_silva_etal_r_2022,
+	address = {Recife, PE},
+	edition = {Primeira edição},
+	title = {Análises ecológicas no R},
+	isbn = {9788579175640},
+	shorttitle = {Análises ecológicas no R},
+	publisher = {Nupeea},
+	author = {Da Silva FR, Gonçalves-Souza T, Paterno GB, Provete DB, Vancine MH},
+	year = {2022},
+	note = {},
+	keywords = {Análises dados – Ecologia, Linguagem de programação (Computadores), Métodos científicos, Tecnologia – Aspectos ambientais},
+}
+</code></pre>
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">February 22, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">2 minute read, 384 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/livro">Livro</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/ecologia">Ecologia</a>  <a href="https://mauriciovancine.github.io/tags/linguagem-r">Linguagem R</a>  <a href="https://mauriciovancine.github.io/tags/estat%C3%ADstica">Estatística</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/teaching/workshop-landscapemetrics/">Métricas de paisagem no R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/teaching/workshop-spatial-patterns-biodiversity-data/">Analisando padrões espaciais em dados de biodiversidade</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/teaching/workshop-prog-r/">Programação em linguagem R</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://mauriciovancine.github.io/publications/bat-sarbeco/">&larr; Present and future distribution of bat hosts of sarbecoviruses: implications for conservation and public health</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://mauriciovancine.github.io/publications/network-seed-af/">Forest cover and connectivity have pervasive effects on the maintenance of evolutionary distinct interactions in seed dispersal networks &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2024 Maurício Vancine
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/mauriciovancine" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://bsky.app/profile/mauriciovancine.bsky.social" title="bluesky" target="_blank" rel="me noopener">
+      <i class="fab fa-bluesky fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://mastodon.social/@mauriciovancine" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/mauriciovancine" title="x-twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-x-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.researchgate.net/profile/Mauricio-Vancine" title="researchgate" target="_blank" rel="me noopener">
+      <i class="ai ai-researchgate fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ" title="google-scholar" target="_blank" rel="me noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0001-9650-7575" title="orcid" target="_blank" rel="me noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.webofscience.com/wos/author/record/837504" title="researcherid" target="_blank" rel="me noopener">
+      <i class="ai ai-researcherid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888" title="scopus" target="_blank" rel="me noopener">
+      <i class="ai ai-scopus fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://osf.io/k8mxe/" title="osf" target="_blank" rel="me noopener">
+      <i class="ai ai-osf fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://figshare.com/authors/Mauricio_Vancine/2842289" title="figshare" target="_blank" rel="me noopener">
+      <i class="ai ai-figshare fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.zotero.org/mauriciovancine" title="zotero" target="_blank" rel="me noopener">
+      <i class="ai ai-zotero fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://lattes.cnpq.br/9761288418931193" title="lattes" target="_blank" rel="me noopener">
+      <i class="ai ai-lattes fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/mauricio-vancine/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">Licença</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contato">Contato</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Financiamento">Financiamento</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

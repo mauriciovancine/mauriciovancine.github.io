@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Palestras, Vídeos e Podcasts on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/talk/</link>
+    <description>Recent content in Palestras, Vídeos e Podcasts on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 28 Nov 2024 14:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unindo dados a modelos: como prever a distribuição da biodiversidade e serviços ecossistêmicos na escala da paisagem?</title>
+      <link>https://mauriciovancine.github.io/talk/talk-landscape-syneco/</link>
+      <pubDate>Thu, 28 Nov 2024 14:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-landscape-syneco/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-unicamp/</link>
+      <pubDate>Fri, 01 Nov 2024 13:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-unicamp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Análises Ecológicas no R: um livro para ‘eRRar’ mais na Ecologia</title>
+      <link>https://mauriciovancine.github.io/talk/talk-r-bioforum-unicamp/</link>
+      <pubDate>Thu, 25 Apr 2024 13:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-r-bioforum-unicamp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dinámica espacio-temporal de la vegetación forestal y natural en el Bosque Atlántico e implicaciones para la conservación</title>
+      <link>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-red/</link>
+      <pubDate>Mon, 25 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-red/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Análise de dados geoespaciais no R</title>
+      <link>https://mauriciovancine.github.io/talk/talk-r-geospatial/</link>
+      <pubDate>Tue, 12 Mar 2024 19:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-r-geospatial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-unesp/</link>
+      <pubDate>Wed, 14 Jun 2023 13:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-spatiotemporal-af-unesp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Modelagem de Distribuição de Espécies e algumas aplicações</title>
+      <link>https://mauriciovancine.github.io/talk/talk-sdm-ufpe/</link>
+      <pubDate>Wed, 09 Nov 2022 14:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-sdm-ufpe/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Profissão Ecólogo</title>
+      <link>https://mauriciovancine.github.io/talk/talk-ecologo-unesp/</link>
+      <pubDate>Mon, 07 Nov 2022 16:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-ecologo-unesp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>#092 – Você tem medo de errar?</title>
+      <link>https://mauriciovancine.github.io/talk/podcast-desabracando-arvores-r/</link>
+      <pubDate>Sun, 15 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/podcast-desabracando-arvores-r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Análises Ecológicas no R (Lançamento)</title>
+      <link>https://mauriciovancine.github.io/talk/video-ecologia-r-lancamento/</link>
+      <pubDate>Fri, 13 May 2022 13:13:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-ecologia-r-lancamento/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Modelos em Ecologia: extrapolando nosso conhecimento sobre a distribuição das espécies</title>
+      <link>https://mauriciovancine.github.io/talk/talk-sdm-uff/</link>
+      <pubDate>Thu, 04 Nov 2021 14:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-sdm-uff/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>O Fascinante Mundo do GRASS</title>
+      <link>https://mauriciovancine.github.io/talk/video-fmsr-grass-sr/</link>
+      <pubDate>Wed, 22 Sep 2021 20:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-fmsr-grass-sr/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>O fascinante mundo do GRASS-GIS</title>
+      <link>https://mauriciovancine.github.io/talk/video-geocast-grass-intro/</link>
+      <pubDate>Wed, 18 Aug 2021 20:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-geocast-grass-intro/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Conhecendo Hugo Apéro: fazendo blogs com blogdown e R</title>
+      <link>https://mauriciovancine.github.io/talk/video-geocast-apero/</link>
+      <pubDate>Fri, 30 Jul 2021 20:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-geocast-apero/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Estatística e análise de dados espaciais no R: um estudo de caso com dados do Lago Walker</title>
+      <link>https://mauriciovancine.github.io/talk/video-geocast-curso-r-geokrigagem/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-geocast-curso-r-geokrigagem/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Aplicações da Cartografia para a Ecologia Espacial</title>
+      <link>https://mauriciovancine.github.io/talk/talk-espacial-uff/</link>
+      <pubDate>Fri, 02 Apr 2021 14:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-espacial-uff/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Epísódio 48 - GeoCast Brasil</title>
+      <link>https://mauriciovancine.github.io/talk/podcast-fmsr-geocast/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/podcast-fmsr-geocast/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uso e aplicações de modelos estatísticos em Ecologia e Geografia</title>
+      <link>https://mauriciovancine.github.io/talk/video-estatidados-modelos-ecologia-geografia/</link>
+      <pubDate>Mon, 23 Nov 2020 20:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-estatidados-modelos-ecologia-geografia/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 16: R Markdown: usando o R para comunicar seus resultados</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-16/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-16/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Conversa com Ecólogo II - A importância da análise de dados</title>
+      <link>https://mauriciovancine.github.io/talk/video-abe-analise-dados/</link>
+      <pubDate>Thu, 17 Sep 2020 20:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-abe-analise-dados/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>We R Live 15: Introdução à estatística Espacial V</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-15/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-15/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 14 (ESPECIAL): Geoestatística com Jorge Kazuo Yamamoto</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-14/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-14/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 13: Introdução à Estatística Espacial - Análise de dados agregados I</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-13/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-13/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 11: florestal - Pacote para inventário florestal no R</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-11/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-11/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Introdução à Modelagem de Nicho Ecológico</title>
+      <link>https://mauriciovancine.github.io/talk/talk-enm-gggc/</link>
+      <pubDate>Thu, 16 Jul 2020 10:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-enm-gggc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>We R Live 10 - Join como associar dados à vetores</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-10/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-10/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 09: Introdução à estatística Espacial - Processos Pontuais III</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-09/</link>
+      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-09/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 08: Introdução à Estatística Espacial II</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-08/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-08/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 07: Introdução à estatística Espacial - Processos Pontuais</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-07/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-07/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 06: Extraindo dados climáticos para pontos</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-06/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-06/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 05: Manipulando dados raster no R II</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-05/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-05/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Unesp realiza estudo para verificar a importância do isolamento social</title>
+      <link>https://mauriciovancine.github.io/talk/video-unesp-covid/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-unesp-covid/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 04: Manipulando dados raster no R</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-04/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-04/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 03: Elaborando mapa no R com tmap</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-03/</link>
+      <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-03/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 02: Elaborando mapas no R</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-02/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-02/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>We R Live 01: Como começar no R</title>
+      <link>https://mauriciovancine.github.io/talk/video-werlive-01/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-werlive-01/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Modelos de Distribuição de Espécies: uma visão geral</title>
+      <link>https://mauriciovancine.github.io/talk/talk-sdm-gggc/</link>
+      <pubDate>Thu, 05 Mar 2020 09:30:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-sdm-gggc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Métricas de paisagem no R</title>
+      <link>https://mauriciovancine.github.io/talk/video-geocast-metricas-paisagem/</link>
+      <pubDate>Fri, 27 Sep 2019 20:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/video-geocast-metricas-paisagem/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>ATLANTIC AMPHIBIANS: Conjunto de Dados de Comunidades de Anfíbios da Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/talk/talk-data-paper-amphibians-anfoco/</link>
+      <pubDate>Sat, 04 Aug 2018 16:30:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-data-paper-amphibians-anfoco/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

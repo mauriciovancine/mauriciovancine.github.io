@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mudança De Cobertura Da Terra on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/mudan%C3%A7a-de-cobertura-da-terra/</link>
+    <description>Recent content in Mudança De Cobertura Da Terra on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 27 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/mudan%C3%A7a-de-cobertura-da-terra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dinâmica de mudança de cobertura da terra e Diagrama de Sankey</title>
+      <link>https://mauriciovancine.github.io/blog/2022-08-geo-cob-terra-sankey/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2022-08-geo-cob-terra-sankey/</guid>
+      <description>Contabilização das mudanças de quantidade e área de classes de cobertura da terra ao longo do tempo e sua representação através de um Diagrama de Sankey</description>
+    </item>
+  </channel>
+</rss>

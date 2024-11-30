@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brachycephalus on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/brachycephalus/</link>
+    <description>Recent content in Brachycephalus on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 29 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/brachycephalus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diversidade, distribuição e efeito das mudanças climáticas sobre comunidades de anfíbios da Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-diversidade/</link>
+      <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-diversidade/</guid>
+      <description>Nesta dissertação apresento uma ampla compilação e avaliação da composição e distribuição das comunidades de anfíbios já inventariadas para o Bioma da Mata Atlântica. Num segundo momento, utilizo parte dos dados das comunidades para inferir como as mudanças climáticas poderão afetar a distribuição de anuros do gênero Brachycephalus, grupo considerado altamente sensível às alterações climáticas</description>
+    </item>
+  </channel>
+</rss>

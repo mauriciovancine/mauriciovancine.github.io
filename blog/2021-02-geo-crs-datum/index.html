@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.130.0">
+<title>Sistemas de Referência de Coordenadas e Datum | Maurício Vancine</title>
+
+
+<meta property="twitter:site" content="@mauriciovancine">
+<meta property="twitter:creator" content="@mauriciovancine">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum">
+
+
+<meta property="og:site_name" content="Maurício Vancine">
+<meta property="og:title" content="Sistemas de Referência de Coordenadas e Datum | Maurício Vancine">
+<meta property="og:description" content="Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/" />
+<meta property="og:locale" content="pt-br">
+
+
+
+
+    
+        <meta property="og:image" content="https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/featured.jpg" >
+    
+    
+  
+  <meta itemprop="name" content="Sistemas de Referência de Coordenadas e Datum">
+  <meta itemprop="description" content="Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum">
+  <meta itemprop="datePublished" content="2021-02-20T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2021-02-20T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1800">
+  <meta itemprop="image" content="https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/featured.jpg">
+  <meta itemprop="keywords" content="Geoprocessamento,Geoespacial">
+  
+  
+
+
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.f039f41e61940aa743e97653edd07c8b48e7fbd36c8c465f1ea9f0e4d4ad1073.css" integrity="sha256-8Dn0HmGUCqdD6XZT7dB8i0jn&#43;9NsjEZfHqnw5NStEHM=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.43a16206850df307a9ecc165118c6e7eab95cf24ab4cf99d6388dc7971e9b6ce.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single-sidebar">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://mauriciovancine.github.io/" title="Home">
+      <img src="/img/favicon.png" class="dib db-l h2 w-auto" alt="Maurício Vancine">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="Sobre">Sobre</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Projetos">Projetos</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Palestras">Palestras</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/teaching/" title="Ensino">Ensino</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publication/" title="Publicações">Publicações</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/cv/cv-academic.pdf" title="">CV</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/resume/resume.pdf" title="">Resumé</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pr3-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Sistemas de Referência de Coordenadas e Datum</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum</h4>
+        <p class="f6 measure lh-copy mv1">By Maurício Vancine in <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </p>
+        <p class="f7 db mv0 ttu">February 20, 2021</p>
+      </header>
+      <section class="post-body pt5 pb4">
+        <link href="https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/index_files/vembedr/css/vembedr.css" rel="stylesheet" />
+<link href="https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/index_files/vembedr/css/vembedr.css" rel="stylesheet" />
+
+
+
+
+<h2 id="contextualização">Contextualização
+  <a href="#contextualiza%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Um dos primeiros assuntos que devemos entender antes de iniciar no mundo do <strong>Geoprocessamento</strong> são os conceitos de <strong>Sistema de Referência de Coordenadas</strong> e <strong>Datum</strong>. Esses conceitos atrelados à Cartografia apesar de <strong>parecerem simples</strong> para quem possui certa experiência na área de Geoprocessamento, muitas vezes são <strong>confundidos ou mesmo ignorados</strong> por aqueles que estão adentrando nessa área.</p>
+<p>Dessa forma, minha intenção com esse post é <strong>transmitir esses conceitos de forma simples e objetiva</strong>, usando uma linguagem prática, para facilitar seu uso no dia a dia. Não adentro aqui em como aplicar esses conceitos em softwares de SIG ou toda a matemática envolvida. Para se aprofundar, recomendo livros específicos no final do post ou mesmo procurar disciplinas de Engenharia Cartográfica e/ou Geodéria.</p>
+
+
+
+
+<h2 id="sistema-de-referência-de-coordenadas">Sistema de Referência de Coordenadas
+  <a href="#sistema-de-refer%c3%aancia-de-coordenadas"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Os dados geoespaciais (vetor e raster, explicados com detalhes neste 
+<a href="https://mauriciovancine.github.io/pt/post/geo-geospatial-data" target="_blank" rel="noopener">post</a>), possuem um componente fundamental, que é o <strong>Sistema de Referência de Coordenadas</strong> ou do inglês <em>Coordinate Reference System (CRS)</em>, que define esses dados representam uma feição na superfície da Terra.</p>
+<p>O Sistema de Referência de Coordenadas é composto de <strong>quatro componentes</strong>:</p>
+<ol>
+<li><strong>Sistema de coordenadas</strong>: grade X e Y na qual os dados são sobrepostos e localizados no espaço</li>
+<li><strong>Unidades horizontais e verticais</strong>: unidades usadas para definir a grade ao longo dos eixos X e Y</li>
+<li><strong>Datum</strong>: versão modelada da forma da Terra que define a origem usada para localizar o sistema de coordenadas no planeta</li>
+<li><strong>Informações de projeção</strong>: equação matemática usada para nivelar objetos que estão em uma superfície redonda para visualização em uma superfície plana</li>
+</ol>
+<p>O <strong>Sistema de coordenadas</strong> é classificado com base nas <strong>Unidades horizontais e verticais</strong> que estão sendo utilizadas para a representação geográfica, podendo assumir dois tipos: <strong>ângulos</strong> para <strong>Sistema de Coordenadas Geográficas</strong> e <strong>metros</strong> para <strong>Sistema de Coordenadas Projetadas</strong>.</p>
+<p>Outro componente é o <strong>datum</strong>, que é a <strong>relação</strong> desses sistemas de coordenadas com a superfície da Terra. O datum faz parte de uma área da <strong>Cartografia</strong> denominada <strong>Geodésia</strong> que estuda a forma e dimensões da Terra, campo gravitacional e a localização de pontos fixos e sistemas de coordenadas.</p>
+<p>Por fim, as <strong>Informações de projeção</strong> que são equações matemáticas constituídas com base nas informações anteriores permite a representação e cálculos de propriedades das feições representadas nos mapas. Esse tópico não abordaremos aqui por estarem fora da minha alçada… Muito senos, cossenos, dericadas e integrais… Melhor deixar para os geofísicos e engenheiros cartográficos…</p>
+<p>Veremos mais informações para o uso prático, focado no <strong>Sistemas de Coordenadas</strong> e <strong>Datum</strong> e como combiná-los para formar o Sistema de Referência de Coordenadas.</p>
+
+
+
+
+<h2 id="sistema-de-coordenadas-geográficas">Sistema de Coordenadas Geográficas
+  <a href="#sistema-de-coordenadas-geogr%c3%a1ficas"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>O <strong>Sistema de Coordenadas Geográficas</strong> utiliza <strong>ângulos</strong> para representar feições na superfície da Terra através de dois valores: longitude e latitude. A <strong>longitude</strong> localiza-se na direção Leste-Oeste e a <strong>latitude</strong> localiza-se na direção Norte-Sul. Nesse sistema, a <strong>superfície da Terra</strong> geralmente é representada por uma <strong>superfície elipsoidal</strong>, pois a Terra é ligeiramente achatada nos pólos (Figura <a href="#fig:fig-geo">1</a>).</p>
+<div class="figure" style="text-align: center">
+<img src="img/geo_geographic.png" alt="Sistema de Coordenadas Geográficas. Fonte: Documentação do QGIS." width="70%" />
+<p class="caption">
+<span id="fig:fig-geo"></span>Figure 1: Sistema de Coordenadas Geográficas. Fonte: Documentação do QGIS.
+</p>
+</div>
+
+
+
+
+<h2 id="sistema-de-coordenadas-projetadas">Sistema de Coordenadas Projetadas
+  <a href="#sistema-de-coordenadas-projetadas"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>O <strong>Sistema de Coordenadas Projetadas</strong> utiliza um <strong>Sistema Cartesiano de Coordenadas</strong> em uma <strong>superfície plana</strong>. Dessa forma, à partir de uma origem, traçam-se eixos X e Y, e uma unidade linear, como o <strong>metro</strong>, é utilizada para representar as feições.</p>
+<p>Todos as <strong>projeções</strong> são feitas a partir de sistemas geográficos, convertendo uma <strong>superfície tridimensional</strong> em uma <strong>superfície plana bidimensional</strong>. Sendo assim, essa conversão trás consigo algum tipo de <strong>distorção em relação à porção real</strong>, podendo ser distorções em: 1. formas locais, 2. áreas, 3. distâncias, 4. flexão ou curvatura, 5. assimetria e 6. lacunas de continuidade. Dessa forma, um sistema de coordenadas projetadas pode preservar somente uma ou duas dessas propriedades.</p>
+<p>Dois vídeos ajudam a entender melhor essas distorções:</p>
+<p><strong>Todos os mapas do mundo são imperfeitos. Entenda as razões e as soluções para amenizar distorções</strong></p>
+<div class="vembedr" align="center">
+<div>
+<iframe src="https://www.youtube.com/embed/zUE5LOwFrvk" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
+<p><strong>Why all world maps are wrong</strong></p>
+<div class="vembedr" align="center">
+<div>
+<iframe src="https://www.youtube.com/embed/kIID5FDi2JQ" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
+<p>Existem <strong>três grandes grupos</strong> de projeções: planares, cônicos e cilíndricos (Figura <a href="#fig:fig-proj">2</a>).</p>
+<div class="figure" style="text-align: center">
+<img src="img/geo_proj_families.jpg" alt="Sistema de Referência de Coordenadas Projetadas, dividido em três grupos: plana, cônica e cilíndrica. Fonte: Geographic Information System Basics." width="60%" />
+<p class="caption">
+<span id="fig:fig-proj"></span>Figure 2: Sistema de Referência de Coordenadas Projetadas, dividido em três grupos: plana, cônica e cilíndrica. Fonte: Geographic Information System Basics.
+</p>
+</div>
+<p>Na <strong>projeção plana</strong>, também denominada <strong>Projeção Azimutal</strong>, o mapeamento toca o globo em um ponto ou ao longo de uma linha de tangência, sendo normalmente usado no mapeamento de regiões polares, sendo a mais comum a <strong>Projeção Azimutal Equidistante</strong>, a mesma utilizada na bandeira da ONU (Figura <a href="#fig:fig-plana">3</a>).</p>
+<div class="figure" style="text-align: center">
+<img src="img/geo_proj_plana.jpg" alt="Projeção plana. Fonte: Atlas Escolar IBGE." width="70%" />
+<p class="caption">
+<span id="fig:fig-plana"></span>Figure 3: Projeção plana. Fonte: Atlas Escolar IBGE.
+</p>
+</div>
+<p>Na <strong>projeção cônica</strong>, a superfície da Terra é projetada em um <strong>cone</strong> ao longo de uma linha ou duas linhas de tangência, de modo que as distorções são minimizadas ao longo das linhas e aumentam com a distância das mesmas, sendo portanto, mais adequada para mapear áreas de latitudes médias, tendo como exemplo mais conhecidos a <strong>Projeção Cônica Equivalente de Albers</strong> e a <strong>Projeção Cônica Conforme de Lambert</strong> (Figura <a href="#fig:fig-conica">4</a>).</p>
+<div class="figure" style="text-align: center">
+<img src="img/geo_proj_conica.jpg" alt="Projeção cônica. Fonte: Atlas Escolar IBGE." width="100%" />
+<p class="caption">
+<span id="fig:fig-conica"></span>Figure 4: Projeção cônica. Fonte: Atlas Escolar IBGE.
+</p>
+</div>
+<p>Na <strong>projeção cilíndrica</strong>, a superfície da Terra é mapeada em um <strong>cilindro</strong>, sendo também criada tocando a superfície da Terra ao longo de uma ou duas linhas de tangência, sendo utilizada com mais frequência para mapear todo o globo, tendo como exemplo mais conhecido a <strong>Projeção Universal Transversa de Mercator (UTM)</strong>, <strong>Projeção de Winkel Tripel</strong> e <strong>Projeção de Mollweide</strong>(Figura <a href="#fig:fig-cilindrica">5</a>).</p>
+<div class="figure" style="text-align: center">
+<img src="img/geo_proj_cilindrica.jpg" alt="Projeção cilíndrica. Fonte: Atlas Escolar IBGE." width="100%" />
+<p class="caption">
+<span id="fig:fig-cilindrica"></span>Figure 5: Projeção cilíndrica. Fonte: Atlas Escolar IBGE.
+</p>
+</div>
+
+
+
+
+<h2 id="datum">Datum
+  <a href="#datum"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Como dito anteriormente, o <strong>datum</strong> é a <strong>relação</strong> do sistema de coordenadas com a superfície da Terra. Ele representa o <strong>ponto de intersecção</strong> do elipsoide de referência com a superfície da Terra (geoide, a forma verdadeira da Terra), compensando as diferenças do campo gravitacional da Terra (Figura <a href="#fig:fig-datum">6</a>).</p>
+<div class="figure" style="text-align: center">
+<img src="img/geo_datum_eli_geo.png" alt="Datum, Geoide, Esferoide e Elipsoide. Fonte: Ciência Hoje e Lapig." width="100%" />
+<p class="caption">
+<span id="fig:fig-datum"></span>Figure 6: Datum, Geoide, Esferoide e Elipsoide. Fonte: Ciência Hoje e Lapig.
+</p>
+</div>
+<p>Existem dois tipos de datum: geocêntrico e local (Figura <a href="#fig:fig-datum-geo-local">7</a>). Para um <strong>datum geocêntrico</strong>, como o <strong>WGS84 - World Geodetic System 1984</strong>, o centro do elipsoide é o centro de gravidade da Terra e a precisão das projeções não é otimizada para um local específico do globo. Já em um <strong>datum local</strong>, como o <strong>SAD69 - South American Datum 1969</strong>, o elipsoide de referência é deslocado para se alinhar com a superfície em um determinado local, como por exemplo, na América do Sul para o SAD69 (Figura <a href="#fig:fig-datum-geo-local">7</a>).</p>
+<div class="figure" style="text-align: center">
+<img src="img/geo_datum_global_local.jpeg" alt="Datum global e datum local. Fonte: Aulas de Cartografia para Geoprocessamento do Programa de Pós-graduação em Computação, ênfase Geomática, UERJ." width="90%" />
+<p class="caption">
+<span id="fig:fig-datum-geo-local"></span>Figure 7: Datum global e datum local. Fonte: Aulas de Cartografia para Geoprocessamento do Programa de Pós-graduação em Computação, ênfase Geomática, UERJ.
+</p>
+</div>
+<p>No Brasil, desde 2015, o 
+<a href="https://www.ibge.gov.br/" target="_blank" rel="noopener">Instituto Brasileiro de Geografia e Estatística (IBGE)</a> adotou utilizar o datum <strong>SIRGAS2000 - Sistema de Referencia Geocéntrico para las Américas 2000</strong> para todos os mapeamentos realizados no Brasil, um esforço conjunto para adotar o mesmo datum em toda a América. Mais sobre esse datum pode ser lido aqui: 
+<a href="http://www.sirgas.org/pt/sirgas-realizations/sirgas2000/" target="_blank" rel="noopener">SIRGAS2000</a> (Figura <a href="#fig:fig-sirgas">8</a>)</p>
+<div class="figure" style="text-align: center">
+<img src="img/geo_proj_sirgas2000.png" alt="Sistema de Referencia Geocéntrico para las Américas (SIRGAS). Fonte: SIRGAS" width="50%" />
+<p class="caption">
+<span id="fig:fig-sirgas"></span>Figure 8: Sistema de Referencia Geocéntrico para las Américas (SIRGAS). Fonte: SIRGAS
+</p>
+</div>
+<p>Comparando os <strong>datum SAD69 e SIRGAS2000</strong>, podemos notar uma <strong>diferença de cerca de 65 metros</strong>, que à depender do mapeamento pode fazer uma <strong>grande diferença</strong>, a exemplo da planta de uma casa ou a construção de uma ponte (Figura <a href="#fig:fig-datum-comp">9</a>)</p>
+<div class="figure" style="text-align: center">
+<img src="img/geo_datum_sad_sirgas.jpg" alt="Discrepância entre um mesmo ponto em SAD69 e SIRGAS2000 em regiões urbanas. Fonte: 'SIRGAS 2000, quando iniciar a sua utilização?'" width="70%" />
+<p class="caption">
+<span id="fig:fig-datum-comp"></span>Figure 9: Discrepância entre um mesmo ponto em SAD69 e SIRGAS2000 em regiões urbanas. Fonte: ‘SIRGAS 2000, quando iniciar a sua utilização?’
+</p>
+</div>
+
+
+
+
+<h2 id="uso-na-prática-dos-sistemas-de-referência-de-coordenadas">Uso na prática dos Sistemas de Referência de Coordenadas
+  <a href="#uso-na-pr%c3%a1tica-dos-sistemas-de-refer%c3%aancia-de-coordenadas"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Na prática, o <strong>uso dos Sistemas de Referência de Coordenadas</strong> é <strong>relativamente simples</strong>. Primeramente, devemos entender a diferença entre os Sistemas de Coordenadas Geográficas, Sistemas de Coordenadas Projetadas e Datum.</p>
+<p>Uma vez entendido isso, podemos passar para o passo seguinte: definir qual o <strong>melhor datum</strong> para nossa região de interesse. E nesse passo, o IBGE já nos ajudou, devemos adotar sempre que possível o Datum SIRGAS2000, salvo raras exceções mais específicas que não adentraremos aqui. Além disso, há uma aproximação com o datum WGS84, facilitando a conversão de datum.</p>
+<p>Por fim, devemos <strong>escolher se usaremos Coordenadas Geográfica ou Projetadas</strong>. Isso vai depender muito dos <strong>objetivos do nosso mapeamento</strong>. Se não faremos cálculos de áreas, ângulos ou distâncias, e estamos interessados em <strong>representar nossos dados</strong> da melhor forma possível, não há motivos para não escolher Coordenadas Geográficas. Logo, nosso Sistemas de Referência de Coordenadas ficaria dessa forma: <strong>Coordenadas Geográficas com Datum SIRGAS2000 ou WGS84</strong>. Essas coordendas geográficas podem ainda ser representadas em graus, minutos e segundos, ou em graus decimais.</p>
+<ul>
+<li>23°23’23”S 42°42’42”O; WGS 84</li>
+<li>23°23’23”S 42°42’42”O; SIRGAS 2000</li>
+<li>-23.38972, -42.71167; WGS 84</li>
+</ul>
+<p>Agora, se o <strong>objetivo do mapeamento</strong> é o <strong>cálculo de áreas, distâncias ou formas</strong>, devemos usar <strong>Coordenadas Projetadas</strong>, pois as unidades são em metros. Mas aqui começa a complicação. Pela minha experiência prática, a primeira coisa a se considerar é a escala: se for uma escala local, podemos começar pelo uso do UTM, principalmente se todos os dados caem na mesma zona. Logo, nosso Sistemas de Referência de Coordenadas ficaria dessa forma: <strong>Coordenadas Projetadas UTM (zona) com Datum SIRGAS2000 ou WGS84</strong>, com coordenadas sempre representadas em metros.</p>
+<ul>
+<li>23K 733876E, 7411482S; WGS 84</li>
+<li>23K 733876E, 7411482S; SIRGAS 2000</li>
+</ul>
+<p>Entretanto, se partimos para <strong>escala regionais</strong> (continente) ou <strong>globais</strong> (todo o mundo), devemos considerar projeções cônicas e/ou cilíndricas, repectivamente, além de observar as distorsões em área, distâncias ou formas, que ficam muito maiores a depender das que escolhemos. Basicamente existem três tipos de projeções: <strong>1) conforme</strong> (não deforma ângulo)s, <strong>2) equivalente</strong> (não altera áresas, e <strong>3) equidistante</strong> (não deforma distâncias), e principalmente, quando nos afastamos das <strong>linhas linhas de tangência</strong> dessas projeções.</p>
+
+
+
+
+<h2 id="códigos-para-os-sistemas-de-referência-de-coordenadas">Códigos para os Sistemas de Referência de Coordenadas
+  <a href="#c%c3%b3digos-para-os-sistemas-de-refer%c3%aancia-de-coordenadas"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Por fim, algo que ajuda a simplicar esses conceitos são o código numérico <code>epsg</code> e código em texto <code>proj4string</code>. O código EPSG (<em>European Petroleum Survey Group</em>) é uma sequência de numérica curta, referindo-se apenas a um CRS. O site 
+<a href="http://epsg.io/" target="_blank" rel="noopener">epsg.io</a> permite consultar diversas informações sobre um código, como procurar por um número do código, representação de mapas e fazer transformações de CRSs (Figura <a href="#fig:fig-epsg">10</a>).</p>
+<p>Já o código em texto <code>proj4string</code> permite mais flexibilidade para especificar diferentes parâmetros, como o tipo de projeção, datum e elipsóide. Dessa forma, é possível especificar muitas projeções, ou mesmo modificar as projeções existentes, tornando a representação <code>proj4string</code> mais complexa e flexível.</p>
+<p>Além disso, ainda é possível consultar uma extensa lista de CRSs no site 
+<a href="https://spatialreference.org/" target="_blank" rel="noopener">spatialreference.org</a>, que fornece descrições em diversis formatos, baseados em <strong>GDAL</strong> e <strong>Proj.4</strong>. Essa abordagem permite consultar uma URL que pode produzir uma referência espacial em um formato que um software SIG pode utilizar como referência.</p>
+<div class="figure" style="text-align: center">
+<img src="img/geo_epsg.png" alt="Site epsg.io com códigos EPSG. Fonte: epsg.io." width="150%" />
+<p class="caption">
+<span id="fig:fig-epsg"></span>Figure 10: Site epsg.io com códigos EPSG. Fonte: epsg.io.
+</p>
+</div>
+<p>Vale também se aprofundar no 
+<a href="https://proj.org/index.html" target="_blank" rel="noopener">PROJ</a>, que é um software de transformação de coordenadas. Há diversas projeções, com mais detalhamentos.</p>
+
+
+
+
+<h2 id="para-se-aprofundar">Para se aprofundar
+  <a href="#para-se-aprofundar"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Aqui ofereço apenas os conceitos básicos e bem superficiais, de forma prática. Para se aprofundar no tema, sugiro a leitura dos livros listados abaixo.</p>
+<ul>
+<li>
+<p>Lapaine, M., &amp; Usery, E. L. (Eds.). (2017). 
+<a href="https://www.springer.com/gp/book/9783319518343" target="_blank" rel="noopener">Choosing a map projection</a>. Springer International Publishing.</p>
+</li>
+<li>
+<p>Oliveira, C. D. (1993). 
+<a href="https://biblioteca.ibge.gov.br/visualizacao/livros/liv81158.pdf" target="_blank" rel="noopener">Curso de cartografia moderna</a>. IBGE.</p>
+</li>
+<li>
+<p>Nogueira, R. E. (2008). Cartografia: representação, comunicação e visualização de dados espaciais. Ed. UFSC.</p>
+</li>
+<li>
+<p>Duarte, P. A. (2002). Fundamentos de cartografia. Ed. UFSC.</p>
+</li>
+</ul>
+<p>Fonte da imagem: 
+<a href="https://unsplash.com/pt-br/fotografias/foto-de-foco-seletivo-do-globo-de-mesa-qoKTJo2zpRs" target="_blank" rel="noopener">Sara Riaño/Unsplash</a>.</p>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2021-03-academic-online-courses/">&larr; Disciplinas de graduação e pós-graduação on-line</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2020-08-r-erros/">Help me help you: um bestiário para entender erros e pedir ajuda no R &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      <div class="post-comments pa0 pa4-l mt4">
+  
+</div>
+
+    
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+                       
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/blog/sidebar.jpg" class="db ma0">
+
+
+<div class="blog-info ph4 pt4 pb4 pb0-l">
+  
+
+  <h1 class="f3">Blog</h1>
+  <p class="f6 lh-copy measure">Este é meu blog, onde compartilho meus aprendizados sobre R, Python, Linux, geoprocessamento, o universo e tudo mais&hellip;</p>
+  <p class="f7 measure lh-copy i mh0-l">Written by Maurício Vancine</p>
+
+
+  
+  <div class="dib bt bw1 b--black-10">
+    
+      <small class="db f7 pt3"><a href="/blog/" class="dib fw7 ttu">Veja os posts recentes</a></small>
+    
+    
+    
+    
+  </div>
+
+
+</div>
+
+
+  
+  <details open class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">February 20, 2021</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">9 minute read, 1800 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/geoprocessamento">Geoprocessamento</a>  <a href="https://mauriciovancine.github.io/tags/geoespacial">Geoespacial</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/teaching/workshop-landscapemetrics/">Métricas de paisagem no R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2022-08-geo-cob-terra-sankey/">Dinâmica de mudança de cobertura da terra e Diagrama de Sankey</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2022-07-eco-espa-distancia-ponto-linha/">Distância de pontos a linhas</a></dd>
+    
+  </dl>
+</details>
+
+</aside>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2024 Maurício Vancine
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/mauriciovancine" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://bsky.app/profile/mauriciovancine.bsky.social" title="bluesky" target="_blank" rel="me noopener">
+      <i class="fab fa-bluesky fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://mastodon.social/@mauriciovancine" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/mauriciovancine" title="x-twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-x-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.researchgate.net/profile/Mauricio-Vancine" title="researchgate" target="_blank" rel="me noopener">
+      <i class="ai ai-researchgate fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ" title="google-scholar" target="_blank" rel="me noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0001-9650-7575" title="orcid" target="_blank" rel="me noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.webofscience.com/wos/author/record/837504" title="researcherid" target="_blank" rel="me noopener">
+      <i class="ai ai-researcherid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888" title="scopus" target="_blank" rel="me noopener">
+      <i class="ai ai-scopus fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://osf.io/k8mxe/" title="osf" target="_blank" rel="me noopener">
+      <i class="ai ai-osf fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://figshare.com/authors/Mauricio_Vancine/2842289" title="figshare" target="_blank" rel="me noopener">
+      <i class="ai ai-figshare fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.zotero.org/mauriciovancine" title="zotero" target="_blank" rel="me noopener">
+      <i class="ai ai-zotero fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://lattes.cnpq.br/9761288418931193" title="lattes" target="_blank" rel="me noopener">
+      <i class="ai ai-lattes fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/mauricio-vancine/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">Licença</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contato">Contato</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Financiamento">Financiamento</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Santa Catarina on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/santa-catarina/</link>
+    <description>Recent content in Santa Catarina on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 01 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/santa-catarina/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forest cover influences occurrence of mammalian carnivores within Brazilian Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/frag-mm-sc/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-mm-sc/</guid>
+      <description>Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de Santa Catarina</description>
+    </item>
+  </channel>
+</rss>

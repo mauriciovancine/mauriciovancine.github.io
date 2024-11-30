@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amostragem on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/amostragem/</link>
+    <description>Recent content in Amostragem on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 24 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/amostragem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Land-use changes and the expansion of biofuel crops threaten the giant anteater in southeastern Brazil</title>
+      <link>https://mauriciovancine.github.io/publications/anteater-sp/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anteater-sp/</guid>
+      <description>Mapeamos a adequabilidade de habitat da população de tamanduás-bandeira no estado de São Paulo, avaliando a contribuição dos principais preditores à adequabilidade, e quantificamos esses habitat em áreas de proteção ambiental e em áreas ameaçadas pela expansão da cana-de-açúcar</description>
+    </item>
+    <item>
+      <title>ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America</title>
+      <link>https://mauriciovancine.github.io/publications/atlantic-amphibians/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/atlantic-amphibians/</guid>
+      <description>Compilamos comunidades de anfíbios ao longo do Bioma da Mata Atântica</description>
+    </item>
+  </channel>
+</rss>

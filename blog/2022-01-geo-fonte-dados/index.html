@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.130.0">
+<title>Fonte de dados geoespaciais | Maurício Vancine</title>
+
+
+<meta property="twitter:site" content="@mauriciovancine">
+<meta property="twitter:creator" content="@mauriciovancine">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Lista das principais fontes de dados e pacotes do R de dados geoespaciais">
+
+
+<meta property="og:site_name" content="Maurício Vancine">
+<meta property="og:title" content="Fonte de dados geoespaciais | Maurício Vancine">
+<meta property="og:description" content="Lista das principais fontes de dados e pacotes do R de dados geoespaciais" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/" />
+<meta property="og:locale" content="pt-br">
+
+
+
+
+    
+        <meta property="og:image" content="https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/featured.jpg" >
+    
+    
+  
+  <meta itemprop="name" content="Fonte de dados geoespaciais">
+  <meta itemprop="description" content="Lista das principais fontes de dados e pacotes do R de dados geoespaciais">
+  <meta itemprop="datePublished" content="2022-01-18T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2022-01-18T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1567">
+  <meta itemprop="image" content="https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/featured.jpg">
+  <meta itemprop="keywords" content="Geoprocessamento,Geoespacial,R,Vetor,Raster,Pacote">
+  
+  
+
+
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.f039f41e61940aa743e97653edd07c8b48e7fbd36c8c465f1ea9f0e4d4ad1073.css" integrity="sha256-8Dn0HmGUCqdD6XZT7dB8i0jn&#43;9NsjEZfHqnw5NStEHM=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.43a16206850df307a9ecc165118c6e7eab95cf24ab4cf99d6388dc7971e9b6ce.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single-sidebar">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://mauriciovancine.github.io/" title="Home">
+      <img src="/img/favicon.png" class="dib db-l h2 w-auto" alt="Maurício Vancine">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="Sobre">Sobre</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Projetos">Projetos</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Palestras">Palestras</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/teaching/" title="Ensino">Ensino</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publication/" title="Publicações">Publicações</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/cv/cv-academic.pdf" title="">CV</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/resume/resume.pdf" title="">Resumé</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pr3-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Fonte de dados geoespaciais</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Lista das principais fontes de dados e pacotes do R de dados geoespaciais</h4>
+        <p class="f6 measure lh-copy mv1">By Maurício Vancine in <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </p>
+        <p class="f7 db mv0 ttu">January 18, 2022</p>
+      </header>
+      <section class="post-body pt5 pb4">
+        <script src="https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/index_files/clipboard-2.0.6/clipboard.min.js"></script>
+<link href="https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/index_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+<script src="https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/index_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+<script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i> Copiar Código","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i> Copiado!","error":"Press Ctrl+C to Copy"})</script>
+<link href="https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/index_files/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/index_files/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+
+
+
+<h2 id="contextualização">Contextualização
+  <a href="#contextualiza%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Existe diversas fontes de dados geográficos em diferentes bases de dados disponíveis gratuitamente. Geralmente essas bases de dados são disponibilizadas separadamente em apenas dados vetoriais e dados raster. Para <strong>dados vetoriais</strong>, grande parte dos dados disponibilizados são utilizados em mapas como limites políticos, limites de biomas ou distribuição de espécies para <strong>polígonos</strong>; estradas e rios para <strong>dados lineares</strong>, ou ainda pontos de ocorrência de espécies ou comunidades, ou medidas tomadas em campo sobre condições naturais como clima ou relevo, como <strong>pontos</strong>.</p>
+<p>Entretanto, é sempre recomendado o uso de <strong>bases oficiais</strong>, principalmente em relação a dados vetoriais de <strong>limites políticos</strong>. Para tanto, é fundamental buscar as <strong>bases oficiais de cada país</strong>, entrentanto, há bases que podem ser utilizadas globalmente. Sobre as <strong>bases de dados raster</strong>, há uma infinidade de dados para diferentes objetivos, mas grande parte deles são relativos a condições ambientais, representando uma variável de interesse de forma contínua no espaço, como temperatura, precipitação, elevação, etc.</p>
+<p>Há uma compilação de dados geográficos vetoriais e raster feita por Marcus Vinícius Alves de Carvalho e Angelica Carvalho Di Maio, chamada 
+<a href="http://www.clickgeo.com.br/wp-content/uploads/2018/05/GeoLISTA.pdf" target="_blank" rel="noopener">GeoLISTA</a>. Entretanto, como as bases de dados tendem a ser muito dinâmicas, é possível que muitas bases tenham surgido e desaparecido desde a listagem realizada. Recente uma publicação de 
+<a href="https://wires.onlinelibrary.wiley.com/doi/full/10.1002/wat2.1424" target="_blank" rel="noopener">Lindersson et al. (2020)</a> reuniu informações de bases de várias bases para sociedades humanas.</p>
+<p>Atualmente encontrei outra compilação fantástica: 
+<a href="http://freegisdata.rtwilson.com/#home" target="_blank" rel="noopener">Free GIS Data</a>.</p>
+<p>Além das bases de dados, há pacotes específicos no R que fazem o download de dados vetoriais e rasters facilitando a aquisição e reprodutibilidade. Para conferir uma listagem completa de pacotes para diversas análises espaciais, veja 
+<a href="https://cran.r-project.org/web/views/Spatial.html" target="_blank" rel="noopener">CRAN Task View: Analysis of Spatial Data</a>.</p>
+
+
+
+
+<h3 id="vetor">Vetor
+  <a href="#vetor"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Dentre as bases vetoriais, destaco as seguintes fontes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://www.ibge.gov.br/geociencias/downloads-geociencias.html" target="_blank" rel="noopener">IBGE</a></td>
+<td style="text-align:left">Limites territoriais e censitários do Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cidades.ibge.gov.br/" target="_blank" rel="noopener">IBGE Cidades</a></td>
+<td style="text-align:left">Informações do IBGE sobre os municípios e estados do Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.snirh.gov.br/" target="_blank" rel="noopener">Sistema Nacional de Informações sobre Recursos Hídricos (SNIRH)</a></td>
+<td style="text-align:left">Base para disponibilização das informações sobre águas no Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://sidra.ibge.gov.br/" target="_blank" rel="noopener">Sistema IBGE de Recuperação Automática (SIDRA)</a></td>
+<td style="text-align:left">Indicadores econômicos, financeiros, sociais e políticos do Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://geo.fbds.org.br/" target="_blank" rel="noopener">FBDS</a></td>
+<td style="text-align:left">Uso da terra, APP e hidrografia - Mata Atlântica e Cerrado</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://mapas.sosma.org.br/dados/" target="_blank" rel="noopener">Atlas da Mata Atlântica</a></td>
+<td style="text-align:left">Mapeamento de floresta para o Bioma da Mata Atlântica</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://atlasagropecuario.imaflora.org/mapa" target="_blank" rel="noopener">Atlas da Agropecuária Brasileira</a></td>
+<td style="text-align:left">Dados dos limites de polígonos do Cadastro Ambiental Rural (CAR)</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://geosgb.cprm.gov.br/" target="_blank" rel="noopener">GeoBank</a></td>
+<td style="text-align:left">Dados geológicos do Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://maps.lapig.iesa.ufg.br" target="_blank" rel="noopener">Pastagem.org</a></td>
+<td style="text-align:left">Dados de pastagens e gado para o Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.dsr.inpe.br/laf/canasat/" target="_blank" rel="noopener">CanaSat</a></td>
+<td style="text-align:left">Dados de cana-de-açúcar para o Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://maps.csr.ufmg.br" target="_blank" rel="noopener">CSR Maps</a></td>
+<td style="text-align:left">Diversos dados vetoriais e raster para o Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://dadosabertos.ana.gov.br/" target="_blank" rel="noopener">Dados Abertos da Agência Nacional de Águas e Saneamento Básico</a></td>
+<td style="text-align:left">Dados de águas e saneamento básico para o Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://terrabrasilis.dpi.inpe.br/" target="_blank" rel="noopener">TerraBrasilis</a></td>
+<td style="text-align:left">Dados de estações pluviométricas e fluviométricas para o Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.snirh.gov.br/hidroweb/serieshistoricas" target="_blank" rel="noopener">HIDROWEB</a></td>
+<td style="text-align:left">Dados de infraestrutura de transporte (rodovias, ferrovias e hidrovias) do Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.gov.br/dnit/pt-br/assuntos/atlas-e-mapas" target="_blank" rel="noopener">Departamento Nacional de Infraestrutura de Transportes (DNIT)</a></td>
+<td style="text-align:left">Plataforma web desenvolvida pelo INPE para acesso, consulta, análise e disseminação de dados geográficos</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://intactforests.org/data.ifl.html" target="_blank" rel="noopener">Intact Forest Landscapes</a></td>
+<td style="text-align:left">Dados de floresta de paisagens intactas para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://ecoregions2017.appspot.com/" target="_blank" rel="noopener">Ecoregions</a></td>
+<td style="text-align:left">Dados de biorregiões e biomas do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.unbiodiversitylab.org/" target="_blank" rel="noopener">UN Biodiversity Lab</a></td>
+<td style="text-align:left">Diversas bases de dados para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://zenodo.org/record/3261807#.YA8lpPv0nOY" target="_blank" rel="noopener">Biodiversity Hotspots</a></td>
+<td style="text-align:left">Dados dos limites dos Hotspots de Biodiversidade</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.iucnredlist.org/resources/spatial-data-download" target="_blank" rel="noopener">IUCN Red List of Threatened Species</a></td>
+<td style="text-align:left">Dados dos limites das distribuições das espécies para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://mol.org/" target="_blank" rel="noopener">Map of Life (MOL)</a></td>
+<td style="text-align:left">Dados da distribuição de espécies e outros dados para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.keybiodiversityareas.org/kba-data/request" target="_blank" rel="noopener">Key Biodiversity Areas</a></td>
+<td style="text-align:left">Dados dos limites das Key Biodiversity Areas</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://marineregions.org/" target="_blank" rel="noopener">Marineregions.org</a></td>
+<td style="text-align:left">Informações de limites marinhos do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.hydrosheds.org/" target="_blank" rel="noopener">HydroSHEDS</a></td>
+<td style="text-align:left">Informações hidrológicas do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://ihp-wins.unesco.org/" target="_blank" rel="noopener">Water Information Network System</a></td>
+<td style="text-align:left">Informações hidrológicas do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://project.freshwaterbiodiversity.eu/" target="_blank" rel="noopener">Freshwater Information Platform</a></td>
+<td style="text-align:left">Informações hidrológicas do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.globio.info/download-grip-dataset" target="_blank" rel="noopener">Global Roads Inventory Project (GRIP)</a></td>
+<td style="text-align:left">Dados de estradas do mundo todo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://gadm.org/" target="_blank" rel="noopener">Database of Global Administrative Areas (GADM)</a></td>
+<td style="text-align:left">Limites de áreas administrativas do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.naturaleatoriorthdata.com/" target="_blank" rel="noopener">Natural Earth</a></td>
+<td style="text-align:left">Diversos limites para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://sedac.ciesin.columbia.edu/" target="_blank" rel="noopener">Socioeconomic Data and Applications Center (sedac)</a></td>
+<td style="text-align:left">Dados socio-econômicos para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.worldpop.org/" target="_blank" rel="noopener">WorldPop</a></td>
+<td style="text-align:left">Dados sobre distribuição, demogradia e dinâmica da população no mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.protectedplanet.net" target="_blank" rel="noopener">Protected Planet</a></td>
+<td style="text-align:left">Limites de áreas protegidas para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.gbif.org" target="_blank" rel="noopener">Global Biological Information Facility (GBIF)</a></td>
+<td style="text-align:left">Dados de ocorrências de espécies para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.splink.cria.org.br" target="_blank" rel="noopener">Species Link</a></td>
+<td style="text-align:left">Dados de ocorrências de espécies para o Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.gisin.org" target="_blank" rel="noopener">Global Invasive Species Information Network (GISIN)</a></td>
+<td style="text-align:left">Dados de ocorrências de espécies invasoras para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://iiasa.ac.at/" target="_blank" rel="noopener">International Institute for Applied Systems Analysis (IIASA)</a></td>
+<td style="text-align:left">Dados de mudanças climáticas, segurança energética, envelhecimento da população e desenvolvimento sustentável</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h3 id="raster">Raster
+  <a href="#raster"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Dentre as bases matriciais, destaco as seguintes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://mapbiomas.org/" target="_blank" rel="noopener">MapBiomas</a></td>
+<td style="text-align:left">Uso e cobertura da terra para o Brasil, Panamazonia Legal e Chaco, de 1985 a 2019 do Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.ibge.gov.br/apps/monitoramento_cobertura_uso_terra/v1/" target="_blank" rel="noopener">Monitoramento da Cobertura e Uso da Terra do Brasil - IBGE</a></td>
+<td style="text-align:left">Mapeamento periódico da cobertura e uso da terra, de 2000 a 2018 do Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="ftp://madeira.dea.ufv.br/bdados/bhalu/">Bahlu</a></td>
+<td style="text-align:left">Distribuições históricas de terras agrícolas e pastagens para todo o Brasil de 1940 a 2012</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://sites.google.com/site/alexandrecandidoxavierufes/dados-meteorologicos-do-brasil" target="_blank" rel="noopener">Dados meteorológicos do Brasil</a></td>
+<td style="text-align:left">Dados meteorológicos do Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.usgs.gov/" target="_blank" rel="noopener">USGS</a></td>
+<td style="text-align:left">Dados de diversos satélites livres para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://srtm.csi.cgiar.org/" target="_blank" rel="noopener">SRTM</a></td>
+<td style="text-align:left">Dados de elevação para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.ngdc.noaa.gov/mgg/global/" target="_blank" rel="noopener">ETOPO1</a></td>
+<td style="text-align:left">Dados de elevação para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://opentopography.org/" target="_blank" rel="noopener">OpenTopography</a></td>
+<td style="text-align:left">Dados de elevação para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/MERIT_DEM/index.html" target="_blank" rel="noopener">MERIT DEM: Multi-Error-Removed Improved-Terrain DEM</a></td>
+<td style="text-align:left">Dados de elevação de diversas fontes</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://spacedata.copernicus.eu" target="_blank" rel="noopener">COPERNICUS DEM</a></td>
+<td style="text-align:left">Dados de elevação e florestas para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://data.bris.ac.uk/data/dataset/25wfy0f9ukoge2gs7a5mqpq2j7" target="_blank" rel="noopener">FABDEM</a></td>
+<td style="text-align:left">Dados de elevação para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://geoservice.dlr.de/web/maps" target="_blank" rel="noopener">Geoservice Maps</a></td>
+<td style="text-align:left">Dados de elevação sem florestas ou contruções para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.globalforestwatch.org/" target="_blank" rel="noopener">Global Forest Watch</a></td>
+<td style="text-align:left">Dados de florestas para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.7.html" target="_blank" rel="noopener">Global Forest Change</a></td>
+<td style="text-align:left">Resultados da análise de série temporal de imagens Landsat na caracterização da extensão e mudança florestal global de 2000 a 2019</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://due.esrin.esa.int/page_globcover.php" target="_blank" rel="noopener">GlobCover</a></td>
+<td style="text-align:left">Dados de uso e cobertura da terra para todo o planeta entre 2015-2019</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://glad.umd.edu/dataset/global-land-cover-land-use-v1" target="_blank" rel="noopener">Global land cover and land use 2019</a></td>
+<td style="text-align:left">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://land.copernicus.eu/en/products/global-dynamic-land-cover" target="_blank" rel="noopener">Dynamic Land Cover</a></td>
+<td style="text-align:left">Dados de uso e cobertura da terra para todo o planeta 10 m para 2021 baseado no Sentinel-1 and 2 data</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://esa-worldcover.org/en" target="_blank" rel="noopener">WorldCover</a></td>
+<td style="text-align:left">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://worldcover2021.esa.int" target="_blank" rel="noopener">ESA WorldCover 2021</a></td>
+<td style="text-align:left">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.earthenv.org/landcover" target="_blank" rel="noopener">Landcover</a></td>
+<td style="text-align:left">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://glad.umd.edu/" target="_blank" rel="noopener">Global Land Analysis &amp; Discovery</a></td>
+<td style="text-align:left">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.dynamicworld.app/" target="_blank" rel="noopener">Dynamic World</a></td>
+<td style="text-align:left">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://wcshumanfootprint.org/" target="_blank" rel="noopener">Global Human Footprint</a></td>
+<td style="text-align:left">Dados de pegada ecológica para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://mountainscholar.org/handle/10217/216207" target="_blank" rel="noopener">Machine-learning Global Human Footprint</a></td>
+<td style="text-align:left">Dados de pegada ecológica para o mundo com machine-learning</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://zenodo.org/record/5879022#.YozZ_yPMKXL" target="_blank" rel="noopener">Global forest management</a></td>
+<td style="text-align:left">Dados de florestas manejadas</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://figshare.com/articles/dataset/SCI_2020_version_-_Continent/11608182" target="_blank" rel="noopener">Structural Condition Index</a></td>
+<td style="text-align:left">Índice de condição da estrutura de florestas</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://zenodo.org/record/4091029#.YozZ_yPMKXL" target="_blank" rel="noopener">Irrecoverable carbon in Earth&rsquo;s ecosystems</a></td>
+<td style="text-align:left">Dados de carbono irrecuperável dos ecossistemas</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://glad.umd.edu/dataset/gedi" target="_blank" rel="noopener">Global Forest Canopy Height, 2019</a></td>
+<td style="text-align:left">Dados de altura do dossel de florestas do mundo todo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://langnico.github.io/globalcanopyheight/" target="_blank" rel="noopener">A high-resolution canopy height model of the Earth</a></td>
+<td style="text-align:left">Dados de altura do dossel de florestas do mundo todo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.forestlandscapeintegrity.com/home" target="_blank" rel="noopener">Forest Landscape Integrity Index</a></td>
+<td style="text-align:left">Índice de integridade de florestas da paisagem</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://ghsl.jrc.ec.europa.eu/download.php" target="_blank" rel="noopener">GHSL - Global Human Settlement Layer</a></td>
+<td style="text-align:left">Dados e ferramentas abertos e gratuitos para avaliar a presença humana no planeta</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://data.humdata.org/" target="_blank" rel="noopener">The Humanitarian Data Exchange</a></td>
+<td style="text-align:left">Dados humanitários para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://luh.umd.edu/" target="_blank" rel="noopener">Land-Use Harmonization (LUH2)</a></td>
+<td style="text-align:left">Dados atuais e previsões de uso da terra</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://iiasa.ac.at/web/home/research/GLOBIOM/GLOBIOM.html" target="_blank" rel="noopener">Global Biosphere Management Model (GLOBIOM)</a></td>
+<td style="text-align:left">Dados atuais e previsões de uso da terra</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://climate.esa.int/en/odp/#/dashboard" target="_blank" rel="noopener">ESA Climate Change Initiative</a></td>
+<td style="text-align:left">Arquivos globais de observação da Terra nos últimos 30 anos da Agência Espacial Europeia (ESA)</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.worldclim.org/" target="_blank" rel="noopener">WorldClim</a></td>
+<td style="text-align:left">Dados climáticos para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://chelsa-climate.org/" target="_blank" rel="noopener">CHELSA</a></td>
+<td style="text-align:left">Dados climáticos para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.ecoclimate.org/" target="_blank" rel="noopener">ecoClimate</a></td>
+<td style="text-align:left">Dados climáticos para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://vdeblauwe.wordpress.com/download/" target="_blank" rel="noopener">Vincent Deblauwe climate data</a></td>
+<td style="text-align:left">Dados climáticos derivados de sensoriamento remoto para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.paleoclim.org/" target="_blank" rel="noopener">PaleoClim.org</a></td>
+<td style="text-align:left">Dados climáticos do passado para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.earthenv.org/" target="_blank" rel="noopener">EarthEnv</a></td>
+<td style="text-align:left">Dados de cobertura da terra, nuvens, relevo e hidrografia</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.wwf.org.br/natureza_brasileira/reducao_de_impactos2/programa_ciencias/dados_geoespaciais_16012018_1932/" target="_blank" rel="noopener">WWF - Dados geoespaciais</a></td>
+<td style="text-align:left">Diversos dados geoespaciais para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cgiarcsi.community/category/data/" target="_blank" rel="noopener">CGIAR-CSI - Consortium for Spatial Information</a></td>
+<td style="text-align:left">Diversos dados geoespaciais para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://soilgrids.org/" target="_blank" rel="noopener">SoilGrids</a></td>
+<td style="text-align:left">Dados de solo para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/MERIT_Hydro/" target="_blank" rel="noopener">MERIT Hydro: global hydrography datasets</a></td>
+<td style="text-align:left">Dados de hidrologia do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/OSM_water/index.html" target="_blank" rel="noopener">OSM Water Layer: Surface Waters in OpenStreetMap</a></td>
+<td style="text-align:left">Dados de hidrologia do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/G3WBM/index.html" target="_blank" rel="noopener">Global 3-second/1-second Water Body Map</a></td>
+<td style="text-align:left">Dados de hidrologia do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/GWD-LR/index.html" target="_blank" rel="noopener">GWD-LR: Global Width Database of Large Rivers</a></td>
+<td style="text-align:left">Dados de hidrologia do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/cama-flood/index.html" target="_blank" rel="noopener">CaMa-Flood: Global River Hydrodynamics Model</a></td>
+<td style="text-align:left">Dados de hidrologia do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.hydrosheds.org/" target="_blank" rel="noopener">HydroSHEDS</a></td>
+<td style="text-align:left">Dados de hidrologia do mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www2.cifor.org/global-wetlands/" target="_blank" rel="noopener">Global Wetlands</a></td>
+<td style="text-align:left">Dados de áreas úmidas para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://global-surface-water.appspot.com/#" target="_blank" rel="noopener">Global Surface Water Explorer</a></td>
+<td style="text-align:left">Dados de águas superficiais para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.marspec.org/" target="_blank" rel="noopener">MARSPEC</a></td>
+<td style="text-align:left">Dados de condições do oceano para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.oracle.ugent.be/" target="_blank" rel="noopener">Bio-ORACLE</a></td>
+<td style="text-align:left">Dados de condições do oceano para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://marine.copernicus.eu/" target="_blank" rel="noopener">Copernicus Marine Service</a></td>
+<td style="text-align:left">Dados de condições do oceano para o mundo</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://marine.copernicus.eu/access-data/myocean-viewer" target="_blank" rel="noopener">MyOcean</a></td>
+<td style="text-align:left">Dados de condições do oceano para o mundo</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h3 id="pacotes-do-r">Pacotes do R
+  <a href="#pacotes-do-r"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Dentre os pacotes no R para download de dados geográficos, destaco os seguintes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Pacotes</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://ipeagit.github.io/geobr/" target="_blank" rel="noopener">geobr</a></td>
+<td style="text-align:left">Carrega Shapefiles de Conjuntos de Dados Espaciais Oficiais do Brasil</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/sidrar/index.html" target="_blank" rel="noopener">sidrar</a></td>
+<td style="text-align:left">Accessa os dados do SIDRA - Sistema IBGE de Recuperação Automática</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/rnaturalearth/index.html" target="_blank" rel="noopener">rnaturalearth</a></td>
+<td style="text-align:left">Dados do mapa mundial da Natural Earth</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/rworldmap/index.html" target="_blank" rel="noopener">rworldmap</a></td>
+<td style="text-align:left">Mapeando Dados Globais</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/geodata/index.html" target="_blank" rel="noopener">geodata</a></td>
+<td style="text-align:left">Conjuntos de dados para análise espacial</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/spData/index.html" target="_blank" rel="noopener">spData</a></td>
+<td style="text-align:left">Conjuntos de dados para análise espacial</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/OpenStreetMap/index.html" target="_blank" rel="noopener">OpenStreetMap</a></td>
+<td style="text-align:left">Acesso para abrir imagens raster de mapas de ruas</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/osmdata/index.html" target="_blank" rel="noopener">osmdata</a></td>
+<td style="text-align:left">Baixe e importe dados do OpenStreetMap</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/geonames/index.html" target="_blank" rel="noopener">geonames</a></td>
+<td style="text-align:left">Interface para o serviço da Web de consulta espacial &lsquo;Geonames&rsquo;</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/rgbif/index.html" target="_blank" rel="noopener">rgbif</a></td>
+<td style="text-align:left">Interface para o Global &lsquo;Biodiversity&rsquo; Information Facility API</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/maptools/index.html" target="_blank" rel="noopener">maptools</a></td>
+<td style="text-align:left">Ferramentas para lidar com objetos espaciais</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/marmap/index.html" target="_blank" rel="noopener">marmap</a></td>
+<td style="text-align:left">Importar, traçar e analisar dados batimétricos e topográficos</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/oce/index.html" target="_blank" rel="noopener">oce</a></td>
+<td style="text-align:left">Fonte e processamento de dados oceanográficos</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/envirem/index.html" target="_blank" rel="noopener">envirem</a></td>
+<td style="text-align:left">Geração de Variáveis ENVIREM</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/sdmpredictors/index.html" target="_blank" rel="noopener">sdmpredictors</a></td>
+<td style="text-align:left">Conjuntos de dados preditor de modelagem de distribuição de espécies</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/metScanR/index.html" target="_blank" rel="noopener">metScanR</a></td>
+<td style="text-align:left">Encontre, Mapeie e Colete Dados e Metadados Ambientais</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/ClimDown/index.html" target="_blank" rel="noopener">ClimDown</a></td>
+<td style="text-align:left">Biblioteca de redução de escala do clima para a produção diária do modelo climático</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/rWBclimate/index.html" target="_blank" rel="noopener">rWBclimate</a></td>
+<td style="text-align:left">Acessa dados climáticos do Banco Mundial</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/rnoaa/index.html" target="_blank" rel="noopener">rnoaa</a></td>
+<td style="text-align:left">Dados meteorológicos &lsquo;NOAA&rsquo; de R</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/RNCEP/index.html" target="_blank" rel="noopener">RNCEP</a></td>
+<td style="text-align:left">Obtenha, organize e visualize dados meteorológicos NCEP</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/smapr/index.html" target="_blank" rel="noopener">smapr</a></td>
+<td style="text-align:left">Aquisição e processamento de dados ativos-passivos (SMAP) de umidade do solo da NASA</td>
+</tr>
+</tbody>
+</table>
+<p>Fonte da imagem: 
+<a href="https://unsplash.com/pt-br/fotografias/mapa-globo-rolar-lote-a6mfMjCFkII" target="_blank" rel="noopener">Ruthie/Unsplash</a>.</p>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/">&larr; Distância de pontos a linhas</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2021-03-academic-online-courses/">Disciplinas de graduação e pós-graduação on-line &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      <div class="post-comments pa0 pa4-l mt4">
+  
+</div>
+
+    
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+                       
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/blog/sidebar.jpg" class="db ma0">
+
+
+<div class="blog-info ph4 pt4 pb4 pb0-l">
+  
+
+  <h1 class="f3">Blog</h1>
+  <p class="f6 lh-copy measure">Este é meu blog, onde compartilho meus aprendizados sobre R, Python, Linux, geoprocessamento, o universo e tudo mais&hellip;</p>
+  <p class="f7 measure lh-copy i mh0-l">Written by Maurício Vancine</p>
+
+
+  
+  <div class="dib bt bw1 b--black-10">
+    
+      <small class="db f7 pt3"><a href="/blog/" class="dib fw7 ttu">Veja os posts recentes</a></small>
+    
+    
+    
+    
+  </div>
+
+
+</div>
+
+
+  
+  <details open class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">January 18, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">8 minute read, 1567 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/geoprocessamento">Geoprocessamento</a>  <a href="https://mauriciovancine.github.io/tags/geoespacial">Geoespacial</a>  <a href="https://mauriciovancine.github.io/tags/r">R</a>  <a href="https://mauriciovancine.github.io/tags/vetor">Vetor</a>  <a href="https://mauriciovancine.github.io/tags/raster">Raster</a>  <a href="https://mauriciovancine.github.io/tags/pacote">Pacote</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/teaching/workshop-landscapemetrics/">Métricas de paisagem no R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2024-11-r-qrcode/">Gerando QR code no R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2024-09-r-color-pallets/">Paletas de cores no R</a></dd>
+    
+  </dl>
+</details>
+
+</aside>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2024 Maurício Vancine
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/mauriciovancine" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://bsky.app/profile/mauriciovancine.bsky.social" title="bluesky" target="_blank" rel="me noopener">
+      <i class="fab fa-bluesky fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://mastodon.social/@mauriciovancine" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/mauriciovancine" title="x-twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-x-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.researchgate.net/profile/Mauricio-Vancine" title="researchgate" target="_blank" rel="me noopener">
+      <i class="ai ai-researchgate fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ" title="google-scholar" target="_blank" rel="me noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0001-9650-7575" title="orcid" target="_blank" rel="me noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.webofscience.com/wos/author/record/837504" title="researcherid" target="_blank" rel="me noopener">
+      <i class="ai ai-researcherid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888" title="scopus" target="_blank" rel="me noopener">
+      <i class="ai ai-scopus fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://osf.io/k8mxe/" title="osf" target="_blank" rel="me noopener">
+      <i class="ai ai-osf fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://figshare.com/authors/Mauricio_Vancine/2842289" title="figshare" target="_blank" rel="me noopener">
+      <i class="ai ai-figshare fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.zotero.org/mauriciovancine" title="zotero" target="_blank" rel="me noopener">
+      <i class="ai ai-zotero fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://lattes.cnpq.br/9761288418931193" title="lattes" target="_blank" rel="me noopener">
+      <i class="ai ai-lattes fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/mauricio-vancine/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">Licença</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contato">Contato</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Financiamento">Financiamento</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

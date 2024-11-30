@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Comunidades on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/comunidades/</link>
+    <description>Recent content in Comunidades on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/comunidades/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Host diversity outperforms climate as a global driver of symbiont diversity in the bird‐feather mite system</title>
+      <link>https://mauriciovancine.github.io/publications/bird-mite-wl/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/bird-mite-wl/</guid>
+      <description>Consideramos os fatores abióticos (clima) e bióticos (diversidade de espécies de aves) para determinar os padrões de riqueza de ácaros de penas no mundo todos</description>
+    </item>
+    <item>
+      <title>Effects of landscape modification on species richness patterns of fruit-feeding butterflies in Brazilian Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/butter-af/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/butter-af/</guid>
+      <description>Avaliamos os padrões de distribuição da riqueza de espécies de borboletas frugívoras na Mata Atlântica, considerando a contribuição relativa do clima e da paisagem, e recomendamos diretrizes de conservação para o grupo</description>
+    </item>
+    <item>
+      <title>Fragmented tropical forests lose mutualistic plant-animal interactions</title>
+      <link>https://mauriciovancine.github.io/publications/seed-af/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/seed-af/</guid>
+      <description>Avaliamos como a fragmentaçãoa influencia as interações par-a-par entre 407 espécies de dispersores de sementes e 1424 espécies de árvores em um hotspot de biodiversidade altamente fragmentado</description>
+    </item>
+    <item>
+      <title>Land-use changes and the expansion of biofuel crops threaten the giant anteater in southeastern Brazil</title>
+      <link>https://mauriciovancine.github.io/publications/anteater-sp/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anteater-sp/</guid>
+      <description>Mapeamos a adequabilidade de habitat da população de tamanduás-bandeira no estado de São Paulo, avaliando a contribuição dos principais preditores à adequabilidade, e quantificamos esses habitat em áreas de proteção ambiental e em áreas ameaçadas pela expansão da cana-de-açúcar</description>
+    </item>
+    <item>
+      <title>ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America</title>
+      <link>https://mauriciovancine.github.io/publications/atlantic-amphibians/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/atlantic-amphibians/</guid>
+      <description>Compilamos comunidades de anfíbios ao longo do Bioma da Mata Atântica</description>
+    </item>
+    <item>
+      <title>Atlantic Amphibians</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-amphibians/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/atlantic-amphibians/</guid>
+      <description>Publicações Vancine, M. H., Duarte, K. D. S., de Souza, Y. S., Giovanelli, J. G. R., Martins‐Sobrinho, P. M., López, A., &amp;hellip; &amp;amp; Brassaloti, R. (2018). ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692-1692.&#xA;Anunciação, P. A., Ernst, R., Martello, F., Vancine, M. H., Ribeiro, M. C., &amp;amp; Carvalho, L. M. T. (2023). Climate driven loss of taxonomic and functional richness in Atlantic Forest anurans.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Primatas on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/primatas/</link>
+    <description>Recent content in Primatas on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/primatas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Predicting the potential hybridization zones between native and invasive marmosets within Neotropical biodiversity</title>
+      <link>https://mauriciovancine.github.io/publications/prim-hibrid/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/prim-hibrid/</guid>
+      <description>Predizemos a expansão da distribuição e a potencial sobresição geográfico entre espécis de Callithrix nos Biomas da Mata Atlântica e Cerrado e discutimos estratégias de manejo</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Distância on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/dist%C3%A2ncia/</link>
+    <description>Recent content in Distância on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/dist%C3%A2ncia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distância de pontos a linhas</title>
+      <link>https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/</guid>
+      <description>Cálculo da distância de pontos a linhas no R e no QGIS</description>
+    </item>
+  </channel>
+</rss>

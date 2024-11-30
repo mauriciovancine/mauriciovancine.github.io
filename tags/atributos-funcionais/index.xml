@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atributos Funcionais on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/atributos-funcionais/</link>
+    <description>Recent content in Atributos Funcionais on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 06 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/atributos-funcionais/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fontes de dados de biodiversidade</title>
+      <link>https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/</guid>
+      <description>Lista das principais fontes e pacotes do R de dados de biodiversidade</description>
+    </item>
+    <item>
+      <title>Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-paisagem/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-paisagem/</guid>
+      <description>Nesta tese, investigamos a dinâmica espaço-temporal da estrutura da paisagem da Mata Atlântica e seu impacto nas dimensões taxonômicas e funcionais de anuros. Organizamos parte dos dados em dois data papers: ATLANTIC SPATIAL, que inclui 500 rasters com métricas de paisagem, topografia, hidrografia e fatores antrópicos, e o ATLANTIC AMPHIBIAN TRAITS, que possui atributos funcionais morfológicos e ecológicos de anfíbios</description>
+    </item>
+    <item>
+      <title>Atlantic Amphibians</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-amphibians/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/atlantic-amphibians/</guid>
+      <description>Publicações Vancine, M. H., Duarte, K. D. S., de Souza, Y. S., Giovanelli, J. G. R., Martins‐Sobrinho, P. M., López, A., &amp;hellip; &amp;amp; Brassaloti, R. (2018). ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692-1692.&#xA;Anunciação, P. A., Ernst, R., Martello, F., Vancine, M. H., Ribeiro, M. C., &amp;amp; Carvalho, L. M. T. (2023). Climate driven loss of taxonomic and functional richness in Atlantic Forest anurans.</description>
+    </item>
+  </channel>
+</rss>

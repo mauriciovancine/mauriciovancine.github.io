@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geoespacial on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/geoespacial/</link>
+    <description>Recent content in Geoespacial on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/geoespacial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distância de pontos a linhas</title>
+      <link>https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/</guid>
+      <description>Cálculo da distância de pontos a linhas no R e no QGIS</description>
+    </item>
+    <item>
+      <title>Fonte de dados geoespaciais</title>
+      <link>https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/</guid>
+      <description>Lista das principais fontes de dados e pacotes do R de dados geoespaciais</description>
+    </item>
+    <item>
+      <title>GeoR: Dados Geoespaciais com o R</title>
+      <link>https://mauriciovancine.github.io/teaching/course-geor/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/course-geor/</guid>
+      <description>Descrição Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como controle de versão, git e GitHub; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.&#xA;Oferecimento Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2021). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.&#xA;Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade.</description>
+    </item>
+    <item>
+      <title>Sistemas de Referência de Coordenadas e Datum</title>
+      <link>https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2021-02-geo-crs-datum/</guid>
+      <description>Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum</description>
+    </item>
+  </channel>
+</rss>

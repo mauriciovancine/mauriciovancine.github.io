@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ocorrências on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/ocorr%C3%AAncias/</link>
+    <description>Recent content in Ocorrências on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 31 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/ocorr%C3%AAncias/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analisando padrões espaciais em dados de biodiversidade</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-spatial-patterns-biodiversity-data/</link>
+      <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-spatial-patterns-biodiversity-data/</guid>
+      <description>Descrição O workshop apresenta os principais conceitos e lacunas de biodiversidade, principais fontes de dados de ocorrências de espécies e os problemas de viés de amostragem e como contorná-los. Em seguida, são apresentados algumas das principais análises espaciais que utilizam esses dados, como resumo de dados para unidades espaciais, adensamento de pontos (kernel) e uma rápida introdução à Modelos de Distribuição de Espécies. A parte prática é realizada utilizando a linguagem R.</description>
+    </item>
+    <item>
+      <title>Fontes de dados de biodiversidade</title>
+      <link>https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/</guid>
+      <description>Lista das principais fontes e pacotes do R de dados de biodiversidade</description>
+    </item>
+  </channel>
+</rss>

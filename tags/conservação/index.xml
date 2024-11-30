@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conservação on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/conserva%C3%A7%C3%A3o/</link>
+    <description>Recent content in Conservação on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/conserva%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mammals in São Paulo State: diversity, distribution, ecology, and conservation</title>
+      <link>https://mauriciovancine.github.io/publications/mammals-sp/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/mammals-sp/</guid>
+      <description>Este estudo responde a cinco perguntas principais sobre a diversidade, distribuição, impacto, adaptação e futuro dos mamíferos silvestres no Estado de São Paulo</description>
+    </item>
+    <item>
+      <title>Climate change impacts on the Copernicia alba and Copernicia prunifera (Arecaceae) distribution in South America</title>
+      <link>https://mauriciovancine.github.io/publications/palms-cc/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/palms-cc/</guid>
+      <description>Analisamos como as mudanças climáticas afetam a distribuição de duas palmeiras do gênero Copernicia na América do Sul</description>
+    </item>
+    <item>
+      <title>Effects of climate change on distribution and areas that protect two neotropical marsupials associated with aquatic environments</title>
+      <link>https://mauriciovancine.github.io/publications/mammals-cc/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/mammals-cc/</guid>
+      <description>Analisamos como as mudanças climáticas afetam a distribuição de duas espécies de mamíferos marsupiais aquáticos na América do Sul</description>
+    </item>
+    <item>
+      <title>Setting Priority Conservation Management Regions to Reverse Rapid Range Decline of a Key Neotropical Forest Ungulate</title>
+      <link>https://mauriciovancine.github.io/publications/frag-ung/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-ung/</guid>
+      <description>Aplicamos modelos de adequabilidade de habitat para o queixada e investigamos os efeitos das modificações climáticas e da paisagem em sua distribuição.</description>
+    </item>
+    <item>
+      <title>Spatial prediction of risk areas for vector transmission of Trypanosoma cruzi in the State of Paraná, southern Brazil</title>
+      <link>https://mauriciovancine.github.io/publications/trypanosoma-pr/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/trypanosoma-pr/</guid>
+      <description>Analisamos como o clima e a estrutura da paisagem explicam a adequabilidade ambiental de Triatomas que podem estar infestados com Trypanosoma cruzi em municípios do Estado do Paraná</description>
+    </item>
+    <item>
+      <title>Efficiency of protected areas in Amazon and Atlantic Forest conservation: A spatio-temporal view</title>
+      <link>https://mauriciovancine.github.io/publications/forest-cons-af-am/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/forest-cons-af-am/</guid>
+      <description>Testamos a eficiência das áreas protegidas atuais em manter áreas climaticamente estáveis nos Biomas da Amazônia e Mata Atlântica</description>
+    </item>
+    <item>
+      <title>Forest cover influences occurrence of mammalian carnivores within Brazilian Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/frag-mm-sc/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-mm-sc/</guid>
+      <description>Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de Santa Catarina</description>
+    </item>
+    <item>
+      <title>Impacts of mining activities on the potential geographic distribution of eastern Brazil mountaintop endemic species</title>
+      <link>https://mauriciovancine.github.io/publications/div-mining-mg/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/div-mining-mg/</guid>
+      <description>Utilizamos Modelagem de Distribuição de Espécies para avaliar como as cavas de mineração podem impactar a diversidade de espécies de anfíbios e aves endêmicas da Serra do Espinhaço em Minas Gerais</description>
+    </item>
+    <item>
+      <title>High mammal species turnover in forest patches immersed in biofuel plantations</title>
+      <link>https://mauriciovancine.github.io/publications/frag-mm-sp/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-mm-sp/</guid>
+      <description>Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de São Paulo</description>
+    </item>
+  </channel>
+</rss>

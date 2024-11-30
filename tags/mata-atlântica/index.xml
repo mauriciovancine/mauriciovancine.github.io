@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mata Atlântica on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/mata-atl%C3%A2ntica/</link>
+    <description>Recent content in Mata Atlântica on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 05 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/mata-atl%C3%A2ntica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-paisagem/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-paisagem/</guid>
+      <description>Nesta tese, investigamos a dinâmica espaço-temporal da estrutura da paisagem da Mata Atlântica e seu impacto nas dimensões taxonômicas e funcionais de anuros. Organizamos parte dos dados em dois data papers: ATLANTIC SPATIAL, que inclui 500 rasters com métricas de paisagem, topografia, hidrografia e fatores antrópicos, e o ATLANTIC AMPHIBIAN TRAITS, que possui atributos funcionais morfológicos e ecológicos de anfíbios</description>
+    </item>
+    <item>
+      <title>The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation</title>
+      <link>https://mauriciovancine.github.io/publications/af-spatiotemporal/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/af-spatiotemporal/</guid>
+      <description>Analisamos a dinâmica espaço-temporal da estrutura da paisagem da vegetação na Mata Atlântica entre 1986 e 2020</description>
+    </item>
+    <item>
+      <title>The Protected Areas network may be insufficient to protect bird diversity in a fragmented tropical hotspot under different climate scenarios</title>
+      <link>https://mauriciovancine.github.io/publications/bird-af-pa/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/bird-af-pa/</guid>
+      <description>Avaliamos a eficiência das áreas protegidas usando áreas prioritárias para conservação da diversidade de aves da Mata Atlântica para cenários climáticos atuais e futuros</description>
+    </item>
+    <item>
+      <title>Effect of landscape attributes at multiple scales on the occurrence of the threatened golden-headed lion tamarin, Leontopithecus chrysomelas Kuhl, 1820 (Primates, Callitrichidae)</title>
+      <link>https://mauriciovancine.github.io/publications/pri-land/</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/pri-land/</guid>
+      <description>Investigamos a ocorrência de L. chrysomelas em fragmentos florestais e cabrucas com base em entrevistas e utilizando censo de playback, e avaliamos a influência de atributos da paisagem em sua ocorrência</description>
+    </item>
+    <item>
+      <title>ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/af-spatial-data-paper-preprint/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/af-spatial-data-paper-preprint/</guid>
+      <description>Disponibilizamos informações espaciais integradas e em escala precisa (resolução = 30 m) para toda a extensão da Mata Atlântica para o ano de 2020</description>
+    </item>
+    <item>
+      <title>Climate-driven loss of taxonomic and functional richness in Atlantic Forest anurans</title>
+      <link>https://mauriciovancine.github.io/publications/amp-af-cc/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/amp-af-cc/</guid>
+      <description>Avaliamos os efeitos potenciais das mudanças climáticas na riqueza taxonômica e funcional dos anfíbios anuros na Mata Atlântica do Brasil, e testamos se espécies dependentes de florestas e de habitat aberto responderam de maneira diferente aos estressores climáticos</description>
+    </item>
+    <item>
+      <title>The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation</title>
+      <link>https://mauriciovancine.github.io/publications/af-spatiotemporal-preprint/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/af-spatiotemporal-preprint/</guid>
+      <description>Analisamos a dinâmica espaço-temporal da estrutura da paisagem da vegetação na Mata Atlântica entre 1986 e 2020</description>
+    </item>
+    <item>
+      <title>atlanticr</title>
+      <link>https://mauriciovancine.github.io/project/atlanticr/</link>
+      <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/atlanticr/</guid>
+      <description>atlanticr Instalação O pacote pode ser instalado diretamente do github:&#xA;# install.packages(&amp;#34;remotes&amp;#34;) remotes::install_github(&amp;#34;mauriciovancine/atlanticr&amp;#34;) Datasets Vertebrados&#xA;atlantic_amphibians ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America atlantic_bats ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America atlantic_birds ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest atlantic_camtraps ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America camera_trap_surveys Camera trap surveys of Atlantic Forest mammals: A data set for analyses considering imperfect detection (2004–2020) atlantic_mammals ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America atlantic_nonvolant_mammalsNon-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil atlantic_primates ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America atlantic_small_mammal Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America atlantic_small_mammal_abundance Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns Vertebrados - atributos funcionais</description>
+    </item>
+    <item>
+      <title>Environmental niche and functional role similarity between invasive and native palms in the Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/palms-inv-af/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/palms-inv-af/</guid>
+      <description>Usamos informações espaciais e ecológicas para caracterizar o nicho ambiental e o papel funcional de duas espécies de palmeiras, uma nativa e outra invasora, avaliando sua sobreposição e predizendo as áreas potenciais na Mata Atlântica para o cenários climático presente e sob efeito das mudanças climáticas</description>
+    </item>
+    <item>
+      <title>Effects of landscape modification on species richness patterns of fruit-feeding butterflies in Brazilian Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/butter-af/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/butter-af/</guid>
+      <description>Avaliamos os padrões de distribuição da riqueza de espécies de borboletas frugívoras na Mata Atlântica, considerando a contribuição relativa do clima e da paisagem, e recomendamos diretrizes de conservação para o grupo</description>
+    </item>
+    <item>
+      <title>Fragmented tropical forests lose mutualistic plant-animal interactions</title>
+      <link>https://mauriciovancine.github.io/publications/seed-af/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/seed-af/</guid>
+      <description>Avaliamos como a fragmentaçãoa influencia as interações par-a-par entre 407 espécies de dispersores de sementes e 1424 espécies de árvores em um hotspot de biodiversidade altamente fragmentado</description>
+    </item>
+    <item>
+      <title>Atlantic Spatial</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-spatial/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/atlantic-spatial/</guid>
+      <description>Publicações Vancine, M. H., Muylaert, R. L., Niebuhr, B. B., Oshima, J. E. F., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann C. H., &amp;amp; Ribeiro, M. C. (2024). The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation. Biological Conservation, 291, 110499. Preprints Vancine, M. H., Niebuhr B. B., Muylaert R. L., Oshima J. E. F., Tonetti V., Bernardo R., Alves R.</description>
+    </item>
+    <item>
+      <title>Atlantic Amphibians</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-amphibians/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/atlantic-amphibians/</guid>
+      <description>Publicações Vancine, M. H., Duarte, K. D. S., de Souza, Y. S., Giovanelli, J. G. R., Martins‐Sobrinho, P. M., López, A., &amp;hellip; &amp;amp; Brassaloti, R. (2018). ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692-1692.&#xA;Anunciação, P. A., Ernst, R., Martello, F., Vancine, M. H., Ribeiro, M. C., &amp;amp; Carvalho, L. M. T. (2023). Climate driven loss of taxonomic and functional richness in Atlantic Forest anurans.</description>
+    </item>
+  </channel>
+</rss>

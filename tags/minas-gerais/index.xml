@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minas Gerais on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/minas-gerais/</link>
+    <description>Recent content in Minas Gerais on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 01 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/minas-gerais/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Impacts of mining activities on the potential geographic distribution of eastern Brazil mountaintop endemic species</title>
+      <link>https://mauriciovancine.github.io/publications/div-mining-mg/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/div-mining-mg/</guid>
+      <description>Utilizamos Modelagem de Distribuição de Espécies para avaliar como as cavas de mineração podem impactar a diversidade de espécies de anfíbios e aves endêmicas da Serra do Espinhaço em Minas Gerais</description>
+    </item>
+  </channel>
+</rss>

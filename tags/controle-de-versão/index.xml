@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Controle De Versão on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/controle-de-vers%C3%A3o/</link>
+    <description>Recent content in Controle De Versão on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/controle-de-vers%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Controle de versão com git, GitHub e RStudio</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-git/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-git/</guid>
+      <description>Descrição O minicurso oferece alguns dos principais conceitos práticos o controle de versão usando git, GitHub e RStudio. São abordados os seguintes tópicos: (1) controle de versão, (2) git e GitHub, (3) Fork, (4) configuração do git, (5) iniciando localmente, (6) iniciando remotamente, (7) versionamento (8) ignorar no versionamento, (9) histórico do versionamento, (10) desfazer versionamento, (11) ramificações em versionamento, (12) funcionamento do repositório remoto, (13) detalhes do respositório do GitHub e (14) interface gráfica do RStudio.</description>
+    </item>
+  </channel>
+</rss>

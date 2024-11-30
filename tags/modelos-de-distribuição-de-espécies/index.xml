@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modelos De Distribuição De Espécies on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/modelos-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/</link>
+    <description>Recent content in Modelos De Distribuição De Espécies on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/modelos-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparação da distribuição de espécies inferidos por modelos de nicho ecológicos e mapas de especialistas da IUCN para anfíbios anuros da América do Sul</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-iucn-america-sul/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-iucn-america-sul/</guid>
+      <description>Trabalho de Conclusão de Curso, onde SDMs baseados em variáveis climáticas para predizer a distribuição potencial de espécies de anuros da América do Sul e comparar com os polígonos disponibilizados pela IUCN</description>
+    </item>
+    <item>
+      <title>Invasive wild boar’s distribution overlap with threatened native ungulate in Patagonia</title>
+      <link>https://mauriciovancine.github.io/publications/boar-ung-inv/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/boar-ung-inv/</guid>
+      <description>Usamos modelos de distribuição de espécies (SDMs) e análise de sobreposição de nicho para estimar potenciais áreas de conflito entre o javali e o pudu nativo do sul (Pudu puda), que é um bioindicador do estado de conservação da floresta dentro do Parque Nacional Nahuel Huapi (NHNP), Argentina</description>
+    </item>
+    <item>
+      <title>Effects of landscape modification on species richness patterns of fruit-feeding butterflies in Brazilian Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/butter-af/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/butter-af/</guid>
+      <description>Avaliamos os padrões de distribuição da riqueza de espécies de borboletas frugívoras na Mata Atlântica, considerando a contribuição relativa do clima e da paisagem, e recomendamos diretrizes de conservação para o grupo</description>
+    </item>
+    <item>
+      <title>Fragmented tropical forests lose mutualistic plant-animal interactions</title>
+      <link>https://mauriciovancine.github.io/publications/seed-af/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/seed-af/</guid>
+      <description>Avaliamos como a fragmentaçãoa influencia as interações par-a-par entre 407 espécies de dispersores de sementes e 1424 espécies de árvores em um hotspot de biodiversidade altamente fragmentado</description>
+    </item>
+  </channel>
+</rss>

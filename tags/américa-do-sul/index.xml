@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>América Do Sul on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/am%C3%A9rica-do-sul/</link>
+    <description>Recent content in América Do Sul on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 20 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/am%C3%A9rica-do-sul/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Where do they live? Predictive geographic distribution of Tadarida brasiliensis (Chiroptera, Molossidae) in South America</title>
+      <link>https://mauriciovancine.github.io/publications/bat-sa/</link>
+      <pubDate>Tue, 22 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/bat-sa/</guid>
+      <description>Inferimos a distribuição potencial de T. brasiliensis brasiliensis em todo o continente Sul Americano, indicando as variáveis com maior influência em sua distribuição</description>
+    </item>
+    <item>
+      <title>Comparação da distribuição de espécies inferidos por modelos de nicho ecológicos e mapas de especialistas da IUCN para anfíbios anuros da América do Sul</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-iucn-america-sul/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-iucn-america-sul/</guid>
+      <description>Trabalho de Conclusão de Curso, onde SDMs baseados em variáveis climáticas para predizer a distribuição potencial de espécies de anuros da América do Sul e comparar com os polígonos disponibilizados pela IUCN</description>
+    </item>
+    <item>
+      <title>Future climate change will impact the size and location of breeding and wintering areas of migratory thrushes in South America</title>
+      <link>https://mauriciovancine.github.io/publications/birds-cc/</link>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/birds-cc/</guid>
+      <description>Inferimos os efeitos potenciais das mudanças climáticas sobre as áreas de reprodução e invernada de aves que migram na América do Sul</description>
+    </item>
+  </channel>
+</rss>

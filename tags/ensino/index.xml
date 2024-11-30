@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ensino on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/ensino/</link>
+    <description>Recent content in Ensino on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/ensino/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grupo de Estudos em R e Estatística (GERE)</title>
+      <link>https://mauriciovancine.github.io/project/gere/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/gere/</guid>
+      <description>Descrição do projeto Através da difusão e capacitação no uso da linguagem R e sua aplicação em abordagem quantitativas e estatísticas, o GERE busca aprimorar a formação técnico-científica e humanística dos graduandos e pós-graduandos, bem como fomentar um espaço de convivência e aprendizado entre os membros da comunidade unespiana.</description>
+    </item>
+  </channel>
+</rss>

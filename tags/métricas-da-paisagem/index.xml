@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Métricas Da Paisagem on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/m%C3%A9tricas-da-paisagem/</link>
+    <description>Recent content in Métricas Da Paisagem on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 27 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/m%C3%A9tricas-da-paisagem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Métricas de paisagem no R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</guid>
+      <description>Descrição O curso tem o intuito de oferecer uma introdução teórica e prática sobre o cálculo de métricas de paisagem categóricas (composição e configuração) utilizando a linguagem R através do pacote landscapemetrics. Primeiramente são apresentados os principais conceitos de ecologia da paisagem, métricas de paisagem, geoprocessamento, dados geoespaciais, linguagem R e detalhes do pacote landscapmetrics.&#xA;Oferecimento Laboratório de Ecologia Espacial e Conservação (LEEC). (2022). Online. Carga horária: 04:00 h. SynEco - I Simpósio Brasileiro de Síntese Ecológica.</description>
+    </item>
+  </channel>
+</rss>

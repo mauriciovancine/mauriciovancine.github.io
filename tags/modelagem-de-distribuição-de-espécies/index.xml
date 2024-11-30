@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modelagem De Distribuição De Espécies on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/modelagem-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/</link>
+    <description>Recent content in Modelagem De Distribuição De Espécies on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/modelagem-de-distribui%C3%A7%C3%A3o-de-esp%C3%A9cies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conhecimento atual, distribuição potencial e conservação de cecílias (Amphibia: Gymnophiona) na Região Neotropical</title>
+      <link>https://mauriciovancine.github.io/publications/gymnophiona-neotropical/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/gymnophiona-neotropical/</guid>
+      <description>Dissertação, onde compilamos trabalhos e ocorrências das espécies de Gymnophiona para o Brasil e criamos modelos de distribuição de espécies para encontrar a distribuição potencial para direcionar esforços de amostragem em trabalhos de campo</description>
+    </item>
+    <item>
+      <title>Natural forest regeneration on anthropized landscapes could overcome climate change effects on the endangered maned sloth (Bradypus torquatus, Illiger 1811)</title>
+      <link>https://mauriciovancine.github.io/publications/sloth-af/</link>
+      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/sloth-af/</guid>
+      <description>Avaliamos a adequabilidade ambiental atual e futura para a preguiça-guará, Bradypus torquatus, sob cenários futuros de clima e restauração florestal, usando modelagem de nicho ecológico</description>
+    </item>
+    <item>
+      <title>Modelagem de distribuição de espécies</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm/</guid>
+      <description>Descrição O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e background), avaliação dos modelos (ROC, AUC e TSS), limites de corte (thresholds) e consenso de modelos (ensembles).</description>
+    </item>
+    <item>
+      <title>Modelagem da distribuição das Cecílias (Amphibia: Gymnophiona) do Brasil: subsídios para conservação e amostragens de campo</title>
+      <link>https://mauriciovancine.github.io/publications/gymnophionas-conservacao-amostragem/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/gymnophionas-conservacao-amostragem/</guid>
+      <description>Trabalho de Conclusão de Curso, onde compilamos trabalhos e ocorrências das espécies de Gymnophiona para o Brasil e criamos modelos de distribuição de espécies para encontrar a distribuição potencial para direcionar esforços de amostragem em trabalhos de campo</description>
+    </item>
+    <item>
+      <title>Predicting the potential hybridization zones between native and invasive marmosets within Neotropical biodiversity</title>
+      <link>https://mauriciovancine.github.io/publications/prim-hibrid/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/prim-hibrid/</guid>
+      <description>Predizemos a expansão da distribuição e a potencial sobresição geográfico entre espécis de Callithrix nos Biomas da Mata Atlântica e Cerrado e discutimos estratégias de manejo</description>
+    </item>
+    <item>
+      <title>Impacts of mining activities on the potential geographic distribution of eastern Brazil mountaintop endemic species</title>
+      <link>https://mauriciovancine.github.io/publications/div-mining-mg/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/div-mining-mg/</guid>
+      <description>Utilizamos Modelagem de Distribuição de Espécies para avaliar como as cavas de mineração podem impactar a diversidade de espécies de anfíbios e aves endêmicas da Serra do Espinhaço em Minas Gerais</description>
+    </item>
+  </channel>
+</rss>

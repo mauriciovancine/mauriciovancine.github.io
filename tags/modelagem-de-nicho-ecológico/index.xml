@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modelagem De Nicho Ecológico on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/modelagem-de-nicho-ecol%C3%B3gico/</link>
+    <description>Recent content in Modelagem De Nicho Ecológico on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/modelagem-de-nicho-ecol%C3%B3gico/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Climate change impacts on the Copernicia alba and Copernicia prunifera (Arecaceae) distribution in South America</title>
+      <link>https://mauriciovancine.github.io/publications/palms-cc/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/palms-cc/</guid>
+      <description>Analisamos como as mudanças climáticas afetam a distribuição de duas palmeiras do gênero Copernicia na América do Sul</description>
+    </item>
+    <item>
+      <title>Effects of climate change on distribution and areas that protect two neotropical marsupials associated with aquatic environments</title>
+      <link>https://mauriciovancine.github.io/publications/mammals-cc/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/mammals-cc/</guid>
+      <description>Analisamos como as mudanças climáticas afetam a distribuição de duas espécies de mamíferos marsupiais aquáticos na América do Sul</description>
+    </item>
+    <item>
+      <title>Distribution of macroalgal epiphytes and host species from the Cuban marine shelf inferred from ecological modelling</title>
+      <link>https://mauriciovancine.github.io/publications/algae-cuba/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/algae-cuba/</guid>
+      <description>Avaliamos a distribuição potencial, limites de tolerância e nicho de similaridade de macroalgas epífitas e hospedeiras da plataforma marinha de Cuba</description>
+    </item>
+    <item>
+      <title>Future climate change will impact the size and location of breeding and wintering areas of migratory thrushes in South America</title>
+      <link>https://mauriciovancine.github.io/publications/birds-cc/</link>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/birds-cc/</guid>
+      <description>Inferimos os efeitos potenciais das mudanças climáticas sobre as áreas de reprodução e invernada de aves que migram na América do Sul</description>
+    </item>
+    <item>
+      <title>Environmental niche and functional role similarity between invasive and native palms in the Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/palms-inv-af/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/palms-inv-af/</guid>
+      <description>Usamos informações espaciais e ecológicas para caracterizar o nicho ambiental e o papel funcional de duas espécies de palmeiras, uma nativa e outra invasora, avaliando sua sobreposição e predizendo as áreas potenciais na Mata Atlântica para o cenários climático presente e sob efeito das mudanças climáticas</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ensino on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/teaching/</link>
+    <description>Recent content in Ensino on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 27 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Métricas de paisagem no R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</guid>
+      <description>Descrição O curso tem o intuito de oferecer uma introdução teórica e prática sobre o cálculo de métricas de paisagem categóricas (composição e configuração) utilizando a linguagem R através do pacote landscapemetrics. Primeiramente são apresentados os principais conceitos de ecologia da paisagem, métricas de paisagem, geoprocessamento, dados geoespaciais, linguagem R e detalhes do pacote landscapmetrics.&#xA;Oferecimento Laboratório de Ecologia Espacial e Conservação (LEEC). (2022). Online. Carga horária: 04:00 h. SynEco - I Simpósio Brasileiro de Síntese Ecológica.</description>
+    </item>
+    <item>
+      <title>Analisando padrões espaciais em dados de biodiversidade</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-spatial-patterns-biodiversity-data/</link>
+      <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-spatial-patterns-biodiversity-data/</guid>
+      <description>Descrição O workshop apresenta os principais conceitos e lacunas de biodiversidade, principais fontes de dados de ocorrências de espécies e os problemas de viés de amostragem e como contorná-los. Em seguida, são apresentados algumas das principais análises espaciais que utilizam esses dados, como resumo de dados para unidades espaciais, adensamento de pontos (kernel) e uma rápida introdução à Modelos de Distribuição de Espécies. A parte prática é realizada utilizando a linguagem R.</description>
+    </item>
+    <item>
+      <title>Programação em linguagem R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-prog-r/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-prog-r/</guid>
+      <description>Descrição Apresentação dos principais conceitos da programação na linguagem R. São abordados os seguintes temas: (1) controle de fluxo, (2) repetições e (3) criação de funções. Ao final do minicurso espera-se que os participantes adquiram conhecimentos básicos do funcionamento da em programação básica usando a linguagem R.&#xA;Oferecimentos NT265/NE441 - Análise de dados e apresentação de gráficos usando a linguagem R - PPG Ecologia. (2024). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil.</description>
+    </item>
+    <item>
+      <title>Introdução à linguagem R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-intro-r/</link>
+      <pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-intro-r/</guid>
+      <description>Descrição O minicurso apresenta os principais conceitos da linguagem R e do IDE RStudio para a manipulação e visualização de dados através do tidyverse. O tidyverse é um conjunto de pacotes e funções que compartilham uma mesma estrutura e sintaxe, com o intuito de criar códigos eficientes e organizados. Os pacotes são focados principalmente na organização (leitura, filtragem, organização, seleção e resumo) e visualização de dados (gráficos). Serão abordados os seguintes temas: (1) linguagem R, (2) tidyverse e (3) visualização de dados.</description>
+    </item>
+    <item>
+      <title>GeoR: Dados Geoespaciais com o R</title>
+      <link>https://mauriciovancine.github.io/teaching/course-geor/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/course-geor/</guid>
+      <description>Descrição Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como controle de versão, git e GitHub; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.&#xA;Oferecimento Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2021). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.&#xA;Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade.</description>
+    </item>
+    <item>
+      <title>Geoprocessamento com QGIS</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-qgis/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-qgis/</guid>
+      <description>Descrição O minicurso oferece alguns dos principais conceitos teórico-práticos sobre a manipulação e visualização de dados geoespaciais no QGIS. São abordados os seguintes tópicos: (1) conceitos gerais de geoprocessamento, (2) interface e projeto do QGIS, (3) importação, criação e edição de dados vetoriais, (4) importação, criação e edição de dados matriciais e, (5) composição de mapas. Após a realização do minicurso espera-se que os alunes adquiram conceitos gerais da estrutura, manipulação e visualização de dados geoespaciais, assim como habilidades básicas para produção de mapas simples usando o QGIS.</description>
+    </item>
+    <item>
+      <title>Modelagem de distribuição de espécies</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-sdm/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-sdm/</guid>
+      <description>Descrição O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e background), avaliação dos modelos (ROC, AUC e TSS), limites de corte (thresholds) e consenso de modelos (ensembles).</description>
+    </item>
+    <item>
+      <title>Controle de versão com git, GitHub e RStudio</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-git/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-git/</guid>
+      <description>Descrição O minicurso oferece alguns dos principais conceitos práticos o controle de versão usando git, GitHub e RStudio. São abordados os seguintes tópicos: (1) controle de versão, (2) git e GitHub, (3) Fork, (4) configuração do git, (5) iniciando localmente, (6) iniciando remotamente, (7) versionamento (8) ignorar no versionamento, (9) histórico do versionamento, (10) desfazer versionamento, (11) ramificações em versionamento, (12) funcionamento do repositório remoto, (13) detalhes do respositório do GitHub e (14) interface gráfica do RStudio.</description>
+    </item>
+  </channel>
+</rss>

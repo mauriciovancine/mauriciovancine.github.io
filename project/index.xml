@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projetos on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/project/</link>
+    <description>Recent content in Projetos on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>atlanticr</title>
+      <link>https://mauriciovancine.github.io/project/atlanticr/</link>
+      <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/atlanticr/</guid>
+      <description>atlanticr Instalação O pacote pode ser instalado diretamente do github:&#xA;# install.packages(&amp;#34;remotes&amp;#34;) remotes::install_github(&amp;#34;mauriciovancine/atlanticr&amp;#34;) Datasets Vertebrados&#xA;atlantic_amphibians ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America atlantic_bats ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America atlantic_birds ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest atlantic_camtraps ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America camera_trap_surveys Camera trap surveys of Atlantic Forest mammals: A data set for analyses considering imperfect detection (2004–2020) atlantic_mammals ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America atlantic_nonvolant_mammalsNon-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil atlantic_primates ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America atlantic_small_mammal Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America atlantic_small_mammal_abundance Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns Vertebrados - atributos funcionais</description>
+    </item>
+    <item>
+      <title>amphiBR</title>
+      <link>https://mauriciovancine.github.io/project/amphibr/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/amphibr/</guid>
+      <description>amphiBR Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.&#xA;O dataset foi extraído da publicação por Segalla et al. (2021) na Revista Brasileira de Herpetologia, e disponível também no link https://zenodo.org/record/4716176&#xA;O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.&#xA;Dúvidas, críticas e sugestões são sempre bem-vindas!</description>
+    </item>
+    <item>
+      <title>Grupo de Estudos em R e Estatística (GERE)</title>
+      <link>https://mauriciovancine.github.io/project/gere/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/gere/</guid>
+      <description>Descrição do projeto Através da difusão e capacitação no uso da linguagem R e sua aplicação em abordagem quantitativas e estatísticas, o GERE busca aprimorar a formação técnico-científica e humanística dos graduandos e pós-graduandos, bem como fomentar um espaço de convivência e aprendizado entre os membros da comunidade unespiana.</description>
+    </item>
+    <item>
+      <title>Ecologia no R</title>
+      <link>https://mauriciovancine.github.io/project/ecologia-r/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/ecologia-r/</guid>
+      <description>Descrição do projeto A ideia do projeto é atualizar e ampliar o livro Análises Ecológicas no R ao longo do tempo. A ideia mais interessante é que não pretendemos investir somente na produção do livro, mas também oferecer cursos em universidades e regiões com pouco investimento e recursos, criar podcasts e vídeos no YouTube, entre outras ideias.&#xA;Como ajudar É importante ressaltar que tudo isso é (e sempre será!) feito gratuitamente, em um projeto totalmente aberto e sem fins lucrativos.</description>
+    </item>
+    <item>
+      <title>LSmetrics</title>
+      <link>https://mauriciovancine.github.io/project/lsmetrics/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/lsmetrics/</guid>
+      <description>Mais informações em breve.</description>
+    </item>
+    <item>
+      <title>Gymnophionas</title>
+      <link>https://mauriciovancine.github.io/project/gymnophionas/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/gymnophionas/</guid>
+      <description>Mais informações em breve.</description>
+    </item>
+    <item>
+      <title>Atlantic Spatial</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-spatial/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/atlantic-spatial/</guid>
+      <description>Publicações Vancine, M. H., Muylaert, R. L., Niebuhr, B. B., Oshima, J. E. F., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann C. H., &amp;amp; Ribeiro, M. C. (2024). The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation. Biological Conservation, 291, 110499. Preprints Vancine, M. H., Niebuhr B. B., Muylaert R. L., Oshima J. E. F., Tonetti V., Bernardo R., Alves R.</description>
+    </item>
+    <item>
+      <title>Atlantic Amphibians</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-amphibians/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/atlantic-amphibians/</guid>
+      <description>Publicações Vancine, M. H., Duarte, K. D. S., de Souza, Y. S., Giovanelli, J. G. R., Martins‐Sobrinho, P. M., López, A., &amp;hellip; &amp;amp; Brassaloti, R. (2018). ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692-1692.&#xA;Anunciação, P. A., Ernst, R., Martello, F., Vancine, M. H., Ribeiro, M. C., &amp;amp; Carvalho, L. M. T. (2023). Climate driven loss of taxonomic and functional richness in Atlantic Forest anurans.</description>
+    </item>
+  </channel>
+</rss>

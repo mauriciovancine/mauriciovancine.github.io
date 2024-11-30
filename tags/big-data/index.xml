@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big Data on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/big-data/</link>
+    <description>Recent content in Big Data on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 24 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/big-data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Big Data no R: como ler um conjunto de dados maior que a RAM</title>
+      <link>https://mauriciovancine.github.io/blog/2024-08-r-big-data/</link>
+      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-08-r-big-data/</guid>
+      <description>Importar e manejar grandes volumes de dados no R</description>
+    </item>
+  </channel>
+</rss>

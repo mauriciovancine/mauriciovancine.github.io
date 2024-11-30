@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.130.0">
+<title>Big Data no R: como ler um conjunto de dados maior que a RAM | Maurício Vancine</title>
+
+
+<meta property="twitter:site" content="@mauriciovancine">
+<meta property="twitter:creator" content="@mauriciovancine">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Importar e manejar grandes volumes de dados no R">
+
+
+<meta property="og:site_name" content="Maurício Vancine">
+<meta property="og:title" content="Big Data no R: como ler um conjunto de dados maior que a RAM | Maurício Vancine">
+<meta property="og:description" content="Importar e manejar grandes volumes de dados no R" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://mauriciovancine.github.io/blog/2024-08-r-big-data/" />
+<meta property="og:locale" content="pt-br">
+
+
+
+
+    
+        <meta property="og:image" content="https://mauriciovancine.github.io/blog/2024-08-r-big-data/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/blog/2024-08-r-big-data/featured.jpg" >
+    
+    
+  
+  <meta itemprop="name" content="Big Data no R: como ler um conjunto de dados maior que a RAM">
+  <meta itemprop="description" content="Importar e manejar grandes volumes de dados no R">
+  <meta itemprop="datePublished" content="2024-08-24T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-08-24T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1069">
+  <meta itemprop="image" content="https://mauriciovancine.github.io/blog/2024-08-r-big-data/featured.jpg">
+  <meta itemprop="keywords" content="R,Big Data,Arrow,Vroom">
+  
+  
+
+
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.f039f41e61940aa743e97653edd07c8b48e7fbd36c8c465f1ea9f0e4d4ad1073.css" integrity="sha256-8Dn0HmGUCqdD6XZT7dB8i0jn&#43;9NsjEZfHqnw5NStEHM=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.43a16206850df307a9ecc165118c6e7eab95cf24ab4cf99d6388dc7971e9b6ce.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single-sidebar">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://mauriciovancine.github.io/" title="Home">
+      <img src="/img/favicon.png" class="dib db-l h2 w-auto" alt="Maurício Vancine">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="Sobre">Sobre</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Projetos">Projetos</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Palestras">Palestras</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/teaching/" title="Ensino">Ensino</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publication/" title="Publicações">Publicações</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/cv/cv-academic.pdf" title="">CV</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/resume/resume.pdf" title="">Resumé</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pr3-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Big Data no R: como ler um conjunto de dados maior que a RAM</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Importar e manejar grandes volumes de dados no R</h4>
+        <p class="f6 measure lh-copy mv1">By Maurício Vancine in <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </p>
+        <p class="f7 db mv0 ttu">August 24, 2024</p>
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h2 id="contextualização">Contextualização
+  <a href="#contextualiza%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>A Ciência de Dados (<em>Data Science</em>) é uma área de conhecimento que vem ganhando notoriedade, principalmente na era digital e pelo grande volume de dados gerados, com o uso de diversos algoritmos matemáticos para análise de dados. Podemos dizer que Ciência de Dados é composta por três componentes principais: <em>Big Data</em>, <em>Machine Learning</em> e <em>Internet of Things</em>.</p>
+<p>Neste post, vou falar sobre <em>Big Data</em>, que geralmente se refere a volumes massivos de dados que não são facilmente manipulados pelas ferramentas e práticas de dados usuais, como uma planilha eletrônica, por exemplo.</p>
+<p>Na Ecologia, diversos estudos (confira o final do post) têm abordado esse tema, mas aqui gostaria de falar especificamente de como trabalhar com esses dados no R.</p>
+<p>Quando importamos um conjunto de dados de uma planilha eletrônica para o R, ele aloca esses dados na memória RAM (espaço temporário de armazenamento).</p>
+<p>Dessa forma, se eu tenho um computador com 16 Gb de RAM, em teoria eu poderia importar e manejar um conjunto de dados de 16 Gb. Entretanto, na prática, a quantidade de memória disponível para o R é menor do que a quantidade total de RAM, pois parte dela é usada pelo sistema operacional e outros processos. Uma parte da memória RAM está sempre sendo usada pelo sistema operacional, e além disso, cada nova atribuição de dados no R vai necessitar alocar o objeto em uma nova parte da RAM.</p>
+<p>Verifique a quantidade de memória RAM do seu computador no R:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># install.packages(memuse)</span>
+</span></span><span style="display:flex;"><span>memuse<span style="color:#719e07">::</span><span style="color:#268bd2">Sys.meminfo</span>()
+</span></span></code></pre></div><pre tabindex="0"><code>## Totalram:  15.461 GiB 
+## Freeram:    6.066 GiB
+</code></pre><p>Há diversas opções para contornar essa limitação e trabalhar com dados gigantes no R, mas aqui vou explorar um pacote específico e um conjunto de dados que tive que trabalhar recentemente.</p>
+
+
+
+
+<h2 id="ebird">eBird
+  <a href="#ebird"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>O 
+<a href="https://ebird.org/home" target="_blank" rel="noopener">eBird</a> é um empreendimento coletivo que adota uma abordagem inovadora para a ciência cidadã para a observação de aves. O eBird é gerenciado pelo Cornell Lab of Ornithology. Seu objetivo é aumentar a quantidade de dados por meio do recrutamento e engajamento de participantes globalmente, além de quantificar e controlar problemas de qualidade de dados.</p>
+<p>Os dados do eBird estão disponíveis de forma aberta e são utilizados por um amplo espectro de estudantes, professores, cientistas, ONGs, agências governamentais, gestores de terras e formuladores de políticas. Como resultado, o eBird se tornou uma importante fonte de dados de biodiversidade, aumentando nosso conhecimento sobre as dinâmicas de distribuição de espécies e tendo um impacto direto na conservação de aves e seus habitats.</p>
+
+
+
+
+<h2 id="ebird-e-gbif">eBird e GBIF
+  <a href="#ebird-e-gbif"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>O 
+<a href="https://www.gbif.org" target="_blank" rel="noopener">GBIF</a> (Sistema Global de Informação sobre Biodiversidade) é uma rede internacional e infraestrutura de dados financiada por governos de todo o mundo, com o objetivo de dar a qualquer pessoa, em qualquer lugar, acesso aberto a dados sobre toda a vida na Terra.</p>
+<p>Mas ele também disponibiliza os dados do eBird do mundo todo, através do 
+<a href="https://www.gbif.org/pt/dataset/4fa7b334-ce0d-4e88-aaae-2e0c138d049e#description" target="_blank" rel="noopener">EOD – eBird Observation Dataset</a>.</p>
+<p>Esse conjunto de dados possui atualmente 1.512.208.412 ocorrências, com dados desde 1 de janeiro de 1800 a 31 de dezembro de 2023.</p>
+<p>Para citar esse conjunto de dados:</p>
+<blockquote>
+<p>Auer T, Barker S, Barry J, Charnoky M, Curtis J, Davies I, Davis C, Downie I, Fink D, Fredericks T, Ganger J, Gerbracht J, Hanks C, Hochachka W, Iliff M, Imani J, Jordan A, Levatich T, Ligocki S, Long M T, Morris W, Morrow S, Oldham L, Padilla Obregon F, Robinson O, Rodewald A, Ruiz-Gutierrez V, Schloss M, Smith A, Smith J, Stillman A, Strimas-Mackey M, Sullivan B, Weber D, Wolf H, Wood C (2024). EOD – eBird Observation Dataset. Cornell Lab of Ornithology. Occurrence dataset 
+<a href="https://doi.org/10.15468/aomfnb" target="_blank" rel="noopener">https://doi.org/10.15468/aomfnb</a> accessed via GBIF.org on 2024-08-23.</p>
+</blockquote>
+<p>Esses dados estão disponíveis em um único arquivo no formato CSV (Comma-Separated Values) ou valores separados por vírgula (.csv), que possui 824 Gb, que é muito mais do que geralmente os computadores têm de memória RAM.</p>
+<p>Sendo assim, precisamos de um pacote específico para importar e manejar esses dados.</p>
+
+
+
+
+<h2 id="importar-e-manejar-esses-dados">Importar e manejar esses dados
+  <a href="#importar-e-manejar-esses-dados"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Aqui, vamos utilizar o pacote 
+<a href="https://arrow.apache.org/docs/r" target="_blank" rel="noopener">arrow</a>. Esse pacote fornece acesso a recursos da biblioteca Apache Arrow C++. O objetivo do arrow é fornecer um backend Arrow C++ para o dplyr e acesso à biblioteca Apache Arrow C++ através de funções familiares do base R e do tidyverse, ou classes R6. O projeto Arrow oferece funcionalidades para uma ampla gama de tarefas de análise de dados, permitindo armazenar, processar e mover dados rapidamente.</p>
+<p>Para mais detalhes do funcionamento do pacote arrow, consultar o capítulo 
+<a href="https://cienciadedatos.github.io/pt-r4ds/arrow.html" target="_blank" rel="noopener">22  Arrow</a> do 
+<a href="https://cienciadedatos.github.io/pt-r4ds/" target="_blank" rel="noopener">R para Ciência de Dados 2ªed</a>.</p>
+<p>Vamos ler os dados:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># packages</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(arrow)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># ebird</span>
+</span></span><span style="display:flex;"><span>ebird_data <span style="color:#719e07">&lt;-</span> arrow<span style="color:#719e07">::</span><span style="color:#268bd2">open_delim_dataset</span>(<span style="color:#2aa198">&#34;0043987-240626123714530.csv&#34;</span>, 
+</span></span><span style="display:flex;"><span>                                        parse_options <span style="color:#719e07">=</span> <span style="color:#268bd2">csv_parse_options</span>(
+</span></span><span style="display:flex;"><span>                                            delimiter <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;\t&#34;</span>, 
+</span></span><span style="display:flex;"><span>                                            newlines_in_values <span style="color:#719e07">=</span> <span style="color:#cb4b16">TRUE</span>),
+</span></span><span style="display:flex;"><span>                                        read_options <span style="color:#719e07">=</span> <span style="color:#268bd2">list</span>(
+</span></span><span style="display:flex;"><span>                                            block_size <span style="color:#719e07">=</span> <span style="color:#2aa198">1000000000L</span>, 
+</span></span><span style="display:flex;"><span>                                            use_threads <span style="color:#719e07">=</span> <span style="color:#cb4b16">TRUE</span>))
+</span></span><span style="display:flex;"><span>ebird_data
+</span></span></code></pre></div><p>Esse banco de dados é cheio de problemas, então tive que fazer alguns testes com vários parâmetros para fazer com que a leitura funcionasse.</p>
+<p>O código acima apenas lê os dados sem carregá-los completamente na memória do R. Dessa forma, com os códigos abaixo é possível fazer um filtro dos dados que precisamos, por exemplo, para o joão-de-barro (<em>Furnarius rufus</em>) [adoro esse bicho], depois de 1985 e para algumas colunas de interesse.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># filter</span>
+</span></span><span style="display:flex;"><span>ebird_data_filter <span style="color:#719e07">&lt;-</span> ebird_data <span style="color:#719e07">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">filter</span>(species <span style="color:#719e07">==</span> <span style="color:#2aa198">&#34;Furnarius rufus&#34;</span>,
+</span></span><span style="display:flex;"><span>                  year <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">1985</span>) <span style="color:#719e07">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">select</span>(species, decimalLongitude, decimalLatitude, year) <span style="color:#719e07">%&gt;%</span>  
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">collect</span>()
+</span></span><span style="display:flex;"><span>ebird_data_filter
+</span></span></code></pre></div><p>Entretanto, mesmo num notebook parrudo (Intel i7 e 64 Gb de RAM) demorou 2:45 h para fazer o filtro.</p>
+<p>Acabei atribuindo os dados a um objeto, mas talvez fosse mais interessante exportar o arquivo diretamente para evitar o uso excessivo de memória.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># filter</span>
+</span></span><span style="display:flex;"><span>ebird_data <span style="color:#719e07">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">filter</span>(species <span style="color:#719e07">==</span> <span style="color:#2aa198">&#34;Furnarius rufus&#34;</span>,
+</span></span><span style="display:flex;"><span>                  year <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">1985</span>) <span style="color:#719e07">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">select</span>(species, decimalLongitude, decimalLatitude, year) <span style="color:#719e07">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>    readr<span style="color:#719e07">::</span><span style="color:#268bd2">write</span>(<span style="color:#2aa198">&#34;ebird_furnarius_rufus.csv&#34;</span>)
+</span></span></code></pre></div><p>Há ainda muitos pontos para eu estudar do pacote arrow, como o formato 
+<a href="https://parquet.apache.org/" target="_blank" rel="noopener">parquet</a>, que parece ser muito mais interessante do que o CSV. Sendo assim, vale ler mais o capítulo 
+<a href="https://cienciadedatos.github.io/pt-r4ds/arrow.html" target="_blank" rel="noopener">22  Arrow</a> do 
+<a href="https://cienciadedatos.github.io/pt-r4ds/" target="_blank" rel="noopener">R para Ciência de Dados 2ªed</a>.</p>
+
+
+
+
+<h2 id="saiba-mais">Saiba mais
+  <a href="#saiba-mais"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Farley, S.S., Dawson, A., Goring, S.J. &amp; Williams, J.W. (2018). Situating Ecology as a Big-Data Science: Current Advances, Challenges, and Solutions. BioScience, 68, 563–576.</p>
+<p>Hampton, S.E., Strasser, C.A., Tewksbury, J.J., Gram, W.K., Budden, A.E., Batcheller, A.L., et al. (2013). Big data and the future of ecology. Frontiers in Ecology and the Environment, 11, 156–162.</p>
+<p>Nimmagadda, S.L., Reiners, T. &amp; Rudra, A. (2017). Development of a Total Environment Data Science Approach in a Big Data Scale. Procedia Computer Science, Knowledge-Based and Intelligent Information &amp; Engineering Systems: Proceedings of the 21st International Conference, KES-20176-8 September 2017, Marseille, France, 112, 1891–1900.</p>
+<p>Fonte da imagem: 
+<a href="https://www.pexels.com/pt-br/foto/computador-salgadinhos-memoria-lembranca-6636474" target="_blank" rel="noopener">Sergei Starostin/Pexels</a>.</p>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2024-09-r-color-pallets/">&larr; Paletas de cores no R</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2024-06-r-reinstall-packages/">Reinstalar pacotes depois de atualizar o R &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      <div class="post-comments pa0 pa4-l mt4">
+  
+</div>
+
+    
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+                       
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/blog/sidebar.jpg" class="db ma0">
+
+
+<div class="blog-info ph4 pt4 pb4 pb0-l">
+  
+
+  <h1 class="f3">Blog</h1>
+  <p class="f6 lh-copy measure">Este é meu blog, onde compartilho meus aprendizados sobre R, Python, Linux, geoprocessamento, o universo e tudo mais&hellip;</p>
+  <p class="f7 measure lh-copy i mh0-l">Written by Maurício Vancine</p>
+
+
+  
+  <div class="dib bt bw1 b--black-10">
+    
+      <small class="db f7 pt3"><a href="/blog/" class="dib fw7 ttu">Veja os posts recentes</a></small>
+    
+    
+    
+    
+  </div>
+
+
+</div>
+
+
+  
+  <details open class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">August 24, 2024</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">6 minute read, 1069 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/r">R</a>  <a href="https://mauriciovancine.github.io/tags/big-data">Big Data</a>  <a href="https://mauriciovancine.github.io/tags/arrow">arrow</a>  <a href="https://mauriciovancine.github.io/tags/vroom">vroom</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/2024-11-r-qrcode/">Gerando QR code no R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2024-09-r-color-pallets/">Paletas de cores no R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/project/gere/">Grupo de Estudos em R e Estatística (GERE)</a></dd>
+    
+  </dl>
+</details>
+
+</aside>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2024 Maurício Vancine
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/mauriciovancine" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://bsky.app/profile/mauriciovancine.bsky.social" title="bluesky" target="_blank" rel="me noopener">
+      <i class="fab fa-bluesky fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://mastodon.social/@mauriciovancine" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/mauriciovancine" title="x-twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-x-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.researchgate.net/profile/Mauricio-Vancine" title="researchgate" target="_blank" rel="me noopener">
+      <i class="ai ai-researchgate fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ" title="google-scholar" target="_blank" rel="me noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0001-9650-7575" title="orcid" target="_blank" rel="me noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.webofscience.com/wos/author/record/837504" title="researcherid" target="_blank" rel="me noopener">
+      <i class="ai ai-researcherid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888" title="scopus" target="_blank" rel="me noopener">
+      <i class="ai ai-scopus fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://osf.io/k8mxe/" title="osf" target="_blank" rel="me noopener">
+      <i class="ai ai-osf fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://figshare.com/authors/Mauricio_Vancine/2842289" title="figshare" target="_blank" rel="me noopener">
+      <i class="ai ai-figshare fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.zotero.org/mauriciovancine" title="zotero" target="_blank" rel="me noopener">
+      <i class="ai ai-zotero fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://lattes.cnpq.br/9761288418931193" title="lattes" target="_blank" rel="me noopener">
+      <i class="ai ai-lattes fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/mauricio-vancine/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">Licença</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contato">Contato</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Financiamento">Financiamento</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

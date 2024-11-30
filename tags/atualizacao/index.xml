@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atualizacao on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/atualizacao/</link>
+    <description>Recent content in Atualizacao on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 04 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/atualizacao/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reinstalar pacotes depois de atualizar o R</title>
+      <link>https://mauriciovancine.github.io/blog/2024-06-r-reinstall-packages/</link>
+      <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-06-r-reinstall-packages/</guid>
+      <description>Depois de atualizar o R, vem a parte chata de reinstalar todos os pacotes, mas o R mesmo pode te ajudar</description>
+    </item>
+  </channel>
+</rss>

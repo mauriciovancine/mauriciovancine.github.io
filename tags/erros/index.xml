@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Erros on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/erros/</link>
+    <description>Recent content in Erros on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/erros/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Help me help you: um bestiário para entender erros e pedir ajuda no R</title>
+      <link>https://mauriciovancine.github.io/blog/2020-08-r-erros/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2020-08-r-erros/</guid>
+      <description>Um guia para entender erros e pedir ajuda no R</description>
+    </item>
+  </channel>
+</rss>

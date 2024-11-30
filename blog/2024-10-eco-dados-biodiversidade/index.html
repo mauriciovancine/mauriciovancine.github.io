@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.130.0">
+<title>Fontes de dados de biodiversidade | Maurício Vancine</title>
+
+
+<meta property="twitter:site" content="@mauriciovancine">
+<meta property="twitter:creator" content="@mauriciovancine">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Lista das principais fontes e pacotes do R de dados de biodiversidade">
+
+
+<meta property="og:site_name" content="Maurício Vancine">
+<meta property="og:title" content="Fontes de dados de biodiversidade | Maurício Vancine">
+<meta property="og:description" content="Lista das principais fontes e pacotes do R de dados de biodiversidade" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/" />
+<meta property="og:locale" content="pt-br">
+
+
+
+
+    
+        <meta property="og:image" content="https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/featured.jpg" >
+    
+    
+  
+  <meta itemprop="name" content="Fontes de dados de biodiversidade">
+  <meta itemprop="description" content="Lista das principais fontes e pacotes do R de dados de biodiversidade">
+  <meta itemprop="datePublished" content="2024-10-06T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-10-06T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1879">
+  <meta itemprop="image" content="https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/featured.jpg">
+  <meta itemprop="keywords" content="Compilação,Biodiversidade,Ocorrências,Atributos Funcionais,Vocalização,Biogegrafia,Filogenia,Genética">
+  
+  
+
+
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.f039f41e61940aa743e97653edd07c8b48e7fbd36c8c465f1ea9f0e4d4ad1073.css" integrity="sha256-8Dn0HmGUCqdD6XZT7dB8i0jn&#43;9NsjEZfHqnw5NStEHM=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.43a16206850df307a9ecc165118c6e7eab95cf24ab4cf99d6388dc7971e9b6ce.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single-sidebar">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://mauriciovancine.github.io/" title="Home">
+      <img src="/img/favicon.png" class="dib db-l h2 w-auto" alt="Maurício Vancine">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="Sobre">Sobre</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Projetos">Projetos</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Palestras">Palestras</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/teaching/" title="Ensino">Ensino</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publication/" title="Publicações">Publicações</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/cv/cv-academic.pdf" title="">CV</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/resume/resume.pdf" title="">Resumé</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pr3-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Fontes de dados de biodiversidade</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Lista das principais fontes e pacotes do R de dados de biodiversidade</h4>
+        <p class="f6 measure lh-copy mv1">By Maurício Vancine in <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </p>
+        <p class="f7 db mv0 ttu">October 6, 2024</p>
+      </header>
+      <section class="post-body pt5 pb4">
+        <script src="https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/index_files/clipboard-2.0.6/clipboard.min.js"></script>
+<link href="https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/index_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+<script src="https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/index_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+<script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i> Copiar Código","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i> Copiado!","error":"Press Ctrl+C to Copy"})</script>
+<link href="https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/index_files/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="https://mauriciovancine.github.io/blog/2024-10-eco-dados-biodiversidade/index_files/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+
+
+
+<h2 id="contextualização">Contextualização
+  <a href="#contextualiza%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Desde minha graduação, sempre trabalhei com dados secundários. Dados secundários são dados que alguém coletou em campo e que você organizou.</p>
+<p>Dados primários são dados que você mesmo coletou em campo. E como &ldquo;dados são o novo ouro&rdquo; como dizem por aí, nada melhor que ter isso junto num único lugar.</p>
+<p>Pensando nisso, escrevi esse post para reunir as bases de dados e artigos que conheço, com muita ajuda do 
+<a href="https://lsa.umich.edu/eeb/people/postdoctoral-fellows/thiago-goncalves-souza.html" target="_blank" rel="noopener">Thiago Gonçalvez Souza</a>. Também listei os pacotes no R que fazem essa busca.</p>
+
+
+
+
+<h2 id="dados-de-ocorrências">Dados de ocorrências
+  <a href="#dados-de-ocorr%c3%aancias"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://specieslink.net/" target="_blank" rel="noopener">speciesLink</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://salve.icmbio.gov.br" target="_blank" rel="noopener">Plataforma SALVE</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://portaldabiodiversidade.icmbio.gov.br/portal/" target="_blank" rel="noopener">Portal da Biodiversidade</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.sibbr.gov.br/" target="_blank" rel="noopener">Plataforma de Biodiversidade do Brasil (SiBBr)</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.gbif.org/" target="_blank" rel="noopener">Global Biodiversity Information Facility (GBIF)</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://ebird.org/home" target="_blank" rel="noopener">eBird</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.antweb.org/" target="_blank" rel="noopener">AntWeb</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://vertnet.org" target="_blank" rel="noopener">VertNet</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.idigbio.org" target="_blank" rel="noopener">Integrated Digitized Biocollections (iDigBio)</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://ecoengine.berkeley.edu" target="_blank" rel="noopener">Berkeley Ecoinformatics Engine (EcoEngine)</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://bien.nceas.ucsb.edu/bien/" target="_blank" rel="noopener">BIEN</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.nybg.org" target="_blank" rel="noopener">New York Botanical Garden</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.missouribotanicalgarden.org" target="_blank" rel="noopener">Missouri Botanical Garden</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.salvias.net" target="_blank" rel="noopener">SALVIAS (Enquist &amp; Boyle 2012)</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.teamnetwork.org" target="_blank" rel="noopener">Tropical Ecology Assessment and Monitoring Network (Fegraus 2012)</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://ag.arizona.edu/herbarium" target="_blank" rel="noopener">University of Arizona</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://vegbank.org" target="_blank" rel="noopener">VegBank</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://prc-symbiota.tacc.utexas.edu" target="_blank" rel="noopener">University of Texas at Austin</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.brit.org" target="_blank" rel="noopener">Botanical Research Institute of Texas</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.fia.fs.fed.us" target="_blank" rel="noopener">Forest Inventory and Analysis National Program (USA)(2013)</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.naturalis.nl" target="_blank" rel="noopener">Naturalis</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.biodiversity.ubc.ca/museum/herbarium" target="_blank" rel="noopener">University of British Columbia</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://herbarium.acadiau.ca" target="_blank" rel="noopener">Acadia University</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://winherbarium.weebly.com" target="_blank" rel="noopener">University of Manitoba</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://cvs.bio.unc.edu" target="_blank" rel="noopener">Carolina Vegetation Survey (Peetet al. 2012a)</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.herbarium.unc.edu" target="_blank" rel="noopener">University of North Carolina</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.herbier.ulaval.ca" target="_blank" rel="noopener">Université Laval</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://obis.org/" target="_blank" rel="noopener">OBIS</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="dados-de-ciência-cidadã">Dados de ciência cidadã
+  <a href="#dados-de-ci%c3%aancia-cidad%c3%a3"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://www.taxeus.com.br" target="_blank" rel="noopener">Táxeus</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://ebird.org/home" target="_blank" rel="noopener">eBird</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.wikiaves.com.br" target="_blank" rel="noopener">Wikiaves</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://xeno-canto.org" target="_blank" rel="noopener">Xeno-canto</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="dados-de-comunidades-ecológicas">Dados de comunidades ecológicas
+  <a href="#dados-de-comunidades-ecol%c3%b3gicas"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1002/ecy.2392" target="_blank" rel="noopener">ATLANTIC AMPHIBIANS</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1002/ecy.3580" target="_blank" rel="noopener">ATLANTIC ANTS</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2007" target="_blank" rel="noopener">ATLANTIC BATS</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2119" target="_blank" rel="noopener">ATLANTIC BIRDS</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2647" target="_blank" rel="noopener">ATLANTIC BIRD TRAITS</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2507" target="_blank" rel="noopener">ATLANTIC BUTTERFLIES</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.1998" target="_blank" rel="noopener">ATLANTIC CAMTRAPS</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1002/ecy.4298" target="_blank" rel="noopener">Camera trap surveys of Atlantic Forest mammals</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2541" target="_blank" rel="noopener">ATLANTIC EPIPHYTES</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2541" target="_blank" rel="noopener">Atlantic flower&ndash;invertebrate interactions</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.1818" target="_blank" rel="noopener">ATLANTIC FRUGIVORY</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://esajournals.doi/abs/10.1002/ecy.2785" target="_blank" rel="noopener">ATLANTIC MAMMALS</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2106" target="_blank" rel="noopener">ATLANTIC MAMMAL TRAITS</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2107" target="_blank" rel="noopener">Non-volant mammals from the Upper Paraná River Basin</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/abs/10.1002/ecy.3595" target="_blank" rel="noopener">ATLANTIC POLLINATION</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2525" target="_blank" rel="noopener">ATLANTIC PRIMATES</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.1893" target="_blank" rel="noopener">ATLANTIC SMALL-MAMMAL</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2005" target="_blank" rel="noopener">Abundance of small mammals in the Atlantic Forest (ASMAF)</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/abs/10.1002/ecy.3738" target="_blank" rel="noopener">AMAZONIA CAMTRAP</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://bdj.pensoft.net/article/109785/" target="_blank" rel="noopener">Amazonian amphibians</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1002/ecy.3149" target="_blank" rel="noopener">Plant-galling insect interactions</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2464" target="_blank" rel="noopener">BRAZIL ROAD‐KILL</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1002/ecy.3602" target="_blank" rel="noopener">VTMaxHerp</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1111/geb.13449" target="_blank" rel="noopener">SIA-BRA</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi/10.1002/ecy.2379" target="_blank" rel="noopener">Jaguar movement database</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://esajournals.doi/abs/10.1002/ecy.3128" target="_blank" rel="noopener">NEOTROPICAL CARNIVORES</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://esajournals.doi/abs/10.1002/ecy.3115" target="_blank" rel="noopener">NEOTROPICAL ALIEN MAMMALS</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://esajournals.doi/abs/10.1002/ecy.2663" target="_blank" rel="noopener">NEOTROPICAL XENARTHRANS</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1002/ecy.3713" target="_blank" rel="noopener">NEOTROPICAL FRESHWATER FISHES</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1890/11-0262.1" target="_blank" rel="noopener">Species composition and abundance of mammalian communities</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1890/08-1494.1" target="_blank" rel="noopener">PanTHERIA</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1890/11-1052.1" target="_blank" rel="noopener">Matrix population models from 20 studies of perennial plant populations</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1002/ecy.3056" target="_blank" rel="noopener">Global rheophytes data set</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="dados-de-taxonomia">Dados de taxonomia
+  <a href="#dados-de-taxonomia"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://amphibiansoftheworld.amnh.org/" target="_blank" rel="noopener">Amphibian Species of the World</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://amphibiaweb.org/" target="_blank" rel="noopener">AmphibiaWeb</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.reptile-database.org/" target="_blank" rel="noopener">ReptileDB</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.antweb.org/" target="_blank" rel="noopener">AntWeb</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://floradobrasil.jbrj.gov.br/reflora/PrincipalUC/PrincipalUC.do" target="_blank" rel="noopener">Programa REFLORA</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.worldfloraonline.org/" target="_blank" rel="noopener">World Flora Online</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://wfoplantlist.org/" target="_blank" rel="noopener">The Plant List</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="dados-de-biogeografia">Dados de biogeografia
+  <a href="#dados-de-biogeografia"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://biogeo.inct.florabrasil.net/" target="_blank" rel="noopener">Biogeografia da Flora e Fungos do Brasil</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://biodiversitymapping.org/" target="_blank" rel="noopener">biodiversitymapping.org</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://mol.org/" target="_blank" rel="noopener">Map of Life (MOL)</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="http://www.gardinitiative.org/" target="_blank" rel="noopener">Global Assessment of Reptile Distributions (GARD)</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="dados-de-movimento">Dados de movimento
+  <a href="#dados-de-movimento"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://www.movebank.org/cms/movebank-main" target="_blank" rel="noopener">Movebank</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="dados-de-vocalização">Dados de vocalização
+  <a href="#dados-de-vocaliza%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://www.wikiaves.com.br" target="_blank" rel="noopener">Wikiaves</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://xeno-canto.org" target="_blank" rel="noopener">Xeno-canto</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="dados-de-traços-funcionais">Dados de traços funcionais
+  <a href="#dados-de-tra%c3%a7os-funcionais"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1038/sdata.2017.123" target="_blank" rel="noopener">AmphiBIO</a></td>
+<td style="text-align:left">Banco de dados de traits de plantas para os Andes</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1093/database/baab064" target="_blank" rel="noopener">SpiderTraits</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1111/icad.12211" target="_blank" rel="noopener">GlobalAnts</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1111/gcb.14904" target="_blank" rel="noopener">TRY</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1111/geb.12773" target="_blank" rel="noopener">LizardTraits</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1890/13-1917.1" target="_blank" rel="noopener">EltonTraits</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1371/journal.pbio.3002658" target="_blank" rel="noopener">TetrapodTraits</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://doi.org/10.1111/geb.12398" target="_blank" rel="noopener">Body sizes and diversification rates of lizards, snakes, amphisbaenians and the tuatara</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href=""></a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href=""></a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href=""></a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href=""></a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href=""></a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://www.nature.com/articles/s41597-022-01626-6" target="_blank" rel="noopener">FunAndes – A functional trait database of Andean plants</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://opentraits.org/datasets/avonet.html" target="_blank" rel="noopener">AVONET</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="dados-filogenéticos">Dados filogenéticos
+  <a href="#dados-filogen%c3%a9ticos"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://phylomedb.org" target="_blank" rel="noopener">phylomeDB</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="dados-genéticos">Dados genéticos
+  <a href="#dados-gen%c3%a9ticos"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://www.ncbi.nlm.nih.gov/genbank/" target="_blank" rel="noopener">genbank</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://sicol.cria.org.br/" target="_blank" rel="noopener">Sistema de Informação de Coleções de Interesse Biotecnológico (SICol)</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="pacotes-no-r">Pacotes no R
+  <a href="#pacotes-no-r"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Bases de dados</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">
+<a href="https://cloud.r-project.org/web/packages/spocc/index.html" target="_blank" rel="noopener">spocc</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/rgbif/index.html" target="_blank" rel="noopener">rgbif</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/rebird/index.html" target="_blank" rel="noopener">rebird</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/rvertnet/index.html" target="_blank" rel="noopener">rvertnet</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/ridigbio/index.html" target="_blank" rel="noopener">ridigbio</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/ecoengine/index.html" target="_blank" rel="noopener">ecoengine</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cloud.r-project.org/web/packages/robis/index.html" target="_blank" rel="noopener">robis</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/BIEN/index.html" target="_blank" rel="noopener">BIEN</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cloud.r-project.org/web/packages/taxize/index.html" target="_blank" rel="noopener">taxize</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://github.com/hcliedtke/AmphiNom" target="_blank" rel="noopener">AmphiNom</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/flora/index.html" target="_blank" rel="noopener">flora</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">
+<a href="https://cran.r-project.org/web/packages/WorldFlora/index.html" target="_blank" rel="noopener">WorldFlora</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="artigos">Artigos
+  <a href="#artigos"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Bello, C., Galetti, M., Montan, D., Pizo, M. A., Mariguela, T. C., Culot, L., Bufalo, F., Labecca, F., Pedrosa, F., Constantini, R., Emer, C., Silva, W. R., da Silva, F. R., Ovaskainen, O., &amp; Jordano, P. (2017). Atlantic frugivory: A plant-frugivore interaction data set for the Atlantic Forest. Ecology, 98(6), 1729–1729. 
+<a href="https://doi.org/10.1002/ecy.1818" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.1818</a></p>
+<p>Boscolo, D., Nobrega Rodrigues, B., Ferreira, P. A., Lopes, L. E., Tonetti, V. R., Reis dos Santos, I. C., Hiruma-Lima, J. A., Nery, L., Baptista de Lima, K., Perozi, J., Freitas, A. V. L., Viana, B. F., Antunes-Carvalho, C., Amorim, D. de S., Freitas de Oliveira, F., Groppo, M., Absy, M. L., de Almeida-Scabbia, R. J., Alves-Araújo, A., … Ribeiro, M. C. (2023). Atlantic flower–invertebrate interactions: A data set of occurrence and frequency of floral visits. Ecology, 104(3), e3900. 
+<a href="https://doi.org/10.1002/ecy.3900" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.3900</a></p>
+<p>Bovendorp, R. S., Villar, N., de Abreu-Junior, E. F., Bello, C., Regolin, A. L., Percequillo, A. R., &amp; Galetti, M. (2017). Atlantic small-mammal: A dataset of communities of rodents and marsupials of the Atlantic forests of South America. Ecology, 98(8), 2226–2226. 
+<a href="https://doi.org/10.1002/ecy.1893" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.1893</a></p>
+<p>Culot, L., Pereira, L. A., Agostini, I., Almeida, M. A. B., Alves, R. S. C., Aximoff, I., Bager, A., Baldovino, M. C., Bella, T. R., Bicca‐Marques, J. C., Braga, C., Brocardo, C. R., Campelo, A. K. N., Canale, G. R., Cardoso, J. da C., Carrano, E., Casanova, D. C., Cassano, C. R., Castro, E., … Galetti, M. (2019). ATLANTIC PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America. Ecology, 100(1). 
+<a href="https://doi.org/10.1002/ecy.2525" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2525</a></p>
+<p>Figueiredo, M. S. L., Barros, C. S., Delciellos, A. C., Guerra, E. B., Cordeiro-Estrela, P., Kajin, M., Alvarez, M. R., Asfora, P. H., Astúa, D., Bergallo, H. G., Cerqueira, R., Geise, L., Gentile, R., Grelle, C. E. V., Iack-Ximenes, G. E., Oliveira, L. C., Weksler, M., &amp; Vieira, M. V. (2017). Abundance of small mammals in the Atlantic Forest (ASMAF): A data set for analyzing tropical community patterns. Ecology, 98(11), 2981–2981. 
+<a href="https://doi.org/10.1002/ecy.2005" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2005</a></p>
+<p>Franceschi, I. C., Dornas, R. A. da P., Lermen, I. S., Coelho, A. V. P., Vilas Boas, A. H., Chiarello, A. G., Paglia, A. P., de Souza, A. C., Borsekowsky, A. R., Rocha, A., Bager, A., de Souza, A. Z., Lopes, A. M. C., de Moura, A. S., Ferreira, A. S., García-Olaechea, A., Delciellos, A. C., Bacellar, A. E. de F., Campelo, A. K. N., … Coelho, I. P. (2024). Camera trap surveys of Atlantic Forest mammals: A data set for analyses considering imperfect detection (2004–2020). Ecology, n/a(n/a), e4298. 
+<a href="https://doi.org/10.1002/ecy.4298" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.4298</a></p>
+<p>Gonçalves, F., Bovendorp, R. S., Beca, G., Bello, C., Costa-Pereira, R., Muylaert, R. L., Rodarte, R. R., Villar, N., Souza, R., Graipel, M. E., Cherem, J. J., Faria, D., Baumgarten, J., Alvarez, M. R., Vieira, E. M., Cáceres, N., Pardini, R., Leite, Y. L. R., Costa, L. P., … Galetti, M. (2018). ATLANTIC MAMMAL TRAITS: A data set of morphological traits of mammals in the Atlantic Forest of South America. Ecology, 99(2), 498–498. 
+<a href="https://doi.org/10.1002/ecy.2106" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2106</a>
+Gonçalves, F., Hannibal, W., Godoi, M. N., Martins, F. I., Oliveira, R. F., Figueiredo, V. V., Casella, J., &amp; de Sá, É. F. G. G. (2018). Non-volant mammals from the Upper Paraná River Basin: A data set from a critical region for conservation in Brazil. Ecology, 99(2), 499–499. 
+<a href="https://doi.org/10.1002/ecy.2107" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2107</a></p>
+<p>Hasui, É., Metzger, J. P., Pimentel, R. G., Silveira, L. F., Bovo, A. A. d. A., Martensen, A. C., Uezu, A., Regolin, A. L., Bispo de Oliveira, A. Â., Gatto, C. A. F. R., Duca, C., Andretti, C. B., Banks-Leite, C., Luz, D., Mariz, D., Alexandrino, E. R., de Barros, F. M., Martello, F., Pereira, I. M. d. S., … Ribeiro, M. C. (2018). ATLANTIC BIRDS: A data set of bird species from the Brazilian Atlantic Forest. Ecology, 99(2), 497–497. 
+<a href="https://doi.org/10.1002/ecy.2119" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2119</a>
+Iamara-Nogueira, J., Targhetta, N., Allain, G., Gambarini, A., Pinto, A. R., Rui, A. M., Araújo, A. C., Lopes, A., Pereira-Silva, B., de Camargo, B. B., Machado, C. G., Missagia, C., Scultori, C., Boscolo, D., Fischer, E., Araújo-Oliveira, E. S., Gava, H., Paulino-Neto, H. F., Machado, I. C., … Buzato, S. (2022). ATLANTIC POLLINATION: A data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest. Ecology, 103(2), e03595. 
+<a href="https://doi.org/10.1002/ecy.3595" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.3595</a></p>
+<p>Lima, F., Beca, G., Muylaert, R. L., Jenkins, C. N., Perilli, M. L. L., Paschoal, A. M. O., Massara, R. L., Paglia, A. P., Chiarello, A. G., Graipel, M. E., Cherem, J. J., Regolin, A. L., Oliveira Santos, L. G. R., Brocardo, C. R., Paviolo, A., Di Bitetti, M. S., Scoss, L. M., Rocha, F. L., Fusco-Costa, R., … Galetti, M. (2017). ATLANTIC-CAMTRAPS: A dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America. Ecology, 98(11), 2979–2979. 
+<a href="https://doi.org/10.1002/ecy.1998" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.1998</a></p>
+<p>Muylaert, R. d. L., Stevens, R. D., Esbérard, C. E. L., Mello, M. A. R., Garbino, G. S. T., Varzinczak, L. H., Faria, D., Weber, M. d. M., Kerches Rogeri, P., Regolin, A. L., Oliveira, H. F. M. d., Costa, L. d. M., Barros, M. A. S., Sabino-Santos, G., Crepaldi de Morais, M. A., Kavagutti, V. S., Passos, F. C., Marjakangas, E.-L., Maia, F. G. M., … Galetti, M. (2017). ATLANTIC BATS: A data set of bat communities from the Atlantic Forests of South America. Ecology, 98(12), 3227–3227. 
+<a href="https://doi.org/10.1002/ecy.2007" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2007</a></p>
+<p>Ramos, F. N., Mortara, S. R., Monalisa‐Francisco, N., Elias, J. P. C., Neto, L. M., Freitas, L., Kersten, R., Amorim, A. M., Matos, F. B., Nunes‐Freitas, A. F., Alcantara, S., Alexandre, M. H. N., Almeida‐Scabbia, R. J., Almeida, O. J. G., Alves, F. E., Oliveira Alves, R. M., Alvim, F. S., Andrade, A. C. S., Andrade, S., … Ribeiro, M. C. (2019). ATLANTIC EPIPHYTES: a data set of vascular and non‐vascular epiphyte plants and lichens from the Atlantic Forest. Ecology, 100(2), e02541. 
+<a href="https://doi.org/10.1002/ecy.2541" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2541</a></p>
+<p>Rodrigues, R. C., Hasui, É., Assis, J. C., Pena, J. C. C., Muylaert, R. L., Tonetti, V. R., Martello, F., Regolin, A. L., Costa, T. V. V. da, Pichorim, M., Carrano, E., Lopes, L. E., Vasconcelos, M. F. de, Fontana, C. S., Roos, A. L., Gonçalves, F., Banks‐Leite, C., Cavarzere, V., Efe, M. A., … Ribeiro, M. C. (2019). ATLANTIC BIRD TRAITS: a data set of bird morphological traits from the Atlantic forests of South America. Ecology, e02647. 
+<a href="https://doi.org/10.1002/ecy.2647" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2647</a></p>
+<p>Santos, J. P. dos, Freitas, A. V. L., Brown, K. S., Carreira, J. Y. O., Gueratto, P. E., Rosa, A. H. B., Lourenço, G. M., Accacio, G. M., Uehara‐Prado, M., Iserhard, C. A., Richter, A., Gawlinski, K., Romanowski, H. P., Mega, N. O., Teixeira, M. O., Moser, A., Ribeiro, D. B., Araujo, P. F., Filgueiras, B. K. C., … Ribeiro, M. C. (2018). Atlantic butterflies: A data set of fruit‐feeding butterfly communities from the Atlantic forests. Ecology, 99(12), 2875–2875. 
+<a href="https://doi.org/10.1002/ecy.2507" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2507</a></p>
+<p>Silva, R. R., Martello, F., Feitosa, R. M., Silva, O. G. M., do Prado, L. P., Brandão, C. R. F., de Albuquerque, E. Z., Morini, M. S. C., Delabie, J. H. C., dos Santos Monteiro, E. C., Emanuel Oliveira Alves, A., Wild, A. L., Christianini, A. V., Arnhold, A., Casadei Ferreira, A., Oliveira, A. M., Santos, A. D., Galbán, A., de Oliveira, A. A., … Ribeiro, M. C. (2022). ATLANTIC ANTS: A data set of ants in Atlantic Forests of South America. Ecology, 103(2), e03580. 
+<a href="https://doi.org/10.1002/ecy.3580" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.3580</a></p>
+<p>Souza, Y., Gonçalves, F., Lautenschlager, L., Akkawi, P., Mendes, C., Carvalho, M. M., Bovendorp, R. S., Fernandes-Ferreira, H., Rosa, C., Graipel, M. E., Peroni, N., Cherem, J. J., Bogoni, J. A., Brocardo, C. R., Miranda, J., Silva, L. Z. da, Melo, G., Cáceres, N., Sponchiado, J., … Galetti, M. (2019). ATLANTIC MAMMALS: A data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America. Ecology, 100(10), e02785. 
+<a href="https://doi.org/10.1002/ecy.2785" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2785</a></p>
+<p>Tobias, J. A., Sheard, C., Pigot, A. L., Devenish, A. J. M., Yang, J., Sayol, F., Neate‐Clegg, M. H. C., Alioravainen, N., Weeks, T. L., Barber, R. A., Walkden, P. A., MacGregor, H. E. A., Jones, S. E. I., Vincent, C., Phillips, A. G., Marples, N. M., Montaño‐Centellas, F. A., Leandro‐Silva, V., Claramunt, S., … Schleuning, M. (2022). AVONET: Morphological, ecological and geographical data for all birds. Ecology Letters, 25(3), 581–597. 
+<a href="https://doi.org/10.1111/ele.13898" target="_blank" rel="noopener">https://doi.org/10.1111/ele.13898</a></p>
+<p>Vancine, M. H., Duarte, K. da S., de Souza, Y. S., Giovanelli, J. G. R., Martins-Sobrinho, P. M., López, A., Bovo, R. P., Maffei, F., Lion, M. B., Ribeiro Júnior, J. W., Brassaloti, R., da Costa, C. O. R., Sawakuchi, H. O., Forti, L. R., Cacciali, P., Bertoluci, J., Haddad, C. F. B., &amp; Ribeiro, M. C. (2018). ATLANTIC AMPHIBIANS: A data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692–1692. 
+<a href="https://doi.org/10.1002/ecy.2392" target="_blank" rel="noopener">https://doi.org/10.1002/ecy.2392</a></p>
+<p>Fonte da imagem: 
+<a href="https://www.pexels.com/pt-br/foto/colecao-beetle-2694485" target="_blank" rel="noopener">Diana/Pexels</a>.</p>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2024-11-r-qrcode/">&larr; Gerando QR code no R</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2024-09-r-color-pallets/">Paletas de cores no R &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      <div class="post-comments pa0 pa4-l mt4">
+  
+</div>
+
+    
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+                       
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/blog/sidebar.jpg" class="db ma0">
+
+
+<div class="blog-info ph4 pt4 pb4 pb0-l">
+  
+
+  <h1 class="f3">Blog</h1>
+  <p class="f6 lh-copy measure">Este é meu blog, onde compartilho meus aprendizados sobre R, Python, Linux, geoprocessamento, o universo e tudo mais&hellip;</p>
+  <p class="f7 measure lh-copy i mh0-l">Written by Maurício Vancine</p>
+
+
+  
+  <div class="dib bt bw1 b--black-10">
+    
+      <small class="db f7 pt3"><a href="/blog/" class="dib fw7 ttu">Veja os posts recentes</a></small>
+    
+    
+    
+    
+  </div>
+
+
+</div>
+
+
+  
+  <details open class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">October 6, 2024</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">9 minute read, 1879 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/compila%C3%A7%C3%A3o">Compilação</a>  <a href="https://mauriciovancine.github.io/tags/biodiversidade">Biodiversidade</a>  <a href="https://mauriciovancine.github.io/tags/ocorr%C3%AAncias">Ocorrências</a>  <a href="https://mauriciovancine.github.io/tags/atributos-funcionais">Atributos funcionais</a>  <a href="https://mauriciovancine.github.io/tags/vocaliza%C3%A7%C3%A3o">Vocalização</a>  <a href="https://mauriciovancine.github.io/tags/biogegrafia">Biogegrafia</a>  <a href="https://mauriciovancine.github.io/tags/filogenia">Filogenia</a>  <a href="https://mauriciovancine.github.io/tags/gen%C3%A9tica">Genética</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/teaching/workshop-spatial-patterns-biodiversity-data/">Analisando padrões espaciais em dados de biodiversidade</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/publications/anfibios-paisagem/">Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/project/atlanticr/">atlanticr</a></dd>
+    
+  </dl>
+</details>
+
+</aside>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2024 Maurício Vancine
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/mauriciovancine" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://bsky.app/profile/mauriciovancine.bsky.social" title="bluesky" target="_blank" rel="me noopener">
+      <i class="fab fa-bluesky fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://mastodon.social/@mauriciovancine" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/mauriciovancine" title="x-twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-x-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.researchgate.net/profile/Mauricio-Vancine" title="researchgate" target="_blank" rel="me noopener">
+      <i class="ai ai-researchgate fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ" title="google-scholar" target="_blank" rel="me noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0001-9650-7575" title="orcid" target="_blank" rel="me noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.webofscience.com/wos/author/record/837504" title="researcherid" target="_blank" rel="me noopener">
+      <i class="ai ai-researcherid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888" title="scopus" target="_blank" rel="me noopener">
+      <i class="ai ai-scopus fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://osf.io/k8mxe/" title="osf" target="_blank" rel="me noopener">
+      <i class="ai ai-osf fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://figshare.com/authors/Mauricio_Vancine/2842289" title="figshare" target="_blank" rel="me noopener">
+      <i class="ai ai-figshare fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.zotero.org/mauriciovancine" title="zotero" target="_blank" rel="me noopener">
+      <i class="ai ai-zotero fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://lattes.cnpq.br/9761288418931193" title="lattes" target="_blank" rel="me noopener">
+      <i class="ai ai-lattes fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/mauricio-vancine/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">Licença</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contato">Contato</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Financiamento">Financiamento</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

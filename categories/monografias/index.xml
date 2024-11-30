@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monografias on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/categories/monografias/</link>
+    <description>Recent content in Monografias on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/categories/monografias/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparação da distribuição de espécies inferidos por modelos de nicho ecológicos e mapas de especialistas da IUCN para anfíbios anuros da América do Sul</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-iucn-america-sul/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-iucn-america-sul/</guid>
+      <description>Trabalho de Conclusão de Curso, onde SDMs baseados em variáveis climáticas para predizer a distribuição potencial de espécies de anuros da América do Sul e comparar com os polígonos disponibilizados pela IUCN</description>
+    </item>
+    <item>
+      <title>Distribuição do padrão reprodutivo em comunidades de anuros na Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-padroes-reprodutivos/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-padroes-reprodutivos/</guid>
+      <description>Trabalho de Conclusão de Curso, onde buscamos entender a relação das condições climáticas e dois atributos funcionais reprodutivos das espécies (explosivo e prolongado) em comunidades de anuros no Bioma da Mata Atlântica</description>
+    </item>
+    <item>
+      <title>Modelagem da distribuição das Cecílias (Amphibia: Gymnophiona) do Brasil: subsídios para conservação e amostragens de campo</title>
+      <link>https://mauriciovancine.github.io/publications/gymnophionas-conservacao-amostragem/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/gymnophionas-conservacao-amostragem/</guid>
+      <description>Trabalho de Conclusão de Curso, onde compilamos trabalhos e ocorrências das espécies de Gymnophiona para o Brasil e criamos modelos de distribuição de espécies para encontrar a distribuição potencial para direcionar esforços de amostragem em trabalhos de campo</description>
+    </item>
+    <item>
+      <title>Planejamento sistemático de conservação no contexto do projeto BIOTA/FAPESP</title>
+      <link>https://mauriciovancine.github.io/publications/conservacao-biota-fapesp/</link>
+      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/conservacao-biota-fapesp/</guid>
+      <description>Trabalho de Conclusão de Curso, onde aplicamos o Planejamento Sistemático de Conservação com a finalidade de revisão e/ou refinamento dos mapas de áreas prioritárias para conservação e restauração do BIOTA/FAPESP</description>
+    </item>
+  </channel>
+</rss>

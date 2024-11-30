@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tese on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/categories/tese/</link>
+    <description>Recent content in Tese on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 05 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/categories/tese/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-paisagem/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-paisagem/</guid>
+      <description>Nesta tese, investigamos a dinâmica espaço-temporal da estrutura da paisagem da Mata Atlântica e seu impacto nas dimensões taxonômicas e funcionais de anuros. Organizamos parte dos dados em dois data papers: ATLANTIC SPATIAL, que inclui 500 rasters com métricas de paisagem, topografia, hidrografia e fatores antrópicos, e o ATLANTIC AMPHIBIAN TRAITS, que possui atributos funcionais morfológicos e ecológicos de anfíbios</description>
+    </item>
+    <item>
+      <title>Diversidade, distribuição e efeito das mudanças climáticas sobre comunidades de anfíbios da Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-diversidade/</link>
+      <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-diversidade/</guid>
+      <description>Nesta dissertação apresento uma ampla compilação e avaliação da composição e distribuição das comunidades de anfíbios já inventariadas para o Bioma da Mata Atlântica. Num segundo momento, utilizo parte dos dados das comunidades para inferir como as mudanças climáticas poderão afetar a distribuição de anuros do gênero Brachycephalus, grupo considerado altamente sensível às alterações climáticas</description>
+    </item>
+    <item>
+      <title>Efeito da fragmentação sobre a persistência de anfíbios anuros (Amphibia: Anura) na Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-persistencia/</link>
+      <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-persistencia/</guid>
+      <description>Trabalho de Conclusão de Curso, onde testamos o efeito da estrutura da paisagem, em escala regional, sobre a persistência na paisagem de espécies de anuros florestais com reprodução terrestre</description>
+    </item>
+  </channel>
+</rss>

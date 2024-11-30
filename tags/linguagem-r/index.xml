@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linguagem R on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/linguagem-r/</link>
+    <description>Recent content in Linguagem R on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 27 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/linguagem-r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Métricas de paisagem no R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</guid>
+      <description>Descrição O curso tem o intuito de oferecer uma introdução teórica e prática sobre o cálculo de métricas de paisagem categóricas (composição e configuração) utilizando a linguagem R através do pacote landscapemetrics. Primeiramente são apresentados os principais conceitos de ecologia da paisagem, métricas de paisagem, geoprocessamento, dados geoespaciais, linguagem R e detalhes do pacote landscapmetrics.&#xA;Oferecimento Laboratório de Ecologia Espacial e Conservação (LEEC). (2022). Online. Carga horária: 04:00 h. SynEco - I Simpósio Brasileiro de Síntese Ecológica.</description>
+    </item>
+    <item>
+      <title>Analisando padrões espaciais em dados de biodiversidade</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-spatial-patterns-biodiversity-data/</link>
+      <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-spatial-patterns-biodiversity-data/</guid>
+      <description>Descrição O workshop apresenta os principais conceitos e lacunas de biodiversidade, principais fontes de dados de ocorrências de espécies e os problemas de viés de amostragem e como contorná-los. Em seguida, são apresentados algumas das principais análises espaciais que utilizam esses dados, como resumo de dados para unidades espaciais, adensamento de pontos (kernel) e uma rápida introdução à Modelos de Distribuição de Espécies. A parte prática é realizada utilizando a linguagem R.</description>
+    </item>
+    <item>
+      <title>Programação em linguagem R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-prog-r/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-prog-r/</guid>
+      <description>Descrição Apresentação dos principais conceitos da programação na linguagem R. São abordados os seguintes temas: (1) controle de fluxo, (2) repetições e (3) criação de funções. Ao final do minicurso espera-se que os participantes adquiram conhecimentos básicos do funcionamento da em programação básica usando a linguagem R.&#xA;Oferecimentos NT265/NE441 - Análise de dados e apresentação de gráficos usando a linguagem R - PPG Ecologia. (2024). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil.</description>
+    </item>
+    <item>
+      <title>Introdução à linguagem R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-intro-r/</link>
+      <pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-intro-r/</guid>
+      <description>Descrição O minicurso apresenta os principais conceitos da linguagem R e do IDE RStudio para a manipulação e visualização de dados através do tidyverse. O tidyverse é um conjunto de pacotes e funções que compartilham uma mesma estrutura e sintaxe, com o intuito de criar códigos eficientes e organizados. Os pacotes são focados principalmente na organização (leitura, filtragem, organização, seleção e resumo) e visualização de dados (gráficos). Serão abordados os seguintes temas: (1) linguagem R, (2) tidyverse e (3) visualização de dados.</description>
+    </item>
+    <item>
+      <title>Análises Ecológicas no R</title>
+      <link>https://mauriciovancine.github.io/publications/eco-r/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/eco-r/</guid>
+      <description>O livro Análises Ecológicas no R é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Morcego on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/morcego/</link>
+    <description>Recent content in Morcego on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 20 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/morcego/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Where do they live? Predictive geographic distribution of Tadarida brasiliensis (Chiroptera, Molossidae) in South America</title>
+      <link>https://mauriciovancine.github.io/publications/bat-sa/</link>
+      <pubDate>Tue, 22 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/bat-sa/</guid>
+      <description>Inferimos a distribuição potencial de T. brasiliensis brasiliensis em todo o continente Sul Americano, indicando as variáveis com maior influência em sua distribuição</description>
+    </item>
+  </channel>
+</rss>

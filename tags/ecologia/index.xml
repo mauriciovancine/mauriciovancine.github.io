@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ecologia on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/ecologia/</link>
+    <description>Recent content in Ecologia on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/ecologia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparação da distribuição de espécies inferidos por modelos de nicho ecológicos e mapas de especialistas da IUCN para anfíbios anuros da América do Sul</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-iucn-america-sul/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-iucn-america-sul/</guid>
+      <description>Trabalho de Conclusão de Curso, onde SDMs baseados em variáveis climáticas para predizer a distribuição potencial de espécies de anuros da América do Sul e comparar com os polígonos disponibilizados pela IUCN</description>
+    </item>
+    <item>
+      <title>Análises Ecológicas no R</title>
+      <link>https://mauriciovancine.github.io/publications/eco-r/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/eco-r/</guid>
+      <description>O livro Análises Ecológicas no R é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R</description>
+    </item>
+    <item>
+      <title>Distribuição do padrão reprodutivo em comunidades de anuros na Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-padroes-reprodutivos/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-padroes-reprodutivos/</guid>
+      <description>Trabalho de Conclusão de Curso, onde buscamos entender a relação das condições climáticas e dois atributos funcionais reprodutivos das espécies (explosivo e prolongado) em comunidades de anuros no Bioma da Mata Atlântica</description>
+    </item>
+  </channel>
+</rss>

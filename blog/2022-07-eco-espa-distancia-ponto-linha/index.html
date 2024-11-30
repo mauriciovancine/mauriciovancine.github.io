@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.130.0">
+<title>Distância de pontos a linhas | Maurício Vancine</title>
+
+
+<meta property="twitter:site" content="@mauriciovancine">
+<meta property="twitter:creator" content="@mauriciovancine">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Cálculo da distância de pontos a linhas no R e no QGIS">
+
+
+<meta property="og:site_name" content="Maurício Vancine">
+<meta property="og:title" content="Distância de pontos a linhas | Maurício Vancine">
+<meta property="og:description" content="Cálculo da distância de pontos a linhas no R e no QGIS" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/" />
+<meta property="og:locale" content="pt-br">
+
+
+
+
+    
+        <meta property="og:image" content="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/featured.jpg" >
+    
+    
+  
+  <meta itemprop="name" content="Distância de pontos a linhas">
+  <meta itemprop="description" content="Cálculo da distância de pontos a linhas no R e no QGIS">
+  <meta itemprop="datePublished" content="2022-07-10T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2022-07-10T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1906">
+  <meta itemprop="image" content="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/featured.jpg">
+  <meta itemprop="keywords" content="Geoprocessamento,Geoespacial,R,Distância">
+  
+  
+
+
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.f039f41e61940aa743e97653edd07c8b48e7fbd36c8c465f1ea9f0e4d4ad1073.css" integrity="sha256-8Dn0HmGUCqdD6XZT7dB8i0jn&#43;9NsjEZfHqnw5NStEHM=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.43a16206850df307a9ecc165118c6e7eab95cf24ab4cf99d6388dc7971e9b6ce.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single-sidebar">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://mauriciovancine.github.io/" title="Home">
+      <img src="/img/favicon.png" class="dib db-l h2 w-auto" alt="Maurício Vancine">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="Sobre">Sobre</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Projetos">Projetos</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Palestras">Palestras</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/teaching/" title="Ensino">Ensino</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publication/" title="Publicações">Publicações</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/cv/cv-academic.pdf" title="">CV</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/resume/resume.pdf" title="">Resumé</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pr3-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Distância de pontos a linhas</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Cálculo da distância de pontos a linhas no R e no QGIS</h4>
+        <p class="f6 measure lh-copy mv1">By Maurício Vancine in <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </p>
+        <p class="f7 db mv0 ttu">July 10, 2022</p>
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h2 id="contextualização">Contextualização
+  <a href="#contextualiza%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Há um certo tempo, o 
+<a href="https://spatialecologyufba.wordpress.com/" target="_blank" rel="noopener">Prof. Pavel Dodonov da UFBA</a> e autor do blog 
+<a href="https://anotherecoblog.wordpress.com/" target="_blank" rel="noopener">Mais Um Blog de Ecologia e Estatística</a> me mandou um email pedindo ajuda com um problema muito interessante. Nas palavras dele: &ldquo;Tenho um conjunto de pontos e uma linha representando uma estrada, e quero projetar os pontos sobre a estrada, ou seja, criar sobre a estrada um conjunto de pontos que sejam o mais próximos dos pontos originais.&rdquo;</p>
+<p>Ele mesmo achou a solução no QGIS neste 
+<a href="https://gis.stackexchange.com/questions/246541/creating-points-projected-on-line-using-qgis" target="_blank" rel="noopener">link</a> e enviou a solução usando o &ldquo;Geometry by expression&rdquo; do &ldquo;Processing Toolbox&rdquo;, com a expressão:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#268bd2">closest_point</span>( <span style="color:#268bd2">geometry</span>(<span style="color:#268bd2">get_feature</span>(<span style="color:#2aa198">&#39;vetor_estrada&#39;</span>,<span style="color:#2aa198">&#39;ID&#39;</span>,<span style="color:#2aa198">1</span>)), <span style="color:#719e07">$</span>geometry)
+</span></span></code></pre></div><p>Eu gosto muito do QGIS. Mas prefiro o R para fazer esses tipos de análises porque gosto de ter um script que me recorde dos passos realizados. Além disso sou preguiçoso para lembrar dos cliques e caminhos para ter o mesmo resultado no QGIS.</p>
+<p>Olhando para esse problema e pensando que há muitas aplicações em Ecologia Espacial, como distância de registros de animais ou plantas de um transecto, efeito de atropelamento, distância de floresta para corpos d&rsquo;água, etc., decidi procurar uma solução em R. Este post é a solução que encontrei.</p>
+
+
+
+
+<h2 id="pacotes">Pacotes
+  <a href="#pacotes"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Vamos usar aqui os pacotes: <code>dplyr</code> para manipular dados tabulares, <code>ggplot2</code> para gráficos, <code>geobr</code> para limites geográficos (lembrando que atualmente para instalar esse pacote precisa ser do 
+<a href="https://github.com/ipeaGIT/geobr" target="_blank" rel="noopener">GitHub</a>), <code>sf</code> para manipular dados vetoriais, <code>raster</code> para manipular dados raster, <code>geosphere</code> para as distância perpendiculares, <code>SpatialKDE</code> para densidade de kernel e o <code>tmap</code> para fazer os mapas. Vamos aumentar o tempo de download também.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># pacotes</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(dplyr)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(ggplot2)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(geobr)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(sf)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(raster)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(geosphere)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(SpatialKDE)
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">library</span>(tmap)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># opcoes</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">options</span>(timeout <span style="color:#719e07">=</span> <span style="color:#2aa198">600</span>) <span style="color:#586e75"># aumentar o tempo de download</span>
+</span></span></code></pre></div>
+
+
+
+<h2 id="download-dos-dados">Download dos dados
+  <a href="#download-dos-dados"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Vamos começar com um conjunto de dados para fazer essas análises. Mudando um pouco o foco do problema e contextualizando, eu vou usar o centroide de lagos e lagoas para as estradas dos município de Rio Claro/SP. Assim, minha pergunta seria quais lagos e lagoas estão mais sugeitas a atropelamentos de anfíbios e ainda, quais dessas estariam sofrendo mais com a interferência sonora na vocalização de anfíbios.</p>
+<p>Os dados de lagoas, vou baixar da 
+<a href="http://geo.fbds.org.br/" target="_blank" rel="noopener">Fundação Brasileira de Desenvolvimento Sustentável (FBDS)</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># diretorio</span>
+</span></span><span style="display:flex;"><span>path <span style="color:#719e07">&lt;-</span> <span style="color:#2aa198">&#34;/home/mude/data/github/mauriciovancine/apero/content/blog/eco-espa-distancia-ponto-linha/data/&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># download de dados dos lagos e lagoas</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">for</span>(i <span style="color:#268bd2">in</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;.dbf&#34;</span>, <span style="color:#2aa198">&#34;.prj&#34;</span>, <span style="color:#2aa198">&#34;.shx&#34;</span>, <span style="color:#2aa198">&#34;.shp&#34;</span>)){
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">download.file</span>(url <span style="color:#719e07">=</span> <span style="color:#268bd2">paste0</span>(<span style="color:#2aa198">&#34;http://geo.fbds.org.br/SP/RIO_CLARO/HIDROGRAFIA/SP_3543907_MASSAS_DAGUA&#34;</span>, i), 
+</span></span><span style="display:flex;"><span>                  destfile <span style="color:#719e07">=</span> <span style="color:#268bd2">paste0</span>(path, <span style="color:#2aa198">&#34;SP_3543907_MASSAS_DAGUA&#34;</span>, i), mode <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;wb&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Agora vamos fazer o download das rodovidas federais do 
+<a href="https://servicos.dnit.gov.br/dnitcloud/index.php/s/oTpPRmYs5AAdiNr?path=%2FSNV%20Bases%20Geom%C3%A9tricas%20%282013-Atual%29%20%28SHP%29" target="_blank" rel="noopener">Departamento Nacional de Infraestrutura de Transportes (DNIT)</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># download de dados das estradas</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">download.file</span>(url <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;https://servicos.dnit.gov.br/dnitcloud/index.php/s/oTpPRmYs5AAdiNr/download?path=%2FSNV%20Bases%20Geom%C3%A9tricas%20(2013-Atual)%20(SHP)&amp;files=202206A.zip&#34;</span>, 
+</span></span><span style="display:flex;"><span>              destfile <span style="color:#719e07">=</span> <span style="color:#268bd2">paste0</span>(path, <span style="color:#2aa198">&#34;rodovia.zip&#34;</span>), mode <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;wb&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># unzip</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">unzip</span>(zipfile <span style="color:#719e07">=</span> <span style="color:#268bd2">paste0</span>(path, <span style="color:#2aa198">&#34;rodovia.zip&#34;</span>), exdir <span style="color:#719e07">=</span> path)
+</span></span></code></pre></div>
+
+
+
+<h2 id="importar-dados-para-o-r">Importar dados para o R
+  <a href="#importar-dados-para-o-r"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Vamos primeiramente importar dados do limite de Rio Claro/SP e reprojetar para o sistema geográfico com Datum SIRGAS2000.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># download de dados para o limite de Rio Claro/SP</span>
+</span></span><span style="display:flex;"><span>rio_claro <span style="color:#719e07">&lt;-</span> geobr<span style="color:#719e07">::</span><span style="color:#268bd2">read_municipality</span>(code_muni <span style="color:#719e07">=</span> <span style="color:#2aa198">3543907</span>, year <span style="color:#719e07">=</span> <span style="color:#2aa198">2020</span>, showProgress <span style="color:#719e07">=</span> <span style="color:#cb4b16">FALSE</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_transform</span>(crs <span style="color:#719e07">=</span> <span style="color:#2aa198">4674</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">mutate</span>(id <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">select</span>(id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># mapa</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>()
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+<p>Agora vamos importar esses dados para o R. Primeiro, vamos importar os dados de lagos/lagoas.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># importar dados de lagos/lagoas</span>
+</span></span><span style="display:flex;"><span>lagos <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_read</span>(<span style="color:#268bd2">paste0</span>(path, <span style="color:#2aa198">&#34;SP_3543907_MASSAS_DAGUA.shp&#34;</span>), quiet <span style="color:#719e07">=</span> <span style="color:#cb4b16">TRUE</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_transform</span>(crs <span style="color:#719e07">=</span> <span style="color:#2aa198">4674</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">mutate</span>(id <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">select</span>(id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># mapa</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_fill</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;blue&#34;</span>)
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<p>Agora, vamos importar dos dados de rodovia e ajustar para o limite de Rio Claro/SP.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># importar dados de rodovia</span>
+</span></span><span style="display:flex;"><span>rodovia <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_read</span>(<span style="color:#268bd2">paste0</span>(path, <span style="color:#2aa198">&#34;SNV_202206A.shp&#34;</span>), quiet <span style="color:#719e07">=</span> <span style="color:#cb4b16">TRUE</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_intersection</span>(rio_claro) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_union</span>() <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_as_sf</span>() <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">mutate</span>(id <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">select</span>(id)
+</span></span></code></pre></div><pre tabindex="0"><code>## Warning: attribute variables are assumed to be spatially constant throughout all
+## geometries
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># mapa</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>()
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+
+
+
+
+<h2 id="análise">Análise
+  <a href="#an%c3%a1lise"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Uma forma de realizar essa análise é usando dados geográficos. Isso funciona melhor para grandes distâncias geográficas, porque considera a curvatura do planeta. Dessa forma, utilizaremos a função <code>dist2Line()</code> do pacote <code>geosphere</code>.</p>
+<p>A nossa primeira análise é criar os centroides para os lagos/lagoas de Rio Claro/SP.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># centroides</span>
+</span></span><span style="display:flex;"><span>lagos_centroides <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_centroid</span>(lagos)
+</span></span></code></pre></div><pre tabindex="0"><code>## Warning in st_centroid.sf(lagos): st_centroid assumes attributes are constant
+## over geometries of x
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># mapa</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_dots</span>()
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+<p>Agora, podemos calcular as distâncias de cada centroide dos lagos/lagoas até a rodovia. Mas antes disso, precisamos transformar nossos dados de <code>sf</code> para <code>sp</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># sp</span>
+</span></span><span style="display:flex;"><span>lagos_centroides_sp <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">as_Spatial</span>(lagos_centroides)
+</span></span><span style="display:flex;"><span>rodovia_sp <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">as_Spatial</span>(rodovia)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># distancias</span>
+</span></span><span style="display:flex;"><span>dist <span style="color:#719e07">&lt;-</span> geosphere<span style="color:#719e07">::</span><span style="color:#268bd2">dist2Line</span>(lagos_centroides_sp, rodovia_sp) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">as.data.frame</span>()
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">head</span>(dist)
+</span></span></code></pre></div><pre tabindex="0"><code>##    distance       lon       lat ID
+## 1 11668.100 -47.55548 -22.45285  1
+## 2 11329.337 -47.55548 -22.45285  1
+## 3 10451.366 -47.55548 -22.45285  1
+## 4 10372.662 -47.55548 -22.45285  1
+## 5  8254.727 -47.55548 -22.45285  1
+## 6  8164.196 -47.55548 -22.45285  1
+</code></pre><p>O resultado é uma tabela que contém quatro colunas:</p>
+<ul>
+<li><strong>distance</strong>: distância em metros do centroide do lago/lagoa até a rodovia</li>
+<li><strong>lon</strong>: longitude da ponto que cai sobre a rodovia</li>
+<li><strong>lat</strong>: latitude da ponto que cai sobre a rodovia</li>
+<li><strong>id</strong>: identificação de cada linha, mas no nosso caso como há apenas uma rodovia, o valor é sempre um</li>
+</ul>
+<p>A ordem dos dados segue a mesma ordem dos pontos. Assim, já teríamos uma ideia de qual lago/lagoa seria mais afetada atribuindo esses valores ao vetor dos centroides ou mesmo do polígono de lagos/lagos.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># atribuindo os valores de distancia a centroides e lagos/lagoas</span>
+</span></span><span style="display:flex;"><span>lagos_dist <span style="color:#719e07">&lt;-</span> dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">bind_cols</span>(lagos, dist)
+</span></span><span style="display:flex;"><span>lagos_centroides_dist <span style="color:#719e07">&lt;-</span> dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">bind_cols</span>(lagos_centroides, dist)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># mapas de lagos/lagoas</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_dist) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_fill</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;distance&#34;</span>, pal <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Spectral&#34;</span>, style <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;pretty&#34;</span>, n <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>()
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># mapa de centroides</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides_dist) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_bubbles</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;distance&#34;</span>, pal <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Spectral&#34;</span>, size <span style="color:#719e07">=</span> <span style="color:#2aa198">.1</span>, 
+</span></span><span style="display:flex;"><span>               style <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;pretty&#34;</span>, n <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>)
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-11-2.png" width="672" />
+<p>Mas a parte legal das análises é ter os pontos sobre a rodovia, assim como as linhas de distância.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># vetores</span>
+</span></span><span style="display:flex;"><span>lagos_centroides_pontos_total <span style="color:#719e07">&lt;-</span> <span style="color:#cb4b16">NULL</span>
+</span></span><span style="display:flex;"><span>lagos_centroides_linhas_total <span style="color:#719e07">&lt;-</span> <span style="color:#cb4b16">NULL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># for</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">for</span>(i <span style="color:#268bd2">in</span> <span style="color:#2aa198">1</span><span style="color:#719e07">:</span><span style="color:#268bd2">nrow</span>(lagos_centroides)){
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># filtrar</span>
+</span></span><span style="display:flex;"><span>    lagos_centroides_i <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_as_sf</span>(lagos_centroides[i, ])
+</span></span><span style="display:flex;"><span>    lagos_centroides_dist_i <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_as_sf</span>(dist[i, <span style="color:#2aa198">2</span><span style="color:#719e07">:</span><span style="color:#2aa198">3</span>], coords <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;lon&#34;</span>, <span style="color:#2aa198">&#34;lat&#34;</span>), crs <span style="color:#719e07">=</span> <span style="color:#2aa198">4674</span>)
+</span></span><span style="display:flex;"><span>    lagos_centroides_lines_i <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_union</span>(lagos_centroides_i, lagos_centroides_dist_i) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>        sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_cast</span>(<span style="color:#2aa198">&#34;LINESTRING&#34;</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>        dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">select</span>(geometry) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>        dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">mutate</span>(dist <span style="color:#719e07">=</span> lagos_centroides_dist[i, <span style="color:#2aa198">1</span>], .before <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># combinar</span>
+</span></span><span style="display:flex;"><span>    lagos_centroides_pontos_total <span style="color:#719e07">&lt;-</span> dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">bind_rows</span>(lagos_centroides_pontos_total, lagos_centroides_dist_i)
+</span></span><span style="display:flex;"><span>    lagos_centroides_linhas_total <span style="color:#719e07">&lt;-</span> dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">bind_rows</span>(lagos_centroides_linhas_total, lagos_centroides_lines_i)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Agora temos os pontos que caem em cima da rodovia e as linhas que conectam esses pontos à cada centroide de lagos/lagoas.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># mapa</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides_pontos_total) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_dots</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;red&#34;</span>, alpha <span style="color:#719e07">=</span> <span style="color:#2aa198">.5</span>)
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-13-1.png" width="672" />
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># mapa</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_dots</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides_pontos_total) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_dots</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;red&#34;</span>, alpha <span style="color:#719e07">=</span> <span style="color:#2aa198">.5</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides_linhas_total) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;forestgreen&#34;</span>, alpha <span style="color:#719e07">=</span> <span style="color:#2aa198">.5</span>)
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-13-2.png" width="672" />
+<p>É importante ressaltar que as linhas não parecem perpendiculares porque a rodovia muda sua angulação, fazendo com que alguns pontos não parecem perpendiculares.</p>
+<p>Para garantir esse efeito, podemos usar uma linha que conecte os extremos da rodovia e rodar novamente a análise.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># pontos extremos da rodovia</span>
+</span></span><span style="display:flex;"><span>rodovia_pontos <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_cast</span>(rodovia, <span style="color:#2aa198">&#34;POINT&#34;</span>)<span style="color:#268bd2">[c</span>(<span style="color:#2aa198">1</span>, <span style="color:#2aa198">29</span>), ] 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># linha que conecta os pontos extremos da rodovia</span>
+</span></span><span style="display:flex;"><span>rodovia_linha <span style="color:#719e07">&lt;-</span> rodovia_pontos <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">group_by</span>(id) <span style="color:#719e07">|&gt;</span>
+</span></span><span style="display:flex;"><span>    sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_union</span>() <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_cast</span>(<span style="color:#2aa198">&#34;LINESTRING&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># mapa</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia_pontos) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_bubbles</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia_linha) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;blue&#34;</span>)
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-14-1.png" width="672" />
+<p>Vamos recalcular as distâncias.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># distancias</span>
+</span></span><span style="display:flex;"><span>dist_per <span style="color:#719e07">&lt;-</span> geosphere<span style="color:#719e07">::</span><span style="color:#268bd2">dist2Line</span>(lagos_centroides_sp, sf<span style="color:#719e07">::</span><span style="color:#268bd2">as_Spatial</span>(rodovia_linha)) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">as.data.frame</span>()
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">head</span>(dist_per)
+</span></span></code></pre></div><pre tabindex="0"><code>##    distance       lon       lat ID
+## 1 11668.100 -47.55548 -22.45285  1
+## 2 11329.337 -47.55548 -22.45285  1
+## 3 10451.366 -47.55548 -22.45285  1
+## 4 10372.662 -47.55548 -22.45285  1
+## 5  8254.727 -47.55548 -22.45285  1
+## 6  8164.196 -47.55548 -22.45285  1
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># vetores </span>
+</span></span><span style="display:flex;"><span>lagos_centroides_pontos_total_per <span style="color:#719e07">&lt;-</span> <span style="color:#cb4b16">NULL</span>
+</span></span><span style="display:flex;"><span>lagos_centroides_linhas_total_per <span style="color:#719e07">&lt;-</span> <span style="color:#cb4b16">NULL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># for</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">for</span>(i <span style="color:#268bd2">in</span> <span style="color:#2aa198">1</span><span style="color:#719e07">:</span><span style="color:#268bd2">nrow</span>(lagos_centroides)){
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># filtrar</span>
+</span></span><span style="display:flex;"><span>    lagos_centroides_i <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_as_sf</span>(lagos_centroides[i, ])
+</span></span><span style="display:flex;"><span>    lagos_centroides_dist_i <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_as_sf</span>(dist_per[i, <span style="color:#2aa198">2</span><span style="color:#719e07">:</span><span style="color:#2aa198">3</span>], coords <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;lon&#34;</span>, <span style="color:#2aa198">&#34;lat&#34;</span>), crs <span style="color:#719e07">=</span> <span style="color:#2aa198">4674</span>)
+</span></span><span style="display:flex;"><span>    lagos_centroides_lines_i <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_union</span>(lagos_centroides_i, lagos_centroides_dist_i) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>        sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_cast</span>(<span style="color:#2aa198">&#34;LINESTRING&#34;</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>        dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">select</span>(geometry) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>        dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">mutate</span>(dist <span style="color:#719e07">=</span> lagos_centroides_dist[i, <span style="color:#2aa198">1</span>], .before <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># combinar</span>
+</span></span><span style="display:flex;"><span>    lagos_centroides_pontos_total_per <span style="color:#719e07">&lt;-</span> dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">bind_rows</span>(lagos_centroides_pontos_total_per, lagos_centroides_dist_i)
+</span></span><span style="display:flex;"><span>    lagos_centroides_linhas_total_per <span style="color:#719e07">&lt;-</span> dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">bind_rows</span>(lagos_centroides_linhas_total_per, lagos_centroides_lines_i)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Agora temos os pontos que caem em cima da rodovia e as linhas que conectam esses pontos à cada centroide de lagos/lagoas.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># mapa</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides_pontos_total_per) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_dots</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;red&#34;</span>, alpha <span style="color:#719e07">=</span> <span style="color:#2aa198">.5</span>)
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-17-1.png" width="672" />
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># mapa</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(rio_claro) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_polygons</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_dots</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides_pontos_total_per) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_dots</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;red&#34;</span>, alpha <span style="color:#719e07">=</span> <span style="color:#2aa198">.5</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides_linhas_total_per) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;forestgreen&#34;</span>, alpha <span style="color:#719e07">=</span> <span style="color:#2aa198">.5</span>)
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-17-2.png" width="672" />
+<p>Comparando os resultados das distâncias, não notamos uma diferença significativa.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#268bd2">ggplot</span>(data <span style="color:#719e07">=</span> tibble<span style="color:#719e07">::</span><span style="color:#268bd2">tibble</span>(dist <span style="color:#719e07">=</span> dist<span style="color:#719e07">$</span>distance, dist_per <span style="color:#719e07">=</span> dist_per<span style="color:#719e07">$</span>distance)) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">aes</span>(x <span style="color:#719e07">=</span> dist, y <span style="color:#719e07">=</span> dist_per) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">geom_point</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">labs</span>(x <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Distância (m)&#34;</span>, y <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Distância perpendicular (m)&#34;</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">annotate</span>(<span style="color:#2aa198">&#34;text&#34;</span>, x <span style="color:#719e07">=</span> <span style="color:#2aa198">2000</span>, y <span style="color:#719e07">=</span> <span style="color:#2aa198">19000</span>, label <span style="color:#719e07">=</span> <span style="color:#268bd2">paste0</span>(<span style="color:#2aa198">&#34;r = &#34;</span>, <span style="color:#268bd2">round</span>(<span style="color:#268bd2">cor</span>(dist<span style="color:#719e07">$</span>distance, dist_per<span style="color:#719e07">$</span>distance), <span style="color:#2aa198">3</span>)), size <span style="color:#719e07">=</span> <span style="color:#2aa198">7</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">theme_bw</span>(base_size <span style="color:#719e07">=</span> <span style="color:#2aa198">15</span>)
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-18-1.png" width="672" />
+
+
+
+
+<h2 id="qgis">QGIS
+  <a href="#qgis"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Como disse antes, eu amo o QGIS e pode ser interessante registrar aqui também uma forma de fazer nele. A implementação eu segui deste 
+<a href="https://gis.stackexchange.com/questions/246541/creating-points-projected-on-line-using-qgis" target="_blank" rel="noopener">site</a>. Para mais detalhes de como usar o &ldquo;Geometry Generator&rdquo;, veja este 
+<a href="https://youtu.be/0YxjJ-9zIJ0" target="_blank" rel="noopener">vídeo</a>. Mas ressaltando que aqui, usamos o &ldquo;Geometry by expression&rdquo; do &ldquo;Processing Toolbox&rdquo;.</p>
+<p>Bom, primeiro vamos exportar os dados para um diretório.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># exportar</span>
+</span></span><span style="display:flex;"><span>sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_write</span>(lagos_centroides, <span style="color:#268bd2">paste0</span>(path, <span style="color:#2aa198">&#34;lagos_centroides.shp&#34;</span>))
+</span></span><span style="display:flex;"><span>sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_write</span>(rodovia, <span style="color:#268bd2">paste0</span>(path, <span style="color:#2aa198">&#34;rodovia.shp&#34;</span>))
+</span></span></code></pre></div><p>Em seguida, vamos carreguar os dados no QGIS.</p>
+<p><img src="img/qgis01.png" alt=""></p>
+<p>Para criar os pontos em cima da rodovia, procure por &ldquo;Geometry by expression&rdquo; no &ldquo;Processing Toolbox&rdquo;. Abra essa ferramenta e na janela que se abrir defina:</p>
+<ul>
+<li><strong>Camada de entrada</strong>: lagos_centroides</li>
+<li><strong>Tipo de Geometria de Saída</strong>: Ponto</li>
+<li><strong>Expressão de Geometria</strong>:  <code>closest_point( geometry(get_feature('rodovia','ID',1)), $geometry)</code></li>
+<li><strong>Modificar geomentria</strong>: criar uma camada temporária ou selecionar um diretório e nome do arquivo de saída</li>
+</ul>
+<p><img src="img/qgis02.png" alt=""></p>
+<p>Para criar as linhas que ligam os centroides aos pontos em cima da rodovia, abra essa mesma ferramenta e na janela que se abrir defina:</p>
+<ul>
+<li><strong>Camada de entrada</strong>: lagos_centroides</li>
+<li><strong>Tipo de Geometria de Saída</strong>: Linha</li>
+<li><strong>Expressão de Geometria</strong>:  <code>shortest_line( geometry(get_feature('rodovia','ID',1)), $geometry)</code></li>
+<li><strong>Modificar geomentria</strong>: criar uma camada temporária ou selecionar um diretório e nome do arquivo de saída</li>
+</ul>
+<p><img src="img/qgis03.png" alt=""></p>
+<p>O resultado dessas operações.</p>
+<p><img src="img/qgis04.png" alt=""></p>
+<p>Para calcular as distâncias ou melhor, o comprimento das linhas, basta deixar as linhas criadas selecionadas, ir em &ldquo;Modificar geometria - Calculadora de campo&rdquo;, criar um campo novo, adicionar um nome, em tipo selecionar Número decimal (real), e na expressão utilizar <code>$length</code>. Assim, uma coluna será adicionada com o comprimento das linhas, que é a distância de cada centroide para o ponto que cai em cima da rodovia.</p>
+<p>Fazendo novamente uma correlação temos números quase idênticos.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># correlacao</span>
+</span></span><span style="display:flex;"><span>linhas_qgis <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_read</span>(<span style="color:#268bd2">paste0</span>(path, <span style="color:#2aa198">&#34;linhas_qgis.shp&#34;</span>), quiet <span style="color:#719e07">=</span> <span style="color:#cb4b16">TRUE</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">ggplot</span>(data <span style="color:#719e07">=</span> tibble<span style="color:#719e07">::</span><span style="color:#268bd2">tibble</span>(dist <span style="color:#719e07">=</span> dist<span style="color:#719e07">$</span>distance, dist_qgis <span style="color:#719e07">=</span> linhas_qgis<span style="color:#719e07">$</span>dist)) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">aes</span>(x <span style="color:#719e07">=</span> dist, y <span style="color:#719e07">=</span> dist_qgis) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">geom_point</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">labs</span>(x <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Distância (m)&#34;</span>, y <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Distância QGIS (m)&#34;</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">annotate</span>(<span style="color:#2aa198">&#34;text&#34;</span>, x <span style="color:#719e07">=</span> <span style="color:#2aa198">2000</span>, y <span style="color:#719e07">=</span> <span style="color:#2aa198">19000</span>, label <span style="color:#719e07">=</span> <span style="color:#268bd2">paste0</span>(<span style="color:#2aa198">&#34;r = &#34;</span>, <span style="color:#268bd2">round</span>(<span style="color:#268bd2">cor</span>(dist<span style="color:#719e07">$</span>distance, linhas_qgis<span style="color:#719e07">$</span>dist), <span style="color:#2aa198">5</span>)), size <span style="color:#719e07">=</span> <span style="color:#2aa198">7</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">theme_bw</span>(base_size <span style="color:#719e07">=</span> <span style="color:#2aa198">15</span>)
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-20-1.png" width="672" />
+<p>Comparei os resultados visualmente e há pequenas mudanças, talvez sejam algoritmos diferentes, mas não sei ao certo. De qualquer forma, os dados ficam bem semelhantes.</p>
+
+
+
+
+<h1 id="kernel">Kernel
+  <a href="#kernel"></a>
+</h1>
+<p>Por fim, uma análise final muito interessante que podemos fazer é uma análise de kernel ou adensamento dos pontos ao longo da rodovia. Isso pode trazer um panorama interessante de onde os corpos d&rsquo;água se agrupam mais.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#586e75"># reprojetar pontos</span>
+</span></span><span style="display:flex;"><span>lagos_centroides_pontos_total_utm <span style="color:#719e07">&lt;-</span> sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_transform</span>(lagos_centroides_pontos_total, crs <span style="color:#719e07">=</span> <span style="color:#2aa198">31984</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># buffer</span>
+</span></span><span style="display:flex;"><span>rodovia_utm_buffer <span style="color:#719e07">&lt;-</span> rodovia <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_transform</span>(crs <span style="color:#719e07">=</span> <span style="color:#2aa198">31984</span>) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    sf<span style="color:#719e07">::</span><span style="color:#268bd2">st_buffer</span>(dist <span style="color:#719e07">=</span> <span style="color:#2aa198">2000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># cell size e band width</span>
+</span></span><span style="display:flex;"><span>cell_size <span style="color:#719e07">&lt;-</span> <span style="color:#2aa198">200</span>
+</span></span><span style="display:flex;"><span>band_width <span style="color:#719e07">&lt;-</span> <span style="color:#2aa198">500</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># grid</span>
+</span></span><span style="display:flex;"><span>rodovia_utm_buffer_raster <span style="color:#719e07">&lt;-</span> rodovia_utm_buffer <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">create_raster</span>(cell_size <span style="color:#719e07">=</span> cell_size, side_offset <span style="color:#719e07">=</span> band_width)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># kernel</span>
+</span></span><span style="display:flex;"><span>lagos_centroides_pontos_total_utm_buffer_kde <span style="color:#719e07">&lt;-</span> lagos_centroides_pontos_total_utm <span style="color:#719e07">|&gt;</span>
+</span></span><span style="display:flex;"><span>    dplyr<span style="color:#719e07">::</span><span style="color:#268bd2">select</span>(geometry) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    SpatialKDE<span style="color:#719e07">::</span><span style="color:#268bd2">kde</span>(band_width <span style="color:#719e07">=</span> band_width, 
+</span></span><span style="display:flex;"><span>                    kernel <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;quartic&#34;</span>, 
+</span></span><span style="display:flex;"><span>                    grid <span style="color:#719e07">=</span> rodovia_utm_buffer_raster) <span style="color:#719e07">|&gt;</span> 
+</span></span><span style="display:flex;"><span>    raster<span style="color:#719e07">::</span><span style="color:#268bd2">mask</span>(rodovia_utm_buffer)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># mapa</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">tm_shape</span>(lagos_centroides_pontos_total_utm_buffer_kde) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_raster</span>(pal <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;-RdBu&#34;</span>, style <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;fisher&#34;</span>, title <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Kernel&#34;</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia_utm_buffer) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_borders</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(rodovia) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>() <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides_linhas_total) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_lines</span>(col <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;forestgreen&#34;</span>, alpha <span style="color:#719e07">=</span> <span style="color:#2aa198">.3</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_shape</span>(lagos_centroides_pontos_total) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_dots</span>(alpha <span style="color:#719e07">=</span> <span style="color:#2aa198">.7</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">tm_layout</span>(legend.position <span style="color:#719e07">=</span> <span style="color:#268bd2">c</span>(<span style="color:#2aa198">&#34;left&#34;</span>, <span style="color:#2aa198">&#34;bottom&#34;</span>))
+</span></span></code></pre></div><img src="https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/index_files/figure-html/unnamed-chunk-21-1.png" width="672" />
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2022-08-geo-cob-terra-sankey/">&larr; Dinâmica de mudança de cobertura da terra e Diagrama de Sankey</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2022-01-geo-fonte-dados/">Fonte de dados geoespaciais &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      <div class="post-comments pa0 pa4-l mt4">
+  
+</div>
+
+    
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+                       
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/blog/sidebar.jpg" class="db ma0">
+
+
+<div class="blog-info ph4 pt4 pb4 pb0-l">
+  
+
+  <h1 class="f3">Blog</h1>
+  <p class="f6 lh-copy measure">Este é meu blog, onde compartilho meus aprendizados sobre R, Python, Linux, geoprocessamento, o universo e tudo mais&hellip;</p>
+  <p class="f7 measure lh-copy i mh0-l">Written by Maurício Vancine</p>
+
+
+  
+  <div class="dib bt bw1 b--black-10">
+    
+      <small class="db f7 pt3"><a href="/blog/" class="dib fw7 ttu">Veja os posts recentes</a></small>
+    
+    
+    
+    
+  </div>
+
+
+</div>
+
+
+  
+  <details open class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">July 10, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">9 minute read, 1906 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/geoprocessamento">Geoprocessamento</a>  <a href="https://mauriciovancine.github.io/tags/geoespacial">Geoespacial</a>  <a href="https://mauriciovancine.github.io/tags/r">R</a>  <a href="https://mauriciovancine.github.io/tags/dist%C3%A2ncia">Distância</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/teaching/workshop-landscapemetrics/">Métricas de paisagem no R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2024-11-r-qrcode/">Gerando QR code no R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2024-09-r-color-pallets/">Paletas de cores no R</a></dd>
+    
+  </dl>
+</details>
+
+</aside>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2024 Maurício Vancine
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/mauriciovancine" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://bsky.app/profile/mauriciovancine.bsky.social" title="bluesky" target="_blank" rel="me noopener">
+      <i class="fab fa-bluesky fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://mastodon.social/@mauriciovancine" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/mauriciovancine" title="x-twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-x-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.researchgate.net/profile/Mauricio-Vancine" title="researchgate" target="_blank" rel="me noopener">
+      <i class="ai ai-researchgate fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ" title="google-scholar" target="_blank" rel="me noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0001-9650-7575" title="orcid" target="_blank" rel="me noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.webofscience.com/wos/author/record/837504" title="researcherid" target="_blank" rel="me noopener">
+      <i class="ai ai-researcherid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888" title="scopus" target="_blank" rel="me noopener">
+      <i class="ai ai-scopus fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://osf.io/k8mxe/" title="osf" target="_blank" rel="me noopener">
+      <i class="ai ai-osf fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://figshare.com/authors/Mauricio_Vancine/2842289" title="figshare" target="_blank" rel="me noopener">
+      <i class="ai ai-figshare fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.zotero.org/mauriciovancine" title="zotero" target="_blank" rel="me noopener">
+      <i class="ai ai-zotero fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://lattes.cnpq.br/9761288418931193" title="lattes" target="_blank" rel="me noopener">
+      <i class="ai ai-lattes fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/mauricio-vancine/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">Licença</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contato">Contato</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Financiamento">Financiamento</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

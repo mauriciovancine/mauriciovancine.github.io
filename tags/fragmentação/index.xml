@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fragmentação on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/fragmenta%C3%A7%C3%A3o/</link>
+    <description>Recent content in Fragmentação on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 08 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/fragmenta%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation</title>
+      <link>https://mauriciovancine.github.io/publications/af-spatiotemporal/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/af-spatiotemporal/</guid>
+      <description>Analisamos a dinâmica espaço-temporal da estrutura da paisagem da vegetação na Mata Atlântica entre 1986 e 2020</description>
+    </item>
+    <item>
+      <title>Effect of landscape attributes at multiple scales on the occurrence of the threatened golden-headed lion tamarin, Leontopithecus chrysomelas Kuhl, 1820 (Primates, Callitrichidae)</title>
+      <link>https://mauriciovancine.github.io/publications/pri-land/</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/pri-land/</guid>
+      <description>Investigamos a ocorrência de L. chrysomelas em fragmentos florestais e cabrucas com base em entrevistas e utilizando censo de playback, e avaliamos a influência de atributos da paisagem em sua ocorrência</description>
+    </item>
+    <item>
+      <title>ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/af-spatial-data-paper-preprint/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/af-spatial-data-paper-preprint/</guid>
+      <description>Disponibilizamos informações espaciais integradas e em escala precisa (resolução = 30 m) para toda a extensão da Mata Atlântica para o ano de 2020</description>
+    </item>
+    <item>
+      <title>The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation</title>
+      <link>https://mauriciovancine.github.io/publications/af-spatiotemporal-preprint/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/af-spatiotemporal-preprint/</guid>
+      <description>Analisamos a dinâmica espaço-temporal da estrutura da paisagem da vegetação na Mata Atlântica entre 1986 e 2020</description>
+    </item>
+    <item>
+      <title>The fate of vegetation remnants  in the southern Amazon&#39;s largest threatened hotspot: part (I) a 33-year analysis of LULCC in the Tapajos River basin, Brazil</title>
+      <link>https://mauriciovancine.github.io/publications/landscape-am-trb/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/landscape-am-trb/</guid>
+      <description>Analisarmos a perda e fragmentação de habitat da Bacia do Rio Tapajós ao longo de três décadas e meia</description>
+    </item>
+    <item>
+      <title>Forest cover and connectivity have pervasive effects on the maintenance of evolutionary distinct interactions in seed dispersal networks</title>
+      <link>https://mauriciovancine.github.io/publications/network-seed-af/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/network-seed-af/</guid>
+      <description>Analisamos 29 redes de dispersão de sementes no hotspot de biodiversidade ameaçado da Mata Atlântica, com dados sobre a frequência de visitas alimentares de aves a plantas frutíferas.</description>
+    </item>
+    <item>
+      <title>Spatial prediction of risk areas for vector transmission of Trypanosoma cruzi in the State of Paraná, southern Brazil</title>
+      <link>https://mauriciovancine.github.io/publications/trypanosoma-pr/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/trypanosoma-pr/</guid>
+      <description>Analisamos como o clima e a estrutura da paisagem explicam a adequabilidade ambiental de Triatomas que podem estar infestados com Trypanosoma cruzi em municípios do Estado do Paraná</description>
+    </item>
+    <item>
+      <title>Forest cover influences occurrence of mammalian carnivores within Brazilian Atlantic Forest</title>
+      <link>https://mauriciovancine.github.io/publications/frag-mm-sc/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-mm-sc/</guid>
+      <description>Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de Santa Catarina</description>
+    </item>
+    <item>
+      <title>High mammal species turnover in forest patches immersed in biofuel plantations</title>
+      <link>https://mauriciovancine.github.io/publications/frag-mm-sp/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-mm-sp/</guid>
+      <description>Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de São Paulo</description>
+    </item>
+    <item>
+      <title>Atlantic Spatial</title>
+      <link>https://mauriciovancine.github.io/project/atlantic-spatial/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/atlantic-spatial/</guid>
+      <description>Publicações Vancine, M. H., Muylaert, R. L., Niebuhr, B. B., Oshima, J. E. F., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann C. H., &amp;amp; Ribeiro, M. C. (2024). The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation. Biological Conservation, 291, 110499. Preprints Vancine, M. H., Niebuhr B. B., Muylaert R. L., Oshima J. E. F., Tonetti V., Bernardo R., Alves R.</description>
+    </item>
+  </channel>
+</rss>

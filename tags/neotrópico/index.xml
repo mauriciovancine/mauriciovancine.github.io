@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neotrópico on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/neotr%C3%B3pico/</link>
+    <description>Recent content in Neotrópico on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/neotr%C3%B3pico/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conhecimento atual, distribuição potencial e conservação de cecílias (Amphibia: Gymnophiona) na Região Neotropical</title>
+      <link>https://mauriciovancine.github.io/publications/gymnophiona-neotropical/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/gymnophiona-neotropical/</guid>
+      <description>Dissertação, onde compilamos trabalhos e ocorrências das espécies de Gymnophiona para o Brasil e criamos modelos de distribuição de espécies para encontrar a distribuição potencial para direcionar esforços de amostragem em trabalhos de campo</description>
+    </item>
+    <item>
+      <title>Gymnophionas</title>
+      <link>https://mauriciovancine.github.io/project/gymnophionas/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/gymnophionas/</guid>
+      <description>Mais informações em breve.</description>
+    </item>
+  </channel>
+</rss>

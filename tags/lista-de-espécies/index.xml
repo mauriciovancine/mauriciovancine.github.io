@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lista De Espécies on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/lista-de-esp%C3%A9cies/</link>
+    <description>Recent content in Lista De Espécies on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/lista-de-esp%C3%A9cies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>amphiBR</title>
+      <link>https://mauriciovancine.github.io/project/amphibr/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/amphibr/</guid>
+      <description>amphiBR Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.&#xA;O dataset foi extraído da publicação por Segalla et al. (2021) na Revista Brasileira de Herpetologia, e disponível também no link https://zenodo.org/record/4716176&#xA;O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.&#xA;Dúvidas, críticas e sugestões são sempre bem-vindas!</description>
+    </item>
+  </channel>
+</rss>

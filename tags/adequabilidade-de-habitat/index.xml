@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adequabilidade De Habitat on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/adequabilidade-de-habitat/</link>
+    <description>Recent content in Adequabilidade De Habitat on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 01 Mar 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/adequabilidade-de-habitat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Efeito da fragmentação sobre a persistência de anfíbios anuros (Amphibia: Anura) na Mata Atlântica</title>
+      <link>https://mauriciovancine.github.io/publications/anfibios-persistencia/</link>
+      <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/anfibios-persistencia/</guid>
+      <description>Trabalho de Conclusão de Curso, onde testamos o efeito da estrutura da paisagem, em escala regional, sobre a persistência na paisagem de espécies de anuros florestais com reprodução terrestre</description>
+    </item>
+  </channel>
+</rss>

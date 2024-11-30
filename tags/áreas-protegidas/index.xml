@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Áreas Protegidas on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/%C3%A1reas-protegidas/</link>
+    <description>Recent content in Áreas Protegidas on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 30 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/%C3%A1reas-protegidas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Protected Areas network may be insufficient to protect bird diversity in a fragmented tropical hotspot under different climate scenarios</title>
+      <link>https://mauriciovancine.github.io/publications/bird-af-pa/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/bird-af-pa/</guid>
+      <description>Avaliamos a eficiência das áreas protegidas usando áreas prioritárias para conservação da diversidade de aves da Mata Atlântica para cenários climáticos atuais e futuros</description>
+    </item>
+    <item>
+      <title>Mammals in São Paulo State: diversity, distribution, ecology, and conservation</title>
+      <link>https://mauriciovancine.github.io/publications/mammals-sp/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/mammals-sp/</guid>
+      <description>Este estudo responde a cinco perguntas principais sobre a diversidade, distribuição, impacto, adaptação e futuro dos mamíferos silvestres no Estado de São Paulo</description>
+    </item>
+    <item>
+      <title>Climate change impacts on the Copernicia alba and Copernicia prunifera (Arecaceae) distribution in South America</title>
+      <link>https://mauriciovancine.github.io/publications/palms-cc/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/palms-cc/</guid>
+      <description>Analisamos como as mudanças climáticas afetam a distribuição de duas palmeiras do gênero Copernicia na América do Sul</description>
+    </item>
+    <item>
+      <title>Effects of climate change on distribution and areas that protect two neotropical marsupials associated with aquatic environments</title>
+      <link>https://mauriciovancine.github.io/publications/mammals-cc/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/mammals-cc/</guid>
+      <description>Analisamos como as mudanças climáticas afetam a distribuição de duas espécies de mamíferos marsupiais aquáticos na América do Sul</description>
+    </item>
+    <item>
+      <title>Efficiency of protected areas in Amazon and Atlantic Forest conservation: A spatio-temporal view</title>
+      <link>https://mauriciovancine.github.io/publications/forest-cons-af-am/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/forest-cons-af-am/</guid>
+      <description>Testamos a eficiência das áreas protegidas atuais em manter áreas climaticamente estáveis nos Biomas da Amazônia e Mata Atlântica</description>
+    </item>
+  </channel>
+</rss>

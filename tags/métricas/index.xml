@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Métricas on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/m%C3%A9tricas/</link>
+    <description>Recent content in Métricas on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 09 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/m%C3%A9tricas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>atlanticr</title>
+      <link>https://mauriciovancine.github.io/project/atlanticr/</link>
+      <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/project/atlanticr/</guid>
+      <description>atlanticr Instalação O pacote pode ser instalado diretamente do github:&#xA;# install.packages(&amp;#34;remotes&amp;#34;) remotes::install_github(&amp;#34;mauriciovancine/atlanticr&amp;#34;) Datasets Vertebrados&#xA;atlantic_amphibians ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America atlantic_bats ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America atlantic_birds ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest atlantic_camtraps ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America camera_trap_surveys Camera trap surveys of Atlantic Forest mammals: A data set for analyses considering imperfect detection (2004–2020) atlantic_mammals ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America atlantic_nonvolant_mammalsNon-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil atlantic_primates ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America atlantic_small_mammal Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America atlantic_small_mammal_abundance Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns Vertebrados - atributos funcionais</description>
+    </item>
+  </channel>
+</rss>
