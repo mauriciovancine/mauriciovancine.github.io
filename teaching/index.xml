@@ -6,8 +6,15 @@
     <description>Recent content in Ensino on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 31 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mauriciovancine.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Métricas de paisagem no R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</guid>
+      <description>Descrição O curso tem o intuito de oferecer uma introdução teórica e prática sobre o cálculo de métricas de paisagem categóricas (composição e configuração) utilizando a linguagem R através do pacote landscapemetrics. Primeiramente são apresentados os principais conceitos de ecologia da paisagem, métricas de paisagem, geoprocessamento, dados geoespaciais, linguagem R e detalhes do pacote landscapmetrics.&#xA;Oferecimento Laboratório de Ecologia Espacial e Conservação (LEEC). (2022). Online. Carga horária: 04:00 h. SynEco - I Simpósio Brasileiro de Síntese Ecológica.</description>
+    </item>
     <item>
       <title>Analisando padrões espaciais em dados de biodiversidade</title>
       <link>https://mauriciovancine.github.io/teaching/workshop-spatial-patterns-biodiversity-data/</link>
@@ -28,13 +35,6 @@
       <pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/teaching/workshop-intro-r/</guid>
       <description>Descrição O minicurso apresenta os principais conceitos da linguagem R e do IDE RStudio para a manipulação e visualização de dados através do tidyverse. O tidyverse é um conjunto de pacotes e funções que compartilham uma mesma estrutura e sintaxe, com o intuito de criar códigos eficientes e organizados. Os pacotes são focados principalmente na organização (leitura, filtragem, organização, seleção e resumo) e visualização de dados (gráficos). Serão abordados os seguintes temas: (1) linguagem R, (2) tidyverse e (3) visualização de dados.</description>
-    </item>
-    <item>
-      <title>Métricas de paisagem no R: landscapemetrics</title>
-      <link>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</link>
-      <pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</guid>
-      <description> Descrição O minicurso tem como intuito oferecer uma introdução teórica e prática sobre o cálculo de métricas de paisagem utilizando a linguagem R através do pacote landscapemetrics. Primeiramente são apresentados os principais conceitos de ecologia da paisagem, métricas de paisagem, geoprocessamento, dados geoespaciais, linguagem R, e detalhes do pacote landscapmetrics.&#xA;Oferecimento Laboratório de Ecologia Espacial e Conservação (LEEC). (2022). Online. </description>
     </item>
     <item>
       <title>GeoR: Dados Geoespaciais com o R</title>

@@ -6,8 +6,22 @@
     <description>Recent content on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 08 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Nov 2024 14:00:00 +0000</lastBuildDate>
     <atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unindo dados a modelos: como prever a distribuição da biodiversidade e serviços ecossistêmicos na escala da paisagem?</title>
+      <link>https://mauriciovancine.github.io/talk/talk-landscape-syneco/</link>
+      <pubDate>Thu, 28 Nov 2024 14:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/talk/talk-landscape-syneco/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Métricas de paisagem no R</title>
+      <link>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</guid>
+      <description>Descrição O curso tem o intuito de oferecer uma introdução teórica e prática sobre o cálculo de métricas de paisagem categóricas (composição e configuração) utilizando a linguagem R através do pacote landscapemetrics. Primeiramente são apresentados os principais conceitos de ecologia da paisagem, métricas de paisagem, geoprocessamento, dados geoespaciais, linguagem R e detalhes do pacote landscapmetrics.&#xA;Oferecimento Laboratório de Ecologia Espacial e Conservação (LEEC). (2022). Online. Carga horária: 04:00 h. SynEco - I Simpósio Brasileiro de Síntese Ecológica.</description>
+    </item>
     <item>
       <title>Gerando QR code no R</title>
       <link>https://mauriciovancine.github.io/blog/2024-11-r-qrcode/</link>
@@ -237,7 +251,7 @@
       <link>https://mauriciovancine.github.io/publications/mammals-sp/</link>
       <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/publications/mammals-sp/</guid>
-      <description>Analisamos como as mudanças climáticas afetam a distribuição de duas espécies de mamíferos marsupiais aquáticos na América do Sul</description>
+      <description>Este estudo responde a cinco perguntas principais sobre a diversidade, distribuição, impacto, adaptação e futuro dos mamíferos silvestres no Estado de São Paulo</description>
     </item>
     <item>
       <title>The fate of vegetation remnants  in the southern Amazon&#39;s largest threatened hotspot: part (I) a 33-year analysis of LULCC in the Tapajos River basin, Brazil</title>
@@ -252,13 +266,6 @@
       <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/blog/2022-07-eco-espa-distancia-ponto-linha/</guid>
       <description>Cálculo da distância de pontos a linhas no R e no QGIS</description>
-    </item>
-    <item>
-      <title>Métricas de paisagem no R: landscapemetrics</title>
-      <link>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</link>
-      <pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://mauriciovancine.github.io/teaching/workshop-landscapemetrics/</guid>
-      <description> Descrição O minicurso tem como intuito oferecer uma introdução teórica e prática sobre o cálculo de métricas de paisagem utilizando a linguagem R através do pacote landscapemetrics. Primeiramente são apresentados os principais conceitos de ecologia da paisagem, métricas de paisagem, geoprocessamento, dados geoespaciais, linguagem R, e detalhes do pacote landscapmetrics.&#xA;Oferecimento Laboratório de Ecologia Espacial e Conservação (LEEC). (2022). Online. </description>
     </item>
     <item>
       <title>Climate change impacts on the Copernicia alba and Copernicia prunifera (Arecaceae) distribution in South America</title>
@@ -293,7 +300,7 @@
       <link>https://mauriciovancine.github.io/publications/bat-sarbeco/</link>
       <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/publications/bat-sarbeco/</guid>
-      <description>Avaliamos o viés de amostragem e modelagmos as distribuições de morcegos hospedeiros dos Sarbecovírus baseados em relação climáticas e de paisagem e projetamos para cenários futuros para encontrar adensamentos desses hospedeiros</description>
+      <description>Avaliamos o viés de amostragem e modelamos as distribuições de morcegos hospedeiros dos Sarbecovírus baseados em relação climáticas e de paisagem e projetamos para cenários futuros para encontrar adensamentos desses hospedeiros</description>
     </item>
     <item>
       <title>Análises Ecológicas no R</title>
@@ -370,7 +377,7 @@
       <link>https://mauriciovancine.github.io/publications/boar-ung-inv/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/publications/boar-ung-inv/</guid>
-      <description>Predizemos a expansão da distribuição e a potencial sobresição geográfico entre espécis de Callithrix nos Biomas da Mata Atlântica e Cerraso e discutimos estratégias de manejo.</description>
+      <description>Usamos modelos de distribuição de espécies (SDMs) e análise de sobreposição de nicho para estimar potenciais áreas de conflito entre o javali e o pudu nativo do sul (Pudu puda), que é um bioindicador do estado de conservação da floresta dentro do Parque Nacional Nahuel Huapi (NHNP), Argentina</description>
     </item>
     <item>
       <title>O Fascinante Mundo do GRASS</title>
@@ -398,7 +405,7 @@
       <link>https://mauriciovancine.github.io/publications/algae-cuba/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/publications/algae-cuba/</guid>
-      <description>Predizemos a expansão da distribuição e a potencial sobresição geográfico entre espécis de Callithrix nos Biomas da Mata Atlântica e Cerraso e discutimos estratégias de manejo.</description>
+      <description>Avaliamos a distribuição potencial, limites de tolerância e nicho de similaridade de macroalgas epífitas e hospedeiras da plataforma marinha de Cuba</description>
     </item>
     <item>
       <title>Future climate change will impact the size and location of breeding and wintering areas of migratory thrushes in South America</title>
@@ -622,7 +629,7 @@
       <link>https://mauriciovancine.github.io/publications/butter-af/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/publications/butter-af/</guid>
-      <description>Predizemos a expansão da distribuição e a potencial sobresição geográfico entre espécis de Callithrix nos Biomas da Mata Atlântica e Cerraso e discutimos estratégias de manejo</description>
+      <description>Avaliamos os padrões de distribuição da riqueza de espécies de borboletas frugívoras na Mata Atlântica, considerando a contribuição relativa do clima e da paisagem, e recomendamos diretrizes de conservação para o grupo</description>
     </item>
     <item>
       <title>Fragmented tropical forests lose mutualistic plant-animal interactions</title>
@@ -643,7 +650,7 @@
       <link>https://mauriciovancine.github.io/publications/prim-hibrid/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/publications/prim-hibrid/</guid>
-      <description>Predizemos a expansão da distribuição e a potencial sobresição geográfico entre espécis de Callithrix nos Biomas da Mata Atlântica e Cerraso e discutimos estratégias de manejo</description>
+      <description>Predizemos a expansão da distribuição e a potencial sobresição geográfico entre espécis de Callithrix nos Biomas da Mata Atlântica e Cerrado e discutimos estratégias de manejo</description>
     </item>
     <item>
       <title>Métricas de paisagem no R</title>
@@ -776,7 +783,7 @@
       <link>https://mauriciovancine.github.io/license/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mauriciovancine.github.io/license/</guid>
-      <description>Meus posts são distribuídos sob a licença Creative Commons Attribution-ShareAlike 4.0 International License.</description>
+      <description>Meus posts, palestras e ensino são distribuídos sob a licença Creative Commons Attribution-ShareAlike 4.0 International License.&#xA;Você tem o direito de:&#xA;Compartilhar — copiar e redistribuir o material em qualquer suporte ou formato para qualquer fim, mesmo que comercial.&#xA;Adaptar — remixar, transformar, e criar a partir do material para qualquer fim, mesmo que comercial.&#xA;O licenciante não pode revogar estes direitos desde que você respeite os termos da licença.</description>
     </item>
   </channel>
 </rss>
