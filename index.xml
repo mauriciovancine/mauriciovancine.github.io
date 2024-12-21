@@ -6,8 +6,15 @@
     <description>Recent content on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 09 Dec 2024 14:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mauriciovancine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução à linguagem Julia</title>
+      <link>https://mauriciovancine.github.io/blog/2024-12-julia-intro/</link>
+      <pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2024-12-julia-intro/</guid>
+      <description>Uma breve introdução à linguagem Julia</description>
+    </item>
     <item>
       <title>Análises Ecológicas no R e a importância das análises estatísticas para a ecologia e a transdisciplinaridade</title>
       <link>https://mauriciovancine.github.io/talk/talk-r-book/</link>
