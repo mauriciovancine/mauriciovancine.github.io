@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.130.0">
-<title>Kernel | Maurício Vancine</title>
+<title>Usando Julia para dados geoespaciais | Maurício Vancine</title>
 
 
 <meta property="twitter:site" content="@mauriciovancine">
@@ -24,32 +24,33 @@
   
     
   
-<meta name="description" content="Um pequeno manual para espacializar a diversidade beta">
+<meta name="description" content="Introdução à linguagem Julia para dados geoespaciais">
 
 
 <meta property="og:site_name" content="Maurício Vancine">
-<meta property="og:title" content="Kernel | Maurício Vancine">
-<meta property="og:description" content="Um pequeno manual para espacializar a diversidade beta" />
+<meta property="og:title" content="Usando Julia para dados geoespaciais | Maurício Vancine">
+<meta property="og:description" content="Introdução à linguagem Julia para dados geoespaciais" />
 <meta property="og:type" content="page" />
-<meta property="og:url" content="http://localhost:4321/blog/2025-07-eco-espa-div-beta/" />
+<meta property="og:url" content="http://localhost:4321/blog/2025-12-julia-geospat/" />
 <meta property="og:locale" content="pt-br">
 
 
 
 
     
-        <meta property="og:image" content="http://localhost:4321/blog/sidebar.jpg" >
+        <meta property="og:image" content="http://localhost:4321/blog/2025-12-julia-geospat/featured.png" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="http://localhost:4321/blog/sidebar.jpg" >
+        <meta name="twitter:image" content="http://localhost:4321/blog/2025-12-julia-geospat/featured.png" >
     
     
   
-  <meta itemprop="name" content="Kernel">
-  <meta itemprop="description" content="Um pequeno manual para espacializar a diversidade beta">
-  <meta itemprop="datePublished" content="2025-07-10T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-07-10T00:00:00+00:00">
-  <meta itemprop="wordCount" content="3">
-  <meta itemprop="keywords" content="Geoprocessamento,Geoespacial,R,Distância">
+  <meta itemprop="name" content="Usando Julia para dados geoespaciais">
+  <meta itemprop="description" content="Introdução à linguagem Julia para dados geoespaciais">
+  <meta itemprop="datePublished" content="2025-12-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-12-21T00:00:00+00:00">
+  <meta itemprop="wordCount" content="83">
+  <meta itemprop="image" content="http://localhost:4321/blog/2025-12-julia-geospat/featured.png">
+  <meta itemprop="keywords" content="Julia,Linguagem De Programacao,Geoespacial">
   
   
 
@@ -125,18 +126,54 @@
   <section class="page-content mw7 center">
     <article class="post-content pa0 pr3-l">
       <header class="post-header">
-        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Kernel</h1>
-        <h4 class="f4 mt0 mb4 lh-title measure">Um pequeno manual para espacializar a diversidade beta</h4>
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Usando Julia para dados geoespaciais</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Introdução à linguagem Julia para dados geoespaciais</h4>
         <p class="f6 measure lh-copy mv1">By Maurício Vancine in <a href="http://localhost:4321/categories/blog">Blog</a> </p>
-        <p class="f7 db mv0 ttu">July 10, 2025</p>
+        <p class="f7 db mv0 ttu">December 21, 2025</p>
       </header>
       <section class="post-body pt5 pb4">
-        <p>
-<a href="https://github.com/jschoeley/tricolore" target="_blank" rel="noopener">https://github.com/jschoeley/tricolore</a></p>
+        
+
+
+
+<h2 id="contextualização">Contextualização
+  <a href="#contextualiza%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Numa série de três posts, começando por este, 
+<a href="https://mauriciovancine.github.io/blog/2024-12-julia-intro" target="_blank" rel="noopener">Introdução à linguagem Julia</a>, seguido por 
+<a href="https://mauriciovancine.github.io/blog/2024-12-julia-eco" target="_blank" rel="noopener">Usando Julia na Ecologia</a> e por fim 
+<a href="https://mauriciovancine.github.io/blog/2024-12-julia-geospat" target="_blank" rel="noopener">Usando Julia para dados geoespaciais</a>, vou detalhar um pouco das principais características e aplicações da linguagem <strong>Julia</strong> para a Ecologia e para as análises geoespaciais.</p>
+<p>Neste último post sobre a séria da linguagem <strong>Julia</strong>, vou explorar o uso para análises geoespaciais, principalmente influenciado pelo livro 
+<a href="https://jl.geocompx.org/" target="_blank" rel="noopener">Geocomputation with Julia</a>, ainda sendo escrito.</p>
+
+
+
+
+<h2 id="julia-para-dados-geoespaciais">Julia para dados geoespaciais
+  <a href="#julia-para-dados-geoespaciais"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+
+
+
+
+<h2 id="para-se-aprofundar">Para se aprofundar
+  <a href="#para-se-aprofundar"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
 <p>
-<a href="https://rfunctions.blogspot.com/2015/08/calculating-beta-diversity-on-grid.html" target="_blank" rel="noopener">https://rfunctions.blogspot.com/2015/08/calculating-beta-diversity-on-grid.html</a></p>
+<a href="https://jl.geocompx.org/" target="_blank" rel="noopener">https://jl.geocompx.org/</a></p>
 <p>
-<a href="https://rfunctions.blogspot.com/2016/10/calculating-temporal-beta-diversity-on.html" target="_blank" rel="noopener">https://rfunctions.blogspot.com/2016/10/calculating-temporal-beta-diversity-on.html</a></p>
+<a href="https://juliaearth.github.io/geospatial-data-science-with-julia/" target="_blank" rel="noopener">https://juliaearth.github.io/geospatial-data-science-with-julia/</a></p>
+<p>
+<a href="https://juliageo.org/" target="_blank" rel="noopener">https://juliageo.org/</a></p>
 
       </section>
       <footer class="post-footer">
@@ -144,12 +181,12 @@
   
   
     <a class="prev dtc pr2 tl v-top fw6"
-    href="http://localhost:4321/blog/2025-12-julia-geospat/">&larr; Usando Julia para dados geoespaciais</a>
+    href="http://localhost:4321/blog/2028-08-r-big-data/">&larr; QGIS: plugins</a>
   
   
   
     <a class="next dtc pl2 tr v-top fw6"
-    href="http://localhost:4321/blog/2025-01-pub-revistas-eco/">Principais revistas de ecologia &rarr;</a>
+    href="http://localhost:4321/blog/2025-07-eco-espa-div-beta/">Kernel &rarr;</a>
   
 </div>
 
@@ -210,11 +247,11 @@
   <details open class="f6 fw7 input-reset">
   <dl class="f6 lh-copy">
     <dt class="fw7">Posted on:</dt>
-    <dd class="fw5 ml0">July 10, 2025</dd>
+    <dd class="fw5 ml0">December 21, 2025</dd>
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">1 minute read, 3 words</dd>
+    <dd class="fw5 ml0">1 minute read, 83 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -226,17 +263,17 @@
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Tags:</dt>
-    <dd class="fw5 ml0"> <a href="http://localhost:4321/tags/geoprocessamento">Geoprocessamento</a>  <a href="http://localhost:4321/tags/geoespacial">Geoespacial</a>  <a href="http://localhost:4321/tags/r">R</a>  <a href="http://localhost:4321/tags/dist%C3%A2ncia">Distância</a> </dd>
+    <dd class="fw5 ml0"> <a href="http://localhost:4321/tags/julia">julia</a>  <a href="http://localhost:4321/tags/linguagem-de-programacao">linguagem de programacao</a>  <a href="http://localhost:4321/tags/geoespacial">geoespacial</a> </dd>
   </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">See Also:</dt>
     
-    <dd class="fw5 ml0"><a href="/blog/2028-08-r-big-data/">QGIS: plugins</a></dd>
+    <dd class="fw5 ml0"><a href="/blog/2024-12-julia-intro/">Introdução à linguagem Julia</a></dd>
     
-    <dd class="fw5 ml0"><a href="/teaching/workshop-landscapemetrics/">Métricas de paisagem no R</a></dd>
+    <dd class="fw5 ml0"><a href="/blog/2022-07-julia-eco/">Usando Julia na Ecologia</a></dd>
     
-    <dd class="fw5 ml0"><a href="/blog/2024-11-r-qrcode/">Gerando QR code no R</a></dd>
+    <dd class="fw5 ml0"><a href="/blog/2022-07-r-plot-dois-eixos/">Usando julia na Ecologia</a></dd>
     
   </dl>
 </details>

@@ -48,7 +48,7 @@
   <meta itemprop="description" content="Uma breve introdução à linguagem Julia">
   <meta itemprop="datePublished" content="2024-12-21T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-12-21T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1463">
+  <meta itemprop="wordCount" content="3520">
   <meta itemprop="image" content="https://mauriciovancine.github.io/blog/2024-12-julia-intro/featured.png">
   <meta itemprop="keywords" content="Julia,Linguagem De Programacao">
   
@@ -128,7 +128,7 @@
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">Introdução à linguagem Julia</h1>
         <h4 class="f4 mt0 mb4 lh-title measure">Uma breve introdução à linguagem Julia</h4>
-        <p class="f6 measure lh-copy mv1">By Maurício Vancine in <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </p>
+        <p class="f6 measure lh-copy mv1">By Maurício Vancine com edições de textos do ChatGPT in <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </p>
         <p class="f7 db mv0 ttu">December 21, 2024</p>
       </header>
       <section class="post-body pt5 pb4">
@@ -142,8 +142,8 @@
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
-<p>Há muito tempo ouço falar, isso desde 2014 ou 2015, que a linguagem <strong>Julia</strong> irá desbancar o R e o Python em termos de programação e que eu deveria focar meus esforços em aprendê-la. Bom, 10 anos depois, me parece que o R e o Python ainda dominam o mercado da Ciência de Dados e o mundo acadêmico, principalmente da Ecologia.</p>
-<p>Mas notei algumas tendências muito interessantes, principalmente de alguns grupos de pesquisa da Europa, isso na área de Ecologia. Vou tentar fazer uma visão geral através de um material simples para eluciadar alguns pontos sobre essa linguagem.</p>
+<p>Há muito tempo ouço falar, isso desde 2014 ou 2015, que a linguagem <strong>Julia</strong> irá desbancar as linguagens R e Python em termos de programação e que eu deveria focar meus esforços em aprendê-la. Bom, 10 anos depois, me parece que o R e o Python ainda dominam o mercado da Ciência de Dados e o mundo acadêmico, principalmente da Ecologia.</p>
+<p>Mas notei algumas tendências muito interessantes de aumento do uso da linguagem <strong>Julia</strong>, principalmente de alguns grupos de pesquisa da Europa, isso na área de Ecologia. Vou tentar fazer uma visão geral através de um material simples para eluciadar alguns pontos sobre essa linguagem.</p>
 <p>Numa série de três posts, começando por este, 
 <a href="https://mauriciovancine.github.io/blog/2024-12-julia-intro" target="_blank" rel="noopener">Introdução à linguagem Julia</a>, seguido por 
 <a href="https://mauriciovancine.github.io/blog/2024-12-julia-eco" target="_blank" rel="noopener">Usando Julia na Ecologia</a> e por fim 
@@ -169,57 +169,525 @@
     </svg></a>
 </h3>
 <p>
-<a href="https://julialang.org" target="_blank" rel="noopener">Julia</a> é uma linguagem de programação livre e de código aberto, de alto desempenho, criada para atender a necessidades de computação numérica e científica, com foco na combinação de facilidade de uso e velocidade.</p>
+<a href="https://julialang.org" target="_blank" rel="noopener">Julia</a> é uma linguagem de programação livre e de código aberto e de alto desempenho, criada para atender a necessidades de computação numérica e científica, com foco na combinação de facilidade de uso e velocidade.</p>
 
 
 
 
-<h3 id="motivação-criação-da-linguagem-julia">Motivação criação da linguagem Julia
-  <a href="#motiva%c3%a7%c3%a3o-cria%c3%a7%c3%a3o-da-linguagem-julia"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h3 id="criação">Criação
+  <a href="#cria%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h3>
-<p>A criação da linguagem <strong>Julia</strong> começou em 2009, quando <strong>Jeff Bezanson</strong>, <strong>Stefan Karpinski</strong>, <strong>Viral B. Shah</strong> e <strong>Alan Edelman</strong>, sendo inicialmente concebido no <strong>MIT</strong> (Massachusetts Institute of Technology) decidiu enfrentar uma lacuna significativa nas ferramentas de programação existentes para <strong>computação científica</strong> e <strong>numérica</strong>. Na época, não havia uma linguagem que conseguisse unir as vantagens de desempenho de linguagens como <strong>C</strong> ou <strong>Fortran</strong> com a facilidade de uso e a flexibilidade de linguagens de alto nível, como <strong>Python</strong> e <strong>MATLAB</strong>.</p>
-<p>A principal motivação por trás da criação de Julia foi a limitação das linguagens de programação tradicionais no campo da computação científica. Linguagens como <strong>MATLAB</strong> e <strong>Python</strong> eram frequentemente criticadas por sua <strong>lentidão</strong> quando lidavam com tarefas de grande escala, enquanto <strong>C</strong> e <strong>Fortran</strong> ofereciam alto desempenho, mas eram mais difíceis de usar, especialmente para pessoas que não tinham experiência com programação de baixo nível. <strong>Julia</strong> foi projetada para preencher essa lacuna, oferecendo o melhor dos dois mundos: <strong>desempenho</strong> de baixo nível com a <strong>facilidade</strong> de linguagens de alto nível.</p>
-<p>O objetivo principal era criar uma linguagem que fosse <strong>rápida</strong> o suficiente para substituir C e Fortran em tarefas numéricas pesadas, mas que também fosse <strong>fácil de aprender</strong> e <strong>usar</strong>, como Python ou MATLAB. Os fundadores queriam também que Julia fosse <strong>flexível</strong> e <strong>modular</strong>, permitindo que os usuários pudessem combinar diferentes paradigmas de programação e integrar facilmente bibliotecas de outras linguagens, como Python, R e C.</p>
-<p>Além disso, a linguagem foi projetada para ser <strong>aberta</strong> e <strong>colaborativa</strong>, permitindo que qualquer pessoa pudesse contribuir com seu desenvolvimento. A filosofia era criar uma linguagem capaz de aproveitar o potencial de <strong>cálculos paralelos</strong> e de <strong>alta performance</strong>, ao mesmo tempo em que mantinha uma sintaxe clara e simples, acessível tanto para programadores novatos quanto experientes.</p>
+<p>A criação da linguagem <strong>Julia</strong> começou em 2009, quando Jeff Bezanson, Stefan Karpinski, Viral B. Shah e Alan Edelman do <strong>MIT</strong> (Massachusetts Institute of Technology) decidiram preecher uma lacuna significativa nas ferramentas de programação existentes para computação científica e numérica.</p>
+<p>Linguagens como MATLAB e Python eram frequentemente criticadas por sua lentidão quando lidavam com tarefas de grande escala, enquanto C e Fortran ofereciam alto desempenho, mas eram mais difíceis de usar, especialmente para pessoas que não tinham experiência com programação de baixo nível. <strong>Julia</strong> foi projetada para preencher essa lacuna, oferecendo o melhor dos dois mundos: desempenho de baixo nível com a facilidade de linguagens de alto nível.</p>
+<p>Em 2012, Karpinski explicou por que do nome <strong>Julia</strong>: &ldquo;Na verdade não há uma boa razão, parecia um nome bonito.&rdquo;. Já Jeff Bezanson disse que escolheu o nome por sugestão de um amigo. Para ler mais, consulte: 
+<a href="https://julialang.org/blog/2012/02/why-we-created-julia/" target="_blank" rel="noopener">Why We Created Julia</a>.</p>
 
 
 
 
-<h3 id="a-estrutura-técnica-de-julia">A estrutura técnica de Julia
-  <a href="#a-estrutura-t%c3%a9cnica-de-julia"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h3 id="objetivos">Objetivos
+  <a href="#objetivos"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h3>
-<p>O grande desafio enfrentado pela equipe de desenvolvimento de Julia foi criar uma linguagem que fosse capaz de atingir alto desempenho sem sacrificar a simplicidade de uso. Para alcançar isso, a linguagem adotou o uso de <strong>compilação Just-in-Time (JIT)</strong> utilizando o framework <strong>LLVM</strong> (Low-Level Virtual Machine), o que permitiu que o código Julia fosse compilado em tempo de execução, aproveitando otimizações específicas para o hardware do computador. Isso resultou em <strong>desempenho de nível C</strong>, sem a necessidade de se escrever código de baixo nível.</p>
-<p>Outra inovação foi o uso de <strong>tipagem dinâmica</strong> junto com um sistema de <strong>tipagem múltipla</strong>, o que permitiu a criação de <strong>funções genéricas</strong> que poderiam ser aplicadas a tipos de dados diferentes, sem sacrificar a eficiência. Essa abordagem possibilitou a criação de código que podia ser tanto <strong>flexível</strong> quanto <strong>otimizado</strong>, permitindo aos desenvolvedores escrever funções reutilizáveis e de alto desempenho.</p>
+<p>O objetivo principal era criar uma linguagem que fosse rápida para tarefas numéricas pesadas, mas que também fosse fácil de aprender e usar. Os fundadores queriam também que <strong>Julia</strong> fosse flexível e modular, permitindo que os usuários pudessem combinar diferentes paradigmas de programação e integrar facilmente bibliotecas de outras linguagens, como Python, R e C.</p>
+<p>Essa linguagem é particularmente indicada para tarefas intensivas em cálculos, como análise de dados, modelagem matemática, simulações científicas e aprendizado de máquina, sendo uma escolha popular entre cientistas, engenheiros e pesquisadores.</p>
+<p>Além disso, a linguagem foi projetada para ser aberta e colaborativa, permitindo que qualquer pessoa pudesse contribuir com seu desenvolvimento. A filosofia era criar uma linguagem capaz de aproveitar o potencial de cálculos paralelos e de alta performance, ao mesmo tempo em que mantinha uma sintaxe clara e simples, acessível tanto para programadores novatos quanto experientes.</p>
 
 
 
 
-<h3 id="crescimento-e-evolução-da-linguagem">Crescimento e evolução da linguagem
-  <a href="#crescimento-e-evolu%c3%a7%c3%a3o-da-linguagem"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h3 id="estrutura-técnica">Estrutura técnica
+  <a href="#estrutura-t%c3%a9cnica"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h3>
-<p>Desde sua criação, Julia foi projetada para ser <strong>moderna</strong>, incorporando recursos de linguagens como <strong>Lisp</strong> e <strong>Scheme</strong>, mas com ênfase em desempenho e facilidade de uso. Ela rapidamente ganhou tração na comunidade acadêmica, especialmente entre pesquisadores que lidam com grandes volumes de dados ou que precisam de cálculos intensivos. A linguagem cresceu de maneira exponencial em termos de <strong>popularidade</strong> e <strong>funcionalidade</strong> desde seu lançamento oficial em 2012.</p>
-<p>A comunidade de desenvolvedores de <strong>Julia</strong> foi um fator chave para seu crescimento. O modelo de desenvolvimento <strong>aberto</strong> e <strong>colaborativo</strong> permitiu que a linguagem fosse constantemente aprimorada e que pacotes especializados para áreas como <strong>ciência de dados</strong>, <strong>inteligência artificial</strong> e <strong>computação científica</strong> fossem rapidamente desenvolvidos e integrados à linguagem. Além disso, a <strong>documentação</strong> e os <strong>recursos de aprendizado</strong> cresceram de forma significativa, tornando a linguagem mais acessível.</p>
+<p>O grande desafio enfrentado pela equipe de desenvolvimento da linguagem <strong>Julia</strong> foi criar uma linguagem que fosse capaz de atingir alto desempenho sem sacrificar a simplicidade de uso. Para alcançar isso, a linguagem adotou o uso de <strong>compilação Just-in-Time (JIT)</strong> utilizando o framework <strong>LLVM</strong> (<em>Low-Level Virtual Machine</em>).  Isso permitiu que o código <strong>Julia</strong> fosse compilado em tempo de execução, aproveitando otimizações específicas para o hardware do computador, resultando em desempenho de nível da linguagem C, sem a necessidade de se escrever código de baixo nível.</p>
+<p>A compilação <strong>Just-in-Time (JIT)</strong> é como se <strong>Julia</strong> fosse um tradutor que transforma o código que você escreve em algo que o computador consegue entender rapidamente, mas só faz isso no momento em que você pede para executar o código. Em vez de traduzir tudo antes (como nas linguagens tradicionais compiladas, como C) ou traduzir aos poucos enquanto o código roda (como em linguagens interpretadas, como Python), o JIT faz isso <em>&ldquo;na hora certa&rdquo;</em> para garantir velocidade e eficiência.</p>
+<p>Julia usa o <strong>LLVM</strong> (<em>Low-Level Virtual Machine</em>) como uma &ldquo;máquina tradutora superinteligente&rdquo;. O LLVM é um sistema poderoso que ajuda Julia a transformar seu código em instruções que o computador pode executar quase tão rápido quanto programas feitos em linguagens de baixo nível, como C. Isso significa que o código em Julia é rápido, mas você não precisa se preocupar com os detalhes complicados que tornam linguagens como C mais difíceis de usar.</p>
+<p>De forma simples, o JIT da <strong>Julia</strong> pega seu código, traduz para algo que o computador entende, e faz isso muito rápido e de maneira inteligente, usando o LLVM. Por isso, <strong>Julia</strong> consegue unir a facilidade de linguagens como Python com a velocidade de linguagens como C.</p>
+<p>Outra inovação foi o uso de <strong>tipagem dinâmica</strong> junto com um sistema de <strong>tipagem múltipla</strong>. A tipagem dinâmica significa que você não precisa dizer ao computador qual tipo de dado (número, texto, lista, etc.) está usando, <strong>Julia</strong> descobre isso sozinha enquanto executa seu código. Agora, o sistema de tipagem múltipla é como <strong>Julia</strong> organiza e utiliza os tipos de dados de forma inteligente, permitindo que você escreva funções que funcionam com diferentes tipos de entrada, mas que Julia ainda consiga otimizar o desempenho.</p>
+<p>Em resumo, tipagem dinâmica facilita o uso da linguagem, enquanto a tipagem múltipla permite que <strong>Julia</strong> seja eficiente e flexível, escolhendo automaticamente as melhores operações para os tipos dos dados que você fornece.</p>
+<p>A linguagem também se destaca em termos de paralelismo e concorrência, com suporte nativo para computação paralela e distribuída. Isso torna o <strong>Julia</strong> altamente eficiente para grandes volumes de dados e cálculos complexos, sendo capaz de lidar com múltiplos núcleos e distribuindo tarefas de forma eficaz. No Julia, <strong>concorrência</strong> permite executar várias tarefas assíncronas simultaneamente, como operações de I/O, usando <code>@async</code>. Já o <strong>paralelismo</strong> utiliza múltiplos núcleos de CPU para processar tarefas em paralelo, seja com threads (<code>Threads.@spawn</code>) ou processos separados (<code>Distributed</code>).</p>
+<p>A integração com outras linguagens é outro ponto forte do <strong>Julia</strong>, permitindo que bibliotecas e código em Python, R, C, Fortran, entre outras, sejam chamados diretamente, o que facilita a reutilização de código existente e amplia a flexibilidade do ambiente de desenvolvimento.</p>
 
 
 
 
-<h3 id="desafios-no-início-e-adoção">Desafios no início e adoção
-  <a href="#desafios-no-in%c3%adcio-e-ado%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<h3 id="instalação">Instalação
+  <a href="#instala%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h3>
-<p>Nos primeiros anos após o lançamento, <strong>Julia</strong> enfrentou desafios relacionados ao seu ecossistema. Embora a linguagem fosse promissora em termos de desempenho, ela não tinha o mesmo <strong>suporte de pacotes</strong> e <strong>bibliotecas</strong> de linguagens mais estabelecidas como Python e R. Muitos desenvolvedores hesitaram em adotar a linguagem devido à <strong>falta de pacotes</strong> para tarefas específicas ou à <strong>inexperiência</strong> da comunidade com a nova linguagem.</p>
-<p>No entanto, ao longo do tempo, esses desafios foram superados. A <strong>comunidade</strong> de Julia cresceu rapidamente, com contribuições significativas de pesquisadores, desenvolvedores e empresas, que ajudaram a criar bibliotecas para tarefas em áreas como <strong>visualização de dados</strong>, <strong>otimização</strong>, <strong>modelagem estatística</strong> e <strong>aprendizado de máquina</strong>. A popularidade de Julia também foi impulsionada por sua <strong>integração</strong> com outras linguagens, permitindo que programadores usassem código existente em <strong>Python</strong>, <strong>R</strong> e <strong>C</strong> junto com Julia.</p>
+<p>A instalação da linguagem <strong>Julia</strong> é simples e direta. Eu achei muito prático acessar o site oficial 
+<a href="https://julialang.org" target="_blank" rel="noopener">https://julialang.org/</a>, depois clicar em <em>Download</em>, copiar o código que eles fornecem e colar no terminal Linux ou MacOS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -fsSL https://install.julialang.org | sh
+</span></span></code></pre></div><p>No Windows é igualmente simples, basta abrir o prompt de comando e colar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>winget install julia -s msstore
+</span></span></code></pre></div><p>Depois disso, para saber se a instalação deu certo, basta:</p>
+<ol>
+<li>Abrir o terminal ou prompt de comando.</li>
+<li>Digitar:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>julia
+</span></span></code></pre></div><ol start="3">
+<li>O REPL (ambiente interativo, veja mais adiante) de Julia será carregado, exibindo algo como:
+<img src="img/julia_repl.png" alt=""></li>
+</ol>
+<p>Assim que Julia estiver instalada, é uma boa prática atualizar os pacotes principais:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#719e07">using</span> Pkg
+</span></span><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>update()
+</span></span></code></pre></div>
+
+
+
+<h3 id="editor-ide-e-notebooks">Editor, IDE e notebooks
+  <a href="#editor-ide-e-notebooks"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>A linguagem <strong>Julia</strong> não possui um editor ou um IDE próprio como o RStudio do R. Sendo assim, é preciso instalar funcionalidades extras. Os mais comuns são:</p>
+<p><strong>1. Visual Studio Code (VS Code):</strong> editor de código leve com suporte oficial para Julia via extensão. Instale o 
+<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>, adicione a 
+<a href="https://www.julia-vscode.org/" target="_blank" rel="noopener">extensão Julia</a>. Essa foi a opção que escolhi, apesar do Pluto sem bastante interessante.</p>
+<p><strong>2. Jupyter Notebook:</strong> Ambiente interativo usado com o pacote <code>IJulia</code>. Instale o 
+<a href="https://jupyter.org/" target="_blank" rel="noopener">Jupyter</a> com <code>pip install notebook</code> e adicione <code>IJulia</code> no Julia REPL.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#719e07">using</span> Pkg
+</span></span><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>add(<span style="color:#2aa198">&#34;IJulia&#34;</span>)
+</span></span></code></pre></div><p><strong>3. Pluto.jl:</strong> Notebook interativo para Julia com cálculos reativos. Instale o <code>Pluto</code> no REPL e inicie com <code>Pluto.run()</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#719e07">using</span> Pkg
+</span></span><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>add(<span style="color:#2aa198">&#34;Pluto&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#719e07">using</span> Pluto; Pluto<span style="color:#719e07">.</span>run()
+</span></span></code></pre></div><p><strong>4. Emacs/Vim/Sublime:</strong> Editores avançados configuráveis com plugins para Julia (<code>julia-mode</code>, <code>vim-julia</code> ou <code>julia</code>). Configure manualmente adicionando os plugins apropriados.</p>
+
+
+
+
+<h3 id="usando-a-linguagem-julia-e-o-repl">Usando a linguagem Julia e o REPL
+  <a href="#usando-a-linguagem-julia-e-o-repl"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>A linguagem <strong>Julia</strong> por ser usada dinamicamente, com o <strong>REPL</strong>, rodando comando a comando. A interação com o código é facilitada por um REPL (<em>Read-Eval-Print Loop</em>), que permite a execução imediata de comandos, o que é ideal para testes rápidos e exploração de dados.</p>
+<p>O <strong>REPL</strong> (<em>Read-Eval-Print Loop</em>) é o <strong>ambiente interativo</strong> onde você pode digitar e executar comandos diretamente na linguagem <strong>Julia</strong>. Ele funciona como uma espécie de &ldquo;terminal inteligente&rdquo; que permite testar e explorar código de maneira rápida.</p>
+<p>Aqui está como ele funciona, passo a passo:</p>
+<ol>
+<li><strong>Read (Ler)</strong>: o REPL espera você digitar um comando ou pedaço de código</li>
+<li><strong>Eval (Avaliar)</strong>: quando você pressiona <strong>Enter</strong>, <strong>Julia</strong> analisa e executa o código que você escreveu</li>
+<li><strong>Print (Imprimir)</strong>: o resultado do código é exibido diretamente no REPL</li>
+<li><strong>Loop (Repetir)</strong>: ele volta a esperar pelo próximo comando, e o processo recomeça</li>
+</ol>
+<p>Por exemplo, se você abrir o REPL e digitar:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#2aa198">2</span> <span style="color:#719e07">+</span> <span style="color:#2aa198">3</span>
+</span></span></code></pre></div><p>O REPL vai:</p>
+<ul>
+<li><strong>Ler</strong> o comando <code>2 + 3</code></li>
+<li><strong>Avaliar</strong> o cálculo (somar os números)</li>
+<li><strong>Imprimir</strong> o resultado (<code>5</code>)</li>
+<li>E então esperar pelo próximo comando</li>
+</ul>
+<p>O REPL do Julia é mais do que apenas um lugar para rodar comandos, ele tem <strong>modos especiais</strong> que facilitam tarefas diferentes, e que vão ficar com cores diferentes:</p>
+<ol>
+<li><strong>Modo normal</strong> (verde): onde você escreve e executa código Julia (o padrão)</li>
+<li><strong>Modo de ajuda</strong> (amarelo): digite <code>?</code> antes de algo para ver a documentação. Por exemplo, <code>?println</code> mostra como usar a função <code>println</code></li>
+<li><strong>Modo de shell</strong> (vermelho): digite <code>;</code> para rodar comandos do terminal diretamente, como <code>ls</code> ou <code>cd</code></li>
+<li><strong>Modo de pacote</strong> (azul): digite <code>]</code> para gerenciar pacotes Julia (instalar, atualizar, etc.)</li>
+</ol>
+<p>Para voltar ao modo normal, basta digitar <strong>backspace</strong>.</p>
+<p>O REPL tem ainda alguns atalhos muito úteis:</p>
+<p>Aqui está uma tabela resumindo os principais atalhos do REPL da linguagem <strong>Julia</strong>:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Atalho</strong></th>
+<th><strong>Função</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enter</code></td>
+<td>Executa o comando/expressão digitada no REPL.</td>
+</tr>
+<tr>
+<td><code>Shift + Enter</code></td>
+<td>Executa a expressão e mantém o cursor na linha seguinte.</td>
+</tr>
+<tr>
+<td><code>Ctrl + C</code></td>
+<td>Interrompe a execução atual.</td>
+</tr>
+<tr>
+<td><code>Ctrl + D</code></td>
+<td>Fecha o REPL (sair).</td>
+</tr>
+<tr>
+<td><code>Up Arrow</code></td>
+<td>Exibe o último comando digitado.</td>
+</tr>
+<tr>
+<td><code>Down Arrow</code></td>
+<td>Exibe o próximo comando (caso já tenha navegado para cima).</td>
+</tr>
+<tr>
+<td><code>Tab</code></td>
+<td>Completa automaticamente o nome de funções, variáveis, etc.</td>
+</tr>
+<tr>
+<td><code>Ctrl + L</code></td>
+<td>Limpa a tela do REPL.</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + L</code></td>
+<td>Limpa a tela e a saída do REPL.</td>
+</tr>
+<tr>
+<td><code>Alt + .</code></td>
+<td>Insere o último resultado calculado.</td>
+</tr>
+<tr>
+<td><code>Ctrl + R</code></td>
+<td>Inicia a busca histórica (search) para encontrar comandos.</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + R</code></td>
+<td>Exibe um histórico completo de todos os comandos no REPL.</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Sai do modo de edição de múltiplas linhas (no caso de uma expressão longa).</td>
+</tr>
+<tr>
+<td><code>Shift + Tab</code></td>
+<td>Exibe ajuda sobre uma função ou variável.</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>Exibe a documentação da função/objeto.</td>
+</tr>
+<tr>
+<td><code>@</code></td>
+<td>Utiliza macros (exemplo: <code>@time</code> para medir o tempo de execução).</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h3 id="scripts">Scripts
+  <a href="#scripts"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>O uso de scripts <strong>Julia</strong> em IDEs como o VS Code oferece um ambiente poderoso para desenvolvimento, com ferramentas para codificação eficiente, depuração e visualização. O VS Code, quando configurado corretamente para o Julia, proporciona uma experiência interativa de programação, com recursos como autocompletar, depuração e integração com o terminal.</p>
+<p>No VS Code, crie um novo arquivo com a extensão <code>.jl</code> (por exemplo, <code>meu_script.jl</code>). A extensão Julia no VS Code integra o REPL do Julia, permitindo a execução interativa de comandos e visualização dos resultados diretamente no próprio editor. Você pode enviar código do script para o REPL com o atalho <code>Shift + Enter</code> ou <code>Ctrl + Shift + Enter</code>.</p>
+<p>Ao usar bibliotecas de plotagem como <code>Plots.jl</code> ou <code>Makie.jl</code>, o VS Code pode exibir gráficos diretamente na janela do editor ou em uma janela separada, dependendo das configurações do sistema.</p>
+<p><img src="img/julia_vs_code.png" alt=""></p>
+<p>Há ainda a forma de executar o script todo de <strong>Julia</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>include(<span style="color:#2aa198">&#34;meu_script_julia.jl&#34;</span>)
+</span></span></code></pre></div>
+
+
+
+<h3 id="jupyter-notebook-e-pluto">Jupyter notebook e Pluto
+  <a href="#jupyter-notebook-e-pluto"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>O uso do <strong>Julia</strong> no 
+<a href="https://jupyter.org/" target="_blank" rel="noopener">Jupyter Notebook</a> permite que você escreva e execute código <strong>Julia</strong> de forma interativa, com suporte para visualizações e documentação inline. Jupyter oferece um ambiente flexível para análise e experimentação, e o Julia pode ser integrado a ele de maneira simples.</p>
+<p>Usar <strong>Julia</strong> no Jupyter Notebook é uma excelente maneira de explorar e desenvolver código de forma interativa, com a possibilidade de criar documentos bem documentados e compartilháveis. A combinação de Julia com Jupyter oferece uma plataforma poderosa para análise de dados, visualizações e aprendizado de máquinas.</p>
+<p>O 
+<a href="https://plutojl.org/" target="_blank" rel="noopener">Pluto.jl</a> é um ambiente interativo e leve para programação em Julia, focado em notebooks reativos. Ele permite criar documentos que combinam código <strong>Julia</strong>, texto explicativo, gráficos e visualizações interativas, sendo ideal para ensino, experimentação e prototipagem. Aqui está um guia detalhado sobre o uso de <strong>Julia</strong> no Pluto.jl.</p>
+<p>Você pode adicionar células de código Julia ou texto Markdown. A reatividade permite que qualquer alteração em uma célula atualize automaticamente as células dependentes. Isso elimina a necessidade de executar células manualmente para refletir alterações. Você pode ainda gerar gráficos e interações em tempo real com pacotes como <code>Plots.jl</code>, <code>Makie.jl</code> e <code>InteractiveWidgets.jl</code>. Além disso, pode ainda insira células Markdown para documentar o notebook, explicando seu código ou incluindo fórmulas LaTeX. Notebooks podem ser exportados como arquivos <code>.jl</code> para compartilhamento ou <code>.html</code> para visualização.</p>
+<p><img src="img/julia_pluto.png" alt=""></p>
+<p>Principais diferenças entre Jupyter e Pluto.jl.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Recurso</strong></th>
+<th><strong>Jupyter</strong></th>
+<th><strong>Pluto.jl</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reatividade</td>
+<td>Dependência de execução manual</td>
+<td>Células são automaticamente reativas</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>Mais robusta e ampla</td>
+<td>Simplicidade e interatividade</td>
+</tr>
+<tr>
+<td>Estado Global</td>
+<td>Depende da ordem de execução</td>
+<td>Não possui estado global</td>
+</tr>
+<tr>
+<td>Interatividade</td>
+<td>Widgets configuráveis com pacotes adicionais</td>
+<td>Suporte nativo a widgets</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h3 id="sintaxe">Sintaxe
+  <a href="#sintaxe"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>A sintaxe da linguagem <strong>Julia</strong> é semelhante à de outras linguagens de alto nível, o que facilita sua adoção.</p>
+<p>Entretanto, ela possui algumas particularidades:</p>
+<ul>
+<li>Comentários são feitos com <code>#</code> ou com <code>#=</code> e <code>=#</code> para linhas múltiplas.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#586e75"># julia</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#=
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75">julia1
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75">julia2
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75">=#</span>
+</span></span></code></pre></div><ul>
+<li>Operadores matemáticos são familiares e a linguagem tem suporte a operações vetoriais.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>a <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span> <span style="color:#719e07">+</span> <span style="color:#2aa198">5</span>     <span style="color:#586e75"># Aritmética</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#719e07">=</span> a <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">5</span>      <span style="color:#586e75"># Comparação</span>
+</span></span><span style="display:flex;"><span>c <span style="color:#719e07">=</span> a <span style="color:#719e07">&amp;&amp;</span> b     <span style="color:#586e75"># Lógico</span>
+</span></span></code></pre></div><ul>
+<li>Atribuição com <code>=</code>, permitindo múltiplas variáveis.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>x <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>  <span style="color:#586e75"># Atribui o valor 10 à variável x</span>
+</span></span><span style="display:flex;"><span>x, y <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>, <span style="color:#2aa198">20</span>  <span style="color:#586e75"># Atribui 10 a x e 20 a y</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>Julia oferece tipos básicos de dados como:</p>
+<ul>
+<li><em>Inteiros</em>: Int8, Int16, Int32, Int64, Int128, UInt8, UInt16, UInt32, UInt64, UInt128</li>
+<li><em>Ponto flutuante</em>: Float32, Float64</li>
+<li><em>Booleanos</em>: true, false</li>
+<li><em>Strings</em>: &ldquo;texto&rdquo;</li>
+<li><em>Coleções</em>: Arrays, Tuplas, Dicionários, etc.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>a <span style="color:#719e07">=</span> <span style="color:#2aa198">5</span>          <span style="color:#586e75"># Int64</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#719e07">=</span> <span style="color:#2aa198">3.5</span>        <span style="color:#586e75"># Float64</span>
+</span></span><span style="display:flex;"><span>c <span style="color:#719e07">=</span> <span style="color:#b58900">true</span>       <span style="color:#586e75"># Booleano</span>
+</span></span><span style="display:flex;"><span>nome <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Julia&#34;</span> <span style="color:#586e75"># String</span>
+</span></span></code></pre></div><ul>
+<li>Tipagem dinâmica, mas com suporte a tipagem explícita.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#586e75"># tipagem dinamica</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>
+</span></span><span style="display:flex;"><span>typeof(x)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># tipagem explicita</span>
+</span></span><span style="display:flex;"><span>y<span style="color:#719e07">::</span><span style="color:#dc322f">Float64</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>  <span style="color:#586e75"># x é do tipo Int</span>
+</span></span><span style="display:flex;"><span>typeof(y)
+</span></span></code></pre></div><ul>
+<li>Funções podem ser definidas de forma concisa com <code>function</code> ou <code>=</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#586e75"># definir funcao</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">function</span> f(x)
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">return</span> x<span style="color:#719e07">^</span><span style="color:#2aa198">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f(x) <span style="color:#719e07">=</span> x<span style="color:#719e07">^</span><span style="color:#2aa198">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># usar a funcao</span>
+</span></span><span style="display:flex;"><span>f(<span style="color:#2aa198">10</span>)
+</span></span></code></pre></div><ul>
+<li>Condicionais e laços seguem a estrutura clássica de outras linguagens (como <code>if</code>, <code>for</code> e <code>while</code>). Atentar para o <code>end</code> para finalizar uma declaração.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#586e75"># condicional</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">if</span> x <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#2aa198">&#34;Positivo&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#719e07">elseif</span> x <span style="color:#719e07">&lt;</span> <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#2aa198">&#34;Negativo&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#719e07">else</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#2aa198">&#34;Zero&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#719e07">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># for</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> <span style="color:#2aa198">1</span><span style="color:#719e07">:</span><span style="color:#2aa198">5</span>
+</span></span><span style="display:flex;"><span>    println(i)
+</span></span><span style="display:flex;"><span><span style="color:#719e07">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># while</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">while</span> x <span style="color:#719e07">&lt;=</span> <span style="color:#2aa198">5</span>
+</span></span><span style="display:flex;"><span>    println(x)
+</span></span><span style="display:flex;"><span>    x <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>  <span style="color:#586e75"># Equivalente a x = x + 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">end</span>
+</span></span></code></pre></div><ul>
+<li>Arrays e matrizes são simples de declarar e acessar.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#586e75"># array</span>
+</span></span><span style="display:flex;"><span>arr <span style="color:#719e07">=</span> [<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>, <span style="color:#2aa198">5</span>]  <span style="color:#586e75"># Vetor com 5 elementos</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># matriz</span>
+</span></span><span style="display:flex;"><span>matrix <span style="color:#719e07">=</span> [<span style="color:#2aa198">1</span> <span style="color:#2aa198">2</span> <span style="color:#2aa198">3</span>; <span style="color:#2aa198">4</span> <span style="color:#2aa198">5</span> <span style="color:#2aa198">6</span>]  <span style="color:#586e75"># Matriz 2x3</span>
+</span></span></code></pre></div><ul>
+<li>Tupla é uma estrutura de dados imutável e dicionário é uma estrutura de dados mutável que armazena pares chave-valor</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#586e75"># tupla</span>
+</span></span><span style="display:flex;"><span>t <span style="color:#719e07">=</span> (<span style="color:#2aa198">1</span>, <span style="color:#2aa198">&#34;Julia&#34;</span>, <span style="color:#2aa198">3.14</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># dicionario</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#719e07">=</span> <span style="color:#dc322f">Dict</span>(<span style="color:#2aa198">&#34;nome&#34;</span> <span style="color:#719e07">=&gt;</span> <span style="color:#2aa198">&#34;Julia&#34;</span>, <span style="color:#2aa198">&#34;idade&#34;</span> <span style="color:#719e07">=&gt;</span> <span style="color:#2aa198">10</span>, <span style="color:#2aa198">&#34;linguagem&#34;</span> <span style="color:#719e07">=&gt;</span> <span style="color:#2aa198">&#34;programação&#34;</span>)
+</span></span></code></pre></div><ul>
+<li>Módulos em Julia são definidos com a palavra-chave <code>module</code> e permitem organizar código em partes reutilizáveis.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#586e75"># declarar</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">module</span> MeuModulo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">function</span> saudacao(nome)
+</span></span><span style="display:flex;"><span>    println(<span style="color:#2aa198">&#34;Olá, </span><span style="color:#2aa198">$nome!</span><span style="color:#2aa198">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#719e07">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># usar</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">using</span> MeuModulo
+</span></span><span style="display:flex;"><span>saudacao(<span style="color:#2aa198">&#34;Julia&#34;</span>)
+</span></span></code></pre></div>
+
+
+
+<h3 id="pacotes">Pacotes
+  <a href="#pacotes"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Os pacotes no <strong>Julia</strong> são fundamentais para expandir as funcionalidades da linguagem, oferecendo bibliotecas para diversas áreas como matemática, estatística, aprendizado de máquina, visualização de dados e processamento paralelo.</p>
+<p>O registro oficial dos pacotes, chamado <strong>Julia General Registry</strong> e uma listagem de todos os pacotes 
+<a href="https://juliapackages.com/" target="_blank" rel="noopener">juliapackages</a>, facilita o acesso a milhares de bibliotecas, mas também é possível adicionar pacotes de repositórios privados ou do GitHub com <code>Pkg.add(url)</code>.</p>
+<p>O sistema de pacotes do Julia é acessado pelo módulo <code>Pkg</code> ou pelo <strong>modo de pacotes</strong> no REPL (<code>]</code>). As principais operações incluem:</p>
+<ol>
+<li>Instalação de pacotes</li>
+</ol>
+<ul>
+<li>Via registro oficial:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#719e07">using</span> Pkg
+</span></span><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>add(<span style="color:#2aa198">&#34;NomeDoPacote&#34;</span>)
+</span></span></code></pre></div><ul>
+<li>De repositórios específicos:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>add(url<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://github.com/usuario/pacote.git&#34;</span>)
+</span></span></code></pre></div><ol start="2">
+<li>Atualização<br>
+Atualiza todos os pacotes instalados para as versões mais recentes compatíveis:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>update()
+</span></span></code></pre></div><ol start="3">
+<li>Remoção<br>
+Remove um pacote do ambiente:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>rm(<span style="color:#2aa198">&#34;NomeDoPacote&#34;</span>)
+</span></span></code></pre></div><ol start="4">
+<li>Listagem de pacotes instalados<br>
+Exibe os pacotes no ambiente atual:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>status()
+</span></span></code></pre></div><ol start="5">
+<li>Ativação de ambientes<br>
+Os ambientes controlam versões de pacotes e dependências para projetos específicos</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>activate(<span style="color:#2aa198">&#34;caminho/do/ambiente&#34;</span>)
+</span></span></code></pre></div><ol start="6">
+<li>Criação de pacotes<br>
+Para criar pacotes personalizados:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>generate(<span style="color:#2aa198">&#34;NomeDoPacote&#34;</span>)
+</span></span></code></pre></div><p>Alguns pacotes amplamente usados:</p>
+<ul>
+<li><strong>DataFrames.jl</strong>: manipulação de tabelas de dados</li>
+<li><strong>Plots.jl</strong>: visualização de dados</li>
+<li><strong>JuMP.jl</strong>: otimização matemática</li>
+<li><strong>Flux.jl</strong>: redes neurais e aprendizado de máquina</li>
+<li><strong>DifferentialEquations.jl</strong>: solução de equações diferenciais</li>
+</ul>
+<p>Em resumo, o sistema de pacotes do Julia é poderoso, eficiente e flexível, oferecendo todas as ferramentas necessárias para gerenciar dependências e personalizar o ambiente de desenvolvimento.</p>
+
+
+
+
+<h3 id="ambientes">Ambientes
+  <a href="#ambientes"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Em <strong>Julia</strong>, ambientes são uma maneira de isolar as dependências de pacotes e garantir que diferentes projetos possam ter versões de pacotes específicas sem causar conflitos. Cada ambiente pode ter seu próprio conjunto de pacotes e versões, o que é especialmente útil quando se trabalha em múltiplos projetos com requisitos diferentes.</p>
+<p>Um ambiente em Julia é um diretório que contém:</p>
+<ul>
+<li>O arquivo <code>Project.toml</code>, que lista os pacotes e suas versões.</li>
+<li>O arquivo <code>Manifest.toml</code>, que registra as versões exatas dos pacotes e suas dependências.</li>
+</ul>
+<p>Para criar e gerenciar ambientes, utiliza-se o <strong>Pkg</strong>. O fluxo básico é o seguinte:</p>
+<ol>
+<li>Criar um novo ambiente<br>
+Para iniciar um novo ambiente, basta ativá-lo em um diretório vazio ou específico:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#719e07">using</span> Pkg
+</span></span><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>activate(<span style="color:#2aa198">&#34;caminho/do/ambiente&#34;</span>)
+</span></span></code></pre></div><p>Isso cria um novo ambiente com os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</p>
+<ol start="2">
+<li>Instalar pacotes em um ambiente<br>
+Depois de ativar um ambiente, você pode adicionar pacotes que serão isolados nesse ambiente:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>add(<span style="color:#2aa198">&#34;NomeDoPacote&#34;</span>)
+</span></span></code></pre></div><ol start="3">
+<li>Listar pacotes no ambiente ativo<br>
+Para ver quais pacotes estão instalados no ambiente ativo:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>status()
+</span></span></code></pre></div><ol start="4">
+<li>Voltar ao ambiente global <br>
+Para voltar ao ambiente global (onde pacotes são instalados no diretório padrão), basta ativá-lo:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>activate()  <span style="color:#586e75"># Ativa o ambiente global</span>
+</span></span></code></pre></div><ol start="5">
+<li>Ambientes em projetos <br>
+Para projetos específicos, você pode criar um ambiente no diretório do projeto, o que garante que o projeto use as versões exatas dos pacotes que você deseja. Isso também facilita a colaboração, pois outros usuários podem instalar as dependências exatas usando os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</li>
+</ol>
+<p>Ambientes isolam dependências, ou seja, ambientes diferentes podem ter diferentes versões de pacotes, o que evita conflitos entre projetos. Almentam a reprodutibilidade, isto é, os arquivos <code>Project.toml</code> e  <code>Manifest.toml</code> garantem que o projeto pode ser facilmente replicado em outras máquinas ou por outras pessoas. E facilidade de gerenciamento, uma vez que trabalhar com ambientes separados permite que você organize e mantenha seus projetos de maneira mais eficiente, especialmente quando se lida com muitas dependências.</p>
+<p>Exemplo de Fluxo de Trabalho com Ambientes</p>
+<ol>
+<li>Crie um diretório para o seu projeto e ative um novo ambiente:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>mkdir(<span style="color:#2aa198">&#34;meu_projeto&#34;</span>)
+</span></span><span style="display:flex;"><span>cd(<span style="color:#2aa198">&#34;meu_projeto&#34;</span>)
+</span></span><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>activate(<span style="color:#2aa198">&#34;.&#34;</span>)
+</span></span></code></pre></div><ol start="2">
+<li>Adicione pacotes necessários para o projeto:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>add(<span style="color:#2aa198">&#34;DataFrames&#34;</span>)
+</span></span><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>add(<span style="color:#2aa198">&#34;Plots&#34;</span>)
+</span></span></code></pre></div><ol start="3">
+<li>Depois de terminar o trabalho, você pode gerar o arquivo <code>Manifest.toml</code> para garantir que qualquer pessoa que usar o projeto tenha as mesmas versões de pacotes:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>instantiate()  <span style="color:#586e75"># Para instalar as dependências listadas</span>
+</span></span></code></pre></div><p>Em resumo, os ambientes em Julia proporcionam um controle flexível e eficiente sobre as dependências do projeto, melhorando a reprodutibilidade e o isolamento de pacotes, essenciais para trabalhar com projetos complexos ou múltiplos.</p>
 
 
 
@@ -230,12 +698,8 @@
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h3>
-<p>A criação de <strong>Julia</strong> foi uma resposta direta às limitações percebidas em outras linguagens usadas para computação científica e análise numérica. Desde sua fundação, a linguagem tem sido bem-sucedida em cumprir a visão de oferecer <strong>alto desempenho</strong> sem sacrificar <strong>facilidade de uso</strong>. Sua combinação única de <strong>compilação JIT</strong>, <strong>tipagem dinâmica</strong>, <strong>concorrência nativa</strong> e <strong>integração com outras linguagens</strong> fez dela uma escolha popular entre cientistas, engenheiros e desenvolvedores de software que trabalham com grandes volumes de dados ou cálculos complexos. Ao longo dos anos, a linguagem tem se expandido rapidamente, conquistando espaço nas áreas de <strong>aprendizado de máquina</strong>, <strong>inteligência artificial</strong> e <strong>computação científica</strong>, tornando-se uma das linguagens de programação mais promissoras da atualidade.</p>
-<p>Lançada oficialmente em 2012, a linguagem rapidamente se destacou por sua capacidade de oferecer o desempenho de linguagens de baixo nível, como C, enquanto mantém a simplicidade de linguagens de alto nível, como Python e MATLAB. A principal vantagem do <strong>Julia</strong> é sua compilação Just-in-Time (JIT) utilizando o LLVM, o que permite que o código seja executado com uma velocidade comparável a de linguagens compiladas, ao mesmo tempo em que mantém uma sintaxe simples e intuitiva.</p>
-<p>Essa linguagem é particularmente indicada para tarefas intensivas em cálculos, como análise de dados, modelagem matemática, simulações científicas e aprendizado de máquina, sendo uma escolha popular entre cientistas, engenheiros e pesquisadores.</p>
-<p>A sintaxe do <strong>Julia</strong> é semelhante à de outras linguagens de alto nível, o que facilita sua adoção, e oferece tanto tipagem dinâmica quanto a possibilidade de usar tipagem estática, proporcionando flexibilidade e segurança. A interação com o código é facilitada por um REPL (Read-Eval-Print Loop), que permite a execução imediata de comandos, o que é ideal para testes rápidos e exploração de dados. Além disso, <strong>Julia</strong> oferece suporte para notebooks interativos, como <strong>Jupyter</strong>, permitindo que os usuários escrevam e executem código junto com textos explicativos e visualizações.</p>
-<p>A linguagem também se destaca em termos de paralelismo e concorrência, com suporte nativo para computação paralela e distribuída. Isso torna o <strong>Julia</strong> altamente eficiente para grandes volumes de dados e cálculos complexos, sendo capaz de lidar com múltiplos núcleos e distribuindo tarefas de forma eficaz. A integração com outras linguagens é outro ponto forte do <strong>Julia</strong>, permitindo que bibliotecas e código em Python, R, C, Fortran, entre outras, sejam chamados diretamente, o que facilita a reutilização de código existente e amplia a flexibilidade do ambiente de desenvolvimento.</p>
-<p>Apesar de suas muitas vantagens, <strong>Julia</strong> ainda possui algumas limitações. A comunidade, embora crescente, ainda é menor do que a de linguagens como Python ou R, o que significa que o ecossistema de pacotes não é tão vasto. Além disso, o uso de recursos mais avançados, como macros e tipagem estática, pode exigir uma curva de aprendizado mais acentuada. Ainda assim, a linguagem tem se mostrado uma excelente escolha para pesquisadores e desenvolvedores que necessitam de desempenho sem sacrificar a legibilidade e a facilidade de uso do código.</p>
+<p>A criação de <strong>Julia</strong> foi uma resposta direta às limitações percebidas em outras linguagens usadas para computação científica e análise numérica. Desde sua fundação, a linguagem tem sido bem-sucedida em cumprir a visão de oferecer alto desempenho sem sacrificar facilidade de uso.</p>
+<p>Sua combinação única de compilação JIT, tipagem dinâmica, concorrência nativa e integração com outras linguagens fez dela uma escolha popular entre cientistas, engenheiros e desenvolvedores de software que trabalham com grandes volumes de dados ou cálculos complexos. Ao longo dos anos, a linguagem tem se expandido rapidamente, conquistando espaço nas áreas de aprendizado de máquina, inteligência artificial e computação científica, tornando-se uma das linguagens de programação mais promissoras da atualidade.</p>
 <p>Em resumo, <strong>Julia</strong> é uma linguagem de programação poderosa, ideal para computação científica e tarefas que exigem alto desempenho. Com sua sintaxe amigável, suporte a paralelismo e grande potencial de integração com outras linguagens, <strong>Julia</strong> se torna uma opção atraente para aqueles que trabalham com grandes volumes de dados ou problemas computacionalmente exigentes, mesmo que ainda não tenha o mesmo ecossistema ou popularidade de linguagens como Python e R.</p>
 
 
@@ -247,6 +711,42 @@
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
+<p><strong>Sites</strong></p>
+<p>
+<a href="https://julialang.org/learning/books/" target="_blank" rel="noopener">Livros</a></p>
+<p>
+<a href="https://github.com/JuliaLangPt/tutorial_PT_BR" target="_blank" rel="noopener">Tutorial</a></p>
+<p>
+<a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#_copyright" target="_blank" rel="noopener">ThinkJulia</a></p>
+<p>
+<a href="http://bogumilkaminski.pl/files/julia_express.pdf" target="_blank" rel="noopener">Julia express</a></p>
+<p>
+<a href="https://en.wikibooks.org/wiki/Introducing_Julia" target="_blank" rel="noopener">Introducing Julia</a></p>
+<p><strong>Livros</strong></p>
+<p>Engheim, E. (2022). Julia as a second language. O’REILLY MEDIA.</p>
+<p>Kalicharan, N. (2021). Julia - Bit by Bit: Programming for Beginners. Springer International Publishing. 
+<a href="https://doi.org/10.1007/978-3-030-73936-2" target="_blank" rel="noopener">https://doi.org/10.1007/978-3-030-73936-2</a></p>
+<p>Kamiński, B. (2023). Julia for data analysis (First edition). Manning Publications.</p>
+<p>Lauwens, B., &amp; Downey, A. (2019). Think Julia: How to think like a computer scientist (First edition). O’Reilly.</p>
+<p>Lobianco, A. (2019). Julia Quick Syntax Reference: A Pocket Guide for Data Science Programming. Apress. 
+<a href="https://doi.org/10.1007/978-1-4842-5190-4" target="_blank" rel="noopener">https://doi.org/10.1007/978-1-4842-5190-4</a></p>
+<p>McNicholas, P. D., &amp; Tait, P. A. (2019). Data science with Julia (1st ed.). CRC Press. 
+<a href="https://doi.org/10.1201/9781351013673" target="_blank" rel="noopener">https://doi.org/10.1201/9781351013673</a></p>
+<p>Nagar, S. (2017). Beginning Julia Programming. Apress. 
+<a href="https://doi.org/10.1007/978-1-4842-3171-5" target="_blank" rel="noopener">https://doi.org/10.1007/978-1-4842-3171-5</a></p>
+<p>Nazarathy, Y., &amp; Klok, H. (2021). Statistics with Julia: Fundamentals for Data Science, Machine Learning and Artificial Intelligence. Springer International Publishing. 
+<a href="https://doi.org/10.1007/978-3-030-70901-3" target="_blank" rel="noopener">https://doi.org/10.1007/978-3-030-70901-3</a></p>
+<p>Phillips, L. (2024). Practical Julia. No Starch Press.</p>
+<p>Voulgaris, Z. (2016). Julia for data science (First edition). Technics Publications.</p>
+<p><strong>Vídeos</strong></p>
+<p>
+<a href="https://www.youtube.com/watch?v=Gmm5voUQaHw" target="_blank" rel="noopener">Tutoriais de Julia em Português - Super Tutorial do Básico</a></p>
+<p>
+<a href="https://www.youtube.com/watch?v=JYs_94znYy0" target="_blank" rel="noopener">Julia in 100 Seconds</a></p>
+<p>
+<a href="https://www.youtube.com/watch?v=4igzy3bGVkQ&amp;list=PLP8iPy9hna6SCcFv3FvY_qjAmtTsNYHQE&amp;index=2" target="_blank" rel="noopener">A Gentle Introduction to Julia</a></p>
+<p>
+<a href="https://www.youtube.com/watch?v=IlPoU5Yr2QI" target="_blank" rel="noopener">Statistics with Julia from the ground up | Workshop | JuliaCon 2021</a></p>
 
       </section>
       <footer class="post-footer">
@@ -324,7 +824,7 @@
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">7 minute read, 1463 words</dd>
+    <dd class="fw5 ml0">17 minute read, 3520 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
