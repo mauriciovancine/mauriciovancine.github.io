@@ -48,7 +48,7 @@
   <meta itemprop="description" content="Uma breve introdução à linguagem Julia">
   <meta itemprop="datePublished" content="2024-12-21T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-12-21T00:00:00+00:00">
-  <meta itemprop="wordCount" content="3520">
+  <meta itemprop="wordCount" content="3543">
   <meta itemprop="image" content="https://mauriciovancine.github.io/blog/2024-12-julia-intro/featured.png">
   <meta itemprop="keywords" content="Julia,Linguagem De Programacao">
   
@@ -146,8 +146,8 @@
 <p>Mas notei algumas tendências muito interessantes de aumento do uso da linguagem <strong>Julia</strong>, principalmente de alguns grupos de pesquisa da Europa, isso na área de Ecologia. Vou tentar fazer uma visão geral através de um material simples para eluciadar alguns pontos sobre essa linguagem.</p>
 <p>Numa série de três posts, começando por este, 
 <a href="https://mauriciovancine.github.io/blog/2024-12-julia-intro" target="_blank" rel="noopener">Introdução à linguagem Julia</a>, seguido por 
-<a href="https://mauriciovancine.github.io/blog/2024-12-julia-eco" target="_blank" rel="noopener">Usando Julia na Ecologia</a> e por fim 
-<a href="https://mauriciovancine.github.io/blog/2024-12-julia-geospat" target="_blank" rel="noopener">Usando Julia para dados geoespaciais</a>, vou detalhar um pouco das principais características e aplicações da linguagem <strong>Julia</strong> para a Ecologia e para as análises geoespaciais.</p>
+<a href="https://mauriciovancine.github.io/blog/2025-01-julia-eco" target="_blank" rel="noopener">Usando Julia na Ecologia</a> e por fim 
+<a href="https://mauriciovancine.github.io/blog/2025-02-julia-geospat" target="_blank" rel="noopener">Usando Julia para dados geoespaciais</a>, vou detalhar um pouco das principais características e aplicações da linguagem <strong>Julia</strong> para a Ecologia e para as análises geoespaciais.</p>
 
 
 
@@ -580,9 +580,10 @@
 <p>Os pacotes no <strong>Julia</strong> são fundamentais para expandir as funcionalidades da linguagem, oferecendo bibliotecas para diversas áreas como matemática, estatística, aprendizado de máquina, visualização de dados e processamento paralelo.</p>
 <p>O registro oficial dos pacotes, chamado <strong>Julia General Registry</strong> e uma listagem de todos os pacotes 
 <a href="https://juliapackages.com/" target="_blank" rel="noopener">juliapackages</a>, facilita o acesso a milhares de bibliotecas, mas também é possível adicionar pacotes de repositórios privados ou do GitHub com <code>Pkg.add(url)</code>.</p>
-<p>O sistema de pacotes do Julia é acessado pelo módulo <code>Pkg</code> ou pelo <strong>modo de pacotes</strong> no REPL (<code>]</code>). As principais operações incluem:</p>
+<p>O sistema de pacotes do Julia é acessado pelo módulo <code>Pkg</code> ou pelo <strong>modo de pacotes</strong> no REPL (<code>]</code>). Se</p>
+<p>As principais operações incluem:</p>
 <ol>
-<li>Instalação de pacotes</li>
+<li>Instalação</li>
 </ol>
 <ul>
 <li>Via registro oficial:</li>
@@ -594,26 +595,31 @@
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>add(url<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://github.com/usuario/pacote.git&#34;</span>)
 </span></span></code></pre></div><ol start="2">
+<li>Carregamento
+Depois de instalado, um pacote pode ser usado carregando-o, entretanto, nenhuma mensagem é devolvida no REPL:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#719e07">using</span> NomeDoPacote
+</span></span></code></pre></div><ol start="3">
 <li>Atualização<br>
 Atualiza todos os pacotes instalados para as versões mais recentes compatíveis:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>update()
-</span></span></code></pre></div><ol start="3">
+</span></span></code></pre></div><ol start="4">
 <li>Remoção<br>
 Remove um pacote do ambiente:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>rm(<span style="color:#2aa198">&#34;NomeDoPacote&#34;</span>)
-</span></span></code></pre></div><ol start="4">
+</span></span></code></pre></div><ol start="5">
 <li>Listagem de pacotes instalados<br>
 Exibe os pacotes no ambiente atual:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>status()
-</span></span></code></pre></div><ol start="5">
+</span></span></code></pre></div><ol start="6">
 <li>Ativação de ambientes<br>
-Os ambientes controlam versões de pacotes e dependências para projetos específicos</li>
+Os ambientes controlam versões de pacotes e dependências para projetos específicos, veja mais logo em seguida:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>Pkg<span style="color:#719e07">.</span>activate(<span style="color:#2aa198">&#34;caminho/do/ambiente&#34;</span>)
-</span></span></code></pre></div><ol start="6">
+</span></span></code></pre></div><ol start="7">
 <li>Criação de pacotes<br>
 Para criar pacotes personalizados:</li>
 </ol>
@@ -692,12 +698,12 @@ Para projetos específicos, você pode criar um ambiente no diretório do projet
 
 
 
-<h3 id="conclusão">Conclusão
+<h2 id="conclusão">Conclusão
   <a href="#conclus%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0h24v24H0z" fill="currentColor"></path>
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
-</h3>
+</h2>
 <p>A criação de <strong>Julia</strong> foi uma resposta direta às limitações percebidas em outras linguagens usadas para computação científica e análise numérica. Desde sua fundação, a linguagem tem sido bem-sucedida em cumprir a visão de oferecer alto desempenho sem sacrificar facilidade de uso.</p>
 <p>Sua combinação única de compilação JIT, tipagem dinâmica, concorrência nativa e integração com outras linguagens fez dela uma escolha popular entre cientistas, engenheiros e desenvolvedores de software que trabalham com grandes volumes de dados ou cálculos complexos. Ao longo dos anos, a linguagem tem se expandido rapidamente, conquistando espaço nas áreas de aprendizado de máquina, inteligência artificial e computação científica, tornando-se uma das linguagens de programação mais promissoras da atualidade.</p>
 <p>Em resumo, <strong>Julia</strong> é uma linguagem de programação poderosa, ideal para computação científica e tarefas que exigem alto desempenho. Com sua sintaxe amigável, suporte a paralelismo e grande potencial de integração com outras linguagens, <strong>Julia</strong> se torna uma opção atraente para aqueles que trabalham com grandes volumes de dados ou problemas computacionalmente exigentes, mesmo que ainda não tenha o mesmo ecossistema ou popularidade de linguagens como Python e R.</p>
@@ -824,7 +830,7 @@ Para projetos específicos, você pode criar um ambiente no diretório do projet
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">17 minute read, 3520 words</dd>
+    <dd class="fw5 ml0">17 minute read, 3543 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -849,7 +855,7 @@ Para projetos específicos, você pode criar um ambiente no diretório do projet
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
   <nav class="db dt-l w-100">
     <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
-      &copy; 2024 Maurício Vancine
+      &copy; 2025 Maurício Vancine
       <span class="middot-divider"></span>
       Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
       <br />
