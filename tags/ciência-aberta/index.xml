@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ciência Aberta on Maurício Vancine</title>
-    <link>http://localhost:4321/tags/ci%C3%AAncia-aberta/</link>
+    <link>https://mauriciovancine.github.io/tags/ci%C3%AAncia-aberta/</link>
     <description>Recent content in Ciência Aberta on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:4321/tags/ci%C3%AAncia-aberta/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/ci%C3%AAncia-aberta/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Principais revistas de ecologia</title>
-      <link>http://localhost:4321/blog/2023-12-pub-repositorios-dados/</link>
-      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/blog/2023-12-pub-repositorios-dados/</guid>
+      <title>Principais repositórios de dados para publicação</title>
+      <link>https://mauriciovancine.github.io/blog/2025-01-pub-data-repo/</link>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2025-01-pub-data-repo/</guid>
       <description>Lista das principais repositórios de dados para publicação</description>
     </item>
   </channel>

@@ -6,13 +6,20 @@
     <description>Recent content in Blog on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mauriciovancine.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Principais repositórios de dados para publicação</title>
+      <link>https://mauriciovancine.github.io/blog/2025-01-pub-data-repo/</link>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2025-01-pub-data-repo/</guid>
+      <description>Lista das principais repositórios de dados para publicação</description>
+    </item>
+    <item>
       <title>Introdução ao shiny</title>
-      <link>https://mauriciovancine.github.io/blog/2025-01-r-qrcode/</link>
+      <link>https://mauriciovancine.github.io/blog/2025-01-r-shiny-intro/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mauriciovancine.github.io/blog/2025-01-r-qrcode/</guid>
+      <guid>https://mauriciovancine.github.io/blog/2025-01-r-shiny-intro/</guid>
       <description>Introdução aos principais conceitos de criação de dashboards no R através do pacote shiny</description>
     </item>
     <item>
