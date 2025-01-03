@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.130.0">
+<title>Introdução ao shiny | Maurício Vancine</title>
+
+
+<meta property="twitter:site" content="@mauriciovancine">
+<meta property="twitter:creator" content="@mauriciovancine">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Introdução aos principais conceitos de criação de dashboards no R através do pacote shiny">
+
+
+<meta property="og:site_name" content="Maurício Vancine">
+<meta property="og:title" content="Introdução ao shiny | Maurício Vancine">
+<meta property="og:description" content="Introdução aos principais conceitos de criação de dashboards no R através do pacote shiny" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://mauriciovancine.github.io/blog/2025-01-r-qrcode/" />
+<meta property="og:locale" content="pt-br">
+
+
+
+
+    
+        <meta property="og:image" content="https://mauriciovancine.github.io/blog/2025-01-r-qrcode/featured.png" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://mauriciovancine.github.io/blog/2025-01-r-qrcode/featured.png" >
+    
+    
+  
+  <meta itemprop="name" content="Introdução ao shiny">
+  <meta itemprop="description" content="Introdução aos principais conceitos de criação de dashboards no R através do pacote shiny">
+  <meta itemprop="datePublished" content="2025-01-02T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-01-02T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1843">
+  <meta itemprop="image" content="https://mauriciovancine.github.io/blog/2025-01-r-qrcode/featured.png">
+  <meta itemprop="keywords" content="R,Shiny">
+  
+  
+
+
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.f039f41e61940aa743e97653edd07c8b48e7fbd36c8c465f1ea9f0e4d4ad1073.css" integrity="sha256-8Dn0HmGUCqdD6XZT7dB8i0jn&#43;9NsjEZfHqnw5NStEHM=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.43a16206850df307a9ecc165118c6e7eab95cf24ab4cf99d6388dc7971e9b6ce.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single-sidebar">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://mauriciovancine.github.io/" title="Home">
+      <img src="/img/favicon.png" class="dib db-l h2 w-auto" alt="Maurício Vancine">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="Sobre">Sobre</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Projetos">Projetos</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Palestras">Palestras</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/teaching/" title="Ensino">Ensino</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publication/" title="Publicações">Publicações</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/cv/cv-academic.pdf" title="">CV</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://mauriciovancine.github.io/resume/resume.pdf" title="">Resumé</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pr3-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Introdução ao shiny</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Introdução aos principais conceitos de criação de dashboards no R através do pacote shiny</h4>
+        <p class="f6 measure lh-copy mv1">By Maurício Vancine com edições de textos do ChatGPT in <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </p>
+        <p class="f7 db mv0 ttu">January 2, 2025</p>
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h2 id="contextualização">Contextualização
+  <a href="#contextualiza%c3%a7%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Eu tive conhecimento do 
+<a href="https://shiny.posit.co/" target="_blank" rel="noopener">shiny</a> lá por volta de 2017. Em 2018, trabalhei um pouco com a ferramenta para desenvolver uma aplicação que coletava pontos de classes de uso e cobertura da terra na Amazônia. Desde então, nunca mais trabalhei com a ferramente e ela teve uma séria de modificações e aprimoramentos que pretendo estudar.</p>
+<p>Este post é o começo da retomada desses estudos.</p>
+
+
+
+
+<h2 id="desenvolvimento">Desenvolvimento
+  <a href="#desenvolvimento"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+
+
+
+
+<h3 id="pacote-shiny">Pacote shiny
+  <a href="#pacote-shiny"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>
+<a href="https://shiny.posit.co/" target="_blank" rel="noopener">Shiny</a> é um pacote do R que permite criar aplicações web interativas a partir do código R, sem a necessidade de conhecimentos avançados em desenvolvimento web.</p>
+<p>Ele é amplamente utilizado por cientistas de dados, pesquisadores e analistas para criar 
+<a href="https://en.wikipedia.org/wiki/Dashboard_%28computing%29" target="_blank" rel="noopener">dashboards</a>, que são ferramentas de visualização e interfaces interativas para manipulação de dados e modelos estatísticos.</p>
+<p>Com o <strong>shiny</strong> é possível integrar gráficos, tabelas e entradas de usuário em uma aplicação que pode ser executada localmente ou publicada na web, tornando os resultados das análises mais acessíveis para públicos não especializados.</p>
+
+
+
+
+<h3 id="estrutura-geral-de-uma-aplicação-shiny">Estrutura geral de uma aplicação shiny
+  <a href="#estrutura-geral-de-uma-aplica%c3%a7%c3%a3o-shiny"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Uma aplicação Shiny é composta por três partes principais:</p>
+<p><strong>1. Interface do usuário (<em>User Interface</em> - UI)</strong></p>
+<p>A <strong>UI</strong> define o layout e os elementos visuais da aplicação. Ela é onde você organiza componentes como painéis, menus, sliders, gráficos e tabelas. Para criar uma interface, você utiliza funções como <code>fluidPage()</code>, <code>sidebarLayout()</code> e outros componentes interativos.</p>
+<p>Exemplo de componentes comuns:</p>
+<ul>
+<li><strong><code>fluidPage()</code></strong>: Layout fluido que ajusta os elementos à largura da janela.</li>
+<li><strong><code>sidebarLayout()</code></strong>: Divide a aplicação em uma barra lateral e um painel principal.</li>
+<li><strong><code>sliderInput()</code></strong>: Adiciona um controle deslizante.</li>
+<li><strong><code>textOutput()</code></strong>: Exibe texto gerado dinamicamente.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>ui <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">fluidPage</span>(
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">titlePanel</span>(<span style="color:#2aa198">&#34;Título da Aplicação&#34;</span>),
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">sidebarLayout</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">sidebarPanel</span>(
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">sliderInput</span>(<span style="color:#2aa198">&#34;slider&#34;</span>, <span style="color:#2aa198">&#34;Escolha um valor:&#34;</span>, min <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>, max <span style="color:#719e07">=</span> <span style="color:#2aa198">100</span>, value <span style="color:#719e07">=</span> <span style="color:#2aa198">50</span>)
+</span></span><span style="display:flex;"><span>    ),
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">mainPanel</span>(
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">textOutput</span>(<span style="color:#2aa198">&#34;output_text&#34;</span>)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><strong>2. Servidor (<em>Server</em>)</strong></p>
+<p>O <strong>Servidor</strong> processa entradas, realiza cálculos ou análises e fornece as saídas que serão exibidas na interface. Ele utiliza funções reativas como <code>renderText()</code>, <code>renderPlot()</code>, <code>renderTable()</code>, entre outras.</p>
+<p>No exemplo abaixo, o valor escolhido no slider é exibido como texto:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>server <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">function</span>(input, output) {
+</span></span><span style="display:flex;"><span>  output<span style="color:#719e07">$</span>output_text <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">renderText</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">paste</span>(<span style="color:#2aa198">&#34;Você selecionou o valor:&#34;</span>, input<span style="color:#719e07">$</span>slider)
+</span></span><span style="display:flex;"><span>  })
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>3. Função Principal</strong></p>
+<p>A função <code>shinyApp()</code> conecta a interface e o servidor, e executa a aplicação:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#268bd2">shinyApp</span>(ui <span style="color:#719e07">=</span> ui, server <span style="color:#719e07">=</span> server)
+</span></span></code></pre></div><p>Aplicação <strong>shiny</strong> sendo executada localmente:</p>
+<p><img src="img/shiny_app.png" alt=""></p>
+
+
+
+
+<h3 id="layouts-e-estilos-no-shiny">Layouts e estilos no shiny
+  <a href="#layouts-e-estilos-no-shiny"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>O Shiny oferece diferentes layouts para organizar os elementos da interface:</p>
+<ul>
+<li><strong><code>fluidPage()</code></strong>: layout fluido básico</li>
+<li><strong><code>navbarPage()</code></strong>: layout com abas de navegação</li>
+<li><strong><code>sidebarLayout()</code></strong>: layout com barra lateral</li>
+<li><strong><code>splitLayout()</code></strong>: divide a página em várias colunas</li>
+</ul>
+<p>Exemplo de layout com abas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>ui <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">navbarPage</span>(
+</span></span><span style="display:flex;"><span>  <span style="color:#2aa198">&#34;Minha Aplicação&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tabPanel</span>(<span style="color:#2aa198">&#34;Aba 1&#34;</span>, <span style="color:#268bd2">textOutput</span>(<span style="color:#2aa198">&#34;text1&#34;</span>)),
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">tabPanel</span>(<span style="color:#2aa198">&#34;Aba 2&#34;</span>, <span style="color:#268bd2">textOutput</span>(<span style="color:#2aa198">&#34;text2&#34;</span>))
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Você pode usar CSS para personalizar sua aplicação Shiny. O CSS pode ser incluído diretamente no código ou em arquivos externos.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>ui <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">fluidPage</span>(
+</span></span><span style="display:flex;"><span>  tags<span style="color:#719e07">$</span><span style="color:#268bd2">style</span>(<span style="color:#268bd2">HTML</span>(<span style="color:#2aa198">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">body {background-color: #f4f4f9;}
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">h1 {color: #4CAF50;}
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">&#34;</span>)),
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">titlePanel</span>(<span style="color:#2aa198">&#34;Aplicação com Estilo&#34;</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div>
+
+
+
+<h3 id="principais-funcionalidades">Principais funcionalidades
+  <a href="#principais-funcionalidades"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>As funcionalidades do Shiny oferecem uma ampla gama de possibilidades, permitindo desde a manipulação de dados até a criação de interfaces sofisticadas e visualizações dinâmicas. Abaixo, os principais recursos foram organizados e detalhados para destacar suas aplicações práticas:</p>
+<ul>
+<li><strong>Interatividade</strong>: permite criar elementos interativos como sliders, caixas de seleção, botões, menus suspensos e upload de arquivos</li>
+<li><strong>Visualizações interativas</strong>: integração com pacotes gráficos como ggplot2, plotly e leaflet para criar gráficos, mapas e tabelas interativos</li>
+<li><strong>Reatividade</strong>: permite que os outputs mudem automaticamente sempre que uma entrada for alterada, sem a necessidade de recarregar a página</li>
+<li><strong>Gerenciamento de dados</strong>: leitura, manipulação e visualização de grandes volumes de dados diretamente na interface, além de conexão com APIs para obter dados externos em tempo real</li>
+<li><strong>Upload e download de arquivos</strong>: permite que os usuários carreguem arquivos para a aplicação e baixem resultados</li>
+<li><strong>Integração com banco de dados</strong>: conexão com bancos SQL (MySQL, PostgreSQL) e NoSQL (MongoDB) para leitura e gravação de dados</li>
+<li><strong>Sessões e logs</strong>: gerenciamento de múltiplos usuários com sessões personalizadas e registre interações para auditoria e monitoramento</li>
+<li><strong>Criação de dashboards</strong>: construção de interfaces amigáveis e responsivas para análise de dados.
+Uso de pacotes como shinydashboard para design de painéis sofisticados</li>
+<li><strong>Escalabilidade e hospedagem</strong>: implantação local, em servidores Shiny Server, ou na nuvem (ex.: ShinyApps.io)</li>
+</ul>
+
+
+
+
+<h3 id="interatividade">Interatividade
+  <a href="#interatividade"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>A interatividade é um dos principais diferenciais do <strong>Shiny</strong>, permitindo a criação de interfaces altamente dinâmicas e adaptáveis. Essa funcionalidade possibilita que os usuários interajam diretamente com a aplicação para controlar inputs, visualizar resultados em tempo real e realizar ajustes personalizados. Abaixo, detalhamos os elementos principais:</p>
+<p><strong>1. Elementos de entrada (<em>inputs</em>)</strong><br>
+Os elementos de entrada são componentes que permitem ao usuário fornecer dados ou ajustar parâmetros da aplicação. Exemplos incluem:</p>
+<ul>
+<li>
+<p><strong>Sliders (<code>sliderInput()</code>)</strong>:</p>
+<ul>
+<li>Controle de valores numéricos contínuos ou intervalos</li>
+<li>Usado para definir filtros, limites de dados ou parâmetros em análises</li>
+<li>Exemplo: Escolher uma faixa de tempo para análise</li>
+</ul>
+</li>
+<li>
+<p><strong>Caixas de Seleção (<code>checkboxInput()</code>, <code>checkboxGroupInput()</code>)</strong>:</p>
+<ul>
+<li>Permitem escolhas binárias (sim/não) ou múltiplas</li>
+<li>Exemplo: Ativar ou desativar camadas em um mapa interativo</li>
+</ul>
+</li>
+<li>
+<p><strong>Botões (<code>actionButton()</code>)</strong>:</p>
+<ul>
+<li>Executam ações específicas apenas quando clicados</li>
+<li>Exemplo: Iniciar uma análise estatística ou atualizar um gráfico</li>
+</ul>
+</li>
+<li>
+<p><strong>Menus Suspensos (<code>selectInput()</code>, <code>pickerInput()</code>)</strong>:</p>
+<ul>
+<li>Apresentam opções de forma compacta, permitindo que o usuário selecione uma ou mais</li>
+<li>Exemplo: Escolher uma variável em um conjunto de dados para análise</li>
+</ul>
+</li>
+<li>
+<p><strong>Campos de Texto e Áreas de Texto (<code>textInput()</code>, <code>textareaInput()</code>)</strong>:</p>
+<ul>
+<li>Permitem a entrada de texto pelo usuário</li>
+<li>Exemplo: Inserir nomes, códigos ou descrições para relatórios</li>
+</ul>
+</li>
+<li>
+<p><strong>Upload de Arquivos (<code>fileInput()</code>)</strong>:</p>
+<ul>
+<li>Usuários podem carregar arquivos diretamente para a aplicação</li>
+<li>Exemplo: Importar dados de planilhas ou imagens para visualização ou análise</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Elementos de saída (<em>outputs</em>)</strong><br>
+Os elementos de saída exibem os resultados das interações realizadas pelo usuário. Exemplos incluem:</p>
+<ul>
+<li>
+<p><strong>Gráficos e Mapas Interativos</strong>:</p>
+<ul>
+<li>Atualizam dinamicamente com base nos inputs fornecidos</li>
+<li>Integração com pacotes como <code>ggplot2</code>, <code>plotly</code> e <code>leaflet</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Tabelas (<code>renderTable()</code>, <code>DT::renderDataTable()</code>)</strong>:</p>
+<ul>
+<li>Apresentam dados em formatos tabulares, com suporte para filtros e ordenações</li>
+</ul>
+</li>
+<li>
+<p><strong>Textos Dinâmicos (<code>renderText()</code>)</strong>:</p>
+<ul>
+<li>Exibem resultados de cálculos ou mensagens personalizadas com base nos inputs</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Reatividade e feedback imediato</strong><br>
+A interatividade no Shiny é alimentada pela <strong>reatividade</strong>, que permite que outputs sejam atualizados automaticamente sempre que um input associado for alterado.</p>
+<ul>
+<li>
+<p><strong>Reatividade Automática</strong>:</p>
+<ul>
+<li>Funções reativas como <code>reactive()</code>, <code>observe()</code>, e <code>observeEvent()</code> monitoram mudanças nos inputs e disparam atualizações dos outputs</li>
+<li>Exemplo: Um gráfico que muda dinamicamente ao ajustar um slider de faixa etária</li>
+</ul>
+</li>
+<li>
+<p><strong>Feedback Visível</strong>:</p>
+<ul>
+<li>Indicadores de carregamento (<code>withProgress()</code>) são usados para mostrar que uma operação está em andamento</li>
+<li>Exemplo: Barra de progresso ao carregar um grande conjunto de dados</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. Integração de inputs e outputs</strong><br>
+Os inputs e outputs podem ser combinados para criar fluxos de trabalho interativos complexos. Exemplo:</p>
+<ol>
+<li>O usuário carrega um arquivo CSV</li>
+<li>Seleciona colunas específicas para visualização usando menus suspensos</li>
+<li>Ajusta parâmetros com sliders e filtros</li>
+<li>Visualiza os resultados em gráficos e tabelas dinâmicos</li>
+</ol>
+<p><strong>5. Exemplos práticos</strong></p>
+<ul>
+<li><strong>Painéis de controle</strong>: dashboards interativos que permitem explorar dados ajustando sliders, menus e caixas de seleção</li>
+<li><strong>Filtros dinâmicos</strong>: refinamento de gráficos e tabelas em tempo real com base nos parâmetros selecionados</li>
+<li><strong>Aplicações educacionais</strong>: simulações de modelos matemáticos ou ecológicos em que o usuário ajusta variáveis para observar resultados</li>
+</ul>
+
+
+
+
+<h3 id="reatividade">Reatividade
+  <a href="#reatividade"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>A <strong>reatividade</strong> é um dos conceitos mais importantes do Shiny. Ela permite que elementos da aplicação sejam atualizados automaticamente quando os valores de entrada mudam.</p>
+<p>Isso pode ser feito com dados de entrada e saída:</p>
+<ul>
+<li><strong>Inputs</strong>: elementos de entrada fornecidos pelo usuário, como sliders, caixas de seleção, botões, etc.</li>
+<li><strong>Outputs</strong>: elementos de saída que exibem resultados, como texto, tabelas, gráficos ou mapas</li>
+</ul>
+<p>As expressões reativas monitoram as entradas e são reexecutadas automaticamente quando uma entrada associada é alterada. Funções reativas incluem:</p>
+<ul>
+<li><strong><code>renderText()</code></strong>: gera texto</li>
+<li><strong><code>renderPlot()</code></strong>: gera gráficos</li>
+<li><strong><code>renderTable()</code></strong>: gera tabelas</li>
+</ul>
+<p>Exemplo de reatividade:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>server <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">function</span>(input, output) {
+</span></span><span style="display:flex;"><span>  output<span style="color:#719e07">$</span>squared <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">renderText</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">paste</span>(<span style="color:#2aa198">&#34;O quadrado do valor é:&#34;</span>, input<span style="color:#719e07">$</span>slider^2)
+</span></span><span style="display:flex;"><span>  })
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+
+
+
+<h3 id="visualizações-interativas">Visualizações interativas
+  <a href="#visualiza%c3%a7%c3%b5es-interativas"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>O <strong>Shiny</strong> é amplamente utilizado para criar visualizações interativas, permitindo aos usuários explorar e analisar dados de forma dinâmica. A seguir, apresento detalhes sobre como criar e personalizar visualizações interativas no <strong>Shiny</strong>, abordando pacotes, exemplos práticos e boas práticas.</p>
+<p>No Shiny, as visualizações podem incluir gráficos, mapas, tabelas e outras representações interativas. Aqui estão alguns exemplos:</p>
+<ul>
+<li><strong>Gráficos 2D/3D</strong>: criados com pacotes como <strong>ggplot2</strong>, <strong>plotly</strong>, e <strong>echarts4r</strong></li>
+<li><strong>Mapas interativos</strong>: desenvolvidos com <strong>leaflet</strong> ou <strong>mapdeck</strong></li>
+<li><strong>Tabelas interativas</strong>: usando <strong>DT</strong> (DataTables) para permitir ordenação, pesquisa e exportação</li>
+<li><strong>Gráficos dinâmicos</strong>: gráficos de dispersão interativos ou heatmaps</li>
+</ul>
+<p><strong>Gráficos</strong></p>
+<ul>
+<li><strong>ggplot2</strong>: criação de gráficos estáticos que podem ser integrados ao Shiny</li>
+<li><strong>plotly</strong>: transforma gráficos <code>ggplot2</code> em interativos ou cria gráficos do zero</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>output<span style="color:#719e07">$</span>plot <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">renderPlotly</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">plot_ly</span>(data <span style="color:#719e07">=</span> mtcars, x <span style="color:#719e07">=</span> <span style="color:#719e07">~</span>mpg, y <span style="color:#719e07">=</span> <span style="color:#719e07">~</span>hp, type <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;scatter&#39;</span>, mode <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;markers&#39;</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><ul>
+<li><strong>highcharter</strong>: gráficos interativos baseados na biblioteca JavaScript Highcharts</li>
+<li><strong>echarts4r</strong>: biblioteca moderna para gráficos altamente personalizáveis</li>
+</ul>
+<p><strong>Mapas</strong></p>
+<ul>
+<li><strong>leaflet</strong>: Criação de mapas interativos com marcadores, pop-ups e camadas</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>output<span style="color:#719e07">$</span>map <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">renderLeaflet</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">leaflet</span>() <span style="color:#719e07">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">addTiles</span>() <span style="color:#719e07">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">addMarkers</span>(lng <span style="color:#719e07">=</span> <span style="color:#2aa198">-47.92</span>, lat <span style="color:#719e07">=</span> <span style="color:#2aa198">-15.78</span>, popup <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Brasília&#34;</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><ul>
+<li><strong>tmap</strong>: alternativa para mapas interativos temáticos</li>
+<li><strong>sf</strong> + <strong>shiny</strong>: manipulação de dados espaciais e visualização</li>
+</ul>
+<p><strong>Tabelas</strong></p>
+<ul>
+<li><strong>DT</strong>: permite criar tabelas interativas com filtros, ordenação e exportação de dados</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>output<span style="color:#719e07">$</span>table <span style="color:#719e07">&lt;-</span> <span style="color:#268bd2">renderDT</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">datatable</span>(mtcars, options <span style="color:#719e07">=</span> <span style="color:#268bd2">list</span>(pageLength <span style="color:#719e07">=</span> <span style="color:#2aa198">5</span>))
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><p><strong>Dashboards</strong></p>
+<ul>
+<li><strong>shinydashboard</strong>: usado para criar dashboards com painéis interativos</li>
+<li><strong>flexdashboard</strong>: integração de gráficos e tabelas em painéis</li>
+</ul>
+
+
+
+
+<h3 id="publicação-de-aplicações">Publicação de aplicações
+  <a href="#publica%c3%a7%c3%a3o-de-aplica%c3%a7%c3%b5es"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Publicações podem ser feitas localmente ou na web.</p>
+<p>Publicações locais geralmente são sadas para testes através da função <code>runApp()</code> executa a aplicação localmente.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>shiny<span style="color:#719e07">::</span><span style="color:#268bd2">runApp</span>()
+</span></span></code></pre></div><p>Publicações na web são realizadas através do 
+<a href="https://www.shinyapps.io/" target="_blank" rel="noopener"><strong>ShinyApps.io</strong></a> ou em servidores próprios usando o RStudio Connect.</p>
+<p>Essa plataforma da RStudio permite hospedar aplicações Shiny. Basta criar uma conta, instalar o pacote <code>rsconnect</code> e seguir os passos para publicar sua aplicação.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#268bd2">library</span>(rsconnect)
+</span></span><span style="display:flex;"><span>rsconnect<span style="color:#719e07">::</span><span style="color:#268bd2">deployApp</span>(<span style="color:#2aa198">&#34;caminho/para/sua/aplicacao&#34;</span>)
+</span></span></code></pre></div><p>Você pode usar o <strong>Shiny Server</strong> (versão gratuita ou Pro) para hospedar suas aplicações em um servidor Linux.</p>
+
+
+
+
+<h2 id="conclusão">Conclusão
+  <a href="#conclus%c3%a3o"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>O <strong>shiny</strong> é uma ferramenta extremamente flexível e poderosa, sendo amplamente utilizado em visualização de dados, criação de dashboards e aplicações analíticas.</p>
+
+
+
+
+<h2 id="para-saber-mais">Para saber mais
+  <a href="#para-saber-mais"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+
+
+
+
+<h2 id="sites">Sites
+  <a href="#sites"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<ul>
+<li>
+<a href="https://programando-em-shiny.curso-r.com/" target="_blank" rel="noopener">Programando em Shiny</a></li>
+</ul>
+
+
+
+
+<h3 id="livros">Livros
+  <a href="#livros"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<ul>
+<li>Beeley, C. (2016). Web Application Development With R Using Shiny: Integrate the Power of R With the Simplicity of Shiny to Deliver Cutting-edge Analytics over the Web (2nd edition). Packt Pub Ltd.</li>
+<li>Beeley, C., &amp; Sukhdeve, S. R. (2018). Web application development with R using Shiny: Build stunning graphics and interactive data visualizations to deliver cutting-edge analytics (Third edition). Packt Publishing.</li>
+<li>Fay, C., Rochette, S., Guyader, V., &amp; Girard, C. (2021). Engineering Production-Grade Shiny Apps (1st edition). Chapman and Hall/CRC. 
+<a href="https://engineering-shiny.org/" target="_blank" rel="noopener">https://engineering-shiny.org/</a></li>
+<li>Granjon, D. (2022). Outstanding user interfaces with Shiny (First edition). CRC Press. 
+<a href="https://doi.org/10.1201/9781003124924" target="_blank" rel="noopener">https://doi.org/10.1201/9781003124924</a></li>
+<li>Majumdar, P. (2021). Learn Emotion Analysis with R. BPB Publications.</li>
+<li>Moon, K.-W. (2016). Learn ggplot2 Using Shiny App (1st ed. 2016). Springer International Publishing: Imprint: Springer. 
+<a href="https://doi.org/10.1007/978-3-319-53019-2" target="_blank" rel="noopener">https://doi.org/10.1007/978-3-319-53019-2</a></li>
+<li>Moraga, P. (2020). Geospatial health data: Modeling and visualization with R-INLA and Shiny. CRC Press.</li>
+<li>Sievert, C. (2020). Interactive web-based data visualization with R, plotly, and shiny. CRC Press, Taylor and Francis Group.</li>
+<li>Wickham, H. (2021). Mastering Shiny: Build Interactive Apps, Reports, and Dashboards Powered by R (1ª edição). O’Reilly Media. 
+<a href="https://mastering-shiny.org/" target="_blank" rel="noopener">https://mastering-shiny.org/</a></li>
+<li>Wiley, M. (with Wiley, J. F.). (2020). Advanced R 4 Data Programming and the Cloud: Using PostgreSQL, AWS, and Shiny (2nd ed). Apress L. P.</li>
+</ul>
+
+
+
+
+<h3 id="vídeos">Vídeos
+  <a href="#v%c3%addeos"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=l-Xfp1IYUF0&amp;list=PL-TW4kUtfFVykid5T5IYKOMqhti7HBDc9" target="_blank" rel="noopener">Dashboard com R Shiny - Gabriel Lima Gomes</a></li>
+<li>
+<a href="https://www.youtube.com/watch?v=u9YqkQQ_1C0" target="_blank" rel="noopener">10 dicas para programar melhor em Shiny - Curso-R</a></li>
+<li>
+<a href="https://www.youtube.com/playlist?list=PLtqF5YXg7GLkxx_GGXDI_EiAvkhY9olbe" target="_blank" rel="noopener">R Shiny Web Application - Data Professor</a></li>
+</ul>
+
+
+
+
+<h3 id="cursos-pagos">Cursos pagos
+  <a href="#cursos-pagos"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<ul>
+<li>
+<a href="https://curso-r.com/cursos/dashboards/" target="_blank" rel="noopener">Dashboards em Shiny - Curso R</a></li>
+<li>
+<a href="https://curso-r.com/cursos/deploy/" target="_blank" rel="noopener">Deploy - Curso R</a></li>
+<li>
+<a href="https://escola.omegadatascience.com.br/dashboards/26/aplicacoes-e-dashboards-com-r-essentials/" target="_blank" rel="noopener">Aplicações e dashboards com R - Ômega Data Science</a></li>
+</ul>
+<p>Fonte da imagem: 
+<a href="https://shiny.posit.co/" target="_blank" rel="noopener">Posit</a>.</p>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://mauriciovancine.github.io/blog/2024-12-graphic-apps/">Gráficos e mapas além do R &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      <div class="post-comments pa0 pa4-l mt4">
+  
+</div>
+
+    
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+                       
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/blog/sidebar.jpg" class="db ma0">
+
+
+<div class="blog-info ph4 pt4 pb4 pb0-l">
+  
+
+  <h1 class="f3">Blog</h1>
+  <p class="f6 lh-copy measure">Este é meu blog, onde compartilho meus aprendizados sobre R, Python, Julia, Linux, geoprocessamento, o universo e tudo mais&hellip;</p>
+  <p class="f7 measure lh-copy i mh0-l">Written by Maurício Vancine</p>
+
+
+  
+  <div class="dib bt bw1 b--black-10">
+    
+      <small class="db f7 pt3"><a href="/blog/" class="dib fw7 ttu">Veja os posts recentes</a></small>
+    
+    
+    
+    
+  </div>
+
+
+</div>
+
+
+  
+  <details open class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">January 2, 2025</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">9 minute read, 1843 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/categories/blog">Blog</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://mauriciovancine.github.io/tags/r">R</a>  <a href="https://mauriciovancine.github.io/tags/shiny">shiny</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/2024-11-r-qrcode/">Gerando QR code no R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2024-09-r-color-pallets/">Paletas de cores no R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2024-08-r-big-data/">Big Data no R: como ler um conjunto de dados maior que a RAM</a></dd>
+    
+  </dl>
+</details>
+
+</aside>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2025 Maurício Vancine
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/mauriciovancine" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://bsky.app/profile/mauriciovancine.bsky.social" title="bluesky" target="_blank" rel="me noopener">
+      <i class="fab fa-bluesky fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://mastodon.social/@mauriciovancine" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/mauriciovancine" title="x-twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-x-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.researchgate.net/profile/Mauricio-Vancine" title="researchgate" target="_blank" rel="me noopener">
+      <i class="ai ai-researchgate fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ" title="google-scholar" target="_blank" rel="me noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0001-9650-7575" title="orcid" target="_blank" rel="me noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.webofscience.com/wos/author/record/837504" title="researcherid" target="_blank" rel="me noopener">
+      <i class="ai ai-researcherid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888" title="scopus" target="_blank" rel="me noopener">
+      <i class="ai ai-scopus fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://osf.io/k8mxe/" title="osf" target="_blank" rel="me noopener">
+      <i class="ai ai-osf fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://figshare.com/authors/Mauricio_Vancine/2842289" title="figshare" target="_blank" rel="me noopener">
+      <i class="ai ai-figshare fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.zotero.org/mauriciovancine" title="zotero" target="_blank" rel="me noopener">
+      <i class="ai ai-zotero fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://lattes.cnpq.br/9761288418931193" title="lattes" target="_blank" rel="me noopener">
+      <i class="ai ai-lattes fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/mauricio-vancine/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">Licença</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contato">Contato</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Financiamento">Financiamento</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

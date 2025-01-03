@@ -6,8 +6,15 @@
     <description>Recent content in Blog on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 21 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mauriciovancine.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução ao shiny</title>
+      <link>https://mauriciovancine.github.io/blog/2025-01-r-qrcode/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/blog/2025-01-r-qrcode/</guid>
+      <description>Introdução aos principais conceitos de criação de dashboards no R através do pacote shiny</description>
+    </item>
     <item>
       <title>Gráficos e mapas além do R</title>
       <link>https://mauriciovancine.github.io/blog/2024-12-graphic-apps/</link>
