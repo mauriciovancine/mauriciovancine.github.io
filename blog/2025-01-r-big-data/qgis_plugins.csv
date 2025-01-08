@@ -1,0 +1,15 @@
+Plugin,Descrição
+[GeoReferencer](https://pluginsqgisorg/plugins/Georeferencer/),Permite georreferenciar imagens raster para coordenadas espaciais
+[QGIS2Web](https://pluginsqgisorg/plugins/qgis2web/),"Gera mapas interativos em HTML, JavaScript e Leaflet para publicação na web"
+[OpenLayers](https://pluginsqgisorg/plugins/OpenLayers/),"Adiciona camadas de fundo a partir de serviços como OpenStreetMap, Google Maps, Bing, etc."
+[Processing Toolbox](https://pluginsqgisorg/plugins/processing/),"Oferece algoritmos de geoprocessamento, com integração de bibliotecas e ferramentas externas"
+[SCP](https://pluginsqgisorg/plugins/SemiAutomaticClassificationPlugin/),"Facilita a classificação semiautomática de imagens de satélite (Landsat, Sentinel, etc)"
+[DB Manager](https://pluginsqgisorg/plugins/db_manager/),"Gestão de bancos de dados espaciais (PostGIS, SpatiaLite, etc) diretamente no QGIS"
+[MapText](https://pluginsqgisorg/plugins/MapText/),Adiciona textos dinâmicos e personalizados nos mapas com controle avançado
+[R-Plugin](https://pluginsqgisorg/plugins/R/),Integra o QGIS com a linguagem R para análises avançadas dentro do QGIS
+[Zonal Statistics](https://pluginsqgisorg/plugins/zonal_statistics/),"Calcula estatísticas de zonas dentro de áreas de interesse (polígonos), útil para dados raster"
+[Points2One](https://pluginsqgisorg/plugins/points2one/),"Converte um conjunto de pontos em uma linha ou polígono, útil em trajetórias ou redes"
+[TimeManager](https://pluginsqgisorg/plugins/TimeManager/),"Visualiza dados espaciais e temporais, criando animações de séries temporais"
+[Field Calculator](https://pluginsqgisorg/plugins/field_calculator/),Permite cálculos e manipulação de atributos dentro das tabelas de atributos
+[LRS Plugin](https://pluginsqgisorg/plugins/lrs/),"Trabalha com dados de redes lineares, aplicando referências lineares para análise espacial"
+[MOLUSCE](https://plugins.qgis.org/plugins/molusce/),"Fornece um conjunto de algoritmos para simulações de mudança de uso do solo, como ANN, LR, WoE, MCE e validação usando estatísticas kappa"
