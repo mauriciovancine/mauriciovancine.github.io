@@ -6,8 +6,29 @@
     <description>Recent content in Publications on Maurício Vancine</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 08 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mauriciovancine.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Species turnover does not rescue biodiversity in fragmented landscapes</title>
+      <link>https://mauriciovancine.github.io/publications/frag-turnover/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-turnover/</guid>
+      <description>Analisamos os efeitos da perda e fragmentação de habitat sobre componentes da diversidade (alfa, beta e gama)</description>
+    </item>
+    <item>
+      <title>The Role of Seasonal Migration in Predicting Amphibian Population Persistence Across Fragmented Tropical Landscapes: An Individual-Based Model</title>
+      <link>https://mauriciovancine.github.io/publications/frag-habitatsplit-ibm/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-habitatsplit-ibm/</guid>
+      <description>Propomos um IBM (Individual-Based Model) para o habitat split</description>
+    </item>
+    <item>
+      <title>Dinâmica espaço temporal: variações na composição e configuração da vegetação</title>
+      <link>https://mauriciovancine.github.io/publications/frag-ms/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-ms/</guid>
+      <description>Analisamos a dinâmica espaço-temporal da estrutura da paisagem da vegetação no Mato Grosso do Sul</description>
+    </item>
     <item>
       <title>Análise espacial da fragmentação da paisagem: um estudo de caso sobre os fragmentos florestais destinados à Reserva Legal em duas bacias hidrográficas no Estado do Piauí</title>
       <link>https://mauriciovancine.github.io/publications/frag-pi/</link>

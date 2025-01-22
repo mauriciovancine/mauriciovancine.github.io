@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Habitat Split on Maurício Vancine</title>
+    <link>https://mauriciovancine.github.io/tags/habitat-split/</link>
+    <description>Recent content in Habitat Split on Maurício Vancine</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mauriciovancine.github.io/tags/habitat-split/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Role of Seasonal Migration in Predicting Amphibian Population Persistence Across Fragmented Tropical Landscapes: An Individual-Based Model</title>
+      <link>https://mauriciovancine.github.io/publications/frag-habitatsplit-ibm/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mauriciovancine.github.io/publications/frag-habitatsplit-ibm/</guid>
+      <description>Propomos um IBM (Individual-Based Model) para o habitat split</description>
+    </item>
+  </channel>
+</rss>
