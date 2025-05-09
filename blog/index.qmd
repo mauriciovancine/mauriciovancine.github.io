@@ -1,0 +1,21 @@
+---
+title: "Blog"
+subtitle: "Este é meu blog, onde compartilho meus aprendizados sobre R, Python, Julia, Linux, geoprocessamento, o universo e tudo mais…"
+listing:
+  - id: talks
+    contents: "**/*/index.qmd"
+    type: default
+    fields: [image, date, title, subtitle]
+    sort: "date desc"
+    categories: cloud
+    sort-ui: true
+    filter-ui: true
+    page-size: 36     
+page-layout: full
+title-block-banner: false
+toc: true
+editor: source
+---
+
+::: {#posts}
+:::

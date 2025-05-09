@@ -1,0 +1,88 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Maurício Vancine"
+  favicon: img/favicon.ico
+  navbar:
+    # logo: img/favicon.ico
+    tools:
+    - icon: github
+      href: https://www.github.com/mauriciovancine
+    right:
+      - text: Sobre
+        aria-label: "Sobre"
+        href: about/index.qmd
+      - text: Blog
+        aria-label: "Blog"
+        href: blog/index.qmd
+      - text: Projetos
+        aria-label: "Projetos"
+        href: project/index.qmd
+      - text: Palestras
+        aria-label: "Palestras"
+        href: talk/index.qmd  
+      - text: Ensino
+        aria-label: "Ensino"
+        href: teaching/index.qmd  
+      - text: Publicações
+        aria-label: "Publicações"
+        href: publication/index.qmd
+      - text: CV
+        aria-label: "CV"
+        href: https://mauriciovancine.github.io/cv/cv-academic.pdf
+      - text: Resumé
+        aria-label: "Resumé"
+        href: https://mauriciovancine.github.io/resume/resume.pdf
+
+  page-footer:  
+    left: >-
+     &#169; 2025 Maurício Vancine &#8729; Feito com [Quarto](https://quarto.org)
+    center:
+      - icon: github
+        aria-label: GitHub
+        href: https://github.com/mauriciovancine
+      - text: "{{< ai orcid >}}"
+        href: https://orcid.org/0000-0003-1709-1394
+      - text: "{{< ai researcherid >}}"
+        aria-label: "ResearcherID"
+        href: https://www.webofscience.com/wos/author/record/837504
+      - text: "{{< ai scopus >}}"
+        aria-label: "Scopus"
+        href: https://www.scopus.com/authid/detail.uri?authorId=57193451888
+      - text: "{{< ai google-scholar >}}"
+        aria-label: "Google Scholar"
+        href: https://scholar.google.com/citations?user=i-2xZBQAAAAJ
+      - text: "{{< ai researchgate >}}"
+        aria-label: "Researchgate"
+        href: https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao
+      - text: "{{< ai zotero >}}"
+        aria-label: "Zotero"
+        href: https://www.zotero.org/mauriciovancine
+      - text: "{{< ai lattes >}}"
+        aria-label: "Lattes"
+        href: http://lattes.cnpq.br/9761288418931193
+      - icon: linkedin
+        aria-label: LinkedIn
+        href: https://linkedin.com/in/mauriciovancine
+    right: 
+      - text: "Contato"
+        aria-label: "Contato"
+        href: contact.qmd
+      - text: "Licença"
+        aria-label: "License Details"
+        href: license.qmd
+      - text: "Financiamento"
+        aria-label: "Financiamento"
+        href: contributors.qmd
+
+format:
+  html:
+    theme: 
+      - cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+lang: pt-BR

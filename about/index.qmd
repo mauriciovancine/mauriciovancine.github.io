@@ -1,0 +1,124 @@
+---
+title: "Maurício Vancine"
+subtitle: Ecólogo e Cientista de Dados
+image: avatar.png
+image-alt: ""
+about:
+  template: trestles
+  image-width: 14em
+  image-shape: rounded
+  id: hero-heading
+  links:
+    - icon: github
+      aria-label: GitHub
+      href: https://github.com/mauriciovancine
+    - text: "{{< ai orcid >}}"
+      href: https://orcid.org/0000-0003-1709-1394
+    - text: "{{< ai researcherid >}}"
+      aria-label: "ResearcherID"
+      href: https://www.webofscience.com/wos/author/record/837504
+    - text: "{{< ai scopus >}}"
+      aria-label: "Scopus"
+      href: https://www.scopus.com/authid/detail.uri?authorId=57193451888
+    - text: "{{< ai google-scholar >}}"
+      aria-label: "Google Scholar"
+      href: https://scholar.google.com/citations?user=i-2xZBQAAAAJ
+    - text: "{{< ai researchgate >}}"
+      aria-label: "Researchgate"
+      href: https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao
+    - text: "{{< ai zotero >}}"
+      aria-label: "Zotero"
+      href: https://www.zotero.org/mauriciovancine
+    - text: "{{< ai lattes >}}"
+      aria-label: "Lattes"
+      href: http://lattes.cnpq.br/9761288418931193
+    - icon: linkedin
+      aria-label: LinkedIn
+      href: https://linkedin.com/in/mauriciovancine
+format: 
+  html: 
+    page-layout: full
+editor: source
+---
+
+:::: {#hero-heading}
+::: h1
+Olá! Bem-vindos!
+:::
+
+Esta é minha webpage, onde eu reuni algumas informações sobre minha trajetória acadêmica.
+
+Atualmente, trabalho como pesquisador de pós-doutorado no [Laboratório de estudos sobre a estrutura e dinâmica da diversidade (LDDiv)](https://www.mathiasmpires.net.br/index.html) da [Universidade Estadual de Campinas]().
+
+Entre em contato comigo [enviando-me uma mensagem](/contact.qmd)!
+
+### Formação
+
+{{< fa solid graduation-cap >}} Doutor em Ecologia, Evolução e Biodiversidade ∙ 2024 <br>Universidade Estadual Paulista (UNESP)
+ 
+{{< fa solid graduation-cap >}} Mestre em Ciências Biológicas (Zoologia) ∙ 2018 <br>Universidade Estadual Paulista (UNESP)
+
+{{< fa solid graduation-cap >}} Bacharel em Ecologia ∙ 2014 <br>Universidade Estadual Paulista (UNESP)
+::::
+
+## Sobre mim
+
+::::: grid
+::: {#about-me-1 .g-col-6}
+Sou um caipira nerd do interior de Socorro/SP, pai do Dudu, companheiro da Japa, amante de música instrumental, livros, games, softwares livres, programação e uma boa cerveja.
+  
+  Eu amo sapos! Entretanto, quase nunca os vejo, pois toda minha pesquisa é desenvolvida através de dados já coletados, planilhas, arquivos gigantescos de métricas de paisagem, análises estatísticas, e códigos, muitos códigos... Além é claro de uma boa dose de abstração.
+  
+  Fiz parte do [Laboratório de Ecologia Espacial e Conservação (LEEC)](https://leec.eco.br/), onde trabalhamos com a [compilação de dados de biodiversidade](https://github.com/LEEClab/Atlantic_series), [cálculo de métricas de paisagem](https://github.com/LEEClab/AtlanticSpatialData) e [desenvolvimento de ferramentas em Ecologia da Paisagem](https://github.com/LEEClab/LS_METRICS). 
+:::
+
+::: {#about-me-2 .g-col-6}
+  Durante minha graduação em [Ecologia](https://ib.rc.unesp.br/#!/departamentos/ecologia/ensino/curso-de-ecologia/) (sou Ecólogo de formação), me especializei em modelagem ecológica, principalmente em Modelagem de Distribuição de Espécies (*Species Distribution Modeling* - SDMs), além de análises de dados ecológicos, estatística e geoprocessamento. 
+  
+  Devido a esse contato com modelagem e estatística, acabei desenvolvemente grande afinidade com a [Linguagem R](https://www.r-project.org/), com foco na manipulação e visualização de dados geoespaciais. Tenho também bastante experiência com softwares de SIG, como [QGIS](https://qgis.org/pt_BR/site/) e [GRASS GIS](https://grass.osgeo.org/).
+  
+  Publiquei um livro chamado [Análises Ecológicas no R](/publications/eco-r/), que faz parte de um projeto maior de difusão e ensino da linguagem R aplicada à Ecologia, chamado [Ecologia no R](/project/ecologia-r/).
+:::
+:::::
+
+<!-- end grid -->
+
+## Recentemente ...
+
+::::::::::: grid
+:::: g-col-3
+#### Blog
+
+::: {#blog}
+:::
+
+[Veja mais →](../blog){.about-links .subtitle}
+::::
+
+:::: g-col-3
+#### Palestras
+
+::: {#talk}
+:::
+
+[Veja mais →](../talk){.about-links .subtitle}
+::::
+
+:::: g-col-3
+#### Publicações
+
+::: {#publication}
+:::
+
+[Veja mais →](../publication){.about-links .subtitle}
+::::
+
+:::: g-col-3
+#### Projetos
+
+::: {#project}
+:::
+
+[Veja mais →](../project){.about-links .subtitle}
+::::
+:::::::::::

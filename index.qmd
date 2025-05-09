@@ -1,0 +1,58 @@
+---
+title: "Maurício Vancine"
+pagetitle: "Maurício Vancine"
+subtitle: "Pesquisador de Pós-Doutorado na Universidade de Campinas"
+image: img/avatar-circle.png
+image-alt: "Minha primeira foto científica. *Boana faber* na Serra do Japi em 2011."
+
+about:
+  template: solana # solana, marquee, trestles e default
+  image-width: 28em
+  id: hero-heading
+  links:
+    - icon: github
+      aria-label: GitHub
+      href: https://github.com/mauriciovancine
+    - text: "{{< ai orcid >}}"
+      href: https://orcid.org/0000-0003-1709-1394
+    - text: "{{< ai researcherid >}}"
+      aria-label: "ResearcherID"
+      href: https://www.webofscience.com/wos/author/record/837504
+    - text: "{{< ai scopus >}}"
+      aria-label: "Scopus"
+      href: https://www.scopus.com/authid/detail.uri?authorId=57193451888
+    - text: "{{< ai google-scholar >}}"
+      aria-label: "Google Scholar"
+      href: https://scholar.google.com/citations?user=i-2xZBQAAAAJ
+    - text: "{{< ai researchgate >}}"
+      aria-label: "Researchgate"
+      href: https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao
+    - text: "{{< ai zotero >}}"
+      aria-label: "Zotero"
+      href: https://www.zotero.org/mauriciovancine
+    - text: "{{< ai lattes >}}"
+      aria-label: "Lattes"
+      href: http://lattes.cnpq.br/9761288418931193
+    - icon: linkedin
+      aria-label: LinkedIn
+      href: https://linkedin.com/in/mauriciovancine
+page-layout: full
+
+execute: 
+  freeze: false
+  echo: false
+  warning: false
+
+editor: source
+---
+
+<br><br><br>
+
+::: {#hero-heading}
+
+Sou **ecólogo**, cientista de dados, mestre em zoologia e doutor em ecologia. Tenho experiência em **ecologia espacial**, com ênfase em efeitos da perda e fragmentação de habitat, modelagem de distribuição de espécies (SDM), ecologia de anfíbios, análise de dados ecológicos e geoespaciais.
+
+[Saiba mais &rarr;](/about){.about-links .subtitle}
+
+:::
+<!-- hero-heading -->

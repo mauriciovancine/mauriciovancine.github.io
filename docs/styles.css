@@ -1,0 +1,51 @@
+/* css styles */
+
+/* Cor de fundo do site */
+body {
+  background-color: #ffffff; /* cor de fundo geral */
+  page-footer: #ffffff;
+}
+
+/* Cor de fundo da navbar */
+.navbar {
+  background-color: #1c6cbe !important; /* substitua pela cor desejada */
+}
+
+/* Cor do texto da navbar */
+.navbar a, .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Cor dos links ao passar o mouse */
+.navbar a:hover {
+  color: #aeafb3 !important;
+}
+
+/* Rodapé gerado pelo Quarto */
+footer.footer {
+  background-color: #ffffff; /* fundo do rodapé */
+  color: #ffffff;            /* cor do texto */
+  padding: 1rem 0;
+}
+
+/* Links e ícones no rodapé */
+footer.footer a {
+  color: #1c6cbe;
+  margin-left: 10px;
+  text-decoration: none;
+}
+footer.footer a:hover {
+  color: #aeafb3;
+}
+
+/* titulo */
+.title {
+  font-size: 50px;  /* ajuste o valor conforme necessário */
+  font-weight: bold;  /* opcional: para deixar o título mais forte */
+}
+
+/* rodape */
+footer {
+  font-size: 20px;  /* Tamanho geral do texto do rodapé */
+}
+

@@ -1,0 +1,10 @@
+---
+title: "Ensino"
+editor: source
+---
+
+About this site
+
+```{r}
+1 + 1
+```
