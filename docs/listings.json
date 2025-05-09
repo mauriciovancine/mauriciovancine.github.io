@@ -6,6 +6,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/julia-intro/index.html",
       "/blog/academic-online-courses/index.html"
     ]
   }

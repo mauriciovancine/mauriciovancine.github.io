@@ -4,7 +4,7 @@ subtitle: "Lista de disciplinas de graduação e pós-graduação oferecidas on-
 author: Maurício Vancine
 date: "2021-03-07"
 categories: ["R", "Aulas", "Tutoriais"]
-image: "images/featured.jpg"
+image: "featured.jpg"
 toc: true
 draft: false
 code-link: true

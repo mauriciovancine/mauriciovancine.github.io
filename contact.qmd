@@ -1,93 +1,41 @@
 ---
-pagetitle: Silvia Canelón - Contact
-# title: Send me a note
-name: Contact Form
+title: Contato
 page-layout: article
 format: 
   html: 
     grid:
       margin-width: 0px
       sidebar-width: 0px
-
-header-includes: >
-  <link rel="stylesheet" href="assets/contact.css">
-resources:
-  - assets/contact.css
 editor: source
 ---
 
 ::::::::: grid
 ::: {#note .g-col-5}
-# Send me a note {{< fa feather-pointed >}}
-
-You can use this form to contact me about speaking engagements, collaborations, or simply to say hello.
-
-I also love hearing if my educational materials have been helpful for you, and how they could be improved — particularly if they could be made more accessible {{< bi heart-fill >}}
-
-<a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a> <a class="link-dark me-1" href="https://bsky.app/profile/silviacanelon.com" title="bluesky" target="_blank" rel="noopener">{{< fa brands bluesky >}}</a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a> <!-- <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a> --> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a> <a class="link-dark me-1" href="https://buttondown.com/spcanelon" title="Newsletter" target="_blank" rel="noopener">{{< fa envelope >}}</a>
+<br>
+Este formulário é para entrar em contato sobre oportunidades de trabalhos e solicitações de orientação ou palestras. Este **não** é um formulário para solicitar ajuda, mas podemos conversar.
 :::
-
-<!-- source: https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46 -->
 
 ::: g-col-1
 :::
 
 ::: {#form .g-col-6}
-<form style="margin-top: -5em;" action="https://formspree.io/f/mwkapgzw" method="POST" accept-charset="utf-8">
+<br><br><br>
 
-<label for="full-name">Full Name</label> <input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last" required>
+<form style="margin-top: -5em;" action="https://formspree.io/f/xdopwjev" method="POST" accept-charset="utf-8">
 
-<label for="email-address">Email Address</label> <input type="email" name="_replyto" id="email-address" class="form-control" placeholder="your@email.here" required>
+<label for="full-name">Nome</label> <input type="text" name="name" id="full-name" class="form-control" placeholder="Seu nome" required>
 
-<label for="message">Message</label>
+<label for="email-address">Email</label> <input type="email" name="_replyto" id="email-address" class="form-control" placeholder="seu@email.here" required>
+
+<label for="message">Messagem</label>
 
 ```{=html}
-<textarea rows="6" name="message" id="message" class="form-control" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required></textarea>
+<textarea rows="6" name="message" id="message" class="form-control" placeholder="Escreva sua mensagem." required></textarea>
 ```
 
 <button type="submit" class="btn btn-primary mt-4">
-
-Send message
-
+Enviar
 </button>
-
 </form>
-:::
-
-::: {#buttondown .g-col-5}
-# Sign up for my newsletter {{< fa envelope >}}
-
-You can use this form to sign up to receive a little e-mail note from me anytime I post something new on my website.
-:::
-
-::: g-col-1
-:::
-
-::: {#buttondown-form .g-col-6}
-```{=html}
-<form
-  style="margin-top: 4em;"
-  action="https://buttondown.com/api/emails/embed-subscribe/spcanelon"
-  method="post"
-  target="popupwindow"
-  onsubmit="window.open('https://buttondown.com/spcanelon?tag=website', 'popupwindow')"
-  class="embeddable-buttondown-form"
->
-  <label for="bd-email">Email Address</label>
-  <input 
-  class="form-control"
-  placeholder="your@email.here" 
-  type="email" name="email" id="bd-email" />
-  
-  <input 
-  class="btn btn-primary mt-1"
-  type="submit" value="Subscribe" />
-  <p>
-    <a href="https://buttondown.com/refer/spcanelon" target="_blank">Powered by Buttondown.</a>
-  </p>
-</form>
-```
 :::
 :::::::::
-
-<!-- end grid -->

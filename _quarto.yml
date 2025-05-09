@@ -9,7 +9,7 @@ website:
     # logo: img/favicon.ico
     tools:
     - icon: github
-      href: https://www.github.com/mauriciovancine
+      href: https://www.github.com/mauriciovancine/mauriciovancine.github.io
     right:
       - text: Sobre
         aria-label: "Sobre"
@@ -32,13 +32,15 @@ website:
       - text: CV
         aria-label: "CV"
         href: https://mauriciovancine.github.io/cv/cv-academic.pdf
+        target: _blank
       - text: Resumé
         aria-label: "Resumé"
         href: https://mauriciovancine.github.io/resume/resume.pdf
+        target: _blank
 
   page-footer:  
     left: >-
-     &#169; 2025 Maurício Vancine &#8729; Feito com [Quarto](https://quarto.org)
+     &#169; 2025 Maurício Vancine &#8729; Feito com[Quarto](https://quarto.org)
     center:
       - icon: github
         aria-label: GitHub
