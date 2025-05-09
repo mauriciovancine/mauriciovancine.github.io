@@ -7,14 +7,14 @@ image-alt: "Minha primeira foto científica. *Boana faber* na Serra do Japi em 2
 
 about:
   template: solana # solana, marquee, trestles e default
-  image-width: 28em
+  image-width: 25em
   id: hero-heading
   links:
     - icon: github
       aria-label: GitHub
       href: https://github.com/mauriciovancine
     - text: "{{< ai orcid >}}"
-      href: https://orcid.org/0000-0003-1709-1394
+      href: https://orcid.org/0000-0001-9650-7575
     - text: "{{< ai researcherid >}}"
       aria-label: "ResearcherID"
       href: https://www.webofscience.com/wos/author/record/837504
@@ -26,7 +26,7 @@ about:
       href: https://scholar.google.com/citations?user=i-2xZBQAAAAJ
     - text: "{{< ai researchgate >}}"
       aria-label: "Researchgate"
-      href: https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao
+      href: https://www.researchgate.net/profile/Mauricio_Vancine2
     - text: "{{< ai zotero >}}"
       aria-label: "Zotero"
       href: https://www.zotero.org/mauriciovancine
@@ -35,7 +35,7 @@ about:
       href: http://lattes.cnpq.br/9761288418931193
     - icon: linkedin
       aria-label: LinkedIn
-      href: https://linkedin.com/in/mauriciovancine
+      href: https://www.linkedin.com/in/mauricio-vancine/
 page-layout: full
 
 execute: 

@@ -60,7 +60,7 @@
     "href": "project/index.html",
     "title": "Projetos",
     "section": "",
-    "text": "Arrumando…"
+    "text": "Arrumando…\n\n\n\n\n\n\n   \n     \n     \n       Ordenar por\n       Padrão\n         \n          Título\n        \n         \n          Data - Mais antigo\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nSem itens correspondentes"
   },
   {
     "objectID": "talk/index.html",
@@ -313,5 +313,40 @@
     "title": "Introdução à linguagem Julia",
     "section": "Para saber mais",
     "text": "Para saber mais\nSites\nLivros\nTutorial\nThinkJulia\nJulia express\nIntroducing Julia\nLivros\nEngheim, E. (2022). Julia as a second language. O’REILLY MEDIA.\nKalicharan, N. (2021). Julia - Bit by Bit: Programming for Beginners. Springer International Publishing. https://doi.org/10.1007/978-3-030-73936-2\nKamiński, B. (2023). Julia for data analysis (First edition). Manning Publications.\nLauwens, B., & Downey, A. (2019). Think Julia: How to think like a computer scientist (First edition). O’Reilly.\nLobianco, A. (2019). Julia Quick Syntax Reference: A Pocket Guide for Data Science Programming. Apress. https://doi.org/10.1007/978-1-4842-5190-4\nMcNicholas, P. D., & Tait, P. A. (2019). Data science with Julia (1st ed.). CRC Press. https://doi.org/10.1201/9781351013673\nNagar, S. (2017). Beginning Julia Programming. Apress. https://doi.org/10.1007/978-1-4842-3171-5\nNazarathy, Y., & Klok, H. (2021). Statistics with Julia: Fundamentals for Data Science, Machine Learning and Artificial Intelligence. Springer International Publishing. https://doi.org/10.1007/978-3-030-70901-3\nPhillips, L. (2024). Practical Julia. No Starch Press.\nVoulgaris, Z. (2016). Julia for data science (First edition). Technics Publications.\nVídeos\nTutoriais de Julia em Português - Super Tutorial do Básico\nJulia in 100 Seconds\nA Gentle Introduction to Julia\nStatistics with Julia from the ground up | Workshop | JuliaCon 2021\nFonte da imagem: julia."
+  },
+  {
+    "objectID": "publications/frag-mm-sp/index.html#high-mammal-species-turnover-in-forest-patches-immersed-in-biofuel-plantations",
+    "href": "publications/frag-mm-sp/index.html#high-mammal-species-turnover-in-forest-patches-immersed-in-biofuel-plantations",
+    "title": "Maurício Vancine",
+    "section": "",
+    "text": "Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de São Paulo"
+  },
+  {
+    "objectID": "publication/frag-mm-sp/index.html",
+    "href": "publication/frag-mm-sp/index.html",
+    "title": "High mammal species turnover in forest patches immersed in biofuel plantations",
+    "section": "",
+    "text": "DOI \n  PDF"
+  },
+  {
+    "objectID": "publication/frag-mm-sp/index.html#links",
+    "href": "publication/frag-mm-sp/index.html#links",
+    "title": "High mammal species turnover in forest patches immersed in biofuel plantations",
+    "section": "",
+    "text": "DOI \n  PDF"
+  },
+  {
+    "objectID": "publication/frag-mm-sp/index.html#resumo",
+    "href": "publication/frag-mm-sp/index.html#resumo",
+    "title": "High mammal species turnover in forest patches immersed in biofuel plantations",
+    "section": "Resumo",
+    "text": "Resumo\nRemnant habitat patches immersed within biofuel cropland matrices can retain considerable species diversity, although the effects of land use change on species persistence in historically modified landscapes remain unclear. The Atlantic Forest is one of the most fragmented South American biodiversity hotspots and retains about 12% of its original vegetation cover. Most of these remnants are distributed in small isolated fragments immersed mainly within pastures and sugarcane monocultures. Here we examine how species richness and composition of medium and large-sized mammals are explained by forest cover, structural area and forest edge amount at the landscape scale. We sampled 22 fragmented landscapes dominated by sugarcane plantations along a wide gradient of forest cover (3% to 96%) in southeastern Brazil. We recorded 88% of terrestrial mammal species expected for this region, but many likely local extirpations were detected at the landscape scale, with losses between 50% to 80% of species. Most of the landscapes were highly depleted of forest-specialist species, with replacements by exotics and/or species typical of non-forest habitats. We found that total mammalian species richness, which includes forest-specialists, generalists, exotics and non-forest dwelling species, was not affected by landscape metrics, such as forest cover, structural area and forest edge amount. Nevertheless, forest cover was important predictor of the presence of three ungulates, a medium-sized rodent, and an armadillo. Local mammalian communities exhibited a high degree of species turnover between landscapes, representing 95% of the total β-diversity. In this region, where there was no regional extinction, landholder compliance with the Brazilian Forest Bill and restoration measures will enhance habitat connectivity and mammal persistence across the wider unprotected countryside."
+  },
+  {
+    "objectID": "publication/frag-mm-sp/index.html#citação",
+    "href": "publication/frag-mm-sp/index.html#citação",
+    "title": "High mammal species turnover in forest patches immersed in biofuel plantations",
+    "section": "Citação",
+    "text": "Citação\n@article{beca_etal_2017,\n    title = {High mammal species turnover in forest patches immersed in biofuel plantations},\n    volume = {210},\n    issn = {00063207},\n    url = {https://linkinghub.elsevier.com/retrieve/pii/S0006320717303117},\n    doi = {10.1016/j.biocon.2017.02.033},\n    language = {en},\n    urldate = {2022-06-05},\n    journal = {Biological Conservation},\n    author = {Beca, Gabrielle and Vancine, Maurício H. and Carvalho, Carolina S. and Pedrosa, Felipe and Alves, Rafael Souza C. and Buscariol, Daiane and Peres, Carlos A. and Ribeiro, Milton Cezar and Galetti, Mauro},\n    month = jun,\n    year = {2017},\n    pages = {352--359},\n}"
   }
 ]

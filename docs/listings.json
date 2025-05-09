@@ -9,5 +9,9 @@
       "/blog/julia-intro/index.html",
       "/blog/academic-online-courses/index.html"
     ]
+  },
+  {
+    "listing": "/project/index.html",
+    "items": []
   }
 ]
