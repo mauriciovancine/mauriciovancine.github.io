@@ -1,19 +1,19 @@
 ---
 title: "Projetos"
 listing:
-  - id: teaching
-    contents: "{pt}/*/index.qmd"
+  - id: project
+    contents: "**/*/index.qmd"
     type: grid
     fields: [image, author, date, title, subtitle]
-    sort: "date desc"
     categories: false
-    sort-ui: true
-    filter-ui: true
-    page-size: 36     
+    sort-ui: false
+    filter-ui: false
+    page-size: 10     
 page-layout: full
-title-block-banner: false
+title-block-banner: true
 toc: true
 editor: source
 ---
 
-Arrumando...
+::: {#project}
+:::

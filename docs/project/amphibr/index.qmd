@@ -1,0 +1,85 @@
+---
+title: "amphiBR"
+subtitle: "Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia"
+author: Paulo Barros de Abreu Junior, Diogo Provete, Maurício Vancine, Juliana Zina
+image: featured-hex.png
+editor: source
+---
+
+# **amphiBR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+
+<!-- badges: start -->
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/paulobarros/amphiBR/blob/master/LICENSE.md) [![Twitter Follow](https://img.shields.io/twitter/follow/pbarrosjr?color=%2315202B&label=Seguir%20%40pbarrosjr&style=social)](https://twitter.com/pbarrosjr) [![pix](https://img.shields.io/badge/Apoie%20com-PIX-brightgreen)](https://nubank.com.br/pagar/v67wv/tuh5iRS2YJ)
+
+<!-- badges: end -->
+
+Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.
+
+O dataset foi extraído da publicação por Segalla et al. (2021) na Revista Brasileira de Herpetologia, e disponível também no link <https://zenodo.org/record/4716176>
+
+O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.
+
+Dúvidas, críticas e sugestões são sempre bem-vindas!
+
+------------------------------------------------------------------------
+
+## Instalação
+
+O pacote pode ser instalado diretamente do github:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("paulobarros/amphiBR")
+library(amphiBR)
+```
+
+## Dataset
+
+O dataset consiste de **1188** linhas com 49 colunas:
+
+`order` - Ordem
+
+`family` - Família
+
+`subfamily` - Subfamília
+
+`sp_num` - Número da espécie na lista
+
+`genus` - Gênero
+
+`epithet` - Epíteto específico
+
+`species` - Nome científico
+
+`author` - Autoria
+
+`status` - Observações
+
+`category` - Cateogoria de Ameaça pela Portaria MMA 300/2022
+
+O dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:
+
+``` r
+> segalla2021
+# A tibble: 1,188 × 49
+   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA
+        <dbl> <chr> <chr>   <chr>     <chr> <chr>   <chr>   <chr>  <chr>  <chr>          <chr>    <chr>      <dbl> <dbl> <dbl> <dbl> <dbl>
+ 1          1 Anura Alloph… NA        Allo… relicta Alloph… Caram… NA     NA             DD       Yes            0     0     0     0     1
+ 2          2 Anura Alloph… NA        Allo… resple… Alloph… Castr… NA     Resplendent F… LC       No             0     0     0     1     0
+ 3          3 Anura Alloph… NA        Allo… ruthve… Alloph… Gaige… NA     NA             LC       No             0     0     1     1     0
+ 4          4 Anura Alsodi… NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co… LC       No             0     0     0     0     0
+ 5          5 Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… NA     NA             LC       Yes            0     0     0     1     0
+ 6          6 Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke… NT       Yes            0     0     0     0     0
+ 7          7 Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… NA     NA             LC       Yes            0     0     0     1     0
+ 8          8 Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA             NA       NA            NA    NA    NA    NA    NA
+ 9          9 Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… NA     NA             NA       NA            NA    NA    NA    NA    NA
+10         10 Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… NA     NA             LC       No             1     0     0     0     0
+# ℹ 1,178 more rows
+# ℹ 32 more variables: CE <dbl>, DF <dbl>, ES <dbl>, GO <dbl>, MA <dbl>, MT <dbl>, MS <dbl>, MG <dbl>, PA <dbl>, PB <dbl>, PR <dbl>,
+#   PE <dbl>, PI <dbl>, RJ <dbl>, RN <dbl>, RS <dbl>, RO <dbl>, RR <dbl>, SC <dbl>, SP <dbl>, SE <dbl>, TO <dbl>, AF <dbl>, PAN <dbl>,
+#   PAM <dbl>, AMZ <dbl>, CER <dbl>, CAA <dbl>, UNK <dbl>, tad_ext_morph <chr>, tad_int_oral_feat <chr>, tad_chond <chr>
+# ℹ Use `print(n = ...)` to see more rows
+```
+
+------------------------------------------------------------------------

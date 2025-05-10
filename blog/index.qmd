@@ -2,7 +2,7 @@
 title: "Blog"
 subtitle: "Este é meu blog, onde compartilho meus aprendizados sobre R, Python, Julia, Linux, geoprocessamento, o universo e tudo mais…"
 listing:
-  - id: talks
+  - id: blog
     contents: "**/*/index.qmd"
     type: default
     fields: [image, date, title, subtitle]
@@ -17,5 +17,5 @@ toc: true
 editor: source
 ---
 
-::: {#posts}
+::: {#post}
 :::

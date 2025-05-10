@@ -1,0 +1,7 @@
+---
+title: "#092 – Você tem medo de errar?"
+subtitle: "Neste episódio nós vamos discutir a importância da linguagem R na análise de dados ecológicos"
+author: Fernando , Maurício Vancine, Fernando
+image: featured.jpg
+editor: source
+---

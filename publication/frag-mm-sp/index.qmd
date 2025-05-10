@@ -4,18 +4,26 @@ subtitle: "Analisamos como a estrutura da paisagem explica a diversidade em comu
 editor: source
 ---
 
-## Links
-
-<div style="display: flex; gap: 1.5em; flex-wrap: wrap;">
-  <a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn-outline" role="button" target="_blank" aria-label="DOI do artigo">
-    {{< ai doi >}} DOI
-  </a>
-  
-  <a href="2017-beca-etal.pdf" class="btn-outline" role="button" target="_blank" aria-label="CV em PDF">
-    <i class="bi bi-file-earmark-pdf-fill"></i> PDF
-  </a>
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn btn-custom text-capitalize"><i class="ai ai-doi me-1"></i> DOI</a>
+  <a href="2017-beca-etal.pdf" class="btn btn-custom text-capitalize"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</a>
 </div>
 
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
 
 ![](featured.png)
 

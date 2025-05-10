@@ -2,6 +2,8 @@ project:
   type: website
   output-dir: docs
 
+lang: pt-BR
+
 website:
   title: "Maurício Vancine"
   favicon: img/favicon.ico
@@ -17,15 +19,15 @@ website:
       - text: Blog
         aria-label: "Blog"
         href: blog/index.qmd
-      - text: Projetos
-        aria-label: "Projetos"
-        href: project/index.qmd
       - text: Palestras
         aria-label: "Palestras"
         href: talk/index.qmd  
       - text: Ensino
         aria-label: "Ensino"
         href: teaching/index.qmd  
+      - text: Projetos
+        aria-label: "Projetos"
+        href: project/index.qmd
       - text: Publicações
         aria-label: "Publicações"
         href: publication/index.qmd
@@ -87,4 +89,3 @@ format:
     toc: true
 
 editor: visual
-lang: pt-BR

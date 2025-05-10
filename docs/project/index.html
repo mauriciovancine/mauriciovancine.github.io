@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-teaching .list');
+    const listingTargetEl = window.document.querySelector('#listing-project .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -83,11 +83,11 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-author','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-teaching'] = new List('listing-teaching', options);
+    window['quarto-listings']['listing-project'] = new List('listing-project', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -137,7 +137,7 @@ window.Quarto = {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -160,16 +160,16 @@ window.Quarto = {
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../project/index.html" aria-current="page"> 
-<span class="menu-text">Projetos</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../talk/index.html"> 
 <span class="menu-text">Palestras</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../teaching/index.html"> 
 <span class="menu-text">Ensino</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../project/index.html" aria-current="page"> 
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publication/index.html"> 
@@ -192,72 +192,223 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page">
+      <h1 class="title">Projetos</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Projetos</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Arrumando…</p>
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-teaching">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-teaching-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-teaching'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Ordenar por</option>
-       <option value="index" data-direction="asc">Padrão</option>
-         <option value="listing-title" data-direction="asc">
-          Título
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Data - Mais antigo
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Data - O mais novo
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Autor
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filtro">
-    </div>
-</div>
+
+<div id="listing-project" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1746906401789" data-listing-reading-time-sort="7" data-listing-word-count-sort="1306">
+<a href="../project/atlantic-amphibians/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../project/atlantic-amphibians/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Atlantic Amphibians
+</h5>
+<div class="card-subtitle listing-subtitle">
+Compilação de dados de ocorrência, abundância e atributos funcionais de anfíbios na Mata Atlântica
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1746906486584" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
+<a href="../project/atlantic-spatial/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../project/atlantic-spatial/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Atlantic Spatial
+</h5>
+<div class="card-subtitle listing-subtitle">
+Compilar métricas de paisagem, topográficas, hidrológicas e antrópicas para a Mata Atlântica
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1746906542140" data-listing-reading-time-sort="3" data-listing-word-count-sort="404">
+<a href="../project/ecologia-r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../project/ecologia-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Ecologia no R
+</h5>
+<div class="card-subtitle listing-subtitle">
+Atualização e ampliação do livro ‘Análises Ecológicas no R’
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Fernando Rodrigues da Silva, Thiago Gonçalves-Souza, Gustavo Brant Paterno, Diogo Borges Provete, Maurício Humberto Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1746906564589" data-listing-reading-time-sort="1" data-listing-word-count-sort="49">
+<a href="../project/gere/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../project/gere/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Grupo de Estudos em R e Estatística (GERE)
+</h5>
+<div class="card-subtitle listing-subtitle">
+Liga acadêmica com o objetivo de difundir e capacitar o uso da linguagem R e suas aplicações em abordagens
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Victor Casagrande Souza, Maurício Humberto Vancine, Milton Cesar Ribeiro
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1746906824999" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../project/gymnophiona/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../project/gymnophiona/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Gymnophiona
+</h5>
+<div class="card-subtitle listing-subtitle">
+Compilar ocorrências e criar modelos de distribuição de espécies para Gymnophionas da região Neotropical
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Lucas Almeida, Maurício Vancine, Célio Haddad
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1746906597382" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../project/lsmetrics/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../project/lsmetrics/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LandScape Metrics (LSMETRICS)
+</h5>
+<div class="card-subtitle listing-subtitle">
+Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1746905847512" data-listing-reading-time-sort="6" data-listing-word-count-sort="1067">
+<a href="../project/amphibr/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../project/amphibr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+amphiBR
+</h5>
+<div class="card-subtitle listing-subtitle">
+Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Paulo Barros de Abreu Junior, Diogo Provete, Maurício Vancine, Juliana Zina
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1746896432989" data-listing-reading-time-sort="2" data-listing-word-count-sort="394">
+<a href="../project/atlanticr/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../project/atlanticr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+atlanticr
+</h5>
+<div class="card-subtitle listing-subtitle">
+Pacote R para acessar dados do ATLANTIC Series, um conjunto de data papers sobre biodiversidade e dados geoespaciais da Mata Atlântica
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 Sem itens correspondentes
 </div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

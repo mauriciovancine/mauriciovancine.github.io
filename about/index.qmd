@@ -48,9 +48,9 @@ Olá! Bem-vindos!
 
 Esta é minha webpage, onde eu reuni algumas informações sobre minha trajetória acadêmica.
 
-Atualmente, trabalho como pesquisador de pós-doutorado no [Laboratório de estudos sobre a estrutura e dinâmica da diversidade (LDDiv)](https://www.mathiasmpires.net.br/index.html) da [Universidade Estadual de Campinas]().
+Atualmente, trabalho como pesquisador de pós-doutorado no [Laboratório de estudos sobre a estrutura e dinâmica da diversidade (LDDiv)](https://www.mathiasmpires.net.br/index.html) da [Universidade Estadual de Campinas (Unicamp)](https://unicamp.br/).
 
-Entre em contato comigo [enviando-me uma mensagem](/contact.qmd)!
+Entre em contato comigo enviando-me uma [mensagem](/contact.qmd)!
 
 ### Formação
 
@@ -80,45 +80,3 @@ Sou um caipira nerd do interior de Socorro/SP, pai do Dudu, companheiro da Japa,
   Publiquei um livro chamado [Análises Ecológicas no R](/publications/eco-r/), que faz parte de um projeto maior de difusão e ensino da linguagem R aplicada à Ecologia, chamado [Ecologia no R](/project/ecologia-r/).
 :::
 :::::
-
-<!-- end grid -->
-
-## Recentemente ...
-
-::::::::::: grid
-:::: g-col-3
-#### Blog
-
-::: {#blog}
-:::
-
-[Veja mais →](../blog){.about-links .subtitle}
-::::
-
-:::: g-col-3
-#### Palestras
-
-::: {#talk}
-:::
-
-[Veja mais →](../talk){.about-links .subtitle}
-::::
-
-:::: g-col-3
-#### Publicações
-
-::: {#publication}
-:::
-
-[Veja mais →](../publication){.about-links .subtitle}
-::::
-
-:::: g-col-3
-#### Projetos
-
-::: {#project}
-:::
-
-[Veja mais →](../project){.about-links .subtitle}
-::::
-:::::::::::

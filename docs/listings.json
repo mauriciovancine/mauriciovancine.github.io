@@ -12,6 +12,33 @@
   },
   {
     "listing": "/project/index.html",
-    "items": []
+    "items": [
+      "/project/atlantic-amphibians/index.html",
+      "/project/atlantic-spatial/index.html",
+      "/project/ecologia-r/index.html",
+      "/project/gere/index.html",
+      "/project/gymnophiona/index.html",
+      "/project/lsmetrics/index.html",
+      "/project/amphibr/index.html",
+      "/project/atlanticr/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/lsmetrics/index.html"
+    ]
+  },
+  {
+    "listing": "/talk/index.html",
+    "items": [
+      "/talk/podcast-desabracando-arvores-r/index.html"
+    ]
+  },
+  {
+    "listing": "/teaching/index.html",
+    "items": [
+      "/teaching/workshop-intro-r/index.html"
+    ]
   }
 ]

@@ -1,0 +1,87 @@
+---
+title: "Atlantic Amphibians"
+subtitle: "Compilação de dados de ocorrência, abundância e atributos funcionais de anfíbios na Mata Atlântica"
+author: Maurício Vancine
+image: featured-hex.png
+editor: source
+---
+
+# **Atlantic Amphibians** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+
+O conjunto de dados **Atlantic Amphibians** é uma base de dados ecológicos que reúne informações sobre comunidades de anfíbios anuros na Mata Atlântica no Brasil. Ele foi publicado como *Data Paper* na revista *Ecology* em 2018 e faz parte de uma iniciativa de disponibilização de dados ecológicos de alta qualidade para estudos em ecologia de comunidades, biogeografia, conservação e modelagem da biodiversidade.
+
+Este conjunto de dados representa uma das maiores compilações já realizadas sobre comunidades de anfíbios na Mata Atlântica da América do Sul. Os dados foram extraídos de 389 fontes bibliográficas, incluindo artigos científicos, livros, teses e dissertações, abrangendo o período de 1940 a 2017.
+
+#### Principais características:
+
+* **Total de registros:** 17.619
+* **Número de espécies:** 528 espécies de anuros com identificação taxonômica confiável
+* **Localidades amostradas:** 1.163 sítios distribuídos ao longo do bioma da Mata Atlântica
+* **Endemismo:** Dos registros, 7.787 (44%) foram considerados endêmicos da Mata Atlântica
+* **Métodos de amostragem:** Incluem buscas ativas (82,1%), amostragens em sítios reprodutivos (20%), armadilhas de queda (*pitfall traps*, 15,3%) e encontros ocasionais (14,5%)
+* **Riqueza média de espécies por localidade:** 15,2 ± 11,3 (variando de 1 a 80 espécies)([Repositório Unesp][3], [ResearchGate][4], [ESAJournals][1], [mauriciovancine.github.io][5])
+
+As espécies mais frequentes nas comunidades incluem *Physalaemus cuvieri*, *Dendropsophus minutus*, *Boana faber*, *Scinax fuscovarius* e *Leptodactylus latrans* .([GitHub][6])
+
+### Acesso aos dados
+
+O conjunto de dados está disponível em acesso aberto e pode ser obtido nos seguintes repositórios:
+
+* **Zenodo:** [https://doi.org/10.5281/zenodo.1233686](https://doi.org/10.5281/zenodo.1233686)
+* **GitHub:** [https://github.com/mauriciovancine/ATLANTIC-AMPHIBIANS](https://github.com/mauriciovancine/ATLANTIC-AMPHIBIANS)([Zenodo][7], [GitHub][6])
+
+Além disso, o pacote R `atlanticr` facilita o acesso e a manipulação desses dados para análises ecológicas .([mauriciovancine.github.io][8])
+
+## Dataset
+
+O dataset consiste de **1188** linhas com 49 colunas:
+
+`order` - Ordem
+
+`family` - Família
+
+`subfamily` - Subfamília
+
+`sp_num` - Número da espécie na lista
+
+`genus` - Gênero
+
+`epithet` - Epíteto específico
+
+`species` - Nome científico
+
+`author` - Autoria
+
+`status` - Observações
+
+`category` - Cateogoria de Ameaça pela Portaria MMA 300/2022
+
+O dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:
+
+``` r
+> segalla2021
+# A tibble: 1,188 × 49
+   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA
+        <dbl> <chr> <chr>   <chr>     <chr> <chr>   <chr>   <chr>  <chr>  <chr>          <chr>    <chr>      <dbl> <dbl> <dbl> <dbl> <dbl>
+ 1          1 Anura Alloph… NA        Allo… relicta Alloph… Caram… NA     NA             DD       Yes            0     0     0     0     1
+ 2          2 Anura Alloph… NA        Allo… resple… Alloph… Castr… NA     Resplendent F… LC       No             0     0     0     1     0
+ 3          3 Anura Alloph… NA        Allo… ruthve… Alloph… Gaige… NA     NA             LC       No             0     0     1     1     0
+ 4          4 Anura Alsodi… NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co… LC       No             0     0     0     0     0
+ 5          5 Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… NA     NA             LC       Yes            0     0     0     1     0
+ 6          6 Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke… NT       Yes            0     0     0     0     0
+ 7          7 Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… NA     NA             LC       Yes            0     0     0     1     0
+ 8          8 Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA             NA       NA            NA    NA    NA    NA    NA
+ 9          9 Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… NA     NA             NA       NA            NA    NA    NA    NA    NA
+10         10 Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… NA     NA             LC       No             1     0     0     0     0
+# ℹ 1,178 more rows
+# ℹ 32 more variables: CE <dbl>, DF <dbl>, ES <dbl>, GO <dbl>, MA <dbl>, MT <dbl>, MS <dbl>, MG <dbl>, PA <dbl>, PB <dbl>, PR <dbl>,
+#   PE <dbl>, PI <dbl>, RJ <dbl>, RN <dbl>, RS <dbl>, RO <dbl>, RR <dbl>, SC <dbl>, SP <dbl>, SE <dbl>, TO <dbl>, AF <dbl>, PAN <dbl>,
+#   PAM <dbl>, AMZ <dbl>, CER <dbl>, CAA <dbl>, UNK <dbl>, tad_ext_morph <chr>, tad_int_oral_feat <chr>, tad_chond <chr>
+# ℹ Use `print(n = ...)` to see more rows
+```
+
+## Publicações
+
+1.  <u>**Vancine, M. H.**</u>, Duarte, K. D. S., de Souza, Y. S., Giovanelli, J. G. R., Martins‐Sobrinho, P. M., López, A., ... & Brassaloti, R. (2018). [ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America](/publications/atlantic-amphibians). *Ecology*, 99(7), 1692-1692.
+
+2.  Anunciação, P. A., Ernst, R., Martello, F., <u>**Vancine, M. H.**</u>, Ribeiro, M. C., & Carvalho, L. M. T. (2023). [Climate driven loss of taxonomic and functional richness in Atlantic Forest anurans](/publications/amp-af-cc). *Perspectives in Ecology and Conservation*, 21(4), 274-285.

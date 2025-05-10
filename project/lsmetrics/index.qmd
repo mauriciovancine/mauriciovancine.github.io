@@ -1,13 +1,9 @@
 ---
-title: "LSmetrics"
+title: "LandScape Metrics (LSMETRICS)"
 subtitle: "Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS"
-author: Bernardo Niebuhr, Mauricio Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
-links:
-  - icon: github
-    icon_pack: fab
-    name: code
-    url: https://github.com/LEEClab/lsmetricsr
+author: Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
+image: featured-hex.png
 editor: source
 ---
 
-
+# **LandScape Metrics (LSMETRICS)** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>

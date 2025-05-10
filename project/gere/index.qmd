@@ -1,0 +1,13 @@
+---
+title: "Grupo de Estudos em R e Estatística (GERE)"
+subtitle: "Liga acadêmica com o objetivo de difundir e capacitar o uso da linguagem R e suas aplicações em abordagens"
+author: Victor Casagrande Souza, Maurício Humberto Vancine,  Milton Cesar Ribeiro
+image: featured-hex.png
+editor: source
+---
+
+# **Grupo de Estudos em R e Estatística (GERE)** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+
+## Descrição do projeto
+
+Através da difusão e capacitação no uso da linguagem R e sua aplicação em abordagem quantitativas e estatísticas, o GERE busca aprimorar a formação técnico-científica e humanística dos graduandos e pós-graduandos, bem como fomentar um espaço de convivência e aprendizado entre os membros da comunidade unespiana.

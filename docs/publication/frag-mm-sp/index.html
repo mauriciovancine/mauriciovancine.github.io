@@ -100,16 +100,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project/index.html"> 
-<span class="menu-text">Projetos</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../talk/index.html"> 
 <span class="menu-text">Palestras</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../teaching/index.html"> 
 <span class="menu-text">Ensino</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project/index.html"> 
+<span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../publication/index.html"> 
@@ -140,8 +140,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#links" id="toc-links" class="nav-link active" data-scroll-target="#links">Links</a></li>
-  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo">Resumo</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link active" data-scroll-target="#resumo">Resumo</a></li>
   <li><a href="#citação" id="toc-citação" class="nav-link" data-scroll-target="#citação">Citação</a></li>
   </ul>
 </nav>
@@ -169,14 +168,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="links" class="level2">
-<h2 class="anchored" data-anchor-id="links">Links</h2>
-<div style="display: flex; gap: 1.5em; flex-wrap: wrap;">
-<p><a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn-outline" role="button" target="_blank" aria-label="DOI do artigo"> <i class="ai  ai-doi" aria-label="doi"></i> DOI </a></p>
-<p><a href="2017-beca-etal.pdf" class="btn-outline" role="button" target="_blank" aria-label="CV em PDF"> <i class="bi bi-file-earmark-pdf-fill"></i> PDF </a></p>
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<p><a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn btn-custom text-capitalize"><i class="ai ai-doi me-1"></i> DOI</a> <a href="2017-beca-etal.pdf" class="btn btn-custom text-capitalize"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</a></p>
 </div>
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+<p><br></p>
 <p><img src="featured.png" class="img-fluid"></p>
-</section>
 <section id="resumo" class="level2">
 <h2 class="anchored" data-anchor-id="resumo">Resumo</h2>
 <p>Remnant habitat patches immersed within biofuel cropland matrices can retain considerable species diversity, although the effects of land use change on species persistence in historically modified landscapes remain unclear. The Atlantic Forest is one of the most fragmented South American biodiversity hotspots and retains about 12% of its original vegetation cover. Most of these remnants are distributed in small isolated fragments immersed mainly within pastures and sugarcane monocultures. Here we examine how species richness and composition of medium and large-sized mammals are explained by forest cover, structural area and forest edge amount at the landscape scale. We sampled 22 fragmented landscapes dominated by sugarcane plantations along a wide gradient of forest cover (3% to 96%) in southeastern Brazil. We recorded 88% of terrestrial mammal species expected for this region, but many likely local extirpations were detected at the landscape scale, with losses between 50% to 80% of species. Most of the landscapes were highly depleted of forest-specialist species, with replacements by exotics and/or species typical of non-forest habitats. We found that total mammalian species richness, which includes forest-specialists, generalists, exotics and non-forest dwelling species, was not affected by landscape metrics, such as forest cover, structural area and forest edge amount. Nevertheless, forest cover was important predictor of the presence of three ungulates, a medium-sized rodent, and an armadillo. Local mammalian communities exhibited a high degree of species turnover between landscapes, representing 95% of the total β-diversity. In this region, where there was no regional extinction, landholder compliance with the Brazilian Forest Bill and restoration measures will enhance habitat connectivity and mammal persistence across the wider unprotected countryside.</p>
