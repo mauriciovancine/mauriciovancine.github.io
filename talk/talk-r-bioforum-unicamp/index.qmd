@@ -1,0 +1,37 @@
+---
+title: "Análises Ecológicas no R: um livro para ‘eRRar’ mais na Ecologia"
+subtitle: "Palestra sobre o livro 'Análises Ecológicas no R' no Biofórum da Unicamp."
+author: Maurício Vancine
+image: featured.png
+date: 2024-04-25
+event: Biofórum da Unicamp
+location: Campinas, SP, Brasil
+categories: ["Palestra"]
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://docs.google.com/presentation/d/1-NUSsVGWOlNiiF6SfIoZxP2kp4MPEbX2FOlGSk4ITgg/edit#slide=id.g1e1b7c54877_0_0" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br>
+
+![](featured.png)

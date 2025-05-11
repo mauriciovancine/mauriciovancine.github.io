@@ -1,15 +1,31 @@
 ---
-title: "LandScape Metrics (LSMETRICS)"
-subtitle: "Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS"
-author: Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
+title: "IntroR: "
+subtitle: ""
+author: Maurício Vancine
 image: featured-hex.png
-about:
-  template: trestles
-  image-width: 10em
-  image-shape: round
-  links:
-  - icon: github
-    aria-label: GitHub
-    href: https://github.com/LEEClab/lsmetricsr
 editor: source
 ---
+
+# **sdmR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+
+- icon: github
+    aria-label: GitHub
+    href: https://github.com/LEEClab/lsmetricsr
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+ 
+  <a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn btn-custom text-capitalize" target="_blank">
+  <i class="ai ai-doi me-1"></i> DOI
+ </a>
+ 
+ <a href="2017-beca-etal.pdf" class="btn btn-custom text-capitalize"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</a>
+
+</div>
+  
+## Descrição
+
+O minicurso oferece alguns dos principais conceitos práticos o controle de versão usando git, GitHub e RStudio. São abordados os seguintes tópicos: (1) controle de versão, (2) git e GitHub, (3) Fork, (4) configuração do git, (5) iniciando localmente, (6) iniciando remotamente, (7) versionamento (8) ignorar no versionamento, (9) histórico do versionamento, (10) desfazer versionamento, (11) ramificações em versionamento, (12) funcionamento do repositório remoto, (13) detalhes do respositório do GitHub e (14) interface gráfica do RStudio.
+
+## Oferecimento
+
+1. Laboratório de Síntese Ecológica e Conservação da Biodiversidade e Laboratório de Ecologia Aplicada. (2021). Universidade Federal Rural de Pernambuco (UFRPE), online.

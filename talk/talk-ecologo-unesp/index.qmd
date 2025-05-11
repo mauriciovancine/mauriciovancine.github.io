@@ -1,0 +1,18 @@
+---
+title: "Profissão Ecólogo"
+subtitle: "Nesta mesa redonda discutimos os diferentes perfis da profissão ecólogo."
+author: Ailton Neto, Ives Barreto, Maurício Vancine, Nelise Rocha, Pedro Miguel, Silvia Bueno
+image: featured.jpg
+date: 2022-11-07
+event: XVIII Semana de Estudos da Ecologia
+location: Rio Claro, SP, Brasil
+categories: ["Mesa redonda"]
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+![](featured.jpg)

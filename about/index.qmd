@@ -38,6 +38,8 @@ about:
 format: 
   html: 
     page-layout: full
+    title-block-banner: false
+    toc: false
 editor: source
 ---
 
@@ -80,3 +82,4 @@ Sou um caipira nerd do interior de Socorro/SP, pai do Dudu, companheiro da Japa,
   Publiquei um livro chamado [Análises Ecológicas no R](/publications/eco-r/), que faz parte de um projeto maior de difusão e ensino da linguagem R aplicada à Ecologia, chamado [Ecologia no R](/project/ecologia-r/).
 :::
 :::::
+

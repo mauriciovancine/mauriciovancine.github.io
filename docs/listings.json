@@ -32,13 +32,41 @@
   {
     "listing": "/talk/index.html",
     "items": [
-      "/talk/podcast-desabracando-arvores-r/index.html"
+      "/talk/talk-r-book/index.html",
+      "/talk/talk-landscape-syneco/index.html",
+      "/talk/talk-r-bioforum-unicamp/index.html",
+      "/talk/talk-spatiotemporal-af-red/index.html",
+      "/talk/video-r-geospatial/index.html",
+      "/talk/talk-sdm-ufpe/index.html",
+      "/talk/talk-ecologo-unesp/index.html",
+      "/talk/podcast-desabracando-arvores-r/index.html",
+      "/talk/podcast-fmsr-geocast/index.html",
+      "/talk/talk-espacial-uff/index.html",
+      "/talk/video-werlive-16/index.html",
+      "/talk/talk-enm-gggc/index.html",
+      "/talk/video-geocast-metricas-paisagem/index.html",
+      "/talk/talk-data-paper-amphibians-anfoco/index.html"
     ]
   },
   {
     "listing": "/teaching/index.html",
     "items": [
-      "/teaching/workshop-intro-r/index.html"
+      "/teaching/workshop-landscapemetrics/index.html",
+      "/teaching/course-spatial-ecology-r/index.html",
+      "/teaching/course-geor/index.html",
+      "/teaching/workshop-intro-r/index.html",
+      "/teaching/workshop-prog-r/index.html",
+      "/teaching/workshop-qgis/index.html",
+      "/teaching/workshop-spatial-patterns-biodiversity-data/index.html",
+      "/teaching/workshop-git/index.html",
+      "/teaching/course-sdmr/index.html",
+      "/teaching/workshop-sdm/index.html"
+    ]
+  },
+  {
+    "listing": "/publication/index.html",
+    "items": [
+      "/publication/frag-mm-sp/index.html"
     ]
   }
 ]

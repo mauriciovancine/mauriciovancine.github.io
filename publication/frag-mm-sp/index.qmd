@@ -5,8 +5,8 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn btn-custom text-capitalize"><i class="ai ai-doi me-1"></i> DOI</a>
-  <a href="2017-beca-etal.pdf" class="btn btn-custom text-capitalize"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</a>
+  <a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="2017-beca-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
 </div>
 
 <style>
@@ -16,7 +16,6 @@ editor: source
     color: #1c6cbe; /* Texto azul */
     transition: background-color 0.3s, color 0.3s;
   }
-
   .btn-custom:hover {
     background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
     color: white; /* Texto branco */

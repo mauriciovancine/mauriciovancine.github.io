@@ -1,0 +1,39 @@
+---
+title: "Análises Ecológicas no R e a importância das análises estatísticas para a ecologia e a transdisciplinaridade"
+subtitle: "Palestra sobre o livro 'Análises Ecológicas no R' Engenharia Ambiental da UEMG."
+author: Maurício Vancine
+image: featured.png
+date: 2024-12-09
+event: Entrevista e Bate-Papo com Cientistas na Engenharia Ambiental da UEMG
+location: Ibiraté, MG, Brasil (Remoto)
+categories: ["Palestra", "Vídeo", "Podcast"]
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://www.youtube.com/watch?v=NWfJ5G2w8ME" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>YouTube</a>
+  <a href="https://open.spotify.com/episode/4LiZ1WDiwKngynSlnXsrZI?si=fNc4zFZxQNC2Bp1RQqNgqw&nd=1&dlsi=497a0d5ac54b4257" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-spotify me-1"></i>Spotify</a>
+  <a href="https://docs.google.com/presentation/d/1VJVTbSD36aqNzLiO3nndGZZsVh6GSr0oVhoPBz0L5hE" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br>
+
+![](featured.png)

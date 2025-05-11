@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-author','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -137,7 +137,7 @@ window.Quarto = {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -192,36 +192,61 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Projetos</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Projetos</h1>
+<p class="subtitle lead">Projetos que desenvolvi ou estou desenvolvimento.</p>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <div id="listing-project" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-project-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-project'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Ordenar por</option>
+       <option value="index" data-direction="asc">Padrão</option>
+         <option value="listing-title" data-direction="asc">
+          Título
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Data - Mais antigo
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Data - O mais novo
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Autor
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filtro">
+    </div>
+</div>
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-listing-file-modified-sort="1746906401789" data-listing-reading-time-sort="7" data-listing-word-count-sort="1306">
 <a href="../project/atlantic-amphibians/index.html" class="quarto-grid-link">
@@ -404,6 +429,44 @@ Maurício Vancine
 Sem itens correspondentes
 </div>
 </div>
+<style>
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 105px; /* um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(0, 123, 255, 0.7); /* azul com transparência */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#topBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+↑ Topo
+</button>
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>
 
 
 
@@ -830,7 +893,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org">Quarto</a></p>
+<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">

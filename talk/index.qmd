@@ -1,20 +1,62 @@
 ---
 title: "Palestras"
+subtitle: "Lista das minhas palestras, vídeos, podcasts e participação em outros eventos. <br>Para convites, entre em contato comigo enviando-me uma [mensagem](/contact.qmd)."
 listing:
   - id: talk
     contents: "**/*/index.qmd"
     type: default
-    fields: [image, date, title, subtitle]
+    fields: [image, date, title, event, subtitle]
     sort: "date desc"
     categories: cloud
     sort-ui: true
     filter-ui: true
-    page-size: 36  
+    page-size: 10
+    field-display-names:
+      event: "Event"
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 toc: true
 editor: source
 ---
 
 ::: {#talk}
 :::
+
+<style>
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 105px; /* um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(0, 123, 255, 0.7); /* azul com transparência */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#topBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Topo</button>
+
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>

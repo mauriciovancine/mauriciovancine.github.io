@@ -1,5 +1,4 @@
 ---
-comments: false
 title: "Licença"
 editor: source
 ---

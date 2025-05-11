@@ -1,15 +1,29 @@
 ---
-title: "LandScape Metrics (LSMETRICS)"
-subtitle: "Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS"
-author: Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
+title: "sdmR: Modelagem de Distribuição de Espécies com o R"
+subtitle: "Disciplina de pós-graduação de modelagem de distribuição de espécies"
+author: Maurício Vancine
 image: featured-hex.png
-about:
-  template: trestles
-  image-width: 10em
-  image-shape: round
-  links:
-  - icon: github
-    aria-label: GitHub
-    href: https://github.com/LEEClab/lsmetricsr
 editor: source
 ---
+
+# **sdmR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+
+- icon: link
+  icon_pack: fas
+  name: website
+  url: https://geor-course.netlify.app/
+- icon: github
+  icon_pack: fab
+  name: code
+  url: https://github.com/geor-course
+  
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn btn-custom text-capitalize" target="_blank">
+  <i class="ai ai-doi me-1"></i> DOI
+ </a>
+  <a href="2017-beca-etal.pdf" class="btn btn-custom text-capitalize"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</a>
+</div>
+
+## Descrição
+
+Na sdmR, os alunes serão apresentados aos principais conceitos teóricos e práticos sobre modelagem de distribuição de espécies utilizando a linguagem R. Serão abordados os temas: (1) controle de versão, git e GitHub, (2) introdução à linguagem R, (3) obtenção e seleção de dados de ocorrências e variáveis ambientais, (4) ajuste e predição dos modelos e métricas de avaliação dos mesmos, (5) automatização da construção dos SDMs, (6) consenso (ensemble) dos modelos e (7) composição dos mapas.

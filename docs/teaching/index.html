@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-author','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-author','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -137,7 +137,7 @@ window.Quarto = {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -192,148 +192,57 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Ensino</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ensino</h1>
+<p class="subtitle lead">Disciplinas e cursos que ministrei.</p>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <div id="listing-teaching" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-teaching-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-teaching'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Ordenar por</option>
+       <option value="index" data-direction="asc">Padrão</option>
+         <option value="listing-title" data-direction="asc">
+          Título
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Autor
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filtro">
+    </div>
+</div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1746801310691" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../teaching/course-geor/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/course-geor/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-LandScape Metrics (LSMETRICS)
-</h5>
-<div class="card-subtitle listing-subtitle">
-Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1746801310691" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../teaching/course-sdmr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/course-sdmr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-LandScape Metrics (LSMETRICS)
-</h5>
-<div class="card-subtitle listing-subtitle">
-Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1746801310691" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../teaching/course-spatial-ecology-r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/course-spatial-ecology-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-LandScape Metrics (LSMETRICS)
-</h5>
-<div class="card-subtitle listing-subtitle">
-Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1746801310691" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../teaching/workshop-git/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-git/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-LandScape Metrics (LSMETRICS)
-</h5>
-<div class="card-subtitle listing-subtitle">
-Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1746801310691" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../teaching/workshop-intro-r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-intro-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-LandScape Metrics (LSMETRICS)
-</h5>
-<div class="card-subtitle listing-subtitle">
-Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1746801310691" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1746915492972" data-listing-reading-time-sort="1" data-listing-word-count-sort="108">
 <a href="../teaching/workshop-landscapemetrics/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -341,21 +250,87 @@ Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milto
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-LandScape Metrics (LSMETRICS)
+EcoPaiR: métricas de paisagem no R
 </h5>
 <div class="card-subtitle listing-subtitle">
-Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
+Métricas de paisagem no R usando o pacote landscapemetrics
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
-Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
+Maurício Vancine
 </div>
 </div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1746801310691" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1746915480709" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<a href="../teaching/course-spatial-ecology-r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/course-spatial-ecology-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+EspacialR
+</h5>
+<div class="card-subtitle listing-subtitle">
+Disciplina de pós-graduação de Ecologia Espacial
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1746915182635" data-listing-reading-time-sort="1" data-listing-word-count-sort="164">
+<a href="../teaching/course-geor/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/course-geor/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+GeoR: Dados Geoespaciais com o R
+</h5>
+<div class="card-subtitle listing-subtitle">
+Disciplina de pós-graduação de manipulação e visualização de dados geoespaciais
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1746915489600" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
+<a href="../teaching/workshop-intro-r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/workshop-intro-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+IntroR:
+</h5>
+<div class="card-subtitle listing-subtitle">
+
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1746915496563" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
 <a href="../teaching/workshop-prog-r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -363,10 +338,10 @@ Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milto
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-LandScape Metrics (LSMETRICS)
+ProgR: programação em linguagem R
 </h5>
 <div class="card-subtitle listing-subtitle">
-Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
+Programação em linguagem R para controle de fluxo, repetições e funções
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
@@ -377,7 +352,7 @@ Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milto
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1746801310691" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1746915597345" data-listing-reading-time-sort="1" data-listing-word-count-sort="131">
 <a href="../teaching/workshop-qgis/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -385,43 +360,21 @@ Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milto
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-LandScape Metrics (LSMETRICS)
+QGIS: geoprocessamento com QGIS
 </h5>
 <div class="card-subtitle listing-subtitle">
-Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
+Minicurso: Introdução ao geoprocessamento com QGIS
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
-Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
+Maurício Vancine
 </div>
 </div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1746801310691" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../teaching/workshop-sdm/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-sdm/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-LandScape Metrics (LSMETRICS)
-</h5>
-<div class="card-subtitle listing-subtitle">
-Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1746801310691" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1746915923806" data-listing-reading-time-sort="1" data-listing-word-count-sort="122">
 <a href="../teaching/workshop-spatial-patterns-biodiversity-data/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -429,14 +382,80 @@ Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milto
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-LandScape Metrics (LSMETRICS)
+SpatBioR: analisando padrões espaciais em dados de biodiversidade
 </h5>
 <div class="card-subtitle listing-subtitle">
-Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS
+Workshop: Analisando padrões espaciais em dados de biodiversidade
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
-Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1746915484874" data-listing-reading-time-sort="1" data-listing-word-count-sort="159">
+<a href="../teaching/workshop-git/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/workshop-git/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+gitR: controle de versão com git, GitHub e RStudio
+</h5>
+<div class="card-subtitle listing-subtitle">
+Minicurso: Controle de versão com git, GitHub e RStudio
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1746914990862" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
+<a href="../teaching/course-sdmr/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/course-sdmr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sdmR: Modelagem de Distribuição de Espécies com o R
+</h5>
+<div class="card-subtitle listing-subtitle">
+Disciplina de pós-graduação de modelagem de distribuição de espécies
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1746915789370" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
+<a href="../teaching/workshop-sdm/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/workshop-sdm/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sdmR: Modelagem de distribuição de espécies
+</h5>
+<div class="card-subtitle listing-subtitle">
+Minicurso: Introdução à modelagem de distribuição de espécies
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
 </div>
 </div>
 </div>
@@ -448,6 +467,44 @@ Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milto
 Sem itens correspondentes
 </div>
 </div>
+<style>
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 105px; /* um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(0, 123, 255, 0.7); /* azul com transparência */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#topBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+↑ Topo
+</button>
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>
 
 
 
@@ -874,7 +931,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org">Quarto</a></p>
+<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">

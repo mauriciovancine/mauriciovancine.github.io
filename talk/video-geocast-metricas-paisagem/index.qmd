@@ -1,0 +1,38 @@
+---
+title: "Métricas de paisagem no R"
+subtitle: "Live sobre métricas de paisagem no R."
+author: Maurício Vancine, Felipe Barros
+image: featured.jpg
+date: 2019-09-27
+event: GeoCast Brasil
+categories: ["Vídeo"]
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://youtu.be/RCTrLx_33D8" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>YouTube</a>
+  <a href="https://mauriciovancine.github.io/slides/slides-landscape-metrics-geocast/slides-landscape-metrics-geocast.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
+  <a href="https://gitlab.com/geocastbrasil/landscapemetrics" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-gitlab me-1"></i>GitLab</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br>
+
+![](featured.jpg)

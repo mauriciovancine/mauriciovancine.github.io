@@ -1,15 +1,39 @@
 ---
-title: "LandScape Metrics (LSMETRICS)"
-subtitle: "Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS"
-author: Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
+title: "GeoR: Dados Geoespaciais com o R"
+subtitle: "Disciplina de pós-graduação de manipulação e visualização de dados geoespaciais"
+author: Maurício Vancine
 image: featured-hex.png
-about:
-  template: trestles
-  image-width: 10em
-  image-shape: round
-  links:
-  - icon: github
-    aria-label: GitHub
-    href: https://github.com/LEEClab/lsmetricsr
 editor: source
 ---
+
+# **GeoR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+
+- icon: link
+  icon_pack: fas
+  name: website
+  url: https://geor-course.netlify.app/
+- icon: github
+  icon_pack: fab
+  name: code
+  url: https://github.com/geor-course
+  
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  
+  <a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i> DOI
+ </a>
+
+<a href="2017-beca-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</a>
+  
+</div>
+
+## Descrição
+
+Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como controle de versão, git e GitHub; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.
+
+## Oferecimento
+
+1.  [Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade](https://ib.rc.unesp.br/#!/pos-graduacao/secao-tecnica-de-pos/programas/ecologia-e-biodiversidade/apresentacao-novo/). (2021). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.
+
+1.  [Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade](https://ib.rc.unesp.br/#!/pos-graduacao/secao-tecnica-de-pos/programas/ecologia-e-biodiversidade/apresentacao-novo/). (2020). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.
+
+1.  [Programa de Pós-graduação em Etnobiologia e Conservação da Biodiversidade](http://ww2.pgetno.ufrpe.br/?q=pt-br/o-programa). (2019). Universidade Federal Rural de Pernambuco (UFRPE), Recife, PE, Brasil.

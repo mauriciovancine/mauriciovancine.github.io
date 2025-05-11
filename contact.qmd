@@ -1,18 +1,14 @@
 ---
-title: Contato
-page-layout: article
-format: 
-  html: 
-    grid:
-      margin-width: 0px
-      sidebar-width: 0px
+title: "Contato"
 editor: source
 ---
 
 ::::::::: grid
 ::: {#note .g-col-5}
 <br>
-Este formulário é para entrar em contato sobre oportunidades de trabalhos e solicitações de orientação ou palestras. Este **não** é um formulário para solicitar ajuda, mas podemos conversar.
+Este formulário é para entrar em contato sobre oportunidades de trabalhos e solicitações de orientação ou palestras. 
+
+Este **não** é um formulário para solicitar ajuda, mas podemos conversar...
 :::
 
 ::: g-col-1

@@ -81,9 +81,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+      valueNames: ['listing-image','listing-date','listing-title','listing-event','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 10,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -137,7 +138,7 @@ window.Quarto = {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -192,33 +193,33 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Palestras</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="TWVzYSUyMHJlZG9uZGE="><span class="quarto-category-count category-cloud-2">Mesa redonda</span></div><div class="category" data-category="UGFsZXN0cmE="><span class="quarto-category-count category-cloud-5">Palestra</span></div><div class="category" data-category="UG9kY2FzdA=="><span class="quarto-category-count category-cloud-3">Podcast</span></div><div class="category" data-category="ViVDMyVBRGRlbw=="><span class="quarto-category-count category-cloud-4">Vídeo</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Palestras</h1>
+<p class="subtitle lead">Lista das minhas palestras, vídeos, podcasts e participação em outros eventos. <br>Para convites, entre em contato comigo enviando-me uma <a href="../contact.html">mensagem</a>.</p>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <div id="listing-talk" class="quarto-listing quarto-listing-container-default">
@@ -245,7 +246,182 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1746817831117" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="quarto-post image-right" data-index="0" data-categories="UGFsZXN0cmElMkNWJUMzJUFEZGVvJTJDUG9kY2FzdA==" data-listing-date-sort="1733713200000" data-listing-file-modified-sort="1746925311462" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
+<div class="thumbnail">
+<p><a href="../talk/talk-r-book/index.html" class="no-external"></a></p><a href="../talk/talk-r-book/index.html" class="no-external">
+<p><img loading="lazy" src="../talk/talk-r-book/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../talk/talk-r-book/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/talk-r-book/index.html" class="no-external">Análises Ecológicas no R e a importância das análises estatísticas para a ecologia e a transdisciplinaridade</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/talk-r-book/index.html" class="no-external">Palestra sobre o livro ‘Análises Ecológicas no R’ Engenharia Ambiental da UEMG.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/talk-r-book/index.html" class="no-external">
+<div class="listing-date">
+9 de dez. de 2024
+</div>
+<div class="metadata-value listing-event">
+Entrevista e Bate-Papo com Cientistas na Engenharia Ambiental da UEMG
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="TWVzYSUyMHJlZG9uZGE=" data-listing-date-sort="1732762800000" data-listing-file-modified-sort="1746924346367" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
+<div class="thumbnail">
+<p><a href="../talk/talk-landscape-syneco/index.html" class="no-external"></a></p><a href="../talk/talk-landscape-syneco/index.html" class="no-external">
+<p><img loading="lazy" src="../talk/talk-landscape-syneco/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../talk/talk-landscape-syneco/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/talk-landscape-syneco/index.html" class="no-external">Unindo dados a modelos: como prever a distribuição da biodiversidade e serviços ecossistêmicos na escala da paisagem?</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/talk-landscape-syneco/index.html" class="no-external">Mesa redonda sobre ‘Transformações da paisagem, serviços e o papel da síntese ecológica no Brasil’.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/talk-landscape-syneco/index.html" class="no-external">
+<div class="listing-date">
+28 de nov. de 2024
+</div>
+<div class="metadata-value listing-event">
+SynEco - I Simpósio Brasileiro de Síntese Ecológica
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="UGFsZXN0cmE=" data-listing-date-sort="1714014000000" data-listing-file-modified-sort="1746924406418" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
+<div class="thumbnail">
+<p><a href="../talk/talk-r-bioforum-unicamp/index.html" class="no-external"></a></p><a href="../talk/talk-r-bioforum-unicamp/index.html" class="no-external">
+<p><img loading="lazy" src="../talk/talk-r-bioforum-unicamp/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../talk/talk-r-bioforum-unicamp/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/talk-r-bioforum-unicamp/index.html" class="no-external">Análises Ecológicas no R: um livro para ‘eRRar’ mais na Ecologia</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/talk-r-bioforum-unicamp/index.html" class="no-external">Palestra sobre o livro ‘Análises Ecológicas no R’ no Biofórum da Unicamp.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/talk-r-bioforum-unicamp/index.html" class="no-external">
+<div class="listing-date">
+25 de abr. de 2024
+</div>
+<div class="metadata-value listing-event">
+Biofórum da Unicamp
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="UGFsZXN0cmE=" data-listing-date-sort="1711335600000" data-listing-file-modified-sort="1746926555786" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
+<div class="thumbnail">
+<p><a href="../talk/talk-spatiotemporal-af-red/index.html" class="no-external"></a></p><a href="../talk/talk-spatiotemporal-af-red/index.html" class="no-external">
+<p><img loading="lazy" src="../talk/talk-spatiotemporal-af-red/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../talk/talk-spatiotemporal-af-red/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/talk-spatiotemporal-af-red/index.html" class="no-external">Dinámica espacio-temporal de la vegetación forestal y natural en el Bosque Atlántico e implicaciones para la conservación</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/talk-spatiotemporal-af-red/index.html" class="no-external">Palestra sobre a dinâmica espaço-temporal da vegetação florestal e natural da Mata Atlântica.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/talk-spatiotemporal-af-red/index.html" class="no-external">
+<div class="listing-date">
+25 de mar. de 2024
+</div>
+<div class="metadata-value listing-event">
+Red Trinacional de Restauración del Bosque Atlántico (Remoto)
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="ViVDMyVBRGRlbw==" data-listing-date-sort="1710212400000" data-listing-file-modified-sort="1746926175272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
+<div class="thumbnail">
+<p><a href="../talk/video-r-geospatial/index.html" class="no-external"></a></p><a href="../talk/video-r-geospatial/index.html" class="no-external">
+<p><img loading="lazy" src="../talk/video-r-geospatial/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../talk/video-r-geospatial/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/video-r-geospatial/index.html" class="no-external">Análise de dados geoespaciais no R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/video-r-geospatial/index.html" class="no-external">Live sobre análise de dados geoespaciais no R.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/video-r-geospatial/index.html" class="no-external">
+<div class="listing-date">
+12 de mar. de 2024
+</div>
+<div class="metadata-value listing-event">
+Grupo de Estudos em Ecologia Numérica
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="UGFsZXN0cmE=" data-listing-date-sort="1667962800000" data-listing-file-modified-sort="1746926364601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
+<div class="thumbnail">
+<p><a href="../talk/talk-sdm-ufpe/index.html" class="no-external"></a></p><a href="../talk/talk-sdm-ufpe/index.html" class="no-external">
+<p><img loading="lazy" src="../talk/talk-sdm-ufpe/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../talk/talk-sdm-ufpe/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/talk-sdm-ufpe/index.html" class="no-external">Modelagem de Distribuição de Espécies e algumas aplicações</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/talk-sdm-ufpe/index.html" class="no-external">Nesta palestra comento e exemplifico algumas aplicações teóricas e práticas dos Modelos de Distribuição de Espécies.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/talk-sdm-ufpe/index.html" class="no-external">
+<div class="listing-date">
+9 de nov. de 2022
+</div>
+<div class="metadata-value listing-event">
+Convite do Prof.&nbsp;José Wagner da Silva Melo (UFPE)
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="TWVzYSUyMHJlZG9uZGE=" data-listing-date-sort="1667790000000" data-listing-file-modified-sort="1746923485097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail">
+<p><a href="../talk/talk-ecologo-unesp/index.html" class="no-external"></a></p><a href="../talk/talk-ecologo-unesp/index.html" class="no-external">
+<p><img loading="lazy" src="../talk/talk-ecologo-unesp/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../talk/talk-ecologo-unesp/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/talk-ecologo-unesp/index.html" class="no-external">Profissão Ecólogo</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/talk-ecologo-unesp/index.html" class="no-external">Nesta mesa redonda discutimos os diferentes perfis da profissão ecólogo.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/talk-ecologo-unesp/index.html" class="no-external">
+<div class="listing-date">
+7 de nov. de 2022
+</div>
+<div class="metadata-value listing-event">
+XVIII Semana de Estudos da Ecologia
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="UG9kY2FzdA==" data-listing-date-sort="1652583600000" data-listing-file-modified-sort="1746922917559" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
 <div class="thumbnail">
 <p><a href="../talk/podcast-desabracando-arvores-r/index.html" class="no-external"></a></p><a href="../talk/podcast-desabracando-arvores-r/index.html" class="no-external">
 <p><img loading="lazy" src="../talk/podcast-desabracando-arvores-r/featured.jpg" class="thumbnail-image"></p>
@@ -256,11 +432,167 @@ window.Quarto = {
 <a href="../talk/podcast-desabracando-arvores-r/index.html" class="no-external">092 – Você tem medo de errar?</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../talk/podcast-desabracando-arvores-r/index.html" class="no-external">Neste episódio nós vamos discutir a importância da linguagem R na análise de dados ecológicos</a>
+<a href="../talk/podcast-desabracando-arvores-r/index.html" class="no-external">Neste episódio nós vamos discutir a importância da linguagem R na análise de dados ecológicos.</a>
 </div>
 </div>
 <div class="metadata">
-<p><a href="../talk/podcast-desabracando-arvores-r/index.html" class="no-external"></a></p><a href="../talk/podcast-desabracando-arvores-r/index.html" class="no-external">
+<a href="../talk/podcast-desabracando-arvores-r/index.html" class="no-external">
+<div class="listing-date">
+15 de mai. de 2022
+</div>
+<div class="metadata-value listing-event">
+DesAbraçando Árvores
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="UG9kY2FzdA==" data-listing-date-sort="1652583600000" data-listing-file-modified-sort="1746922957999" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
+<div class="thumbnail">
+<p><a href="../talk/podcast-fmsr-geocast/index.html" class="no-external"></a></p><a href="../talk/podcast-fmsr-geocast/index.html" class="no-external">
+<p><img loading="lazy" src="../talk/podcast-fmsr-geocast/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../talk/podcast-fmsr-geocast/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/podcast-fmsr-geocast/index.html" class="no-external">Episódio 48 - GeoCast Brasil</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/podcast-fmsr-geocast/index.html" class="no-external">Neste episódio #48 do podcast O Fascinante Mundo do Sensoriamento Remoto, eu converso com a moçada do GeoCast Brasil, Felipe Barros, Maurício Vancine e Luis Sadeck. Segunda às 17h estarei ao vivo no YouTube apresentando o episódio. Espero que goste. Um grande abraço!</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/podcast-fmsr-geocast/index.html" class="no-external">
+<div class="listing-date">
+15 de mai. de 2022
+</div>
+<div class="metadata-value listing-event">
+O Fascinante Mundo do Sensoriamento Remoto
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="UGFsZXN0cmElMkNWJUMzJUFEZGVv" data-listing-date-sort="1617332400000" data-listing-file-modified-sort="1746925297975" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
+<div class="thumbnail">
+<p><a href="../talk/talk-espacial-uff/index.html" class="no-external"></a></p><a href="../talk/talk-espacial-uff/index.html" class="no-external">
+<p><img loading="lazy" src="../talk/talk-espacial-uff/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../talk/talk-espacial-uff/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/talk-espacial-uff/index.html" class="no-external">Aplicações da Cartografia para a Ecologia Espacial</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/talk-espacial-uff/index.html" class="no-external">Palestra sobre as aplicações da cartografia para a Ecologia Espacial.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/talk-espacial-uff/index.html" class="no-external">
+<div class="listing-date">
+2 de abr. de 2021
+</div>
+<div class="metadata-value listing-event">
+Ciclo de Palestras de Cartografia Básica (UFF)
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-categories="ViVDMyVBRGRlbw==" data-listing-date-sort="1601348400000" data-listing-file-modified-sort="1746925256930" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
+<div class="thumbnail">
+<p><a href="../talk/video-werlive-16/index.html" class="no-external"></a></p><a href="../talk/video-werlive-16/index.html" class="no-external">
+<p><img loading="lazy" data-src="../talk/video-werlive-16/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../talk/video-werlive-16/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/video-werlive-16/index.html" class="no-external">We R Live 16: R Markdown: usando o R para comunicar seus resultados</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/video-werlive-16/index.html" class="no-external">Nessa live tivemos a imensa honra de receber a Beatriz Milz. Ela é atualmente doutoranda em Ciência Ambiental (PROCAM/IEE/USP) na Universidade de São Paulo. A Bea também é co-organizadora de vários grupos envolvidos com a comunidade R RLadiesSaoPaulo, satRdaySP e LatinR_Conf. A Bea vai falar mais sobre R Markdown, dos principais pacotes e várias possibilidades de uso.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/video-werlive-16/index.html" class="no-external">
+<div class="listing-date">
+29 de set. de 2020
+</div>
+<div class="metadata-value listing-event">
+We R Live
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="11" data-categories="UGFsZXN0cmE=" data-listing-date-sort="1594868400000" data-listing-file-modified-sort="1746923644583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
+<div class="thumbnail">
+<p><a href="../talk/talk-enm-gggc/index.html" class="no-external"></a></p><a href="../talk/talk-enm-gggc/index.html" class="no-external">
+<p><img loading="lazy" data-src="../talk/talk-enm-gggc/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../talk/talk-enm-gggc/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/talk-enm-gggc/index.html" class="no-external">Introdução à Modelagem de Nicho Ecológico</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/talk-enm-gggc/index.html" class="no-external">Palestra sobre uma visão geral e aplicações de Modelagem de Nicho Ecológico (ENMs).</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/talk-enm-gggc/index.html" class="no-external">
+<div class="listing-date">
+16 de jul. de 2020
+</div>
+<div class="metadata-value listing-event">
+Webnário Next Generation Sequencing no Grupo de Genética e Genômica da Conservação (USP/ESALQ)
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-categories="ViVDMyVBRGRlbw==" data-listing-date-sort="1569553200000" data-listing-file-modified-sort="1746926055081" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
+<div class="thumbnail">
+<p><a href="../talk/video-geocast-metricas-paisagem/index.html" class="no-external"></a></p><a href="../talk/video-geocast-metricas-paisagem/index.html" class="no-external">
+<p><img loading="lazy" data-src="../talk/video-geocast-metricas-paisagem/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../talk/video-geocast-metricas-paisagem/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/video-geocast-metricas-paisagem/index.html" class="no-external">Métricas de paisagem no R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/video-geocast-metricas-paisagem/index.html" class="no-external">Live sobre métricas de paisagem no R.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/video-geocast-metricas-paisagem/index.html" class="no-external">
+<div class="listing-date">
+27 de set. de 2019
+</div>
+<div class="metadata-value listing-event">
+GeoCast Brasil
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-categories="UGFsZXN0cmE=" data-listing-date-sort="1533351600000" data-listing-file-modified-sort="1746923659529" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
+<div class="thumbnail">
+<p><a href="../talk/talk-data-paper-amphibians-anfoco/index.html" class="no-external"></a></p><a href="../talk/talk-data-paper-amphibians-anfoco/index.html" class="no-external">
+<p><img loading="lazy" data-src="../talk/talk-data-paper-amphibians-anfoco/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../talk/talk-data-paper-amphibians-anfoco/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../talk/talk-data-paper-amphibians-anfoco/index.html" class="no-external">ATLANTIC AMPHIBIANS: Conjunto de Dados de Comunidades de Anfíbios da Mata Atlântica</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../talk/talk-data-paper-amphibians-anfoco/index.html" class="no-external">Banco de dados de comunidades de anfíbios para a Mata Atlântica.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../talk/talk-data-paper-amphibians-anfoco/index.html" class="no-external">
+<div class="listing-date">
+4 de ago. de 2018
+</div>
+<div class="metadata-value listing-event">
+I Anfíbios em Foco (ANFoCO) - Simpósio Brasileiro de Conservação de Anfíbios
+</div>
 </a>
 </div>
 </div>
@@ -268,7 +600,48 @@ window.Quarto = {
 <div class="listing-no-matching d-none">
 Sem itens correspondentes
 </div>
+<nav id="talk-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
+<style>
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 105px; /* um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(0, 123, 255, 0.7); /* azul com transparência */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#topBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+↑ Topo
+</button>
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>
 
 
 
@@ -695,7 +1068,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org">Quarto</a></p>
+<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
