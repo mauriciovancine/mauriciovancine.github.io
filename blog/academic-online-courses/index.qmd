@@ -3,7 +3,7 @@ title: Disciplinas de graduação e pós-graduação on-line
 subtitle: "Lista de disciplinas de graduação e pós-graduação oferecidas on-line"
 author: Maurício Vancine
 date: "2021-03-07"
-categories: ["R", "Aulas", "Tutoriais"]
+categories: ["Disciplinas", "Cursos"]
 image: "featured.jpg"
 toc: true
 draft: false

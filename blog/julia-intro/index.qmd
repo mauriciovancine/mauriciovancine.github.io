@@ -3,7 +3,7 @@ title: Introdução à linguagem Julia
 subtitle: "Uma breve introdução à linguagem Julia"
 author: Maurício Vancine com edições de textos do ChatGPT
 date: "2024-12-21"
-categories: ["Julia", "Linguagem de programação"]
+categories: ["Julia", "Programação"]
 image: "featured.png"
 toc: true
 draft: false

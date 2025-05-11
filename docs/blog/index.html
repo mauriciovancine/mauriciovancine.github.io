@@ -197,7 +197,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="QXVsYXM="><span class="quarto-category-count category-cloud-5">Aulas</span></div><div class="category" data-category="SnVsaWE="><span class="quarto-category-count category-cloud-5">Julia</span></div><div class="category" data-category="TGluZ3VhZ2VtJTIwZGUlMjBwcm9ncmFtYSVDMyVBNyVDMyVBM28="><span class="quarto-category-count category-cloud-5">Linguagem de programação</span></div><div class="category" data-category="Ug=="><span class="quarto-category-count category-cloud-5">R</span></div><div class="category" data-category="VHV0b3JpYWlz"><span class="quarto-category-count category-cloud-5">Tutoriais</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Q3Vyc29z"><span class="quarto-category-count category-cloud-4">Cursos</span></div><div class="category" data-category="RGlzY2lwbGluYXM="><span class="quarto-category-count category-cloud-4">Disciplinas</span></div><div class="category" data-category="SnVsaWE="><span class="quarto-category-count category-cloud-4">Julia</span></div><div class="category" data-category="UHJvZ3JhbWElQzMlQTclQzMlQTNv"><span class="quarto-category-count category-cloud-4">Programação</span></div><div class="category" data-category="VmVyc2lvbmFtZW50bw=="><span class="quarto-category-count category-cloud-4">Versionamento</span></div><div class="category" data-category="Z2l0"><span class="quarto-category-count category-cloud-4">git</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -224,6 +224,44 @@ window.Quarto = {
 <div id="post">
 
 </div>
+<style>
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 105px; /* um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(0, 123, 255, 0.7); /* azul com transparência */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#topBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+↑ Topo
+</button>
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>
 
 
 
@@ -252,7 +290,29 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="SnVsaWElMkNMaW5ndWFnZW0lMjBkZSUyMHByb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-date-sort="1734750000000" data-listing-file-modified-sort="1746759146484" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4510">
+<div class="quarto-post image-right" data-index="0" data-categories="Z2l0JTJDVmVyc2lvbmFtZW50bw==" data-listing-date-sort="1734750000000" data-listing-file-modified-sort="1746974710141" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1265">
+<div class="thumbnail">
+<p><a href="../blog/git-intro/index.html" class="no-external"></a></p><a href="../blog/git-intro/index.html" class="no-external">
+<p><img loading="lazy" src="../blog/git-intro/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../blog/git-intro/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/git-intro/index.html" class="no-external">Controle de versão com git</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../blog/git-intro/index.html" class="no-external">Principais conceitos de controle de versão usando git</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../blog/git-intro/index.html" class="no-external">
+<div class="listing-date">
+21 de dez. de 2024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="SnVsaWElMkNQcm9ncmFtYSVDMyVBNyVDMyVBM28=" data-listing-date-sort="1734750000000" data-listing-file-modified-sort="1746974634508" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4510">
 <div class="thumbnail">
 <p><a href="../blog/julia-intro/index.html" class="no-external"></a></p><a href="../blog/julia-intro/index.html" class="no-external">
 <p><img loading="lazy" src="../blog/julia-intro/featured.png" class="thumbnail-image"></p>
@@ -274,7 +334,7 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="UiUyQ0F1bGFzJTJDVHV0b3JpYWlz" data-listing-date-sort="1615086000000" data-listing-file-modified-sort="1746758097277" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="625">
+<div class="quarto-post image-right" data-index="2" data-categories="RGlzY2lwbGluYXMlMkNDdXJzb3M=" data-listing-date-sort="1615086000000" data-listing-file-modified-sort="1746974740995" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="625">
 <div class="thumbnail">
 <p><a href="../blog/academic-online-courses/index.html" class="no-external"></a></p><a href="../blog/academic-online-courses/index.html" class="no-external">
 <p><img loading="lazy" src="../blog/academic-online-courses/featured.jpg" class="thumbnail-image"></p>
