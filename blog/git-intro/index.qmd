@@ -1,25 +1,27 @@
 ---
-title: Controle de versão com git 
+title: Introdução ao controle de versão com git, GitHub e RStudio
 subtitle: "Principais conceitos de controle de versão usando git"
 author: Maurício Vancine com edições de textos do ChatGPT
 date: "2024-12-21"
 categories: ["git", "Versionamento"]
 image: "featured.jpg"
-toc: true
 code-link: true
 execute:
   eval: false
+toc: true
 editor: source
 ---
 
 ## Contextualização
 
 Nas [disciplinas](/teaching) que ofereço, geralmente eu começo com uma parte de controle de versão usando [git](https://git-scm.com/). 
-Em 2021 ofereci um [minicurso](http://localhost:4321/teaching/workshop-git/) para o pessoal da UFRPE. 
+Em 2021 ofereci um [minicurso](http://localhost:4321/teaching/workshop-git/) para o pessoal da [Universidade Federal Rural de Pernambuco (UFRPE)](https://www.ufrpe.br/). 
 
 Falando com o [Prof. Diogo Provete](http://diogoprovete.weebly.com/) sobre disciplinas e como ensinar git, chegamos à conclusão que é fundamental ter um material didático sobre esse assunto.
 
-Este tutorial aborda os conceitos gerais de controle de versão usando o [git](https://git-scm.com/) e sua integração com o [RStudio](https://posit.co/download/rstudio-desktop/) e [GitHub](https://github.com/).
+Este tutorial aborda os conceitos gerais de controle de versão usando o [git](https://git-scm.com/) e sua integração com o [GitHub](https://github.com/) e o [RStudio](https://posit.co/download/rstudio-desktop/).
+
+Recomendo também olhar o minicurso [gitR: controle de versão com git, GitHub e RStudio](/teaching/workshop-git/). Este post é a transcrição do mesmo.
 
 ## Controle de versão
 
@@ -42,6 +44,119 @@ Este tutorial aborda os conceitos gerais de controle de versão usando o [git](h
 ## git push: guardando
 
 ## Para se aprofundar
+
+* Curso gratuito (português): [https://rogerdudler.github.io/git-guide/index.pt\_BR.html](https://rogerdudler.github.io/git-guide/index.pt_BR.html)
+* Documentação oficial Git: [https://git-scm.com/doc](https://git-scm.com/doc)
+* GUI recomendada: [GitHub Desktop](https://desktop.github.com)
+
+
+## O que são Git e GitHub?
+
+* **Git**: sistema de controle de versão distribuído. Ele permite que você acompanhe alterações no seu código/projeto, volte a versões anteriores e trabalhe com ramificações (branches).
+* **GitHub**: plataforma online baseada em Git, usada para hospedar repositórios, colaborar com outras pessoas e compartilhar código.
+
+## Instalação do Git
+
+### Windows / Linux / macOS:
+
+1. Acesse: [https://git-scm.com](https://git-scm.com)
+2. Baixe e instale o Git.
+3. Após a instalação, abra o terminal (ou Git Bash no Windows) e configure seu nome e e-mail:
+
+```bash
+git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"
+```
+
+## Conceitos Básicos
+
+* **Repositório (repo)**: Pasta que Git está monitorando.
+* **Commit**: Um "instantâneo" do seu projeto em determinado momento.
+* **Branch**: Linha paralela de desenvolvimento.
+* **Merge**: Juntar mudanças de uma branch com outra.
+* **Clone**: Copiar um repositório existente.
+* **Push / Pull**: Enviar/receber atualizações do GitHub.
+
+## Criando um Repositório Local
+
+```bash
+mkdir meu-projeto
+cd meu-projeto
+git init  # inicia o repositório Git
+touch README.md  # cria um arquivo (Linux/mac) ou use 'echo > README.md' no Windows
+git add README.md
+git commit -m "primeiro commit"
+```
+
+## Conectando com o GitHub
+
+1. Crie uma conta no [GitHub](https://github.com)
+2. Clique em "New Repository" e dê um nome ao projeto (ex: `meu-projeto`)
+3. Copie a URL do repositório (HTTPS ou SSH)
+4. No terminal:
+
+```bash
+git remote add origin https://github.com/seu-usuario/meu-projeto.git
+git branch -M main  # garante que a branch principal se chama 'main'
+git push -u origin main  # envia os arquivos para o GitHub
+```
+
+## Ciclo de Trabalho no Git
+
+```bash
+# Modificou algum arquivo?
+
+git status           # verifica o que foi alterado
+git add arquivo.txt  # adiciona ao "estágio"
+git commit -m "descrição das mudanças"  # salva as alterações localmente
+git push             # envia as mudanças para o GitHub
+```
+
+## Clonar Repositórios e Colaborar
+
+### Clonar:
+
+```bash
+git clone https://github.com/usuario/repositorio.git
+```
+
+### Criar nova branch:
+
+```bash
+git checkout -b nova-feature
+```
+
+### Voltar à branch principal e unir mudanças:
+
+```bash
+git checkout main
+git merge nova-feature
+git push
+```
+
+## Sincronizar com o Repositório Remoto
+
+Se outra pessoa fez alterações:
+
+```bash
+git pull  # baixa e integra as alterações remotas
+```
+
+## .gitignore
+
+Crie um arquivo chamado `.gitignore` e liste os arquivos/pastas que você **não quer** versionar, como:
+
+```
+*.log
+__pycache__/
+dados_sensiveis.csv
+```
+
+## Dicas Úteis
+
+* Use `git log` para ver o histórico de commits.
+* Use `git diff` para ver mudanças não commitadas.
+* Use `git stash` para guardar mudanças temporariamente sem fazer commit.
 
 ```{r}
 # script commit gitlab
@@ -431,3 +546,41 @@ git push origin :1.0.0
 #    push       Update remote refs along with associated objects
 ```
 
+<style>
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 105px; /* um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(28, 108, 190, 0.7); /* azul com transparência */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#topBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Topo</button>
+
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>
