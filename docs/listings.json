@@ -8,7 +8,8 @@
     "items": [
       "/blog/git-intro/index.html",
       "/blog/julia-intro/index.html",
-      "/blog/academic-online-courses/index.html"
+      "/blog/academic-online-courses/index.html",
+      "/blog/r-error/index.html"
     ]
   },
   {
@@ -38,6 +39,7 @@
       "/talk/talk-r-bioforum-unicamp/index.html",
       "/talk/talk-spatiotemporal-af-red/index.html",
       "/talk/video-r-geospatial/index.html",
+      "/talk/talk-spatiotemporal-af-unesp/index.html",
       "/talk/talk-sdm-ufpe/index.html",
       "/talk/talk-ecologo-unesp/index.html",
       "/talk/podcast-desabracando-arvores-r/index.html",
@@ -52,16 +54,17 @@
   {
     "listing": "/teaching/index.html",
     "items": [
-      "/teaching/workshop-landscapemetrics/index.html",
-      "/teaching/course-spatial-ecology-r/index.html",
-      "/teaching/course-geor/index.html",
-      "/teaching/workshop-intro-r/index.html",
-      "/teaching/workshop-prog-r/index.html",
       "/teaching/workshop-qgis/index.html",
-      "/teaching/workshop-spatial-patterns-biodiversity-data/index.html",
+      "/teaching/course-geor/index.html",
       "/teaching/workshop-git/index.html",
+      "/teaching/course-intro-r/index.html",
+      "/teaching/workshop-intro-r/index.html",
+      "/teaching/workshop-land-r/index.html",
+      "/teaching/workshop-prog-r/index.html",
+      "/teaching/workshop-sdm/index.html",
       "/teaching/course-sdmr/index.html",
-      "/teaching/workshop-sdm/index.html"
+      "/teaching/course-spa-r/index.html",
+      "/teaching/workshop-spadiv-r/index.html"
     ]
   },
   {

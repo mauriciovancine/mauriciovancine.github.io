@@ -1,8 +1,9 @@
 ---
 title: "sdmR: Modelagem de distribuição de espécies"
-subtitle: "Minicurso: Introdução à modelagem de distribuição de espécies"
+subtitle: "Curso: Introdução à modelagem de distribuição de espécies"
 author: Maurício Vancine
 image: featured-hex.png
+categories: ["Curso"]
 editor: source
 ---
 

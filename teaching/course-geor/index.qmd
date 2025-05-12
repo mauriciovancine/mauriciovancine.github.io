@@ -1,34 +1,35 @@
 ---
-title: "GeoR: Dados Geoespaciais com o R"
-subtitle: "Disciplina de pós-graduação de manipulação e visualização de dados geoespaciais"
+title: "geoR: dados geoespaciais no R"
+subtitle: "Disciplina de pós-graduação para manipulação e visualização de dados geoespaciais utilizando a linguagem R"
 author: Maurício Vancine
 image: featured-hex.png
+categories: ["Disciplina"]
 editor: source
 ---
 
-# **GeoR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
-
-- icon: link
-  icon_pack: fas
-  name: website
-  url: https://geor-course.netlify.app/
-- icon: github
-  icon_pack: fab
-  name: code
-  url: https://github.com/geor-course
-  
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  
-  <a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i> DOI
- </a>
-
-<a href="2017-beca-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</a>
-  
+  <a href="https://geor-course.netlify.app" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-link me-1"></i>website</a>
+  <a href="https://github.com/geor-course" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
 </div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+# **geoR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
 
 ## Descrição
 
-Na GeoR, os alunes serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como controle de versão, git e GitHub; estrutura e fonte de dados geoespaciais; e visualização de dados geoespaciais.
+Na geoR, os alunos serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como estrutura e fonte, e visualização de dados geoespaciais.
 
 ## Oferecimento
 

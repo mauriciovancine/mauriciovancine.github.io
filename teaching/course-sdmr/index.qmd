@@ -1,29 +1,34 @@
 ---
-title: "sdmR: Modelagem de Distribuição de Espécies com o R"
-subtitle: "Disciplina de pós-graduação de modelagem de distribuição de espécies"
+title: "sdmR: modelagem de distribuição de espécies no R"
+subtitle: "Disciplina de pós-graduação de modelagem de distribuição de espécies através da linaguagem R."
 author: Maurício Vancine
 image: featured-hex.png
+categories: ["Disciplina"]
 editor: source
 ---
 
-# **sdmR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
-
-- icon: link
-  icon_pack: fas
-  name: website
-  url: https://geor-course.netlify.app/
-- icon: github
-  icon_pack: fab
-  name: code
-  url: https://github.com/geor-course
-  
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn btn-custom text-capitalize" target="_blank">
-  <i class="ai ai-doi me-1"></i> DOI
- </a>
-  <a href="2017-beca-etal.pdf" class="btn btn-custom text-capitalize"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</a>
+  <a href="https://geor-course.netlify.app" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-link me-1"></i>website</a>
+  <a href="https://github.com/geor-course" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
 </div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+# **sdmR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
 
 ## Descrição
 
-Na sdmR, os alunes serão apresentados aos principais conceitos teóricos e práticos sobre modelagem de distribuição de espécies utilizando a linguagem R. Serão abordados os temas: (1) controle de versão, git e GitHub, (2) introdução à linguagem R, (3) obtenção e seleção de dados de ocorrências e variáveis ambientais, (4) ajuste e predição dos modelos e métricas de avaliação dos mesmos, (5) automatização da construção dos SDMs, (6) consenso (ensemble) dos modelos e (7) composição dos mapas.
+Na sdmR, os alunos serão apresentados aos principais conceitos teóricos e práticos sobre modelagem de distribuição de espécies utilizando a linguagem R. Serão abordados os temas: (1) conceituação teórica, (2) dados de ocorrências e variáveis ambientais, (3) ajustes dos modelos, (4) avaliação dos modelos, (5) predição dos modelos e (6) aplicações.
+
+## Oferecimento

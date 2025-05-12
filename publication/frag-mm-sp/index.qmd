@@ -1,6 +1,11 @@
 ---
 title: "High mammal species turnover in forest patches immersed in biofuel plantations"
 subtitle: "Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de São Paulo"
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 editor: source
 ---
 

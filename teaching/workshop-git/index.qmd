@@ -1,13 +1,9 @@
 ---
 title: "gitR: controle de versão com git, GitHub e RStudio"
-subtitle: "O minicurso oferece alguns dos principais conceitos práticos o controle de versão usando git, GitHub e RStudio."
+subtitle: "Curso: principais conceitos sobre versionamento usando git, GitHub e RStudio."
 author: Maurício Vancine
 image: featured-hex.png
-format:
-  html:
-    include-in-header: 
-      text: |
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+categories: ["Curso"]
 editor: source
 ---
 

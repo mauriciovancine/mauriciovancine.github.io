@@ -82,7 +82,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-image','listing-author','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 10,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
@@ -197,7 +198,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Q3Vyc28="><span class="quarto-category-count category-cloud-7">Curso</span></div><div class="category" data-category="RGlzY2lwbGluYQ=="><span class="quarto-category-count category-cloud-4">Disciplina</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -242,117 +243,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1746915492972" data-listing-reading-time-sort="1" data-listing-word-count-sort="108">
-<a href="../teaching/workshop-landscapemetrics/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-landscapemetrics/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-EcoPaiR: métricas de paisagem no R
-</h5>
-<div class="card-subtitle listing-subtitle">
-Métricas de paisagem no R usando o pacote landscapemetrics
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1746915480709" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
-<a href="../teaching/course-spatial-ecology-r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/course-spatial-ecology-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-EspacialR
-</h5>
-<div class="card-subtitle listing-subtitle">
-Disciplina de pós-graduação de Ecologia Espacial
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1746915182635" data-listing-reading-time-sort="1" data-listing-word-count-sort="164">
-<a href="../teaching/course-geor/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/course-geor/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-GeoR: Dados Geoespaciais com o R
-</h5>
-<div class="card-subtitle listing-subtitle">
-Disciplina de pós-graduação de manipulação e visualização de dados geoespaciais
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1746915489600" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
-<a href="../teaching/workshop-intro-r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-intro-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-IntroR:
-</h5>
-<div class="card-subtitle listing-subtitle">
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1746915496563" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
-<a href="../teaching/workshop-prog-r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-prog-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-ProgR: programação em linguagem R
-</h5>
-<div class="card-subtitle listing-subtitle">
-Programação em linguagem R para controle de fluxo, repetições e funções
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1746915597345" data-listing-reading-time-sort="1" data-listing-word-count-sort="131">
+<div class="g-col-1" data-index="0" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1747048845737" data-listing-reading-time-sort="1" data-listing-word-count-sort="131">
 <a href="../teaching/workshop-qgis/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -374,18 +265,18 @@ Maurício Vancine
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1746915923806" data-listing-reading-time-sort="1" data-listing-word-count-sort="122">
-<a href="../teaching/workshop-spatial-patterns-biodiversity-data/index.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="1" data-categories="RGlzY2lwbGluYQ==" data-listing-file-modified-sort="1747047774292" data-listing-reading-time-sort="1" data-listing-word-count-sort="193">
+<a href="../teaching/course-geor/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-spatial-patterns-biodiversity-data/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="../teaching/course-geor/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-SpatBioR: analisando padrões espaciais em dados de biodiversidade
+geoR: dados geoespaciais no R
 </h5>
 <div class="card-subtitle listing-subtitle">
-Workshop: Analisando padrões espaciais em dados de biodiversidade
+Disciplina de pós-graduação para manipulação e visualização de dados geoespaciais utilizando a linguagem R
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
@@ -396,7 +287,7 @@ Maurício Vancine
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1746974053065" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
+<div class="g-col-1" data-index="2" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1747049439371" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
 <a href="../teaching/workshop-git/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -407,7 +298,7 @@ Maurício Vancine
 gitR: controle de versão com git, GitHub e RStudio
 </h5>
 <div class="card-subtitle listing-subtitle">
-O minicurso oferece alguns dos principais conceitos práticos o controle de versão usando git, GitHub e RStudio.
+Curso: principais conceitos sobre versionamento usando git, GitHub e RStudio.
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
@@ -418,18 +309,18 @@ Maurício Vancine
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1746914990862" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
-<a href="../teaching/course-sdmr/index.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="3" data-categories="RGlzY2lwbGluYQ==" data-listing-file-modified-sort="1747047726452" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<a href="../teaching/course-intro-r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="../teaching/course-sdmr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="../teaching/course-intro-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-sdmR: Modelagem de Distribuição de Espécies com o R
+introR: introdução à linguagem R
 </h5>
 <div class="card-subtitle listing-subtitle">
-Disciplina de pós-graduação de modelagem de distribuição de espécies
+Disciplina de pós-graduação de introdução à linguagem R.
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
@@ -440,7 +331,73 @@ Maurício Vancine
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1746915789370" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
+<div class="g-col-1" data-index="4" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1747049813239" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<a href="../teaching/workshop-intro-r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/workshop-intro-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+introR: introdução à linguagem R
+</h5>
+<div class="card-subtitle listing-subtitle">
+Curso: introdução à linguagem R.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1747048783968" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
+<a href="../teaching/workshop-land-r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/workshop-land-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+landR: métricas de paisagem no R
+</h5>
+<div class="card-subtitle listing-subtitle">
+Métricas de paisagem no R utilizando o pacote landscapemetrics
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1747049760540" data-listing-reading-time-sort="1" data-listing-word-count-sort="173">
+<a href="../teaching/workshop-prog-r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/workshop-prog-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+progR: programação em linguagem R
+</h5>
+<div class="card-subtitle listing-subtitle">
+Curso: programação em linguagem R para controle de fluxo, repetições e funções.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1747049835309" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
 <a href="../teaching/workshop-sdm/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -451,7 +408,73 @@ Maurício Vancine
 sdmR: Modelagem de distribuição de espécies
 </h5>
 <div class="card-subtitle listing-subtitle">
-Minicurso: Introdução à modelagem de distribuição de espécies
+Curso: Introdução à modelagem de distribuição de espécies
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="8" data-categories="RGlzY2lwbGluYQ==" data-listing-file-modified-sort="1747048079758" data-listing-reading-time-sort="1" data-listing-word-count-sort="149">
+<a href="../teaching/course-sdmr/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/course-sdmr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+sdmR: modelagem de distribuição de espécies no R
+</h5>
+<div class="card-subtitle listing-subtitle">
+Disciplina de pós-graduação de modelagem de distribuição de espécies através da linaguagem R.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="9" data-categories="RGlzY2lwbGluYQ==" data-listing-file-modified-sort="1747049457755" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<a href="../teaching/course-spa-r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/course-spa-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+spaR: ecologia espacial no R
+</h5>
+<div class="card-subtitle listing-subtitle">
+Disciplina: Ecologia Espacial utilizando a linguagemR
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Maurício Vancine
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="10" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1747049417983" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
+<a href="../teaching/workshop-spadiv-r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="../teaching/workshop-spadiv-r/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+spadivR: análises espaciais de dados de biodiversidade
+</h5>
+<div class="card-subtitle listing-subtitle">
+Curso: análises espaciais de dados de biodiversidade
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
@@ -466,6 +489,9 @@ Maurício Vancine
 <div class="listing-no-matching d-none">
 Sem itens correspondentes
 </div>
+<nav id="teaching-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 <style>
 #topBtn {
