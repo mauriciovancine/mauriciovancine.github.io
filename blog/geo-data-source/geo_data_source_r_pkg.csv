@@ -1,0 +1,24 @@
+Pacotes,Descrição
+[geobr](https://ipeagit.github.io/geobr/),Carrega Shapefiles de Conjuntos de Dados Espaciais Oficiais do Brasil
+[sidrar](https://cran.r-project.org/web/packages/sidrar/index.html),Accessa os dados do SIDRA - Sistema IBGE de Recuperação Automática
+[rnaturalearth](https://cran.r-project.org/web/packages/rnaturalearth/index.html),Dados do mapa mundial da Natural Earth
+[rworldmap](https://cran.r-project.org/web/packages/rworldmap/index.html),Mapeando Dados Globais
+[geodata](https://cran.r-project.org/web/packages/geodata/index.html),Conjuntos de dados para análise espacial
+[spData](https://cran.r-project.org/web/packages/spData/index.html),Conjuntos de dados para análise espacial
+[OpenStreetMap](https://cran.r-project.org/web/packages/OpenStreetMap/index.html),Acesso para abrir imagens raster de mapas de ruas
+[osmdata](https://cran.r-project.org/web/packages/osmdata/index.html),Baixe e importe dados do OpenStreetMap
+[geonames](https://cran.r-project.org/web/packages/geonames/index.html),Interface para o serviço da Web de consulta espacial 'Geonames'
+[rgbif](https://cran.r-project.org/web/packages/rgbif/index.html),Interface para o Global 'Biodiversity' Information Facility API
+[maptools](https://cran.r-project.org/web/packages/maptools/index.html),Ferramentas para lidar com objetos espaciais
+[marmap](https://cran.r-project.org/web/packages/marmap/index.html),Importar traçar e analisar dados batimétricos e topográficos
+[oce](https://cran.r-project.org/web/packages/oce/index.html),Fonte e processamento de dados oceanográficos
+[envirem](https://cran.r-project.org/web/packages/envirem/index.html),Geração de Variáveis ENVIREM
+[sdmpredictors](https://cran.r-project.org/web/packages/sdmpredictors/index.html),Conjuntos de dados preditor de modelagem de distribuição de espécies
+[metScanR](https://cran.r-project.org/web/packages/metScanR/index.html),Encontre Mapeie e Colete Dados e Metadados Ambientais
+[ClimDown](https://cran.r-project.org/web/packages/ClimDown/index.html),Biblioteca de redução de escala do clima para a produção diária do modelo climático
+[rWBclimate](https://cran.r-project.org/web/packages/rWBclimate/index.html),Acessa dados climáticos do Banco Mundial
+[rnoaa](https://cran.r-project.org/web/packages/rnoaa/index.html),Dados meteorológicos 'NOAA' de R
+[RNCEP](https://cran.r-project.org/web/packages/RNCEP/index.html),Obtenha organize e visualize dados meteorológicos NCEP
+[smapr](https://cran.r-project.org/web/packages/smapr/index.html),Aquisição e processamento de dados ativos-passivos (SMAP) de umidade do solo da NASA
+[worldpa](https://frbcesab.github.io/worldpa/index.html),Interface para o Banco de Dados Mundial sobre Áreas Protegidas (WDPA) hospedado no site Protected Planet
+[climate](https://bczernecki.github.io/climate/index.html),Automatizar o download de dados meteorológicos e hidrológicos in situ de repositórios disponíveis publicamente

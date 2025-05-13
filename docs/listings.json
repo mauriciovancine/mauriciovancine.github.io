@@ -8,6 +8,7 @@
     "items": [
       "/blog/git-intro/index.html",
       "/blog/julia-intro/index.html",
+      "/blog/geo-data-source/index.html",
       "/blog/academic-online-courses/index.html",
       "/blog/r-error/index.html"
     ]
@@ -35,6 +36,7 @@
     "listing": "/talk/index.html",
     "items": [
       "/talk/talk-r-book/index.html",
+      "/talk/talk-sdm-gggc/index.html",
       "/talk/talk-landscape-syneco/index.html",
       "/talk/talk-r-bioforum-unicamp/index.html",
       "/talk/talk-spatiotemporal-af-red/index.html",

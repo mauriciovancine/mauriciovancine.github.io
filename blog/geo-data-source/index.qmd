@@ -1,0 +1,91 @@
+---
+title: "Fonte de dados geoespaciais"
+subtitle: "Lista das principais fontes de dados e pacotes do R de dados geoespaciais"
+author: Maurício Vancine
+date: 2022-01-18
+categories: ["Geoprocessamento", "Dados"]
+image: "featured.jpg"
+code-link: true
+execute:
+  echo: false
+  message: false
+toc: true
+editor: source
+---
+
+## Contextualização
+
+Existe diversas fontes de dados geográficos em diferentes bases de dados disponíveis gratuitamente. Geralmente essas bases de dados são disponibilizadas separadamente em apenas dados vetoriais e dados raster. Para **dados vetoriais**, grande parte dos dados disponibilizados são utilizados em mapas como limites políticos, limites de biomas ou distribuição de espécies para **polígonos**; estradas e rios para **dados lineares**, ou ainda pontos de ocorrência de espécies ou comunidades, ou medidas tomadas em campo sobre condições naturais como clima ou relevo, como **pontos**.
+
+Entretanto, é sempre recomendado o uso de **bases oficiais**, principalmente em relação a dados vetoriais de **limites políticos**. Para tanto, é fundamental buscar as **bases oficiais de cada país**, entrentanto, há bases que podem ser utilizadas globalmente. Sobre as **bases de dados raster**, há uma infinidade de dados para diferentes objetivos, mas grande parte deles são relativos a condições ambientais, representando uma variável de interesse de forma contínua no espaço, como temperatura, precipitação, elevação, etc.
+
+Há uma compilação de dados geográficos vetoriais e raster feita por Marcus Vinícius Alves de Carvalho e Angelica Carvalho Di Maio, chamada [GeoLISTA](http://www.clickgeo.com.br/wp-content/uploads/2018/05/GeoLISTA.pdf). Entretanto, como as bases de dados tendem a ser muito dinâmicas, é possível que muitas bases tenham surgido e desaparecido desde a listagem realizada. Recente uma publicação de [Lindersson et al. (2020)](https://wires.onlinelibrary.wiley.com/doi/full/10.1002/wat2.1424) reuniu informações de bases de várias bases para sociedades humanas.
+
+Atualmente encontrei outra compilação fantástica: [Free GIS Data](http://freegisdata.rtwilson.com/#home).
+
+Além das bases de dados, há pacotes específicos no R que fazem o download de dados vetoriais e rasters facilitando a aquisição e reprodutibilidade. Para conferir uma listagem completa de pacotes para diversas análises espaciais, veja [CRAN Task View: Analysis of Spatial Data](https://cran.r-project.org/web/views/Spatial.html).
+
+### Vetor
+
+Bases de dados vetoriais.
+
+```{r}
+knitr::kable(readr::read_csv("geo_data_source_vector.csv", show_col_types = FALSE))
+```
+
+### Raster
+
+Bases de dados matriciais.
+
+```{r}
+knitr::kable(readr::read_csv("geo_data_source_raster.csv", show_col_types = FALSE))
+```
+
+### Pacotes do R
+
+pacotes no R para download de dados geográficos.
+
+```{r}
+knitr::kable(readr::read_csv("geo_data_source_r_pkg.csv", show_col_types = FALSE))
+```
+
+Fonte da imagem: [Ruthie/Unsplash](https://unsplash.com/pt-br/fotografias/mapa-globo-rolar-lote-a6mfMjCFkII).
+
+<style>
+#topBtn {
+display: none;
+position: fixed;
+bottom: 105px; /* um pouco acima do fundo */
+left: 50%;
+transform: translateX(-50%);
+padding: 10px 14px;
+font-size: 20px;
+border: none;
+border-radius: 6px;
+background-color: rgba(28, 108, 190, 0.7); /* azul com transparência */
+color: white;
+cursor: pointer;
+box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+transition: background-color 0.3s;
+}
+#topBtn:hover {
+background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Topo</button>
+
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+const scrollBottom = window.innerHeight + window.scrollY;
+const docHeight = document.documentElement.scrollHeight;
+
+if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+btn.style.display = "block";
+} else {
+btn.style.display = "none";
+}
+});
+</script>

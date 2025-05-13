@@ -70,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -155,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Atlantic Spatial</h1>
-<p class="subtitle lead">Compilar métricas de paisagem, topográficas, hidrológicas e antrópicas para a Mata Atlântica</p>
+<p class="subtitle lead">Compilação de métricas de paisagem, topográficas, hidrológicas e antrópicas para a Mata Atlântica.</p>
 </div>
 
 
@@ -178,8 +179,36 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<p><a href="https://github.com/mauriciovancine/ATLANTIC-SPATIAL" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a></p>
+</div>
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
 <section id="atlantic-spatial" class="level1">
 <h1><strong>Atlantic Spatial</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></h1>
+<p>Em Ecologia, o espaço importa — e muito. A configuração espacial da paisagem influencia diretamente os principais fatores que moldam a biodiversidade, pois regula os processos ecológicos que determinam a distribuição e a dinâmica das espécies. Esses processos incluem o filtro ambiental, as interações bióticas, a dispersão e a deriva ecológica, que, por sua vez, modulam como os organismos respondem a fatores como clima, topografia, tipo de solo, uso e cobertura da terra (LULC), conectividade e heterogeneidade do habitat.</p>
+<p>Diante das mudanças rápidas no clima e no uso da terra, e suas consequências generalizadas para a perda e fragmentação de habitats, o espaço se torna um componente fundamental para entender e conservar a biodiversidade. Neste contexto, disponibilizamos um conjunto de dados espaciais integrados e de alta resolução (30 metros) cobrindo toda a extensão da Mata Atlântica no ano de 2020.</p>
+<p>As métricas incluídas consideram diferentes classes de vegetação (floresta e floresta + vegetação natural), efeitos de estruturas lineares (como rodovias e ferrovias) e múltiplas escalas espaciais (com buffers que variam de 50 m a 2.500 m, e até 10 km para algumas métricas). Ao todo, o conjunto compreende mais de 500 arquivos raster e o vetor com o polígono de delimitação da Mata Atlântica, todos acessíveis por meio do pacote R <a href="../../project/atlanticr/">atlanticr</a>, desenvolvido para facilitar a organização e o uso dos dados.</p>
+<p>As informações disponibilizadas abrangem:</p>
+<ul>
+<li>Cobertura da terra: 31 classes, incluindo floresta, vegetação natural, pastagem, lavouras temporárias e perenes, silvicultura, áreas urbanas, mineração e corpos d’água.</li>
+<li>Distâncias até classes agrupadas de cobertura da terra, como floresta, agricultura ou áreas urbanas.</li>
+<li>Métricas de paisagem: morfologia da paisagem (matriz, núcleo, borda, corredor, trampolim, ramificação e perfuração), área e proporção dos fragmentos, número de manchas, áreas de borda e núcleo, conectividade estrutural e funcional (considerando capacidades de atravessamento de diferentes organismos), distâncias até as bordas dos fragmentos, perímetro e razão perímetro/área, e diversidade da paisagem.</li>
+<li>Métricas topográficas: elevação, declividade, orientação (aspect), curvaturas e formas de relevo (como cumes, encostas, vales, depressões e áreas planas).</li>
+<li>Métricas hidrológicas: nascentes potenciais e sua densidade por núcleo (kernel), corpos d’água potenciais e distâncias até eles.</li>
+<li>Infraestrutura antrópica: mapas de estradas, ferrovias, unidades de conservação, terras indígenas e quilombolas, além das distâncias até essas estruturas.</li>
+</ul>
+<p>Esse conjunto de dados permite integrar de forma eficiente informações ambientais e de biodiversidade para toda a Mata Atlântica, servindo como referência para pesquisas ecológicas e como base para ações de planejamento territorial, conservação da biodiversidade e restauração florestal.</p>
 <section id="publicações" class="level2">
 <h2 class="anchored" data-anchor-id="publicações">Publicações</h2>
 <ol type="1">
@@ -618,7 +647,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org">Quarto</a></p>
+<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">

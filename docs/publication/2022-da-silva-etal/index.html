@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Paulo Barros de Abreu Junior, Diogo Provete, Maurício Vancine, Juliana Zina">
 
-<title>amphiBR – Maurício Vancine</title>
+<title>Análises Ecológicas no R – Maurício Vancine</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -104,6 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Procurar"
   }
 }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -175,11 +141,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#amphibr" id="toc-amphibr" class="nav-link active" data-scroll-target="#amphibr"><strong>amphiBR</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></a>
-  <ul class="collapse">
-  <li><a href="#instalação" id="toc-instalação" class="nav-link" data-scroll-target="#instalação">Instalação</a></li>
-  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
-  </ul></li>
+  <li><a href="#visão-geral" id="toc-visão-geral" class="nav-link active" data-scroll-target="#visão-geral">Visão geral</a></li>
+  <li><a href="#conteúdo" id="toc-conteúdo" class="nav-link" data-scroll-target="#conteúdo">Conteúdo</a></li>
+  <li><a href="#código-e-dados" id="toc-código-e-dados" class="nav-link" data-scroll-target="#código-e-dados">Código e dados</a></li>
+  <li><a href="#citação" id="toc-citação" class="nav-link" data-scroll-target="#citação">Citação</a></li>
   </ul>
 </nav>
     </div>
@@ -188,20 +153,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">amphiBR</h1>
-<p class="subtitle lead">Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia</p>
+<h1 class="title">Análises Ecológicas no R</h1>
+<p class="subtitle lead">O livro Análises Ecológicas no R é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor</div>
-    <div class="quarto-title-meta-contents">
-             <p>Paulo Barros de Abreu Junior, Diogo Provete, Maurício Vancine, Juliana Zina </p>
-          </div>
-  </div>
     
   
     
@@ -212,58 +171,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="amphibr" class="level1">
-<h1><strong>amphiBR</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></h1>
-<!-- badges: start -->
-<p><a href="https://github.com/paulobarros/amphiBR/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" class="img-fluid" alt="License: GPL v3"></a> <a href="https://twitter.com/pbarrosjr"><img src="https://img.shields.io/twitter/follow/pbarrosjr?color=%2315202B&amp;label=Seguir%20%40pbarrosjr&amp;style=social.png" class="img-fluid" alt="Twitter Follow"></a> <a href="https://nubank.com.br/pagar/v67wv/tuh5iRS2YJ"><img src="https://img.shields.io/badge/Apoie%20com-PIX-brightgreen.png" class="img-fluid" alt="pix"></a></p>
-<!-- badges: end -->
-<p>Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.</p>
-<p>O dataset foi extraído da publicação por Segalla et al.&nbsp;(2021) na Revista Brasileira de Herpetologia, e disponível também no link <a href="https://zenodo.org/record/4716176" class="uri">https://zenodo.org/record/4716176</a></p>
-<p>O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.</p>
-<p>Dúvidas, críticas e sugestões são sempre bem-vindas!</p>
-<section id="instalação" class="level2">
-<h2 class="anchored" data-anchor-id="instalação">Instalação</h2>
-<p>O pacote pode ser instalado diretamente do github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("devtools")</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"paulobarros/amphiBR"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(amphiBR)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<p><a href="https://analises-ecologicas.com/" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-link me-1"></i>bookdown</a> <a href="https://canal6.com.br/livreacesso/livro/analises-ecologicas-no-r/" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a> <a href="https://clubedeautores.com.br/livro/analises-ecologicas-no-r-2" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-book me-1"></i>livro</a> <a href="https://www.amazon.com.br/An%C3%A1lises-ecol%C3%B3gicas-Ferdo-Rodrigues-Silva/dp/857917564X/ref=sr_1_1?keywords=9788579175640&amp;qid=1654379366&amp;sr=8-1" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-amazon me-1"></i>Amazon</a> <a href="https://github.com/paternogbc/livro_aer" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a></p>
+</div>
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+<p><br></p>
+<p><img src="featured.jpg" class="img-fluid"></p>
+<section id="visão-geral" class="level2">
+<h2 class="anchored" data-anchor-id="visão-geral">Visão geral</h2>
+<p>O livro é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R. Ele descreve como os códigos devem ser consequências das perguntas que a pesquisa pretende responder. Essa visão tem como consequência um livro que do começo ao fim conecta teoria ecológica, métodos científicos, análises quantitativas e programação.</p>
+<p>Isso é feito de modo explícito através de exemplos claros e didáticos que apresentam contexto e dados reais, um ou mais exemplos de perguntas que poderiam ser feitas, predições relacionadas às perguntas e a teoria em questão, além das variáveis que poderiam ser utilizadas nas análises.</p>
+<p>O texto que descreve essas partes é intercalado com pedaços organizados e claros de código e gráficos, o que torna a leitura dos capítulos bastante fluida e dinâmica, principalmente para quem gosta de executar os códigos no seu computador conforme lê os capítulos. É como uma aula prática guiada.</p>
 </section>
-<section id="dataset" class="level2">
-<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<p>O dataset consiste de <strong>1188</strong> linhas com 49 colunas:</p>
-<p><code>order</code> - Ordem</p>
-<p><code>family</code> - Família</p>
-<p><code>subfamily</code> - Subfamília</p>
-<p><code>sp_num</code> - Número da espécie na lista</p>
-<p><code>genus</code> - Gênero</p>
-<p><code>epithet</code> - Epíteto específico</p>
-<p><code>species</code> - Nome científico</p>
-<p><code>author</code> - Autoria</p>
-<p><code>status</code> - Observações</p>
-<p><code>category</code> - Cateogoria de Ameaça pela Portaria MMA 300/2022</p>
-<p>O dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> segalla2021</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 1,188 × 49</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="sc">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>     <span class="er">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>          <span class="er">&lt;</span>chr<span class="sc">&gt;</span>    <span class="er">&lt;</span>chr<span class="sc">&gt;</span>      <span class="er">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> <span class="dv">1</span>          <span class="dv">1</span> Anura Alloph… <span class="cn">NA</span>        Allo… relicta Alloph… Caram… <span class="cn">NA</span>     <span class="cn">NA</span>             DD       Yes            <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">1</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span>          <span class="dv">2</span> Anura Alloph… <span class="cn">NA</span>        Allo… resple… Alloph… Castr… <span class="cn">NA</span>     Resplendent F… LC       No             <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">1</span>     <span class="dv">0</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> <span class="dv">3</span>          <span class="dv">3</span> Anura Alloph… <span class="cn">NA</span>        Allo… ruthve… Alloph… Gaige… <span class="cn">NA</span>     <span class="cn">NA</span>             LC       No             <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">1</span>     <span class="dv">1</span>     <span class="dv">0</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a> <span class="dv">4</span>          <span class="dv">4</span> Anura Alsodi… <span class="cn">NA</span>        Limn… macrog… Limnom… (Dumé… <span class="cn">NA</span>     Rãzinha<span class="sc">-</span>de<span class="sc">-</span>co… LC       No             <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a> <span class="dv">5</span>          <span class="dv">5</span> Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… <span class="cn">NA</span>     <span class="cn">NA</span>             LC       Yes            <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">1</span>     <span class="dv">0</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> <span class="dv">6</span>          <span class="dv">6</span> Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… <span class="cn">NA</span>     Chapada Rocke… NT       Yes            <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> <span class="dv">7</span>          <span class="dv">7</span> Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… <span class="cn">NA</span>     <span class="cn">NA</span>             LC       Yes            <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">1</span>     <span class="dv">0</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a> <span class="dv">8</span>          <span class="dv">8</span> Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… <span class="cn">NA</span>             <span class="cn">NA</span>       <span class="cn">NA</span>            <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a> <span class="dv">9</span>          <span class="dv">9</span> Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… <span class="cn">NA</span>     <span class="cn">NA</span>             <span class="cn">NA</span>       <span class="cn">NA</span>            <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span>         <span class="dv">10</span> Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… <span class="cn">NA</span>     <span class="cn">NA</span>             LC       No             <span class="dv">1</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ 1,178 more rows</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ Use `print(n = ...)` to see more rows</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="conteúdo" class="level2">
+<h2 class="anchored" data-anchor-id="conteúdo">Conteúdo</h2>
+<p>Capítulo 1: Introdução<br>
+Capítulo 2: Voltando ao básico: como dominar a arte de fazer perguntas cientificamente relevantes</p>
+<p><em>Parte 1: Funcionamento da linguagem R</em></p>
+<p>Capítulo 3: Pré-requisitos<br>
+Capítulo 4: Introdução ao R<br>
+Capítulo 5: Tidyverse<br>
+Capítulo 6: Visualização de dados</p>
+<p><em>Parte 2: Análise de dados ecológicos</em></p>
+<p>Capítulo 7: Modelos lineares<br>
+Capítulo 8: Modelos Lineares Generalizados<br>
+Capítulo 9: Análises Multidimensionais<br>
+Capítulo 10: Rarefação<br>
+Capítulo 11: Estimadores de riqueza<br>
+Capítulo 12: Diversidade Taxonômica<br>
+Capítulo 13: Diversidade Filogenética<br>
+Capítulo 14: Diversidade Funcional<br>
+Capítulo 15: Dados geoespaciais</p>
+</section>
+<section id="código-e-dados" class="level2">
+<h2 class="anchored" data-anchor-id="código-e-dados">Código e dados</h2>
+<p>A maioria dos exemplos do livro utilizam dados reais extraídos de artigos científicos que já foram publicados ou dados que foram coletados por um dos autores deste livro. Todos os dados, publicados ou simulados, estão disponíveis no pacote <a href="https://paternogbc.github.io/ecodados/">ecodados</a>.</p>
+<p>Além disso, em cada capítulo fazemos uma breve descrição dos dados para facilitar a compreensão sobre o que é variável resposta ou preditora, como essas variáveis estão relacionadas com as perguntas e predições do exemplo.</p>
+</section>
+<section id="citação" class="level2">
+<h2 class="anchored" data-anchor-id="citação">Citação</h2>
+<pre><code>@book{da_silva_etal_r_2022,
+    address = {Recife, PE},
+    edition = {Primeira edição},
+    title = {Análises ecológicas no R},
+    isbn = {9788579175640},
+    shorttitle = {Análises ecológicas no R},
+    publisher = {Nupeea},
+    author = {Da Silva FR, Gonçalves-Souza T, Paterno GB, Provete DB, Vancine MH},
+    year = {2022},
+    note = {},
+    keywords = {Análises dados – Ecologia, Linguagem de programação (Computadores), Métodos científicos, Tecnologia – Aspectos ambientais},
+}</code></pre>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

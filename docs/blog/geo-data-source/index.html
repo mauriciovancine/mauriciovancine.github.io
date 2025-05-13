@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Maurício Vancine">
+<title>Fonte de dados geoespaciais – Maurício Vancine</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5a5cfa2c81bf66c99c9eca896a6824fb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script><link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Maurício Vancine</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talk/index.html"> 
+<span class="menu-text">Palestras</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching/index.html"> 
+<span class="menu-text">Ensino</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project/index.html"> 
+<span class="menu-text">Projetos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publication/index.html"> 
+<span class="menu-text">Publicações</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://mauriciovancine.github.io/cv/cv-academic.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://mauriciovancine.github.io/resume/resume.pdf" target="_blank"> 
+<span class="menu-text">Resumé</span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/mauriciovancine/mauriciovancine.github.io" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li>
+<a href="#contextualiza%C3%A7%C3%A3o" id="toc-contextualização" class="nav-link active" data-scroll-target="#contextualiza%C3%A7%C3%A3o">Contextualização</a>
+  <ul class="collapse">
+<li><a href="#vetor" id="toc-vetor" class="nav-link" data-scroll-target="#vetor">Vetor</a></li>
+  <li><a href="#raster" id="toc-raster" class="nav-link" data-scroll-target="#raster">Raster</a></li>
+  <li><a href="#pacotes-do-r" id="toc-pacotes-do-r" class="nav-link" data-scroll-target="#pacotes-do-r">Pacotes do R</a></li>
+  </ul>
+</li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Fonte de dados geoespaciais</h1>
+<p class="subtitle lead">Lista das principais fontes de dados e pacotes do R de dados geoespaciais</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Geoprocessamento</div>
+    <div class="quarto-category">Dados</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Maurício Vancine </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">18 de janeiro de 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header><section id="contextualização" class="level2"><h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
+<p>Existe diversas fontes de dados geográficos em diferentes bases de dados disponíveis gratuitamente. Geralmente essas bases de dados são disponibilizadas separadamente em apenas dados vetoriais e dados raster. Para <strong>dados vetoriais</strong>, grande parte dos dados disponibilizados são utilizados em mapas como limites políticos, limites de biomas ou distribuição de espécies para <strong>polígonos</strong>; estradas e rios para <strong>dados lineares</strong>, ou ainda pontos de ocorrência de espécies ou comunidades, ou medidas tomadas em campo sobre condições naturais como clima ou relevo, como <strong>pontos</strong>.</p>
+<p>Entretanto, é sempre recomendado o uso de <strong>bases oficiais</strong>, principalmente em relação a dados vetoriais de <strong>limites políticos</strong>. Para tanto, é fundamental buscar as <strong>bases oficiais de cada país</strong>, entrentanto, há bases que podem ser utilizadas globalmente. Sobre as <strong>bases de dados raster</strong>, há uma infinidade de dados para diferentes objetivos, mas grande parte deles são relativos a condições ambientais, representando uma variável de interesse de forma contínua no espaço, como temperatura, precipitação, elevação, etc.</p>
+<p>Há uma compilação de dados geográficos vetoriais e raster feita por Marcus Vinícius Alves de Carvalho e Angelica Carvalho Di Maio, chamada <a href="http://www.clickgeo.com.br/wp-content/uploads/2018/05/GeoLISTA.pdf">GeoLISTA</a>. Entretanto, como as bases de dados tendem a ser muito dinâmicas, é possível que muitas bases tenham surgido e desaparecido desde a listagem realizada. Recente uma publicação de <a href="https://wires.onlinelibrary.wiley.com/doi/full/10.1002/wat2.1424">Lindersson et al.&nbsp;(2020)</a> reuniu informações de bases de várias bases para sociedades humanas.</p>
+<p>Atualmente encontrei outra compilação fantástica: <a href="http://freegisdata.rtwilson.com/#home">Free GIS Data</a>.</p>
+<p>Além das bases de dados, há pacotes específicos no R que fazem o download de dados vetoriais e rasters facilitando a aquisição e reprodutibilidade. Para conferir uma listagem completa de pacotes para diversas análises espaciais, veja <a href="https://cran.r-project.org/web/views/Spatial.html">CRAN Task View: Analysis of Spatial Data</a>.</p>
+<section id="vetor" class="level3"><h3 class="anchored" data-anchor-id="vetor">Vetor</h3>
+<p>Bases de dados vetoriais.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.ibge.gov.br/geociencias/downloads-geociencias.html">IBGE</a></td>
+<td style="text-align: left;">Limites territoriais e censitários do Brasil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cidades.ibge.gov.br/">IBGE Cidades</a></td>
+<td style="text-align: left;">Informações do IBGE sobre os municípios e estados do Brasil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.snirh.gov.br/">Sistema Nacional de Informações sobre Recursos Hídricos (SNIRH)</a></td>
+<td style="text-align: left;">Base para disponibilização das informações sobre águas no Brasil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://sidra.ibge.gov.br/">Sistema IBGE de Recuperação Automática (SIDRA)</a></td>
+<td style="text-align: left;">Indicadores econômicos; financeiros; sociais e políticos do Brasil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://geo.fbds.org.br/">FBDS</a></td>
+<td style="text-align: left;">Uso da terra; APP e hidrografia - Mata Atlântica e Cerrado</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://mapas.sosma.org.br/dados/">Atlas da Mata Atlântica</a></td>
+<td style="text-align: left;">Mapeamento de floresta para o Bioma da Mata Atlântica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://atlasagropecuario.imaflora.org/mapa">Atlas da Agropecuária Brasileira</a></td>
+<td style="text-align: left;">Dados dos limites de polígonos do Cadastro Ambiental Rural (CAR)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://geosgb.cprm.gov.br/">GeoBank</a></td>
+<td style="text-align: left;">Dados geológicos do Brasil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://maps.lapig.iesa.ufg.br">Pastagem.org</a></td>
+<td style="text-align: left;">Dados de pastagens e gado para o Brasil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.dsr.inpe.br/laf/canasat/">CanaSat</a></td>
+<td style="text-align: left;">Dados de cana-de-açúcar para o Brasil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://maps.csr.ufmg.br">CSR Maps</a></td>
+<td style="text-align: left;">Diversos dados vetoriais e raster para o Brasil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://dadosabertos.ana.gov.br/">Dados Abertos da Agência Nacional de Águas e Saneamento Básico</a></td>
+<td style="text-align: left;">Dados de águas e saneamento básico para o Brasil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://terrabrasilis.dpi.inpe.br/">TerraBrasilis</a></td>
+<td style="text-align: left;">Dados de estações pluviométricas e fluviométricas para o Brasil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.snirh.gov.br/hidroweb/serieshistoricas">HIDROWEB</a></td>
+<td style="text-align: left;">Dados de infraestrutura de transporte (rodovias; ferrovias e hidrovias) do Brasil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.gov.br/dnit/pt-br/assuntos/atlas-e-mapas">Departamento Nacional de Infraestrutura de Transportes (DNIT)</a></td>
+<td style="text-align: left;">Plataforma web desenvolvida pelo INPE para acesso; consulta; análise e disseminação de dados geográficos</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://intactforests.org/data.ifl.html">Intact Forest Landscapes</a></td>
+<td style="text-align: left;">Dados de floresta de paisagens intactas para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://ecoregions2017.appspot.com/">Ecoregions</a></td>
+<td style="text-align: left;">Dados de biorregiões e biomas do mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.unbiodiversitylab.org/">UN Biodiversity Lab</a></td>
+<td style="text-align: left;">Diversas bases de dados para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://zenodo.org/record/3261807#.YA8lpPv0nOY">Biodiversity Hotspots</a></td>
+<td style="text-align: left;">Dados dos limites dos Hotspots de Biodiversidade</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.iucnredlist.org/resources/spatial-data-download">IUCN Red List of Threatened Species</a></td>
+<td style="text-align: left;">Dados dos limites das distribuições das espécies para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://mol.org/">Map of Life (MOL)</a></td>
+<td style="text-align: left;">Dados da distribuição de espécies e outros dados para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.keybiodiversityareas.org/kba-data/request">Key Biodiversity Areas</a></td>
+<td style="text-align: left;">Dados dos limites das Key Biodiversity Areas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://marineregions.org/">Marineregions.org</a></td>
+<td style="text-align: left;">Informações de limites marinhos do mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.hydrosheds.org/">HydroSHEDS</a></td>
+<td style="text-align: left;">Informações hidrológicas do mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://ihp-wins.unesco.org/">Water Information Network System</a></td>
+<td style="text-align: left;">Informações hidrológicas do mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://project.freshwaterbiodiversity.eu/">Freshwater Information Platform</a></td>
+<td style="text-align: left;">Informações hidrológicas do mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.globio.info/download-grip-dataset">Global Roads Inventory Project (GRIP)</a></td>
+<td style="text-align: left;">Dados de estradas do mundo todo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://gadm.org/">Database of Global Administrative Areas (GADM)</a></td>
+<td style="text-align: left;">Limites de áreas administrativas do mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.naturaleatoriorthdata.com/">Natural Earth</a></td>
+<td style="text-align: left;">Diversos limites para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://sedac.ciesin.columbia.edu/">Socioeconomic Data and Applications Center (sedac)</a></td>
+<td style="text-align: left;">Dados socio-econômicos para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.worldpop.org/">WorldPop</a></td>
+<td style="text-align: left;">Dados sobre distribuição; demogradia e dinâmica da população no mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.protectedplanet.net">Protected Planet</a></td>
+<td style="text-align: left;">Limites de áreas protegidas para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.gbif.org">Global Biological Information Facility (GBIF)</a></td>
+<td style="text-align: left;">Dados de ocorrências de espécies para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.splink.cria.org.br">Species Link</a></td>
+<td style="text-align: left;">Dados de ocorrências de espécies para o Brasil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.gisin.org">Global Invasive Species Information Network (GISIN)</a></td>
+<td style="text-align: left;">Dados de ocorrências de espécies invasoras para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://iiasa.ac.at/">International Institute for Applied Systems Analysis (IIASA)</a></td>
+<td style="text-align: left;">Dados de mudanças climáticas; segurança energética; envelhecimento da população e desenvolvimento sustentável</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="raster" class="level3"><h3 class="anchored" data-anchor-id="raster">Raster</h3>
+<p>Bases de dados matriciais.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://mapbiomas.org/">MapBiomas</a></td>
+<td style="text-align: left;">Uso e cobertura da terra para o Brasil Panamazonia Legal e Chaco de 1985 a 2019 do Brasil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.ibge.gov.br/apps/monitoramento_cobertura_uso_terra/v1/">Monitoramento da Cobertura e Uso da Terra do Brasil - IBGE</a></td>
+<td style="text-align: left;">Mapeamento periódico da cobertura e uso da terra de 2000 a 2018 do Brasil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="ftp://madeira.dea.ufv.br/bdados/bhalu/">Bahlu</a></td>
+<td style="text-align: left;">Distribuições históricas de terras agrícolas e pastagens para todo o Brasil de 1940 a 2012</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://sites.google.com/site/alexandrecandidoxavierufes/dados-meteorologicos-do-brasil">Dados meteorológicos do Brasil</a></td>
+<td style="text-align: left;">Dados meteorológicos do Brasil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.usgs.gov/">USGS</a></td>
+<td style="text-align: left;">Dados de diversos satélites livres para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://srtm.csi.cgiar.org/">SRTM</a></td>
+<td style="text-align: left;">Dados de elevação para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.ngdc.noaa.gov/mgg/global/">ETOPO1</a></td>
+<td style="text-align: left;">Dados de elevação para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://opentopography.org/">OpenTopography</a></td>
+<td style="text-align: left;">Dados de elevação para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/MERIT_DEM/index.html">MERIT DEM: Multi-Error-Removed Improved-Terrain DEM</a></td>
+<td style="text-align: left;">Dados de elevação de diversas fontes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://spacedata.copernicus.eu">COPERNICUS DEM</a></td>
+<td style="text-align: left;">Dados de elevação e florestas para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://data.bris.ac.uk/data/dataset/25wfy0f9ukoge2gs7a5mqpq2j7">FABDEM</a></td>
+<td style="text-align: left;">Dados de elevação para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://geoservice.dlr.de/web/maps">Geoservice Maps</a></td>
+<td style="text-align: left;">Dados de elevação sem florestas ou contruções para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.globalforestwatch.org/">Global Forest Watch</a></td>
+<td style="text-align: left;">Dados de florestas para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.7.html">Global Forest Change</a></td>
+<td style="text-align: left;">Resultados da análise de série temporal de imagens Landsat na caracterização da extensão e mudança florestal global de 2000 a 2019</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://due.esrin.esa.int/page_globcover.php">GlobCover</a></td>
+<td style="text-align: left;">Dados de uso e cobertura da terra para todo o planeta entre 2015-2019</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://glad.umd.edu/dataset/global-land-cover-land-use-v1">Global land cover and land use 2019</a></td>
+<td style="text-align: left;">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://land.copernicus.eu/en/products/global-dynamic-land-cover">Dynamic Land Cover</a></td>
+<td style="text-align: left;">Dados de uso e cobertura da terra para todo o planeta 10 m para 2021 baseado no Sentinel-1 and 2 data</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://esa-worldcover.org/en">WorldCover</a></td>
+<td style="text-align: left;">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://worldcover2021.esa.int">ESA WorldCover 2021</a></td>
+<td style="text-align: left;">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.earthenv.org/landcover">Landcover</a></td>
+<td style="text-align: left;">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://glad.umd.edu/">Global Land Analysis &amp; Discovery</a></td>
+<td style="text-align: left;">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.dynamicworld.app/">Dynamic World</a></td>
+<td style="text-align: left;">Dados de uso e cobertura da terra para todo o planeta</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://wcshumanfootprint.org/">Global Human Footprint</a></td>
+<td style="text-align: left;">Dados de pegada ecológica para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://mountainscholar.org/handle/10217/216207">Machine-learning Global Human Footprint</a></td>
+<td style="text-align: left;">Dados de pegada ecológica para o mundo com machine-learning</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://zenodo.org/record/5879022#.YozZ_yPMKXL">Global forest management</a></td>
+<td style="text-align: left;">Dados de florestas manejadas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://figshare.com/articles/dataset/SCI_2020_version_-_Continent/11608182">Structural Condition Index</a></td>
+<td style="text-align: left;">Índice de condição da estrutura de florestas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://zenodo.org/record/4091029#.YozZ_yPMKXL">Irrecoverable carbon in Earth’s ecosystems</a></td>
+<td style="text-align: left;">Dados de carbono irrecuperável dos ecossistemas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://glad.umd.edu/dataset/gedi">Global Forest Canopy Height 2019</a></td>
+<td style="text-align: left;">Dados de altura do dossel de florestas do mundo todo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://langnico.github.io/globalcanopyheight/">A high-resolution canopy height model of the Earth</a></td>
+<td style="text-align: left;">Dados de altura do dossel de florestas do mundo todo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.forestlandscapeintegrity.com/home">Forest Landscape Integrity Index</a></td>
+<td style="text-align: left;">Índice de integridade de florestas da paisagem</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://ghsl.jrc.ec.europa.eu/download.php">GHSL - Global Human Settlement Layer</a></td>
+<td style="text-align: left;">Dados e ferramentas abertos e gratuitos para avaliar a presença humana no planeta</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://data.humdata.org/">The Humanitarian Data Exchange</a></td>
+<td style="text-align: left;">Dados humanitários para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://luh.umd.edu/">Land-Use Harmonization (LUH2)</a></td>
+<td style="text-align: left;">Dados atuais e previsões de uso da terra</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://iiasa.ac.at/web/home/research/GLOBIOM/GLOBIOM.html">Global Biosphere Management Model (GLOBIOM)</a></td>
+<td style="text-align: left;">Dados atuais e previsões de uso da terra</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://climate.esa.int/en/odp/#/dashboard">ESA Climate Change Initiative</a></td>
+<td style="text-align: left;">Arquivos globais de observação da Terra nos últimos 30 anos da Agência Espacial Europeia (ESA)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.worldclim.org/">WorldClim</a></td>
+<td style="text-align: left;">Dados climáticos para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://chelsa-climate.org/">CHELSA</a></td>
+<td style="text-align: left;">Dados climáticos para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.ecoclimate.org/">ecoClimate</a></td>
+<td style="text-align: left;">Dados climáticos para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://vdeblauwe.wordpress.com/download/">Vincent Deblauwe climate data</a></td>
+<td style="text-align: left;">Dados climáticos derivados de sensoriamento remoto para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.paleoclim.org/">PaleoClim.org</a></td>
+<td style="text-align: left;">Dados climáticos do passado para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.earthenv.org/">EarthEnv</a></td>
+<td style="text-align: left;">Dados de cobertura da terra nuvens relevo e hidrografia</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.wwf.org.br/natureza_brasileira/reducao_de_impactos2/programa_ciencias/dados_geoespaciais_16012018_1932/">WWF - Dados geoespaciais</a></td>
+<td style="text-align: left;">Diversos dados geoespaciais para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cgiarcsi.community/category/data/">CGIAR-CSI - Consortium for Spatial Information</a></td>
+<td style="text-align: left;">Diversos dados geoespaciais para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://soilgrids.org/">SoilGrids</a></td>
+<td style="text-align: left;">Dados de solo para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/MERIT_Hydro/">MERIT Hydro: global hydrography datasets</a></td>
+<td style="text-align: left;">Dados de hidrologia do mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/OSM_water/index.html">OSM Water Layer: Surface Waters in OpenStreetMap</a></td>
+<td style="text-align: left;">Dados de hidrologia do mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/G3WBM/index.html">Global 3-second/1-second Water Body Map</a></td>
+<td style="text-align: left;">Dados de hidrologia do mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/GWD-LR/index.html">GWD-LR: Global Width Database of Large Rivers</a></td>
+<td style="text-align: left;">Dados de hidrologia do mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/cama-flood/index.html">CaMa-Flood: Global River Hydrodynamics Model</a></td>
+<td style="text-align: left;">Dados de hidrologia do mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.hydrosheds.org/">HydroSHEDS</a></td>
+<td style="text-align: left;">Dados de hidrologia do mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www2.cifor.org/global-wetlands/">Global Wetlands</a></td>
+<td style="text-align: left;">Dados de áreas úmidas para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://global-surface-water.appspot.com/#">Global Surface Water Explorer</a></td>
+<td style="text-align: left;">Dados de águas superficiais para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.marspec.org/">MARSPEC</a></td>
+<td style="text-align: left;">Dados de condições do oceano para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.oracle.ugent.be/">Bio-ORACLE</a></td>
+<td style="text-align: left;">Dados de condições do oceano para o mundo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://marine.copernicus.eu/">Copernicus Marine Service</a></td>
+<td style="text-align: left;">Dados de condições do oceano para o mundo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://marine.copernicus.eu/access-data/myocean-viewer">MyOcean</a></td>
+<td style="text-align: left;">Dados de condições do oceano para o mundo</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="pacotes-do-r" class="level3"><h3 class="anchored" data-anchor-id="pacotes-do-r">Pacotes do R</h3>
+<p>pacotes no R para download de dados geográficos.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Pacotes</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://ipeagit.github.io/geobr/">geobr</a></td>
+<td style="text-align: left;">Carrega Shapefiles de Conjuntos de Dados Espaciais Oficiais do Brasil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/sidrar/index.html">sidrar</a></td>
+<td style="text-align: left;">Accessa os dados do SIDRA - Sistema IBGE de Recuperação Automática</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/rnaturalearth/index.html">rnaturalearth</a></td>
+<td style="text-align: left;">Dados do mapa mundial da Natural Earth</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/rworldmap/index.html">rworldmap</a></td>
+<td style="text-align: left;">Mapeando Dados Globais</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/geodata/index.html">geodata</a></td>
+<td style="text-align: left;">Conjuntos de dados para análise espacial</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/spData/index.html">spData</a></td>
+<td style="text-align: left;">Conjuntos de dados para análise espacial</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/OpenStreetMap/index.html">OpenStreetMap</a></td>
+<td style="text-align: left;">Acesso para abrir imagens raster de mapas de ruas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/osmdata/index.html">osmdata</a></td>
+<td style="text-align: left;">Baixe e importe dados do OpenStreetMap</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/geonames/index.html">geonames</a></td>
+<td style="text-align: left;">Interface para o serviço da Web de consulta espacial ‘Geonames’</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/rgbif/index.html">rgbif</a></td>
+<td style="text-align: left;">Interface para o Global ‘Biodiversity’ Information Facility API</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/maptools/index.html">maptools</a></td>
+<td style="text-align: left;">Ferramentas para lidar com objetos espaciais</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/marmap/index.html">marmap</a></td>
+<td style="text-align: left;">Importar traçar e analisar dados batimétricos e topográficos</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/oce/index.html">oce</a></td>
+<td style="text-align: left;">Fonte e processamento de dados oceanográficos</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/envirem/index.html">envirem</a></td>
+<td style="text-align: left;">Geração de Variáveis ENVIREM</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/sdmpredictors/index.html">sdmpredictors</a></td>
+<td style="text-align: left;">Conjuntos de dados preditor de modelagem de distribuição de espécies</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/metScanR/index.html">metScanR</a></td>
+<td style="text-align: left;">Encontre Mapeie e Colete Dados e Metadados Ambientais</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/ClimDown/index.html">ClimDown</a></td>
+<td style="text-align: left;">Biblioteca de redução de escala do clima para a produção diária do modelo climático</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/rWBclimate/index.html">rWBclimate</a></td>
+<td style="text-align: left;">Acessa dados climáticos do Banco Mundial</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/rnoaa/index.html">rnoaa</a></td>
+<td style="text-align: left;">Dados meteorológicos ‘NOAA’ de R</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/RNCEP/index.html">RNCEP</a></td>
+<td style="text-align: left;">Obtenha organize e visualize dados meteorológicos NCEP</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/smapr/index.html">smapr</a></td>
+<td style="text-align: left;">Aquisição e processamento de dados ativos-passivos (SMAP) de umidade do solo da NASA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://frbcesab.github.io/worldpa/index.html">worldpa</a></td>
+<td style="text-align: left;">Interface para o Banco de Dados Mundial sobre Áreas Protegidas (WDPA) hospedado no site Protected Planet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://bczernecki.github.io/climate/index.html">climate</a></td>
+<td style="text-align: left;">Automatizar o download de dados meteorológicos e hidrológicos in situ de repositórios disponíveis publicamente</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Fonte da imagem: <a href="https://unsplash.com/pt-br/fotografias/mapa-globo-rolar-lote-a6mfMjCFkII">Ruthie/Unsplash</a>.</p>
+<style>
+#topBtn {
+display: none;
+position: fixed;
+bottom: 105px; /* um pouco acima do fundo */
+left: 50%;
+transform: translateX(-50%);
+padding: 10px 14px;
+font-size: 20px;
+border: none;
+border-radius: 6px;
+background-color: rgba(28, 108, 190, 0.7); /* azul com transparência */
+color: white;
+cursor: pointer;
+box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+transition: background-color 0.3s;
+}
+#topBtn:hover {
+background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+↑ Topo
+</button>
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+const scrollBottom = window.innerHeight + window.scrollY;
+const docHeight = document.documentElement.scrollHeight;
+
+if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+btn.style.display = "block";
+} else {
+btn.style.display = "none";
+}
+});
+</script>
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/mauriciovancine">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-9650-7575">
+<p><i class="ai  ai-orcid" aria-label="orcid"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.webofscience.com/wos/author/record/837504">
+<p><i class="ai  ai-researcherid" aria-label="researcherid"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888">
+<p><i class="ai  ai-scopus" aria-label="scopus"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ">
+<p><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Mauricio_Vancine2">
+<p><i class="ai  ai-researchgate" aria-label="researchgate"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.zotero.org/mauriciovancine">
+<p><i class="ai  ai-zotero" aria-label="zotero"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="http://lattes.cnpq.br/9761288418931193">
+<p><i class="ai  ai-lattes" aria-label="lattes"></i></p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/mauricio-vancine/">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="../../contact.html">
+<p>Contato</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>Licença</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../contributors.html">
+<p>Financiamento</p>
+</a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

@@ -1,0 +1,57 @@
+Bases de dados,Descrição
+[MapBiomas](https://mapbiomas.org/),Uso e cobertura da terra para o Brasil Panamazonia Legal e Chaco de 1985 a 2019 do Brasil
+[Monitoramento da Cobertura e Uso da Terra do Brasil - IBGE](https://www.ibge.gov.br/apps/monitoramento_cobertura_uso_terra/v1/),Mapeamento periódico da cobertura e uso da terra de 2000 a 2018 do Brasil
+[Bahlu](ftp://madeira.dea.ufv.br/bdados/bhalu/),Distribuições históricas de terras agrícolas e pastagens para todo o Brasil de 1940 a 2012
+[Dados meteorológicos do Brasil](https://sites.google.com/site/alexandrecandidoxavierufes/dados-meteorologicos-do-brasil),Dados meteorológicos do Brasil
+[USGS](https://www.usgs.gov/),Dados de diversos satélites livres para o mundo
+[SRTM](http://srtm.csi.cgiar.org/),Dados de elevação para o mundo
+[ETOPO1](https://www.ngdc.noaa.gov/mgg/global/),Dados de elevação para o mundo
+[OpenTopography](https://opentopography.org/),Dados de elevação para o mundo
+[MERIT DEM: Multi-Error-Removed Improved-Terrain DEM](http://hydro.iis.u-tokyo.ac.jp/~yamadai/MERIT_DEM/index.html),Dados de elevação de diversas fontes
+[COPERNICUS DEM](https://spacedata.copernicus.eu),Dados de elevação e florestas para o mundo
+[FABDEM](https://data.bris.ac.uk/data/dataset/25wfy0f9ukoge2gs7a5mqpq2j7),Dados de elevação para o mundo
+[Geoservice Maps](https://geoservice.dlr.de/web/maps),Dados de elevação sem florestas ou contruções para o mundo
+[Global Forest Watch](https://www.globalforestwatch.org/),Dados de florestas para o mundo
+[Global Forest Change](https://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.7.html),Resultados da análise de série temporal de imagens Landsat na caracterização da extensão e mudança florestal global de 2000 a 2019
+[GlobCover](http://due.esrin.esa.int/page_globcover.php),Dados de uso e cobertura da terra para todo o planeta entre 2015-2019
+[Global land cover and land use 2019](https://glad.umd.edu/dataset/global-land-cover-land-use-v1),Dados de uso e cobertura da terra para todo o planeta
+[Dynamic Land Cover](https://land.copernicus.eu/en/products/global-dynamic-land-cover),Dados de uso e cobertura da terra para todo o planeta 10 m para 2021 baseado no Sentinel-1 and 2 data
+[WorldCover](https://esa-worldcover.org/en),Dados de uso e cobertura da terra para todo o planeta
+[ESA WorldCover 2021](https://worldcover2021.esa.int),Dados de uso e cobertura da terra para todo o planeta
+[Landcover](https://www.earthenv.org/landcover),Dados de uso e cobertura da terra para todo o planeta
+[Global Land Analysis & Discovery](https://glad.umd.edu/),Dados de uso e cobertura da terra para todo o planeta
+[Dynamic World](https://www.dynamicworld.app/),Dados de uso e cobertura da terra para todo o planeta
+[Global Human Footprint](https://wcshumanfootprint.org/),Dados de pegada ecológica para o mundo
+[Machine-learning Global Human Footprint](https://mountainscholar.org/handle/10217/216207),Dados de pegada ecológica para o mundo com machine-learning
+[Global forest management](https://zenodo.org/record/5879022#.YozZ_yPMKXL),Dados de florestas manejadas
+[Structural Condition Index](https://figshare.com/articles/dataset/SCI_2020_version_-_Continent/11608182),Índice de condição da estrutura de florestas
+[Irrecoverable carbon in Earth's ecosystems](https://zenodo.org/record/4091029#.YozZ_yPMKXL),Dados de carbono irrecuperável dos ecossistemas
+[Global Forest Canopy Height 2019](https://glad.umd.edu/dataset/gedi),Dados de altura do dossel de florestas do mundo todo
+[A high-resolution canopy height model of the Earth](https://langnico.github.io/globalcanopyheight/),Dados de altura do dossel de florestas do mundo todo
+[Forest Landscape Integrity Index](https://www.forestlandscapeintegrity.com/home),Índice de integridade de florestas da paisagem
+[GHSL - Global Human Settlement Layer](https://ghsl.jrc.ec.europa.eu/download.php),Dados e ferramentas abertos e gratuitos para avaliar a presença humana no planeta
+[The Humanitarian Data Exchange](https://data.humdata.org/),Dados humanitários para o mundo
+[Land-Use Harmonization (LUH2)](https://luh.umd.edu/),Dados atuais e previsões de uso da terra
+[Global Biosphere Management Model (GLOBIOM)](https://iiasa.ac.at/web/home/research/GLOBIOM/GLOBIOM.html),Dados atuais e previsões de uso da terra
+[ESA Climate Change Initiative](https://climate.esa.int/en/odp/#/dashboard),Arquivos globais de observação da Terra nos últimos 30 anos da Agência Espacial Europeia (ESA)
+[WorldClim](https://www.worldclim.org/),Dados climáticos para o mundo
+[CHELSA](https://chelsa-climate.org/),Dados climáticos para o mundo
+[ecoClimate](https://www.ecoclimate.org/),Dados climáticos para o mundo
+[Vincent Deblauwe climate data](https://vdeblauwe.wordpress.com/download/),Dados climáticos derivados de sensoriamento remoto para o mundo
+[PaleoClim.org](http://www.paleoclim.org/),Dados climáticos do passado para o mundo
+[EarthEnv](https://www.earthenv.org/),Dados de cobertura da terra nuvens relevo e hidrografia
+[WWF - Dados geoespaciais](https://www.wwf.org.br/natureza_brasileira/reducao_de_impactos2/programa_ciencias/dados_geoespaciais_16012018_1932/),Diversos dados geoespaciais para o mundo
+[CGIAR-CSI - Consortium for Spatial Information](https://cgiarcsi.community/category/data/),Diversos dados geoespaciais para o mundo
+[SoilGrids](https://soilgrids.org/),Dados de solo para o mundo
+[MERIT Hydro: global hydrography datasets](http://hydro.iis.u-tokyo.ac.jp/~yamadai/MERIT_Hydro/),Dados de hidrologia do mundo
+[OSM Water Layer: Surface Waters in OpenStreetMap](http://hydro.iis.u-tokyo.ac.jp/~yamadai/OSM_water/index.html),Dados de hidrologia do mundo
+[Global 3-second/1-second Water Body Map](http://hydro.iis.u-tokyo.ac.jp/~yamadai/G3WBM/index.html),Dados de hidrologia do mundo
+[GWD-LR: Global Width Database of Large Rivers](http://hydro.iis.u-tokyo.ac.jp/~yamadai/GWD-LR/index.html),Dados de hidrologia do mundo
+[CaMa-Flood: Global River Hydrodynamics Model](http://hydro.iis.u-tokyo.ac.jp/~yamadai/cama-flood/index.html),Dados de hidrologia do mundo
+[HydroSHEDS](https://www.hydrosheds.org/),Dados de hidrologia do mundo
+[Global Wetlands](https://www2.cifor.org/global-wetlands/),Dados de áreas úmidas para o mundo
+[Global Surface Water Explorer](https://global-surface-water.appspot.com/#),Dados de águas superficiais para o mundo
+[MARSPEC](http://www.marspec.org/),Dados de condições do oceano para o mundo
+[Bio-ORACLE](http://www.oracle.ugent.be/),Dados de condições do oceano para o mundo
+[Copernicus Marine Service](https://marine.copernicus.eu/),Dados de condições do oceano para o mundo
+[MyOcean](https://marine.copernicus.eu/access-data/myocean-viewer),Dados de condições do oceano para o mundo

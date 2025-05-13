@@ -1,0 +1,55 @@
+---
+title: "Impacts of mining activities on the potential geographic distribution of eastern Brazil mountaintop endemic species"
+subtitle: "Utilizamos Modelagem de Distribuição de Espécies para avaliar como as cavas de mineração podem impactar a diversidade de espécies de anfíbios e aves endêmicas da Serra do Espinhaço em Minas Gerais"
+author: "João Carlos de Castro Pena, Fernando Goulart, G. Wilson, Fernandes de Diego Hoffmann, Felipe S. F. Leite, Natália Britto dos Santos, Britaldo Soares-Filho, Thadeu Sobral-Souza, Maurício Humberto Vancine, Marcos Rodrigues"
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1016/j.pecon.2017.07.005" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publication/2017-pena-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+Mining causes profound impacts on biodiversity. In Brazil, mining pressure is intense, especially in highly biodiverse regions such as the Espinhaço range. We analyzed the direct and indirect effects of mining on the potential geographic range of 32 anuran and eight bird species endemic to the eastern Brazil mountaintops. We also assessed the mining impacts on the local biodiversity rate of both species groups. Currently, 36.44% and 28.80% of the median potential distribution of the anuran and bird species, respectively, are affected directly or indirectly by mining. More than half of the range for eight anuran species and more than 40% of two birds species's ranges are influenced by this anthropogenic activity. Regions with suitable environmental characteristics for more than one species are highly affected by mining: 67% of the pixels that are suitable for 16 species (2109 km²) are currently impacted by mining. These results indicate that mining activities present a considerable threat to both anurans and birds endemic of the eastern Brazil mountaintops. We discuss many aspects related to the loss of potential habitat for these species, and call for management strategies to avert the ongoing wave of mining impacts.
+
+```         
+@article{de_castro_pena_etal_2017,
+    title = {Impacts of mining activities on the potential geographic distribution of eastern {Brazil} mountaintop endemic species},
+    volume = {15},
+    issn = {25300644},
+    url = {https://linkinghub.elsevier.com/retrieve/pii/S167900731630130X},
+    doi = {10.1016/j.pecon.2017.07.005},
+    language = {en},
+    number = {3},
+    urldate = {2022-06-05},
+    journal = {Perspectives in Ecology and Conservation},
+    author = {de Castro Pena, João Carlos and Goulart, Fernando and Wilson Fernandes, G. and Hoffmann, Diego and Leite, Felipe S.F. and Britto dos Santos, Natália and Soares-Filho, Britaldo and Sobral-Souza, Thadeu and Humberto Vancine, Maurício and Rodrigues, Marcos},
+    month = jul,
+    year = {2017},
+    pages = {172--178},
+}
+```

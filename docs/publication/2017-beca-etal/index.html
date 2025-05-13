@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Paulo Barros de Abreu Junior, Diogo Provete, Maurício Vancine, Juliana Zina">
 
-<title>amphiBR – Maurício Vancine</title>
+<title>High mammal species turnover in forest patches immersed in biofuel plantations – Maurício Vancine</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -104,6 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Procurar"
   }
 }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -175,11 +141,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#amphibr" id="toc-amphibr" class="nav-link active" data-scroll-target="#amphibr"><strong>amphiBR</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></a>
-  <ul class="collapse">
-  <li><a href="#instalação" id="toc-instalação" class="nav-link" data-scroll-target="#instalação">Instalação</a></li>
-  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
-  </ul></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link active" data-scroll-target="#resumo">Resumo</a></li>
+  <li><a href="#citação" id="toc-citação" class="nav-link" data-scroll-target="#citação">Citação</a></li>
   </ul>
 </nav>
     </div>
@@ -188,20 +151,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">amphiBR</h1>
-<p class="subtitle lead">Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia</p>
+<h1 class="title">High mammal species turnover in forest patches immersed in biofuel plantations</h1>
+<p class="subtitle lead">Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de São Paulo</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor</div>
-    <div class="quarto-title-meta-contents">
-             <p>Paulo Barros de Abreu Junior, Diogo Provete, Maurício Vancine, Juliana Zina </p>
-          </div>
-  </div>
     
   
     
@@ -212,58 +169,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="amphibr" class="level1">
-<h1><strong>amphiBR</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></h1>
-<!-- badges: start -->
-<p><a href="https://github.com/paulobarros/amphiBR/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" class="img-fluid" alt="License: GPL v3"></a> <a href="https://twitter.com/pbarrosjr"><img src="https://img.shields.io/twitter/follow/pbarrosjr?color=%2315202B&amp;label=Seguir%20%40pbarrosjr&amp;style=social.png" class="img-fluid" alt="Twitter Follow"></a> <a href="https://nubank.com.br/pagar/v67wv/tuh5iRS2YJ"><img src="https://img.shields.io/badge/Apoie%20com-PIX-brightgreen.png" class="img-fluid" alt="pix"></a></p>
-<!-- badges: end -->
-<p>Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.</p>
-<p>O dataset foi extraído da publicação por Segalla et al.&nbsp;(2021) na Revista Brasileira de Herpetologia, e disponível também no link <a href="https://zenodo.org/record/4716176" class="uri">https://zenodo.org/record/4716176</a></p>
-<p>O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.</p>
-<p>Dúvidas, críticas e sugestões são sempre bem-vindas!</p>
-<section id="instalação" class="level2">
-<h2 class="anchored" data-anchor-id="instalação">Instalação</h2>
-<p>O pacote pode ser instalado diretamente do github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("devtools")</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"paulobarros/amphiBR"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(amphiBR)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<p><a href="https://doi.org/10.1016/j.biocon.2017.02.033" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a> <a href="../../publication/2017-beca-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a></p>
+</div>
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+<p><br></p>
+<p><img src="featured.png" class="img-fluid"></p>
+<section id="resumo" class="level2">
+<h2 class="anchored" data-anchor-id="resumo">Resumo</h2>
+<p>Remnant habitat patches immersed within biofuel cropland matrices can retain considerable species diversity, although the effects of land use change on species persistence in historically modified landscapes remain unclear. The Atlantic Forest is one of the most fragmented South American biodiversity hotspots and retains about 12% of its original vegetation cover. Most of these remnants are distributed in small isolated fragments immersed mainly within pastures and sugarcane monocultures. Here we examine how species richness and composition of medium and large-sized mammals are explained by forest cover, structural area and forest edge amount at the landscape scale. We sampled 22 fragmented landscapes dominated by sugarcane plantations along a wide gradient of forest cover (3% to 96%) in southeastern Brazil. We recorded 88% of terrestrial mammal species expected for this region, but many likely local extirpations were detected at the landscape scale, with losses between 50% to 80% of species. Most of the landscapes were highly depleted of forest-specialist species, with replacements by exotics and/or species typical of non-forest habitats. We found that total mammalian species richness, which includes forest-specialists, generalists, exotics and non-forest dwelling species, was not affected by landscape metrics, such as forest cover, structural area and forest edge amount. Nevertheless, forest cover was important predictor of the presence of three ungulates, a medium-sized rodent, and an armadillo. Local mammalian communities exhibited a high degree of species turnover between landscapes, representing 95% of the total β-diversity. In this region, where there was no regional extinction, landholder compliance with the Brazilian Forest Bill and restoration measures will enhance habitat connectivity and mammal persistence across the wider unprotected countryside.</p>
 </section>
-<section id="dataset" class="level2">
-<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<p>O dataset consiste de <strong>1188</strong> linhas com 49 colunas:</p>
-<p><code>order</code> - Ordem</p>
-<p><code>family</code> - Família</p>
-<p><code>subfamily</code> - Subfamília</p>
-<p><code>sp_num</code> - Número da espécie na lista</p>
-<p><code>genus</code> - Gênero</p>
-<p><code>epithet</code> - Epíteto específico</p>
-<p><code>species</code> - Nome científico</p>
-<p><code>author</code> - Autoria</p>
-<p><code>status</code> - Observações</p>
-<p><code>category</code> - Cateogoria de Ameaça pela Portaria MMA 300/2022</p>
-<p>O dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> segalla2021</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 1,188 × 49</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="sc">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>     <span class="er">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>          <span class="er">&lt;</span>chr<span class="sc">&gt;</span>    <span class="er">&lt;</span>chr<span class="sc">&gt;</span>      <span class="er">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> <span class="dv">1</span>          <span class="dv">1</span> Anura Alloph… <span class="cn">NA</span>        Allo… relicta Alloph… Caram… <span class="cn">NA</span>     <span class="cn">NA</span>             DD       Yes            <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">1</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span>          <span class="dv">2</span> Anura Alloph… <span class="cn">NA</span>        Allo… resple… Alloph… Castr… <span class="cn">NA</span>     Resplendent F… LC       No             <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">1</span>     <span class="dv">0</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> <span class="dv">3</span>          <span class="dv">3</span> Anura Alloph… <span class="cn">NA</span>        Allo… ruthve… Alloph… Gaige… <span class="cn">NA</span>     <span class="cn">NA</span>             LC       No             <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">1</span>     <span class="dv">1</span>     <span class="dv">0</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a> <span class="dv">4</span>          <span class="dv">4</span> Anura Alsodi… <span class="cn">NA</span>        Limn… macrog… Limnom… (Dumé… <span class="cn">NA</span>     Rãzinha<span class="sc">-</span>de<span class="sc">-</span>co… LC       No             <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a> <span class="dv">5</span>          <span class="dv">5</span> Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… <span class="cn">NA</span>     <span class="cn">NA</span>             LC       Yes            <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">1</span>     <span class="dv">0</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> <span class="dv">6</span>          <span class="dv">6</span> Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… <span class="cn">NA</span>     Chapada Rocke… NT       Yes            <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> <span class="dv">7</span>          <span class="dv">7</span> Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… <span class="cn">NA</span>     <span class="cn">NA</span>             LC       Yes            <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">1</span>     <span class="dv">0</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a> <span class="dv">8</span>          <span class="dv">8</span> Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… <span class="cn">NA</span>             <span class="cn">NA</span>       <span class="cn">NA</span>            <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a> <span class="dv">9</span>          <span class="dv">9</span> Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… <span class="cn">NA</span>     <span class="cn">NA</span>             <span class="cn">NA</span>       <span class="cn">NA</span>            <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span>    <span class="cn">NA</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span>         <span class="dv">10</span> Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… <span class="cn">NA</span>     <span class="cn">NA</span>             LC       No             <span class="dv">1</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span>     <span class="dv">0</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ 1,178 more rows</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ Use `print(n = ...)` to see more rows</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="citação" class="level2">
+<h2 class="anchored" data-anchor-id="citação">Citação</h2>
+<pre><code>@article{beca_etal_2017,
+    title = {High mammal species turnover in forest patches immersed in biofuel plantations},
+    volume = {210},
+    issn = {00063207},
+    url = {https://linkinghub.elsevier.com/retrieve/pii/S0006320717303117},
+    doi = {10.1016/j.biocon.2017.02.033},
+    language = {en},
+    urldate = {2022-06-05},
+    journal = {Biological Conservation},
+    author = {Beca, Gabrielle and Vancine, Maurício H. and Carvalho, Carolina S. and Pedrosa, Felipe and Alves, Rafael Souza C. and Buscariol, Daiane and Peres, Carlos A. and Ribeiro, Milton Cezar and Galetti, Mauro},
+    month = jun,
+    year = {2017},
+    pages = {352--359},
+}</code></pre>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

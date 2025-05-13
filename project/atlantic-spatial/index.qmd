@@ -1,12 +1,51 @@
 ---
 title: "Atlantic Spatial"
-subtitle: "Compilar métricas de paisagem, topográficas, hidrológicas e antrópicas para a Mata Atlântica"
+subtitle: "Compilação de métricas de paisagem, topográficas, hidrológicas e antrópicas para a Mata Atlântica."
 author: Maurício Vancine
 image: featured-hex.png
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 editor: source
 ---
 
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://github.com/mauriciovancine/ATLANTIC-SPATIAL" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
 # **Atlantic Spatial** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+
+Em Ecologia, o espaço importa — e muito. A configuração espacial da paisagem influencia diretamente os principais fatores que moldam a biodiversidade, pois regula os processos ecológicos que determinam a distribuição e a dinâmica das espécies. Esses processos incluem o filtro ambiental, as interações bióticas, a dispersão e a deriva ecológica, que, por sua vez, modulam como os organismos respondem a fatores como clima, topografia, tipo de solo, uso e cobertura da terra (LULC), conectividade e heterogeneidade do habitat.
+
+Diante das mudanças rápidas no clima e no uso da terra, e suas consequências generalizadas para a perda e fragmentação de habitats, o espaço se torna um componente fundamental para entender e conservar a biodiversidade. Neste contexto, disponibilizamos um conjunto de dados espaciais integrados e de alta resolução (30 metros) cobrindo toda a extensão da Mata Atlântica no ano de 2020.
+
+As métricas incluídas consideram diferentes classes de vegetação (floresta e floresta + vegetação natural), efeitos de estruturas lineares (como rodovias e ferrovias) e múltiplas escalas espaciais (com buffers que variam de 50 m a 2.500 m, e até 10 km para algumas métricas). Ao todo, o conjunto compreende mais de 500 arquivos raster e o vetor com o polígono de delimitação da Mata Atlântica, todos acessíveis por meio do pacote R [atlanticr](/project/atlanticr/), desenvolvido para facilitar a organização e o uso dos dados.
+
+As informações disponibilizadas abrangem:
+
+- Cobertura da terra: 31 classes, incluindo floresta, vegetação natural, pastagem, lavouras temporárias e perenes, silvicultura, áreas urbanas, mineração e corpos d'água.
+- Distâncias até classes agrupadas de cobertura da terra, como floresta, agricultura ou áreas urbanas.
+- Métricas de paisagem: morfologia da paisagem (matriz, núcleo, borda, corredor, trampolim, ramificação e perfuração), área e proporção dos fragmentos, número de manchas, áreas de borda e núcleo, conectividade estrutural e funcional (considerando capacidades de atravessamento de diferentes organismos), distâncias até as bordas dos fragmentos, perímetro e razão perímetro/área, e diversidade da paisagem.
+- Métricas topográficas: elevação, declividade, orientação (aspect), curvaturas e formas de relevo (como cumes, encostas, vales, depressões e áreas planas).
+- Métricas hidrológicas: nascentes potenciais e sua densidade por núcleo (kernel), corpos d’água potenciais e distâncias até eles.
+- Infraestrutura antrópica: mapas de estradas, ferrovias, unidades de conservação, terras indígenas e quilombolas, além das distâncias até essas estruturas.
+
+Esse conjunto de dados permite integrar de forma eficiente informações ambientais e de biodiversidade para toda a Mata Atlântica, servindo como referência para pesquisas ecológicas e como base para ações de planejamento territorial, conservação da biodiversidade e restauração florestal.
 
 ## Publicações
 
