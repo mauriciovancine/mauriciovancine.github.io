@@ -1,6 +1,6 @@
 ---
 title: "landR: métricas de paisagem no R"
-subtitle: "Métricas de paisagem no R utilizando o pacote landscapemetrics"
+subtitle: "Curso: métricas de paisagem no R utilizando o pacote landscapemetrics"
 author: Maurício Vancine
 image: featured-hex.png
 categories: ["Curso"]

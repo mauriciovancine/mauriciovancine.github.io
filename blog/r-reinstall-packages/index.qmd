@@ -1,0 +1,56 @@
+---
+title: "Reinstalar pacotes depois de atualizar o R"
+subtitle: "Depois de atualizar o R, vem a parte chata de reinstalar todos os pacotes, mas o R mesmo pode te ajudar."
+author: Maurício Vancine
+date: 2024-06-04
+categories: ["R", "Programação"]
+image: featured.jpg
+toc: true
+draft: false
+code-link: true
+editor: source
+---
+
+## Contextualização
+
+Depois de atualizar uma versão do R, vem a parte chata de reinstalar todos os pacotes. Aqui eu escrevi um código para automatizar essa tarefa.
+
+Isso funciona para os pacotes disponíveis no CRAN. Os pacotes instalados do GitHub, por exemplo, ainda precisarão ser instalados usando os pacotes `devtools` ou `remotes`.
+
+## Listando os pacotes da versão antiga
+
+Primeiramente, vamos listar os pacotes da versão antiga. Aqui eu estou rodando um exemplo para a versão 4.4 no GNU/Linux. Em outros sistemas operacionais esse diretório tem outro endereço.
+
+```{r}
+# listar os pacotes instalados na versao 4.4
+pkgs <- list.files(path = "~/R/x86_64-pc-linux-gnu-library/4.4")
+
+# vendo os pacotes
+head(pkgs)
+
+# contando os pacotes
+length(pkgs)
+```
+
+## Instalando os pacotes
+
+Agora basta instalar os pacotes, verificando se eles já não estão instalados.
+
+```{r eval=FALSE}
+# verifica e instala os pacotes nao instalados
+lapply(pkgs, function(pkg){if(!pkg %in% installed.packages()){install.packages(pkg)}})
+```
+
+## Paralelizando
+
+Como esse é um processo demorado um boa opção é fazer a instalação de modo paralelizado.
+
+```{r eval=FALSE}
+# paralelizado
+library(furrr)
+plan(multisession, workers = 10)
+
+future_map(pkgs, function(pkg){if(!pkg %in% installed.packages()){install.packages(pkg)}})
+```
+
+Fonte da imagem: [cottonbro studio/Pexels](https://www.pexels.com/pt-br/@cottonbro/).

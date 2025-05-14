@@ -1,6 +1,8 @@
 ---
 title: "High mammal species turnover in forest patches immersed in biofuel plantations"
-subtitle: "Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de São Paulo"
+subtitle: "Analisamos como a estrutura da paisagem explica a diversidade em comunidades de mamíferos no Estado de São Paulo."
+author: "Gabrielle Beca, Maurício Humberto Vancine, Carolina S. Carvalho, Felipe Pedrosa, Rafael Souza C. Alves, Daiane Buscariol, Carlos A. Peres, Milton Cezar Ribeiro, Mauro Galetti"
+date: 2017-06-01
 format:
   html:
     include-in-header: 

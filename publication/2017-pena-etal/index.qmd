@@ -1,7 +1,8 @@
 ---
 title: "Impacts of mining activities on the potential geographic distribution of eastern Brazil mountaintop endemic species"
-subtitle: "Utilizamos Modelagem de Distribuição de Espécies para avaliar como as cavas de mineração podem impactar a diversidade de espécies de anfíbios e aves endêmicas da Serra do Espinhaço em Minas Gerais"
+subtitle: "Utilizamos Modelagem de Distribuição de Espécies para avaliar como as cavas de mineração podem impactar a diversidade de espécies de anfíbios e aves endêmicas da Serra do Espinhaço em Minas Gerais."
 author: "João Carlos de Castro Pena, Fernando Goulart, G. Wilson, Fernandes de Diego Hoffmann, Felipe S. F. Leite, Natália Britto dos Santos, Britaldo Soares-Filho, Thadeu Sobral-Souza, Maurício Humberto Vancine, Marcos Rodrigues"
+date: 2017-09-01
 format:
   html:
     include-in-header: 

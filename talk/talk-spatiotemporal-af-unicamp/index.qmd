@@ -1,11 +1,10 @@
 ---
-title: "Modelos de Distribuição de Espécies: uma visão geral"
-subtitle: "Palestra sobre uma visão geral e aplicações de Modelos de Distribuição de Espécies (SDMs)."
-author: Maurício Vancine
-image: featured.jpg
-date: 2024-12-09
-event: Visita ao Grupo de Genética e Genômica da Conservação da Profa. Maria Zucchi (USP/ESALQ)
-location: Piracicaba, SP, Brasil
+title: "Dinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica"
+subtitle: "Palestra sobre a dinâmica espaço-temporal da vegetação florestal e natural da Mata Atlântica."
+author: Maurício Vancine e Milton Cezar Ribeiro 
+image: featured.png
+date: 2024-11-01
+location: Biofórum, Unicamp, Campinas, SP
 categories: ["Palestra"]
 format:
   html:
@@ -16,7 +15,7 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://mauriciovancine.github.io/slides/slides-sdm-esalq/slides-sdm-esalq.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
+  <a href="https://docs.google.com/presentation/d/18tGjoJTD4URd8XwJ9tV5ftqUZKIdZS-P7DLCqT-9a6w" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
 </div>
 
 <style>
@@ -34,4 +33,4 @@ editor: source
 
 <br>
 
-![](featured.jpg)
+![](featured.png)

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Maurício Vancine">
+<meta name="author" content="Maurício Humberto Vancine">
 
-<title>Introdução ao geoprocessamento com o QGIS – Maurício Vancine</title>
+<title>Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica – Maurício Vancine</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,11 +142,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#qgis" id="toc-qgis" class="nav-link active" data-scroll-target="#qgis"><strong>QGIS</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></a>
-  <ul class="collapse">
-  <li><a href="#descrição" id="toc-descrição" class="nav-link" data-scroll-target="#descrição">Descrição</a></li>
-  <li><a href="#oferecimento" id="toc-oferecimento" class="nav-link" data-scroll-target="#oferecimento">Oferecimento</a></li>
-  </ul></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link active" data-scroll-target="#resumo">Resumo</a></li>
+  <li><a href="#citação" id="toc-citação" class="nav-link" data-scroll-target="#citação">Citação</a></li>
   </ul>
 </nav>
     </div>
@@ -155,12 +152,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introdução ao geoprocessamento com o QGIS</h1>
-<p class="subtitle lead">Curso: introdução ao geoprocessamento com o QGIS.</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Curso</div>
-  </div>
-  </div>
+<h1 class="title">Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica</h1>
+<p class="subtitle lead">Nesta tese, investigamos a dinâmica espaço-temporal da estrutura da paisagem da Mata Atlântica e seu impacto nas dimensões taxonômicas e funcionais de anuros. Organizamos parte dos dados em dois data papers: ATLANTIC SPATIAL, que inclui 500 rasters com métricas de paisagem, topografia, hidrografia e fatores antrópicos, e o ATLANTIC AMPHIBIAN TRAITS, que possui atributos funcionais morfológicos e ecológicos de anfíbios.</p>
+</div>
 
 
 
@@ -169,10 +163,16 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Autor</div>
     <div class="quarto-title-meta-contents">
-             <p>Maurício Vancine </p>
+             <p>Maurício Humberto Vancine </p>
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">5 de julho de 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-<p><a href="https://mauriciovancine.github.io/workshop-qgis/01_slides/slides.html" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-image me-1"></i>slides</a> <a href="https://github.com/mauriciovancine/workshop-qgis" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>material</a></p>
+<p><a href="https://hdl.handle.net/11449/256726" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-graduation-cap me-1"></i>biblioteca</a> <a href="../../publication/2024-vancine.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a></p>
 </div>
 <style>
   .btn-custom {
@@ -197,20 +197,31 @@ ul.task-list li input[type="checkbox"] {
     color: white; /* Texto branco */
   }
 </style>
-<section id="qgis" class="level1">
-<h1><strong>QGIS</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></h1>
-<section id="descrição" class="level2">
-<h2 class="anchored" data-anchor-id="descrição">Descrição</h2>
-<p>O minicurso oferece alguns dos principais conceitos teórico-práticos sobre a manipulação e visualização de dados geoespaciais no QGIS. São abordados os seguintes tópicos: (1) conceitos gerais de geoprocessamento, (2) interface e projeto do QGIS, (3) importação, criação e edição de dados vetoriais, (4) importação, criação e edição de dados matriciais e, (5) composição de mapas. Após a realização do minicurso espera-se que os alunos adquiram conceitos gerais da estrutura, manipulação e visualização de dados geoespaciais, assim como habilidades básicas para produção de mapas simples usando o QGIS.</p>
+<p><br></p>
+<p><img src="featured.jpg" class="img-fluid"></p>
+<section id="resumo" class="level2">
+<h2 class="anchored" data-anchor-id="resumo">Resumo</h2>
+<p>A perda e fragmentação de habitat devido a mudanças no uso e cobertura da terra por ações antrópicas são uma das principais causas da perda de biodiversidade em todo o mundo. Essas modificações envolvem perda, fragmentação e degradação do habitat. A atuação conjunta desses processos altera as características da paisagem, impactando múltiplos componentes da biodiversidade, como a diversidade taxonômica, genética, filogenética e funcional nas comunidades. Os anfíbios estão entre os organismos mais influenciados pelas características do ambiente, principalmente devido aos seus atributos morfológicos, fisiológicos e ecológicos particulares. A Mata Atlântica contém mais de 720 espécies de anfíbios, das quais mais de 500 espécies (cerca de 70%) são endêmicas, sendo que 46 espécies se encontram em algum grau de ameaça de extinção, principalmente devido à agricultura e expansão urbana. Porém, apesar das intensas mudanças na cobertura e uso da terra na Mata Atlântica nos últimos 50 anos, poucos estudos analisaram a estrutura da paisagem num contexto espaço-temporal para grandes escalas de tempo para esse bioma. Tendo em vista essas questões, nesta tese, respondemos a duas questões principais, estruturada em quatro capítulos: (1) uma envolvendo a dinâmica espaço- temporal da estrutura da paisagem de todo o bioma da Mata Atlântica, e outra (2) em como estrutura da paisagem afeta as dimensões taxonômicas e funcionais de comunidades de anuros neste mesmo bioma. Relacionado a cada uma dessas questões, nós organizamos parte dos dados reunidos e tornamos os mesmos disponíveis para a toda a comunidade científica, por meio de dois data papers: (3) o primeiro com 500 rasters das informações de métricas de paisagem, topografia, hidrografia e antrópicas (ATLANTIC SPATIAL); e (4) o segundo com atributos funcionais morfológicos e ecológicos de parte da diversidade de anfíbios ao longo de toda a Mata Atlântica (ATLANTIC AMPHIBIAN TRAITS). O primeiro capítulo destacou a importância da legislação e da análise da dinâmica da paisagem para auxiliar nos futuros programas de conservação e restauração da biodiversidade na Mata Atlântica. O segundo capítulo gerou dados que permitem a integração eficiente de dados ambientais e de biodiversidade, assim como planejamento da paisagem, conservação da biodiversidade e programas de restauração florestal na Mata Atlântica. O terceiro capítulo demonstrou que a quantidade de habitat florestal, assim como a quantidade de habitat aquático e a conexão entre ambos são fundamentais para a manter múltiplos aspectos da diversidade de anuros na Mata Atlântica. E por fim, o quarto capítulo disponibiliza um valioso conjunto de dados para o avanço de pesquisas sobre os impactos antrópicos e das alterações climáticas na diversidade funcional dos anfíbios na Mata Atlântica.</p>
 </section>
-<section id="oferecimento" class="level2">
-<h2 class="anchored" data-anchor-id="oferecimento">Oferecimento</h2>
-<ol type="1">
-<li>Semana de Estudos da Biologia. (2021). Universidade Estadual Paulista (UNESP), Rio Claro, SP, Brasil. Carga horária: 03 h.</li>
-</ol>
+<section id="citação" class="level2">
+<h2 class="anchored" data-anchor-id="citação">Citação</h2>
+<pre><code>@article{regolin_etal_2017,
+    title = {Forest cover influences occurrence of mammalian carnivores within {Brazilian} {Atlantic} {Forest}},
+    volume = {98},
+    issn = {0022-2372, 1545-1542},
+    url = {http://academic.oup.com/jmammal/article/98/6/1721/4372291},
+    doi = {10.1093/jmammal/gyx103},
+    language = {en},
+    number = {6},
+    urldate = {2022-06-05},
+    journal = {Journal of Mammalogy},
+    author = {Regolin, André Luis and Cherem, Jorge José and Graipel, Maurício Eduardo and Bogoni, Juliano André and Ribeiro, John Wesley and Vancine, Maurício Humberto and Tortato, Marcos Adriano and Oliveira-Santos, Luiz Gustavo and Fantacini, Felipe Moreli and Luiz, Micheli Ribeiro and Castilho, Pedro Volkmer de and Ribeiro, Milton Cezar and Cáceres, Nilton Carlos},
+    month = dec,
+    year = {2017},
+    pages = {1721--1731},
+}</code></pre>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

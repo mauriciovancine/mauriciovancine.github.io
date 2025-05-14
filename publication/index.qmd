@@ -9,11 +9,11 @@ editor: source
 
 ## Artigos
 
-1. Beca, G., <u>**Vancine, M. H.**</u>, Carvalho, C. S., Pedrosa, F., Alves, R. S. C., Buscariol, D., ... & Galetti, M. (2017). [High mammal species turnover in forest patches immersed in biofuel plantations](/publication/frag-mm-sp){target="_blank"}. *Biological Conservation*, 210, 352-359.
+1. Beca, G., <u>**Vancine, M. H.**</u>, Carvalho, C. S., Pedrosa, F., Alves, R. S. C., Buscariol, D., ... & Galetti, M. (2017). [High mammal species turnover in forest patches immersed in biofuel plantations](/publication/2017-beca-etal){target="_blank"}. *Biological Conservation*, 210, 352-359.
 
-1. de Castro Pena, J. C., Goulart, F., Fernandes, G. W., Hoffmann, D., Leite, F. S., dos Santos, N. B., Soares-Filho, B., Sobral-Souza, T., <u>**Vancine, M. H.**</u>, & Rodrigues, M. (2017). [Impacts of mining activities on the potential geographic distribution of eastern Brazil mountaintop endemic species](/publication/div-mining-mg){target="_blank"}. *Perspectives in Ecology and Conservation*, 15(3), 172-178.
+1. de Castro Pena, J. C., Goulart, F., Fernandes, G. W., Hoffmann, D., Leite, F. S., dos Santos, N. B., Soares-Filho, B., Sobral-Souza, T., <u>**Vancine, M. H.**</u>, & Rodrigues, M. (2017). [Impacts of mining activities on the potential geographic distribution of eastern Brazil mountaintop endemic species](/publication/2017-pena-etal){target="_blank"}. *Perspectives in Ecology and Conservation*, 15(3), 172-178.
 
-1. Regolin, A. L., Cherem, J. J., Graipel, M. E., Bogoni, J. A., Ribeiro, J. W., <u>**Vancine, M. H.**</u>, ... & Castilho, P. V. D. (2017). [Forest cover influences occurrence of mammalian carnivores within Brazilian Atlantic Forest](/publication/frag-mm-sc){target="_blank"}. *Journal of Mammalogy*, 98(6), 1721-1731.
+1. Regolin, A. L., Cherem, J. J., Graipel, M. E., Bogoni, J. A., Ribeiro, J. W., <u>**Vancine, M. H.**</u>, ... & Castilho, P. V. D. (2017). [Forest cover influences occurrence of mammalian carnivores within Brazilian Atlantic Forest](/publication/2017-regolin-etal){target="_blank"}. *Journal of Mammalogy*, 98(6), 1721-1731.
 
 1. Sobral-Souza, T., <u>**Vancine, M. H.**</u>, Ribeiro, M. C., & Lima-Ribeiro, M. S. (2018). [Efficiency of protected areas in Amazon and Atlantic Forest conservation: A spatio-temporal view](/publication/forest-cons-af-am){target="_blank"}. *Acta Oecologica*, 87, 1-7.
 
@@ -109,7 +109,7 @@ editor: source
 
 1. Almeida, L. S. (2022). [Conhecimento atual, distribuição potencial e conservação de cecílias (Amphibia: Gymnophiona) na Região Neotropical](/publication/gymnophiona-neotropical){target="_blank"}. *Universidade Estadual Paulista, Instituto de Biociências de Rio Claro*. [Coorientador]
 
-1. <u>**Vancine, M. H.**</u> (2024). [Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica](/publication/anfibios-paisagem){target="_blank"}. *Universidade Estadual Paulista, Instituto de Biociências de Rio Claro*.
+1. <u>**Vancine, M. H.**</u> (2024). [Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica](/publication/vancine-2024){target="_blank"}. *Universidade Estadual Paulista, Instituto de Biociências de Rio Claro*.
 
 ## Mídia
 

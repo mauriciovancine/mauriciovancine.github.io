@@ -178,7 +178,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#atlanticr" id="toc-atlanticr" class="nav-link active" data-scroll-target="#atlanticr"><strong>atlanticr</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></a>
   <ul class="collapse">
   <li><a href="#instalação" id="toc-instalação" class="nav-link" data-scroll-target="#instalação">Instalação</a></li>
-  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets">Datasets</a></li>
+  <li><a href="#conjuntos-de-dados" id="toc-conjuntos-de-dados" class="nav-link" data-scroll-target="#conjuntos-de-dados">Conjuntos de dados</a></li>
+  <li><a href="#como-ajudar" id="toc-como-ajudar" class="nav-link" data-scroll-target="#como-ajudar">Como ajudar</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -189,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">atlanticr</h1>
-<p class="subtitle lead">Pacote R para acessar dados do ATLANTIC Series, um conjunto de data papers sobre biodiversidade e dados geoespaciais da Mata Atlântica</p>
+<p class="subtitle lead">Pacote R para acessar dados do ATLANTIC Series, um conjunto de data papers sobre biodiversidade e dados geoespaciais da Mata Atlântica.</p>
 </div>
 
 
@@ -214,52 +215,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="atlanticr" class="level1">
 <h1><strong>atlanticr</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></h1>
+<p>As florestas tropicais e subtropicais ao longo da costa e do interior da América do Sul costumavam ter uma das maiores florestas do mundo – a Mata Atlântica – com mais de 1,6 milhão de km² abrangendo Brasil, Argentina e Paraguai. O <a href="https://esajournals.onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)1939-9170.AtlanticPapers">ATLANTIC: Data Papers from a biodiversity hotspot</a> inclui uma série de Data Papers sobre a composição da comunidade, distribuição de plantas e animais e características ambientais da Mata Atlântica. Esses artigos são uma ferramenta fundamental para cientistas e formuladores de políticas.</p>
+<p>O objetivo deste pacote é fornecer dados do ATLANTIC, uma série de artigos de dados da Ecology sobre dados de biodiversidade da Mata Atlântica.</p>
+<p>Atualmente, existem 17 conjuntos de dados: nove sobre vertebrados, dois sobre características de vertebrados, dois sobre invertebrados, três sobre interações animal-planta, um sobre planta e um sobre dados espaciais.</p>
 <section id="instalação" class="level2">
 <h2 class="anchored" data-anchor-id="instalação">Instalação</h2>
-<p>O pacote pode ser instalado diretamente do github:</p>
+<p>Você pode instalar a versão de desenvolvimento do <code>atlanticr</code> do GitHub com:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("remotes")</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"mauriciovancine/atlanticr"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="datasets" class="level2">
-<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
+<section id="conjuntos-de-dados" class="level2">
+<h2 class="anchored" data-anchor-id="conjuntos-de-dados">Conjuntos de dados</h2>
+<p>Os conjuntos de dados atualmente incluídos no pacote estão resumidos abaixo; consulte os artigos individuais para obter detalhes sobre dados e fontes.</p>
 <p><strong>Vertebrados</strong></p>
 <ul>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html"><code>atlantic_amphibians</code></a> ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html"><code>atlantic_bats</code></a> ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html"><code>atlantic_birds</code></a> ATLANTIC BIRDS: a data set of bird species from the Brazilian Atlantic Forest</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html"><code>atlantic_camtraps</code></a> ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/camera_trap_surveys.html"><code>camera_trap_surveys</code></a> Camera trap surveys of Atlantic Forest mammals: A data set for analyses considering imperfect detection (2004–2020)</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html"><code>atlantic_mammals</code></a> ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html"><code>atlantic_nonvolant_mammals</code></a>Non-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html"><code>atlantic_primates</code></a> ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html"><code>atlantic_small_mammal</code></a> Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html"><code>atlantic_small_mammal_abundance</code></a> Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns</li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibians.html"><code>atlantic_amphibians</code></a>: ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_bats.html"><code>atlantic_bats</code></a>ATLANTIC BATS: a data set of bat communities from the Atlantic Forests of South America</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_birds.html"><code>atlantic_birds</code></a>: ATLANTIC BIRDS: a data set of bird species from the BrazilianAtlantic Forest</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_camtraps.html"><code>atlantic_camtraps</code></a>: ATLANTIC-CAMTRAPS: a dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_camera_trap_mammals.html"><code>atlantic_camera_trap_mammals</code></a>: Camera trap surveys of Atlantic Forest mammals: A data set for analyses considering imperfect detection (2004–2020)</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammals.html"><code>atlantic_mammals</code></a>: ATLANTIC MAMMALS: a data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_nonvolant_mammals.html"><code>atlantic_nonvolant_mammals</code></a>: Non-volant mammals from the Upper Paraná River Basin: a data set from a critical region for conservation in Brazil</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_primates.html"><code>atlantic_primates</code></a>: ATLANTIC-PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal.html"><code>atlantic_small_mammal</code></a>: Atlantic small-mammal: a dataset of communities of rodents and marsupials of the Atlantic forests of South America</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_small_mammal_abundance.html"><code>atlantic_small_mammal_abundance</code></a>: Abundance of small mammals in the Atlantic Forest (ASMAF): a data set for analyzing tropical community patterns</p></li>
 </ul>
-<p><strong>Vertebrados - atributos funcionais</strong></p>
+<p><strong>Traits de vertebrados</strong></p>
 <ul>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_amphibian_traits.html"><code>atlantic_amphibian_traits</code></a> ATLANTIC AMPHIBIAN TRAITS: a data set of morphological and ecological traits of amphibians in the Atlantic Forest of South America</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html"><code>atlantic_bird_traits</code></a> ATLANTIC BIRD TRAITS: a data set of bird morphological traits from the Atlantic forests of South America</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html"><code>atlantic_mammal_traits</code></a> ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America</li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html"><code>atlantic_amphibian_traits</code></a>: ATLANTIC AMPHIBIAN TRAITS: a data set of morphological and ecological traits of amphibians in the Atlantic Forest</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_bird_traits.html"><code>atlantic_bird_traits</code></a>: ATLANTIC BIRD TRAITS: a data set of bird morphological traits from the Atlantic forests of South America</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_mammal_traits.html"><code>atlantic_mammal_traits</code></a>: ATLANTIC MAMMAL TRAITS: a data set of morphological traits of mammals in the Atlantic Forest of South America</p></li>
 </ul>
 <p><strong>Invertebrados</strong></p>
 <ul>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_ants.html"><code>atlantic_ants</code></a> ATLANTIC ANTS: a data set of ant communities from the Atlantic Forests of South America</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html"><code>atlantic_butterflies</code></a> Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests</li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_ants.html"><code>atlantic_ants</code></a>: ATLANTIC ANTS: a data set of ant communities from the Atlantic Forests of South America</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_butterflies.html"><code>atlantic_butterflies</code></a>: Atlantic butterflies: a data set of fruit-feeding butterfly communities from the Atlantic forests</p></li>
 </ul>
-<p><strong>Interação animais-plantas</strong></p>
+<p><strong>Interação animal-plants</strong></p>
 <ul>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html"><code>atlantic_frugivory</code></a> Atlantic frugivory: a plant–frugivore interaction data set for the Atlantic Forest</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html"><code>atlantic_pollination</code></a> ATLANTIC POLLINATION: a data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest</li>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_flower_invertebrate_interactions.html"><code>atlantic_flower_invertebrate_interactions</code></a> Atlantic flower–invertebrate interactions: A data set of occurrence and frequency of floral visits</li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_frugivory.html"><code>atlantic_frugivory</code></a>: Atlantic frugivory: a plant–frugivore interaction data set for the Atlantic Forest</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_pollination.html"><code>atlantic_pollination</code></a>: ATLANTIC POLLINATION: a data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest</p></li>
+<li><p><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_flower_invertebrate_interactions.html"><code>atlantic_flower_invertebrate_interactions</code></a>: Atlantic flower–invertebrate interactions: A data set of occurrence and frequency of floral visits</p></li>
 </ul>
 <p><strong>Plantas</strong></p>
 <ul>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html"><code>atlantic_epiphytes</code></a> ATLANTIC EPIPHYTES: a data set of vascular and non-vascular epiphyte plants and lichens from the Atlantic Forest</li>
+<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_epiphytes.html"><code>atlantic_epiphytes</code></a>: ATLANTIC EPIPHYTES: a data set of vascular and non-vascular epiphyte plants and lichens from the Atlantic Forest</li>
 </ul>
 <p><strong>Espacial</strong></p>
 <ul>
-<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html"><code>atlantic_spatial</code></a> ATLANTIC SPATIAL: a dataset of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest</li>
+<li><a href="https://mauriciovancine.github.io/atlanticr/reference/atlantic_spatial.html"><code>atlantic_spatial</code></a>: ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological, and anthropogenic metrics for the Atlantic Forest</li>
 </ul>
+</section>
+<section id="como-ajudar" class="level2">
+<h2 class="anchored" data-anchor-id="como-ajudar">Como ajudar</h2>
+<p>A melhor maneira de fornecer feedback sobre este pacote é abrir uma <a href="https://github.com/mauriciovancine/atlanticr/issues">questão</a> e atribuir a etiqueta <code>feedback</code>. Obrigado!</p>
 
 
 </section>
