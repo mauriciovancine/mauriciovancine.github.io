@@ -73,7 +73,7 @@ editor: source
 
 1. Marques, R. C. M., <u>**Vancine, M. H.**</u>, Súarez, Y. R., Pereira, J. G., Domingos, J. D., Silva, A. B. B., Pereira, Z. V. (2024). [Dinâmica espaço temporal: variações na composição e configuração da vegetação](/publication/frag-ms){target="_blank"}. *Revista Brasileira de Geografia Física*, 18(2), 1334-1348.
 
-1. Carvalho, T., Falconi, N., White, T., Anjos, L. A., Giasson, L. O. M., <u>**Vancine, M. H.**</u>, Haddad, C. F. B., Toledo, L. F., Becker, C. G. (2025) [The role of seasonal migration in predicting amphibian population persistence across fragmented tropical landscapes: an Individual-Based Model](/publication/2025-carvalho-etal){target="_blank"}. *Biodiversity and Conservation*, 34, 1291-1310.
+1. Carvalho, T., Falconi, N., White, T., Anjos, L. A., Giasson, L. O. M., <u>**Vancine, M. H.**</u>, Haddad, C. F. B., Toledo, L. F., Becker, C. G. (2025). [The role of seasonal migration in predicting amphibian population persistence across fragmented tropical landscapes: an Individual-Based Model](/publication/2025-carvalho-etal){target="_blank"}. *Biodiversity and Conservation*, 34, 1291-1310.
 
 1. Gonçalves-Souza, T., <u>**Vancine, M. H.**</u>, Sanders, N. J., Haddad, N. M., (…), Chase, J. M. (2025). [LandFrag: a dataset to investigate the effects of habitat loss and fragmentation on biodiversity in forest fragments](/publication/frag-landfrag){target="_blank"}. *Global Ecology and Biogeography (Data Article)*, 34(2):e70015.
 
