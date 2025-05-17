@@ -1,11 +1,11 @@
 ---
 title: "Projetos"
-subtitle: "Projetos que desenvolvi ou estou desenvolvimento."
+subtitle: "Projetos em desenvolvimento."
 listing:
   - id: project
     contents: "**/*/index.qmd"
     type: grid
-    fields: [image, author, date, title, subtitle]
+    fields: [image, title, author]
     categories: cloud
     sort-ui: true
     filter-ui: true

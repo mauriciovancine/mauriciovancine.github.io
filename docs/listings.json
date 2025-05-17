@@ -7,6 +7,7 @@
     "listing": "/blog/index.html",
     "items": [
       "/blog/git-intro/index.html",
+      "/blog/r-shiny-intro/index.html",
       "/blog/julia-intro/index.html",
       "/blog/r-reinstall-packages/index.html",
       "/blog/geo-data-source/index.html",
@@ -49,6 +50,7 @@
       "/talk/talk-ecologo-unesp/index.html",
       "/talk/podcast-desabracando-arvores-r/index.html",
       "/talk/podcast-fmsr-geocast/index.html",
+      "/talk/video-ecologia-r-lancamento/index.html",
       "/talk/talk-espacial-uff/index.html",
       "/talk/video-werlive-16/index.html",
       "/talk/talk-enm-gggc/index.html",

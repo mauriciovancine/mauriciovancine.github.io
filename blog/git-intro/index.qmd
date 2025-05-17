@@ -2,7 +2,7 @@
 title: Introdução ao controle de versão com git, GitHub e RStudio
 subtitle: "Principais conceitos de controle de versão usando git"
 author: Maurício Vancine com edições de textos do ChatGPT
-date: "2024-12-21"
+date: 2025-05-01
 categories: ["git", "Versionamento"]
 image: "featured.jpg"
 code-link: true
@@ -48,6 +48,8 @@ Recomendo também olhar o minicurso [gitR: controle de versão com git, GitHub e
 * Curso gratuito (português): [https://rogerdudler.github.io/git-guide/index.pt\_BR.html](https://rogerdudler.github.io/git-guide/index.pt_BR.html)
 * Documentação oficial Git: [https://git-scm.com/doc](https://git-scm.com/doc)
 * GUI recomendada: [GitHub Desktop](https://desktop.github.com)
+
+[Controle de versão - Gabriel Nakamura](https://gabrielnakamura.github.io/USP_reproducibility_BIE5798/basics_git.html)
 
 
 ## O que são Git e GitHub?

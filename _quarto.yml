@@ -85,6 +85,7 @@ format:
   html:
     theme: 
       - cosmo
+    highlight-style: nord
     css: styles.css
     toc: true
 

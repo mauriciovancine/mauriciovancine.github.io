@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Maurício Vancine">
+
+<title>Introdução ao Shiny do R – Maurício Vancine</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4122062fe1e9b2b9700a110aabccf5e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f3f416ad1aa407572e315065590997f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Maurício Vancine</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talk/index.html"> 
+<span class="menu-text">Palestras</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching/index.html"> 
+<span class="menu-text">Ensino</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project/index.html"> 
+<span class="menu-text">Projetos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publication/index.html"> 
+<span class="menu-text">Publicações</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://mauriciovancine.github.io/cv/cv-academic.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://mauriciovancine.github.io/resume/resume.pdf" target="_blank"> 
+<span class="menu-text">Resumé</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/mauriciovancine/mauriciovancine.github.io" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#contextualização" id="toc-contextualização" class="nav-link active" data-scroll-target="#contextualização">Contextualização</a></li>
+  <li><a href="#desenvolvimento" id="toc-desenvolvimento" class="nav-link" data-scroll-target="#desenvolvimento">Desenvolvimento</a>
+  <ul class="collapse">
+  <li><a href="#pacote-shiny" id="toc-pacote-shiny" class="nav-link" data-scroll-target="#pacote-shiny">Pacote shiny</a></li>
+  <li><a href="#estrutura-geral-de-uma-aplicação-shiny" id="toc-estrutura-geral-de-uma-aplicação-shiny" class="nav-link" data-scroll-target="#estrutura-geral-de-uma-aplicação-shiny">Estrutura geral de uma aplicação shiny</a></li>
+  <li><a href="#layouts-e-estilos-no-shiny" id="toc-layouts-e-estilos-no-shiny" class="nav-link" data-scroll-target="#layouts-e-estilos-no-shiny">Layouts e estilos no shiny</a></li>
+  <li><a href="#principais-funcionalidades" id="toc-principais-funcionalidades" class="nav-link" data-scroll-target="#principais-funcionalidades">Principais funcionalidades</a></li>
+  <li><a href="#interatividade" id="toc-interatividade" class="nav-link" data-scroll-target="#interatividade">Interatividade</a></li>
+  <li><a href="#reatividade" id="toc-reatividade" class="nav-link" data-scroll-target="#reatividade">Reatividade</a></li>
+  <li><a href="#visualizações-interativas" id="toc-visualizações-interativas" class="nav-link" data-scroll-target="#visualizações-interativas">Visualizações interativas</a></li>
+  <li><a href="#publicação-de-aplicações" id="toc-publicação-de-aplicações" class="nav-link" data-scroll-target="#publicação-de-aplicações">Publicação de aplicações</a></li>
+  </ul></li>
+  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">Conclusão</a></li>
+  <li><a href="#para-saber-mais" id="toc-para-saber-mais" class="nav-link" data-scroll-target="#para-saber-mais">Para saber mais</a>
+  <ul class="collapse">
+  <li><a href="#sites" id="toc-sites" class="nav-link" data-scroll-target="#sites">Sites</a></li>
+  <li><a href="#livros" id="toc-livros" class="nav-link" data-scroll-target="#livros">Livros</a></li>
+  <li><a href="#vídeos" id="toc-vídeos" class="nav-link" data-scroll-target="#vídeos">Vídeos</a></li>
+  <li><a href="#cursos-pagos" id="toc-cursos-pagos" class="nav-link" data-scroll-target="#cursos-pagos">Cursos pagos</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introdução ao Shiny do R</h1>
+<p class="subtitle lead">Introdução aos principais conceitos de criação de dashboards no R através do pacote Shiny.</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Shiny</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Maurício Vancine </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2 de janeiro de 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="contextualização" class="level2">
+<h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
+<p>Eu tive conhecimento do <a href="https://shiny.posit.co/">shiny</a> lá por volta de 2017. Em 2018, trabalhei um pouco com a ferramenta para desenvolver uma aplicação que coletava pontos de classes de uso e cobertura da terra na Amazônia. Desde então, nunca mais trabalhei com a ferramente e ela teve uma séria de modificações e aprimoramentos que pretendo estudar.</p>
+<p>Este post é o começo da retomada desses estudos.</p>
+</section>
+<section id="desenvolvimento" class="level2">
+<h2 class="anchored" data-anchor-id="desenvolvimento">Desenvolvimento</h2>
+<section id="pacote-shiny" class="level3">
+<h3 class="anchored" data-anchor-id="pacote-shiny">Pacote shiny</h3>
+<p><a href="https://shiny.posit.co/">Shiny</a> é um pacote do R que permite criar aplicações web interativas a partir do código R, sem a necessidade de conhecimentos avançados em desenvolvimento web.</p>
+<p>Ele é amplamente utilizado por cientistas de dados, pesquisadores e analistas para criar <a href="https://en.wikipedia.org/wiki/Dashboard_(computing)">dashboards</a>, que são ferramentas de visualização e interfaces interativas para manipulação de dados e modelos estatísticos.</p>
+<p>Com o <strong>shiny</strong> é possível integrar gráficos, tabelas e entradas de usuário em uma aplicação que pode ser executada localmente ou publicada na web, tornando os resultados das análises mais acessíveis para públicos não especializados.</p>
+</section>
+<section id="estrutura-geral-de-uma-aplicação-shiny" class="level3">
+<h3 class="anchored" data-anchor-id="estrutura-geral-de-uma-aplicação-shiny">Estrutura geral de uma aplicação shiny</h3>
+<p>Uma aplicação Shiny é composta por três partes principais:</p>
+<p><strong>1. Interface do usuário (<em>User Interface</em> - UI)</strong></p>
+<p>A <strong>UI</strong> define o layout e os elementos visuais da aplicação. Ela é onde você organiza componentes como painéis, menus, sliders, gráficos e tabelas. Para criar uma interface, você utiliza funções como <code>fluidPage()</code>, <code>sidebarLayout()</code> e outros componentes interativos.</p>
+<p>Exemplo de componentes comuns:</p>
+<ul>
+<li><strong><code>fluidPage()</code></strong>: Layout fluido que ajusta os elementos à largura da janela.</li>
+<li><strong><code>sidebarLayout()</code></strong>: Divide a aplicação em uma barra lateral e um painel principal.</li>
+<li><strong><code>sliderInput()</code></strong>: Adiciona um controle deslizante.</li>
+<li><strong><code>textOutput()</code></strong>: Exibe texto gerado dinamicamente.</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">titlePanel</span>(<span class="st">"Título da Aplicação"</span>),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sidebarLayout</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sidebarPanel</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">sliderInput</span>(<span class="st">"slider"</span>, <span class="st">"Escolha um valor:"</span>, <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">100</span>, <span class="at">value =</span> <span class="dv">50</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mainPanel</span>(</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">textOutput</span>(<span class="st">"output_text"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>2. Servidor (<em>Server</em>)</strong></p>
+<p>O <strong>Servidor</strong> processa entradas, realiza cálculos ou análises e fornece as saídas que serão exibidas na interface. Ele utiliza funções reativas como <code>renderText()</code>, <code>renderPlot()</code>, <code>renderTable()</code>, entre outras.</p>
+<p>No exemplo abaixo, o valor escolhido no slider é exibido como texto:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">$</span>output_text <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(<span class="st">"Você selecionou o valor:"</span>, input<span class="sc">$</span>slider)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>3. Função Principal</strong></p>
+<p>A função <code>shinyApp()</code> conecta a interface e o servidor, e executa a aplicação:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Aplicação <strong>shiny</strong> sendo executada localmente:</p>
+<p><img src="img/shiny_app.png" class="img-fluid"></p>
+</section>
+<section id="layouts-e-estilos-no-shiny" class="level3">
+<h3 class="anchored" data-anchor-id="layouts-e-estilos-no-shiny">Layouts e estilos no shiny</h3>
+<p>O Shiny oferece diferentes layouts para organizar os elementos da interface:</p>
+<ul>
+<li><strong><code>fluidPage()</code></strong>: layout fluido básico</li>
+<li><strong><code>navbarPage()</code></strong>: layout com abas de navegação</li>
+<li><strong><code>sidebarLayout()</code></strong>: layout com barra lateral</li>
+<li><strong><code>splitLayout()</code></strong>: divide a página em várias colunas</li>
+</ul>
+<p>Exemplo de layout com abas:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">navbarPage</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Minha Aplicação"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabPanel</span>(<span class="st">"Aba 1"</span>, <span class="fu">textOutput</span>(<span class="st">"text1"</span>)),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabPanel</span>(<span class="st">"Aba 2"</span>, <span class="fu">textOutput</span>(<span class="st">"text2"</span>))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Você pode usar CSS para personalizar sua aplicação Shiny. O CSS pode ser incluído diretamente no código ou em arquivos externos.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  tags<span class="sc">$</span><span class="fu">style</span>(<span class="fu">HTML</span>(<span class="st">"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="st">body {background-color: #f4f4f9;}</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="st">h1 {color: #4CAF50;}</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">titlePanel</span>(<span class="st">"Aplicação com Estilo"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="principais-funcionalidades" class="level3">
+<h3 class="anchored" data-anchor-id="principais-funcionalidades">Principais funcionalidades</h3>
+<p>As funcionalidades do Shiny oferecem uma ampla gama de possibilidades, permitindo desde a manipulação de dados até a criação de interfaces sofisticadas e visualizações dinâmicas. Abaixo, os principais recursos foram organizados e detalhados para destacar suas aplicações práticas:</p>
+<ul>
+<li><strong>Interatividade</strong>: permite criar elementos interativos como sliders, caixas de seleção, botões, menus suspensos e upload de arquivos</li>
+<li><strong>Visualizações interativas</strong>: integração com pacotes gráficos como ggplot2, plotly e leaflet para criar gráficos, mapas e tabelas interativos</li>
+<li><strong>Reatividade</strong>: permite que os outputs mudem automaticamente sempre que uma entrada for alterada, sem a necessidade de recarregar a página</li>
+<li><strong>Gerenciamento de dados</strong>: leitura, manipulação e visualização de grandes volumes de dados diretamente na interface, além de conexão com APIs para obter dados externos em tempo real</li>
+<li><strong>Upload e download de arquivos</strong>: permite que os usuários carreguem arquivos para a aplicação e baixem resultados</li>
+<li><strong>Integração com banco de dados</strong>: conexão com bancos SQL (MySQL, PostgreSQL) e NoSQL (MongoDB) para leitura e gravação de dados</li>
+<li><strong>Sessões e logs</strong>: gerenciamento de múltiplos usuários com sessões personalizadas e registre interações para auditoria e monitoramento</li>
+<li><strong>Criação de dashboards</strong>: construção de interfaces amigáveis e responsivas para análise de dados. Uso de pacotes como shinydashboard para design de painéis sofisticados</li>
+<li><strong>Escalabilidade e hospedagem</strong>: implantação local, em servidores Shiny Server, ou na nuvem (ex.: ShinyApps.io)</li>
+</ul>
+</section>
+<section id="interatividade" class="level3">
+<h3 class="anchored" data-anchor-id="interatividade">Interatividade</h3>
+<p>A interatividade é um dos principais diferenciais do <strong>Shiny</strong>, permitindo a criação de interfaces altamente dinâmicas e adaptáveis. Essa funcionalidade possibilita que os usuários interajam diretamente com a aplicação para controlar inputs, visualizar resultados em tempo real e realizar ajustes personalizados. Abaixo, detalhamos os elementos principais:</p>
+<p><strong>1. Elementos de entrada (<em>inputs</em>)</strong><br>
+Os elementos de entrada são componentes que permitem ao usuário fornecer dados ou ajustar parâmetros da aplicação. Exemplos incluem:</p>
+<ul>
+<li><strong>Sliders (<code>sliderInput()</code>)</strong>:
+<ul>
+<li>Controle de valores numéricos contínuos ou intervalos</li>
+<li>Usado para definir filtros, limites de dados ou parâmetros em análises</li>
+<li>Exemplo: Escolher uma faixa de tempo para análise</li>
+</ul></li>
+<li><strong>Caixas de Seleção (<code>checkboxInput()</code>, <code>checkboxGroupInput()</code>)</strong>:
+<ul>
+<li>Permitem escolhas binárias (sim/não) ou múltiplas</li>
+<li>Exemplo: Ativar ou desativar camadas em um mapa interativo</li>
+</ul></li>
+<li><strong>Botões (<code>actionButton()</code>)</strong>:
+<ul>
+<li>Executam ações específicas apenas quando clicados</li>
+<li>Exemplo: Iniciar uma análise estatística ou atualizar um gráfico</li>
+</ul></li>
+<li><strong>Menus Suspensos (<code>selectInput()</code>, <code>pickerInput()</code>)</strong>:
+<ul>
+<li>Apresentam opções de forma compacta, permitindo que o usuário selecione uma ou mais</li>
+<li>Exemplo: Escolher uma variável em um conjunto de dados para análise</li>
+</ul></li>
+<li><strong>Campos de Texto e Áreas de Texto (<code>textInput()</code>, <code>textareaInput()</code>)</strong>:
+<ul>
+<li>Permitem a entrada de texto pelo usuário</li>
+<li>Exemplo: Inserir nomes, códigos ou descrições para relatórios</li>
+</ul></li>
+<li><strong>Upload de Arquivos (<code>fileInput()</code>)</strong>:
+<ul>
+<li>Usuários podem carregar arquivos diretamente para a aplicação</li>
+<li>Exemplo: Importar dados de planilhas ou imagens para visualização ou análise</li>
+</ul></li>
+</ul>
+<p><strong>2. Elementos de saída (<em>outputs</em>)</strong><br>
+Os elementos de saída exibem os resultados das interações realizadas pelo usuário. Exemplos incluem:</p>
+<ul>
+<li><strong>Gráficos e Mapas Interativos</strong>:
+<ul>
+<li>Atualizam dinamicamente com base nos inputs fornecidos</li>
+<li>Integração com pacotes como <code>ggplot2</code>, <code>plotly</code> e <code>leaflet</code></li>
+</ul></li>
+<li><strong>Tabelas (<code>renderTable()</code>, <code>DT::renderDataTable()</code>)</strong>:
+<ul>
+<li>Apresentam dados em formatos tabulares, com suporte para filtros e ordenações</li>
+</ul></li>
+<li><strong>Textos Dinâmicos (<code>renderText()</code>)</strong>:
+<ul>
+<li>Exibem resultados de cálculos ou mensagens personalizadas com base nos inputs</li>
+</ul></li>
+</ul>
+<p><strong>3. Reatividade e feedback imediato</strong><br>
+A interatividade no Shiny é alimentada pela <strong>reatividade</strong>, que permite que outputs sejam atualizados automaticamente sempre que um input associado for alterado.</p>
+<ul>
+<li><strong>Reatividade Automática</strong>:
+<ul>
+<li>Funções reativas como <code>reactive()</code>, <code>observe()</code>, e <code>observeEvent()</code> monitoram mudanças nos inputs e disparam atualizações dos outputs</li>
+<li>Exemplo: Um gráfico que muda dinamicamente ao ajustar um slider de faixa etária</li>
+</ul></li>
+<li><strong>Feedback Visível</strong>:
+<ul>
+<li>Indicadores de carregamento (<code>withProgress()</code>) são usados para mostrar que uma operação está em andamento</li>
+<li>Exemplo: Barra de progresso ao carregar um grande conjunto de dados</li>
+</ul></li>
+</ul>
+<p><strong>4. Integração de inputs e outputs</strong><br>
+Os inputs e outputs podem ser combinados para criar fluxos de trabalho interativos complexos. Exemplo: 1. O usuário carrega um arquivo CSV 2. Seleciona colunas específicas para visualização usando menus suspensos 3. Ajusta parâmetros com sliders e filtros 4. Visualiza os resultados em gráficos e tabelas dinâmicos</p>
+<p><strong>5. Exemplos práticos</strong> - <strong>Painéis de controle</strong>: dashboards interativos que permitem explorar dados ajustando sliders, menus e caixas de seleção - <strong>Filtros dinâmicos</strong>: refinamento de gráficos e tabelas em tempo real com base nos parâmetros selecionados - <strong>Aplicações educacionais</strong>: simulações de modelos matemáticos ou ecológicos em que o usuário ajusta variáveis para observar resultados</p>
+</section>
+<section id="reatividade" class="level3">
+<h3 class="anchored" data-anchor-id="reatividade">Reatividade</h3>
+<p>A <strong>reatividade</strong> é um dos conceitos mais importantes do Shiny. Ela permite que elementos da aplicação sejam atualizados automaticamente quando os valores de entrada mudam.</p>
+<p>Isso pode ser feito com dados de entrada e saída: - <strong>Inputs</strong>: elementos de entrada fornecidos pelo usuário, como sliders, caixas de seleção, botões, etc. - <strong>Outputs</strong>: elementos de saída que exibem resultados, como texto, tabelas, gráficos ou mapas</p>
+<p>As expressões reativas monitoram as entradas e são reexecutadas automaticamente quando uma entrada associada é alterada. Funções reativas incluem:</p>
+<ul>
+<li><strong><code>renderText()</code></strong>: gera texto</li>
+<li><strong><code>renderPlot()</code></strong>: gera gráficos</li>
+<li><strong><code>renderTable()</code></strong>: gera tabelas</li>
+</ul>
+<p>Exemplo de reatividade:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">$</span>squared <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(<span class="st">"O quadrado do valor é:"</span>, input<span class="sc">$</span>slider<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="visualizações-interativas" class="level3">
+<h3 class="anchored" data-anchor-id="visualizações-interativas">Visualizações interativas</h3>
+<p>O <strong>Shiny</strong> é amplamente utilizado para criar visualizações interativas, permitindo aos usuários explorar e analisar dados de forma dinâmica. A seguir, apresento detalhes sobre como criar e personalizar visualizações interativas no <strong>Shiny</strong>, abordando pacotes, exemplos práticos e boas práticas.</p>
+<p>No Shiny, as visualizações podem incluir gráficos, mapas, tabelas e outras representações interativas. Aqui estão alguns exemplos:</p>
+<ul>
+<li><strong>Gráficos 2D/3D</strong>: criados com pacotes como <strong>ggplot2</strong>, <strong>plotly</strong>, e <strong>echarts4r</strong></li>
+<li><strong>Mapas interativos</strong>: desenvolvidos com <strong>leaflet</strong> ou <strong>mapdeck</strong></li>
+<li><strong>Tabelas interativas</strong>: usando <strong>DT</strong> (DataTables) para permitir ordenação, pesquisa e exportação</li>
+<li><strong>Gráficos dinâmicos</strong>: gráficos de dispersão interativos ou heatmaps</li>
+</ul>
+<p><strong>Gráficos</strong> - <strong>ggplot2</strong>: criação de gráficos estáticos que podem ser integrados ao Shiny - <strong>plotly</strong>: transforma gráficos <code>ggplot2</code> em interativos ou cria gráficos do zero</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>output<span class="sc">$</span>plot <span class="ot">&lt;-</span> <span class="fu">renderPlotly</span>({</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_ly</span>(<span class="at">data =</span> mtcars, <span class="at">x =</span> <span class="sc">~</span>mpg, <span class="at">y =</span> <span class="sc">~</span>hp, <span class="at">type =</span> <span class="st">'scatter'</span>, <span class="at">mode =</span> <span class="st">'markers'</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>highcharter</strong>: gráficos interativos baseados na biblioteca JavaScript Highcharts</li>
+<li><strong>echarts4r</strong>: biblioteca moderna para gráficos altamente personalizáveis</li>
+</ul>
+<p><strong>Mapas</strong> - <strong>leaflet</strong>: Criação de mapas interativos com marcadores, pop-ups e camadas</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>output<span class="sc">$</span>map <span class="ot">&lt;-</span> <span class="fu">renderLeaflet</span>({</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addMarkers</span>(<span class="at">lng =</span> <span class="sc">-</span><span class="fl">47.92</span>, <span class="at">lat =</span> <span class="sc">-</span><span class="fl">15.78</span>, <span class="at">popup =</span> <span class="st">"Brasília"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>tmap</strong>: alternativa para mapas interativos temáticos</li>
+<li><strong>sf</strong> + <strong>shiny</strong>: manipulação de dados espaciais e visualização</li>
+</ul>
+<p><strong>Tabelas</strong> - <strong>DT</strong>: permite criar tabelas interativas com filtros, ordenação e exportação de dados</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>output<span class="sc">$</span>table <span class="ot">&lt;-</span> <span class="fu">renderDT</span>({</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">datatable</span>(mtcars, <span class="at">options =</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">5</span>))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Dashboards</strong> - <strong>shinydashboard</strong>: usado para criar dashboards com painéis interativos - <strong>flexdashboard</strong>: integração de gráficos e tabelas em painéis</p>
+</section>
+<section id="publicação-de-aplicações" class="level3">
+<h3 class="anchored" data-anchor-id="publicação-de-aplicações">Publicação de aplicações</h3>
+<p>Publicações podem ser feitas localmente ou na web.</p>
+<p>Publicações locais geralmente são sadas para testes através da função <code>runApp()</code> executa a aplicação localmente.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>shiny<span class="sc">::</span><span class="fu">runApp</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Publicações na web são realizadas através do <a href="https://www.shinyapps.io/"><strong>ShinyApps.io</strong></a> ou em servidores próprios usando o RStudio Connect.</p>
+<p>Essa plataforma da RStudio permite hospedar aplicações Shiny. Basta criar uma conta, instalar o pacote <code>rsconnect</code> e seguir os passos para publicar sua aplicação.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rsconnect)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>rsconnect<span class="sc">::</span><span class="fu">deployApp</span>(<span class="st">"caminho/para/sua/aplicacao"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Você pode usar o <strong>Shiny Server</strong> (versão gratuita ou Pro) para hospedar suas aplicações em um servidor Linux.</p>
+</section>
+</section>
+<section id="conclusão" class="level2">
+<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p>O <strong>shiny</strong> é uma ferramenta extremamente flexível e poderosa, sendo amplamente utilizado em visualização de dados, criação de dashboards e aplicações analíticas.</p>
+</section>
+<section id="para-saber-mais" class="level2">
+<h2 class="anchored" data-anchor-id="para-saber-mais">Para saber mais</h2>
+<section id="sites" class="level3">
+<h3 class="anchored" data-anchor-id="sites">Sites</h3>
+<ul>
+<li><a href="https://programando-em-shiny.curso-r.com/">Programando em Shiny</a></li>
+</ul>
+</section>
+<section id="livros" class="level3">
+<h3 class="anchored" data-anchor-id="livros">Livros</h3>
+<ul>
+<li>Beeley, C. (2016). Web Application Development With R Using Shiny: Integrate the Power of R With the Simplicity of Shiny to Deliver Cutting-edge Analytics over the Web (2nd edition). Packt Pub Ltd.</li>
+<li>Beeley, C., &amp; Sukhdeve, S. R. (2018). Web application development with R using Shiny: Build stunning graphics and interactive data visualizations to deliver cutting-edge analytics (Third edition). Packt Publishing.</li>
+<li>Fay, C., Rochette, S., Guyader, V., &amp; Girard, C. (2021). Engineering Production-Grade Shiny Apps (1st edition). Chapman and Hall/CRC. <a href="https://engineering-shiny.org/" class="uri">https://engineering-shiny.org/</a></li>
+<li>Granjon, D. (2022). Outstanding user interfaces with Shiny (First edition). CRC Press. <a href="https://doi.org/10.1201/9781003124924" class="uri">https://doi.org/10.1201/9781003124924</a></li>
+<li>Majumdar, P. (2021). Learn Emotion Analysis with R. BPB Publications.</li>
+<li>Moon, K.-W. (2016). Learn ggplot2 Using Shiny App (1st ed.&nbsp;2016). Springer International Publishing: Imprint: Springer. <a href="https://doi.org/10.1007/978-3-319-53019-2" class="uri">https://doi.org/10.1007/978-3-319-53019-2</a></li>
+<li>Moraga, P. (2020). Geospatial health data: Modeling and visualization with R-INLA and Shiny. CRC Press.</li>
+<li>Sievert, C. (2020). Interactive web-based data visualization with R, plotly, and shiny. CRC Press, Taylor and Francis Group.</li>
+<li>Wickham, H. (2021). Mastering Shiny: Build Interactive Apps, Reports, and Dashboards Powered by R (1ª edição). O’Reilly Media. <a href="https://mastering-shiny.org/" class="uri">https://mastering-shiny.org/</a></li>
+<li>Wiley, M. (with Wiley, J. F.). (2020). Advanced R 4 Data Programming and the Cloud: Using PostgreSQL, AWS, and Shiny (2nd ed). Apress L. P.</li>
+</ul>
+</section>
+<section id="vídeos" class="level3">
+<h3 class="anchored" data-anchor-id="vídeos">Vídeos</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=l-Xfp1IYUF0&amp;list=PL-TW4kUtfFVykid5T5IYKOMqhti7HBDc9">Dashboard com R Shiny - Gabriel Lima Gomes</a></li>
+<li><a href="https://www.youtube.com/watch?v=u9YqkQQ_1C0">10 dicas para programar melhor em Shiny - Curso-R</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLtqF5YXg7GLkxx_GGXDI_EiAvkhY9olbe">R Shiny Web Application - Data Professor</a></li>
+</ul>
+</section>
+<section id="cursos-pagos" class="level3">
+<h3 class="anchored" data-anchor-id="cursos-pagos">Cursos pagos</h3>
+<ul>
+<li><a href="https://curso-r.com/cursos/dashboards/">Dashboards em Shiny - Curso R</a></li>
+<li><a href="https://curso-r.com/cursos/deploy/">Deploy - Curso R</a></li>
+<li><a href="https://escola.omegadatascience.com.br/dashboards/26/aplicacoes-e-dashboards-com-r-essentials/">Aplicações e dashboards com R - Ômega Data Science</a></li>
+</ul>
+<p>Fonte da imagem: <a href="https://shiny.posit.co/">Posit</a>.</p>
+<style>
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 105px; /* um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(28, 108, 190, 0.7); /* azul com transparência */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#topBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+↑ Topo
+</button>
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/mauriciovancine">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-9650-7575">
+<p><i class="ai  ai-orcid" aria-label="orcid"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.webofscience.com/wos/author/record/837504">
+<p><i class="ai  ai-researcherid" aria-label="researcherid"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888">
+<p><i class="ai  ai-scopus" aria-label="scopus"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ">
+<p><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Mauricio_Vancine2">
+<p><i class="ai  ai-researchgate" aria-label="researchgate"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.zotero.org/mauriciovancine">
+<p><i class="ai  ai-zotero" aria-label="zotero"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="http://lattes.cnpq.br/9761288418931193">
+<p><i class="ai  ai-lattes" aria-label="lattes"></i></p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/mauricio-vancine/">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../contact.html">
+<p>Contato</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>Licença</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../contributors.html">
+<p>Financiamento</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

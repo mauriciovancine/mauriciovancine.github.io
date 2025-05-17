@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Fernando Rodrigues da Silva, Thiago Gonçalves-Souza, Gustavo Brant Paterno, Diogo Borges Provete, Maurício Humberto Vancine,">
 
-<title>Blog – Maurício Vancine</title>
+<title>Análises Ecológicas no R (Lançamento) – Maurício Vancine</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +24,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../img/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4122062fe1e9b2b9700a110aabccf5e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f3f416ad1aa407572e315065590997f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4122062fe1e9b2b9700a110aabccf5e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f3f416ad1aa407572e315065590997f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,67 +70,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog'] = new List('listing-blog', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -141,7 +83,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Maurício Vancine</span>
     </a>
   </div>
@@ -152,27 +94,27 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"> 
+    <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">Sobre</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../talk/index.html"> 
+    <a class="nav-link" href="../../talk/index.html"> 
 <span class="menu-text">Palestras</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../teaching/index.html"> 
+    <a class="nav-link" href="../../teaching/index.html"> 
 <span class="menu-text">Ensino</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/index.html"> 
+    <a class="nav-link" href="../../project/index.html"> 
 <span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publication/index.html"> 
+    <a class="nav-link" href="../../publication/index.html"> 
 <span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
@@ -192,26 +134,41 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Q3Vyc29z"><span class="quarto-category-count category-cloud-2">Cursos</span></div><div class="category" data-category="RGFkb3M="><span class="quarto-category-count category-cloud-3">Dados</span></div><div class="category" data-category="RGlzY2lwbGluYXM="><span class="quarto-category-count category-cloud-2">Disciplinas</span></div><div class="category" data-category="R2VvcHJvY2Vzc2FtZW50bw=="><span class="quarto-category-count category-cloud-3">Geoprocessamento</span></div><div class="category" data-category="SnVsaWE="><span class="quarto-category-count category-cloud-2">Julia</span></div><div class="category" data-category="UHJvZ3JhbWElQzMlQTclQzMlQTNv"><span class="quarto-category-count category-cloud-4">Programação</span></div><div class="category" data-category="Ug=="><span class="quarto-category-count category-cloud-4">R</span></div><div class="category" data-category="U2hpbnk="><span class="quarto-category-count category-cloud-2">Shiny</span></div><div class="category" data-category="VmVyc2lvbmFtZW50bw=="><span class="quarto-category-count category-cloud-2">Versionamento</span></div><div class="category" data-category="Z2l0"><span class="quarto-category-count category-cloud-2">git</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
-<p class="subtitle lead">Este é meu blog, onde compartilho meus aprendizados sobre R, Python, Julia, Linux, geoprocessamento, o universo e tudo mais…</p>
-</div>
+<h1 class="title">Análises Ecológicas no R (Lançamento)</h1>
+<p class="subtitle lead">Live do lançamento do livro ‘Análises Ecológicas no R’</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Vídeo</div>
+  </div>
+  </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Fernando Rodrigues da Silva, Thiago Gonçalves-Souza, Gustavo Brant Paterno, Diogo Borges Provete, Maurício Humberto Vancine, </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">13 de maio de 2022</p>
+    </div>
+  </div>
   
     
   </div>
@@ -221,256 +178,27 @@ window.Quarto = {
 </header>
 
 
-<div id="post">
-
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<p><a href="https://youtu.be/jYrneB95nes" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-video me-1"></i>YouTube</a></p>
 </div>
 <style>
-#topBtn {
-  display: none;
-  position: fixed;
-  bottom: 105px; /* um pouco acima do fundo */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 14px;
-  font-size: 20px;
-  border: none;
-  border-radius: 6px;
-  background-color: #2381df; 
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: background-color 0.3s;
-}
-#topBtn:hover {
-  background-color: rgba(0, 86, 179, 0.9);
-}
-</style>
-<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-↑ Topo
-</button>
-<script>
-const btn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", () => {
-  const scrollBottom = window.innerHeight + window.scrollY;
-  const docHeight = document.documentElement.scrollHeight;
-
-  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
   }
-});
-</script>
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+<p><br></p>
+<p><img src="featured.jpg" class="img-fluid"></p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-blog">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-blog-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-blog'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Ordenar por</option>
-       <option value="index" data-direction="asc">Padrão</option>
-         <option value="listing-title" data-direction="asc">
-          Título
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Data - Mais antigo
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Data - O mais novo
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filtro">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Z2l0JTJDVmVyc2lvbmFtZW50bw==" data-listing-date-sort="1746068400000" data-listing-file-modified-sort="1747484837727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1810">
-<div class="thumbnail">
-<p><a href="../blog/git-intro/index.html" class="no-external"></a></p><a href="../blog/git-intro/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/git-intro/featured.jpg" class="thumbnail-image"></p>
-</a><p><a href="../blog/git-intro/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/git-intro/index.html" class="no-external">Introdução ao controle de versão com git, GitHub e RStudio</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/git-intro/index.html" class="no-external">Principais conceitos de controle de versão usando git</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/git-intro/index.html" class="no-external">
-<div class="listing-date">
-1 de mai. de 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UiUyQ1NoaW55" data-listing-date-sort="1735786800000" data-listing-file-modified-sort="1747483371139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2214">
-<div class="thumbnail">
-<p><a href="../blog/r-shiny-intro/index.html" class="no-external"></a></p><a href="../blog/r-shiny-intro/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/r-shiny-intro/featured.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/r-shiny-intro/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/r-shiny-intro/index.html" class="no-external">Introdução ao Shiny do R</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/r-shiny-intro/index.html" class="no-external">Introdução aos principais conceitos de criação de dashboards no R através do pacote Shiny.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/r-shiny-intro/index.html" class="no-external">
-<div class="listing-date">
-2 de jan. de 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="SnVsaWElMkNQcm9ncmFtYSVDMyVBNyVDMyVBM28=" data-listing-date-sort="1734750000000" data-listing-file-modified-sort="1746991667904" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4637">
-<div class="thumbnail">
-<p><a href="../blog/julia-intro/index.html" class="no-external"></a></p><a href="../blog/julia-intro/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/julia-intro/featured.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/julia-intro/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/julia-intro/index.html" class="no-external">Introdução à linguagem Julia</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/julia-intro/index.html" class="no-external">Uma breve introdução à linguagem Julia</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/julia-intro/index.html" class="no-external">
-<div class="listing-date">
-21 de dez. de 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-date-sort="1717470000000" data-listing-file-modified-sort="1747222200460" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="153">
-<div class="thumbnail">
-<p><a href="../blog/r-reinstall-packages/index.html" class="no-external"></a></p><a href="../blog/r-reinstall-packages/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/r-reinstall-packages/featured.jpg" class="thumbnail-image"></p>
-</a><p><a href="../blog/r-reinstall-packages/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/r-reinstall-packages/index.html" class="no-external">Reinstalar pacotes depois de atualizar o R</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/r-reinstall-packages/index.html" class="no-external">Depois de atualizar o R, vem a parte chata de reinstalar todos os pacotes, mas o R mesmo pode te ajudar.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/r-reinstall-packages/index.html" class="no-external">
-<div class="listing-date">
-4 de jun. de 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="R2VvcHJvY2Vzc2FtZW50byUyQ0RhZG9z" data-listing-date-sort="1642474800000" data-listing-file-modified-sort="1747133491762" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="377">
-<div class="thumbnail">
-<p><a href="../blog/geo-data-source/index.html" class="no-external"></a></p><a href="../blog/geo-data-source/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/geo-data-source/featured.jpg" class="thumbnail-image"></p>
-</a><p><a href="../blog/geo-data-source/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/geo-data-source/index.html" class="no-external">Fonte de dados geoespaciais</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/geo-data-source/index.html" class="no-external">Lista das principais fontes de dados e pacotes do R de dados geoespaciais</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/geo-data-source/index.html" class="no-external">
-<div class="listing-date">
-18 de jan. de 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="RGlzY2lwbGluYXMlMkNDdXJzb3M=" data-listing-date-sort="1615086000000" data-listing-file-modified-sort="1746991657998" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="752">
-<div class="thumbnail">
-<p><a href="../blog/academic-online-courses/index.html" class="no-external"></a></p><a href="../blog/academic-online-courses/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/academic-online-courses/featured.jpg" class="thumbnail-image"></p>
-</a><p><a href="../blog/academic-online-courses/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/academic-online-courses/index.html" class="no-external">Disciplinas de graduação e pós-graduação on-line</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/academic-online-courses/index.html" class="no-external">Lista de disciplinas de graduação e pós-graduação oferecidas on-line</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/academic-online-courses/index.html" class="no-external">
-<div class="listing-date">
-7 de mar. de 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="R2VvcHJvY2Vzc2FtZW50byUyQ0RhZG9z" data-listing-date-sort="1613790000000" data-listing-file-modified-sort="1747393815018" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1832">
-<div class="thumbnail">
-<p><a href="../blog/geo-crs-datum/index.html" class="no-external"></a></p><a href="../blog/geo-crs-datum/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/geo-crs-datum/featured.jpg" class="thumbnail-image"></p>
-</a><p><a href="../blog/geo-crs-datum/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/geo-crs-datum/index.html" class="no-external">Sistemas de Referência de Coordenadas e Datum</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/geo-crs-datum/index.html" class="no-external">Uma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/geo-crs-datum/index.html" class="no-external">
-<div class="listing-date">
-20 de fev. de 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-date-sort="1598410800000" data-listing-file-modified-sort="1747046089637" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="46">
-<div class="thumbnail">
-<p><a href="../blog/r-error/index.html" class="no-external"></a></p><a href="../blog/r-error/index.html" class="no-external">
-<p><img loading="lazy" src="../blog/r-error/featured.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/r-error/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/r-error/index.html" class="no-external">Help me help you: um bestiário para entender erros e pedir ajuda no R</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/r-error/index.html" class="no-external">Um guia para entender erros e pedir ajuda no R</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/r-error/index.html" class="no-external">
-<div class="listing-date">
-26 de ago. de 2020
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-Sem itens correspondentes
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -948,17 +676,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../contact.html">
+    <a class="nav-link" href="../../contact.html">
 <p>Contato</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../license.html">
+    <a class="nav-link" href="../../license.html">
 <p>Licença</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../contributors.html">
+    <a class="nav-link" href="../../contributors.html">
 <p>Financiamento</p>
 </a>
   </li>  
