@@ -5,7 +5,7 @@ listing:
   - id: teaching
     contents: "**/*/index.qmd"
     type: grid
-    fields: [image, author, title, subtitle]
+    fields: [image, author, title]
     categories: cloud
     sort-ui: true
     filter-ui: true

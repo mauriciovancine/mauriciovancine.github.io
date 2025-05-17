@@ -5,7 +5,7 @@ listing:
   - id: blog
     contents: "**/*/index.qmd"
     type: default
-    fields: [image, date, title, subtitle]
+    fields: [image, date, title]
     sort: "date desc"
     categories: cloud
     sort-ui: true
