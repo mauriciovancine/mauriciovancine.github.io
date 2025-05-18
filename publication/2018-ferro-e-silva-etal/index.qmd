@@ -1,0 +1,59 @@
+---
+title: "Spatial prediction of risk areas for vector transmission of Trypanosoma cruzi in the State of Paraná, southern Brazil"
+subtitle: "Analisamos como o clima e a estrutura da paisagem explicam a adequabilidade ambiental de Triatomas que podem estar infestados com Trypanosoma cruzi em municípios do Estado do Paraná."
+author: "Andréia Mantovani Ferro e Silva, Thadeu Sobral-Souza, Maurício Humberto Vancine, Renata Lara Muylaert, Ana Paula de Abreu, Sandra Marisa Pelloso, Maria Dalva de Barros Carvalho, Luciano de Andrade, Milton Cezar Ribeiro, Max Jean de Ornelas Toledo"
+date: 2018-10-26
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1371/journal.pntd.0006907" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2018-ferro-e-silva-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+After obtaining certification of the absence of transmission of the Trypanosoma cruzi by Triatoma infestans in 2006, other native species of protozoan vectors have been found in human dwellings within municipalities of the State of Paraná, Southern Brazil. However, the spatial distribution of T. cruzi vectors and how climatic and landscape combined variables explain the distribution are still poorly understood. The goal of this study was to predict the potential distribution of T. cruzi vectors as a proxy for Chagas disease transmission risk using Ecological Niche Models (ENMs) based on climatic and landscape variables. We hypothesize that ENM based on both climate and landscape variables are more powerful than climate-only or landscape-only models, and that this will be true independent of vector species. A total of 2,662 records of triatomines of five species were obtained by community-based entomological surveillance from 2007 to 2013. The species with the highest number of specimens was Panstrongylus megistus (73%; n = 1,943), followed by Panstrongylus geniculatus (15.4%; 411), Rhodnius neglectus (6.0%; 159), Triatoma sordida (4.5%; 119) and Rhodnius prolixus (1.1%; 30). Of the total, 71.9% were captured at the intradomicile. T. cruzi infection was observed in 19.7% of the 2,472 examined insects. ENMs were generated based on selected climate and landscape variables with 1 km 2 spatial resolution. Zonal statistics were used for classifying the municipalities as to the risk of occurrence of synanthropic triatomines. The integrated analysis of the climate and landscape suitability on triatomines geographical distribution was powerful on generating good predictive models. Moreover, this showed that some municipalities in the northwest, north and northeast of the Paraná state have a higher risk of T. cruzi vector transmission. This occurs because those regions present high climatic and landscape suitability values for occurrence of their vectors. The frequent invasion of houses by infected triatomines clearly indicates a greater risk of transmission of T. cruzi to the inhabitants. More public health attention should be given in the northern areas of the State of Paraná, which presents high climate and landscape suitabilities for the disease vectors. In conclusion, our results–through spatial analysis and predictive maps–showed to be effective in identifying areas of potential distribution and, consequently, in the definition of strategic areas and actions to prevent new cases of Chagas’ disease, reinforcing the need for continuous and robust surveillance in these areas.
+
+## Citação
+
+```
+@article{ferro_e_silva_etal_2018,
+    title = {Spatial prediction of risk areas for vector transmission of {Trypanosoma} cruzi in the {State} of {Paraná}, southern {Brazil}},
+    volume = {12},
+    issn = {1935-2735},
+    url = {https://dx.plos.org/10.1371/journal.pntd.0006907},
+    doi = {10.1371/journal.pntd.0006907},
+    language = {en},
+    number = {10},
+    urldate = {2022-06-05},
+    journal = {PLOS Neglected Tropical Diseases},
+    author = {Ferro e Silva, Andréia Mantovani and Sobral-Souza, Thadeu and Vancine, Maurício Humberto and Muylaert, Renata Lara and de Abreu, Ana Paula and Pelloso, Sandra Marisa and de Barros Carvalho, Maria Dalva and de Andrade, Luciano and Ribeiro, Milton Cezar and Toledo, Max Jean de Ornelas},
+    editor = {Caccone, Adalgisa},
+    month = oct,
+    year = {2018},
+    pages = {e0006907},
+}
+```
