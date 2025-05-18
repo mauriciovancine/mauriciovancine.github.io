@@ -51,6 +51,7 @@ Recomendo também olhar o minicurso [gitR: controle de versão com git, GitHub e
 
 [Controle de versão - Gabriel Nakamura](https://gabrielnakamura.github.io/USP_reproducibility_BIE5798/basics_git.html)
 
+Fonte da imagem: [Pexels](https://www.pexels.com/pt-br/foto/mao-segurando-holding-papel-11035539).
 
 ## O que são Git e GitHub?
 

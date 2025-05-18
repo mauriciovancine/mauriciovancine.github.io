@@ -3,7 +3,6 @@ title: "Maurício Vancine"
 pagetitle: "Maurício Vancine"
 subtitle: "Pesquisador de Pós-Doutorado na Universidade de Campinas"
 image: img/avatar-circle.png
-image-alt: "Minha primeira foto científica. *Boana faber* na Serra do Japi em 2011."
 
 about:
   template: solana # solana, marquee, trestles e default

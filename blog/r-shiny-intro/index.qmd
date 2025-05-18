@@ -4,7 +4,7 @@ subtitle: "Introdução aos principais conceitos de criação de dashboards no R
 author: Maurício Vancine
 date: 2025-01-02
 categories: ["R", "Shiny"]
-image: featured.png
+image: featured.jpg
 toc: true
 draft: false
 code-link: true
@@ -303,7 +303,7 @@ O **shiny** é uma ferramenta extremamente flexível e poderosa, sendo amplament
 -   [Deploy - Curso R](https://curso-r.com/cursos/deploy/)
 -   [Aplicações e dashboards com R - Ômega Data Science](https://escola.omegadatascience.com.br/dashboards/26/aplicacoes-e-dashboards-com-r-essentials/)
 
-Fonte da imagem: [Posit](https://shiny.posit.co/).
+Fonte da imagem: [FreePick](https://www.freepik.com/free-photo/representation-user-experience-interface-design_94963707.htm#fromView=search&page=1&position=25&uuid=6bd81308-1690-478d-a1f3-6f3ebd791ae1&query=dashboard).
 
 <style>
 #topBtn {

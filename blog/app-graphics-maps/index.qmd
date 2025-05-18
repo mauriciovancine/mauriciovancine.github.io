@@ -1,0 +1,72 @@
+---
+title: "Gráficos e mapas além do R"
+subtitle: "Lista dos principais APPs gratuitos para gráficos e mapas."
+author: Maurício Vancine
+date: 2024-12-21
+categories: ["Software"]
+image: "featured.jpg"
+code-link: true
+execute:
+  echo: false
+  message: false
+toc: true
+editor: source
+---
+
+## Contextualização
+
+Algumas vezes precisamos fazer gráficos ou mapas de forma rápida. E na maior parte do tempo, importar dados e escrever scripts no R e outras linguagen, ou mesmo o QGIS pode ser um pouco cansativo.
+
+## Principais APPs gratuitos para gráficos e mapas
+
+Depois que assisti ao vídeo do [Prof. Carlos Grohmann](http://carlosgrohmann.com/gmaps/): [Faça gráficos incríveis de maneira SIMPLES e GRATUITA - Scimago Graphica](https://www.youtube.com/watch?v=PIlVCBUzIG8), tive a ideia de compilar uma lista de APPs gratuitos para gráficos e mapas (@tbl-table1).
+
+```{r}
+#| label: tbl-table1
+#| tbl-cap: "Lista dos principais APPs gratuitos para gráficos e mapas."
+#| tbl-cap-align: "left"
+
+app_graphics_maps <- readr::read_csv("app_graphics_maps.csv", show_col_types = FALSE)
+knitr::kable(app_graphics_maps)
+```
+
+Fonte da imagem: [Egor Komarov/Pexels](https://www.pexels.com/pt-br/foto/tecnologia-comprimido-tablet-musica-13003485/).
+
+<style>
+#topBtn {
+display: none;
+position: fixed;
+bottom: 105px; /* um pouco acima do fundo */
+left: 50%;
+transform: translateX(-50%);
+padding: 10px 14px;
+font-size: 20px;
+border: none;
+border-radius: 6px;
+background-color: rgba(28, 108, 190, 0.7); /* azul com transparência */
+color: white;
+cursor: pointer;
+box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+transition: background-color 0.3s;
+}
+#topBtn:hover {
+background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Topo</button>
+
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+const scrollBottom = window.innerHeight + window.scrollY;
+const docHeight = document.documentElement.scrollHeight;
+
+if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+btn.style.display = "block";
+} else {
+btn.style.display = "none";
+}
+});
+</script>
