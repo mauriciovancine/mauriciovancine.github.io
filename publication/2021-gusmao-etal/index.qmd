@@ -1,0 +1,63 @@
+---
+title: "Host diversity outperforms climate as a global driver of symbiont diversity in the bird‐feather mite system"
+subtitle: "Consideramos os fatores abióticos (clima) e bióticos (diversidade de espécies de aves) para determinar os padrões de riqueza de ácaros de penas no mundo todo."
+author: "Reginaldo A. F. Gusmão, Fabio A. Hernandes, Maurício Humberto Vancine, Luciano N. Naka, Jorge Doña, Thiago Gonçalves‐Souza"
+date: 2021-03-01
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1111/ddi.13201" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2021-gusmao-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.jpg)
+
+## Resumo
+
+**Aim**: The simultaneous influence of abiotic and biotic factors as main drivers of global species distributions remains poorly understood, especially in host‐dependent groups. In this study, we diverge from traditional macroecological approaches by considering both biotic (avian species diversity) and abiotic (climatic) factors in determining the global distribution pattern of feather mite species richness, one of the most abundant and diverse bird ectosymbionts.\
+**Location**: Global.\
+**Methods**: We used a global dataset of feather mite–bird interactions published in 2016, complemented with an up‐to‐date literature survey. We created statistical models designed to explain the effect of abiotic (i.e., temperature, precipitation and energy‐related variables) and biotic factors (bird species richness) on the species richness of feather mites. We used these models to predict global distribution patterns of mites and estimate each explanatory variable's relative importance in temperate and tropical regions.\
+**Results**: According to our models, bird species richness accounts for \~63% of the global distribution pattern of mites, which is ten times more relevant than climatic variables. Among abiotic drivers, precipitation intensity and seasonality were the most important variables, accounting for 10% of mite species richness. This figure is lower in tropical regions, where biotic factors are seven times more important than in temperate regions.\
+**Main conclusions**: We demonstrate that global mite diversity was primarily determined by biotic and, to a lesser extent, abiotic factors. The relative importance of the predictive variables, however, varied between tropical and temperate regions. The strong association between bird species richness and feather mite species diversity at a global scale raises concerns about the potential for future co‐extinctions.
+
+## Citação
+
+```         
+@article{gusmao_etal_2021,
+    title = {Host diversity outperforms climate as a global driver of symbiont diversity in the bird‐feather mite system},
+    volume = {27},
+    issn = {1366-9516, 1472-4642},
+    url = {https://onlinelibrary.wiley.com/doi/10.1111/ddi.13201},
+    doi = {10.1111/ddi.13201},
+    language = {en},
+    number = {3},
+    urldate = {2022-06-08},
+    journal = {Diversity and Distributions},
+    author = {Gusmão, Reginaldo A. F. and Hernandes, Fabio A. and Vancine, Maurício H. and Naka, Luciano N. and Doña, Jorge and Gonçalves‐Souza, Thiago},
+    editor = {Cunningham, Susan},
+    month = mar,
+    year = {2021},
+    pages = {416--426},
+}
+```
