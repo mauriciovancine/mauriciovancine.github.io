@@ -231,6 +231,10 @@ editor: source
 
 1. [Conservar a biodiversidade exige grandes áreas florestais e paisagens contínuas](https://jornal.usp.br/ciencias/conservar-a-biodiversidade-exige-grandes-areas-florestais-e-paisagens-continuas/){target="_blank"}. (2025). Jornal da USP.
 
+1. [Mudanças climáticas podem eliminar pequenos mamíferos únicos da Mata Atlântica](https://www.cdslitoralsul.ba.gov.br/Site/Noticias/mudanas-climticas-podem-eliminar-pequenos-mamferos-nicos-da-mata-atlntica-){target="_blank"}. (2025). CDS Litoral Sul.
+
+1. [Mudanças Climáticas Podem Eliminar Pequenos Mamíferos Únicos da Mata Atlântica da América do Sul](https://www2.uesc.br/noticias/1296/Mudancas-Climaticas-Podem-Eliminar-Pequenos-Mamiferos-Unicos-da-Mata-Atlantica-da-America-do-Sul){target="_blank"}. (2025). UESC Notícias.
+
 <style>
 #topBtn {
   display: none;
@@ -242,7 +246,7 @@ editor: source
   font-size: 20px;
   border: none;
   border-radius: 6px;
-  background-color: rgba(0, 123, 255, 0.7); /* azul com transparência */
+  background-color: #2381df; 
   color: white;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);

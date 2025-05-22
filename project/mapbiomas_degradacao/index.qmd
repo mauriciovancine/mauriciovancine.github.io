@@ -1,0 +1,21 @@
+---
+title: "MapBiomas Degradação"
+subtitle: "Contribuição com o Grupo de Trabalho do MapBiomas Degradação."
+author: Dhemerson, Maurício Vancine
+image: featured-hex.png
+editor: source
+---
+
+# **MapBiomas Degradação** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+
+Este módulo permite análisar os vetores de degradação da vegetação nativa nos biomas brasileiros entre 1986 a 2021. Os vetores de degradação foram calculados a partir dos mapas anuais de uso/cobertura da terra da Coleção 8 do MapBiomas Brasil e dos mapas anuais de cicatrizes de incêndio da Coleção 2 do MapBiomas Fogo.
+
+Os vetores de degradação considerados nesta primeira versão do módulo incluem: tamanho e isolamento dos fragmentos de vegetação nativa, área de borda, frequência do fogo e o tempo desde a última queimada, além da idade da vegetação secundária.
+
+Minha contribuição é ajudar a desenvolver métricas de paisagem associadas à conectividade da paisagem.
+
+## Publicações
+
+1. 
+
+1. 
