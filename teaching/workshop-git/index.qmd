@@ -1,6 +1,6 @@
 ---
-title: "gitR: controle de versão com git, GitHub e RStudio"
-subtitle: "Curso: principais conceitos sobre versionamento usando git, GitHub e RStudio."
+title: "Controle de versão com git, GitHub e RStudio"
+subtitle: "Curso dos principais conceitos sobre versionamento usando git, GitHub e RStudio."
 author: Maurício Vancine
 image: featured-hex.png
 categories: ["Curso"]
@@ -35,4 +35,6 @@ O minicurso oferece alguns dos principais conceitos práticos o controle de vers
 
 ## Oferecimento
 
-1. Laboratório de Síntese Ecológica e Conservação da Biodiversidade e Laboratório de Ecologia Aplicada. (2021). Universidade Federal Rural de Pernambuco (UFRPE), online.
+1. [Laboratório de Síntese Ecológica e Conservação da Biodiversidade e Laboratório de Ecologia Aplicada](https://www.ib.unicamp.br/pos_ecologia/). (2016). Universidade Federal Rural de Pernambuco (UFRPE), online.
+
+1. [Laboratório de Estudos sobre a Estrutura e Dinâmica da Diversidade](https://www.mathiasmpires.net.br/index.html). (2025). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil.

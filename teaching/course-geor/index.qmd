@@ -1,6 +1,6 @@
 ---
-title: "geoR: dados geoespaciais no R"
-subtitle: "Disciplina de pós-graduação para manipulação e visualização de dados geoespaciais utilizando a linguagem R"
+title: "geoR: geoprocessamento no R"
+subtitle: "Disciplina de pós-graduação para geoprocessamento utilizando a linguagem R."
 author: Maurício Vancine
 image: featured-hex.png
 categories: ["Disciplina"]
@@ -34,7 +34,7 @@ editor: source
 
 ## Descrição
 
-Na geoR, os alunos serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como estrutura e fonte, e visualização de dados geoespaciais.
+Na geoR, os alunos serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o geoprocessamento. Serão abordados temas como estrutura e fonte, e visualização de dados geoespaciais.
 
 ## Oferecimento
 

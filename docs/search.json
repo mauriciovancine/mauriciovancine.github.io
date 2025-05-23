@@ -4,7 +4,7 @@
     "href": "teaching/index.html",
     "title": "Ensino",
     "section": "",
-    "text": "Ordenar por\n       Padrão\n         \n          Título\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntrodução ao geoprocessamento com o QGIS\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngeoR: dados geoespaciais no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngitR: controle de versão com git, GitHub e RStudio\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nintroR: introdução à linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nintroR: introdução à linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlandR: métricas de paisagem no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprogR: programação em linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsdmR: Modelagem de distribuição de espécies\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsdmR: modelagem de distribuição de espécies no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspaR: ecologia espacial no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspadivR: análises espaciais da biodiversidade\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\nSem itens correspondentes\n\n\n\n\n↑ Topo"
+    "text": "Ordenar por\n       Padrão\n         \n          Título\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAnálises espaciais da biodiversidade\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nControle de versão com git, GitHub e RStudio\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeoprocessamento com QGIS\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelagem de distribuição de espécies com o R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMétricas de paisagem no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlanilha eletrônica para dados ecológicos\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProgramação em linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrabalho de campo com anfíbios\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nespR: ecologia espacial no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngeoR: geoprocessamento no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nintroR: introdução à linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsdmR: modelagem de distribuição de espécies no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\nSem itens correspondentes\n\n\n  \n\n\n\n\n↑ Topo"
   },
   {
     "objectID": "blog/index.html",
@@ -639,65 +639,65 @@
   {
     "objectID": "teaching/workshop-qgis/index.html",
     "href": "teaching/workshop-qgis/index.html",
-    "title": "Introdução ao geoprocessamento com o QGIS",
+    "title": "Geoprocessamento com o QGIS",
     "section": "",
     "text": "slides material"
   },
   {
     "objectID": "teaching/workshop-qgis/index.html#descrição",
     "href": "teaching/workshop-qgis/index.html#descrição",
-    "title": "Introdução ao geoprocessamento com o QGIS",
+    "title": "Geoprocessamento com o QGIS",
     "section": "Descrição",
     "text": "Descrição\nO minicurso oferece alguns dos principais conceitos teórico-práticos sobre a manipulação e visualização de dados geoespaciais no QGIS. São abordados os seguintes tópicos: (1) conceitos gerais de geoprocessamento, (2) interface e projeto do QGIS, (3) importação, criação e edição de dados vetoriais, (4) importação, criação e edição de dados matriciais e, (5) composição de mapas. Após a realização do minicurso espera-se que os alunos adquiram conceitos gerais da estrutura, manipulação e visualização de dados geoespaciais, assim como habilidades básicas para produção de mapas simples usando o QGIS."
   },
   {
     "objectID": "teaching/workshop-qgis/index.html#oferecimento",
     "href": "teaching/workshop-qgis/index.html#oferecimento",
-    "title": "Introdução ao geoprocessamento com o QGIS",
+    "title": "Geoprocessamento com o QGIS",
     "section": "Oferecimento",
     "text": "Oferecimento\n\nSemana de Estudos da Biologia. (2021). Universidade Estadual Paulista (UNESP), Rio Claro, SP, Brasil. Carga horária: 03 h."
   },
   {
     "objectID": "teaching/course-geor/index.html",
     "href": "teaching/course-geor/index.html",
-    "title": "geoR: dados geoespaciais no R",
+    "title": "geoR: geoprocessamento no R",
     "section": "",
     "text": "website Code"
   },
   {
     "objectID": "teaching/course-geor/index.html#descrição",
     "href": "teaching/course-geor/index.html#descrição",
-    "title": "geoR: dados geoespaciais no R",
+    "title": "geoR: geoprocessamento no R",
     "section": "Descrição",
-    "text": "Descrição\nNa geoR, os alunos serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o uso para manipulação e visualização de dados geoespaciais. Serão abordados temas como estrutura e fonte, e visualização de dados geoespaciais."
+    "text": "Descrição\nNa geoR, os alunos serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o geoprocessamento. Serão abordados temas como estrutura e fonte, e visualização de dados geoespaciais."
   },
   {
     "objectID": "teaching/course-geor/index.html#oferecimento",
     "href": "teaching/course-geor/index.html#oferecimento",
-    "title": "geoR: dados geoespaciais no R",
+    "title": "geoR: geoprocessamento no R",
     "section": "Oferecimento",
     "text": "Oferecimento\n\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2021). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2020). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nPrograma de Pós-graduação em Etnobiologia e Conservação da Biodiversidade. (2019). Universidade Federal Rural de Pernambuco (UFRPE), Recife, PE, Brasil."
   },
   {
     "objectID": "teaching/workshop-git/index.html",
     "href": "teaching/workshop-git/index.html",
-    "title": "gitR: controle de versão com git, GitHub e RStudio",
+    "title": "Controle de versão com git, GitHub e RStudio",
     "section": "",
     "text": "Slides GitHub"
   },
   {
     "objectID": "teaching/workshop-git/index.html#descrição",
     "href": "teaching/workshop-git/index.html#descrição",
-    "title": "gitR: controle de versão com git, GitHub e RStudio",
+    "title": "Controle de versão com git, GitHub e RStudio",
     "section": "Descrição",
     "text": "Descrição\nO minicurso oferece alguns dos principais conceitos práticos o controle de versão usando git, GitHub e RStudio. São abordados os seguintes tópicos: (1) controle de versão, (2) git e GitHub, (3) Fork, (4) configuração do git, (5) iniciando localmente, (6) iniciando remotamente, (7) versionamento (8) ignorar no versionamento, (9) histórico do versionamento, (10) desfazer versionamento, (11) ramificações em versionamento, (12) funcionamento do repositório remoto, (13) detalhes do respositório do GitHub e (14) interface gráfica do RStudio."
   },
   {
     "objectID": "teaching/workshop-git/index.html#oferecimento",
     "href": "teaching/workshop-git/index.html#oferecimento",
-    "title": "gitR: controle de versão com git, GitHub e RStudio",
+    "title": "Controle de versão com git, GitHub e RStudio",
     "section": "Oferecimento",
-    "text": "Oferecimento\n\nLaboratório de Síntese Ecológica e Conservação da Biodiversidade e Laboratório de Ecologia Aplicada. (2021). Universidade Federal Rural de Pernambuco (UFRPE), online."
+    "text": "Oferecimento\n\nLaboratório de Síntese Ecológica e Conservação da Biodiversidade e Laboratório de Ecologia Aplicada. (2016). Universidade Federal Rural de Pernambuco (UFRPE), online.\nLaboratório de Estudos sobre a Estrutura e Dinâmica da Diversidade. (2025). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil."
   },
   {
     "objectID": "teaching/workshop-intro-r/index.html",
@@ -1026,7 +1026,7 @@
     "href": "teaching/course-sdmr/index.html#oferecimento",
     "title": "sdmR: modelagem de distribuição de espécies no R",
     "section": "Oferecimento",
-    "text": "Oferecimento"
+    "text": "Oferecimento\n\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2016). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nPrograma de Pós-graduação em Ecologia. (2016). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil.\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2017). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil."
   },
   {
     "objectID": "teaching/course-sdmr/index.html#descrição-1",
@@ -1038,21 +1038,21 @@
   {
     "objectID": "teaching/course-spa-r/index.html",
     "href": "teaching/course-spa-r/index.html",
-    "title": "spaR: ecologia espacial no R",
+    "title": "espR: ecologia espacial no R",
     "section": "",
     "text": "website Code"
   },
   {
     "objectID": "teaching/course-spa-r/index.html#descrição",
     "href": "teaching/course-spa-r/index.html#descrição",
-    "title": "spaR: ecologia espacial no R",
+    "title": "espR: ecologia espacial no R",
     "section": "Descrição",
     "text": "Descrição"
   },
   {
     "objectID": "teaching/course-spa-r/index.html#oferecimento",
     "href": "teaching/course-spa-r/index.html#oferecimento",
-    "title": "spaR: ecologia espacial no R",
+    "title": "espR: ecologia espacial no R",
     "section": "Oferecimento",
     "text": "Oferecimento"
   },
@@ -1818,5 +1818,194 @@
     "title": "MapBiomas Degradação",
     "section": "",
     "text": "Este módulo permite análisar os vetores de degradação da vegetação nativa nos biomas brasileiros entre 1986 a 2021. Os vetores de degradação foram calculados a partir dos mapas anuais de uso/cobertura da terra da Coleção 8 do MapBiomas Brasil e dos mapas anuais de cicatrizes de incêndio da Coleção 2 do MapBiomas Fogo.\nOs vetores de degradação considerados nesta primeira versão do módulo incluem: tamanho e isolamento dos fragmentos de vegetação nativa, área de borda, frequência do fogo e o tempo desde a última queimada, além da idade da vegetação secundária.\nMinha contribuição é ajudar a desenvolver métricas de paisagem associadas à conectividade da paisagem."
+  },
+  {
+    "objectID": "teaching/course-spar/index.html",
+    "href": "teaching/course-spar/index.html",
+    "title": "espR: ecologia espacial no R",
+    "section": "",
+    "text": "website Code"
+  },
+  {
+    "objectID": "teaching/course-spar/index.html#descrição",
+    "href": "teaching/course-spar/index.html#descrição",
+    "title": "espR: ecologia espacial no R",
+    "section": "Descrição",
+    "text": "Descrição\nNa spaR, os alunos serão apresentados aos principais conceitos teóricos da Ecologia Espacial."
+  },
+  {
+    "objectID": "teaching/course-spar/index.html#oferecimento",
+    "href": "teaching/course-spar/index.html#oferecimento",
+    "title": "espR: ecologia espacial no R",
+    "section": "Oferecimento",
+    "text": "Oferecimento"
+  },
+  {
+    "objectID": "teaching/workshop-landr/index.html",
+    "href": "teaching/workshop-landr/index.html",
+    "title": "Métricas de paisagem no R",
+    "section": "",
+    "text": "website Code"
+  },
+  {
+    "objectID": "teaching/workshop-landr/index.html#descrição",
+    "href": "teaching/workshop-landr/index.html#descrição",
+    "title": "Métricas de paisagem no R",
+    "section": "Descrição",
+    "text": "Descrição\nO curso tem o intuito de oferecer uma introdução teórica e prática sobre o cálculo de métricas de paisagem categóricas (composição e configuração), utilizando a linguagem R através do pacote landscapemetrics. Primeiramente são apresentados os principais conceitos de ecologia da paisagem, métricas de paisagem, geoprocessamento, dados geoespaciais, linguagem R e detalhes do pacote landscapmetrics."
+  },
+  {
+    "objectID": "teaching/workshop-landr/index.html#oferecimento",
+    "href": "teaching/workshop-landr/index.html#oferecimento",
+    "title": "Métricas de paisagem no R",
+    "section": "Oferecimento",
+    "text": "Oferecimento\n\nLaboratório de Ecologia Espacial e Conservação (LEEC). (2022). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nSynEco - I Simpósio Brasileiro de Síntese Ecológica. (2024). Santa Maria, RS, Brasil. (2024). Universidade Federal de Santa Maria (UFSM), Santa Maria, RS, Brasil."
+  },
+  {
+    "objectID": "teaching/workshop-sdmr/index.html",
+    "href": "teaching/workshop-sdmr/index.html",
+    "title": "Modelagem de distribuição de espécies com o R",
+    "section": "",
+    "text": "icon: chalkboard-teacher icon_pack: fas name: slides url: “https://mauriciovancine.github.io/workshop-r-sdm/01_slides/slides_workshop_r_sdm.html#1”\nicon: github icon_pack: fab name: material url: “https://github.com/mauriciovancine/workshop-r-sdm”\n\n\n\nO minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e background), avaliação dos modelos (ROC, AUC e TSS), limites de corte (thresholds) e consenso de modelos (ensembles). A parte prática será focada na construção dos modelos através da linguagem R.\n\n\n\n\nMastozóologos Organizados em uma Conferência Online (MOCÓ). (2021). Sociedade Brasileira de Mastozoologia (SBMz). Online.\n9º Congresso Brasileiro de Herpetologia. (2019). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil."
+  },
+  {
+    "objectID": "teaching/workshop-sdmr/index.html#descrição",
+    "href": "teaching/workshop-sdmr/index.html#descrição",
+    "title": "Modelagem de distribuição de espécies com o R",
+    "section": "",
+    "text": "O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e background), avaliação dos modelos (ROC, AUC e TSS), limites de corte (thresholds) e consenso de modelos (ensembles). A parte prática será focada na construção dos modelos através da linguagem R."
+  },
+  {
+    "objectID": "teaching/workshop-sdmr/index.html#oferecimento",
+    "href": "teaching/workshop-sdmr/index.html#oferecimento",
+    "title": "Modelagem de distribuição de espécies com o R",
+    "section": "",
+    "text": "Mastozóologos Organizados em uma Conferência Online (MOCÓ). (2021). Sociedade Brasileira de Mastozoologia (SBMz). Online.\n9º Congresso Brasileiro de Herpetologia. (2019). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil."
+  },
+  {
+    "objectID": "teaching/course-intror/index.html",
+    "href": "teaching/course-intror/index.html",
+    "title": "introR: introdução à linguagem R",
+    "section": "",
+    "text": "website Code"
+  },
+  {
+    "objectID": "teaching/course-intror/index.html#descrição",
+    "href": "teaching/course-intror/index.html#descrição",
+    "title": "introR: introdução à linguagem R",
+    "section": "Descrição",
+    "text": "Descrição\nA introR apresenta os principais conceitos da linguagem R e do IDE RStudio para a manipulação e visualização de dados através do tidyverse. O tidyverse é um conjunto de pacotes e funções que compartilham uma mesma estrutura e sintaxe, com o intuito de criar códigos eficientes e organizados. Os pacotes são focados principalmente na organização (leitura, filtragem, organização, seleção e resumo) e visualização de dados (gráficos). Serão abordados os seguintes temas: (1) linguagem R, (2) tidyverse e (3) visualização de dados. Ao final do minicurso espera-se que os participantes adquiram conhecimentos básicos do funcionamento da linguagem R através do tidyverse, permitindo realização manipulação e visualização de dados tabulares."
+  },
+  {
+    "objectID": "teaching/course-intror/index.html#oferecimento",
+    "href": "teaching/course-intror/index.html#oferecimento",
+    "title": "introR: introdução à linguagem R",
+    "section": "Oferecimento",
+    "text": "Oferecimento"
+  },
+  {
+    "objectID": "teaching/workshop-progr/index.html",
+    "href": "teaching/workshop-progr/index.html",
+    "title": "Programação em linguagem R",
+    "section": "",
+    "text": "Slides GitHub"
+  },
+  {
+    "objectID": "teaching/workshop-progr/index.html#descrição",
+    "href": "teaching/workshop-progr/index.html#descrição",
+    "title": "Programação em linguagem R",
+    "section": "Descrição",
+    "text": "Descrição\nApresentação dos principais conceitos da programação na linguagem R. São abordados os seguintes temas: (1) controle de fluxo, (2) repetições e (3) criação de funções. Ao final do minicurso espera-se que os participantes adquiram conhecimentos básicos do funcionamento da em programação básica usando a linguagem R."
+  },
+  {
+    "objectID": "teaching/workshop-progr/index.html#oferecimento",
+    "href": "teaching/workshop-progr/index.html#oferecimento",
+    "title": "Programação em linguagem R",
+    "section": "Oferecimento",
+    "text": "Oferecimento\n\nNT265/NE441 - Análise de dados e apresentação de gráficos usando a linguagem R. Programa de Pós-Graduação em Ecologia. (2024). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil."
+  },
+  {
+    "objectID": "teaching/workshop-intror/index.html",
+    "href": "teaching/workshop-intror/index.html",
+    "title": "Introdução à linguagem R",
+    "section": "",
+    "text": "website Code"
+  },
+  {
+    "objectID": "teaching/workshop-intror/index.html#descrição",
+    "href": "teaching/workshop-intror/index.html#descrição",
+    "title": "Introdução à linguagem R",
+    "section": "Descrição",
+    "text": "Descrição\nO minicurso apresentará os principais conceitos da linguagem R e do IDE RStudio para a manipulação e visualização de dados através do tidyverse. O tidyverse é um conjunto de pacotes e funções que compartilham uma mesma estrutura e sintaxe, com o intuito de criar códigos eficientes e organizados. Os pacotes são focados principalmente na organização (leitura, filtragem, organização, seleção e resumo) e visualização de dados (gráficos). Serão abordados os seguintes temas: (1) linguagem R, (2) tidyverse e (3) visualização de dados. Ao final do minicurso espera-se que os participantes adquiram conhecimentos básicos do funcionamento da linguagem R através do tidyverse, permitindo realização manipulação e visualização de dados tabulares."
+  },
+  {
+    "objectID": "teaching/workshop-intror/index.html#oferecimento",
+    "href": "teaching/workshop-intror/index.html#oferecimento",
+    "title": "Introdução à linguagem R",
+    "section": "Oferecimento",
+    "text": "Oferecimento\n\nXXVI Semana de Estudos da Ecologia. (2015). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nXXVII Semana de Estudos da Ecologia. (2016). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nXXX Semana de Estudos da Ecologia. (2019). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\n30ª Semana de Estudos da Biologia. (2019). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nXXXII Semana de Estudos da Ecologia. (2021). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nXXXIII Semana de Estudos da Ecologia. (2022). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil."
+  },
+  {
+    "objectID": "teaching/workshop-spadivr/index.html",
+    "href": "teaching/workshop-spadivr/index.html",
+    "title": "Análises espaciais da biodiversidade",
+    "section": "",
+    "text": "Slides GitHub"
+  },
+  {
+    "objectID": "teaching/workshop-spadivr/index.html#descrição",
+    "href": "teaching/workshop-spadivr/index.html#descrição",
+    "title": "Análises espaciais da biodiversidade",
+    "section": "Descrição",
+    "text": "Descrição\nO curso apresenta os principais conceitos e lacunas de biodiversidade, principais fontes de dados de ocorrências de espécies e os problemas de viés de amostragem e como contorná-los. Em seguida, são apresentados algumas das principais análises espaciais que utilizam esses dados, como resumo de dados para unidades espaciais, adensamento de pontos (kernel) e uma rápida introdução à Modelos de Distribuição de Espécies. A parte prática é realizada utilizando a linguagem R."
+  },
+  {
+    "objectID": "teaching/workshop-spadivr/index.html#oferecimentos",
+    "href": "teaching/workshop-spadivr/index.html#oferecimentos",
+    "title": "Análises espaciais da biodiversidade",
+    "section": "Oferecimentos",
+    "text": "Oferecimentos\n\nEscola São Paulo de Ciência Avançada Co-criando avaliações de biodiversidade. (2024). Universidade Estadual de Campinas (Unicamp), São Pedro, SP, Brasil."
+  },
+  {
+    "objectID": "teaching/workshop-frog/index.html",
+    "href": "teaching/workshop-frog/index.html",
+    "title": "Trabalho de campo com anfíbios",
+    "section": "",
+    "text": "Slides GitHub"
+  },
+  {
+    "objectID": "teaching/workshop-frog/index.html#descrição",
+    "href": "teaching/workshop-frog/index.html#descrição",
+    "title": "Trabalho de campo com anfíbios",
+    "section": "Descrição",
+    "text": "Descrição"
+  },
+  {
+    "objectID": "teaching/workshop-frog/index.html#oferecimento",
+    "href": "teaching/workshop-frog/index.html#oferecimento",
+    "title": "Trabalho de campo com anfíbios",
+    "section": "Oferecimento",
+    "text": "Oferecimento\n\nXXVII Semana de Estudos da Ecologia. (2016). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\n29ª Semana de Estudos da Biologia. (2018). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil."
+  },
+  {
+    "objectID": "teaching/workshop-sheet/index.html",
+    "href": "teaching/workshop-sheet/index.html",
+    "title": "Planilha eletrônica para dados ecológicos",
+    "section": "",
+    "text": "Slides GitHub"
+  },
+  {
+    "objectID": "teaching/workshop-sheet/index.html#descrição",
+    "href": "teaching/workshop-sheet/index.html#descrição",
+    "title": "Planilha eletrônica para dados ecológicos",
+    "section": "Descrição",
+    "text": "Descrição"
+  },
+  {
+    "objectID": "teaching/workshop-sheet/index.html#oferecimento",
+    "href": "teaching/workshop-sheet/index.html#oferecimento",
+    "title": "Planilha eletrônica para dados ecológicos",
+    "section": "Oferecimento",
+    "text": "Oferecimento\n\nXXVI Semana de Estudos da Ecologia. (2015). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil."
   }
 ]

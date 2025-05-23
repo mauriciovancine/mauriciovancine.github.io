@@ -1,6 +1,6 @@
 ---
-title: "Introdução ao geoprocessamento com o QGIS"
-subtitle: "Curso: introdução ao geoprocessamento com o QGIS."
+title: "Geoprocessamento com QGIS"
+subtitle: "Curso de introdução ao geoprocessamento com o QGIS."
 author: Maurício Vancine
 image: featured-hex.png
 categories: ["Curso"]

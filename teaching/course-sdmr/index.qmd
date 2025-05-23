@@ -32,3 +32,9 @@ editor: source
 Na sdmR, os alunos serão apresentados aos principais conceitos teóricos e práticos sobre modelagem de distribuição de espécies utilizando a linguagem R. Serão abordados os temas: (1) conceituação teórica, (2) dados de ocorrências e variáveis ambientais, (3) ajustes dos modelos, (4) avaliação dos modelos, (5) predição dos modelos e (6) aplicações.
 
 ## Oferecimento
+
+1.  [Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade](https://ib.rc.unesp.br/#!/pos-graduacao/secao-tecnica-de-pos/programas/ecologia-e-biodiversidade/apresentacao-novo/). (2016). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.
+
+1.  [Programa de Pós-graduação em Ecologia](https://www.ib.unicamp.br/pos_ecologia/). (2016). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil.
+
+1.  [Programa de Pós-graduação em Ecologia, Evolução e Biodiversidade](https://ib.rc.unesp.br/#!/pos-graduacao/secao-tecnica-de-pos/programas/ecologia-e-biodiversidade/apresentacao-novo/). (2017). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.
