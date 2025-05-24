@@ -1,0 +1,54 @@
+---
+title: "The impact of Amazon deforestation is magnified by changing the configuration of forest cover"
+subtitle: "Analisamos a dinâmica espacial e temporal e a configuração da cobertura florestal no estado de Rondônia, no Brasil, ao longo de 34 anos."
+author: "Luan Gabriel Araujo Goebel, Maurício Humberto Vancine, Juliano A. Bogoni, Gabriela Rodrigues Longo, Mathilde Anne Laurance Calicis, Philip M. Fearnside, Ana Filipa Palmeirim, Manoel dos Santos-Filho"
+date: 2025-05-23
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1017/S0376892925000086" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2025-carvalho-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+The Amazon comprises the most biodiverse region in the world, but, despite being highly threatened by human-induced environmental changes, little is known about how those changes influence the remaining forest’s extent and configuration in Brazil’s arc of deforestation. We analysed the spatial and temporal dynamics and the configuration of forest cover in Brazil’s state of Rondônia over 34 years. We calculated seven landscape metrics based on freely available satellite imagery to understand the habitat transformations. Overall, natural vegetation cover declined from 90.9% to 62.7% between 1986 and 2020, and fragmentation greatly increased, generating 78 000 forest fragments and 100 000 fragments of ‘natural vegetation’, which also includes forest. We found that c. 50% of the vegetation is within c. 1 km of the nearest forest edge, and the mean isolation between fragments is c. 2.5 km. Most natural vegetation and forest vegetation layers outside protected areas (PAs; Brazil’s ‘conservation units’) and Indigenous territories (ITs) are >10 km from the nearest PA or IT. This reduction of natural vegetation in Rondônia is posing major threats to the survival of species and is undermining the dynamics of ecosystems. Measures to control deforestation and avoid the reduction of large remnants are urgently needed.
+
+## Citação
+
+```
+@article{goebel_etal_2025,
+    author = {Goebel, Luan Gabriel Araujo and Vancine, Maurício Humberto and Bogoni, Juliano A. and Longo, Gabriela Rodrigues and Calicis, Mathilde Anne Laurance and Fearnside, Philip M. and Palmeirim, Ana Filipa and Santos-Filho, Manoel dos},
+    title = "{The impact of {Amazon} deforestation is magnified by changing the configuration of forest cover}",
+    journal = {Environmental Conservation},
+    year = {2025},
+    month = {05},
+    issn = {0376-8929},
+    doi = {10.1017/S0376892925000086},
+    url = {https://doi.org/10.1017/S0376892925000086},
+    eprint = {},
+}
+```
