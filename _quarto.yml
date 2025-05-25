@@ -42,7 +42,7 @@ website:
 
   page-footer:  
     left: >-
-     &#169; 2025 Maurício Vancine &#8729; Feito com[Quarto](https://quarto.org){target="_blank"}
+     &#169; 2025 Maurício Vancine &#8729; Feito com[Quarto](https://quarto.org){target="_blank"}.
     center:
       - icon: github
         aria-label: GitHub

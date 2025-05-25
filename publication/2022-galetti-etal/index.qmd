@@ -1,0 +1,58 @@
+---
+title: "Mammals in São Paulo State: diversity, distribution, ecology, and conservation"
+subtitle: "Este estudo responde a cinco perguntas principais sobre a diversidade, distribuição, impacto, adaptação e futuro dos mamíferos silvestres no Estado de São Paulo."
+author: "Mauro Galetti, Ana Paula Carmignotto, Alexandre R. Percequillo, Marcos C. de O. Santos, Katia Maria P. M. de Barros Ferraz, Fernando Lima, Maurício H. Vancine, Renata L. Muylaert, Fernando César Gonçalves Bonfim, Marcelo Magioli, Fernanda D. Abra, Adriano G. Chiarello, José Maurício Barbanti Duarte, Ronaldo Morato, Beatriz de Mello Beisiegel, Fábio Olmos, Pedro Manoel Galetti Jr. & Milton Cezar Ribeiro"
+date: 2022-08-23
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1590/1676-0611-bn-2022-1363" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2022-galetti-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+  <a href="https://github.com/LEEClab/ms_mammals_sp_spatial_analysis" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+Abstract Mammals are charismatic organisms that play a fundamental role in ecological functions and ecosystem services, such as pollination, seed dispersal, nutrient cycling, and pest control. The state of São Paulo represents only 3% of the Brazilian territory but holds 33% of its mammalian diversity. Most of its territory is dominated by agriculture, pastures, and urban areas which directly affect the diversity and persistence of mammals in the landscape. In addition, São Paulo has the largest port in Latin America and the largest offshore oil reservoir in Brazil, with a 600 km stretch of coastline with several marine mammal species. These human-made infrastructures affect the diversity, distribution, ecology, and the future of mammals in the state. Here, we answer five main questions: 1) What is the diversity of wild mammals in São Paulo state? 2) Where are they? 3) What is their positive and negative impact on human well-being? 4) How do mammals thrive in human-modified landscapes? 5) What is the future of mammals in the state? The state of São Paulo holds 255 species of native mammals, with four endemic species, two of them globally endangered. At least six species (two marsupials, Giant otter, Pampas deer, Brazilian dwarf brocket deer, and Giant armadillo) were extirpated from the state due to hunting and habitat loss. The intense human land use in the state forced many mammalian species to change their diet to cope with the intense fragmentation and agriculture. Large-scale monoculture has facilitated the invasion of exotic species such as wild boars (javali) and the European hare. Several “savanna-dwelling” species are expanding their ranges (Maned wolf, Brocket deer) over deforested areas and probably reflect changes towards a drier climate. Because the state has the largest road system, about 40,000 mammals from 33 species are killed per year in collisions causing an economic loss of 12 million dollars/year. The diversity of mammals is concentrated in the largest forest remnants of Serra do Mar and in the interior of the State, mainly in the regions of Ribeirão Preto and Jundiaí. Sampling gaps are concentrated throughout the interior of the state, particularly in the northwest region. Wild mammals play a fundamental role in many ecosystem services, but they can also be a concern in bringing new emergent diseases to humans. Although the taxonomy of mammals seems to be well known, we show that new species are continuously being discovered in the state. Therefore, continuous surveys using traditional and new technologies (eDNA, iDNA, drones), long-term population monitoring, investigation of the interface of human-wildlife conflict, and understanding of the unique ecosystem role played by mammals are future avenues for promoting sustainable green landscapes allied to human well-being in the state. The planting of forest or savanna corridors, particularly along with major river systems, in the plateau, controlling illegal hunting in the coastal areas, managing fire regimes in the Cerrado, and mitigating roadkill must be prioritized to protect this outstanding mammal diversity.
+
+## Citação
+
+```
+@article{galetti_etal_2022,
+  title = {Mammals in São Paulo State: diversity, distribution, ecology, and conservation},
+  volume = {22},
+  issn = {1676-0603},
+  url = {https://www.biotaneotropica.org.br/BN/article/view/1919},
+  doi = {10.1590/1676-0611-bn-2022-1363},
+    language = {en},
+    urldate = {2022-08-23},
+  journal = {Biota Neotropica},
+  author = {Galetti, Mauro and Carmignotto, Ana Paula and Percequillo, Alexandre R. and Santos, Marcos C. de O. and Ferraz, Katia Maria P. M. de Barros and Lima, Fernando and Vancine, Maurício H. and Muylaert, Renata L. and Bonfim, Fernando César Gonçalves and Magioli, Marcelo and Abra, Fernanda D. and Chiarello, Adriano G. and Duarte, José Maurício Barbanti and Morato, Ronaldo and Beisiegel, Beatriz de Mello and Olmos, Fábio and Jr, Pedro Manoel Galetti and Ribeiro, Milton Cezar},
+  month = august,
+  year = {2022},
+  pages = {101570},
+}
+```

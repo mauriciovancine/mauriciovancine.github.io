@@ -17,7 +17,7 @@ editor: source
 
 1. Sobral-Souza, T., <u>**Vancine, M. H.**</u>, Ribeiro, M. C., & Lima-Ribeiro, M. S. (2018). [Efficiency of protected areas in Amazon and Atlantic Forest conservation: A spatio-temporal view](/publication/2018-sobral-souza-etal){target="_blank"}. *Acta Oecologica*, 87, 1-7.
 
-1. Muylaert, R. L., <u>**Vancine, M. H.**</u>, Bernardo, R., Oshima, J. E. F., Sobral-Souza, T., Tonetti, V. R., ... & Ribeiro, M. C. (2018). [Uma nota sobre os limites territoriais da Mata Atlântica](/publication/2018-muylaert-etal){target="_blank"}. *Oecologia Australis*, 22(3), 302-311.
+1. Muylaert, R. L., <u>**Vancine, M. H.**</u>, Bernardo, R., Oshima, J. E. F., Sobral-Souza, T., Tonetti, V. R., ... & Ribeiro, M. C. (2018). [A note on the territorial limits of the Atlantic Forest](/publication/2018-muylaert-etal){target="_blank"}. *Oecologia Australis*, 22(3), 302-311.
 
 1. <u>**Vancine, M. H.**</u>, Duarte, K. D. S., de Souza, Y. S., Giovanelli, J. G. R., Martins‐Sobrinho, P. M., López, A., ... & Brassaloti, R. (2018). [ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America](/publication/2018-vancine-etal){target="_blank"}. *Ecology*, 99(7), 1692-1692.
 

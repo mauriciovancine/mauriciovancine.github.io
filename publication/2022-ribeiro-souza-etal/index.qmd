@@ -1,0 +1,58 @@
+---
+title: "Effects of climate change on distribution and areas that protect two neotropical marsupials associated with aquatic environments"
+subtitle: "Analisamos como as mudanças climáticas afetam a distribuição de duas espécies de mamíferos marsupiais aquáticos na América do Sul."
+author: "Paula Ribeiro-Souza, Maurício E. Graipel, Diego Astúa, Maurício Humberto Vancine, José Salatiel Pires"
+date: 2022-05-01
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1016/j.ecoinf.2022.101570" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2022-ribeiro-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+The contraction of the amount of suitable habitat due to climate change can result in a species becoming threatened with extinction. Strong evidence supports that this effect will be pronounced for several species of small mammals in the near future. We address these issues using the ensemble technique to generate potential distribution models for Neotropical marsupials associated with aquatic environments, Chironectes minimus and Lutreolina crassicaudata, and predict the effects of climate change on the distribution of these two species. We later evaluate the effectiveness of the Fully Protected Areas for the two species in the present and future scenarios. Based on our models, we recommend priority areas for the conservation of these species, emphasizing conservation efforts across borders between countries. Our results indicated that both species will suffer a significant restriction of their potential distributions until 2050. Our models predicted that the loss of suitable areas will be greater for C. minimus, with only ~33% of the original distribution area remaining. The models also indicated that the current system of Fully Protected Areas in the Neotropical region will protect L. crassicaudata in a small area of its current and future potential distribution, inserted in climatically stable areas (~14%). These scenarios for these species support strong impacts on the biodiversity protection in aquatic environments in the Neotropical region. We strongly recommend the priority planning and implementation of transboundary Fully Protected Areas in stable areas of distribution of these species to maintain the protection of these marsupials and the ecosystems to which they are associated.
+
+## Citação
+
+```
+@article{ribeiro-souza_etal_2022,
+  title = {Effects of climate change on distribution and areas that protect two neotropical marsupials associated with aquatic environments},
+  volume = {68},
+  issn = {15749541},
+  url = {https://linkinghub.elsevier.com/retrieve/pii/S157495412200019X},
+  doi = {10.1016/j.ecoinf.2022.101570},
+  language = {en},
+  urldate = {2022-06-08},
+  journal = {Ecological Informatics},
+  author = {Ribeiro-Souza, Paula and Graipel, Maurício E. and Astúa, Diego and Vancine, Maurício Humberto and Pires, José Salatiel Rodrigues},
+  month = may,
+  year = {2022},
+  pages = {101570},
+}
+```
+

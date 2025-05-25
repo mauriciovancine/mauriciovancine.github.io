@@ -1,0 +1,55 @@
+---
+title: "Natural forest regeneration on anthropized landscapes could overcome climate change effects on the endangered maned sloth (Bradypus torquatus, Illiger 1811)"
+subtitle: "Avaliamos a adequabilidade ambiental atual e futura para a preguiça-guará, Bradypus torquatus, sob cenários futuros de clima e restauração florestal, usando modelagem de nicho ecológico."
+author: "Paloma Marques Santos, Katia Maria Paschoaletto Micchi de Barros Ferraz, Milton Cezar Ribeiro, Bernardo Brandão Niebuhr, Maurício Humberto Vancine, Adriano Garcia Chiarello, Adriano Pereira Paglia"
+date: 2022-09-30
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1093/jmammal/gyac084" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2022-santos-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+Climate change and habitat loss have been identified as the main causes of species extinction. Forest regeneration and protected areas are essential to buffer climate change impacts and to ensure quality habitats for threatened species. We assessed the current and future environmental suitability for the maned sloth, Bradypus torquatus, under both future climate and forest restoration scenarios, using ecological niche modeling. We compared environmental suitability for two Evolutionarily Significant Units (ESUnorth and ESUsouth) using two climate change scenarios for 2070, and three potential forest regeneration scenarios. Likewise, we evaluated the protection degree of the suitable areas resulting from the models, according to Brazilian law: PA—Protected Areas; PPA—Permanent Protection Areas (environmentally sensitive areas in private properties); and LR—Legal Reserves (natural vegetation areas in private properties). Finally, we calculated the deficit of PPA and LR in each ESU, considering the current forest cover. Forest regeneration might mitigate the deleterious effects of climate change by maintaining and increasing environmental suitability in future scenarios. The ESUnorth contains more suitable areas (21,570 km²) than the ESUsouth (12,386 km²), with an increase in all future scenarios (up to 45,648 km² of new suitable areas), while ESUsouth might have a significant decrease (up to 7,546 km² less). Suitable areas are mostly unprotected (ESUnorth—65.5% and ESUsouth—58.3%). Therefore, PPA and PA can maintain only a small portion of current and future suitable areas. Both ESUs present a high deficit of PPA and LR, highlighting the necessity to act in the recovery of these areas to accomplish a large-scale restoration, mitigate climate change effects, and achieve, at least, a minimum forested area to safeguard the species. Notwithstanding, a long-term conservation of B. torquatus will benefit from forest regeneration besides those minimum requirements, allied to the protection of forest areas.
+
+## Citação
+
+```
+@article{santos_etal_2022,
+    author = {Santos, Paloma Marques and Ferraz, Katia Maria Paschoaletto Micchi de Barros and Ribeiro, Milton Cezar and Niebuhr, Bernardo Brandão and Vancine, Maurício Humberto and Chiarello, Adriano Garcia and Paglia, Adriano Pereira},
+    title = "{Natural forest regeneration on anthropized landscapes could overcome climate change effects on the endangered maned sloth (Bradypus torquatus, Illiger 1811)}",
+    journal = {Journal of Mammalogy},
+    year = {2022},
+    month = {09},
+    issn = {0022-2372},
+    doi = {10.1093/jmammal/gyac084},
+    url = {https://doi.org/10.1093/jmammal/gyac084},
+    note = {gyac084},
+    eprint = {https://academic.oup.com/jmammal/advance-article-pdf/doi/10.1093/jmammal/gyac084/46213685/gyac084.pdf},
+}
+```
