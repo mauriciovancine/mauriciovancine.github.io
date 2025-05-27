@@ -1,0 +1,54 @@
+---
+title: "The Protected Areas network may be insufficient to protect bird diversity in a fragmented tropical hotspot under different climate scenarios"
+subtitle: "Avaliamos a eficiência das áreas protegidas usando áreas prioritárias para conservação da diversidade de aves da Mata Atlântica para cenários climáticos atuais e futuros."
+author: "Vinicius Tonetti, Fernanda Bocalini, Fabio Schunck, Maurício Humberto Vancine, Mariella Butti, Milton Cezar Ribeiro, Marco Pizo"
+date: 2024-03-08
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1016/j.pecon.2023.12.002" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2024-tonetti-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+We identified the 30% most-important forest remnants for conservation in the Atlantic Forest domain in South America based on three bird diversity components: (1) overall species potential distribution, (2) potential distribution of threatened species, and (3) diversity of functional traits. We evaluated the extent of overlap among priority areas using the different approaches and analysed the efficiency of the current Protected Areas network at protecting biodiversity in current and potential future (2040 and 2080) climate scenarios. The overlap among the most important areas is low among the different bird diversity components in all climate scenarios, and few changes were found in priority areas between the current and future scenario. The proportion of species that reached the minimum amount of their distribution areas protected varied from zero to 4% depending on the climate scenario and the species conservation status (threatened or not). Priority areas based on the potential distribution of threatened species were less correlated to areas based on the overall species potential distribution than to functional traits in all climate scenarios, suggesting that there might be considerable differences between species composition and their functionalities. Our analyses point out the main regions where resources should be allocated to conservation of birds in a mega-biodiversity region.
+
+## Citação
+
+```
+@article{tonetti_etal_2023,
+    author = {Vinicius Tonetti, Fernanda Bocalini, Fabio Schunck, Maurício Humberto Vancine, Mariella Butti, Milton Cezar Ribeiro, Marco Pizo},
+    title = "{The Protected Areas network may be insufficient to protect bird diversity in a fragmented tropical hotspot under different climate scenarios}",
+    journal = {Perspectives in Ecology and Conservation},
+    year = {2023},
+    month = {},
+    issn = {2530-0644},
+    doi = {10.1016/j.pecon.2023.12.002},
+    url = {https://doi.org/10.1016/j.pecon.2023.12.002},
+    eprint = {},
+}
+```

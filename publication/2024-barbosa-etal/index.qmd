@@ -1,0 +1,54 @@
+---
+title: "Análise espacial da fragmentação da paisagem: um estudo de caso sobre os fragmentos florestais destinados à Reserva Legal em duas bacias hidrográficas no Estado do Piauí"
+subtitle: "Compreender a dinâmica de uso e ocupação da terra e estrutura fundiária das principais classes de uso e ocupação da terra em duas bacias hidrográficas no estado do Piauí, entre os anos de 1985 e 2020, sendo as bacias Canindé no bioma Caatinga e Alto Parnaíba no bioma Cerrado."
+author: "Francielson da Silva Barbosa, Maurício Humberto Vancine, Milton Cezar Ribeiro, Alexandre Siminski"
+date: 2024-11-08
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.55905/oelv22n11-247" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2024-barbosa-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+Os biomas Cerrado e Caatinga têm sofrido intensos processos de ocupação devido à expansão da fronteira agrícola. Nesse sentido, com o auxílio de geotecnologias foram analisadas as principais classes de uso e ocupação da terra em duas bacias hidrográficas no estado do Piauí, entre os anos de 1985 e 2020, sendo as bacias Canindé no bioma Caatinga e Alto Parnaíba no bioma Cerrado. O objetivo principal foi compreender a dinâmica de uso e ocupação da terra e estrutura fundiária. As análises de uso e ocupação foram obtidas mediante técnicas de Sensoriamento Remoto e Sistemas de Informação Geográfica, a partir de imagens da Coleção7 do MapBiomas. Para o cálculo das métricas da Paisagem utilizou-se o complemento Landscape Ecology Statistics (LecoS) no QGIS. As análises demonstraram que as classes de cobertura predominante nas bacias é floresta, seguida da classe agropecuária. Quanto à estrutura fundiária, predominam na bacia Canindé pequenas propriedades, todas com inscrições ativas no Cadastro Ambiental Rural e aguardando análise. Na bacia Alto Parnaíba, o tamanho médio dos imóveis é de 843,67 hectares, com inscrições ativas e apenas 0,5% dos cadastros analisados. Dentre as métricas da paisagem calculadas para os fragmentos florestais superiores a 100 hectares, o valor de formato médio ficou acima de 5 nas duas bacias, indicando a presença de fragmentos irregulares. Ademais, pode-se concluir que ao longo do período observado, as alterações da estrutura da paisagem na bacia Alto Parnaíba foram maiores que as observadas na bacia Canindé, provavelmente em função do tipo de uso e ocupação.
+
+## Citação
+
+```
+@article{barbosa_etal_2024,
+    author = {Francielson da Silva Barbosa, Maurício Humberto Vancine, Milton Cezar Ribeiro, Alexandre Siminski},
+    title = "{Análise espacial da fragmentação da paisagem: um estudo de caso sobre os fragmentos florestais destinados à Reserva Legal em duas bacias hidrográficas no Estado do Piauí}",
+    journal = {Revista Observatório de la Economía Latinoamericana},
+    year = {2024},
+    month = {03},
+    issn = {1696-8352},
+    doi = {10.55905/oelv22n11-247},
+    url = {https://doi.org/10.55905/oelv22n11-247},
+    eprint = {},
+}
+```

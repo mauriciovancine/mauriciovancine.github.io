@@ -1,0 +1,71 @@
+---
+title: "LandFrag: a dataset to investigate the effects of habitat loss and fragmentation on biodiversity in forest fragments"
+subtitle: "O conjunto de dados reúne informações sobre abundância, composição e traços funcionais de espécies de vertebrados, invertebrados e plantas em 1472 fragmentos florestais amostrados entre 1994 e 2022 em todos os continentes, exceto a Antártica, incluindo também a localização, tamanho dos fragmentos e métricas da paisagem em diferentes escalas espaciais."
+author: "Thiago Gonçalves-Souza, Maurício Humberto Vancine, Nathan J. Sanders, Nick M. Haddad, Lucas Cortinhas, Anne Lene T. O. Aase, Willian Moura de Aguiar, Marcelo Adrian Aizen, Víctor Arroyo-Rodríguez, Arturo Baz, Maíra Benchimol, Enrico Bernard, Tássia Juliana Bertotto, Arthur Angelo Bispo, Juliano A. Bogoni, Gabriel X. Boldorini, Cibele Bragagnolo, Berry Brosi, Aníbal Silva Cantalice, Rodrigo Felipe Rodrigues do Carmo, Eliana Cazeta, Adriano G. Chiarello, Noé U. de laSancha, Raphael K. Didham, Deborah Faria, Bruno Filgueiras, José Eugênio Côrtes Figueira, Gabriela Albuquerque Galvão, Michel Varajão Garey, Heloise Gibb, Carmelo Gómez-Martínez, Ezequiel González, Reginaldo Augusto Farias de Gusmão, Mickaël Henry, Shayana de Jesus, Thiago Gechel Kloss, Amparo Lázaro, Victor Leandro-Silva, Marcelo G. de Lima, Ingrid da Silva Lima, Ana Carolina B. Lins-e-Silva, Ralph Mac Nally, Arthur Ramalho Magalhães, Luiz Fernando Silva Magnago, Shiiwua Manu, Eduardo Mariano-Neto, David Nyaga Mugo Mbora, Felipe P. L. Melo, Morris Nzioka Mutua, Selvino Neckel-Oliveira, André Nemésio, André Amaral Nogueira, Patricia Marques Do A. Oliveira, Diego G. Pádua, Luan Paes, Aparecida Barbosa de Paiva, Marcelo Passamani, João Carlos Pena, Carlos A. Peres, Bruno X. Pinho, Jean-Marc Pons, Victor Mateus Prasniewski, Jenny Reiniö, Magda dos Santos Rocha, Larissa Rocha-Santos, Maria J. Rodal, Rodolpho Credo Rodrigues, Nathalia V. H. Safar, Renato P. Salomão, Bráulio A. Santos, Mirela N. Santos, Jessie Pereira dos Santos, Sini Savilaakso, Carlos Ernesto Gonçalves Reynaud Schaefer, Maria Amanda Menezes Silva, Fernando R. da Silva, Ricardo J. Silva, Marcelo Simonelli, Alejandra Soto-Werschitz, John O. Stireman III, Danielle Storck-Tonon, Neucir Szinwelski, Marcelo Tabarelli, Camila Palhares Teixeira, Ørjan Totland, Marcio Uehara-Prado, Fernando Zagury Vaz-de-Mello, Heraldo L. Vasconcelos, Simone A. Vieira, Jonathan M. Chase"
+date: 2025-02-25
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1111/geb.70015" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2025-goncalvez-souza-vancine-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.jpg)
+
+## Resumo
+
+Motivation
+The accelerated and widespread conversion of once continuous ecosystems into fragmented landscapes has driven ecological research to understand the response of biodiversity to local (fragment size) and landscape (forest cover and fragmentation) changes. This information has important theoretical and applied implications, but is still far from complete. We compiled the most comprehensive and updated database to investigate how these local and landscape changes determine species composition, abundance and trait diversity of multiple taxonomic groups in forest fragments across the globe.
+
+Main Types of Variables Contained
+We gathered data for 1472 forest fragments, providing information on the abundance and composition of 9154 species belonging to vertebrates, invertebrates, and plants. For 2703 of these species, we obtained more than 20 functional traits. We provided the spatial location and size of each fragment and metrics of landscape composition and configuration.
+
+Spatial Location and Grain
+The dataset includes 1472 forest fragments sampled in 121 studies from all continents except Antarctica. Most datasets (77%) are from tropical regions, 17% are from temperate regions, and 6% are from subtropical regions. Species abundance and composition were collected at the plot or fragment scale, whereas the landscape metrics were extracted with buffer size ranging from a radius of 200–2000 m.
+
+Time Period and Grain
+Data on the abundance of species and community composition were collected between 1994 and 2022, and the landscape metrics were extracted from the same year that a given study collected the abundance and composition data.
+
+Major Taxa and Level of Measurement
+The studied organisms included invertebrates (Arachnida, Insecta and Gastropoda; 41% of the datasets), vertebrates (Amphibia, Squamata, Aves and Mammalia; 44%), and vascular plants (19%), and the lowest level of identification was species or morphospecies.
+
+Software Format
+The dataset and code can be downloaded on Zenodo or GitHub.
+
+## Citação
+
+```@article{goncalves-souza_landfrag_2025,
+	title = {{LandFrag}: {A} {Dataset} to {Investigate} the {Effects} of {Forest} {Loss} and {Fragmentation} on {Biodiversity}},
+	volume = {34},
+	issn = {1466-8238},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/geb.70015},
+	doi = {10.1111/geb.70015},
+	language = {en},
+	number = {2},
+	urldate = {2025-02-26},
+	journal = {Global Ecology and Biogeography},
+	author = {Gonçalves-Souza, Thiago and Vancine, Maurício Humberto and Sanders, Nathan J. and Haddad, Nick M. and Cortinhas, Lucas and Aase, Anne Lene T. O. and de Aguiar, Willian Moura and Aizen, Marcelo Adrian and Arroyo-Rodríguez, Víctor and Baz, Arturo and Benchimol, Maíra and Bernard, Enrico and Bertotto, Tássia Juliana and Bispo, Arthur Angelo and Bogoni, Juliano A. and Boldorini, Gabriel X. and Bragagnolo, Cibele and Brosi, Berry and Cantalice, Aníbal Silva and do Carmo, Rodrigo Felipe Rodrigues and Cazeta, Eliana and Chiarello, Adriano G. and de la Sancha, Noé U. and Didham, Raphael K. and Faria, Deborah and Filgueiras, Bruno and Figueira, José Eugênio Côrtes and Galvão, Gabriela Albuquerque and Garey, Michel Varajão and Gibb, Heloise and Gómez-Martínez, Carmelo and González, Ezequiel and de Gusmão, Reginaldo Augusto Farias and Henry, Mickaël and de Jesus, Shayana and Kloss, Thiago Gechel and Lázaro, Amparo and Leandro-Silva, Victor and de Lima, Marcelo G. and da Silva Lima, Ingrid and Lins-e-Silva, Ana Carolina B. and Nally, Ralph Mac and Magalhães, Arthur Ramalho and Magnago, Luiz Fernando Silva and Manu, Shiiwua and Mariano-Neto, Eduardo and Mbora, David Nyaga Mugo and Melo, Felipe P. L. and Mutua, Morris Nzioka and Neckel-Oliveira, Selvino and Nemésio, André and Nogueira, André Amaral and Oliveira, Patricia Marques Do A. and Pádua, Diego G. and Paes, Luan and de Paiva, Aparecida Barbosa and Passamani, Marcelo and Pena, João Carlos and Peres, Carlos A. and Pinho, Bruno X. and Pons, Jean-Marc and Prasniewski, Victor Mateus and Reiniö, Jenny and dos Santos Rocha, Magda and Rocha-Santos, Larissa and Rodal, Maria J. and Rodrigues, Rodolpho Credo and Safar, Nathalia V. H. and Salomão, Renato P. and Santos, Bráulio A. and Santos, Mirela N. and dos Santos, Jessie Pereira and Savilaakso, Sini and Schaefer, Carlos Ernesto Gonçalves Reynaud and Silva, Maria Amanda Menezes and da Silva, Fernando R. and Silva, Ricardo J. and Simonelli, Marcelo and Soto-Werschitz, Alejandra and Stireman III, John O. and Storck-Tonon, Danielle and Szinwelski, Neucir and Tabarelli, Marcelo and Teixeira, Camila Palhares and Totland, Ørjan and Uehara-Prado, Marcio and Vaz-de-Mello, Fernando Zagury and Vasconcelos, Heraldo L. and Vieira, Simone A. and Chase, Jonathan M.},
+	year = {2025},
+	pages = {e70015}}
+```

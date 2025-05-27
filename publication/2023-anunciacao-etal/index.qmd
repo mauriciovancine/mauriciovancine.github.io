@@ -1,0 +1,54 @@
+---
+title: "Climate-driven loss of taxonomic and functional richness in Atlantic Forest anurans"
+subtitle: "Avaliamos os efeitos potenciais das mudanças climáticas na riqueza taxonômica e funcional dos anfíbios anuros na Mata Atlântica do Brasil, e testamos se espécies dependentes de florestas e de habitat aberto responderam de maneira diferente aos estressores climáticos."
+author: "Paula Ribeiro Anunciação, Raffael Ernst, Felipe Martello, Maurício Humberto Vancine, Luiz Marcelo Tavares Carvalho, Milton Cezar Ribeiro"
+date: 2023-09-22
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1016/j.pecon.2023.09.001" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2023-anunciacao-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+Climate change is one of the key drivers of the dramatic erosion of global biodiversity. Poikilothermic organisms, such as amphibians, are particularly prone to alterations in temperature and precipitation and are therefore expected to be severely impacted by global climate change. We evaluated: i) the potential effects of climate change on taxonomic and functional richness of amphibians in the Atlantic Forest of Brazil, and ii) tested whether forest-dependent and open area species responded differently to climatic stressors. We applied an ensemble forecasting approach using point locality data to establish predictive maps of taxonomic and functional richness for different IPCC AR5 scenarios with two Representative Concentration Pathway trajectories (RCP 4.5 and RCP 8.5) at two temporal projections (2050 and 2070). A significant decline in both taxonomic and functional richness of Atlantic Forest amphibians is expected over the coming decades under the evaluated climate scenarios. The core areas projected to maintain significantly high anuran richness in both components were in coastal high-altitude localities. We found negative effects (losses) to be more pronounced for taxonomic richness. Model outcomes indicate significant losses in both forest and open area species. A few remaining high-altitude sites will then play an important role as potential climatic refuges to safeguard anuran diversity, requiring a dynamic landscape approach as conservation strategy.
+
+## Citação
+
+```         
+@article{anunciacao_etal_2023,
+    author = {Paula Ribeiro Anunciação, Raffael Ernst, Felipe Martello, Maurício Humberto Vancine, Luiz Marcelo Tavares Carvalho, Milton Cezar Ribeiro},
+    title = "{Climate-driven loss of taxonomic and functional richness in Atlantic Forest anurans}",
+    journal = {Perspective in Ecology and Conservation},
+    year = {2023},
+    month = {},
+    issn = {2530-0644},
+    doi = {10.1016/j.pecon.2023.09.001},
+    url = {https://doi.org/10.1016/j.pecon.2023.09.001},
+    eprint = {},
+}
+```

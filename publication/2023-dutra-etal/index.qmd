@@ -1,0 +1,54 @@
+---
+title: "Dinâmica da paisagem e fragmentação de ecossistemas em três bacias hidrográficas na Amazônia Oriental entre 1985 e 2019"
+subtitle: "Nosso objetivo foi analisar a dinâmica da paisagem de três bacias hidrográficas no Nordeste Paraense entre 1985 e 2019 e as implicações dessas mudanças nas classes de formação florestal e mangue."
+author: "Vítor Abner Borges Dutra, Maurício Humberto Vancine, Aline Maria Meiguins de Lima, Peter Mann de Toledo"
+date: 2023-02-22
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.26848/rbgf.v16.2.p936-949" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2023-dutra-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+Pará’s Northeast has undergone deep changes during its occupation cycles. In this region, the conversion of forest to other classes of land use and cover has been going on for hundreds of years. With the advent of Remote Sensing, it is possible to quantify these changes. In this sense, the objective of the study was to analyze the landscape dynamics of three watersheds in Pará’s Northeast between 1985 and 2019, and the implications of these changes in the classes of forest formation and mangrove. The methodology adopted included tools associated with geotechnologies to support an integrated analysis within the scope of watersheds. The results showed a conversion of forest to pasture proportional to the area of the municipality of Castanhal/PA (approximately 1,000 km²). The largest range of alteration was concentrated in the areas of headwaters of the hydrographic basins, such as the expressive increase of 159% in the number of patches of the forest formation class (from 2547 to 6604); the reduction of the average area of forest formation patch from 121.9 to 31.9 ha; and the reduction in the core percentage of this class from 33.7 to 16.2%. On the other hand, no significant changes were observed in the mangrove class in the study area. Thus, measures for the conservation and recovery of important areas for the maintenance of coastal ecosystems and local water systems must be prioritized by decision-makers.
+
+## Citação
+
+```         
+@article{dutra_etal_2023,
+    author = {Vítor Abner Borges Dutra, Maurício Humberto Vancine, Aline Maria Meiguins de Lima, Peter Mann de Toledo},
+    title = "{Dinâmica da paisagem e fragmentação de ecossistemas em três bacias hidrográficas na Amazônia Oriental entre 1985 e 2019}",
+    journal = {Revista Brasileira de Geografia Física},
+    year = {2023},
+    month = {02},
+    issn = {1984-2295},
+    doi = {10.26848/rbgf.v16.2.p936-949},
+    url = {https://doi.org/10.26848/rbgf.v16.2.p936-949},
+    eprint = {https://periodicos.ufpe.br/revistas/rbgfe/article/download/254540/43715},
+}
+```

@@ -1,0 +1,55 @@
+---
+title: "Species turnover does not rescue biodiversity in fragmented landscapes"
+subtitle: "Analisamos os efeitos da perda e fragmentação de habitat sobre componentes da diversidade (alfa, beta e gama)."
+author: "Thiago Goncalves-Souza, Jonathan Chase, Nick Haddad, Maurício Humberto Vancine, Felipe Melo, Marcelo Aizen, Enrico Bernard, Adriano Chiarello, Raphael Didham, Deborah Faria, Heloise Gibb, Marcelo Goncalves de Lima, Luiz Magnago, Eduardo Mariano Neto, Andre Nogueira, Andre Nemésio, Marcelo Passamani, Bruno Pinho, Larissa Rocha‐Santos, Rodolpho Rodrigues, Nathalia Safar, Braulio Santos, Alejandra Soto-Werschitz, Marcelo Tabarelli, Marcio Uehara-Prado, Heraldo Vasconcelos, Simone Vieira, Nathan Sanders"
+date: 2025-01-22
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1038/s41586-025-08688-7" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2025-goncalvez-souza-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+    <a href="https://github.com/thiago-goncalves-souza/ms-biodiversity-loss-fragmented-landscapes" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+Habitat fragmentation generally reduces biodiversity at the patch scale (α diversity)1. However, there is ongoing debate about whether such negative effects can be alleviated at the landscape scale (γ diversity) if among-patch diversity (β diversity) increases as a result of fragmentation. This controversial view has not been rigorously tested. Here we use a dataset of 4,006 taxa across 37 studies from 6 continents to test the effects of fragmentation on biodiversity across scales by explicitly comparing continuous and fragmented landscapes. We find that fragmented landscapes consistently have both lower α diversity and lower γ diversity. Although fragmented landscapes did tend to have higher β diversity, this did not translate into higher γ diversity. Our findings refute claims that habitat fragmentation can increase biodiversity at landscape scales, and emphasize the need to restore habitat and increase connectivity to minimize biodiversity loss at ever-increasing scales.
+
+## Citação
+
+```         
+@article{goncalves_souza_etal_2025,
+    author = {Thiago Goncalves-Souza, Jonathan Chase, Nick Haddad, Maurício Humberto Vancine, Felipe Melo, Marcelo Aizen, Enrico Bernard, Adriano Chiarello, Raphael Didham, Deborah Faria, Heloise Gibb, Marcelo Goncalves de Lima, Luiz Magnago, Eduardo Mariano Neto, Andre Nogueira, Andre Nemésio, Marcelo Passamani, Bruno Pinho, Larissa Rocha‐Santos, Rodolpho Rodrigues, Nathalia Safar, Braulio Santos, Alejandra Soto-Werschitz, Marcelo Tabarelli, Marcio Uehara-Prado, Heraldo Vasconcelos, Simone Vieira, Nathan Sanders},
+    title = "{Species turnover does not rescue biodiversity in fragmented landscapes}",
+    journal = {Nature},
+    year = {2025},
+    month = {01},
+    issn = {1476-4687},
+    doi = {},
+    url = {},
+    eprint = {},
+}
+```

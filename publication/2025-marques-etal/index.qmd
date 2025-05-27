@@ -1,0 +1,55 @@
+---
+title: "Dinâmica espaço temporal: variações na composição e configuração da vegetação"
+subtitle: "Analisamos a dinâmica espaço-temporal da estrutura da paisagem da vegetação no Mato Grosso do Sul."
+author: "Rita de Cassia Gonçalves Marques, Maurício Humberto Vancine, Yziel Rondon Súarez, Joelson Gonçalves Pereira, Joab Doria Domingos, Ana Beatriz Barros da Silva, Zefa Valdivina Pereira"
+date: 2025-02-17
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.26848/rbgf.v18.2.p1334-1348" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2025-marques-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+A vegetação em Mato Grosso do Sul sofreu grandes mudanças devido à expansão agropecuária desde 1985, que resultou na perda de 1,2 milhões de hectares de vegetação. Embora existam estudos sobre a modificação da paisagem, eles geralmente se concentram em biomas específicos ou usam diferentes métodos de análise, dificultando comparações abrangentes.Investigamos como as mudanças no uso da terra em áreas de transição no Mato Grosso do Sul afetaram a estrutura vegetal ao longo do tempo. Para tal investigação, utilizamos dados do MAPBIOMAS, para os períodos de 2003, 2006, 2012 e 2021, processados no QGIS, para em seguida realizar as análises multitemporais utilizando quatro métricas de paisagem. Descobrimos que houve uma notável mudança de pastagens para agricultura entre 2003 e 2021, com a porcentagem de pastagem reduzindo de 51% para 36%, enquanto a área destinada à agricultura aumentou de 38% para 50%. Entretanto, tal processo não teve impacto nos fragmentos de vegetação das nossas paisagens. Ademais, notamos que a estrutura da vegetação como sua densidade de borda, forma e distância média entre fragmentos atingiram seus valores médios mais altos em 2012, devido a retrocessos ambientais na lei de proteção de vegetação nativa (LPVN) e à predominância da pecuária nesse período. Sugerimos que futuras pesquisas de restauração ecológica e monitoramento ambiental se concentrem nas áreas limítrofes dos fragmentos e nos efeitos da intensificação da pecuária sobre comunidades vegetais.
+
+## Citação
+
+```
+@article{marques_etal_2025,
+    author = {Marques, Rita de Cassia Gonçalves and Vancine, Maurício Humberto and Súarez, Yzel Rondon and Pereira, Joelson Gonçalves and Domingos, Joab Doria and Silva, Ana Beatriz Barros da and Pereira, Zefa Valdivina},
+	  title = {Dinâmica espaço temporal: variações na composição e configuração da vegetação},
+	  journal = {Revista Brasileira de Geografia Física},
+    volume = {18},
+  	number = {2},
+		pages = {1334--1348},
+    year = {2025},
+    issn = {1984-2295},
+	  doi = {10.26848/rbgf.v18.2.p1334-1348},
+    url = {https://periodicos.ufpe.br/revistas/index.php/rbgfe/article/view/263793}
+    }
+```

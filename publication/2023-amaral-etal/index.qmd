@@ -1,0 +1,54 @@
+---
+title: "Where do they live? Predictive geographic distribution of Tadarida brasiliensis (Chiroptera, Molossidae) in South America"
+subtitle: "Inferimos a distribuição potencial de T. brasiliensis brasiliensis em todo o continente Sul Americano, indicando as variáveis com maior influência em sua distribuição."
+author: "Izidoro Sarmento do Amaral, Jéssica Bandeira Pereira, Maurício Humberto Vancine, Ariadna E. Morales, Sérgio Luiz Althoff, Renato Gregorin, Maria João Ramos Pereira, Victor Hugo Valiati, Larissa Rosa de Oliveira"
+date: 2023-08-20
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.3897/neotropical.18.e101390" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2023-amaral-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+Tadarida brasiliensis, the Brazilian free-tailed bat, is an insectivorous molossid with a wide distribution in the Americas. It occurs in different ecosystems and uses varied shelters, from caves and crevices to human constructions, such as roofs and ceilings. Despite its wide distribution, there are several sampling gaps that make it difficult to identify the regions where the species occurs. This is a particular problem for the subspecies T. brasiliensis brasiliensis in South America, a region with few studies in comparison to North America. Considering these problems involved with identifying the distribution of T. b. brasiliensis in South America, we inferred its distribution based on 121 confirmed occurrences for the subspecies. We created a species distribution model (SDM) using the ensemble approach from the combination of BIOCLIM, SVM, GLM and MaxEnt algorithms. The resulting model suggested that the subspecies is unlikely to occur in the Amazon region and has a positive affinity with human population density, topography, a lower vegetation index, and the precipitation in the driest month. Our results show there is a large continuous area suitable for T. b. brasiliensis in central and eastern South America, with interruptions and narrow areas toward Central America. The population in this last area is separated from a smaller site in Chile by Andean deserts, snowy peaks, and high-altitude points. Our results demonstrated that along its distribution suitable habitat for T. b. brasiliensis is not continuous. The discontinuities in populations require further investigation to determine if there are phylogeographic consequences for the species.
+
+## Citação
+
+```         
+@article{amaral_etal_2023,
+    author = {Izidoro Sarmento do Amaral, Jéssica Bandeira Pereira, Maurício Humberto Vancine, Ariadna E. Morales, Sérgio Luiz Althoff, Renato Gregorin, Maria João Ramos Pereira, Victor Hugo Valiati, Larissa Rosa de Oliveira},
+    title = "{Where do they live? Predictive geographic distribution of Tadarida brasiliensis (Chiroptera, Molossidae) in South America}",
+    journal = {Neotropical Biology and Conservation},
+    year = {2023},
+    month = {09},
+    issn = {27},
+    doi = {10.3897/neotropical.18.e101390},
+    url = {https://neotropical.pensoft.net/article/101390/},
+    eprint = {https://neotropical.pensoft.net/article/101390/},
+}
+```
