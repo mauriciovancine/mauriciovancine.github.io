@@ -2364,5 +2364,40 @@
     "title": "ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest",
     "section": "Citação",
     "text": "Citação\n@article{vancine_etal_2023b,\n    author = {Maurício Humberto Vancine, Bernardo Brandão Niebuhr, Renata L. Muylaert, Júlia Emi de Faria Oshima, Vinicius Tonetti, Rodrigo Bernardo, Rafael Souza Cruz Alves, Eduardo Miguel Zanette, Victor Casagrande Souza, João Gabriel Ribeiro Giovanelli, Carlos Henrique Grohmann, Mauro Galetti, Milton Cezar Ribeiro},\n    title = \"{ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic 1metrics for the Atlantic Forest}\",\n    journal = {EcoEvoRxiv},\n    year = {2023},\n    month = {11},\n    issn = {},\n    doi = {10.32942/X26P58},\n    url = {https://ecoevorxiv.org/repository/view/6076/},\n    eprint = {https://ecoevorxiv.org/repository/view/6076/},\n}"
+  },
+  {
+    "objectID": "publication/2017-lauretto/index.html",
+    "href": "publication/2017-lauretto/index.html",
+    "title": "Planejamento sistemático de conservação no contexto do projeto BIOTA/FAPESP",
+    "section": "",
+    "text": "biblioteca PDF"
+  },
+  {
+    "objectID": "publication/2017-lauretto/index.html#resumo",
+    "href": "publication/2017-lauretto/index.html#resumo",
+    "title": "Planejamento sistemático de conservação no contexto do projeto BIOTA/FAPESP",
+    "section": "Resumo",
+    "text": "Resumo\nA exploração de recursos naturais tem gerado grandes ameaças às espécies e habitat de forma alarmante em todo o mundo. No Brasil, os biomas do Cerrado e da Mata Atlântica foram os que sofreram os maiores impactos negativos, principalmente com a conversão de suas áreas naturais em áreas para agricultura, pastagens e expansão urbana, o que tem levado a extinção de diversas espécies endêmicas. Abrigando ambos os biomas, o estado de São Paulo é o mais populoso e economicamente desenvolvido do país, e com o contínuo avanço de atividades como a cultura de canade-açúcar nos próximos anos, é necessário o desenvolvimento e aprimoramento de planejamentos de conservação compreensivos e eficientes para garantir a conservação das espécies desse estado. Com esse intuito, o projeto BIOTA/FAPESP realizou diversos levantamentos biológicos, gerou diversos avanços ao produzir mapas de áreas prioritárias para conservação e incremento de conectividade, sendo diretamente responsável pela criação de duas unidades de proteção integral. Quase uma década após o fim do projeto, este estudo vem como forma de revisão de seus resultados, utilizando Planejamento Sistemático de Conservação, através do software MARXAN, como metodologia alternativa às previamente utilizadas para estipular áreas prioritárias para conservação. O presente estudo encontrou diversas similaridades entre os resultados obtidos e os mapas síntese presentes no livro de Diretrizes para conservação e restauração da biodiversidade do estado de São Paulo, elaborado pelo BIOTA/FAPESP. Ao fim, recomenda-se a criação de 10 novas unidades de conservação e incremento da área de cinco unidades já estabelecidas."
+  },
+  {
+    "objectID": "publication/2022-borges-etal/index.html",
+    "href": "publication/2022-borges-etal/index.html",
+    "title": "The fate of vegetation remnants in the southern Amazon’s largest threatened hotspot: part (I) a 33-year analysis of LULCC in the Tapajos River basin, Brazil",
+    "section": "",
+    "text": "DOI PDF"
+  },
+  {
+    "objectID": "publication/2022-borges-etal/index.html#resumo",
+    "href": "publication/2022-borges-etal/index.html#resumo",
+    "title": "The fate of vegetation remnants in the southern Amazon’s largest threatened hotspot: part (I) a 33-year analysis of LULCC in the Tapajos River basin, Brazil",
+    "section": "Resumo",
+    "text": "Resumo\nIn the present study, we evaluated the dynamics of native vegetation cover (NVC) fragmentation from 1985 to 2018 in the most threatened basin of the Rio Tapajos (TRB), a tributary of the Amazon River. The study sought to understand how land use pressures negatively impacted the remnants of the agricultural matrix and the biodiversity of local biotas. To this end, we created a sampling grid with hexagons of 50,000 hectares each, compartmentalized as follows: for the entire basin area, we used a grid of 1255 hexagons in the analyses; in the northern portion of the basin (Amazon biome), we used a grid with 965 hexagons and in the southern portion of the basin (Cerrado biome) we used a grid with 290 hexagons. In these grids, we apply six landscape ecology metrics: number, size, edge, isolation, remnants and interiority, unprecedented in landscape studies. The hexagons created were our analytical units in the study of isolation and habitat loss between forest remnants (Fo) and savannas (Sa) in the three defined Core Areas. The results showed that the fragmentation dynamics in TRB was not a single and isolated event in the three compartments analyzed, with different clusters in the studied portions. The number of remnants grew exponentially in the landscape, in the first 20 years of the study (1985- 2005), and their areas lost half their original sizes in both parts of the basin. Regardless of remnant size or typology, the edge effect was high in both small and large patches (Fo = 15% and Sa = 20%). The isolation of the remnants was greater and increasing in the northern portion of the basin, in 20 years (1985-2005), the isolation class 100 to 1000 meters increased 31% for the Fo patches, while the Sa patches increased only 11% in the southern part of the basin. The total losses of remnants (Fo+Sa) in the northern portion were 38% and 41% for the remainders of the southern portion of the basin. It is important to emphasize that this study is the largest assessment ever carried out in the entire area of an Amazon watershed, with the objective of creating a database for comparative studies with other threatened watersheds. Our analyzes showed that 60% of the TRB Plateau area was converted to planted pastures and annual crops. If the same rates of deforestation and fragmentation remain at the current level, the prognosis for 2040 will not be encouraging."
+  },
+  {
+    "objectID": "publication/2022-borges-etal/index.html#citação",
+    "href": "publication/2022-borges-etal/index.html#citação",
+    "title": "The fate of vegetation remnants in the southern Amazon’s largest threatened hotspot: part (I) a 33-year analysis of LULCC in the Tapajos River basin, Brazil",
+    "section": "Citação",
+    "text": "Citação\n\n@article{borges_fate_2022,\n    title = {The fate of vegetation remnants in the southern Amazon's largest threatened hotspot: part (I) a 33-year analysis of {LULCC} in the Tapajos River basin, Brazil},\n    volume = {11},\n    issn = {2525-3409},\n    shorttitle = {The fate of vegetation remnants in the southern Amazon's largest threatened hotspot},\n    url = {https://rsdjournal.org/index.php/rsd/article/view/32553},\n    doi = {10.33448/rsd-v11i10.32553},\n    langid = {english},\n    number = {10},\n    pages = {e448111032553--e448111032553},\n    journaltitle = {Research, Society and Development},\n    author = {Borges, Guilherme Augusto and Mancilla, Gabriel and Siqueira, Alberto Barros and Vancine, Mauricio Humberto and Ribeiro, Milton Cezar and Maia, João Carlos de Souza},\n    urldate = {2022-08-16},\n    date = {2022-08-12},\n    note = {Number: 10},\n}"
   }
 ]
