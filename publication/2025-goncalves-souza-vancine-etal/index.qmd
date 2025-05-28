@@ -14,6 +14,8 @@ editor: source
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
   <a href="https://doi.org/10.1111/geb.70015" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
   <a href="/publications/2025-goncalves-souza-vancine-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+  <a href="https://zenodo.org/records/12206838" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-database me-1"></i>Zenodo</a>
+  <a href="https://github.com/mauriciovancine/landfrag" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
 </div>
 
 <style>
@@ -35,27 +37,28 @@ editor: source
 
 ## Resumo
 
-Motivation
+Motivation  
 The accelerated and widespread conversion of once continuous ecosystems into fragmented landscapes has driven ecological research to understand the response of biodiversity to local (fragment size) and landscape (forest cover and fragmentation) changes. This information has important theoretical and applied implications, but is still far from complete. We compiled the most comprehensive and updated database to investigate how these local and landscape changes determine species composition, abundance and trait diversity of multiple taxonomic groups in forest fragments across the globe.
 
-Main Types of Variables Contained
+Main Types of Variables Contained  
 We gathered data for 1472 forest fragments, providing information on the abundance and composition of 9154 species belonging to vertebrates, invertebrates, and plants. For 2703 of these species, we obtained more than 20 functional traits. We provided the spatial location and size of each fragment and metrics of landscape composition and configuration.
 
-Spatial Location and Grain
+Spatial Location and Grain  
 The dataset includes 1472 forest fragments sampled in 121 studies from all continents except Antarctica. Most datasets (77%) are from tropical regions, 17% are from temperate regions, and 6% are from subtropical regions. Species abundance and composition were collected at the plot or fragment scale, whereas the landscape metrics were extracted with buffer size ranging from a radius of 200–2000 m.
 
-Time Period and Grain
+Time Period and Grain  
 Data on the abundance of species and community composition were collected between 1994 and 2022, and the landscape metrics were extracted from the same year that a given study collected the abundance and composition data.
 
-Major Taxa and Level of Measurement
+Major Taxa and Level of Measurement  
 The studied organisms included invertebrates (Arachnida, Insecta and Gastropoda; 41% of the datasets), vertebrates (Amphibia, Squamata, Aves and Mammalia; 44%), and vascular plants (19%), and the lowest level of identification was species or morphospecies.
 
-Software Format
+Software Format  
 The dataset and code can be downloaded on Zenodo or GitHub.
 
 ## Citação
 
-```@article{goncalves-souza_landfrag_2025,
+```
+@article{goncalves-souza_landfrag_2025,
 	title = {{LandFrag}: {A} {Dataset} to {Investigate} the {Effects} of {Forest} {Loss} and {Fragmentation} on {Biodiversity}},
 	volume = {34},
 	issn = {1466-8238},
