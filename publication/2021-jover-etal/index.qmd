@@ -1,6 +1,6 @@
 ---
 title: "Distribution of macroalgal epiphytes and host species from the Cuban marine shelf inferred from ecological modelling"
-subtitle: "Avaliamos os padrões de distribuição da riqueza de espécies de borboletas frugívoras na Mata Atlântica, considerando a contribuição relativa do clima e da paisagem, e recomendamos diretrizes de conservação para o grupo."
+subtitle: "Avaliamos a distribuição potencial, limites de tolerância e nicho de similaridade de macroalgas epífitas e hospedeiras da plataforma marinha de Cuba."
 author: "Abdiel Jover, Asiel Cabrera, Alieex Ramo, Maurício Humberto Vancine, Ana M. Suárez, John Machell, José Lucas Pérez-Lloréns"
 date: 2021-06-01
 format:

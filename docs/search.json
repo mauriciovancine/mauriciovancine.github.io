@@ -2399,5 +2399,68 @@
     "title": "The fate of vegetation remnants in the southern Amazon’s largest threatened hotspot: part (I) a 33-year analysis of LULCC in the Tapajos River basin, Brazil",
     "section": "Citação",
     "text": "Citação\n\n@article{borges_fate_2022,\n    title = {The fate of vegetation remnants in the southern Amazon's largest threatened hotspot: part (I) a 33-year analysis of {LULCC} in the Tapajos River basin, Brazil},\n    volume = {11},\n    issn = {2525-3409},\n    shorttitle = {The fate of vegetation remnants in the southern Amazon's largest threatened hotspot},\n    url = {https://rsdjournal.org/index.php/rsd/article/view/32553},\n    doi = {10.33448/rsd-v11i10.32553},\n    langid = {english},\n    number = {10},\n    pages = {e448111032553--e448111032553},\n    journaltitle = {Research, Society and Development},\n    author = {Borges, Guilherme Augusto and Mancilla, Gabriel and Siqueira, Alberto Barros and Vancine, Mauricio Humberto and Ribeiro, Milton Cezar and Maia, João Carlos de Souza},\n    urldate = {2022-08-16},\n    date = {2022-08-12},\n    note = {Number: 10},\n}"
+  },
+  {
+    "objectID": "publication/2025-goncalves-souza-vancine-etal/index.html",
+    "href": "publication/2025-goncalves-souza-vancine-etal/index.html",
+    "title": "LandFrag: a dataset to investigate the effects of habitat loss and fragmentation on biodiversity in forest fragments",
+    "section": "",
+    "text": "DOI PDF"
+  },
+  {
+    "objectID": "publication/2025-goncalves-souza-vancine-etal/index.html#resumo",
+    "href": "publication/2025-goncalves-souza-vancine-etal/index.html#resumo",
+    "title": "LandFrag: a dataset to investigate the effects of habitat loss and fragmentation on biodiversity in forest fragments",
+    "section": "Resumo",
+    "text": "Resumo\nMotivation The accelerated and widespread conversion of once continuous ecosystems into fragmented landscapes has driven ecological research to understand the response of biodiversity to local (fragment size) and landscape (forest cover and fragmentation) changes. This information has important theoretical and applied implications, but is still far from complete. We compiled the most comprehensive and updated database to investigate how these local and landscape changes determine species composition, abundance and trait diversity of multiple taxonomic groups in forest fragments across the globe.\nMain Types of Variables Contained We gathered data for 1472 forest fragments, providing information on the abundance and composition of 9154 species belonging to vertebrates, invertebrates, and plants. For 2703 of these species, we obtained more than 20 functional traits. We provided the spatial location and size of each fragment and metrics of landscape composition and configuration.\nSpatial Location and Grain The dataset includes 1472 forest fragments sampled in 121 studies from all continents except Antarctica. Most datasets (77%) are from tropical regions, 17% are from temperate regions, and 6% are from subtropical regions. Species abundance and composition were collected at the plot or fragment scale, whereas the landscape metrics were extracted with buffer size ranging from a radius of 200–2000 m.\nTime Period and Grain Data on the abundance of species and community composition were collected between 1994 and 2022, and the landscape metrics were extracted from the same year that a given study collected the abundance and composition data.\nMajor Taxa and Level of Measurement The studied organisms included invertebrates (Arachnida, Insecta and Gastropoda; 41% of the datasets), vertebrates (Amphibia, Squamata, Aves and Mammalia; 44%), and vascular plants (19%), and the lowest level of identification was species or morphospecies.\nSoftware Format The dataset and code can be downloaded on Zenodo or GitHub."
+  },
+  {
+    "objectID": "publication/2025-goncalves-souza-vancine-etal/index.html#citação",
+    "href": "publication/2025-goncalves-souza-vancine-etal/index.html#citação",
+    "title": "LandFrag: a dataset to investigate the effects of habitat loss and fragmentation on biodiversity in forest fragments",
+    "section": "Citação",
+    "text": "Citação\n@article{goncalves-souza_landfrag_2025,     title = {{LandFrag}: {A} {Dataset} to {Investigate} the {Effects} of {Forest} {Loss} and {Fragmentation} on {Biodiversity}},     volume = {34},     issn = {1466-8238},     url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/geb.70015},     doi = {10.1111/geb.70015},     language = {en},     number = {2},     urldate = {2025-02-26},     journal = {Global Ecology and Biogeography},     author = {Gonçalves-Souza, Thiago and Vancine, Maurício Humberto and Sanders, Nathan J. and Haddad, Nick M. and Cortinhas, Lucas and Aase, Anne Lene T. O. and de Aguiar, Willian Moura and Aizen, Marcelo Adrian and Arroyo-Rodríguez, Víctor and Baz, Arturo and Benchimol, Maíra and Bernard, Enrico and Bertotto, Tássia Juliana and Bispo, Arthur Angelo and Bogoni, Juliano A. and Boldorini, Gabriel X. and Bragagnolo, Cibele and Brosi, Berry and Cantalice, Aníbal Silva and do Carmo, Rodrigo Felipe Rodrigues and Cazeta, Eliana and Chiarello, Adriano G. and de la Sancha, Noé U. and Didham, Raphael K. and Faria, Deborah and Filgueiras, Bruno and Figueira, José Eugênio Côrtes and Galvão, Gabriela Albuquerque and Garey, Michel Varajão and Gibb, Heloise and Gómez-Martínez, Carmelo and González, Ezequiel and de Gusmão, Reginaldo Augusto Farias and Henry, Mickaël and de Jesus, Shayana and Kloss, Thiago Gechel and Lázaro, Amparo and Leandro-Silva, Victor and de Lima, Marcelo G. and da Silva Lima, Ingrid and Lins-e-Silva, Ana Carolina B. and Nally, Ralph Mac and Magalhães, Arthur Ramalho and Magnago, Luiz Fernando Silva and Manu, Shiiwua and Mariano-Neto, Eduardo and Mbora, David Nyaga Mugo and Melo, Felipe P. L. and Mutua, Morris Nzioka and Neckel-Oliveira, Selvino and Nemésio, André and Nogueira, André Amaral and Oliveira, Patricia Marques Do A. and Pádua, Diego G. and Paes, Luan and de Paiva, Aparecida Barbosa and Passamani, Marcelo and Pena, João Carlos and Peres, Carlos A. and Pinho, Bruno X. and Pons, Jean-Marc and Prasniewski, Victor Mateus and Reiniö, Jenny and dos Santos Rocha, Magda and Rocha-Santos, Larissa and Rodal, Maria J. and Rodrigues, Rodolpho Credo and Safar, Nathalia V. H. and Salomão, Renato P. and Santos, Bráulio A. and Santos, Mirela N. and dos Santos, Jessie Pereira and Savilaakso, Sini and Schaefer, Carlos Ernesto Gonçalves Reynaud and Silva, Maria Amanda Menezes and da Silva, Fernando R. and Silva, Ricardo J. and Simonelli, Marcelo and Soto-Werschitz, Alejandra and Stireman III, John O. and Storck-Tonon, Danielle and Szinwelski, Neucir and Tabarelli, Marcelo and Teixeira, Camila Palhares and Totland, Ørjan and Uehara-Prado, Marcio and Vaz-de-Mello, Fernando Zagury and Vasconcelos, Heraldo L. and Vieira, Simone A. and Chase, Jonathan M.},     year = {2025},     pages = {e70015}}"
+  },
+  {
+    "objectID": "publication/2025-goncalves-souza-etal/index.html",
+    "href": "publication/2025-goncalves-souza-etal/index.html",
+    "title": "Species turnover does not rescue biodiversity in fragmented landscapes",
+    "section": "",
+    "text": "DOI PDF Code"
+  },
+  {
+    "objectID": "publication/2025-goncalves-souza-etal/index.html#resumo",
+    "href": "publication/2025-goncalves-souza-etal/index.html#resumo",
+    "title": "Species turnover does not rescue biodiversity in fragmented landscapes",
+    "section": "Resumo",
+    "text": "Resumo\nHabitat fragmentation generally reduces biodiversity at the patch scale (α diversity)1. However, there is ongoing debate about whether such negative effects can be alleviated at the landscape scale (γ diversity) if among-patch diversity (β diversity) increases as a result of fragmentation. This controversial view has not been rigorously tested. Here we use a dataset of 4,006 taxa across 37 studies from 6 continents to test the effects of fragmentation on biodiversity across scales by explicitly comparing continuous and fragmented landscapes. We find that fragmented landscapes consistently have both lower α diversity and lower γ diversity. Although fragmented landscapes did tend to have higher β diversity, this did not translate into higher γ diversity. Our findings refute claims that habitat fragmentation can increase biodiversity at landscape scales, and emphasize the need to restore habitat and increase connectivity to minimize biodiversity loss at ever-increasing scales."
+  },
+  {
+    "objectID": "publication/2025-goncalves-souza-etal/index.html#citação",
+    "href": "publication/2025-goncalves-souza-etal/index.html#citação",
+    "title": "Species turnover does not rescue biodiversity in fragmented landscapes",
+    "section": "Citação",
+    "text": "Citação\n@article{goncalves_souza_etal_2025,\n    author = {Thiago Goncalves-Souza, Jonathan Chase, Nick Haddad, Maurício Humberto Vancine, Felipe Melo, Marcelo Aizen, Enrico Bernard, Adriano Chiarello, Raphael Didham, Deborah Faria, Heloise Gibb, Marcelo Goncalves de Lima, Luiz Magnago, Eduardo Mariano Neto, Andre Nogueira, Andre Nemésio, Marcelo Passamani, Bruno Pinho, Larissa Rocha‐Santos, Rodolpho Rodrigues, Nathalia Safar, Braulio Santos, Alejandra Soto-Werschitz, Marcelo Tabarelli, Marcio Uehara-Prado, Heraldo Vasconcelos, Simone Vieira, Nathan Sanders},\n    title = \"{Species turnover does not rescue biodiversity in fragmented landscapes}\",\n    journal = {Nature},\n    year = {2025},\n    month = {01},\n    issn = {1476-4687},\n    doi = {},\n    url = {},\n    eprint = {},\n}"
+  },
+  {
+    "objectID": "publication/2021-jover-etal/index.html",
+    "href": "publication/2021-jover-etal/index.html",
+    "title": "Distribution of macroalgal epiphytes and host species from the Cuban marine shelf inferred from ecological modelling",
+    "section": "",
+    "text": "DOI PDF"
+  },
+  {
+    "objectID": "publication/2021-jover-etal/index.html#resumo",
+    "href": "publication/2021-jover-etal/index.html#resumo",
+    "title": "Distribution of macroalgal epiphytes and host species from the Cuban marine shelf inferred from ecological modelling",
+    "section": "Resumo",
+    "text": "Resumo\nEcological Niche Modelling (ENM) is a tool widely used in ecology to determine environmental conditions and the potential distribution of species. In this article we assess the potential distribution, tolerance limits and similarity niche of macroalgae epiphytes and hosts from the Cuba marine shelf. Using different methods (BIOCLIM, Gower, Maxent and SVM) we have modelled the niche for each species. The final prediction map of distribution was made using the ensemble prediction technique. The similarity of ENMs was quantified by Schoener’D and Hellinger’I distance. The predictive power of all models was reasonable, since the values of the area under the curve (AUC) were greater than 0.9. The host macroalgae most closely related to the spatial distribution pattern of potential abundance of epiphytic macroalgae are Stypopodium zonale (Kendall correlation, r 2 = 0.886) and Digenea simplex (Kendall correlation, r 2 = 0.777). Environmental variables that contributed mostly (30 %) to the ecological niche models were: the average maximum salinity per year (35.5− 36 PSU); the average minimum flow velocity per year (0.2 m⋅s − 1 ) and the average minimum light at ground level per year (10− 60 E⋅m − 2 ⋅yr − 1 ). The results show that epiphytic macroalgae and their most common hosts are generalist species (niche width 0.8) with high overlap in their niche (Schoener’ D &gt; 0.7; Hellinger’ I distance = I &gt; 0.6)."
+  },
+  {
+    "objectID": "publication/2021-jover-etal/index.html#citação",
+    "href": "publication/2021-jover-etal/index.html#citação",
+    "title": "Distribution of macroalgal epiphytes and host species from the Cuban marine shelf inferred from ecological modelling",
+    "section": "Citação",
+    "text": "Citação\n@article{jover_etal_2021,\n    title = {Distribution of macroalgae epiphytes and host species from the {Cuban} marine shelf inferred from ecological modelling},\n    volume = {172},\n    issn = {03043770},\n    url = {https://linkinghub.elsevier.com/retrieve/pii/S0304377021000449},\n    doi = {10.1016/j.aquabot.2021.103395},\n    language = {en},\n    urldate = {2022-06-08},\n    journal = {Aquatic Botany},\n    author = {Jover, Abdiel and Cabrera, Asiel and Ramos, Alieex and Vancine, Maurício H. and Suárez, Ana M. and Machell, John and Pérez-Lloréns, José Lucas},\n    month = jun,\n    year = {2021},\n    pages = {103395},\n}"
   }
 ]
