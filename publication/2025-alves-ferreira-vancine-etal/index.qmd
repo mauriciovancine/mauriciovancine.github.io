@@ -1,0 +1,54 @@
+---
+title: "From Hot to Cold Spots: Climate Change is Projected to Modify Diversity Patterns of Small Mammals in a Biodiversity Hotspot"
+subtitle: "Avaliamos se áreas protegidas e remanescentes florestais na Mata Atlântica na América do Sul são projetados para garantir a diversidade taxonômica e a diversidade filogenética de pequenos mamíferos não voadores em cenários de mudanças climáticas futuras."
+author: "Gabriela Alves-Ferreira, Maurício Humberto Vancine, Flávio Mariano Machado Mota, Carolina Bello, Thadeu Sobral-Souza, Alexandre R. Percequillo, Thomas E. Lacher Jr, Mauro Galetti, Ricardo S. Bovendorp"
+date: 2025-05-01
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1111/ddi.70026" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2025-alves-ferreira-vancine-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.jpg)
+
+## Resumo
+
+Aim  
+Climate change represents one of the main threats to global biodiversity, and such alterations are expected to induce shifts in distribution ranges and diversity patterns. We evaluate if protected areas and forest remnants in the Atlantic Forest in South America (AF) are projected to ensure the taxonomic diversity (TD) and phylogenetic diversity (PD) of non-volant small mammals under scenarios of future climate change.
+
+Location  
+Atlantic Forest (AF), South America.
+
+Methods  
+We used Species Distribution Modelling (SDMs) through an ensemble approach to assess the potential distribution of 101 species of small mammals using present (1979–2013) and future (2050 and 2070) climate scenarios. We consider optimistic and pessimistic greenhouse gas concentration scenarios (SSP370 and SSP585). We accessed TD through the sum of the suitable areas vs. areas of low or unknown suitability distribution maps for each species and PD using the sum of the branch lengths of a phylogenetic tree spatialised.
+
+Results  
+Our models suggest that climate change is likely to reduce the suitable climatic areas for small mammals in the AF. The shrinkage in the potential distribution is projected to lead to high loss of TD and PD. The southeastern region of the Atlantic Forest is likely to experience the most pronounced decline in PD, while some small areas in the southern Atlantic Forest are projected to increase PD in the future.
+
+Main Conclusions  
+Our models suggest a strong decline in TD and in PD from biodiversity hotspot regions in the AF under climate change scenarios. Since small mammals have low dispersal ability, and because most of the AF is highly fragmented, it is unlikely that this biome will sustain small mammal biodiversity in the future.
+
+## Citação
+

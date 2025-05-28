@@ -12,7 +12,7 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://doi.org/10.32942/X26P58" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-biorxiv me-1"></i>DOI</a>
+  <a href="https://doi.org/10.32942/X26P58" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-biorxiv me-1"></i>EcoEvoRxiv</a>
   <a href="/publications/2023b-vancine-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
   <a href="/publications/2023b-vancine-etal_sm.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>Metadados</a>
   <a href="https://github.com/mauriciovancine/ATLANTIC-SPATIAL" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
