@@ -1,7 +1,0 @@
----
-title: "Gymnophiona"
-subtitle: "Compilar ocorrências e criar modelos de distribuição de espécies para Gymnophionas da região Neotropical"
-author: Lucas Almeida, Maurício Vancine, Célio Haddad
-image: featured-hex.png
-editor: source
----

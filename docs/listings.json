@@ -1,40 +1,22 @@
 [
   {
-    "listing": "/about/index.html",
-    "items": []
-  },
-  {
-    "listing": "/blog/index.html",
+    "listing": "/teaching/index.html",
     "items": [
-      "/blog/git-intro/index.html",
-      "/blog/r-shiny-intro/index.html",
-      "/blog/app-graphics-maps/index.html",
-      "/blog/julia-intro/index.html",
-      "/blog/r-reinstall-packages/index.html",
-      "/blog/geo-data-source/index.html",
-      "/blog/academic-online-courses/index.html",
-      "/blog/geo-crs-datum/index.html",
-      "/blog/r-error/index.html"
-    ]
-  },
-  {
-    "listing": "/project/index.html",
-    "items": [
-      "/project/atlantic-amphibians/index.html",
-      "/project/atlantic-spatial/index.html",
-      "/project/ecologia-r/index.html",
-      "/project/gere/index.html",
-      "/project/gymnophiona/index.html",
-      "/project/lsmetrics/index.html",
-      "/project/mapbiomas_degradacao/index.html",
-      "/project/amphibr/index.html",
-      "/project/atlanticr/index.html"
-    ]
-  },
-  {
-    "listing": "/projects/index.html",
-    "items": [
-      "/projects/lsmetrics/index.html"
+      "/teaching/workshop-spadivr/index.html",
+      "/teaching/workshop-git/index.html",
+      "/teaching/workshop-qgis/index.html",
+      "/teaching/workshop-intror/index.html",
+      "/teaching/workshop-sdmr/index.html",
+      "/teaching/workshop-landr/index.html",
+      "/teaching/workshop-sheet/index.html",
+      "/teaching/workshop-progr/index.html",
+      "/teaching/workshop-frog/index.html",
+      "/teaching/workshop-ecostatr/index.html",
+      "/teaching/course-ecostatr/index.html",
+      "/teaching/course-spar/index.html",
+      "/teaching/course-geor/index.html",
+      "/teaching/course-intror/index.html",
+      "/teaching/course-sdmr/index.html"
     ]
   },
   {
@@ -61,29 +43,32 @@
     ]
   },
   {
-    "listing": "/teaching/index.html",
+    "listing": "/project/index.html",
     "items": [
-      "/teaching/workshop-spadivr/index.html",
-      "/teaching/workshop-git/index.html",
-      "/teaching/workshop-qgis/index.html",
-      "/teaching/workshop-intror/index.html",
-      "/teaching/workshop-sdmr/index.html",
-      "/teaching/workshop-landr/index.html",
-      "/teaching/workshop-sheet/index.html",
-      "/teaching/workshop-progr/index.html",
-      "/teaching/workshop-frog/index.html",
-      "/teaching/workshop-ecostatr/index.html",
-      "/teaching/course-ecostatr/index.html",
-      "/teaching/course-spar/index.html",
-      "/teaching/course-geor/index.html",
-      "/teaching/course-intror/index.html",
-      "/teaching/course-sdmr/index.html"
+      "/project/atlantic-amphibians/index.html",
+      "/project/atlantic-spatial/index.html",
+      "/project/ecologia-r/index.html",
+      "/project/gere/index.html",
+      "/project/gymnophiona/index.html",
+      "/project/lsmetrics/index.html",
+      "/project/mapbiomas_degradacao/index.html",
+      "/project/amphibr/index.html",
+      "/project/atlanticr/index.html"
     ]
   },
   {
-    "listing": "/publication/index.html",
+    "listing": "/blog/index.html",
     "items": [
-      "/publication/frag-mm-sp/index.html"
+      "/blog/r-geo-fix-coordinates/index.html",
+      "/blog/git-intro/index.html",
+      "/blog/r-shiny-intro/index.html",
+      "/blog/app-graphics-maps/index.html",
+      "/blog/julia-intro/index.html",
+      "/blog/r-reinstall-packages/index.html",
+      "/blog/geo-data-source/index.html",
+      "/blog/academic-online-courses/index.html",
+      "/blog/geo-crs-datum/index.html",
+      "/blog/r-error/index.html"
     ]
   }
 ]

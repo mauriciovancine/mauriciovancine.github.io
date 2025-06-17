@@ -67,10 +67,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4122062fe1e9b2b9700a110aabccf5e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5a5cfa2c81bf66c99c9eca896a6824fb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f3f416ad1aa407572e315065590997f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -500,11 +500,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <em>Strings</em>: “texto”<br>
 </li>
 <li>
-<em>Coleções</em>: Arrays, Tuplas, Dicionários, etc. <code>mzx #| eval: false a = 5          # Int64 b = 3.5        # Float64 c = true       # Booleano nome = "Julia" # String</code>
+<em>Coleções</em>: Arrays, Tuplas, Dicionários, etc. <code>ttl #| eval: false a = 5          # Int64 b = 3.5        # Float64 c = true       # Booleano nome = "Julia" # String</code>
 </li>
 </ul>
 </li>
-<li><p>Tipagem dinâmica, mas com suporte a tipagem explícita. ```mzx #| eval: false # tipagem dinamica x = 10 typeof(x)</p></li>
+<li><p>Tipagem dinâmica, mas com suporte a tipagem explícita. ```ttl #| eval: false # tipagem dinamica x = 10 typeof(x)</p></li>
 </ul></section></section><section id="tipagem-explicita" class="level1"><h1>tipagem explicita</h1>
 <p>y::Float64 = 10 # x é do tipo Int typeof(y)</p>
 <pre><code>
@@ -520,7 +520,7 @@ f(x) = x^2
 # usar a funcao
 f(10)</code></pre>
 <ul>
-<li>Condicionais e laços seguem a estrutura clássica de outras linguagens (como <code>if</code>, <code>for</code> e <code>while</code>). Atentar para o <code>end</code> para finalizar uma declaração. ```mzx #| eval: false # condicional if x &gt; 0 println(“Positivo”) elseif x &lt; 0 println(“Negativo”) else println(“Zero”) end</li>
+<li>Condicionais e laços seguem a estrutura clássica de outras linguagens (como <code>if</code>, <code>for</code> e <code>while</code>). Atentar para o <code>end</code> para finalizar uma declaração. ```ttl #| eval: false # condicional if x &gt; 0 println(“Positivo”) elseif x &lt; 0 println(“Negativo”) else println(“Zero”) end</li>
 </ul></section><section id="for" class="level1"><h1>for</h1>
 <p>for i in 1:5 println(i) end</p>
 </section><section id="while" class="level1"><h1>while</h1>
@@ -534,7 +534,7 @@ arr = [1, 2, 3, 4, 5]  # Vetor com 5 elementos
 # matriz
 matrix = [1 2 3; 4 5 6]  # Matriz 2x3</code></pre>
 <ul>
-<li>Tupla é uma estrutura de dados imutável e dicionário é uma estrutura de dados mutável que armazena pares chave-valor ```mzx #| eval: false # tupla t = (1, “Julia”, 3.14)</li>
+<li>Tupla é uma estrutura de dados imutável e dicionário é uma estrutura de dados mutável que armazena pares chave-valor ```ttl #| eval: false # tupla t = (1, “Julia”, 3.14)</li>
 </ul></section><section id="dicionario" class="level1"><h1>dicionario</h1>
 <p>d = Dict(“nome” =&gt; “Julia”, “idade” =&gt; 10, “linguagem” =&gt; “programação”)</p>
 <pre><code>
@@ -561,23 +561,23 @@ saudacao("Julia")</code></pre>
 <li>Instalação</li>
 </ol>
 <ul>
-<li>Via registro oficial: <code>mzx #| eval: false using Pkg Pkg.add("NomeDoPacote")</code>
+<li>Via registro oficial: <code>ttl #| eval: false using Pkg Pkg.add("NomeDoPacote")</code>
 </li>
-<li>De repositórios específicos: <code>mzx #| eval: false Pkg.add(url="https://github.com/usuario/pacote.git")</code>
+<li>De repositórios específicos: <code>ttl #| eval: false Pkg.add(url="https://github.com/usuario/pacote.git")</code>
 </li>
 </ul>
 <ol start="2" type="1">
-<li><p>Carregamento Depois de instalado, um pacote pode ser usado carregando-o, entretanto, nenhuma mensagem é devolvida no REPL: <code>mzx #| eval: false using NomeDoPacote</code></p></li>
+<li><p>Carregamento Depois de instalado, um pacote pode ser usado carregando-o, entretanto, nenhuma mensagem é devolvida no REPL: <code>ttl #| eval: false using NomeDoPacote</code></p></li>
 <li><p>Atualização<br>
-Atualiza todos os pacotes instalados para as versões mais recentes compatíveis: <code>mzx #| eval: false Pkg.update()</code></p></li>
+Atualiza todos os pacotes instalados para as versões mais recentes compatíveis: <code>ttl #| eval: false Pkg.update()</code></p></li>
 <li><p>Remoção<br>
-Remove um pacote do ambiente: <code>mzx #| eval: false Pkg.rm("NomeDoPacote")</code></p></li>
+Remove um pacote do ambiente: <code>ttl #| eval: false Pkg.rm("NomeDoPacote")</code></p></li>
 <li><p>Listagem de pacotes instalados<br>
-Exibe os pacotes no ambiente atual: <code>mzx #| eval: false Pkg.status()</code></p></li>
+Exibe os pacotes no ambiente atual: <code>ttl #| eval: false Pkg.status()</code></p></li>
 <li><p>Ativação de ambientes<br>
-Os ambientes controlam versões de pacotes e dependências para projetos específicos, veja mais logo em seguida: <code>mzx #| eval: false Pkg.activate("caminho/do/ambiente")</code></p></li>
+Os ambientes controlam versões de pacotes e dependências para projetos específicos, veja mais logo em seguida: <code>ttl #| eval: false Pkg.activate("caminho/do/ambiente")</code></p></li>
 <li><p>Criação de pacotes<br>
-Para criar pacotes personalizados: <code>mzx #| eval: false Pkg.generate("NomeDoPacote")</code> Alguns pacotes amplamente usados:</p></li>
+Para criar pacotes personalizados: <code>ttl #| eval: false Pkg.generate("NomeDoPacote")</code> Alguns pacotes amplamente usados:</p></li>
 </ol>
 <ul>
 <li>
@@ -598,21 +598,21 @@ Para criar pacotes personalizados: <code>mzx #| eval: false Pkg.generate("NomeDo
 <p>Para criar e gerenciar ambientes, utiliza-se o <strong>Pkg</strong>. O fluxo básico é o seguinte:</p>
 <ol type="1">
 <li><p>Criar um novo ambiente<br>
-Para iniciar um novo ambiente, basta ativá-lo em um diretório vazio ou específico: <code>mzx #| eval: false using Pkg Pkg.activate("caminho/do/ambiente")</code> Isso cria um novo ambiente com os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</p></li>
+Para iniciar um novo ambiente, basta ativá-lo em um diretório vazio ou específico: <code>ttl #| eval: false using Pkg Pkg.activate("caminho/do/ambiente")</code> Isso cria um novo ambiente com os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</p></li>
 <li><p>Instalar pacotes em um ambiente<br>
-Depois de ativar um ambiente, você pode adicionar pacotes que serão isolados nesse ambiente: <code>mzx #| eval: false Pkg.add("NomeDoPacote")</code></p></li>
+Depois de ativar um ambiente, você pode adicionar pacotes que serão isolados nesse ambiente: <code>ttl #| eval: false Pkg.add("NomeDoPacote")</code></p></li>
 <li><p>Listar pacotes no ambiente ativo<br>
-Para ver quais pacotes estão instalados no ambiente ativo: <code>mzx #| eval: false Pkg.status()</code></p></li>
+Para ver quais pacotes estão instalados no ambiente ativo: <code>ttl #| eval: false Pkg.status()</code></p></li>
 <li><p>Voltar ao ambiente global<br>
-Para voltar ao ambiente global (onde pacotes são instalados no diretório padrão), basta ativá-lo: <code>mzx #| eval: false Pkg.activate()  # Ativa o ambiente global</code></p></li>
+Para voltar ao ambiente global (onde pacotes são instalados no diretório padrão), basta ativá-lo: <code>ttl #| eval: false Pkg.activate()  # Ativa o ambiente global</code></p></li>
 <li><p>Ambientes em projetos<br>
 Para projetos específicos, você pode criar um ambiente no diretório do projeto, o que garante que o projeto use as versões exatas dos pacotes que você deseja. Isso também facilita a colaboração, pois outros usuários podem instalar as dependências exatas usando os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</p></li>
 </ol>
 <p>Ambientes isolam dependências, ou seja, ambientes diferentes podem ter diferentes versões de pacotes, o que evita conflitos entre projetos. Almentam a reprodutibilidade, isto é, os arquivos <code>Project.toml</code> e <code>Manifest.toml</code> garantem que o projeto pode ser facilmente replicado em outras máquinas ou por outras pessoas. E facilidade de gerenciamento, uma vez que trabalhar com ambientes separados permite que você organize e mantenha seus projetos de maneira mais eficiente, especialmente quando se lida com muitas dependências.</p>
-<p>Exemplo de Fluxo de Trabalho com Ambientes 1. Crie um diretório para o seu projeto e ative um novo ambiente: <code>mzx #| eval: false mkdir("meu_projeto") cd("meu_projeto") Pkg.activate(".")</code></p>
+<p>Exemplo de Fluxo de Trabalho com Ambientes 1. Crie um diretório para o seu projeto e ative um novo ambiente: <code>ttl #| eval: false mkdir("meu_projeto") cd("meu_projeto") Pkg.activate(".")</code></p>
 <ol start="2" type="1">
-<li><p>Adicione pacotes necessários para o projeto: <code>mzx #| eval: false Pkg.add("DataFrames") Pkg.add("Plots")</code></p></li>
-<li><p>Depois de terminar o trabalho, você pode gerar o arquivo <code>Manifest.toml</code> para garantir que qualquer pessoa que usar o projeto tenha as mesmas versões de pacotes: <code>mzx #| eval: false Pkg.instantiate()  # Para instalar as dependências listadas</code></p></li>
+<li><p>Adicione pacotes necessários para o projeto: <code>ttl #| eval: false Pkg.add("DataFrames") Pkg.add("Plots")</code></p></li>
+<li><p>Depois de terminar o trabalho, você pode gerar o arquivo <code>Manifest.toml</code> para garantir que qualquer pessoa que usar o projeto tenha as mesmas versões de pacotes: <code>ttl #| eval: false Pkg.instantiate()  # Para instalar as dependências listadas</code></p></li>
 </ol>
 <p>Em resumo, os ambientes em Julia proporcionam um controle flexível e eficiente sobre as dependências do projeto, melhorando a reprodutibilidade e o isolamento de pacotes, essenciais para trabalhar com projetos complexos ou múltiplos.</p>
 </section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
@@ -1102,7 +1102,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a></p>
+<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">

@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.40">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="author" content="Maurício Vancine com edições de textos do ChatGPT">
+
 <title>Introdução ao controle de versão com git, GitHub e RStudio – Maurício Vancine</title>
 <style>
 code{white-space: pre-wrap;}
@@ -18,41 +21,8 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
+
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
@@ -72,7 +42,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-f3f416ad1aa407572e315065590997f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -98,12 +69,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
   }
-}</script><link rel="stylesheet" href="../../styles.css">
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
+
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Maurício Vancine</span>
@@ -115,7 +92,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">Sobre</span></a>
   </li>  
@@ -148,56 +125,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Resumé</span></a>
   </li>  
 </ul>
-</div> <!-- /navcollapse -->
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
     <a href="https://www.github.com/mauriciovancine/mauriciovancine.github.io" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-<li><a href="#contextualiza%C3%A7%C3%A3o" id="toc-contextualização" class="nav-link active" data-scroll-target="#contextualiza%C3%A7%C3%A3o">Contextualização</a></li>
-  <li><a href="#controle-de-vers%C3%A3o" id="toc-controle-de-versão" class="nav-link" data-scroll-target="#controle-de-vers%C3%A3o">Controle de versão</a></li>
-  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">git</a></li>
-  <li><a href="#instala%C3%A7%C3%A3o" id="toc-instalação" class="nav-link" data-scroll-target="#instala%C3%A7%C3%A3o">Instalação</a></li>
-  <li><a href="#terminal-bash-e-desktop" id="toc-terminal-bash-e-desktop" class="nav-link" data-scroll-target="#terminal-bash-e-desktop">Terminal bash e desktop</a></li>
-  <li><a href="#est%C3%A1gios-do-controle-de-vers%C3%A3o" id="toc-estágios-do-controle-de-versão" class="nav-link" data-scroll-target="#est%C3%A1gios-do-controle-de-vers%C3%A3o">Estágios do controle de versão</a></li>
-  <li><a href="#git-init-come%C3%A7ando" id="toc-git-init-começando" class="nav-link" data-scroll-target="#git-init-come%C3%A7ando">git init: começando</a></li>
-  <li><a href="#git-status-verificando" id="toc-git-status-verificando" class="nav-link" data-scroll-target="#git-status-verificando">git status: verificando</a></li>
-  <li><a href="#git-add-adicionando" id="toc-git-add-adicionando" class="nav-link" data-scroll-target="#git-add-adicionando">git add: adicionando</a></li>
-  <li><a href="#git-commit-guardando" id="toc-git-commit-guardando" class="nav-link" data-scroll-target="#git-commit-guardando">git commit: guardando</a></li>
-  <li><a href="#git-push-guardando" id="toc-git-push-guardando" class="nav-link" data-scroll-target="#git-push-guardando">git push: guardando</a></li>
-  <li><a href="#para-se-aprofundar" id="toc-para-se-aprofundar" class="nav-link" data-scroll-target="#para-se-aprofundar">Para se aprofundar</a></li>
-  <li><a href="#o-que-s%C3%A3o-git-e-github" id="toc-o-que-são-git-e-github" class="nav-link" data-scroll-target="#o-que-s%C3%A3o-git-e-github">O que são Git e GitHub?</a></li>
-  <li>
-<a href="#instala%C3%A7%C3%A3o-do-git" id="toc-instalação-do-git" class="nav-link" data-scroll-target="#instala%C3%A7%C3%A3o-do-git">Instalação do Git</a>
+  <li><a href="#contextualização" id="toc-contextualização" class="nav-link active" data-scroll-target="#contextualização">Contextualização</a>
   <ul class="collapse">
-<li><a href="#windows-linux-macos" id="toc-windows-linux-macos" class="nav-link" data-scroll-target="#windows-linux-macos">Windows / Linux / macOS:</a></li>
-  </ul>
-</li>
-  <li><a href="#conceitos-b%C3%A1sicos" id="toc-conceitos-básicos" class="nav-link" data-scroll-target="#conceitos-b%C3%A1sicos">Conceitos Básicos</a></li>
-  <li><a href="#criando-um-reposit%C3%B3rio-local" id="toc-criando-um-repositório-local" class="nav-link" data-scroll-target="#criando-um-reposit%C3%B3rio-local">Criando um Repositório Local</a></li>
-  <li><a href="#conectando-com-o-github" id="toc-conectando-com-o-github" class="nav-link" data-scroll-target="#conectando-com-o-github">Conectando com o GitHub</a></li>
-  <li><a href="#ciclo-de-trabalho-no-git" id="toc-ciclo-de-trabalho-no-git" class="nav-link" data-scroll-target="#ciclo-de-trabalho-no-git">Ciclo de Trabalho no Git</a></li>
-  <li>
-<a href="#clonar-reposit%C3%B3rios-e-colaborar" id="toc-clonar-repositórios-e-colaborar" class="nav-link" data-scroll-target="#clonar-reposit%C3%B3rios-e-colaborar">Clonar Repositórios e Colaborar</a>
+  <li><a href="#conferindo-os-computadores" id="toc-conferindo-os-computadores" class="nav-link" data-scroll-target="#conferindo-os-computadores">1. Conferindo os computadores</a></li>
+  <li><a href="#controle-de-versão" id="toc-controle-de-versão" class="nav-link" data-scroll-target="#controle-de-versão">2. Controle de versão</a></li>
+  <li><a href="#git-e-github" id="toc-git-e-github" class="nav-link" data-scroll-target="#git-e-github">3. git e GitHub</a></li>
+  <li><a href="#o-que-é-git" id="toc-o-que-é-git" class="nav-link" data-scroll-target="#o-que-é-git">O que é git?</a></li>
+  <li><a href="#o-que-é-github" id="toc-o-que-é-github" class="nav-link" data-scroll-target="#o-que-é-github">O que é GitHub?</a></li>
+  <li><a href="#atenção-aos-conceitos" id="toc-atenção-aos-conceitos" class="nav-link" data-scroll-target="#atenção-aos-conceitos">Atenção aos conceitos:</a></li>
+  </ul></li>
+  <li><a href="#detalhes-do-github" id="toc-detalhes-do-github" class="nav-link" data-scroll-target="#detalhes-do-github">4. Detalhes do GitHub</a>
   <ul class="collapse">
-<li><a href="#clonar" id="toc-clonar" class="nav-link" data-scroll-target="#clonar">Clonar:</a></li>
-  <li><a href="#criar-nova-branch" id="toc-criar-nova-branch" class="nav-link" data-scroll-target="#criar-nova-branch">Criar nova branch:</a></li>
-  <li><a href="#voltar-%C3%A0-branch-principal-e-unir-mudan%C3%A7as" id="toc-voltar-à-branch-principal-e-unir-mudanças" class="nav-link" data-scroll-target="#voltar-%C3%A0-branch-principal-e-unir-mudan%C3%A7as">Voltar à branch principal e unir mudanças:</a></li>
+  <li><a href="#perfil" id="toc-perfil" class="nav-link" data-scroll-target="#perfil">Perfil</a></li>
+  <li><a href="#configurações" id="toc-configurações" class="nav-link" data-scroll-target="#configurações">Configurações</a></li>
+  <li><a href="#repositório" id="toc-repositório" class="nav-link" data-scroll-target="#repositório">Repositório</a></li>
+  <li><a href="#readme.md" id="toc-readme.md" class="nav-link" data-scroll-target="#readme.md">README.md</a></li>
+  </ul></li>
+  <li><a href="#criando-um-repositório" id="toc-criando-um-repositório" class="nav-link" data-scroll-target="#criando-um-repositório">5. Criando um repositório</a></li>
+  <li><a href="#prática-2-criar-página-inicial-no-github" id="toc-prática-2-criar-página-inicial-no-github" class="nav-link" data-scroll-target="#prática-2-criar-página-inicial-no-github">Prática 2: Criar página inicial no GitHub</a></li>
+  <li><a href="#configurações-rstudio-git-e-github" id="toc-configurações-rstudio-git-e-github" class="nav-link" data-scroll-target="#configurações-rstudio-git-e-github">6. Configurações: RStudio, git e GitHub</a>
+  <ul class="collapse">
+  <li><a href="#configuração-no-rstudio" id="toc-configuração-no-rstudio" class="nav-link" data-scroll-target="#configuração-no-rstudio">Configuração no RStudio</a></li>
+  </ul></li>
   </ul>
-</li>
-  <li><a href="#sincronizar-com-o-reposit%C3%B3rio-remoto" id="toc-sincronizar-com-o-repositório-remoto" class="nav-link" data-scroll-target="#sincronizar-com-o-reposit%C3%B3rio-remoto">Sincronizar com o Repositório Remoto</a></li>
-  <li><a href="#gitignore" id="toc-gitignore" class="nav-link" data-scroll-target="#gitignore">.gitignore</a></li>
-  <li><a href="#dicas-%C3%BAteis" id="toc-dicas-úteis" class="nav-link" data-scroll-target="#dicas-%C3%BAteis">Dicas Úteis</a></li>
-  </ul></nav>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
 <h1 class="title">Introdução ao controle de versão com git, GitHub e RStudio</h1>
 <p class="subtitle lead">Principais conceitos de controle de versão usando git</p>
   <div class="quarto-categories">
@@ -229,497 +202,245 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="contextualização" class="level2"><h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
+</header>
+
+
+<section id="contextualização" class="level2">
+<h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
 <p>Nas <a href="../../teaching">disciplinas</a> que ofereço, geralmente eu começo com uma parte de controle de versão usando <a href="https://git-scm.com/">git</a>. Em 2021 ofereci um <a href="http://localhost:4321/teaching/workshop-git/">minicurso</a> para o pessoal da <a href="https://www.ufrpe.br/">Universidade Federal Rural de Pernambuco (UFRPE)</a>.</p>
 <p>Falando com o <a href="http://diogoprovete.weebly.com/">Prof.&nbsp;Diogo Provete</a> sobre disciplinas e como ensinar git, chegamos à conclusão que é fundamental ter um material didático sobre esse assunto.</p>
 <p>Este tutorial aborda os conceitos gerais de controle de versão usando o <a href="https://git-scm.com/">git</a> e sua integração com o <a href="https://github.com/">GitHub</a> e o <a href="https://posit.co/download/rstudio-desktop/">RStudio</a>.</p>
 <p>Recomendo também olhar o minicurso <a href="../../teaching/workshop-git/">gitR: controle de versão com git, GitHub e RStudio</a>. Este post é a transcrição do mesmo.</p>
-</section><section id="controle-de-versão" class="level2"><h2 class="anchored" data-anchor-id="controle-de-versão">Controle de versão</h2>
-</section><section id="git" class="level2"><h2 class="anchored" data-anchor-id="git">git</h2>
-</section><section id="instalação" class="level2"><h2 class="anchored" data-anchor-id="instalação">Instalação</h2>
-</section><section id="terminal-bash-e-desktop" class="level2"><h2 class="anchored" data-anchor-id="terminal-bash-e-desktop">Terminal bash e desktop</h2>
-</section><section id="estágios-do-controle-de-versão" class="level2"><h2 class="anchored" data-anchor-id="estágios-do-controle-de-versão">Estágios do controle de versão</h2>
-</section><section id="git-init-começando" class="level2"><h2 class="anchored" data-anchor-id="git-init-começando">git init: começando</h2>
-</section><section id="git-status-verificando" class="level2"><h2 class="anchored" data-anchor-id="git-status-verificando">git status: verificando</h2>
-</section><section id="git-add-adicionando" class="level2"><h2 class="anchored" data-anchor-id="git-add-adicionando">git add: adicionando</h2>
-</section><section id="git-commit-guardando" class="level2"><h2 class="anchored" data-anchor-id="git-commit-guardando">git commit: guardando</h2>
-</section><section id="git-push-guardando" class="level2"><h2 class="anchored" data-anchor-id="git-push-guardando">git push: guardando</h2>
-</section><section id="para-se-aprofundar" class="level2"><h2 class="anchored" data-anchor-id="para-se-aprofundar">Para se aprofundar</h2>
+<section id="conferindo-os-computadores" class="level3">
+<h3 class="anchored" data-anchor-id="conferindo-os-computadores">1. Conferindo os computadores</h3>
+<p>É necessário verificar se os seguintes softwares estão instalados e atualizados:</p>
 <ul>
-<li>Curso gratuito (português): <a href="https://rogerdudler.github.io/git-guide/index.pt_BR.html">https://rogerdudler.github.io/git-guide/index.pt_BR.html</a>
-</li>
-<li>Documentação oficial Git: <a href="https://git-scm.com/doc">https://git-scm.com/doc</a>
-</li>
-<li>GUI recomendada: <a href="https://desktop.github.com">GitHub Desktop</a>
-</li>
+<li><a href="https://www.r-project.org/">R</a></li>
+<li><a href="https://www.rstudio.com/">RStudio</a></li>
+<li><a href="https://git-scm.com/">git</a></li>
 </ul>
-<p><a href="https://gabrielnakamura.github.io/USP_reproducibility_BIE5798/basics_git.html">Controle de versão - Gabriel Nakamura</a></p>
-<p>Fonte da imagem: <a href="https://www.pexels.com/pt-br/foto/mao-segurando-holding-papel-11035539">Pexels</a>.</p>
-</section><section id="o-que-são-git-e-github" class="level2"><h2 class="anchored" data-anchor-id="o-que-são-git-e-github">O que são Git e GitHub?</h2>
+<p>Além disso, é interessante conhecer softwares que fazem o controle de versão usando uma interface:</p>
 <ul>
-<li>
-<strong>Git</strong>: sistema de controle de versão distribuído. Ele permite que você acompanhe alterações no seu código/projeto, volte a versões anteriores e trabalhe com ramificações (branches).</li>
-<li>
-<strong>GitHub</strong>: plataforma online baseada em Git, usada para hospedar repositórios, colaborar com outras pessoas e compartilhar código.</li>
-</ul></section><section id="instalação-do-git" class="level2"><h2 class="anchored" data-anchor-id="instalação-do-git">Instalação do Git</h2>
-<section id="windows-linux-macos" class="level3"><h3 class="anchored" data-anchor-id="windows-linux-macos">Windows / Linux / macOS:</h3>
-<ol type="1">
-<li>Acesse: <a href="https://git-scm.com">https://git-scm.com</a>
-</li>
-<li>Baixe e instale o Git.</li>
-<li>Após a instalação, abra o terminal (ou Git Bash no Windows) e configure seu nome e e-mail:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Seu Nome"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"seu@email.com"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section></section><section id="conceitos-básicos" class="level2"><h2 class="anchored" data-anchor-id="conceitos-básicos">Conceitos Básicos</h2>
-<ul>
-<li>
-<strong>Repositório (repo)</strong>: Pasta que Git está monitorando.</li>
-<li>
-<strong>Commit</strong>: Um “instantâneo” do seu projeto em determinado momento.</li>
-<li>
-<strong>Branch</strong>: Linha paralela de desenvolvimento.</li>
-<li>
-<strong>Merge</strong>: Juntar mudanças de uma branch com outra.</li>
-<li>
-<strong>Clone</strong>: Copiar um repositório existente.</li>
-<li>
-<strong>Push / Pull</strong>: Enviar/receber atualizações do GitHub.</li>
-</ul></section><section id="criando-um-repositório-local" class="level2"><h2 class="anchored" data-anchor-id="criando-um-repositório-local">Criando um Repositório Local</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> meu-projeto</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> meu-projeto</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init  <span class="co"># inicia o repositório Git</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> README.md  <span class="co"># cria um arquivo (Linux/mac) ou use 'echo &gt; README.md' no Windows</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add README.md</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"primeiro commit"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section><section id="conectando-com-o-github" class="level2"><h2 class="anchored" data-anchor-id="conectando-com-o-github">Conectando com o GitHub</h2>
-<ol type="1">
-<li>Crie uma conta no <a href="https://github.com">GitHub</a>
-</li>
-<li>Clique em “New Repository” e dê um nome ao projeto (ex: <code>meu-projeto</code>)</li>
-<li>Copie a URL do repositório (HTTPS ou SSH)</li>
-<li>No terminal:</li>
-</ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/seu-usuario/meu-projeto.git</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main  <span class="co"># garante que a branch principal se chama 'main'</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main  <span class="co"># envia os arquivos para o GitHub</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section><section id="ciclo-de-trabalho-no-git" class="level2"><h2 class="anchored" data-anchor-id="ciclo-de-trabalho-no-git">Ciclo de Trabalho no Git</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Modificou algum arquivo?</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status           <span class="co"># verifica o que foi alterado</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add arquivo.txt  <span class="co"># adiciona ao "estágio"</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"descrição das mudanças"</span>  <span class="co"># salva as alterações localmente</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push             <span class="co"># envia as mudanças para o GitHub</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section><section id="clonar-repositórios-e-colaborar" class="level2"><h2 class="anchored" data-anchor-id="clonar-repositórios-e-colaborar">Clonar Repositórios e Colaborar</h2>
-<section id="clonar" class="level3"><h3 class="anchored" data-anchor-id="clonar">Clonar:</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/usuario/repositorio.git</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section><section id="criar-nova-branch" class="level3"><h3 class="anchored" data-anchor-id="criar-nova-branch">Criar nova branch:</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> nova-feature</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section><section id="voltar-à-branch-principal-e-unir-mudanças" class="level3"><h3 class="anchored" data-anchor-id="voltar-à-branch-principal-e-unir-mudanças">Voltar à branch principal e unir mudanças:</h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge nova-feature</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section></section><section id="sincronizar-com-o-repositório-remoto" class="level2"><h2 class="anchored" data-anchor-id="sincronizar-com-o-repositório-remoto">Sincronizar com o Repositório Remoto</h2>
-<p>Se outra pessoa fez alterações:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull  <span class="co"># baixa e integra as alterações remotas</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section><section id="gitignore" class="level2"><h2 class="anchored" data-anchor-id="gitignore">.gitignore</h2>
-<p>Crie um arquivo chamado <code>.gitignore</code> e liste os arquivos/pastas que você <strong>não quer</strong> versionar, como:</p>
-<pre><code>*.log
-__pycache__/
-dados_sensiveis.csv</code></pre>
-</section><section id="dicas-úteis" class="level2"><h2 class="anchored" data-anchor-id="dicas-úteis">Dicas Úteis</h2>
-<ul>
-<li>Use <code>git log</code> para ver o histórico de commits.</li>
-<li>Use <code>git diff</code> para ver mudanças não commitadas.</li>
-<li>Use <code>git stash</code> para guardar mudanças temporariamente sem fazer commit.</li>
+<li><a href="https://www.gitkraken.com/">gitKraken</a></li>
+<li><a href="https://github.com/apps/desktop">GitHub Desktop</a></li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># script commit gitlab</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mauricio vancine</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># instalar o git</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>git <span class="sc">--</span>version</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>sudo apt install git<span class="sc">-</span>all</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># configuracao inicial do git</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.name <span class="st">"mauriciovancine"</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.email <span class="st">"mauricio.vancine@gmail.com"</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># conferindo</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>git config user.name</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>git config user.email</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>list</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co"># repositorios remotos</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co"># gerar uma chave</span></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>ssh<span class="sc">-</span>keygen <span class="sc">-</span>t ed25519 <span class="sc">-</span>C <span class="st">"mauricio.vancine@gmail.com"</span> <span class="co"># tres enters</span></span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># verificar</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>cd <span class="sc">~</span><span class="er">/</span>.ssh</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>cat id_ed25519.pub</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co"># ligar o repositorio do pc ao git</span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="co"># sudo apt install xclip</span></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>xclip <span class="sc">-</span>sel clip <span class="sc">&lt;</span> <span class="er">~/</span>.ssh<span class="sc">/</span>id_ed25519.pub</span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>ssh <span class="sc">-</span>T git<span class="sc">@</span>gitlab.com<span class="sc">:</span>mauriciovancine</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>git remote add origin git<span class="sc">@</span>github.com<span class="sc">:</span>mauriciovancine<span class="sc">/</span>git<span class="sc">-</span>course.git</span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>git remote</span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>git remote <span class="sc">-</span>v</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="do">###---------------------------------------------</span></span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="co"># iniciar o repositorio git</span></span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="co"># definir diretorio</span></span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>cd <span class="sc">/</span>media<span class="sc">/</span>mauricio<span class="sc">/</span>data<span class="sc">/</span>gitlab</span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="co"># clonar um repositorio</span></span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>git clone git<span class="sc">@</span>gitlab.com<span class="sc">:</span>mauriciovancine<span class="sc">/</span>r<span class="sc">-</span>enm.git</span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a><span class="co"># iniciar o git</span></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>git init</span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a><span class="co"># listar </span></span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>ls <span class="sc">-</span>la</span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a><span class="co"># reportar o estados do repositorio</span></span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>git status <span class="co"># untracked</span></span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a><span class="co"># commit - criar um snapshot dos arquivos</span></span>
-<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m </span>
-<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a><span class="co"># verificar</span></span>
-<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>git status <span class="co"># nada para ser feito</span></span>
-<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 visualizando logs</span></span>
-<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a><span class="co"># mostrar as infos dos commits</span></span>
-<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a><span class="co"># mostrar commits</span></span>
-<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="co"># descricao dos commits</span></span>
-<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a>git log <span class="sc">--</span>decorate</span>
-<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a><span class="co"># filtro autor dos commits</span></span>
-<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a>git log author<span class="ot">=</span><span class="st">"mau"</span></span>
-<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a><span class="co"># mostra os autores que comitaram</span></span>
-<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a>git shortlog</span>
-<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a><span class="co"># mostra numero de commits por pessoas</span></span>
-<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>git shortlog <span class="sc">-</span>sn</span>
-<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a><span class="co"># mostra de forma grafica os branchs</span></span>
-<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a>git log <span class="sc">--</span>graph</span>
-<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a><span class="co"># mostra a hash</span></span>
-<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a>git show <span class="dv">588867</span>d3f12f9a3f819dbf9657614c92a4d5237f</span>
-<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a><span class="do">## 11 visualizando o diff</span></span>
-<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a><span class="co"># mudancas antes do envio</span></span>
-<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a><span class="co"># verificar</span></span>
-<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a><span class="co"># editar</span></span>
-<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a>subl readme.md</span>
-<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a><span class="co"># visualizar as mudancas antes de commitar</span></span>
-<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>git diff</span>
-<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a><span class="co"># listar o nome dos arquivos modificados</span></span>
-<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a>git diff <span class="sc">--</span>name<span class="sc">-</span>only</span>
-<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a><span class="co"># commitar</span></span>
-<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>am <span class="st">"edit"</span></span>
-<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a><span class="co"># ver commit</span></span>
-<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a><span class="co"># mostrar commit</span></span>
-<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a>git show a06fd917431bc1dffdc8565bff0fe7b13d8bfc3c</span>
-<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a><span class="do">## 12 desfazendo coisas</span></span>
-<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. voltar para antes da edicao</span></span>
-<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a>subl readme.md <span class="co"># edit</span></span>
-<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a>git diff</span>
-<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a>git checkout readme.md</span>
-<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a>git diff</span>
-<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. retirar do stage (git add) e voltar antes da edicao</span></span>
-<span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a>subl readme.md <span class="co"># edit</span></span>
-<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a>git add readme.md</span>
-<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a>git diff</span>
-<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a>git reset HEAD readme.md</span>
-<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a>git checkout readme.md</span>
-<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a>git diff</span>
-<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. voltar do commit</span></span>
-<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a>subl readme.md <span class="co"># edit</span></span>
-<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>am <span class="st">"soft"</span></span>
-<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. git reset --soft: volta o commit e mantem arquivo no staged</span></span>
-<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a>git reset <span class="sc">--</span>soft a06fd917431bc1dffdc8565bff0fe7b13d8bfc3c <span class="co"># hash anterior</span></span>
-<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a>subl readme.md</span>
-<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>am <span class="st">"mixed"</span></span>
-<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. git reset --mixed: volta o commit e arquivo fica em modofied</span></span>
-<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a>git reset <span class="sc">--</span>mixed bb63de7478f5d789029a91401cb1095b2fb4ab2d </span>
-<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a>subl readme.md</span>
-<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>am <span class="st">"hard"</span></span>
-<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. git reset --hard: volta o commit e arquivo volta em unmodified</span></span>
-<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a>git reset <span class="sc">--</span>hard bb63de7478f5d789029a91401cb1095b2fb4ab2d</span>
-<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-149"><a href="#cb10-149" aria-hidden="true" tabindex="-1"></a><span class="co"># o git reset --hard altera o historico dos commits</span></span>
-<span id="cb10-150"><a href="#cb10-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-151"><a href="#cb10-151" aria-hidden="true" tabindex="-1"></a><span class="do">###---------------------------------------------</span><span class="al">###</span></span>
-<span id="cb10-152"><a href="#cb10-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-153"><a href="#cb10-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-154"><a href="#cb10-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-155"><a href="#cb10-155" aria-hidden="true" tabindex="-1"></a><span class="co"># enviar os arquivos para o repositorio</span></span>
-<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a>git push <span class="sc">-</span>u origin master</span>
-<span id="cb10-157"><a href="#cb10-157" aria-hidden="true" tabindex="-1"></a>git push</span>
-<span id="cb10-158"><a href="#cb10-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-159"><a href="#cb10-159" aria-hidden="true" tabindex="-1"></a><span class="do">## 16 enviando mudancas para um repositorio remoto</span></span>
-<span id="cb10-160"><a href="#cb10-160" aria-hidden="true" tabindex="-1"></a>subl readme.md</span>
-<span id="cb10-161"><a href="#cb10-161" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-162"><a href="#cb10-162" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>am <span class="st">"commit to github"</span></span>
-<span id="cb10-163"><a href="#cb10-163" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-164"><a href="#cb10-164" aria-hidden="true" tabindex="-1"></a>git push origin master</span>
-<span id="cb10-165"><a href="#cb10-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-166"><a href="#cb10-166" aria-hidden="true" tabindex="-1"></a><span class="do">## 17 clonando repositorios remotos</span></span>
-<span id="cb10-167"><a href="#cb10-167" aria-hidden="true" tabindex="-1"></a><span class="co"># download de um repositorio do github para pc</span></span>
-<span id="cb10-168"><a href="#cb10-168" aria-hidden="true" tabindex="-1"></a>cd ..</span>
-<span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a>git clone git<span class="sc">@</span>github.com<span class="sc">:</span>mauriciovancine<span class="sc">/</span>git<span class="sc">-</span>course.git github<span class="sc">-</span>course<span class="sc">-</span>clone <span class="co"># com chave</span></span>
-<span id="cb10-170"><a href="#cb10-170" aria-hidden="true" tabindex="-1"></a>git clone https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>mauriciovancine<span class="sc">/</span>git<span class="sc">-</span>course <span class="co"># publico</span></span>
-<span id="cb10-171"><a href="#cb10-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-172"><a href="#cb10-172" aria-hidden="true" tabindex="-1"></a><span class="do">## 18 fazendo fork de um projeto</span></span>
-<span id="cb10-173"><a href="#cb10-173" aria-hidden="true" tabindex="-1"></a><span class="co"># copiar um repositorio para o proprio github</span></span>
-<span id="cb10-174"><a href="#cb10-174" aria-hidden="true" tabindex="-1"></a><span class="co"># sempre de outro usuario</span></span>
-<span id="cb10-175"><a href="#cb10-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-176"><a href="#cb10-176" aria-hidden="true" tabindex="-1"></a><span class="do">###---------------------------------------------</span><span class="al">###</span></span>
-<span id="cb10-177"><a href="#cb10-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-178"><a href="#cb10-178" aria-hidden="true" tabindex="-1"></a><span class="do">## secao 5 ramificacao (branch)</span></span>
-<span id="cb10-179"><a href="#cb10-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-180"><a href="#cb10-180" aria-hidden="true" tabindex="-1"></a><span class="do">## 19 o que e um branch e por que usar?</span></span>
-<span id="cb10-181"><a href="#cb10-181" aria-hidden="true" tabindex="-1"></a><span class="co"># branch: ponteiro movel que leva a um commit</span></span>
-<span id="cb10-182"><a href="#cb10-182" aria-hidden="true" tabindex="-1"></a><span class="co"># cada commit gera uma hash (código) e para cada hash gera um snapshot</span></span>
-<span id="cb10-183"><a href="#cb10-183" aria-hidden="true" tabindex="-1"></a><span class="co"># novo branch aponta para o mesmo commit ou para outro commit</span></span>
-<span id="cb10-184"><a href="#cb10-184" aria-hidden="true" tabindex="-1"></a><span class="co"># utilidade:</span></span>
-<span id="cb10-185"><a href="#cb10-185" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. modificar os arquivos sem modificar o local principal (master)</span></span>
-<span id="cb10-186"><a href="#cb10-186" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. facilmente desligavel</span></span>
-<span id="cb10-187"><a href="#cb10-187" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. multiplas pessoas trabalhando</span></span>
-<span id="cb10-188"><a href="#cb10-188" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. evita conflitos</span></span>
-<span id="cb10-189"><a href="#cb10-189" aria-hidden="true" tabindex="-1"></a><span class="co"># mescla-se o branch final ao branch paralelo</span></span>
-<span id="cb10-190"><a href="#cb10-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-191"><a href="#cb10-191" aria-hidden="true" tabindex="-1"></a><span class="do">## 20 criando um branch</span></span>
-<span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a><span class="co"># criando um branch</span></span>
-<span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a>git checkout <span class="sc">-</span>b testing</span>
-<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a><span class="co"># verificando branch</span></span>
-<span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a>git branch</span>
-<span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-198"><a href="#cb10-198" aria-hidden="true" tabindex="-1"></a><span class="do">## 21 movendo e deletando branches</span></span>
-<span id="cb10-199"><a href="#cb10-199" aria-hidden="true" tabindex="-1"></a><span class="co"># verificando branch</span></span>
-<span id="cb10-200"><a href="#cb10-200" aria-hidden="true" tabindex="-1"></a>git branch</span>
-<span id="cb10-201"><a href="#cb10-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-202"><a href="#cb10-202" aria-hidden="true" tabindex="-1"></a><span class="co"># movendo para master</span></span>
-<span id="cb10-203"><a href="#cb10-203" aria-hidden="true" tabindex="-1"></a>git checkout master</span>
-<span id="cb10-204"><a href="#cb10-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-205"><a href="#cb10-205" aria-hidden="true" tabindex="-1"></a><span class="co"># verificando branch</span></span>
-<span id="cb10-206"><a href="#cb10-206" aria-hidden="true" tabindex="-1"></a>git branch</span>
-<span id="cb10-207"><a href="#cb10-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-208"><a href="#cb10-208" aria-hidden="true" tabindex="-1"></a><span class="co"># movendo para testing</span></span>
-<span id="cb10-209"><a href="#cb10-209" aria-hidden="true" tabindex="-1"></a>git checkout testing</span>
-<span id="cb10-210"><a href="#cb10-210" aria-hidden="true" tabindex="-1"></a>git checkout master</span>
-<span id="cb10-211"><a href="#cb10-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-212"><a href="#cb10-212" aria-hidden="true" tabindex="-1"></a><span class="co"># apagar branch</span></span>
-<span id="cb10-213"><a href="#cb10-213" aria-hidden="true" tabindex="-1"></a>git branch <span class="sc">-</span>D testing</span>
-<span id="cb10-214"><a href="#cb10-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-215"><a href="#cb10-215" aria-hidden="true" tabindex="-1"></a><span class="co"># verificando branch</span></span>
-<span id="cb10-216"><a href="#cb10-216" aria-hidden="true" tabindex="-1"></a>git branch </span>
-<span id="cb10-217"><a href="#cb10-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-218"><a href="#cb10-218" aria-hidden="true" tabindex="-1"></a><span class="co"># 22 entendendo o merge</span></span>
-<span id="cb10-219"><a href="#cb10-219" aria-hidden="true" tabindex="-1"></a><span class="co"># unir branchs - branch separado paralelo a mais para unir</span></span>
-<span id="cb10-220"><a href="#cb10-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-221"><a href="#cb10-221" aria-hidden="true" tabindex="-1"></a><span class="co"># 23 entendendo o rebase</span></span>
-<span id="cb10-222"><a href="#cb10-222" aria-hidden="true" tabindex="-1"></a><span class="co"># unir branchs - branch separado linera logo a frente</span></span>
-<span id="cb10-223"><a href="#cb10-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-224"><a href="#cb10-224" aria-hidden="true" tabindex="-1"></a><span class="co"># 24 merge e rebase na pratica</span></span>
-<span id="cb10-225"><a href="#cb10-225" aria-hidden="true" tabindex="-1"></a>mkdir rebase<span class="sc">-</span>merge</span>
-<span id="cb10-226"><a href="#cb10-226" aria-hidden="true" tabindex="-1"></a>cd rebase<span class="sc">-</span>merge</span>
-<span id="cb10-227"><a href="#cb10-227" aria-hidden="true" tabindex="-1"></a>git init</span>
-<span id="cb10-228"><a href="#cb10-228" aria-hidden="true" tabindex="-1"></a>subl foo</span>
-<span id="cb10-229"><a href="#cb10-229" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-230"><a href="#cb10-230" aria-hidden="true" tabindex="-1"></a>git add foo</span>
-<span id="cb10-231"><a href="#cb10-231" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"add foo"</span></span>
-<span id="cb10-232"><a href="#cb10-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-233"><a href="#cb10-233" aria-hidden="true" tabindex="-1"></a>git checkout <span class="sc">-</span>b test</span>
-<span id="cb10-234"><a href="#cb10-234" aria-hidden="true" tabindex="-1"></a>subl bar </span>
-<span id="cb10-235"><a href="#cb10-235" aria-hidden="true" tabindex="-1"></a>git add bar</span>
-<span id="cb10-236"><a href="#cb10-236" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"add bar"</span></span>
-<span id="cb10-237"><a href="#cb10-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-238"><a href="#cb10-238" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-239"><a href="#cb10-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-240"><a href="#cb10-240" aria-hidden="true" tabindex="-1"></a>git checkout master</span>
-<span id="cb10-241"><a href="#cb10-241" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-242"><a href="#cb10-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-243"><a href="#cb10-243" aria-hidden="true" tabindex="-1"></a>subl fizz</span>
-<span id="cb10-244"><a href="#cb10-244" aria-hidden="true" tabindex="-1"></a>git add fizz</span>
-<span id="cb10-245"><a href="#cb10-245" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"add fizz"</span></span>
-<span id="cb10-246"><a href="#cb10-246" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-247"><a href="#cb10-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-248"><a href="#cb10-248" aria-hidden="true" tabindex="-1"></a><span class="co"># merge</span></span>
-<span id="cb10-249"><a href="#cb10-249" aria-hidden="true" tabindex="-1"></a>git merge test</span>
-<span id="cb10-250"><a href="#cb10-250" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-251"><a href="#cb10-251" aria-hidden="true" tabindex="-1"></a>git log <span class="sc">--</span>graph</span>
-<span id="cb10-252"><a href="#cb10-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-253"><a href="#cb10-253" aria-hidden="true" tabindex="-1"></a><span class="co"># rebase</span></span>
-<span id="cb10-254"><a href="#cb10-254" aria-hidden="true" tabindex="-1"></a>subl buzz</span>
-<span id="cb10-255"><a href="#cb10-255" aria-hidden="true" tabindex="-1"></a>git add buzz</span>
-<span id="cb10-256"><a href="#cb10-256" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"add buzz"</span></span>
-<span id="cb10-257"><a href="#cb10-257" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-258"><a href="#cb10-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-259"><a href="#cb10-259" aria-hidden="true" tabindex="-1"></a>git checkout <span class="sc">-</span>b rebase</span>
-<span id="cb10-260"><a href="#cb10-260" aria-hidden="true" tabindex="-1"></a>subl bla</span>
-<span id="cb10-261"><a href="#cb10-261" aria-hidden="true" tabindex="-1"></a>git add bla</span>
-<span id="cb10-262"><a href="#cb10-262" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"add bla"</span></span>
-<span id="cb10-263"><a href="#cb10-263" aria-hidden="true" tabindex="-1"></a>git log <span class="sc">--</span>graph</span>
-<span id="cb10-264"><a href="#cb10-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-265"><a href="#cb10-265" aria-hidden="true" tabindex="-1"></a>git checkout master</span>
-<span id="cb10-266"><a href="#cb10-266" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-267"><a href="#cb10-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-268"><a href="#cb10-268" aria-hidden="true" tabindex="-1"></a>subl seila</span>
-<span id="cb10-269"><a href="#cb10-269" aria-hidden="true" tabindex="-1"></a>git add seila</span>
-<span id="cb10-270"><a href="#cb10-270" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"add seila"</span></span>
-<span id="cb10-271"><a href="#cb10-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-272"><a href="#cb10-272" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-273"><a href="#cb10-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-274"><a href="#cb10-274" aria-hidden="true" tabindex="-1"></a>git rebase rebase</span>
-<span id="cb10-275"><a href="#cb10-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-276"><a href="#cb10-276" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-277"><a href="#cb10-277" aria-hidden="true" tabindex="-1"></a>git log <span class="sc">--</span>graph</span>
-<span id="cb10-278"><a href="#cb10-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-279"><a href="#cb10-279" aria-hidden="true" tabindex="-1"></a><span class="do">###---------------------------------------------</span><span class="al">###</span></span>
-<span id="cb10-280"><a href="#cb10-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-281"><a href="#cb10-281" aria-hidden="true" tabindex="-1"></a><span class="do">### secao 6 extras</span></span>
-<span id="cb10-282"><a href="#cb10-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-283"><a href="#cb10-283" aria-hidden="true" tabindex="-1"></a><span class="do">## 25 criando o .gitignore</span></span>
-<span id="cb10-284"><a href="#cb10-284" aria-hidden="true" tabindex="-1"></a><span class="co"># ignora trackeamento de arquivos</span></span>
-<span id="cb10-285"><a href="#cb10-285" aria-hidden="true" tabindex="-1"></a><span class="co"># arquivo no repositorio para </span></span>
-<span id="cb10-286"><a href="#cb10-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-287"><a href="#cb10-287" aria-hidden="true" tabindex="-1"></a>subl data.txt</span>
-<span id="cb10-288"><a href="#cb10-288" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-289"><a href="#cb10-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-290"><a href="#cb10-290" aria-hidden="true" tabindex="-1"></a>subl .gitignore <span class="co"># *.txt</span></span>
-<span id="cb10-291"><a href="#cb10-291" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-292"><a href="#cb10-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-293"><a href="#cb10-293" aria-hidden="true" tabindex="-1"></a>subl .gitignore <span class="co"># data</span></span>
-<span id="cb10-294"><a href="#cb10-294" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-295"><a href="#cb10-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-296"><a href="#cb10-296" aria-hidden="true" tabindex="-1"></a><span class="co"># https://git-scm.com/docs/gitignore</span></span>
-<span id="cb10-297"><a href="#cb10-297" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/github/gitignore</span></span>
-<span id="cb10-298"><a href="#cb10-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-299"><a href="#cb10-299" aria-hidden="true" tabindex="-1"></a><span class="do">## 26 git stash e lindo</span></span>
-<span id="cb10-300"><a href="#cb10-300" aria-hidden="true" tabindex="-1"></a><span class="co"># responsavel por guardar modificacoes nao commitadas</span></span>
-<span id="cb10-301"><a href="#cb10-301" aria-hidden="true" tabindex="-1"></a>cd..</span>
-<span id="cb10-302"><a href="#cb10-302" aria-hidden="true" tabindex="-1"></a>cd git<span class="sc">-</span>course</span>
-<span id="cb10-303"><a href="#cb10-303" aria-hidden="true" tabindex="-1"></a>subl readme.md</span>
-<span id="cb10-304"><a href="#cb10-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-305"><a href="#cb10-305" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-306"><a href="#cb10-306" aria-hidden="true" tabindex="-1"></a>git stash</span>
-<span id="cb10-307"><a href="#cb10-307" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-308"><a href="#cb10-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-309"><a href="#cb10-309" aria-hidden="true" tabindex="-1"></a>git checkout <span class="sc">-</span>b bla</span>
-<span id="cb10-310"><a href="#cb10-310" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-311"><a href="#cb10-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-312"><a href="#cb10-312" aria-hidden="true" tabindex="-1"></a>git stash apply</span>
-<span id="cb10-313"><a href="#cb10-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-314"><a href="#cb10-314" aria-hidden="true" tabindex="-1"></a>git stash list</span>
-<span id="cb10-315"><a href="#cb10-315" aria-hidden="true" tabindex="-1"></a>git stash clear</span>
-<span id="cb10-316"><a href="#cb10-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-317"><a href="#cb10-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-318"><a href="#cb10-318" aria-hidden="true" tabindex="-1"></a><span class="do">## 27 alias para que te quero</span></span>
-<span id="cb10-319"><a href="#cb10-319" aria-hidden="true" tabindex="-1"></a><span class="co"># atalhos</span></span>
-<span id="cb10-320"><a href="#cb10-320" aria-hidden="true" tabindex="-1"></a>git status</span>
-<span id="cb10-321"><a href="#cb10-321" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global alias.s status</span>
-<span id="cb10-322"><a href="#cb10-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-323"><a href="#cb10-323" aria-hidden="true" tabindex="-1"></a>git s</span>
-<span id="cb10-324"><a href="#cb10-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-325"><a href="#cb10-325" aria-hidden="true" tabindex="-1"></a><span class="do">## 28 versionando com tags</span></span>
-<span id="cb10-326"><a href="#cb10-326" aria-hidden="true" tabindex="-1"></a><span class="co"># sobe tags especificas</span></span>
-<span id="cb10-327"><a href="#cb10-327" aria-hidden="true" tabindex="-1"></a>git tag <span class="sc">-</span>a <span class="dv">1</span>.<span class="fl">0.0</span> <span class="sc">-</span>m <span class="st">"readme finalizado"</span></span>
-<span id="cb10-328"><a href="#cb10-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-329"><a href="#cb10-329" aria-hidden="true" tabindex="-1"></a>git push origin master <span class="sc">--</span>tags</span>
-<span id="cb10-330"><a href="#cb10-330" aria-hidden="true" tabindex="-1"></a>git tag</span>
-<span id="cb10-331"><a href="#cb10-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-332"><a href="#cb10-332" aria-hidden="true" tabindex="-1"></a><span class="do">## 29 salvando sua sexta com git revert</span></span>
-<span id="cb10-333"><a href="#cb10-333" aria-hidden="true" tabindex="-1"></a><span class="co"># nao perde o commit, apenas retorna ao estado anterior</span></span>
-<span id="cb10-334"><a href="#cb10-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-335"><a href="#cb10-335" aria-hidden="true" tabindex="-1"></a>subl readme.md</span>
-<span id="cb10-336"><a href="#cb10-336" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>am <span class="st">"add"</span></span>
-<span id="cb10-337"><a href="#cb10-337" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-338"><a href="#cb10-338" aria-hidden="true" tabindex="-1"></a>git show <span class="co"># hash</span></span>
-<span id="cb10-339"><a href="#cb10-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-340"><a href="#cb10-340" aria-hidden="true" tabindex="-1"></a>git log</span>
-<span id="cb10-341"><a href="#cb10-341" aria-hidden="true" tabindex="-1"></a>git revert <span class="co"># hash</span></span>
-<span id="cb10-342"><a href="#cb10-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-343"><a href="#cb10-343" aria-hidden="true" tabindex="-1"></a>git show <span class="co"># hash</span></span>
-<span id="cb10-344"><a href="#cb10-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-345"><a href="#cb10-345" aria-hidden="true" tabindex="-1"></a><span class="do">## 30 apagando tags e branches remotos</span></span>
-<span id="cb10-346"><a href="#cb10-346" aria-hidden="true" tabindex="-1"></a>git tag <span class="sc">-</span>d <span class="dv">1</span>.<span class="fl">0.0</span></span>
-<span id="cb10-347"><a href="#cb10-347" aria-hidden="true" tabindex="-1"></a>git push origin master</span>
-<span id="cb10-348"><a href="#cb10-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-349"><a href="#cb10-349" aria-hidden="true" tabindex="-1"></a>git push origin <span class="sc">:</span><span class="dv">1</span>.<span class="fl">0.0</span></span>
-<span id="cb10-350"><a href="#cb10-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-351"><a href="#cb10-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-352"><a href="#cb10-352" aria-hidden="true" tabindex="-1"></a><span class="do">###-----------------------------------------------</span><span class="al">###</span></span>
-<span id="cb10-353"><a href="#cb10-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-354"><a href="#cb10-354" aria-hidden="true" tabindex="-1"></a><span class="co"># These are common Git commands used in various situations:</span></span>
-<span id="cb10-355"><a href="#cb10-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-356"><a href="#cb10-356" aria-hidden="true" tabindex="-1"></a><span class="co"># start a working area (see also: git help tutorial)</span></span>
-<span id="cb10-357"><a href="#cb10-357" aria-hidden="true" tabindex="-1"></a><span class="co">#    clone      Clone a repository into a new directory</span></span>
-<span id="cb10-358"><a href="#cb10-358" aria-hidden="true" tabindex="-1"></a><span class="co">#    init       Create an empty Git repository or reinitialize an existing one</span></span>
-<span id="cb10-359"><a href="#cb10-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-360"><a href="#cb10-360" aria-hidden="true" tabindex="-1"></a><span class="co"># work on the current change (see also: git help everyday)</span></span>
-<span id="cb10-361"><a href="#cb10-361" aria-hidden="true" tabindex="-1"></a><span class="co">#    add        Add file contents to the index</span></span>
-<span id="cb10-362"><a href="#cb10-362" aria-hidden="true" tabindex="-1"></a><span class="co">#    mv         Move or rename a file, a directory, or a symlink</span></span>
-<span id="cb10-363"><a href="#cb10-363" aria-hidden="true" tabindex="-1"></a><span class="co">#    reset      Reset current HEAD to the specified state</span></span>
-<span id="cb10-364"><a href="#cb10-364" aria-hidden="true" tabindex="-1"></a><span class="co">#    rm         Remove files from the working tree and from the index</span></span>
-<span id="cb10-365"><a href="#cb10-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-366"><a href="#cb10-366" aria-hidden="true" tabindex="-1"></a><span class="co"># examine the history and state (see also: git help revisions)</span></span>
-<span id="cb10-367"><a href="#cb10-367" aria-hidden="true" tabindex="-1"></a><span class="co">#    bisect     Use binary search to find the commit that introduced a bug</span></span>
-<span id="cb10-368"><a href="#cb10-368" aria-hidden="true" tabindex="-1"></a><span class="co">#    grep       Print lines matching a pattern</span></span>
-<span id="cb10-369"><a href="#cb10-369" aria-hidden="true" tabindex="-1"></a><span class="co">#    log        Show commit logs</span></span>
-<span id="cb10-370"><a href="#cb10-370" aria-hidden="true" tabindex="-1"></a><span class="co">#    show       Show various types of objects</span></span>
-<span id="cb10-371"><a href="#cb10-371" aria-hidden="true" tabindex="-1"></a><span class="co">#    status     Show the working tree status</span></span>
-<span id="cb10-372"><a href="#cb10-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-373"><a href="#cb10-373" aria-hidden="true" tabindex="-1"></a><span class="co"># grow, mark and tweak your common history</span></span>
-<span id="cb10-374"><a href="#cb10-374" aria-hidden="true" tabindex="-1"></a><span class="co">#    branch     List, create, or delete branches</span></span>
-<span id="cb10-375"><a href="#cb10-375" aria-hidden="true" tabindex="-1"></a><span class="co">#    checkout   Switch branches or restore working tree files</span></span>
-<span id="cb10-376"><a href="#cb10-376" aria-hidden="true" tabindex="-1"></a><span class="co">#    commit     Record changes to the repository</span></span>
-<span id="cb10-377"><a href="#cb10-377" aria-hidden="true" tabindex="-1"></a><span class="co">#    diff       Show changes between commits, commit and working tree, etc</span></span>
-<span id="cb10-378"><a href="#cb10-378" aria-hidden="true" tabindex="-1"></a><span class="co">#    merge      Join two or more development histories together</span></span>
-<span id="cb10-379"><a href="#cb10-379" aria-hidden="true" tabindex="-1"></a><span class="co">#    rebase     Reapply commits on top of another base tip</span></span>
-<span id="cb10-380"><a href="#cb10-380" aria-hidden="true" tabindex="-1"></a><span class="co">#    tag        Create, list, delete or verify a tag object signed with GPG</span></span>
-<span id="cb10-381"><a href="#cb10-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-382"><a href="#cb10-382" aria-hidden="true" tabindex="-1"></a><span class="co"># collaborate (see also: git help workflows)</span></span>
-<span id="cb10-383"><a href="#cb10-383" aria-hidden="true" tabindex="-1"></a><span class="co">#    fetch      Download objects and refs from another repository</span></span>
-<span id="cb10-384"><a href="#cb10-384" aria-hidden="true" tabindex="-1"></a><span class="co">#    pull       Fetch from and integrate with another repository or a local branch</span></span>
-<span id="cb10-385"><a href="#cb10-385" aria-hidden="true" tabindex="-1"></a><span class="co">#    push       Update remote refs along with associated objects</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="controle-de-versão" class="level3">
+<h3 class="anchored" data-anchor-id="controle-de-versão">2. Controle de versão</h3>
+<p>O controle de versão permite manejar projetos de forma organizada e colaborativa. Por exemplo:</p>
+<ul>
+<li>Versionamento de arquivos</li>
+<li>Controle individual de projetos</li>
+<li>Controle colaborativo de projetos</li>
+<li>Controle de versões no tempo</li>
+</ul>
+<p>O git é uma principal ferramenta utilizada em grandes projetos científicos. Além disso, seu uso é cada vez mais necessário em colaborações internacionais.</p>
+<p>Dois manuscrito demonstram isso:</p>
+<ul>
+<li><a href="https://doi.org/10.1371/journal.pcbi.1004947">Perez-Riverol et al.&nbsp;(2016)</a></li>
+<li><a href="https://doi.org/10.1111/2041-210X.14108">Braga et al.&nbsp;(2022)</a></li>
+</ul>
+</section>
+<section id="git-e-github" class="level3">
+<h3 class="anchored" data-anchor-id="git-e-github">3. git e GitHub</h3>
+</section>
+<section id="o-que-é-git" class="level3">
+<h3 class="anchored" data-anchor-id="o-que-é-git">O que é git?</h3>
+<ul>
+<li>Software para <strong>controle de versão</strong>.</li>
+<li>Gerencia <strong>repositórios locais</strong> e <strong>remotos</strong>.</li>
+</ul>
+<p>Criado por <strong>Linus Torvalds</strong> em 2005 para o desenvolvimento do Kernel Linux, é um software livre distribuído sob a licença GNU GPL v2.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/general_linus.jpg" class="img-fluid figure-img"></p>
+<figcaption>Linus Torvalds</figcaption>
+</figure>
 </div>
+<p>Fonte: <a href="https://www.kernel.org/">kernel.org</a></p>
+<p>Vídeo introdutório sobre git:</p>
+<iframe width="80%" height="480" src="https://www.youtube.com/embed/6Czd1Yetaac" frameborder="0" allowfullscreen="">
+</iframe>
+<hr>
+</section>
+<section id="o-que-é-github" class="level3">
+<h3 class="anchored" data-anchor-id="o-que-é-github">O que é GitHub?</h3>
+<ul>
+<li>Plataforma de hospedagem de <strong>repositórios remotos</strong>.</li>
+<li>Oferece ferramentas para controle de versão e colaboração.</li>
+</ul>
+<p>Além do GitHub, há outras plataformas como:</p>
+<ul>
+<li><a href="https://gitlab.com/">GitLab</a></li>
+<li><a href="https://bitbucket.org/">Bitbucket</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/github_logo2.png" class="img-fluid figure-img"></p>
+<figcaption>Plataformas</figcaption>
+</figure>
+</div>
+</section>
+<section id="atenção-aos-conceitos" class="level3">
+<h3 class="anchored" data-anchor-id="atenção-aos-conceitos">Atenção aos conceitos:</h3>
+<ul>
+<li><strong>git</strong>: software de controle de versão.</li>
+<li><strong>GitHub</strong>: plataforma de hospedagem de código versionado.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/git_github_diff.png" class="img-fluid figure-img"></p>
+<figcaption>Diferença entre git e GitHub</figcaption>
+</figure>
+</div>
+<p>Fonte: <a href="https://jahya.net/blog/git-vs-github/">Is Git the Same Thing as Github!?</a></p>
+<hr>
+</section>
+</section>
+<section id="detalhes-do-github" class="level2">
+<h2 class="anchored" data-anchor-id="detalhes-do-github">4. Detalhes do GitHub</h2>
+<section id="perfil" class="level3">
+<h3 class="anchored" data-anchor-id="perfil">Perfil</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/github_profile.png" class="img-fluid figure-img"></p>
+<figcaption>Perfil GitHub</figcaption>
+</figure>
+</div>
+<p><strong>Seções importantes:</strong></p>
+<ul>
+<li><strong>Overview</strong>: informações pessoais.</li>
+<li><strong>Repositories</strong>: lista de repositórios.</li>
+<li><strong>Projects</strong>: gerenciador visual de tarefas.</li>
+<li><strong>Packages</strong>: bibliotecas e containers.</li>
+<li><strong>Stars</strong>: repositórios favoritos.</li>
+</ul>
+<hr>
+</section>
+<section id="configurações" class="level3">
+<h3 class="anchored" data-anchor-id="configurações">Configurações</h3>
+<p>Para acessar: <code>superior direito &gt; foto do perfil &gt; Settings</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/github_profile_settings.png" class="img-fluid figure-img"></p>
+<figcaption>Configurações</figcaption>
+</figure>
+</div>
+</section>
+<section id="repositório" class="level3">
+<h3 class="anchored" data-anchor-id="repositório">Repositório</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/github_repository.png" class="img-fluid figure-img"></p>
+<figcaption>Repositório</figcaption>
+</figure>
+</div>
+<p>Principais abas de um repositório:</p>
+<ul>
+<li><strong>Code</strong>: arquivos, histórico e README.md.</li>
+<li><strong>Issues</strong>: reportar e gerenciar problemas.</li>
+<li><strong>Pull requests</strong>: propostas de alterações.</li>
+<li><strong>Actions</strong>: automação de fluxos de trabalho.</li>
+<li><strong>Projects</strong>: gerenciador visual (Kanban).</li>
+<li><strong>Wiki</strong>: documentação detalhada.</li>
+<li><strong>Security</strong>: segurança do código.</li>
+<li><strong>Insights</strong>: análises.</li>
+<li><strong>Settings</strong>: configurações gerais.</li>
+</ul>
+<hr>
+</section>
+<section id="readme.md" class="level3">
+<h3 class="anchored" data-anchor-id="readme.md">README.md</h3>
+<p>Arquivo principal de documentação, escrito em Markdown:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/github_readme.png" class="img-fluid figure-img"></p>
+<figcaption>README</figcaption>
+</figure>
+</div>
+<ul>
+<li>Visível na página inicial do repositório.</li>
+<li>Explica objetivos, estrutura e uso do projeto.</li>
+</ul>
+<p>Mais sobre Markdown:<br>
+<a href="https://daringfireball.net/projects/markdown/">Markdown</a><br>
+<a href="https://www.markdownguide.org/">Markdown Guide</a></p>
+<hr>
+</section>
+</section>
+<section id="criando-um-repositório" class="level2">
+<h2 class="anchored" data-anchor-id="criando-um-repositório">5. Criando um repositório</h2>
+<p>Para criar um repositório: <code>Perfil &gt; Repositories &gt; New</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/github_criar_repositorio01.png" class="img-fluid figure-img"></p>
+<figcaption>Criar repositório</figcaption>
+</figure>
+</div>
+<p>Preencha:</p>
+<ol type="1">
+<li>Nome</li>
+<li>Descrição (opcional)</li>
+<li>Público ou privado</li>
+<li>Adicionar README.md</li>
+<li>Adicionar .gitignore</li>
+<li>Licença</li>
+</ol>
+<p>Clique em “Create repository”.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/github_criar_repositorio02.png" class="img-fluid figure-img"></p>
+<figcaption>Configurações de criação</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="prática-2-criar-página-inicial-no-github" class="level2">
+<h2 class="anchored" data-anchor-id="prática-2-criar-página-inicial-no-github">Prática 2: Criar página inicial no GitHub</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.alura.com.br/artigos/assets/como-criar-um-readme-para-seu-perfil-github/imagem1.gif" class="img-fluid figure-img"></p>
+<figcaption>Exemplo de README</figcaption>
+</figure>
+</div>
+<p>Passos:</p>
+<ol type="1">
+<li>Criar um repositório com seu nome de usuário (e.g.&nbsp;<code>mauriciovancine</code>).</li>
+<li>Criar arquivo <code>README.md</code>.</li>
+<li>Preencher com conteúdo em Markdown.</li>
+<li>Commitar e verificar o perfil.</li>
+</ol>
+<p>Fonte: <a href="https://www.alura.com.br/artigos/como-criar-um-readme-para-seu-perfil-github">Como criar um README para seu perfil no GitHub</a></p>
+<hr>
+</section>
+<section id="configurações-rstudio-git-e-github" class="level2">
+<h2 class="anchored" data-anchor-id="configurações-rstudio-git-e-github">6. Configurações: RStudio, git e GitHub</h2>
+<section id="configuração-no-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="configuração-no-rstudio">Configuração no RStudio</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/rstudio.png" class="img-fluid figure-img"></p>
+<figcaption>RStudio</figcaption>
+</figure>
+</div>
+<p>Acesse: <code>Tools &gt; Global Options &gt; Git/SVN</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/rstudio_git_config01.png" class="img-fluid figure-img"></p>
+<figcaption>Configuração git no RStudio</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Marque <strong>Enable version control interface for RStudio projects</strong>.</p></li>
+<li><p>Configure o caminho do <strong>Git executable</strong>:</p>
+<ul>
+<li><strong>Windows</strong>: <code>C:/Program Files/Git/bin/git.exe</code></li>
+<li><strong>Ubuntu</strong>: <code>/usr/bin/git</code></li>
+<li><strong>Mac</strong>: <code>/usr/bin/git</code> (em geral)</li>
+</ul></li>
+</ul>
+<p><img src="img/github_ssh_key_add.png" class="img-fluid"></p>
+<hr>
 <style>
 #topBtn {
   display: none;
@@ -759,7 +480,12 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1177,13 +903,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a></p>
+<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
-<li class="nav-item compact">
+    <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/mauriciovancine">
       <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -1231,10 +958,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-</div>
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="../../contact.html">
 <p>Contato</p>
 </a>
@@ -1250,9 +977,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-</div>
+    </div>
   </div>
 </footer>
+
+
 
 
 </body></html>

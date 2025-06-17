@@ -235,6 +235,8 @@ editor: source
 
 1. [Mudanças Climáticas Podem Eliminar Pequenos Mamíferos Únicos da Mata Atlântica da América do Sul](https://www2.uesc.br/noticias/1296/Mudancas-Climaticas-Podem-Eliminar-Pequenos-Mamiferos-Unicos-da-Mata-Atlantica-da-America-do-Sul){target="_blank"}. (2025). UESC Notícias.
 
+1. [O que é melhor proteger: grandes florestas ou vários fragmentos? Novo estudo reacende polêmica](https://brasil.mongabay.com/2025/06/o-que-e-melhor-proteger-grandes-florestas-ou-varios-fragmentos-novo-estudo-reacende-polemica){target="_blank"}. (2025). Mongabay.
+
 <style>
 #topBtn {
   display: none;

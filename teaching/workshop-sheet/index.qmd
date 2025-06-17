@@ -1,6 +1,6 @@
 ---
-title: "Planilha eletrônica para dados ecológicos"
-subtitle: "Curso de Planilha eletrônica para dados ecológicos."
+title: "Organização de dados em planilhas eletrônicas - Calc - LibreOffice"
+subtitle: "Curso de planilha eletrônica para dados manejo de ecológicos."
 author: Maurício Vancine
 image: featured-hex.png
 categories: ["Curso"]
@@ -31,6 +31,7 @@ editor: source
 
 ## Descrição
 
+O minicurso trata da entrada e organização de dados, e composição de funções em planilhas eletrônicas, utilizando o software livre Calc (LibreOffice), com o intuito de facilitar o manejo dos dados coletados em pesquisas na área de ciências biológicas e ecológicas.
 
 ## Oferecimento
 

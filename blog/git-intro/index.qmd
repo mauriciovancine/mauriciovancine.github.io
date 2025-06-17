@@ -23,531 +23,189 @@ Este tutorial aborda os conceitos gerais de controle de versão usando o [git](h
 
 Recomendo também olhar o minicurso [gitR: controle de versão com git, GitHub e RStudio](/teaching/workshop-git/). Este post é a transcrição do mesmo.
 
-## Controle de versão
+### 1. Conferindo os computadores
 
-## git
+É necessário verificar se os seguintes softwares estão instalados e atualizados:
 
-## Instalação
+- [R](https://www.r-project.org/)
+- [RStudio](https://www.rstudio.com/)
+- [git](https://git-scm.com/)
 
-## Terminal bash e desktop
+Além disso, é interessante conhecer softwares que fazem o controle de versão usando uma interface:
 
-## Estágios do controle de versão
+- [gitKraken](https://www.gitkraken.com/)
+- [GitHub Desktop](https://github.com/apps/desktop)
 
-## git init: começando
+### 2. Controle de versão
 
-## git status: verificando
+O controle de versão permite manejar projetos de forma organizada e colaborativa. Por exemplo:
 
-## git add: adicionando
+- Versionamento de arquivos
+- Controle individual de projetos
+- Controle colaborativo de projetos
+- Controle de versões no tempo
 
-## git commit: guardando
+O git é uma principal ferramenta utilizada em grandes projetos científicos. Além disso, seu uso é cada vez mais necessário em colaborações internacionais.
 
-## git push: guardando
+Dois manuscrito demonstram isso:
 
-## Para se aprofundar
+- [Perez-Riverol et al. (2016)](https://doi.org/10.1371/journal.pcbi.1004947)
+- [Braga et al. (2022)](https://doi.org/10.1111/2041-210X.14108)
 
-* Curso gratuito (português): [https://rogerdudler.github.io/git-guide/index.pt\_BR.html](https://rogerdudler.github.io/git-guide/index.pt_BR.html)
-* Documentação oficial Git: [https://git-scm.com/doc](https://git-scm.com/doc)
-* GUI recomendada: [GitHub Desktop](https://desktop.github.com)
+### 3. git e GitHub
 
-[Controle de versão - Gabriel Nakamura](https://gabrielnakamura.github.io/USP_reproducibility_BIE5798/basics_git.html)
+### O que é git?
 
-Fonte da imagem: [Pexels](https://www.pexels.com/pt-br/foto/mao-segurando-holding-papel-11035539).
+- Software para **controle de versão**.
+- Gerencia **repositórios locais** e **remotos**.
 
-## O que são Git e GitHub?
+Criado por **Linus Torvalds** em 2005 para o desenvolvimento do Kernel Linux, é um software livre distribuído sob a licença GNU GPL v2.
 
-* **Git**: sistema de controle de versão distribuído. Ele permite que você acompanhe alterações no seu código/projeto, volte a versões anteriores e trabalhe com ramificações (branches).
-* **GitHub**: plataforma online baseada em Git, usada para hospedar repositórios, colaborar com outras pessoas e compartilhar código.
+![Linus Torvalds](img/general_linus.jpg)
 
-## Instalação do Git
+Fonte: [kernel.org](https://www.kernel.org/)
 
-### Windows / Linux / macOS:
+Vídeo introdutório sobre git:
 
-1. Acesse: [https://git-scm.com](https://git-scm.com)
-2. Baixe e instale o Git.
-3. Após a instalação, abra o terminal (ou Git Bash no Windows) e configure seu nome e e-mail:
+<iframe width="80%" height="480" src="https://www.youtube.com/embed/6Czd1Yetaac" frameborder="0" allowfullscreen></iframe>
 
-```bash
-git config --global user.name "Seu Nome"
-git config --global user.email "seu@email.com"
-```
+---
 
-## Conceitos Básicos
+### O que é GitHub?
 
-* **Repositório (repo)**: Pasta que Git está monitorando.
-* **Commit**: Um "instantâneo" do seu projeto em determinado momento.
-* **Branch**: Linha paralela de desenvolvimento.
-* **Merge**: Juntar mudanças de uma branch com outra.
-* **Clone**: Copiar um repositório existente.
-* **Push / Pull**: Enviar/receber atualizações do GitHub.
+- Plataforma de hospedagem de **repositórios remotos**.
+- Oferece ferramentas para controle de versão e colaboração.
 
-## Criando um Repositório Local
+Além do GitHub, há outras plataformas como:
 
-```bash
-mkdir meu-projeto
-cd meu-projeto
-git init  # inicia o repositório Git
-touch README.md  # cria um arquivo (Linux/mac) ou use 'echo > README.md' no Windows
-git add README.md
-git commit -m "primeiro commit"
-```
+- [GitLab](https://gitlab.com/)
+- [Bitbucket](https://bitbucket.org/)
 
-## Conectando com o GitHub
+![Plataformas](img/github_logo2.png)
 
-1. Crie uma conta no [GitHub](https://github.com)
-2. Clique em "New Repository" e dê um nome ao projeto (ex: `meu-projeto`)
-3. Copie a URL do repositório (HTTPS ou SSH)
-4. No terminal:
+### Atenção aos conceitos:
 
-```bash
-git remote add origin https://github.com/seu-usuario/meu-projeto.git
-git branch -M main  # garante que a branch principal se chama 'main'
-git push -u origin main  # envia os arquivos para o GitHub
-```
+- **git**: software de controle de versão.
+- **GitHub**: plataforma de hospedagem de código versionado.
 
-## Ciclo de Trabalho no Git
+![Diferença entre git e GitHub](img/git_github_diff.png)
 
-```bash
-# Modificou algum arquivo?
+Fonte: [Is Git the Same Thing as Github!?](https://jahya.net/blog/git-vs-github/)
 
-git status           # verifica o que foi alterado
-git add arquivo.txt  # adiciona ao "estágio"
-git commit -m "descrição das mudanças"  # salva as alterações localmente
-git push             # envia as mudanças para o GitHub
-```
+---
 
-## Clonar Repositórios e Colaborar
+## 4. Detalhes do GitHub
 
-### Clonar:
+### Perfil
 
-```bash
-git clone https://github.com/usuario/repositorio.git
-```
+![Perfil GitHub](img/github_profile.png)
 
-### Criar nova branch:
+**Seções importantes:**
 
-```bash
-git checkout -b nova-feature
-```
+- **Overview**: informações pessoais.
+- **Repositories**: lista de repositórios.
+- **Projects**: gerenciador visual de tarefas.
+- **Packages**: bibliotecas e containers.
+- **Stars**: repositórios favoritos.
 
-### Voltar à branch principal e unir mudanças:
+---
 
-```bash
-git checkout main
-git merge nova-feature
-git push
-```
+### Configurações
 
-## Sincronizar com o Repositório Remoto
+Para acessar: `superior direito > foto do perfil > Settings`
 
-Se outra pessoa fez alterações:
+![Configurações](img/github_profile_settings.png)
 
-```bash
-git pull  # baixa e integra as alterações remotas
-```
+### Repositório
 
-## .gitignore
+![Repositório](img/github_repository.png)
 
-Crie um arquivo chamado `.gitignore` e liste os arquivos/pastas que você **não quer** versionar, como:
+Principais abas de um repositório:
 
-```
-*.log
-__pycache__/
-dados_sensiveis.csv
-```
+- **Code**: arquivos, histórico e README.md.
+- **Issues**: reportar e gerenciar problemas.
+- **Pull requests**: propostas de alterações.
+- **Actions**: automação de fluxos de trabalho.
+- **Projects**: gerenciador visual (Kanban).
+- **Wiki**: documentação detalhada.
+- **Security**: segurança do código.
+- **Insights**: análises.
+- **Settings**: configurações gerais.
 
-## Dicas Úteis
+---
 
-* Use `git log` para ver o histórico de commits.
-* Use `git diff` para ver mudanças não commitadas.
-* Use `git stash` para guardar mudanças temporariamente sem fazer commit.
+### README.md
 
-```{r}
-# script commit gitlab
-# mauricio vancine
+Arquivo principal de documentação, escrito em Markdown:
 
-# instalar o git
-git --version
-sudo apt install git-all
+![README](img/github_readme.png)
 
-# configuracao inicial do git
-git config --global user.name "mauriciovancine"
-git config --global user.email "mauricio.vancine@gmail.com"
+- Visível na página inicial do repositório.
+- Explica objetivos, estrutura e uso do projeto.
 
-# conferindo
-git config user.name
-git config user.email
-git config --list
+Mais sobre Markdown:  
+[Markdown](https://daringfireball.net/projects/markdown/)  
+[Markdown Guide](https://www.markdownguide.org/)
 
-# repositorios remotos
-# gerar uma chave
-ssh-keygen -t ed25519 -C "mauricio.vancine@gmail.com" # tres enters
+---
 
-# verificar
-cd ~/.ssh
-cat id_ed25519.pub
+## 5. Criando um repositório
 
-# ligar o repositorio do pc ao git
-# sudo apt install xclip
-xclip -sel clip < ~/.ssh/id_ed25519.pub
-ssh -T git@gitlab.com:mauriciovancine
+Para criar um repositório: `Perfil > Repositories > New`
 
-git remote add origin git@github.com:mauriciovancine/git-course.git
-git remote
-git remote -v
+![Criar repositório](img/github_criar_repositorio01.png)
 
-###---------------------------------------------
+Preencha:
 
-# iniciar o repositorio git
-# definir diretorio
-cd /media/mauricio/data/gitlab
+1. Nome
+2. Descrição (opcional)
+3. Público ou privado
+4. Adicionar README.md
+5. Adicionar .gitignore
+6. Licença
 
-# clonar um repositorio
-git clone git@gitlab.com:mauriciovancine/r-enm.git
+Clique em "Create repository".
 
-# iniciar o git
-git init
+![Configurações de criação](img/github_criar_repositorio02.png)
 
-# listar 
-ls -la
+---
 
-# reportar o estados do repositorio
-git status # untracked
+## Prática 2: Criar página inicial no GitHub
 
-# commit - criar um snapshot dos arquivos
-git commit -m 
+![Exemplo de README](https://www.alura.com.br/artigos/assets/como-criar-um-readme-para-seu-perfil-github/imagem1.gif)
 
-# verificar
-git status # nada para ser feito
+Passos:
 
-## 10 visualizando logs
-# mostrar as infos dos commits
+1. Criar um repositório com seu nome de usuário (e.g. `mauriciovancine`).
+2. Criar arquivo `README.md`.
+3. Preencher com conteúdo em Markdown.
+4. Commitar e verificar o perfil.
 
-# mostrar commits
-git log
+Fonte: [Como criar um README para seu perfil no GitHub](https://www.alura.com.br/artigos/como-criar-um-readme-para-seu-perfil-github)
 
-# descricao dos commits
-git log --decorate
+---
 
-# filtro autor dos commits
-git log author="mau"
+## 6. Configurações: RStudio, git e GitHub
 
-# mostra os autores que comitaram
-git shortlog
+### Configuração no RStudio
 
-# mostra numero de commits por pessoas
-git shortlog -sn
+![RStudio](img/rstudio.png)
 
-# mostra de forma grafica os branchs
-git log --graph
+Acesse: `Tools > Global Options > Git/SVN`
 
-# mostra a hash
-git show 588867d3f12f9a3f819dbf9657614c92a4d5237f
+![Configuração git no RStudio](img/rstudio_git_config01.png)
 
-## 11 visualizando o diff
-# mudancas antes do envio
+- Marque **Enable version control interface for RStudio projects**.
+- Configure o caminho do **Git executable**:
 
-# verificar
-git status
+  - **Windows**: `C:/Program Files/Git/bin/git.exe`
+  - **Ubuntu**: `/usr/bin/git`
+  - **Mac**: `/usr/bin/git` (em geral)
 
-# editar
-subl readme.md
+![](img/github_ssh_key_add.png)
 
-# visualizar as mudancas antes de commitar
-git diff
 
-# listar o nome dos arquivos modificados
-git diff --name-only
-
-# commitar
-git commit -am "edit"
-
-# ver commit
-git log
-
-# mostrar commit
-git show a06fd917431bc1dffdc8565bff0fe7b13d8bfc3c
-
-## 12 desfazendo coisas
-# 1. voltar para antes da edicao
-git log
-git status
-subl readme.md # edit
-git diff
-git status
-git checkout readme.md
-git diff
-
-# 2. retirar do stage (git add) e voltar antes da edicao
-subl readme.md # edit
-git add readme.md
-git diff
-git status
-git reset HEAD readme.md
-git status
-git checkout readme.md
-git diff
-
-# 3. voltar do commit
-subl readme.md # edit
-git status
-git commit -am "soft"
-git log
-
-# 1. git reset --soft: volta o commit e mantem arquivo no staged
-git reset --soft a06fd917431bc1dffdc8565bff0fe7b13d8bfc3c # hash anterior
-git status
-subl readme.md
-git commit -am "mixed"
-
-# 2. git reset --mixed: volta o commit e arquivo fica em modofied
-git reset --mixed bb63de7478f5d789029a91401cb1095b2fb4ab2d 
-git status
-subl readme.md
-git commit -am "hard"
-
-# 3. git reset --hard: volta o commit e arquivo volta em unmodified
-git reset --hard bb63de7478f5d789029a91401cb1095b2fb4ab2d
-git log
-git status
-
-# o git reset --hard altera o historico dos commits
-
-###---------------------------------------------###
-
-
-
-# enviar os arquivos para o repositorio
-git push -u origin master
-git push
-
-## 16 enviando mudancas para um repositorio remoto
-subl readme.md
-git status
-git commit -am "commit to github"
-git log
-git push origin master
-
-## 17 clonando repositorios remotos
-# download de um repositorio do github para pc
-cd ..
-git clone git@github.com:mauriciovancine/git-course.git github-course-clone # com chave
-git clone https://github.com/mauriciovancine/git-course # publico
-
-## 18 fazendo fork de um projeto
-# copiar um repositorio para o proprio github
-# sempre de outro usuario
-
-###---------------------------------------------###
-
-## secao 5 ramificacao (branch)
-
-## 19 o que e um branch e por que usar?
-# branch: ponteiro movel que leva a um commit
-# cada commit gera uma hash (código) e para cada hash gera um snapshot
-# novo branch aponta para o mesmo commit ou para outro commit
-# utilidade:
-# 1. modificar os arquivos sem modificar o local principal (master)
-# 2. facilmente desligavel
-# 3. multiplas pessoas trabalhando
-# 4. evita conflitos
-# mescla-se o branch final ao branch paralelo
-
-## 20 criando um branch
-# criando um branch
-git checkout -b testing
-
-# verificando branch
-git branch
-
-## 21 movendo e deletando branches
-# verificando branch
-git branch
-
-# movendo para master
-git checkout master
-
-# verificando branch
-git branch
-
-# movendo para testing
-git checkout testing
-git checkout master
-
-# apagar branch
-git branch -D testing
-
-# verificando branch
-git branch 
-
-# 22 entendendo o merge
-# unir branchs - branch separado paralelo a mais para unir
-
-# 23 entendendo o rebase
-# unir branchs - branch separado linera logo a frente
-
-# 24 merge e rebase na pratica
-mkdir rebase-merge
-cd rebase-merge
-git init
-subl foo
-git status
-git add foo
-git commit -m "add foo"
-
-git checkout -b test
-subl bar 
-git add bar
-git commit -m "add bar"
-
-git log
-
-git checkout master
-git log
-
-subl fizz
-git add fizz
-git commit -m "add fizz"
-git log
-
-# merge
-git merge test
-git log
-git log --graph
-
-# rebase
-subl buzz
-git add buzz
-git commit -m "add buzz"
-git log
-
-git checkout -b rebase
-subl bla
-git add bla
-git commit -m "add bla"
-git log --graph
-
-git checkout master
-git log
-
-subl seila
-git add seila
-git commit -m "add seila"
-
-git log
-
-git rebase rebase
-
-git log
-git log --graph
-
-###---------------------------------------------###
-
-### secao 6 extras
-
-## 25 criando o .gitignore
-# ignora trackeamento de arquivos
-# arquivo no repositorio para 
-
-subl data.txt
-git status
-
-subl .gitignore # *.txt
-git status
-
-subl .gitignore # data
-git status
-
-# https://git-scm.com/docs/gitignore
-# https://github.com/github/gitignore
-
-## 26 git stash e lindo
-# responsavel por guardar modificacoes nao commitadas
-cd..
-cd git-course
-subl readme.md
-
-git status
-git stash
-git status
-
-git checkout -b bla
-git log
-
-git stash apply
-
-git stash list
-git stash clear
-
-
-## 27 alias para que te quero
-# atalhos
-git status
-git config --global alias.s status
-
-git s
-
-## 28 versionando com tags
-# sobe tags especificas
-git tag -a 1.0.0 -m "readme finalizado"
-
-git push origin master --tags
-git tag
-
-## 29 salvando sua sexta com git revert
-# nao perde o commit, apenas retorna ao estado anterior
-
-subl readme.md
-git commit -am "add"
-git log
-git show # hash
-
-git log
-git revert # hash
-
-git show # hash
-
-## 30 apagando tags e branches remotos
-git tag -d 1.0.0
-git push origin master
-
-git push origin :1.0.0
-
-
-###-----------------------------------------------###
-
-# These are common Git commands used in various situations:
-
-# start a working area (see also: git help tutorial)
-#    clone      Clone a repository into a new directory
-#    init       Create an empty Git repository or reinitialize an existing one
-
-# work on the current change (see also: git help everyday)
-#    add        Add file contents to the index
-#    mv         Move or rename a file, a directory, or a symlink
-#    reset      Reset current HEAD to the specified state
-#    rm         Remove files from the working tree and from the index
-
-# examine the history and state (see also: git help revisions)
-#    bisect     Use binary search to find the commit that introduced a bug
-#    grep       Print lines matching a pattern
-#    log        Show commit logs
-#    show       Show various types of objects
-#    status     Show the working tree status
-
-# grow, mark and tweak your common history
-#    branch     List, create, or delete branches
-#    checkout   Switch branches or restore working tree files
-#    commit     Record changes to the repository
-#    diff       Show changes between commits, commit and working tree, etc
-#    merge      Join two or more development histories together
-#    rebase     Reapply commits on top of another base tip
-#    tag        Create, list, delete or verify a tag object signed with GPG
-
-# collaborate (see also: git help workflows)
-#    fetch      Download objects and refs from another repository
-#    pull       Fetch from and integrate with another repository or a local branch
-#    push       Update remote refs along with associated objects
-```
+---
 
 <style>
 #topBtn {
