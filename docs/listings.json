@@ -22,8 +22,8 @@
   {
     "listing": "/talk/index.html",
     "items": [
-      "/talk/talk-r-book/index.html",
-      "/talk/talk-sdm-gggc/index.html",
+      "/talk/talk-mapbiomas-user-summit/index.html",
+      "/talk/talk-r-book-uemg/index.html",
       "/talk/talk-landscape-syneco/index.html",
       "/talk/talk-spatiotemporal-af-unicamp/index.html",
       "/talk/talk-r-bioforum-unicamp/index.html",
@@ -38,6 +38,7 @@
       "/talk/talk-espacial-uff/index.html",
       "/talk/video-werlive-16/index.html",
       "/talk/talk-enm-gggc/index.html",
+      "/talk/talk-sdm-gggc/index.html",
       "/talk/video-geocast-metricas-paisagem/index.html",
       "/talk/talk-data-paper-amphibians-anfoco/index.html"
     ]

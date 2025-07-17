@@ -219,6 +219,8 @@ editor: source
 
 1. [Pequenas florestas isoladas não chegam para proteger a biodiversidade](https://greensavers.sapo.pt/pequenas-florestas-isoladas-nao-chegam-para-proteger-a-biodiversidade/){target="_blank"}. (2025). Greensavers.
 
+1. [Para preservar a biodiversidade deve apostar-se nas grandes florestas](https://greensavers.sapo.pt/para-preservar-a-biodiversidade-deve-apostar-se-nas-grandes-florestas/){target="_blank"}. (2025). Greensavers.
+
 1. [Want to preserve biodiversity? Go big, U-M researchers say](https://news.umich.edu/want-to-preserve-biodiversity-go-big-u-m-researchers-say/){target="_blank"}. (2025). Michigan News.
 
 1. [New study refutes habitat fragmentation claim](https://www.idiv.de/new-study-refutes-habitat-fragmentation-claim){target="_blank"}. (2025). IDiv.
@@ -236,6 +238,8 @@ editor: source
 1. [Mudanças Climáticas Podem Eliminar Pequenos Mamíferos Únicos da Mata Atlântica da América do Sul](https://www2.uesc.br/noticias/1296/Mudancas-Climaticas-Podem-Eliminar-Pequenos-Mamiferos-Unicos-da-Mata-Atlantica-da-America-do-Sul){target="_blank"}. (2025). UESC Notícias.
 
 1. [O que é melhor proteger: grandes florestas ou vários fragmentos? Novo estudo reacende polêmica](https://brasil.mongabay.com/2025/06/o-que-e-melhor-proteger-grandes-florestas-ou-varios-fragmentos-novo-estudo-reacende-polemica){target="_blank"}. (2025). Mongabay.
+
+1. [Protect one large forest, or many small ones? New study reignites conservation debate](https://news.mongabay.com/2025/06/protect-one-large-forest-or-many-small-ones-new-study-reignites-conservation-debate/){target="_blank"}. (2025). Mongabay.
 
 <style>
 #topBtn {

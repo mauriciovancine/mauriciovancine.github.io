@@ -1,0 +1,31 @@
+---
+title: "Corrigir coordenadas geográficas usando o R"
+subtitle: "Corrigir coordenadas geográficas usando o R."
+author: Maurício Vancine
+date: 2025-06-16
+categories: ["R", "Geoprocessamento"]
+image: featured.jpg
+toc: true
+draft: false
+code-link: true
+editor: source
+---
+
+## Contextualização
+
+
+## Pacote
+
+
+```{r eval=FALSE}
+# instalar pacote
+install.packages("parzer")
+
+# carregar pacote
+library(tidyverse)
+library(sf)
+library(parzer)
+library(tmap)
+```
+
+Fonte da imagem: [Nancy Zjaba/Pexels](https://www.pexels.com/pt-br/foto/close-up-de-bussola-em-fundo-de-madeira-32563237/).

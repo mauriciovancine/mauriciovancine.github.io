@@ -3,7 +3,7 @@ title: "Modelos de Distribuição de Espécies: uma visão geral"
 subtitle: "Palestra sobre uma visão geral e aplicações de Modelos de Distribuição de Espécies (SDMs)."
 author: Maurício Vancine
 image: featured.jpg
-date: 2024-12-09
+date: 2020-03-05
 event: Visita ao Grupo de Genética e Genômica da Conservação da Profa. Maria Zucchi (USP/ESALQ)
 location: Piracicaba, SP, Brasil
 categories: ["Palestra"]
