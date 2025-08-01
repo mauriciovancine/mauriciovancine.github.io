@@ -15,9 +15,9 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://youtu.be/RCTrLx_33D8" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-video me-1"></i>YouTube</a>
   <a href="https://mauriciovancine.github.io/slides/slides-landscape-metrics-geocast/slides-landscape-metrics-geocast.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
   <a href="https://gitlab.com/geocastbrasil/landscapemetrics" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-gitlab me-1"></i>GitLab</a>
+  <a href="https://youtu.be/RCTrLx_33D8" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-video me-1"></i>YouTube</a>
 </div>
 
 <style>

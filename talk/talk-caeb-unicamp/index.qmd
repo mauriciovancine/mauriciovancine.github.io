@@ -1,8 +1,12 @@
 ---
-title: "LandScape Metrics (LSMETRICS)"
-subtitle: "Pacote no R para cálculo e espacialização de métricas de paisagem usando o GRASS GIS"
-author: Bernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro
-image: featured-hex.png
+title: "Entre pixels e espécies: como a Ecologia Espacial pode auxiliar no estudo da biodiversidade?"
+subtitle: "Palestra sobre as aplicações do Sensoriamento Remoto na Ecologia."
+author: Maurício Vancine
+image: featured.png
+date: 2025-07-31
+event: XVII CAEB (Congresso Aberto aos Estudantes de Biologia)
+location: Campinas, SP, Brasil
+categories: ["Palestra"]
 format:
   html:
     include-in-header: 
@@ -12,7 +16,7 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://mauriciovancine.github.io/lsmetrics/" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-link me-1"></i>Website</a>
+  <a href="https://docs.google.com/presentation/d/1ecVBCukOvaZqmlAGXq2n9lRcVw9ike4vrWLPZ3zJNwY/edit" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
 </div>
 
 <style>
@@ -28,4 +32,6 @@ editor: source
   }
 </style>
 
-# **LandScape Metrics (LSMETRICS)** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+<br>
+
+![](featured.png)

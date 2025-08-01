@@ -16,8 +16,8 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://www.desabrace.com.br/092-voce-tem-medo-de-errar/" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-link me-1"></i>link</a>
   <a href="https://open.spotify.com/episode/1wxoQbm7o5TwecEycAmhai?si=qB2nwuJsS9W0YzILaNe8Ng" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-spotify me-1"></i>Spotify</a>
+ <a href="https://www.desabrace.com.br/092-voce-tem-medo-de-errar/" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-link me-1"></i>link</a>
 </div>
 
 <style>
