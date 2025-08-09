@@ -1,0 +1,42 @@
+---
+title: "Introdução ao Google Earth Engine"
+subtitle: "Curso de introdução ao Google Earth Engine."
+author: Maurício Vancine
+image: featured-hex.png
+categories: ["Curso"]
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://mauriciovancine.github.io/workshop-gee/00_slides/slides.html" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
+  <a href="https://github.com/mauriciovancine/workshop-gee" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>GitHub</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br>
+
+# **GEE** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+
+## Descrição
+
+O minicurso oferece alguns dos principais conceitos de Sensoriamento Remoto e uso do Google Earth Engine.
+
+## Oferecimento
+

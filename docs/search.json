@@ -18,7 +18,7 @@
     "href": "teaching/index.html",
     "title": "Ensino",
     "section": "",
-    "text": "Ordenar por\n       Padrão\n         \n          Título\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAnálises espaciais da biodiversidade\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nControle de versão com git, GitHub e RStudio\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeoprocessamento com QGIS\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelagem de distribuição de espécies com o R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMétricas de paisagem no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrganização de dados em planilhas eletrônicas - Calc - LibreOffice\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProgramação em linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrabalho de campo com anfíbios\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\necostatR: análise de dados em Ecologia no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nespR: ecologia espacial no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nespR: ecologia espacial no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngeoR: geoprocessamento no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nintroR: introdução à linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsdmR: modelagem de distribuição de espécies no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\nSem itens correspondentes\n\n\n  \n\n\n\n\n↑ Topo"
+    "text": "Ordenar por\n       Padrão\n         \n          Título\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAnálises espaciais da biodiversidade\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nControle de versão com git, GitHub e RStudio\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeoprocessamento com QGIS\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao Google Earth Engine\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelagem de distribuição de espécies com o R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMétricas de paisagem no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrganização de dados em planilhas eletrônicas - Calc - LibreOffice\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProgramação em linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrabalho de campo com anfíbios\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\necostatR: análise de dados em Ecologia no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nespR: ecologia espacial no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nespR: ecologia espacial no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngeoR: geoprocessamento no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nintroR: introdução à linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsdmR: modelagem de distribuição de espécies no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\nSem itens correspondentes\n\n\n  \n\n\n\n\n↑ Topo"
   },
   {
     "objectID": "teaching/workshop-progr/index.html",
@@ -278,5 +278,82 @@
     "title": "Maurício Vancine",
     "section": "",
     "text": "Sou ecólogo, cientista de dados, mestre em zoologia e doutor em ecologia. Tenho experiência em ecologia espacial, com ênfase em efeitos da perda e fragmentação de habitat, modelagem de distribuição de espécies (SDM), ecologia de anfíbios, análise de dados ecológicos e geoespaciais.\nSaiba mais →"
+  },
+  {
+    "objectID": "teaching/workshop-gee/index.html",
+    "href": "teaching/workshop-gee/index.html",
+    "title": "Introdução ao Google Earth Engine",
+    "section": "",
+    "text": "Slides GitHub"
+  },
+  {
+    "objectID": "teaching/workshop-gee/index.html#descrição",
+    "href": "teaching/workshop-gee/index.html#descrição",
+    "title": "Introdução ao Google Earth Engine",
+    "section": "Descrição",
+    "text": "Descrição\nO minicurso oferece alguns dos principais conceitos de Sensoriamento Remoto e uso do Google Earth Engine."
+  },
+  {
+    "objectID": "teaching/workshop-gee/index.html#oferecimento",
+    "href": "teaching/workshop-gee/index.html#oferecimento",
+    "title": "Introdução ao Google Earth Engine",
+    "section": "Oferecimento",
+    "text": "Oferecimento"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "↑ Topo\n\n\n\n\n\n\n\n\n   \n     \n     \n       Ordenar por\n       Padrão\n         \n          Título\n        \n         \n          Data - Mais antigo\n        \n         \n          Data - O mais novo\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCorrigir coordenadas geográficas usando o R\n\n\nCorrigir coordenadas geográficas usando o R.\n\n\n\n\n\n16 de jun. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao controle de versão com git, GitHub e RStudio\n\n\nPrincipais conceitos de controle de versão usando git\n\n\n\n\n\n1 de mai. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao Shiny do R\n\n\nIntrodução aos principais conceitos de criação de dashboards no R através do pacote Shiny.\n\n\n\n\n\n2 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráficos e mapas além do R\n\n\nLista dos principais APPs gratuitos para gráficos e mapas.\n\n\n\n\n\n21 de dez. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à linguagem Julia\n\n\nUma breve introdução à linguagem Julia\n\n\n\n\n\n21 de dez. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBig Data no R: como ler um conjunto de dados maior que a RAM\n\n\nImportar e manejar grandes volumes de dados no R\n\n\n\n\n\n24 de ago. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nReinstalar pacotes depois de atualizar o R\n\n\nDepois de atualizar o R, vem a parte chata de reinstalar todos os pacotes, mas o R mesmo pode te ajudar.\n\n\n\n\n\n4 de jun. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nFonte de dados geoespaciais\n\n\nLista das principais fontes de dados e pacotes do R de dados geoespaciais\n\n\n\n\n\n18 de jan. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nDisciplinas de graduação e pós-graduação on-line\n\n\nLista de disciplinas de graduação e pós-graduação oferecidas on-line\n\n\n\n\n\n7 de mar. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nSistemas de Referência de Coordenadas e Datum\n\n\nUma modesta explicação sobre Sistemas de Referência de Coordenadas e Datum.\n\n\n\n\n\n20 de fev. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nHelp me help you: um bestiário para entender erros e pedir ajuda no R\n\n\nUm guia para entender erros e pedir ajuda no R\n\n\n\n\n\n26 de ago. de 2020\n\n\n\n\n\n\nSem itens correspondentes"
+  },
+  {
+    "objectID": "blog/r-big-data/index.html",
+    "href": "blog/r-big-data/index.html",
+    "title": "Big Data no R: como ler um conjunto de dados maior que a RAM",
+    "section": "",
+    "text": "A Ciência de Dados (Data Science) é uma área de conhecimento que vem ganhando notoriedade, principalmente na era digital e pelo grande volume de dados gerados, com o uso de diversos algoritmos matemáticos para análise de dados. Podemos dizer que Ciência de Dados é composta por três componentes principais: Big Data, Machine Learning e Internet of Things.\nNeste post, vou falar sobre Big Data, que geralmente se refere a volumes massivos de dados que não são facilmente manipulados pelas ferramentas e práticas de dados usuais, como uma planilha eletrônica, por exemplo.\nNa Ecologia, diversos estudos (confira o final do post) têm abordado esse tema, mas aqui gostaria de falar especificamente de como trabalhar com esses dados no R.\nQuando importamos um conjunto de dados de uma planilha eletrônica para o R, ele aloca esses dados na memória RAM (espaço temporário de armazenamento).\nDessa forma, se eu tenho um computador com 16 Gb de RAM, em teoria eu poderia importar e manejar um conjunto de dados de 16 Gb. Entretanto, na prática, a quantidade de memória disponível para o R é menor do que a quantidade total de RAM, pois parte dela é usada pelo sistema operacional e outros processos. Uma parte da memória RAM está sempre sendo usada pelo sistema operacional, e além disso, cada nova atribuição de dados no R vai necessitar alocar o objeto em uma nova parte da RAM.\nVerifique a quantidade de memória RAM do seu computador no R:\n\n# install.packages(\"memuse\")\nmemuse::Sys.meminfo()\n\nTotalram:  15.461 GiB \nFreeram:    2.571 GiB \n\n\nHá diversas opções para contornar essa limitação e trabalhar com dados gigantes no R, mas aqui vou explorar um pacote específico e um conjunto de dados que tive que trabalhar recentemente."
+  },
+  {
+    "objectID": "blog/r-big-data/index.html#contextualização",
+    "href": "blog/r-big-data/index.html#contextualização",
+    "title": "Big Data no R: como ler um conjunto de dados maior que a RAM",
+    "section": "",
+    "text": "A Ciência de Dados (Data Science) é uma área de conhecimento que vem ganhando notoriedade, principalmente na era digital e pelo grande volume de dados gerados, com o uso de diversos algoritmos matemáticos para análise de dados. Podemos dizer que Ciência de Dados é composta por três componentes principais: Big Data, Machine Learning e Internet of Things.\nNeste post, vou falar sobre Big Data, que geralmente se refere a volumes massivos de dados que não são facilmente manipulados pelas ferramentas e práticas de dados usuais, como uma planilha eletrônica, por exemplo.\nNa Ecologia, diversos estudos (confira o final do post) têm abordado esse tema, mas aqui gostaria de falar especificamente de como trabalhar com esses dados no R.\nQuando importamos um conjunto de dados de uma planilha eletrônica para o R, ele aloca esses dados na memória RAM (espaço temporário de armazenamento).\nDessa forma, se eu tenho um computador com 16 Gb de RAM, em teoria eu poderia importar e manejar um conjunto de dados de 16 Gb. Entretanto, na prática, a quantidade de memória disponível para o R é menor do que a quantidade total de RAM, pois parte dela é usada pelo sistema operacional e outros processos. Uma parte da memória RAM está sempre sendo usada pelo sistema operacional, e além disso, cada nova atribuição de dados no R vai necessitar alocar o objeto em uma nova parte da RAM.\nVerifique a quantidade de memória RAM do seu computador no R:\n\n# install.packages(\"memuse\")\nmemuse::Sys.meminfo()\n\nTotalram:  15.461 GiB \nFreeram:    2.571 GiB \n\n\nHá diversas opções para contornar essa limitação e trabalhar com dados gigantes no R, mas aqui vou explorar um pacote específico e um conjunto de dados que tive que trabalhar recentemente."
+  },
+  {
+    "objectID": "blog/r-big-data/index.html#ebird",
+    "href": "blog/r-big-data/index.html#ebird",
+    "title": "Big Data no R: como ler um conjunto de dados maior que a RAM",
+    "section": "eBird",
+    "text": "eBird\nO eBird é um empreendimento coletivo que adota uma abordagem inovadora para a ciência cidadã para a observação de aves. O eBird é gerenciado pelo Cornell Lab of Ornithology. Seu objetivo é aumentar a quantidade de dados por meio do recrutamento e engajamento de participantes globalmente, além de quantificar e controlar problemas de qualidade de dados.\nOs dados do eBird estão disponíveis de forma aberta e são utilizados por um amplo espectro de estudantes, professores, cientistas, ONGs, agências governamentais, gestores de terras e formuladores de políticas. Como resultado, o eBird se tornou uma importante fonte de dados de biodiversidade, aumentando nosso conhecimento sobre as dinâmicas de distribuição de espécies e tendo um impacto direto na conservação de aves e seus habitats."
+  },
+  {
+    "objectID": "blog/r-big-data/index.html#ebird-e-gbif",
+    "href": "blog/r-big-data/index.html#ebird-e-gbif",
+    "title": "Big Data no R: como ler um conjunto de dados maior que a RAM",
+    "section": "eBird e GBIF",
+    "text": "eBird e GBIF\nO GBIF (Sistema Global de Informação sobre Biodiversidade) é uma rede internacional e infraestrutura de dados financiada por governos de todo o mundo, com o objetivo de dar a qualquer pessoa, em qualquer lugar, acesso aberto a dados sobre toda a vida na Terra.\nMas ele também disponibiliza os dados do eBird do mundo todo, através do EOD – eBird Observation Dataset.\nEsse conjunto de dados possui atualmente 1.512.208.412 ocorrências, com dados desde 1 de janeiro de 1800 a 31 de dezembro de 2023.\nPara citar esse conjunto de dados:\n\nAuer T, Barker S, Barry J, Charnoky M, Curtis J, Davies I, Davis C, Downie I, Fink D, Fredericks T, Ganger J, Gerbracht J, Hanks C, Hochachka W, Iliff M, Imani J, Jordan A, Levatich T, Ligocki S, Long M T, Morris W, Morrow S, Oldham L, Padilla Obregon F, Robinson O, Rodewald A, Ruiz-Gutierrez V, Schloss M, Smith A, Smith J, Stillman A, Strimas-Mackey M, Sullivan B, Weber D, Wolf H, Wood C (2024). EOD – eBird Observation Dataset. Cornell Lab of Ornithology. Occurrence dataset https://doi.org/10.15468/aomfnb accessed via GBIF.org on 2024-08-23.\n\nEsses dados estão disponíveis em um único arquivo no formato CSV (Comma-Separated Values) ou valores separados por vírgula (.csv), que possui 824 Gb, que é muito mais do que geralmente os computadores têm de memória RAM.\nSendo assim, precisamos de um pacote específico para importar e manejar esses dados."
+  },
+  {
+    "objectID": "blog/r-big-data/index.html#importar-e-manejar-esses-dados",
+    "href": "blog/r-big-data/index.html#importar-e-manejar-esses-dados",
+    "title": "Big Data no R: como ler um conjunto de dados maior que a RAM",
+    "section": "Importar e manejar esses dados",
+    "text": "Importar e manejar esses dados\nAqui, vamos utilizar o pacote arrow. Esse pacote fornece acesso a recursos da biblioteca Apache Arrow C++. O objetivo do arrow é fornecer um backend Arrow C++ para o dplyr e acesso à biblioteca Apache Arrow C++ através de funções familiares do base R e do tidyverse, ou classes R6. O projeto Arrow oferece funcionalidades para uma ampla gama de tarefas de análise de dados, permitindo armazenar, processar e mover dados rapidamente.\nPara mais detalhes do funcionamento do pacote arrow, consultar o capítulo 22 Arrow do R para Ciência de Dados 2ªed.\nVamos ler os dados:\n\n# packages\nlibrary(tidyverse)\nlibrary(arrow)\n\n# ebird\nebird_data &lt;- arrow::open_delim_dataset(\"0043987-240626123714530.csv\", \n                                        parse_options = csv_parse_options(\n                                            delimiter = \"\\t\", \n                                            newlines_in_values = TRUE),\n                                        read_options = list(\n                                            block_size = 1000000000L, \n                                            use_threads = TRUE))\nebird_data\n\nEsse banco de dados é cheio de problemas, então tive que fazer alguns testes com vários parâmetros para fazer com que a leitura funcionasse.\nO código acima apenas lê os dados sem carregá-los completamente na memória do R. Dessa forma, com os códigos abaixo é possível fazer um filtro dos dados que precisamos, por exemplo, para o joão-de-barro (Furnarius rufus) [adoro esse bicho], depois de 1985 e para algumas colunas de interesse.\n\n# filter\nebird_data_filter &lt;- ebird_data %&gt;% \n    dplyr::filter(species == \"Furnarius rufus\",\n                  year &gt;= 1985) %&gt;% \n    dplyr::select(species, decimalLongitude, decimalLatitude, year) %&gt;%  \n    dplyr::collect()\nebird_data_filter\n\nEntretanto, mesmo num notebook parrudo (Intel i7 e 64 Gb de RAM) demorou 2:45 h para fazer o filtro.\nAcabei atribuindo os dados a um objeto, mas talvez fosse mais interessante exportar o arquivo diretamente para evitar o uso excessivo de memória.\n\n# filter\nebird_data %&gt;% \n    dplyr::filter(species == \"Furnarius rufus\",\n                  year &gt;= 1985) %&gt;% \n    dplyr::select(species, decimalLongitude, decimalLatitude, year) %&gt;% \n    readr::write(\"ebird_furnarius_rufus.csv\")\n\nHá ainda muitos pontos para eu estudar do pacote arrow, como o formato parquet, que parece ser muito mais interessante do que o CSV. Sendo assim, vale ler mais o capítulo 22 Arrow do R para Ciência de Dados 2ªed."
+  },
+  {
+    "objectID": "blog/r-big-data/index.html#saiba-mais",
+    "href": "blog/r-big-data/index.html#saiba-mais",
+    "title": "Big Data no R: como ler um conjunto de dados maior que a RAM",
+    "section": "Saiba mais",
+    "text": "Saiba mais\nFarley, S.S., Dawson, A., Goring, S.J. & Williams, J.W. (2018). Situating Ecology as a Big-Data Science: Current Advances, Challenges, and Solutions. BioScience, 68, 563–576.\nHampton, S.E., Strasser, C.A., Tewksbury, J.J., Gram, W.K., Budden, A.E., Batcheller, A.L., et al. (2013). Big data and the future of ecology. Frontiers in Ecology and the Environment, 11, 156–162.\nNimmagadda, S.L., Reiners, T. & Rudra, A. (2017). Development of a Total Environment Data Science Approach in a Big Data Scale. Procedia Computer Science, Knowledge-Based and Intelligent Information & Engineering Systems: Proceedings of the 21st International Conference, KES-20176-8 September 2017, Marseille, France, 112, 1891–1900.\nFonte da imagem: Sergei Starostin/Pexels."
+  },
+  {
+    "objectID": "blog/r-geo-fix-coordinates/index.html#pacote",
+    "href": "blog/r-geo-fix-coordinates/index.html#pacote",
+    "title": "Corrigir coordenadas geográficas usando o R",
+    "section": "Pacote",
+    "text": "Pacote\n\n# instalar pacote\ninstall.packages(\"parzer\")\n\n# carregar pacote\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(parzer)\nlibrary(tmap)\n\nFonte da imagem: Nancy Zjaba/Pexels."
   }
 ]

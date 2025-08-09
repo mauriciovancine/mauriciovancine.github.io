@@ -30,6 +30,7 @@
       "/teaching/workshop-spadivr/index.html",
       "/teaching/workshop-git/index.html",
       "/teaching/workshop-qgis/index.html",
+      "/teaching/workshop-gee/index.html",
       "/teaching/workshop-intror/index.html",
       "/teaching/workshop-sdmr/index.html",
       "/teaching/workshop-landr/index.html",
@@ -56,6 +57,22 @@
       "/project/mapbiomas_degradacao/index.html",
       "/project/amphibr/index.html",
       "/project/atlanticr/index.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/r-geo-fix-coordinates/index.html",
+      "/blog/git-intro/index.html",
+      "/blog/r-shiny-intro/index.html",
+      "/blog/app-graphics-maps/index.html",
+      "/blog/julia-intro/index.html",
+      "/blog/r-big-data/index.html",
+      "/blog/r-reinstall-packages/index.html",
+      "/blog/geo-data-source/index.html",
+      "/blog/academic-online-courses/index.html",
+      "/blog/geo-crs-datum/index.html",
+      "/blog/r-error/index.html"
     ]
   }
 ]

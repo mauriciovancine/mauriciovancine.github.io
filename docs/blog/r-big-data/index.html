@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.40">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Ensino – Maurício Vancine</title>
+<meta name="author" content="Maurício Vancine">
+<title>Big Data no R: como ler um conjunto de dados maior que a RAM – Maurício Vancine</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,31 +18,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
-
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../img/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4122062fe1e9b2b9700a110aabccf5e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f3f416ad1aa407572e315065590997f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4122062fe1e9b2b9700a110aabccf5e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f3f416ad1aa407572e315065590997f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -70,79 +98,14 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
   }
-}</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-teaching .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-author','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 12,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-teaching'] = new List('listing-teaching', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
+}</script><link rel="stylesheet" href="../../styles.css">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Maurício Vancine</span>
     </a>
   </div>
@@ -152,28 +115,28 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"> 
+<li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">Sobre</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../talk/index.html"> 
+    <a class="nav-link" href="../../talk/index.html"> 
 <span class="menu-text">Palestras</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../teaching/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../teaching/index.html"> 
 <span class="menu-text">Ensino</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/index.html"> 
+    <a class="nav-link" href="../../project/index.html"> 
 <span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publication/index.html"> 
+    <a class="nav-link" href="../../publication/index.html"> 
 <span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
@@ -185,420 +148,137 @@ window.Quarto = {
 <span class="menu-text">Resumé</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
     <a href="https://www.github.com/mauriciovancine/mauriciovancine.github.io" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Q3Vyc28="><span class="quarto-category-count category-cloud-7">Curso</span></div><div class="category" data-category="RGlzY2lwbGluYQ=="><span class="quarto-category-count category-cloud-4">Disciplina</span></div></div></div>
-<!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Ensino</h1>
-<p class="subtitle lead">Disciplinas e cursos que ministrei.</p>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<div id="listing-teaching" class="quarto-listing quarto-listing-container-grid">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-teaching-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-teaching'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Ordenar por</option>
-       <option value="index" data-direction="asc">Padrão</option>
-         <option value="listing-title" data-direction="asc">
-          Título
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Autor
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filtro">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li><a href="#contextualiza%C3%A7%C3%A3o" id="toc-contextualização" class="nav-link active" data-scroll-target="#contextualiza%C3%A7%C3%A3o">Contextualização</a></li>
+  <li><a href="#ebird" id="toc-ebird" class="nav-link" data-scroll-target="#ebird">eBird</a></li>
+  <li><a href="#ebird-e-gbif" id="toc-ebird-e-gbif" class="nav-link" data-scroll-target="#ebird-e-gbif">eBird e GBIF</a></li>
+  <li><a href="#importar-e-manejar-esses-dados" id="toc-importar-e-manejar-esses-dados" class="nav-link" data-scroll-target="#importar-e-manejar-esses-dados">Importar e manejar esses dados</a></li>
+  <li><a href="#saiba-mais" id="toc-saiba-mais" class="nav-link" data-scroll-target="#saiba-mais">Saiba mais</a></li>
+  </ul></nav>
     </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1747998683735" data-listing-reading-time-sort="1" data-listing-word-count-sort="190">
-<a href="../teaching/workshop-spadivr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-spadivr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Análises espaciais da biodiversidade
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1754045938574" data-listing-reading-time-sort="2" data-listing-word-count-sort="214">
-<a href="../teaching/workshop-git/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-git/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Controle de versão com git, GitHub e RStudio
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1747998420523" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
-<a href="../teaching/workshop-qgis/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-qgis/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Geoprocessamento com QGIS
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1754708267664" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
-<a href="../teaching/workshop-gee/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-gee/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Introdução ao Google Earth Engine
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1754045573890" data-listing-reading-time-sort="2" data-listing-word-count-sort="296">
-<a href="../teaching/workshop-intror/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-intror/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Introdução à linguagem R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1754045647548" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
-<a href="../teaching/workshop-sdmr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-sdmr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Modelagem de distribuição de espécies com o R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1754046574006" data-listing-reading-time-sort="1" data-listing-word-count-sort="192">
-<a href="../teaching/workshop-landr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-landr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Métricas de paisagem no R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1754045638290" data-listing-reading-time-sort="1" data-listing-word-count-sort="154">
-<a href="../teaching/workshop-sheet/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-sheet/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Organização de dados em planilhas eletrônicas - Calc - LibreOffice
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1754045973721" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
-<a href="../teaching/workshop-progr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-progr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Programação em linguagem R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="Q3Vyc28=" data-listing-file-modified-sort="1754045693163" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
-<a href="../teaching/workshop-frog/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-frog/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Trabalho de campo com anfíbios
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="RGlzY2lwbGluYQ==" data-listing-file-modified-sort="1754045700178" data-listing-reading-time-sort="1" data-listing-word-count-sort="113">
-<a href="../teaching/workshop-ecostatr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/workshop-ecostatr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-ecostatR: análise de dados em Ecologia no R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="RGlzY2lwbGluYQ==" data-listing-file-modified-sort="1754045627899" data-listing-reading-time-sort="1" data-listing-word-count-sort="112">
-<a href="../teaching/course-ecostatr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/course-ecostatr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-espR: ecologia espacial no R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="RGlzY2lwbGluYQ==" data-listing-file-modified-sort="1754045707871" data-listing-reading-time-sort="1" data-listing-word-count-sort="112">
-<a href="../teaching/course-spar/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="../teaching/course-spar/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-espR: ecologia espacial no R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="13" data-categories="RGlzY2lwbGluYQ==" data-listing-file-modified-sort="1747995658736" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
-<a href="../teaching/course-geor/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="../teaching/course-geor/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-geoR: geoprocessamento no R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="14" data-categories="RGlzY2lwbGluYQ==" data-listing-file-modified-sort="1754045724145" data-listing-reading-time-sort="2" data-listing-word-count-sort="206">
-<a href="../teaching/course-intror/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="../teaching/course-intror/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-introR: introdução à linguagem R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="15" data-categories="RGlzY2lwbGluYQ==" data-listing-file-modified-sort="1754045714472" data-listing-reading-time-sort="1" data-listing-word-count-sort="200">
-<a href="../teaching/course-sdmr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="../teaching/course-sdmr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-sdmR: modelagem de distribuição de espécies no R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-Sem itens correspondentes
-</div>
-<nav id="teaching-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
-</div>
-<style>
-#topBtn {
-  display: none;
-  position: fixed;
-  bottom: 105px; /* um pouco acima do fundo */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 14px;
-  font-size: 20px;
-  border: none;
-  border-radius: 6px;
-  background-color: #2381df; 
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: background-color 0.3s;
-}
-#topBtn:hover {
-  background-color: rgba(0, 86, 179, 0.9);
-}
-</style>
-<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-↑ Topo
-</button>
-<script>
-const btn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", () => {
-  const scrollBottom = window.innerHeight + window.scrollY;
-  const docHeight = document.documentElement.scrollHeight;
-
-  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
-});
-</script>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Big Data no R: como ler um conjunto de dados maior que a RAM</h1>
+<p class="subtitle lead">Importar e manejar grandes volumes de dados no R</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Programação</div>
+    <div class="quarto-category">Big Data</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Maurício Vancine </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">24 de agosto de 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header><section id="contextualização" class="level2"><h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
+<p>A Ciência de Dados (<em>Data Science</em>) é uma área de conhecimento que vem ganhando notoriedade, principalmente na era digital e pelo grande volume de dados gerados, com o uso de diversos algoritmos matemáticos para análise de dados. Podemos dizer que Ciência de Dados é composta por três componentes principais: <em>Big Data</em>, <em>Machine Learning</em> e <em>Internet of Things</em>.</p>
+<p>Neste post, vou falar sobre <em>Big Data</em>, que geralmente se refere a volumes massivos de dados que não são facilmente manipulados pelas ferramentas e práticas de dados usuais, como uma planilha eletrônica, por exemplo.</p>
+<p>Na Ecologia, diversos estudos (confira o final do post) têm abordado esse tema, mas aqui gostaria de falar especificamente de como trabalhar com esses dados no R.</p>
+<p>Quando importamos um conjunto de dados de uma planilha eletrônica para o R, ele aloca esses dados na memória RAM (espaço temporário de armazenamento).</p>
+<p>Dessa forma, se eu tenho um computador com 16 Gb de RAM, em teoria eu poderia importar e manejar um conjunto de dados de 16 Gb. Entretanto, na prática, a quantidade de memória disponível para o R é menor do que a quantidade total de RAM, pois parte dela é usada pelo sistema operacional e outros processos. Uma parte da memória RAM está sempre sendo usada pelo sistema operacional, e além disso, cada nova atribuição de dados no R vai necessitar alocar o objeto em uma nova parte da RAM.</p>
+<p>Verifique a quantidade de memória RAM do seu computador no R:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># install.packages("memuse")</span></span>
+<span><span class="fu">memuse</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/memuse/man/meminfo.html">Sys.meminfo</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Totalram:  15.461 GiB 
+Freeram:    2.571 GiB </code></pre>
+</div>
+</div>
+<p>Há diversas opções para contornar essa limitação e trabalhar com dados gigantes no R, mas aqui vou explorar um pacote específico e um conjunto de dados que tive que trabalhar recentemente.</p>
+</section><section id="ebird" class="level2"><h2 class="anchored" data-anchor-id="ebird">eBird</h2>
+<p>O <a href="https://ebird.org/home">eBird</a> é um empreendimento coletivo que adota uma abordagem inovadora para a ciência cidadã para a observação de aves. O eBird é gerenciado pelo Cornell Lab of Ornithology. Seu objetivo é aumentar a quantidade de dados por meio do recrutamento e engajamento de participantes globalmente, além de quantificar e controlar problemas de qualidade de dados.</p>
+<p>Os dados do eBird estão disponíveis de forma aberta e são utilizados por um amplo espectro de estudantes, professores, cientistas, ONGs, agências governamentais, gestores de terras e formuladores de políticas. Como resultado, o eBird se tornou uma importante fonte de dados de biodiversidade, aumentando nosso conhecimento sobre as dinâmicas de distribuição de espécies e tendo um impacto direto na conservação de aves e seus habitats.</p>
+</section><section id="ebird-e-gbif" class="level2"><h2 class="anchored" data-anchor-id="ebird-e-gbif">eBird e GBIF</h2>
+<p>O <a href="https://www.gbif.org">GBIF</a> (Sistema Global de Informação sobre Biodiversidade) é uma rede internacional e infraestrutura de dados financiada por governos de todo o mundo, com o objetivo de dar a qualquer pessoa, em qualquer lugar, acesso aberto a dados sobre toda a vida na Terra.</p>
+<p>Mas ele também disponibiliza os dados do eBird do mundo todo, através do <a href="https://www.gbif.org/pt/dataset/4fa7b334-ce0d-4e88-aaae-2e0c138d049e#description">EOD – eBird Observation Dataset</a>.</p>
+<p>Esse conjunto de dados possui atualmente 1.512.208.412 ocorrências, com dados desde 1 de janeiro de 1800 a 31 de dezembro de 2023.</p>
+<p>Para citar esse conjunto de dados:</p>
+<blockquote class="blockquote">
+<p>Auer T, Barker S, Barry J, Charnoky M, Curtis J, Davies I, Davis C, Downie I, Fink D, Fredericks T, Ganger J, Gerbracht J, Hanks C, Hochachka W, Iliff M, Imani J, Jordan A, Levatich T, Ligocki S, Long M T, Morris W, Morrow S, Oldham L, Padilla Obregon F, Robinson O, Rodewald A, Ruiz-Gutierrez V, Schloss M, Smith A, Smith J, Stillman A, Strimas-Mackey M, Sullivan B, Weber D, Wolf H, Wood C (2024). EOD – eBird Observation Dataset. Cornell Lab of Ornithology. Occurrence dataset <a href="https://doi.org/10.15468/aomfnb" class="uri">https://doi.org/10.15468/aomfnb</a> accessed via GBIF.org on 2024-08-23.</p>
+</blockquote>
+<p>Esses dados estão disponíveis em um único arquivo no formato CSV (Comma-Separated Values) ou valores separados por vírgula (.csv), que possui 824 Gb, que é muito mais do que geralmente os computadores têm de memória RAM.</p>
+<p>Sendo assim, precisamos de um pacote específico para importar e manejar esses dados.</p>
+</section><section id="importar-e-manejar-esses-dados" class="level2"><h2 class="anchored" data-anchor-id="importar-e-manejar-esses-dados">Importar e manejar esses dados</h2>
+<p>Aqui, vamos utilizar o pacote <a href="https://arrow.apache.org/docs/r">arrow</a>. Esse pacote fornece acesso a recursos da biblioteca Apache Arrow C++. O objetivo do arrow é fornecer um backend Arrow C++ para o dplyr e acesso à biblioteca Apache Arrow C++ através de funções familiares do base R e do tidyverse, ou classes R6. O projeto Arrow oferece funcionalidades para uma ampla gama de tarefas de análise de dados, permitindo armazenar, processar e mover dados rapidamente.</p>
+<p>Para mais detalhes do funcionamento do pacote arrow, consultar o capítulo <a href="https://cienciadedatos.github.io/pt-r4ds/arrow.html">22 Arrow</a> do <a href="https://cienciadedatos.github.io/pt-r4ds/">R para Ciência de Dados 2ªed</a>.</p>
+<p>Vamos ler os dados:</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># packages</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/apache/arrow/">arrow</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># ebird</span></span>
+<span><span class="va">ebird_data</span> <span class="op">&lt;-</span> <span class="fu">arrow</span><span class="fu">::</span><span class="fu"><a href="https://arrow.apache.org/docs/r/reference/open_delim_dataset.html">open_delim_dataset</a></span><span class="op">(</span><span class="st">"0043987-240626123714530.csv"</span>, </span>
+<span>                                        parse_options <span class="op">=</span> <span class="fu"><a href="https://arrow.apache.org/docs/r/reference/csv_parse_options.html">csv_parse_options</a></span><span class="op">(</span></span>
+<span>                                            delimiter <span class="op">=</span> <span class="st">"\t"</span>, </span>
+<span>                                            newlines_in_values <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>                                        read_options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>                                            block_size <span class="op">=</span> <span class="fl">1000000000L</span>, </span>
+<span>                                            use_threads <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">ebird_data</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Esse banco de dados é cheio de problemas, então tive que fazer alguns testes com vários parâmetros para fazer com que a leitura funcionasse.</p>
+<p>O código acima apenas lê os dados sem carregá-los completamente na memória do R. Dessa forma, com os códigos abaixo é possível fazer um filtro dos dados que precisamos, por exemplo, para o joão-de-barro (<em>Furnarius rufus</em>) [adoro esse bicho], depois de 1985 e para algumas colunas de interesse.</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># filter</span></span>
+<span><span class="va">ebird_data_filter</span> <span class="op">&lt;-</span> <span class="va">ebird_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">species</span> <span class="op">==</span> <span class="st">"Furnarius rufus"</span>,</span>
+<span>                  <span class="va">year</span> <span class="op">&gt;=</span> <span class="fl">1985</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">species</span>, <span class="va">decimalLongitude</span>, <span class="va">decimalLatitude</span>, <span class="va">year</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/compute.html">collect</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">ebird_data_filter</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Entretanto, mesmo num notebook parrudo (Intel i7 e 64 Gb de RAM) demorou 2:45 h para fazer o filtro.</p>
+<p>Acabei atribuindo os dados a um objeto, mas talvez fosse mais interessante exportar o arquivo diretamente para evitar o uso excessivo de memória.</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># filter</span></span>
+<span><span class="va">ebird_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">species</span> <span class="op">==</span> <span class="st">"Furnarius rufus"</span>,</span>
+<span>                  <span class="va">year</span> <span class="op">&gt;=</span> <span class="fl">1985</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">species</span>, <span class="va">decimalLongitude</span>, <span class="va">decimalLatitude</span>, <span class="va">year</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">readr</span><span class="fu">::</span><span class="fu">write</span><span class="op">(</span><span class="st">"ebird_furnarius_rufus.csv"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Há ainda muitos pontos para eu estudar do pacote arrow, como o formato <a href="https://parquet.apache.org/">parquet</a>, que parece ser muito mais interessante do que o CSV. Sendo assim, vale ler mais o capítulo <a href="https://cienciadedatos.github.io/pt-r4ds/arrow.html">22 Arrow</a> do <a href="https://cienciadedatos.github.io/pt-r4ds/">R para Ciência de Dados 2ªed</a>.</p>
+</section><section id="saiba-mais" class="level2"><h2 class="anchored" data-anchor-id="saiba-mais">Saiba mais</h2>
+<p>Farley, S.S., Dawson, A., Goring, S.J. &amp; Williams, J.W. (2018). Situating Ecology as a Big-Data Science: Current Advances, Challenges, and Solutions. BioScience, 68, 563–576.</p>
+<p>Hampton, S.E., Strasser, C.A., Tewksbury, J.J., Gram, W.K., Budden, A.E., Batcheller, A.L., et al.&nbsp;(2013). Big data and the future of ecology. Frontiers in Ecology and the Environment, 11, 156–162.</p>
+<p>Nimmagadda, S.L., Reiners, T. &amp; Rudra, A. (2017). Development of a Total Environment Data Science Approach in a Big Data Scale. Procedia Computer Science, Knowledge-Based and Intelligent Information &amp; Engineering Systems: Proceedings of the 21st International Conference, KES-20176-8 September 2017, Marseille, France, 112, 1891–1900.</p>
+<p>Fonte da imagem: <a href="https://www.pexels.com/pt-br/foto/computador-salgadinhos-memoria-lembranca-6636474">Sergei Starostin/Pexels</a>.</p>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1016,14 +696,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/mauriciovancine">
       <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -1071,30 +750,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="../contact.html">
+<li class="nav-item">
+    <a class="nav-link" href="../../contact.html">
 <p>Contato</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../license.html">
+    <a class="nav-link" href="../../license.html">
 <p>Licença</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../contributors.html">
+    <a class="nav-link" href="../../contributors.html">
 <p>Financiamento</p>
 </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
-
 
 
 </body></html>
