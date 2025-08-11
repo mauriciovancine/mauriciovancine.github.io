@@ -162,15 +162,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
 <li><a href="#contextualiza%C3%A7%C3%A3o" id="toc-contextualização" class="nav-link active" data-scroll-target="#contextualiza%C3%A7%C3%A3o">Contextualização</a></li>
   <li><a href="#pacote" id="toc-pacote" class="nav-link" data-scroll-target="#pacote">Pacote</a></li>
+  <li><a href="#uso" id="toc-uso" class="nav-link" data-scroll-target="#uso">Uso</a></li>
   </ul></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Corrigir coordenadas geográficas usando o R</h1>
-<p class="subtitle lead">Corrigir coordenadas geográficas usando o R.</p>
+<p class="subtitle lead">Pacote para corrigir coordenadas geográficas usando o R de forma automática.</p>
   <div class="quarto-categories">
     <div class="quarto-category">R</div>
     <div class="quarto-category">Geoprocessamento</div>
+    <div class="quarto-category">Coordenadas</div>
   </div>
   </div>
 
@@ -198,16 +200,214 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 </header><section id="contextualização" class="level2"><h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
+<p>Comecei minha iniciação científica em 2011 baixando ocorrências do <a href="https://www.gbif.org">GBIF</a> e <a href="https://specieslink.net">speciesLink</a> para criar modelos de distribuição de espécies. Um tempo depois, comecei a compilar dados de amostragem de comunidades de anfíbios para a Mata Atlância (<a href="https://mauriciovancine.github.io/publication/2018-vancine-etal/">ATLANTIC AMPHIBIANS</a>).</p>
+<p>Nesses dois casos, erros em coordendas geográficas era algo muito comum, e desde cedo aprendi a trabalhar e a me virar para corrigir erros comuns nesses dados, mas numa planilha eletrônica. Para saber mais desses tipos de dados, olhe o <a href="https://analises-ecologicas.com/cap15">Cap. 15</a> do nosso livro <a href="https://analises-ecologicas.com/">Análises Ecológicas no R</a>.</p>
+<p>Aqui eu apresento um pacote no R chamado <a href="https://docs.ropensci.org/parzer/index.html">parzer</a> para corrigir a maior parte desses erros. A primeira vez que ouvi falar dele, foi a <a href="https://beamilz.com/">Bea Milz</a> que apresentou num <a href="https://rladies-sp.org/">R-Ladies São Paulo</a>. Aqui faço apenas alguns demonstrações.</p>
+<p>O Maurício da IC agradeceria muito se esse pacote existisse naquela época…</p>
 </section><section id="pacote" class="level2"><h2 class="anchored" data-anchor-id="pacote">Pacote</h2>
+<p>O pacote possui apenas 12 funções, que possuem a principal função de corrigir coordenadas geográficas de longitude e latitude (graus). Até onde entendi, não funcionam com coordenadas projetadas (metros).</p>
+<p>A instalação é usual de qualquer pacote:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># instalar pacote</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"parzer"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"parzer"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Depois basta carregar:</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># carregar pacote</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/parzer">parzer</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="uso" class="level2"><h2 class="anchored" data-anchor-id="uso">Uso</h2>
+<p>A correção das coordenadas pode ser feito separadamente para longitude ou latitude. Para valores inválidos, i.e., fora do limites de longitude (-180 a 360) e de latitude (-90 a 90), há retorno de um aviso com o valor <code>NA</code>. Ainda há a possibilidade de extrair parte das coordenadas, adicionar ou subtrair coordenadas e informar o hemisfério.</p>
+<p>O interessante é que pacote reconhece toda confusão que existe com os valores de longitude.</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon.html">parse_lon</a></span><span class="op">(</span><span class="st">"45W54.2356"</span><span class="op">)</span></span>
+<span><span class="co">## [1] -45.90393</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon.html">parse_lon</a></span><span class="op">(</span><span class="st">"-45.98739874"</span><span class="op">)</span></span>
+<span><span class="co">## [1] -45.9874</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon.html">parse_lon</a></span><span class="op">(</span><span class="st">"40.123°"</span><span class="op">)</span></span>
+<span><span class="co">## [1] 40.123</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon.html">parse_lon</a></span><span class="op">(</span><span class="st">"74.123W"</span><span class="op">)</span></span>
+<span><span class="co">## [1] -74.123</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon.html">parse_lon</a></span><span class="op">(</span><span class="st">"W45 04.25764"</span><span class="op">)</span></span>
+<span><span class="co">## [1] -45.07096</span></span>
 <span></span>
-<span><span class="co"># carregar pacote</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/parzer">parzer</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-tmap/tmap">tmap</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co"># valores invalidos</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon.html">parse_lon</a></span><span class="op">(</span><span class="st">"361"</span><span class="op">)</span></span>
+<span><span class="co">## Warning in base::.Call(...): not within -180/360 range, got: 361</span></span>
+<span><span class="co">## [1] NA</span></span>
+<span></span>
+<span><span class="co"># varios valores</span></span>
+<span><span class="va">lon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"45W54.2356"</span>, <span class="st">"181"</span>, <span class="fl">45</span>, <span class="fl">45.234234</span>, <span class="st">"-45.98739874"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon.html">parse_lon</a></span><span class="op">(</span><span class="va">lon</span><span class="op">)</span></span>
+<span><span class="co">## [1] -45.90393 181.00000  45.00000  45.23423 -45.98740</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>O mesmo vale para latitudes.</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># latitude</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lat.html">parse_lat</a></span><span class="op">(</span><span class="st">"45N54.2356"</span><span class="op">)</span></span>
+<span><span class="co">## [1] 45.90393</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lat.html">parse_lat</a></span><span class="op">(</span><span class="st">"-45.98739874"</span><span class="op">)</span></span>
+<span><span class="co">## [1] -45.9874</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lat.html">parse_lat</a></span><span class="op">(</span><span class="st">"40.123°"</span><span class="op">)</span></span>
+<span><span class="co">## [1] 40.123</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lat.html">parse_lat</a></span><span class="op">(</span><span class="st">"40.123N"</span><span class="op">)</span></span>
+<span><span class="co">## [1] 40.123</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lat.html">parse_lat</a></span><span class="op">(</span><span class="st">"N45 04.25764"</span><span class="op">)</span></span>
+<span><span class="co">## [1] 45.07096</span></span>
+<span></span>
+<span><span class="co"># valores invalidos</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lat.html">parse_lat</a></span><span class="op">(</span><span class="st">"191.89"</span><span class="op">)</span></span>
+<span><span class="co">## Warning in base::.Call(...): not within -90/90 range, got: 191.89</span></span>
+<span><span class="co">##   check that you did not invert lon and lat</span></span>
+<span><span class="co">## [1] NA</span></span>
+<span></span>
+<span><span class="co"># varios valores</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"40.123°"</span>, <span class="st">"40.123N"</span>, <span class="st">"11.89"</span>, <span class="fl">12</span>, <span class="st">"N45 04.25764"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lat.html">parse_lat</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">## [1] 40.12300 40.12300 11.89000 12.00000 45.07096</span></span>
+<span></span>
+<span><span class="co"># varios valores com erros</span></span>
+<span><span class="va">lat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"40.123°"</span>, <span class="st">"40.123N74.123W"</span>, <span class="st">"191.89"</span>, <span class="fl">12</span>, <span class="st">"N45 04.25764"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lat.html">parse_lat</a></span><span class="op">(</span><span class="va">lat</span><span class="op">)</span></span>
+<span><span class="co">## Warning in base::.Call(...): invalid direction letter, got: 40.123n74.123w</span></span>
+<span><span class="co">## Warning in base::.Call(...): not within -90/90 range, got: 191.89</span></span>
+<span><span class="co">##   check that you did not invert lon and lat</span></span>
+<span><span class="co">## [1] 40.12300       NA       NA 12.00000 45.07096</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Mas ainda é possível fazer as correções para longitude e latitude ao mesmo tempo.</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude e latitude</span></span>
+<span><span class="va">lon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"45W54.2356"</span>, <span class="st">"181"</span>, <span class="fl">45</span>, <span class="fl">45.234234</span>, <span class="st">"-45.98739874"</span><span class="op">)</span></span>
+<span><span class="va">lat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"40.123°"</span>, <span class="st">"40.123N"</span>, <span class="fl">40</span>, <span class="fl">12</span>, <span class="st">"N45 04.25764"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># correcao</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon_lat.html">parse_lon_lat</a></span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span><span class="op">)</span></span>
+<span><span class="co">##       lon      lat</span></span>
+<span><span class="co">## 1 -45.90393 40.12300</span></span>
+<span><span class="co">## 2 181.00000 40.12300</span></span>
+<span><span class="co">## 3  45.00000 40.00000</span></span>
+<span><span class="co">## 4  45.23423 12.00000</span></span>
+<span><span class="co">## 5 -45.98740 45.07096</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>E uma das funções mais interessantes, longitudes e latitudes na mesma sequência.</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude e latitude</span></span>
+<span><span class="va">lat_lon_strings</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>  <span class="st">"40.123°, 45W54.2356"</span>,</span>
+<span>  <span class="st">"N40.123 E181.456"</span>,</span>
+<span>  <span class="st">"40, 45"</span>,</span>
+<span>  <span class="st">"12.9786 45.234234"</span>,</span>
+<span>  <span class="st">"N45 04.25764, -45.98739874W"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># correcao</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_llstr.html">parse_llstr</a></span><span class="op">(</span><span class="va">lat_lon_strings</span><span class="op">)</span></span>
+<span><span class="co">##        lat       lon</span></span>
+<span><span class="co">## 1 40.12300 -45.90393</span></span>
+<span><span class="co">## 2 40.12300 181.45600</span></span>
+<span><span class="co">## 3 40.00000  45.00000</span></span>
+<span><span class="co">## 4 12.97860  45.23423</span></span>
+<span><span class="co">## 5 45.07096 -45.98740</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Separar em partes de graus, minutos e segundos.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># uma coordenada</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_parts.html">parse_parts_lon</a></span><span class="op">(</span><span class="st">"-74.6411133"</span><span class="op">)</span></span>
+<span><span class="co">##   deg min      sec</span></span>
+<span><span class="co">## 1 -74  38 28.00788</span></span>
+<span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_parts.html">parse_parts_lat</a></span><span class="op">(</span><span class="st">"45N54.2356"</span><span class="op">)</span></span>
+<span><span class="co">##   deg min    sec</span></span>
+<span><span class="co">## 1  45  54 14.136</span></span>
+<span></span>
+<span><span class="co"># varias coordenada</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"40.123°"</span>, <span class="st">"40.123W"</span>, <span class="st">"191.89"</span>, <span class="fl">12</span>, <span class="st">"E45 04.25764"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_parts.html">parse_parts_lon</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">##   deg min     sec</span></span>
+<span><span class="co">## 1  40   7 22.8000</span></span>
+<span><span class="co">## 2 -40   7 22.8000</span></span>
+<span><span class="co">## 3 191  53 24.0000</span></span>
+<span><span class="co">## 4  12   0  0.0000</span></span>
+<span><span class="co">## 5  45   4 15.4584</span></span>
+<span></span>
+<span><span class="co"># lidar com erros</span></span>
+<span><span class="va">x_warning</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"40.123°"</span>, <span class="st">"40.123N74.123W"</span>, <span class="st">"191.89"</span>, <span class="fl">12</span>, <span class="st">"N45 04.25764"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_parts.html">parse_parts_lon</a></span><span class="op">(</span><span class="va">x_warning</span><span class="op">)</span></span>
+<span><span class="co">## Warning in base::.Call(...): invalid direction letter, got: 40.123n74.123w</span></span>
+<span><span class="co">## Warning in base::.Call(...): invalid direction letter, got: n45 04.25764</span></span>
+<span><span class="co">##   deg min  sec</span></span>
+<span><span class="co">## 1  40   7 22.8</span></span>
+<span><span class="co">## 2  NA  NA   NA</span></span>
+<span><span class="co">## 3 191  53 24.0</span></span>
+<span><span class="co">## 4  12   0  0.0</span></span>
+<span><span class="co">## 5  NA  NA   NA</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Obter graus, minutos ou segundos separadamente.</p>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude </span></span>
+<span><span class="va">coords</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">15.23323</span>, <span class="st">"40:25:6E"</span>, <span class="st">"192° 25´ 5.994\" E"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># graus</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_degree</a></span><span class="op">(</span>lon <span class="op">=</span> <span class="va">coords</span><span class="op">)</span></span>
+<span><span class="co">## [1]  15  40 192</span></span>
+<span></span>
+<span><span class="co"># minutos</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_minute</a></span><span class="op">(</span>lon <span class="op">=</span> <span class="va">coords</span><span class="op">)</span></span>
+<span><span class="co">## [1] 13 25 25</span></span>
+<span></span>
+<span><span class="co"># segundos</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_second</a></span><span class="op">(</span>lon <span class="op">=</span> <span class="va">coords</span><span class="op">)</span></span>
+<span><span class="co">## [1] 59.628  6.000  5.994</span></span>
+<span></span>
+<span><span class="co"># latitude</span></span>
+<span><span class="va">coords</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">45.23323</span>, <span class="st">"40:25:6N"</span>, <span class="st">"40° 25´ 5.994\" N"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># graus</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_degree</a></span><span class="op">(</span>lat <span class="op">=</span> <span class="va">coords</span><span class="op">)</span></span>
+<span><span class="co">## [1] 45 40 40</span></span>
+<span></span>
+<span><span class="co"># minutos</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_minute</a></span><span class="op">(</span>lat <span class="op">=</span> <span class="va">coords</span><span class="op">)</span></span>
+<span><span class="co">## [1] 13 25 25</span></span>
+<span></span>
+<span><span class="co"># segundos</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_second</a></span><span class="op">(</span>lat <span class="op">=</span> <span class="va">coords</span><span class="op">)</span></span>
+<span><span class="co">## [1] 59.628  6.000  5.994</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Adicionar ou subtrair graus, minutos ou segundos.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># coordenada</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_d</a></span><span class="op">(</span><span class="fl">31</span><span class="op">)</span></span>
+<span><span class="co">## 31</span></span>
+<span></span>
+<span><span class="co"># adicao de minutos</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_d</a></span><span class="op">(</span><span class="fl">31</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_m</a></span><span class="op">(</span><span class="fl">44</span><span class="op">)</span></span>
+<span><span class="co">## 31.73333</span></span>
+<span></span>
+<span><span class="co"># subtracao de minutos</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_d</a></span><span class="op">(</span><span class="fl">31</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_m</a></span><span class="op">(</span><span class="fl">44</span><span class="op">)</span></span>
+<span><span class="co">## 30.26667</span></span>
+<span></span>
+<span><span class="co"># adicao de minutos e segundos</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_d</a></span><span class="op">(</span><span class="fl">31</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_m</a></span><span class="op">(</span><span class="fl">44</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_s</a></span><span class="op">(</span><span class="fl">59</span><span class="op">)</span></span>
+<span><span class="co">## 31.74972</span></span>
+<span></span>
+<span><span class="co"># adicao de minutos e segundos</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_d</a></span><span class="op">(</span><span class="op">-</span><span class="fl">121</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_m</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_s</a></span><span class="op">(</span><span class="fl">33</span><span class="op">)</span></span>
+<span><span class="co">## -120.9742</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Obter hemisfério a partir das coordenadas.</p>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># hemisferios</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_hemisphere.html">parse_hemisphere</a></span><span class="op">(</span><span class="st">"74.123E"</span>, <span class="st">"45N54.2356"</span><span class="op">)</span></span>
+<span><span class="co">## [1] "NE"</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_hemisphere.html">parse_hemisphere</a></span><span class="op">(</span><span class="st">"-120"</span>, <span class="st">"40.4183318"</span><span class="op">)</span></span>
+<span><span class="co">## [1] "NW"</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_hemisphere.html">parse_hemisphere</a></span><span class="op">(</span><span class="st">"-120"</span>, <span class="st">"-40.4183318"</span><span class="op">)</span></span>
+<span><span class="co">## [1] "SW"</span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_hemisphere.html">parse_hemisphere</a></span><span class="op">(</span><span class="st">"120"</span>, <span class="st">"-40.4183318"</span><span class="op">)</span></span>
+<span><span class="co">## [1] "SE"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Fonte da imagem: <a href="https://www.pexels.com/pt-br/foto/close-up-de-bussola-em-fundo-de-madeira-32563237/">Nancy Zjaba/Pexels</a>.</p>
 

@@ -1,9 +1,9 @@
 ---
 title: "Corrigir coordenadas geográficas usando o R"
-subtitle: "Corrigir coordenadas geográficas usando o R."
+subtitle: "Pacote para corrigir coordenadas geográficas usando o R de forma automática."
 author: Maurício Vancine
 date: 2025-06-16
-categories: ["R", "Geoprocessamento"]
+categories: ["R", "Geoprocessamento", "Coordenadas"]
 image: featured.jpg
 toc: true
 draft: false
@@ -13,19 +13,241 @@ editor: source
 
 ## Contextualização
 
+Comecei minha iniciação científica em 2011 baixando ocorrências do [GBIF](https://www.gbif.org) e [speciesLink](https://specieslink.net) para criar modelos de distribuição de espécies. Um tempo depois, comecei a compilar dados de amostragem de comunidades de anfíbios para a Mata Atlância ([ATLANTIC AMPHIBIANS](https://mauriciovancine.github.io/publication/2018-vancine-etal/)). 
+
+Nesses dois casos, erros em coordendas geográficas era algo muito comum, e desde cedo aprendi a trabalhar e a me virar para corrigir erros comuns nesses dados, mas numa planilha eletrônica. Para saber mais desses tipos de dados, olhe o [Cap. 15](https://analises-ecologicas.com/cap15) do nosso livro [Análises Ecológicas no R](https://analises-ecologicas.com/). 
+
+Aqui eu apresento um pacote no R chamado [parzer](https://docs.ropensci.org/parzer/index.html) para corrigir a maior parte desses erros. A primeira vez que ouvi falar dele, foi a [Bea Milz](https://beamilz.com/) que apresentou num [R-Ladies São Paulo](https://rladies-sp.org/). Aqui faço apenas alguns demonstrações.
+
+O Maurício da IC agradeceria muito se esse pacote existisse naquela época...
 
 ## Pacote
 
+O pacote possui apenas 12 funções, que possuem a principal função de corrigir coordenadas geográficas de longitude e latitude (graus). Até onde entendi, não funcionam com coordenadas projetadas (metros).
+
+A instalação é usual de qualquer pacote:
 
 ```{r eval=FALSE}
 # instalar pacote
 install.packages("parzer")
+```
 
+Depois basta carregar:
+
+```{r}
 # carregar pacote
-library(tidyverse)
-library(sf)
 library(parzer)
-library(tmap)
+```
+
+## Uso
+
+A correção das coordenadas pode ser feito separadamente para longitude ou latitude. Para valores inválidos, i.e., fora do limites de longitude (-180 a 360) e de latitude (-90 a 90), há retorno de um aviso com o valor `NA`. Ainda há a possibilidade de extrair parte das coordenadas, adicionar ou subtrair coordenadas e informar o hemisfério.
+
+O interessante é que pacote reconhece toda confusão que existe com os valores de longitude.
+
+```{r eval=FALSE}
+# longitude
+parse_lon("45W54.2356")
+## [1] -45.90393
+parse_lon("-45.98739874")
+## [1] -45.9874
+parse_lon("40.123°")
+## [1] 40.123
+parse_lon("74.123W")
+## [1] -74.123
+parse_lon("W45 04.25764")
+## [1] -45.07096
+
+# valores invalidos
+parse_lon("361")
+## Warning in base::.Call(...): not within -180/360 range, got: 361
+## [1] NA
+
+# varios valores
+lon <- c("45W54.2356", "181", 45, 45.234234, "-45.98739874")
+parse_lon(lon)
+## [1] -45.90393 181.00000  45.00000  45.23423 -45.98740
+```
+
+O mesmo vale para latitudes.
+
+```{r eval=FALSE}
+# latitude
+parse_lat("45N54.2356")
+## [1] 45.90393
+parse_lat("-45.98739874")
+## [1] -45.9874
+parse_lat("40.123°")
+## [1] 40.123
+parse_lat("40.123N")
+## [1] 40.123
+parse_lat("N45 04.25764")
+## [1] 45.07096
+
+# valores invalidos
+parse_lat("191.89")
+## Warning in base::.Call(...): not within -90/90 range, got: 191.89
+##   check that you did not invert lon and lat
+## [1] NA
+
+# varios valores
+x <- c("40.123°", "40.123N", "11.89", 12, "N45 04.25764")
+parse_lat(x)
+## [1] 40.12300 40.12300 11.89000 12.00000 45.07096
+
+# varios valores com erros
+lat <- c("40.123°", "40.123N74.123W", "191.89", 12, "N45 04.25764")
+parse_lat(lat)
+## Warning in base::.Call(...): invalid direction letter, got: 40.123n74.123w
+## Warning in base::.Call(...): not within -90/90 range, got: 191.89
+##   check that you did not invert lon and lat
+## [1] 40.12300       NA       NA 12.00000 45.07096
+```
+
+Mas ainda é possível fazer as correções para longitude e latitude ao mesmo tempo.
+
+```{r eval=FALSE}
+# longitude e latitude
+lon <- c("45W54.2356", "181", 45, 45.234234, "-45.98739874")
+lat <- c("40.123°", "40.123N", 40, 12, "N45 04.25764")
+
+# correcao
+parse_lon_lat(lon, lat)
+##       lon      lat
+## 1 -45.90393 40.12300
+## 2 181.00000 40.12300
+## 3  45.00000 40.00000
+## 4  45.23423 12.00000
+## 5 -45.98740 45.07096
+```
+
+E uma das funções mais interessantes, longitudes e latitudes na mesma sequência.
+
+```{r eval=FALSE}
+# longitude e latitude
+lat_lon_strings <- c(
+  "40.123°, 45W54.2356",
+  "N40.123 E181.456",
+  "40, 45",
+  "12.9786 45.234234",
+  "N45 04.25764, -45.98739874W"
+)
+
+# correcao
+parse_llstr(lat_lon_strings)
+##        lat       lon
+## 1 40.12300 -45.90393
+## 2 40.12300 181.45600
+## 3 40.00000  45.00000
+## 4 12.97860  45.23423
+## 5 45.07096 -45.98740
+```
+
+Separar em partes de graus, minutos e segundos.
+
+```{r eval=FALSE}
+# uma coordenada
+parse_parts_lon("-74.6411133")
+##   deg min      sec
+## 1 -74  38 28.00788
+
+parse_parts_lat("45N54.2356")
+##   deg min    sec
+## 1  45  54 14.136
+
+# varias coordenada
+x <- c("40.123°", "40.123W", "191.89", 12, "E45 04.25764")
+parse_parts_lon(x)
+##   deg min     sec
+## 1  40   7 22.8000
+## 2 -40   7 22.8000
+## 3 191  53 24.0000
+## 4  12   0  0.0000
+## 5  45   4 15.4584
+
+# lidar com erros
+x_warning <- c("40.123°", "40.123N74.123W", "191.89", 12, "N45 04.25764")
+parse_parts_lon(x_warning)
+## Warning in base::.Call(...): invalid direction letter, got: 40.123n74.123w
+## Warning in base::.Call(...): invalid direction letter, got: n45 04.25764
+##   deg min  sec
+## 1  40   7 22.8
+## 2  NA  NA   NA
+## 3 191  53 24.0
+## 4  12   0  0.0
+## 5  NA  NA   NA
+```
+
+Obter graus, minutos ou segundos separadamente.
+
+```{r eval=FALSE}
+# longitude 
+coords <- c(15.23323, "40:25:6E", "192° 25´ 5.994\" E")
+
+# graus
+pz_degree(lon = coords)
+## [1]  15  40 192
+
+# minutos
+pz_minute(lon = coords)
+## [1] 13 25 25
+
+# segundos
+pz_second(lon = coords)
+## [1] 59.628  6.000  5.994
+
+# latitude
+coords <- c(45.23323, "40:25:6N", "40° 25´ 5.994\" N")
+
+# graus
+pz_degree(lat = coords)
+## [1] 45 40 40
+
+# minutos
+pz_minute(lat = coords)
+## [1] 13 25 25
+
+# segundos
+pz_second(lat = coords)
+## [1] 59.628  6.000  5.994
+```
+
+Adicionar ou subtrair graus, minutos ou segundos.
+
+```{r eval=FALSE}
+# coordenada
+pz_d(31)
+## 31
+
+# adicao de minutos
+pz_d(31) + pz_m(44)
+## 31.73333
+
+# subtracao de minutos
+pz_d(31) - pz_m(44)
+## 30.26667
+
+# adicao de minutos e segundos
+pz_d(31) + pz_m(44) + pz_s(59)
+## 31.74972
+
+# adicao de minutos e segundos
+pz_d(-121) + pz_m(1) + pz_s(33)
+## -120.9742
+```
+
+Obter hemisfério a partir das coordenadas.
+
+```{r eval=FALSE}
+# hemisferios
+parse_hemisphere("74.123E", "45N54.2356")
+## [1] "NE"
+parse_hemisphere("-120", "40.4183318")
+## [1] "NW"
+parse_hemisphere("-120", "-40.4183318")
+## [1] "SW"
+parse_hemisphere("120", "-40.4183318")
+## [1] "SE"
 ```
 
 Fonte da imagem: [Nancy Zjaba/Pexels](https://www.pexels.com/pt-br/foto/close-up-de-bussola-em-fundo-de-madeira-32563237/).
