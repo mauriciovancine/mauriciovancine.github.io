@@ -1,6 +1,6 @@
 ---
-title: "espR: ecologia espacial no R"
-subtitle: "Disciplina de pós-graduação de ecologia espacial utilizando a linguagem R."
+title: "ecostatR: ecologia estatística no R"
+subtitle: "Disciplina de pós-graduação de ecologia estatística utilizando a linguagem R."
 author: Maurício Vancine
 image: featured-hex.png
 categories: ["Disciplina"]
@@ -13,8 +13,8 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://geor-course.netlify.app" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-link me-1"></i>website</a>
-  <a href="https://github.com/geor-course" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
+  <a href="https://mauriciovancine.github.io/course-ecostatr" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-link me-1"></i>website</a>
+  <a href="https://github.com/mauriciovancine/course-ecostatr" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
 </div>
 
 <style>
@@ -34,7 +34,7 @@ editor: source
 
 ## Descrição
 
-Na spaR, os alunos serão apresentados aos principais conceitos teóricos da Ecologia Espacial. 
+Na ecostatR, os alunos serão apresentados aos principais da ecologia estatística. 
 
 ## Oferecimento
 

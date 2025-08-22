@@ -182,12 +182,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<p><a href="https://mauriciovancine.github.io/workshop-r-sdm/01_slides/slides_workshop_r_sdm.htm" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a> <a href="https://github.com/mauriciovancine/workshop-r-sdm" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>GitHub</a></p>
+</div>
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
 <section id="sdmr" class="level1">
 <h1><strong>sdmR</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></h1>
-<ul>
-<li>icon: chalkboard-teacher icon_pack: fas name: slides url: “https://mauriciovancine.github.io/workshop-r-sdm/01_slides/slides_workshop_r_sdm.html#1”</li>
-<li>icon: github icon_pack: fab name: material url: “https://github.com/mauriciovancine/workshop-r-sdm”</li>
-</ul>
 <section id="descrição" class="level2">
 <h2 class="anchored" data-anchor-id="descrição">Descrição</h2>
 <p>O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e <em>background</em>), avaliação dos modelos (ROC, AUC e TSS), limites de corte (<em>thresholds</em>) e consenso de modelos (<em>ensembles</em>). A parte prática será focada na construção dos modelos através da linguagem R.</p>

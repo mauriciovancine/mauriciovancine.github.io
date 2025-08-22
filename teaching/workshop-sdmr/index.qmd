@@ -12,17 +12,26 @@ format:
 editor: source
 ---
 
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://mauriciovancine.github.io/workshop-r-sdm/01_slides/slides_workshop_r_sdm.htm" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
+  <a href="https://github.com/mauriciovancine/workshop-r-sdm" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>GitHub</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
 # **sdmR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
 
-- icon: chalkboard-teacher
-  icon_pack: fas
-  name: slides
-  url: "https://mauriciovancine.github.io/workshop-r-sdm/01_slides/slides_workshop_r_sdm.html#1"
-- icon: github
-  icon_pack: fab
-  name: material
-  url: "https://github.com/mauriciovancine/workshop-r-sdm"
-  
 ## Descrição
 
 O minicurso tem como intuito oferecer uma introdução teórica e prática a Modelagem de Distribuição de Espécies, utilizando a linguagem R. Primeiramente são apresentados os principais conceitos da teoria de nicho ecológico (Grinnell, Elton e Hutchinson) e da teoria de modelos de distribuição (espaço geográfico (G), espaço ambiental (E) e diagrama Biótico-Abiótico-Movimentação (BAM)). Seguida à parte teórica, são apresentados as principais bases de dados (ocorrências e variáveis ambientais), tipos de algoritmos (apenas presença, presença e ausência, e presença e *background*), avaliação dos modelos (ROC, AUC e TSS), limites de corte (*thresholds*) e consenso de modelos (*ensembles*). A parte prática será focada na construção dos modelos através da linguagem R.
