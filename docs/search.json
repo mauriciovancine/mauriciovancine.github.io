@@ -179,14 +179,14 @@
     "href": "teaching/course-intror/index.html#descrição",
     "title": "introR: introdução à linguagem R",
     "section": "Descrição",
-    "text": "Descrição\nA introR apresenta os principais conceitos da linguagem R e do IDE RStudio para a manipulação e visualização de dados através do tidyverse. O tidyverse é um conjunto de pacotes e funções que compartilham uma mesma estrutura e sintaxe, com o intuito de criar códigos eficientes e organizados. Os pacotes são focados principalmente na organização (leitura, filtragem, organização, seleção e resumo) e visualização de dados (gráficos). Serão abordados os seguintes temas: (1) linguagem R, (2) tidyverse e (3) visualização de dados. Ao final do minicurso espera-se que os participantes adquiram conhecimentos básicos do funcionamento da linguagem R através do tidyverse, permitindo realização manipulação e visualização de dados tabulares."
+    "text": "Descrição\nA disciplina tem como foco principal o controle de versão com git/GitHub e a introdução à programação em R, aplicada a dados ecológicos. São abordados tanto os aspectos teóricos quanto práticos do controle de versão, incluindo o uso do software git e de repositórios remotos no GitHub. Além disso, são apresentados os principais tópicos de programação em R, desde recursos do Base R até o tidyverse, com ênfase no manejo e na visualização de dados ecológicos, bem como em tópicos avançados de programação na linguagem. Serão abordados os seguintes temas: (1) controle de versão com git e GitHub, (2) introdução à programação em R (Base R), (3) introdução à programação em R (tidyverse), (4) tópicos avançados em programação no R. A carga horária total será de 30 horas, onde nos três dias iniciais serão ministrados 20 horas de aulas teórico-práticas. As 10 horas restantes serão direcionadas à formulação e execução de um projeto com dados reais, como forma de avaliação para compor a nota final da disciplina. Ao final da disciplina, os alunos devem ser capazes de utilizar git/GitHub para trabalho colaborativo em ciência e aplicar fundamentos e técnicas avançadas de programação em R para manejo, análise e visualização de dados ecológicos."
   },
   {
     "objectID": "teaching/course-intror/index.html#oferecimento",
     "href": "teaching/course-intror/index.html#oferecimento",
     "title": "introR: introdução à linguagem R",
     "section": "Oferecimento",
-    "text": "Oferecimento"
+    "text": "Oferecimento\n\nPós-Graduação em Ciências Biológicas. (2025). Universidade Federal da Paraíba (UFPB), Centro de Ciências Exatas e da Natureza, João Pessoa, PB, Brasil."
   },
   {
     "objectID": "publication/2025-carvalho-etal/index.html",
