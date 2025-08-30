@@ -1,0 +1,73 @@
+---
+title: "Orientações"
+subtitle: "Orientações e coorientações de alunos na pós-graduação e graduação."
+page-layout: full
+title-block-banner: false
+toc: true
+editor: source
+---
+
+## Alunos atuais de pós-graduação
+
+## Alunos atuais de graduação
+
+- **Maria Eduarda Furlan**, Iniciação Científica (FAPESP), *Universidade Estadual Paulista (Unesp), Rio Claro*. [Coorientador com Milton Cezar Ribeiro]
+
+- **Maria Eduarda Furlan**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*. [Orientador com Milton Cezar Ribeiro]
+
+- **Mariana Trindade Lahr**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*. [Orientador com Marco Aurélio Pizo]
+
+## Alunos anteriores de pós-graduação
+
+- **Lucas de Souza Almeida**, Mestrado, *PPG de Ecologia, Evolução e Biodiversidade, Universidade Estadual Paulista (Unesp), Rio Claro*, 2022. [Coorientador com Célio Fernando Baptista Haddad].
+
+## Alunos anteriores de graduação
+
+- **Lucas de Toledo Lauretto**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*, 2017. [Coorientador com Milton Cezar Ribeiro].
+
+- **Lucas de Souza Almeida**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*, 2019. [Coorientador com Célio Fernando Baptista Haddad].
+
+- **Helena Thereza Carvalho de Oliveira**, Iniciação Científica (PIBIC), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2020. [Orientador com Célio Fernando Baptista Haddad]
+
+- **Helena Thereza Carvalho de Oliveira**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*, 2021. [Coorientador com Célio Fernando Baptista Haddad]
+
+- **Bruno Eduardo Ribeiro Silva**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*, 2022. [Orientador com Milton Cezar Ribeiro]
+
+<style>
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 105px; /* um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2381df; 
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#topBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Topo</button>
+
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>

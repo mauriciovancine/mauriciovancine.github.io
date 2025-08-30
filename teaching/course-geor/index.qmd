@@ -3,7 +3,7 @@ title: "geoR: geoprocessamento no R"
 subtitle: "Disciplina de pós-graduação para geoprocessamento utilizando a linguagem R."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Disciplina"]
+categories: ["Disciplinas"]
 format:
   html:
     include-in-header: 

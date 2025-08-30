@@ -31,6 +31,9 @@ website:
       - text: Publicações
         aria-label: "Publicações"
         href: publication/index.qmd
+      - text: Orientações
+        aria-label: "Orientações"
+        href: supervisions/index.qmd
       - text: CV
         aria-label: "CV"
         href: https://mauriciovancine.github.io/cv/cv-academic.pdf

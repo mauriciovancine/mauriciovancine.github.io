@@ -3,7 +3,7 @@ title: "introR: introdução à linguagem R"
 subtitle: "Disciplina de pós-graduação introdução ao controle de versão e à linguagem R."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Disciplina"]
+categories: ["Disciplinas"]
 format:
   html:
     include-in-header: 

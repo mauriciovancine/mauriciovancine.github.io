@@ -3,7 +3,7 @@ title: "espR: ecologia espacial no R"
 subtitle: "Disciplina de pós-graduação de ecologia espacial utilizando a linguagem R."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Disciplina"]
+categories: ["Disciplinas"]
 format:
   html:
     include-in-header: 

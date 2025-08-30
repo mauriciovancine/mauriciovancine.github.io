@@ -3,7 +3,7 @@ title: "sdmR: modelagem de distribuição de espécies no R"
 subtitle: "Disciplina de pós-graduação de modelagem de distribuição de espécies através da linaguagem R."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Disciplina"]
+categories: ["Disciplinas"]
 format:
   html:
     include-in-header: 
