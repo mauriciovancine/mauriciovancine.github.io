@@ -3,7 +3,7 @@ title: "Métricas de paisagem no R"
 subtitle: "Curso de métricas de paisagem no R."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Curso"]
+categories: ["Cursos"]
 format:
   html:
     include-in-header: 

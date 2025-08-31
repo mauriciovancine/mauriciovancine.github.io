@@ -4,7 +4,7 @@ subtitle: Um documento do meu primeiro sanduíche.
 author: Maurício Vancine
 date: 2025-08-18
 categories: ["R", "Programação"]
-image: featured.png
+image: featured.jpg
 toc: true
 draft: false
 code-link: true

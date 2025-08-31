@@ -3,7 +3,7 @@ title: "ecostatR: análise estatística de dados no R"
 subtitle: "Curso de análise estatística de dados utilizando a linguagem R."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Curso"]
+categories: ["Cursos"]
 format:
   html:
     include-in-header: 

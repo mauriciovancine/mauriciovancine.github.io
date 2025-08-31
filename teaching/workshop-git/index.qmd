@@ -3,7 +3,7 @@ title: "Controle de versão com git, GitHub e RStudio"
 subtitle: "Curso dos principais conceitos sobre versionamento usando git, GitHub e RStudio."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Curso"]
+categories: ["Cursos"]
 format:
   html:
     include-in-header: 

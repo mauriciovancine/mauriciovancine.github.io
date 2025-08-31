@@ -3,7 +3,7 @@ title: "Modelagem de distribuição de espécies com o R"
 subtitle: "Curso de introdução à modelagem de distribuição de espécies utilizando a linaguagem R."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Curso"]
+categories: ["Cursos"]
 format:
   html:
     include-in-header: 

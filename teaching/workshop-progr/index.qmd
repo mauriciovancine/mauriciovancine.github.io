@@ -3,7 +3,7 @@ title: "Programação em linguagem R"
 subtitle: "Curso de programação em linguagem R para controle de fluxo, repetições e funções."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Curso"]
+categories: ["Cursos"]
 format:
   html:
     include-in-header: 

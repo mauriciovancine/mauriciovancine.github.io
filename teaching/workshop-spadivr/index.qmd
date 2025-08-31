@@ -3,7 +3,7 @@ title: "Análises espaciais da biodiversidade"
 subtitle: "Curso de análises espaciais de dados de biodiversidade."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Curso"]
+categories: ["Cursos"]
 editor: source
 ---
 

@@ -3,7 +3,7 @@ title: "Organização de dados em planilhas eletrônicas - Calc - LibreOffice"
 subtitle: "Curso de planilha eletrônica para dados manejo de ecológicos."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Curso"]
+categories: ["Cursos"]
 format:
   html:
     include-in-header: 

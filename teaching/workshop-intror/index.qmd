@@ -3,7 +3,7 @@ title: "Introdução à linguagem R"
 subtitle: "Curso de introdução à linguagem R para manipulação e visualização de dados."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Curso"]
+categories: ["Cursos"]
 format:
   html:
     include-in-header: 

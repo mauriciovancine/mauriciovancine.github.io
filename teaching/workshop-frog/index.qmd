@@ -3,7 +3,7 @@ title: "Curso de campo de anfíbios"
 subtitle: "Curso de campo focado em ecologia e amostragem de anfíbios."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Curso"]
+categories: ["Cursos"]
 format:
   html:
     include-in-header: 

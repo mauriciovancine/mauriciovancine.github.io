@@ -3,7 +3,7 @@ title: "Introdução ao Google Earth Engine"
 subtitle: "Curso de introdução ao Google Earth Engine."
 author: Maurício Vancine
 image: featured-hex.png
-categories: ["Curso"]
+categories: ["Cursos"]
 format:
   html:
     include-in-header: 
