@@ -23,7 +23,7 @@ Este post é o começo da retomada desses estudos.
 
 [Shiny](https://shiny.posit.co/) é um pacote do R que permite criar aplicações web interativas a partir do código R, sem a necessidade de conhecimentos avançados em desenvolvimento web.
 
-Ele é amplamente utilizado por cientistas de dados, pesquisadores e analistas para criar [dashboards](https://en.wikipedia.org/wiki/Dashboard_(computing)), que são ferramentas de visualização e interfaces interativas para manipulação de dados e modelos estatísticos.
+Ele é amplamente utilizado por cientistas de dados, pesquisadores e analistas para criar [dashboards](https://en.wikipedia.org/wiki/Dashboard_(computing)), que são ferramentas de visualização e interfaces interativas para o manejo de dados e modelos estatísticos.
 
 Com o **shiny** é possível integrar gráficos, tabelas e entradas de usuário em uma aplicação que pode ser executada localmente ou publicada na web, tornando os resultados das análises mais acessíveis para públicos não especializados.
 
@@ -115,12 +115,12 @@ h1 {color: #4CAF50;}
 
 ### Principais funcionalidades
 
-As funcionalidades do Shiny oferecem uma ampla gama de possibilidades, permitindo desde a manipulação de dados até a criação de interfaces sofisticadas e visualizações dinâmicas. Abaixo, os principais recursos foram organizados e detalhados para destacar suas aplicações práticas:
+As funcionalidades do Shiny oferecem uma ampla gama de possibilidades, permitindo desde o manejo de dados até a criação de interfaces sofisticadas e visualizações dinâmicas. Abaixo, os principais recursos foram organizados e detalhados para destacar suas aplicações práticas:
 
 -   **Interatividade**: permite criar elementos interativos como sliders, caixas de seleção, botões, menus suspensos e upload de arquivos
 -   **Visualizações interativas**: integração com pacotes gráficos como ggplot2, plotly e leaflet para criar gráficos, mapas e tabelas interativos
 -   **Reatividade**: permite que os outputs mudem automaticamente sempre que uma entrada for alterada, sem a necessidade de recarregar a página
--   **Gerenciamento de dados**: leitura, manipulação e visualização de grandes volumes de dados diretamente na interface, além de conexão com APIs para obter dados externos em tempo real
+-   **Gerenciamento de dados**: leitura, manejo e visualização de grandes volumes de dados diretamente na interface, além de conexão com APIs para obter dados externos em tempo real
 -   **Upload e download de arquivos**: permite que os usuários carreguem arquivos para a aplicação e baixem resultados
 -   **Integração com banco de dados**: conexão com bancos SQL (MySQL, PostgreSQL) e NoSQL (MongoDB) para leitura e gravação de dados
 -   **Sessões e logs**: gerenciamento de múltiplos usuários com sessões personalizadas e registre interações para auditoria e monitoramento
@@ -235,7 +235,7 @@ output$map <- renderLeaflet({
 ```
 
 -   **tmap**: alternativa para mapas interativos temáticos
--   **sf** + **shiny**: manipulação de dados espaciais e visualização
+-   **sf** + **shiny**: manejo de dados espaciais e visualização
 
 **Tabelas** - **DT**: permite criar tabelas interativas com filtros, ordenação e exportação de dados
 

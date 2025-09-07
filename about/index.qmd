@@ -77,7 +77,7 @@ Sou um caipira nerd do interior de Socorro/SP, pai do Dudu, companheiro da Japa,
 ::: {#about-me-2 .g-col-6}
   Durante minha graduação em [Ecologia](https://ib.rc.unesp.br/#!/departamentos/ecologia/ensino/curso-de-ecologia/) (sou Ecólogo de formação), me especializei em modelagem ecológica, principalmente em Modelagem de Distribuição de Espécies (*Species Distribution Modeling* - SDMs), além de análises de dados ecológicos, estatística e geoprocessamento. 
   
-  Devido a esse contato com modelagem e estatística, acabei desenvolvemente grande afinidade com a [Linguagem R](https://www.r-project.org/), com foco na manipulação e visualização de dados geoespaciais. Tenho também bastante experiência com softwares de SIG, como [QGIS](https://qgis.org/pt_BR/site/) e [GRASS GIS](https://grass.osgeo.org/).
+  Devido a esse contato com modelagem e estatística, acabei desenvolvemente grande afinidade com a [Linguagem R](https://www.r-project.org/), com foco no manejo e visualização de dados geoespaciais. Tenho também bastante experiência com softwares de SIG, como [QGIS](https://qgis.org/pt_BR/site/) e [GRASS GIS](https://grass.osgeo.org/).
   
   Publiquei um livro chamado [Análises Ecológicas no R](/publications/eco-r/), que faz parte de um projeto maior de difusão e ensino da linguagem R aplicada à Ecologia, chamado [Ecologia no R](/project/ecologia-r/).
 :::

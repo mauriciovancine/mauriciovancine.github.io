@@ -1,6 +1,6 @@
 ---
 title: "Introdução à linguagem R"
-subtitle: "Curso de introdução à linguagem R para manipulação e visualização de dados."
+subtitle: "Curso de introdução à linguagem R para o manejo e visualização de dados."
 author: Maurício Vancine
 image: featured-hex.png
 categories: ["Cursos"]
@@ -34,7 +34,7 @@ editor: source
 
 ## Descrição
 
-O minicurso apresentará os principais conceitos da linguagem R e do IDE RStudio para a manipulação e visualização de dados através do tidyverse. O tidyverse é um conjunto de pacotes e funções que compartilham uma mesma estrutura e sintaxe, com o intuito de criar códigos eficientes e organizados. Os pacotes são focados principalmente na organização (leitura, filtragem, organização, seleção e resumo) e visualização de dados (gráficos). Serão abordados os seguintes temas: (1) linguagem R, (2) tidyverse e (3) visualização de dados. Ao final do minicurso espera-se que os participantes adquiram conhecimentos básicos do funcionamento da linguagem R através do tidyverse, permitindo realização manipulação e visualização de dados tabulares.
+O minicurso apresentará os principais conceitos da linguagem R e do IDE RStudio para o manejo e visualização de dados através do tidyverse. O tidyverse é um conjunto de pacotes e funções que compartilham uma mesma estrutura e sintaxe, com o intuito de criar códigos eficientes e organizados. Os pacotes são focados principalmente na organização (leitura, filtragem, organização, seleção e resumo) e visualização de dados (gráficos). Serão abordados os seguintes temas: (1) linguagem R, (2) tidyverse e (3) visualização de dados. Ao final do minicurso espera-se que os participantes adquiram conhecimentos básicos do funcionamento da linguagem R através do tidyverse, permitindo realização manipulação e visualização de dados tabulares.
 
 ## Oferecimento
 

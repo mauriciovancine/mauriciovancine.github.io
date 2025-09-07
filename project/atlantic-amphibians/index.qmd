@@ -30,7 +30,7 @@ O conjunto de dados está disponível em acesso aberto e pode ser obtido nos seg
 * **Zenodo:** [https://doi.org/10.5281/zenodo.1233686](https://doi.org/10.5281/zenodo.1233686)
 * **GitHub:** [https://github.com/mauriciovancine/ATLANTIC-AMPHIBIANS](https://github.com/mauriciovancine/ATLANTIC-AMPHIBIANS)([Zenodo][7], [GitHub][6])
 
-Além disso, o pacote R `atlanticr` facilita o acesso e a manipulação desses dados para análises ecológicas .([mauriciovancine.github.io][8])
+Além disso, o pacote R `atlanticr` facilita o acesso e o manejo desses dados para análises ecológicas .([mauriciovancine.github.io][8])
 
 ## Dataset
 

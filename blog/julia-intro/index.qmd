@@ -401,7 +401,7 @@ Pkg.generate("NomeDoPacote")
 ```
 Alguns pacotes amplamente usados:
 
-- **DataFrames.jl**: manipulação de tabelas de dados
+- **DataFrames.jl**: manejo de tabelas de dados
 - **Plots.jl**: visualização de dados
 - **JuMP.jl**: otimização matemática
 - **Flux.jl**: redes neurais e aprendizado de máquina

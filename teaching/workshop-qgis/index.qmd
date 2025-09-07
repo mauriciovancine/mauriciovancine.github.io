@@ -34,7 +34,7 @@ editor: source
 
 ## Descrição
 
-O minicurso oferece alguns dos principais conceitos teórico-práticos sobre a manipulação e visualização de dados geoespaciais no QGIS. São abordados os seguintes tópicos: (1) conceitos gerais de geoprocessamento, (2) interface e projeto do QGIS, (3) importação, criação e edição de dados vetoriais, (4) importação, criação e edição de dados matriciais e, (5) composição de mapas. Após a realização do minicurso espera-se que os alunos adquiram conceitos gerais da estrutura, manipulação e visualização de dados geoespaciais, assim como habilidades básicas para produção de mapas simples usando o QGIS.
+O minicurso oferece alguns dos principais conceitos teórico-práticos sobre o manejo e visualização de dados geoespaciais no QGIS. São abordados os seguintes tópicos: (1) conceitos gerais de geoprocessamento, (2) interface e projeto do QGIS, (3) importação, criação e edição de dados vetoriais, (4) importação, criação e edição de dados matriciais e, (5) composição de mapas. Após a realização do minicurso espera-se que os alunos adquiram conceitos gerais da estrutura, manipulação e visualização de dados geoespaciais, assim como habilidades básicas para produção de mapas simples usando o QGIS.
 
 ## Oferecimento
 
