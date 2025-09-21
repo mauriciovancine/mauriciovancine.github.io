@@ -1,0 +1,55 @@
+---
+title: "Secondary natural vegetation gains in the Atlantic Forest do not offset losses of carbon stocks and conservation of priority areas"
+subtitle: "Examinamos 37 anos de perda e dinâmica da cobertura de vegetação natural e seus impactos nos estoques de carbono e na conservação de áreas prioritárias na Mata Atlântica."
+author: "Ramon Felipe Bicudo da Silva, James D A Millington, Yue Dou, Maurício Humberto Vancine, Luiz Fernando Silva Magnago, Andrés Viña, Fu Bin, Margarita Huesca, Simone Aparecida Vieira, Jianguo Liu"
+date: 2025-09-19
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2025-silva-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+Since secondary natural vegetation cover (NVC) constitutes an important factor for the provision of ecosystem services (e.g., helping to tackle both the climate and biodiversity crises), understanding its dynamics is essential for effective forest restoration. Yet, this has seldom been evaluated in prior studies. We examined 37 years (1985-2021) of primary NVC loss, secondary NVC dynamics (persistent and ephemeral regeneration), and their impacts on carbon stocks and on the conservation of priority areas in Brazil’s Atlantic Forest biome, a global biodiversity hotspot. We developed a new framework analyzing spatial landscape configurations over time, and found that Atlantic Forest NVC decreased by 4.2 Mha driven by a gross loss of 12.8 Mha of primary NVC (~1.4 Gt of carbon lost). Secondary NVC gained 8.6 Mha (~0.170 Gt of carbon, with potential for ~0.987 Gt in 80 years) but ephemeral regeneration (i.e., loss of secondary NVC) resulted in a loss of 3.8 Mha. Deforestation caused a net loss of 1.2 Mha in priority conservation areas. Results of this study demonstrate that understanding the dynamics of ephemeral regeneration is important for evaluating restoration efforts and ecosystem services in the Atlantic Forest. Our study also demonstrates that secondary forest regeneration plays an important role in reconnecting landscapes, although its instability threatens biodiversity and ecosystem services as it fails to offset the loss of primary vegetation. Thus, halting deforestation remains the single most urgent and vital action to prevent irreversible biodiversity loss and reduce carbon emissions.
+
+## Citação
+
+```
+@article{da_silva_etal_2025,
+    author = {da Silva, Ramon Felipe Bicudo and Millington, James D A and Dou, Yue and Vancine, Maurício Humberto and Magnago, Luiz Fernando Silva and Viña, Andrés and Bin, Fu and Huesca, Margarita  and Vieira, Simone Aparecida and Liu, Jianguo},
+    title = {Secondary natural vegetation gains in the Atlantic Forest do not offset losses of carbon stocks and conservation of priority areas},
+	  journal = {Biological Conservation},
+    volume = {},
+  	number = {},
+		pages = {},
+    year = {2025},
+    issn = {},
+	  doi = {},
+    url = {}
+    }
+```

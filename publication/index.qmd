@@ -83,6 +83,8 @@ editor: source
 
 1. Goebel, L. G. A, <u>**Vancine, M. H.**</u>, Bogoni, J. A., Longo, G. R., Calicis, M., Fearside, P. M., Palmeirim, A. F., Santos-Filho, M. (2025). [The impact of Amazon deforestation is magnified by changing the configuration of forest cover](/publication/2025-goebel-etal){target="_blank"}. *Environmental Conservation*. *in press*.
 
+1. da Silva, R. F. B., Millington, J. D. A., Yue, D., <u>**Vancine, M. H.**</u>, Magnago, L. F. S., Viña, A., Bin, F., Huesca, M., Viera, S. A., Garibaldi, L. A., Liu, J. (2025). [Secondary natural vegetation gains in the Atlantic Forest do not offset losses of carbon stocks and conservation of priority areas](/publication/2025-da-silva-etal){target="_blank"}. *Biological Conservation*. *in press*.
+
 ## Livros
 
 1. Da Silva, F. R., Gonçalves-Souza, T., Paterno, G. B., Provete, D. B., & <u>**Vancine, M. H.**</u> (2022). [Análises Ecológicas no R](/publication/2022-da-silva-etal){target="_blank"}. *Recife: Nupeea; Bauru, SP: Canal 6*. ISBN 978-85-7917-563-3.

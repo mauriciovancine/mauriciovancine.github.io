@@ -3,11 +3,20 @@ title: "Financiamentos"
 editor: source
 ---
 
+## Pós-Doutorado - Estágio de Pesquisa no Exterior
+
+-   **Título**: Efeitos da degradação do habitat na inferência da dominância local de espécies arbóreas na floresta amazônica
+-   **Agência**: [Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)](https://fapesp.br/)
+-   **Instituição Sede**: [Universidade Estadual de Campinas (Unicamp)](https://unicamp.br/)
+-   **Instituição Anfitriã**:	[Yale School Of The Environment, Estados Unidos](https://environment.yale.edu/) 
+-   **Bolsa**: [#2025/15581-6](https://bv.fapesp.br/pt/bolsas/230514/efeitos-da-degradacao-do-habitat-na-inferencia-da-dominancia-local-de-especies-arboreas-na-floresta-/)
+-   **Valor**: R\$ 55.070,00 e US\$ 32.604,00
+
 ## Pós-Doutorado
 
 -   **Título**: Impactos dos efeitos de borda, fogo e mudanças climáticas na composição da vegetação e diversidade funcional em diferentes escalas espaciais na Floresta Amazônica
 -   **Agência**: [Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)](https://fapesp.br/)
--   **Universidade**: [Universidade Estadual de Campinas (Unicamp)](https://unicamp.br/)
+-   **Instituição Sede**: [Universidade Estadual de Campinas (Unicamp)](https://unicamp.br/)
 -   **Bolsa**: [#2024/19865-6](https://bv.fapesp.br/pt/bolsas/223203/impactos-dos-efeitos-de-borda-fogo-e-mudancas-climaticas-na-composicao-da-vegetacao-e-diversidade-fu/)
 -   **Valor**: R\$ 316.800,00
 
@@ -15,7 +24,7 @@ editor: source
 
 -   **Título**: Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica
 -   **Agência**: [Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)](https://fapesp.br/)
--   **Universidade**: [Universidade Estadual Paulista (UNESP) - Câmpus de Rio Claro](https://www.rc.unesp.br/)
+-   **Instituição Sede**: [Universidade Estadual Paulista (UNESP) - Câmpus de Rio Claro](https://www.rc.unesp.br/)
 -   **Bolsa**: [#2022/01899-6](https://bv.fapesp.br/pt/bolsas/203713/estrutura-da-paisagem-como-preditor-da-diversidade-taxonomica-e-funcional-de-anfibios-na-mata-atlant/)
 -   **Valor**: R\$ 91.002,24
 
@@ -23,7 +32,7 @@ editor: source
 
 -   **Título**: Efeito das modificações da paisagem e das mudanças climáticas sobre a persistência de anfíbios na Mata Atlântica
 -   **Agência**: [Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)](https://fapesp.br/)
--   **Universidade**: [Universidade Estadual Paulista (UNESP) - Câmpus de Rio Claro](https://www.rc.unesp.br/)
+-   **Instituição Sede**: [Universidade Estadual Paulista (UNESP) - Câmpus de Rio Claro](https://www.rc.unesp.br/)
 -   **Bolsa**: [#2017/09676-8](https://bv.fapesp.br/pt/bolsas/172826/efeito-das-modificacoes-da-paisagem-e-das-mudancas-climaticas-sobre-a-persistencia-de-anfibios-na-ma/)
 -   **Valor**: R\$ 16.248,54
 
@@ -31,6 +40,6 @@ editor: source
 
 -   **Título**: Efeito da fragmentação sobre a persistência de anfíbios anuros (Amphibia: Anura) na Mata Atlântica
 -   **Agência**: [Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)](https://fapesp.br/)
--   **Universidade**: [Universidade Estadual Paulista (UNESP) - Câmpus de Rio Claro](https://www.rc.unesp.br/)
+-   **Instituição Sede**: [Universidade Estadual Paulista (UNESP) - Câmpus de Rio Claro](https://www.rc.unesp.br/)
 -   **Bolsa**: [#2013/02883-7](https://bv.fapesp.br/pt/bolsas/142421/efeito-da-fragmentacao-sobre-a-persistencia-de-anfibios-anuros-amphibia-anura-na-mata-atlantica/)
 -   **Valor**: R\$ 10.539,87
