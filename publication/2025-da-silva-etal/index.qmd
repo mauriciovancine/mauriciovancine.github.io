@@ -12,7 +12,7 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://doi.org/" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="https://doi.org/10.1016/j.biocon.2025.111512" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
   <a href="/publications/2025-silva-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
 </div>
 
@@ -31,7 +31,7 @@ editor: source
 
 <br> 
 
-![](featured.png)
+![](featured.jpg)
 
 ## Resumo
 
@@ -44,12 +44,12 @@ Since secondary natural vegetation cover (NVC) constitutes an important factor f
     author = {da Silva, Ramon Felipe Bicudo and Millington, James D A and Dou, Yue and Vancine, Maurício Humberto and Magnago, Luiz Fernando Silva and Viña, Andrés and Bin, Fu and Huesca, Margarita  and Vieira, Simone Aparecida and Liu, Jianguo},
     title = {Secondary natural vegetation gains in the Atlantic Forest do not offset losses of carbon stocks and conservation of priority areas},
 	  journal = {Biological Conservation},
-    volume = {},
+    volume = {312},
   	number = {},
-		pages = {},
+		pages = {111512},
     year = {2025},
-    issn = {},
-	  doi = {},
-    url = {}
+    issn = {1873-2917},
+	  doi = {10.1016/j.biocon.2025.111512},
+    url = {https://doi.org/10.1016/j.biocon.2025.111512}
     }
 ```
