@@ -1,0 +1,102 @@
+---
+title: "Paralelizar download no R"
+subtitle: "."
+author: Maurício Vancine
+date: 2025-06-16
+categories: ["R"]
+image: featured.png
+toc: true
+draft: false
+code-link: true
+editor: source
+---
+
+## Contextualização
+
+Paralelizar é colocar mais de um core (núcleo do processador) para trabalhar ao mesmo tempo. Por exemplo, meu note tem 12 cores, então eu consigo colocar até 10 ou 11 arquivos para serem baixados ao mesmo tempo.
+
+Exemplo:
+
+![](parallel.png)
+
+## Paralelização
+
+Segue um exemplo com dados do WorldClim:
+
+```{r eval=FALSE}
+# packages
+library(tidyverse)
+library(rvest)
+library(parallelly)
+library(doParallel)
+library(foreach)
+
+# options
+options(timeout = 1e6) # aumenta o tempo de download
+
+# download worldclim --------------------------------------------------
+
+# url
+urls <- "https://www.worldclim.org/data/worldclim21.html" %>% 
+    rvest::read_html() %>% 
+    rvest::html_nodes("a") %>% 
+    rvest::html_attr("href") %>% 
+    stringr::str_subset(".zip")
+urls
+
+# files
+destfiles <- basename(urls)
+destfiles
+
+# download
+doParallel::registerDoParallel(parallelly::availableCores(omit = 2))
+
+foreach::foreach(i=1:length(urls)) %dopar% {
+    
+    download.file(url = urls[i], destfile = paste0("~/Downloads/", destfiles[i]), mode = "wb")
+    
+}
+
+doParallel::stopImplicitCluster()
+```
+
+Fonte da imagem: [Nancy Zjaba/Pexels](https://www.pexels.com/pt-br/foto/close-up-de-bussola-em-fundo-de-madeira-32563237/).
+
+<style>
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 105px; /* um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(28, 108, 190, 0.7); /* azul com transparência */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#topBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Topo</button>
+
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>

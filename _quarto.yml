@@ -28,6 +28,9 @@ website:
       - text: Projetos
         aria-label: "Projetos"
         href: project/index.qmd
+      - text: Shiny
+        aria-label: "shiny"
+        href: shiny/index.qmd
       - text: Publicações
         aria-label: "Publicações"
         href: publication/index.qmd
