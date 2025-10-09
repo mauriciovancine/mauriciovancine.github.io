@@ -767,7 +767,7 @@
     "href": "blog/julia-intro/index.html#desenvolvimento",
     "title": "Introdução à linguagem Julia",
     "section": "Desenvolvimento",
-    "text": "Desenvolvimento\nO que é?\nJulia é uma linguagem de programação livre e de código aberto e de alto desempenho, criada para atender a necessidades de computação numérica e científica, com foco na combinação de facilidade de uso e velocidade.\nCriação\nA criação da linguagem Julia começou em 2009, quando Jeff Bezanson, Stefan Karpinski, Viral B. Shah e Alan Edelman do MIT (Massachusetts Institute of Technology) decidiram preecher uma lacuna significativa nas ferramentas de programação existentes para computação científica e numérica.\nLinguagens como MATLAB e Python eram frequentemente criticadas por sua lentidão quando lidavam com tarefas de grande escala, enquanto C e Fortran ofereciam alto desempenho, mas eram mais difíceis de usar, especialmente para pessoas que não tinham experiência com programação de baixo nível. Julia foi projetada para preencher essa lacuna, oferecendo o melhor dos dois mundos: desempenho de baixo nível com a facilidade de linguagens de alto nível.\nEm 2012, Karpinski explicou por que do nome Julia: “Na verdade não há uma boa razão, parecia um nome bonito.”. Já Jeff Bezanson disse que escolheu o nome por sugestão de um amigo. Para ler mais, consulte: Why We Created Julia.\nObjetivos\nO objetivo principal era criar uma linguagem que fosse rápida para tarefas numéricas pesadas, mas que também fosse fácil de aprender e usar. Os fundadores queriam também que Julia fosse flexível e modular, permitindo que os usuários pudessem combinar diferentes paradigmas de programação e integrar facilmente bibliotecas de outras linguagens, como Python, R e C.\nEssa linguagem é particularmente indicada para tarefas intensivas em cálculos, como análise de dados, modelagem matemática, simulações científicas e aprendizado de máquina, sendo uma escolha popular entre cientistas, engenheiros e pesquisadores.\nAlém disso, a linguagem foi projetada para ser aberta e colaborativa, permitindo que qualquer pessoa pudesse contribuir com seu desenvolvimento. A filosofia era criar uma linguagem capaz de aproveitar o potencial de cálculos paralelos e de alta performance, ao mesmo tempo em que mantinha uma sintaxe clara e simples, acessível tanto para programadores novatos quanto experientes.\nEstrutura técnica\nO grande desafio enfrentado pela equipe de desenvolvimento da linguagem Julia foi criar uma linguagem que fosse capaz de atingir alto desempenho sem sacrificar a simplicidade de uso. Para alcançar isso, a linguagem adotou o uso de compilação Just-in-Time (JIT) utilizando o framework LLVM (Low-Level Virtual Machine). Isso permitiu que o código Julia fosse compilado em tempo de execução, aproveitando otimizações específicas para o hardware do computador, resultando em desempenho de nível da linguagem C, sem a necessidade de se escrever código de baixo nível.\nA compilação Just-in-Time (JIT) é como se Julia fosse um tradutor que transforma o código que você escreve em algo que o computador consegue entender rapidamente, mas só faz isso no momento em que você pede para executar o código. Em vez de traduzir tudo antes (como nas linguagens tradicionais compiladas, como C) ou traduzir aos poucos enquanto o código roda (como em linguagens interpretadas, como Python), o JIT faz isso “na hora certa” para garantir velocidade e eficiência.\nJulia usa o LLVM (Low-Level Virtual Machine) como uma “máquina tradutora superinteligente”. O LLVM é um sistema poderoso que ajuda Julia a transformar seu código em instruções que o computador pode executar quase tão rápido quanto programas feitos em linguagens de baixo nível, como C. Isso significa que o código em Julia é rápido, mas você não precisa se preocupar com os detalhes complicados que tornam linguagens como C mais difíceis de usar.\nDe forma simples, o JIT da Julia pega seu código, traduz para algo que o computador entende, e faz isso muito rápido e de maneira inteligente, usando o LLVM. Por isso, Julia consegue unir a facilidade de linguagens como Python com a velocidade de linguagens como C.\nOutra inovação foi o uso de tipagem dinâmica junto com um sistema de tipagem múltipla. A tipagem dinâmica significa que você não precisa dizer ao computador qual tipo de dado (número, texto, lista, etc.) está usando, Julia descobre isso sozinha enquanto executa seu código. Agora, o sistema de tipagem múltipla é como Julia organiza e utiliza os tipos de dados de forma inteligente, permitindo que você escreva funções que funcionam com diferentes tipos de entrada, mas que Julia ainda consiga otimizar o desempenho.\nEm resumo, tipagem dinâmica facilita o uso da linguagem, enquanto a tipagem múltipla permite que Julia seja eficiente e flexível, escolhendo automaticamente as melhores operações para os tipos dos dados que você fornece.\nA linguagem também se destaca em termos de paralelismo e concorrência, com suporte nativo para computação paralela e distribuída. Isso torna o Julia altamente eficiente para grandes volumes de dados e cálculos complexos, sendo capaz de lidar com múltiplos núcleos e distribuindo tarefas de forma eficaz. No Julia, concorrência permite executar várias tarefas assíncronas simultaneamente, como operações de I/O, usando @async. Já o paralelismo utiliza múltiplos núcleos de CPU para processar tarefas em paralelo, seja com threads (Threads.@spawn) ou processos separados (Distributed).\nA integração com outras linguagens é outro ponto forte do Julia, permitindo que bibliotecas e código em Python, R, C, Fortran, entre outras, sejam chamados diretamente, o que facilita a reutilização de código existente e amplia a flexibilidade do ambiente de desenvolvimento.\nInstalação\nA instalação da linguagem Julia é simples e direta. Eu achei muito prático acessar o site oficial https://julialang.org/, depois clicar em Download, copiar o código que eles fornecem e colar no terminal Linux ou MacOS.\n\ncurl -fsSL https://install.julialang.org | sh\n\nNo Windows é igualmente simples, basta abrir o prompt de comando e colar.\n\nwinget install julia -s msstore\n\nDepois disso, para saber se a instalação deu certo, basta:\n\nAbrir o terminal ou prompt de comando.\nDigitar:\n\n\njulia\n\n\nO REPL (ambiente interativo, veja mais adiante) de Julia será carregado, exibindo algo como: \n\n\nAssim que Julia estiver instalada, é uma boa prática atualizar os pacotes principais:\n\nusing Pkg\nPkg.update()\n\nEditor, IDE e notebooks\nA linguagem Julia não possui um editor ou um IDE próprio como o RStudio do R. Sendo assim, é preciso instalar funcionalidades extras. Os mais comuns são:\n1. Visual Studio Code (VS Code): editor de código leve com suporte oficial para Julia via extensão. Instale o VS Code, adicione a extensão Julia. Essa foi a opção que escolhi, apesar do Pluto sem bastante interessante.\n2. Jupyter Notebook: Ambiente interativo usado com o pacote IJulia. Instale o Jupyter com pip install notebook e adicione IJulia no Julia REPL.\n\nusing Pkg\nPkg.add(\"IJulia\")\n\n3. Pluto.jl: Notebook interativo para Julia com cálculos reativos. Instale o Pluto no REPL e inicie com Pluto.run().\n\nusing Pkg\nPkg.add(\"Pluto\")\nusing Pluto; Pluto.run()\n\n4. Emacs/Vim/Sublime: Editores avançados configuráveis com plugins para Julia (julia-mode, vim-julia ou julia). Configure manualmente adicionando os plugins apropriados.\nUsando a linguagem Julia e o REPL\nA linguagem Julia por ser usada dinamicamente, com o REPL, rodando comando a comando. A interação com o código é facilitada por um REPL (Read-Eval-Print Loop), que permite a execução imediata de comandos, o que é ideal para testes rápidos e exploração de dados.\nO REPL (Read-Eval-Print Loop) é o ambiente interativo onde você pode digitar e executar comandos diretamente na linguagem Julia. Ele funciona como uma espécie de “terminal inteligente” que permite testar e explorar código de maneira rápida.\nAqui está como ele funciona, passo a passo:\n\n\nRead (Ler): o REPL espera você digitar um comando ou pedaço de código\n\nEval (Avaliar): quando você pressiona Enter, Julia analisa e executa o código que você escreveu\n\nPrint (Imprimir): o resultado do código é exibido diretamente no REPL\n\nLoop (Repetir): ele volta a esperar pelo próximo comando, e o processo recomeça\n\nPor exemplo, se você abrir o REPL e digitar:\n\n2 + 3\n\nO REPL vai: - Ler o comando 2 + 3 - Avaliar o cálculo (somar os números) - Imprimir o resultado (5) - E então esperar pelo próximo comando\nO REPL do Julia é mais do que apenas um lugar para rodar comandos, ele tem modos especiais que facilitam tarefas diferentes, e que vão ficar com cores diferentes:\n\n\nModo normal (verde): onde você escreve e executa código Julia (o padrão)\n\nModo de ajuda (amarelo): digite ? antes de algo para ver a documentação. Por exemplo, ?println mostra como usar a função println\n\n\nModo de shell (vermelho): digite ; para rodar comandos do terminal diretamente, como ls ou cd\n\n\nModo de pacote (azul): digite ] para gerenciar pacotes Julia (instalar, atualizar, etc.)\n\nPara voltar ao modo normal, basta digitar backspace.\nO REPL tem ainda alguns atalhos muito úteis:\nAqui está uma tabela resumindo os principais atalhos do REPL da linguagem Julia:\n\n\n\n\n\n\nAtalho\nFunção\n\n\n\nEnter\nExecuta o comando/expressão digitada no REPL.\n\n\nShift + Enter\nExecuta a expressão e mantém o cursor na linha seguinte.\n\n\nCtrl + C\nInterrompe a execução atual.\n\n\nCtrl + D\nFecha o REPL (sair).\n\n\nUp Arrow\nExibe o último comando digitado.\n\n\nDown Arrow\nExibe o próximo comando (caso já tenha navegado para cima).\n\n\nTab\nCompleta automaticamente o nome de funções, variáveis, etc.\n\n\nCtrl + L\nLimpa a tela do REPL.\n\n\nCtrl + Shift + L\nLimpa a tela e a saída do REPL.\n\n\nAlt + .\nInsere o último resultado calculado.\n\n\nCtrl + R\nInicia a busca histórica (search) para encontrar comandos.\n\n\nCtrl + Shift + R\nExibe um histórico completo de todos os comandos no REPL.\n\n\nEsc\nSai do modo de edição de múltiplas linhas (no caso de uma expressão longa).\n\n\nShift + Tab\nExibe ajuda sobre uma função ou variável.\n\n\n?\nExibe a documentação da função/objeto.\n\n\n@\nUtiliza macros (exemplo: @time para medir o tempo de execução).\n\n\nScripts\nO uso de scripts Julia em IDEs como o VS Code oferece um ambiente poderoso para desenvolvimento, com ferramentas para codificação eficiente, depuração e visualização. O VS Code, quando configurado corretamente para o Julia, proporciona uma experiência interativa de programação, com recursos como autocompletar, depuração e integração com o terminal.\nNo VS Code, crie um novo arquivo com a extensão .jl (por exemplo, meu_script.jl). A extensão Julia no VS Code integra o REPL do Julia, permitindo a execução interativa de comandos e visualização dos resultados diretamente no próprio editor. Você pode enviar código do script para o REPL com o atalho Shift + Enter ou Ctrl + Shift + Enter.\nAo usar bibliotecas de plotagem como Plots.jl ou Makie.jl, o VS Code pode exibir gráficos diretamente na janela do editor ou em uma janela separada, dependendo das configurações do sistema.\n\nHá ainda a forma de executar o script todo de Julia:\n\ninclude(\"meu_script_julia.jl\")\n\nJupyter notebook e Pluto\nO uso do Julia no Jupyter Notebook permite que você escreva e execute código Julia de forma interativa, com suporte para visualizações e documentação inline. Jupyter oferece um ambiente flexível para análise e experimentação, e o Julia pode ser integrado a ele de maneira simples.\nUsar Julia no Jupyter Notebook é uma excelente maneira de explorar e desenvolver código de forma interativa, com a possibilidade de criar documentos bem documentados e compartilháveis. A combinação de Julia com Jupyter oferece uma plataforma poderosa para análise de dados, visualizações e aprendizado de máquinas.\nO Pluto.jl é um ambiente interativo e leve para programação em Julia, focado em notebooks reativos. Ele permite criar documentos que combinam código Julia, texto explicativo, gráficos e visualizações interativas, sendo ideal para ensino, experimentação e prototipagem. Aqui está um guia detalhado sobre o uso de Julia no Pluto.jl.\nVocê pode adicionar células de código Julia ou texto Markdown. A reatividade permite que qualquer alteração em uma célula atualize automaticamente as células dependentes. Isso elimina a necessidade de executar células manualmente para refletir alterações. Você pode ainda gerar gráficos e interações em tempo real com pacotes como Plots.jl, Makie.jl e InteractiveWidgets.jl. Além disso, pode ainda insira células Markdown para documentar o notebook, explicando seu código ou incluindo fórmulas LaTeX. Notebooks podem ser exportados como arquivos .jl para compartilhamento ou .html para visualização.\n\nPrincipais diferenças entre Jupyter e Pluto.jl.\n\n\n\n\n\n\n\nRecurso\nJupyter\nPluto.jl\n\n\n\nReatividade\nDependência de execução manual\nCélulas são automaticamente reativas\n\n\nInterface\nMais robusta e ampla\nSimplicidade e interatividade\n\n\nEstado Global\nDepende da ordem de execução\nNão possui estado global\n\n\nInteratividade\nWidgets configuráveis com pacotes adicionais\nSuporte nativo a widgets\n\n\nSintaxe\nA sintaxe da linguagem Julia é semelhante à de outras linguagens de alto nível, o que facilita sua adoção.\nEntretanto, ela possui algumas particularidades:\n\nComentários são feitos com # ou com #= e =# para linhas múltiplas.\n\n\n# julia\n\n#=\njulia1\njulia2\n=#\n\n\nOperadores matemáticos são familiares e a linguagem tem suporte a operações vetoriais.\n\n\na = 10 + 5     # Aritmética\nb = a &gt; 5      # Comparação\nc = a && b     # Lógico\n\n\nAtribuição com =, permitindo múltiplas variáveis.\n\n\nx = 10  # Atribui o valor 10 à variável x\nx, y = 10, 20  # Atribui 10 a x e 20 a y\n\n\n\nJulia oferece tipos básicos de dados como:\n\n\nInteiros: Int8, Int16, Int32, Int64, Int128, UInt8, UInt16, UInt32, UInt64, UInt128\n\n\nPonto flutuante: Float32, Float64\n\n\nBooleanos: true, false\n\n\nStrings: “texto”\n\n\nColeções: Arrays, Tuplas, Dicionários, etc. lgk #| eval: false a = 5          # Int64 b = 3.5        # Float64 c = true       # Booleano nome = \"Julia\" # String\n\n\n\nTipagem dinâmica, mas com suporte a tipagem explícita. ```lgk #| eval: false # tipagem dinamica x = 10 typeof(x)"
+    "text": "Desenvolvimento\nO que é?\nJulia é uma linguagem de programação livre e de código aberto e de alto desempenho, criada para atender a necessidades de computação numérica e científica, com foco na combinação de facilidade de uso e velocidade.\nCriação\nA criação da linguagem Julia começou em 2009, quando Jeff Bezanson, Stefan Karpinski, Viral B. Shah e Alan Edelman do MIT (Massachusetts Institute of Technology) decidiram preecher uma lacuna significativa nas ferramentas de programação existentes para computação científica e numérica.\nLinguagens como MATLAB e Python eram frequentemente criticadas por sua lentidão quando lidavam com tarefas de grande escala, enquanto C e Fortran ofereciam alto desempenho, mas eram mais difíceis de usar, especialmente para pessoas que não tinham experiência com programação de baixo nível. Julia foi projetada para preencher essa lacuna, oferecendo o melhor dos dois mundos: desempenho de baixo nível com a facilidade de linguagens de alto nível.\nEm 2012, Karpinski explicou por que do nome Julia: “Na verdade não há uma boa razão, parecia um nome bonito.”. Já Jeff Bezanson disse que escolheu o nome por sugestão de um amigo. Para ler mais, consulte: Why We Created Julia.\nObjetivos\nO objetivo principal era criar uma linguagem que fosse rápida para tarefas numéricas pesadas, mas que também fosse fácil de aprender e usar. Os fundadores queriam também que Julia fosse flexível e modular, permitindo que os usuários pudessem combinar diferentes paradigmas de programação e integrar facilmente bibliotecas de outras linguagens, como Python, R e C.\nEssa linguagem é particularmente indicada para tarefas intensivas em cálculos, como análise de dados, modelagem matemática, simulações científicas e aprendizado de máquina, sendo uma escolha popular entre cientistas, engenheiros e pesquisadores.\nAlém disso, a linguagem foi projetada para ser aberta e colaborativa, permitindo que qualquer pessoa pudesse contribuir com seu desenvolvimento. A filosofia era criar uma linguagem capaz de aproveitar o potencial de cálculos paralelos e de alta performance, ao mesmo tempo em que mantinha uma sintaxe clara e simples, acessível tanto para programadores novatos quanto experientes.\nEstrutura técnica\nO grande desafio enfrentado pela equipe de desenvolvimento da linguagem Julia foi criar uma linguagem que fosse capaz de atingir alto desempenho sem sacrificar a simplicidade de uso. Para alcançar isso, a linguagem adotou o uso de compilação Just-in-Time (JIT) utilizando o framework LLVM (Low-Level Virtual Machine). Isso permitiu que o código Julia fosse compilado em tempo de execução, aproveitando otimizações específicas para o hardware do computador, resultando em desempenho de nível da linguagem C, sem a necessidade de se escrever código de baixo nível.\nA compilação Just-in-Time (JIT) é como se Julia fosse um tradutor que transforma o código que você escreve em algo que o computador consegue entender rapidamente, mas só faz isso no momento em que você pede para executar o código. Em vez de traduzir tudo antes (como nas linguagens tradicionais compiladas, como C) ou traduzir aos poucos enquanto o código roda (como em linguagens interpretadas, como Python), o JIT faz isso “na hora certa” para garantir velocidade e eficiência.\nJulia usa o LLVM (Low-Level Virtual Machine) como uma “máquina tradutora superinteligente”. O LLVM é um sistema poderoso que ajuda Julia a transformar seu código em instruções que o computador pode executar quase tão rápido quanto programas feitos em linguagens de baixo nível, como C. Isso significa que o código em Julia é rápido, mas você não precisa se preocupar com os detalhes complicados que tornam linguagens como C mais difíceis de usar.\nDe forma simples, o JIT da Julia pega seu código, traduz para algo que o computador entende, e faz isso muito rápido e de maneira inteligente, usando o LLVM. Por isso, Julia consegue unir a facilidade de linguagens como Python com a velocidade de linguagens como C.\nOutra inovação foi o uso de tipagem dinâmica junto com um sistema de tipagem múltipla. A tipagem dinâmica significa que você não precisa dizer ao computador qual tipo de dado (número, texto, lista, etc.) está usando, Julia descobre isso sozinha enquanto executa seu código. Agora, o sistema de tipagem múltipla é como Julia organiza e utiliza os tipos de dados de forma inteligente, permitindo que você escreva funções que funcionam com diferentes tipos de entrada, mas que Julia ainda consiga otimizar o desempenho.\nEm resumo, tipagem dinâmica facilita o uso da linguagem, enquanto a tipagem múltipla permite que Julia seja eficiente e flexível, escolhendo automaticamente as melhores operações para os tipos dos dados que você fornece.\nA linguagem também se destaca em termos de paralelismo e concorrência, com suporte nativo para computação paralela e distribuída. Isso torna o Julia altamente eficiente para grandes volumes de dados e cálculos complexos, sendo capaz de lidar com múltiplos núcleos e distribuindo tarefas de forma eficaz. No Julia, concorrência permite executar várias tarefas assíncronas simultaneamente, como operações de I/O, usando @async. Já o paralelismo utiliza múltiplos núcleos de CPU para processar tarefas em paralelo, seja com threads (Threads.@spawn) ou processos separados (Distributed).\nA integração com outras linguagens é outro ponto forte do Julia, permitindo que bibliotecas e código em Python, R, C, Fortran, entre outras, sejam chamados diretamente, o que facilita a reutilização de código existente e amplia a flexibilidade do ambiente de desenvolvimento.\nInstalação\nA instalação da linguagem Julia é simples e direta. Eu achei muito prático acessar o site oficial https://julialang.org/, depois clicar em Download, copiar o código que eles fornecem e colar no terminal Linux ou MacOS.\n\ncurl -fsSL https://install.julialang.org | sh\n\nNo Windows é igualmente simples, basta abrir o prompt de comando e colar.\n\nwinget install julia -s msstore\n\nDepois disso, para saber se a instalação deu certo, basta:\n\nAbrir o terminal ou prompt de comando.\nDigitar:\n\n\njulia\n\n\nO REPL (ambiente interativo, veja mais adiante) de Julia será carregado, exibindo algo como: \n\n\nAssim que Julia estiver instalada, é uma boa prática atualizar os pacotes principais:\n\nusing Pkg\nPkg.update()\n\nEditor, IDE e notebooks\nA linguagem Julia não possui um editor ou um IDE próprio como o RStudio do R. Sendo assim, é preciso instalar funcionalidades extras. Os mais comuns são:\n1. Visual Studio Code (VS Code): editor de código leve com suporte oficial para Julia via extensão. Instale o VS Code, adicione a extensão Julia. Essa foi a opção que escolhi, apesar do Pluto sem bastante interessante.\n2. Jupyter Notebook: Ambiente interativo usado com o pacote IJulia. Instale o Jupyter com pip install notebook e adicione IJulia no Julia REPL.\n\nusing Pkg\nPkg.add(\"IJulia\")\n\n3. Pluto.jl: Notebook interativo para Julia com cálculos reativos. Instale o Pluto no REPL e inicie com Pluto.run().\n\nusing Pkg\nPkg.add(\"Pluto\")\nusing Pluto; Pluto.run()\n\n4. Emacs/Vim/Sublime: Editores avançados configuráveis com plugins para Julia (julia-mode, vim-julia ou julia). Configure manualmente adicionando os plugins apropriados.\nUsando a linguagem Julia e o REPL\nA linguagem Julia por ser usada dinamicamente, com o REPL, rodando comando a comando. A interação com o código é facilitada por um REPL (Read-Eval-Print Loop), que permite a execução imediata de comandos, o que é ideal para testes rápidos e exploração de dados.\nO REPL (Read-Eval-Print Loop) é o ambiente interativo onde você pode digitar e executar comandos diretamente na linguagem Julia. Ele funciona como uma espécie de “terminal inteligente” que permite testar e explorar código de maneira rápida.\nAqui está como ele funciona, passo a passo:\n\n\nRead (Ler): o REPL espera você digitar um comando ou pedaço de código\n\nEval (Avaliar): quando você pressiona Enter, Julia analisa e executa o código que você escreveu\n\nPrint (Imprimir): o resultado do código é exibido diretamente no REPL\n\nLoop (Repetir): ele volta a esperar pelo próximo comando, e o processo recomeça\n\nPor exemplo, se você abrir o REPL e digitar:\n\n2 + 3\n\nO REPL vai: - Ler o comando 2 + 3 - Avaliar o cálculo (somar os números) - Imprimir o resultado (5) - E então esperar pelo próximo comando\nO REPL do Julia é mais do que apenas um lugar para rodar comandos, ele tem modos especiais que facilitam tarefas diferentes, e que vão ficar com cores diferentes:\n\n\nModo normal (verde): onde você escreve e executa código Julia (o padrão)\n\nModo de ajuda (amarelo): digite ? antes de algo para ver a documentação. Por exemplo, ?println mostra como usar a função println\n\n\nModo de shell (vermelho): digite ; para rodar comandos do terminal diretamente, como ls ou cd\n\n\nModo de pacote (azul): digite ] para gerenciar pacotes Julia (instalar, atualizar, etc.)\n\nPara voltar ao modo normal, basta digitar backspace.\nO REPL tem ainda alguns atalhos muito úteis:\nAqui está uma tabela resumindo os principais atalhos do REPL da linguagem Julia:\n\n\n\n\n\n\nAtalho\nFunção\n\n\n\nEnter\nExecuta o comando/expressão digitada no REPL.\n\n\nShift + Enter\nExecuta a expressão e mantém o cursor na linha seguinte.\n\n\nCtrl + C\nInterrompe a execução atual.\n\n\nCtrl + D\nFecha o REPL (sair).\n\n\nUp Arrow\nExibe o último comando digitado.\n\n\nDown Arrow\nExibe o próximo comando (caso já tenha navegado para cima).\n\n\nTab\nCompleta automaticamente o nome de funções, variáveis, etc.\n\n\nCtrl + L\nLimpa a tela do REPL.\n\n\nCtrl + Shift + L\nLimpa a tela e a saída do REPL.\n\n\nAlt + .\nInsere o último resultado calculado.\n\n\nCtrl + R\nInicia a busca histórica (search) para encontrar comandos.\n\n\nCtrl + Shift + R\nExibe um histórico completo de todos os comandos no REPL.\n\n\nEsc\nSai do modo de edição de múltiplas linhas (no caso de uma expressão longa).\n\n\nShift + Tab\nExibe ajuda sobre uma função ou variável.\n\n\n?\nExibe a documentação da função/objeto.\n\n\n@\nUtiliza macros (exemplo: @time para medir o tempo de execução).\n\n\nScripts\nO uso de scripts Julia em IDEs como o VS Code oferece um ambiente poderoso para desenvolvimento, com ferramentas para codificação eficiente, depuração e visualização. O VS Code, quando configurado corretamente para o Julia, proporciona uma experiência interativa de programação, com recursos como autocompletar, depuração e integração com o terminal.\nNo VS Code, crie um novo arquivo com a extensão .jl (por exemplo, meu_script.jl). A extensão Julia no VS Code integra o REPL do Julia, permitindo a execução interativa de comandos e visualização dos resultados diretamente no próprio editor. Você pode enviar código do script para o REPL com o atalho Shift + Enter ou Ctrl + Shift + Enter.\nAo usar bibliotecas de plotagem como Plots.jl ou Makie.jl, o VS Code pode exibir gráficos diretamente na janela do editor ou em uma janela separada, dependendo das configurações do sistema.\n\nHá ainda a forma de executar o script todo de Julia:\n\ninclude(\"meu_script_julia.jl\")\n\nJupyter notebook e Pluto\nO uso do Julia no Jupyter Notebook permite que você escreva e execute código Julia de forma interativa, com suporte para visualizações e documentação inline. Jupyter oferece um ambiente flexível para análise e experimentação, e o Julia pode ser integrado a ele de maneira simples.\nUsar Julia no Jupyter Notebook é uma excelente maneira de explorar e desenvolver código de forma interativa, com a possibilidade de criar documentos bem documentados e compartilháveis. A combinação de Julia com Jupyter oferece uma plataforma poderosa para análise de dados, visualizações e aprendizado de máquinas.\nO Pluto.jl é um ambiente interativo e leve para programação em Julia, focado em notebooks reativos. Ele permite criar documentos que combinam código Julia, texto explicativo, gráficos e visualizações interativas, sendo ideal para ensino, experimentação e prototipagem. Aqui está um guia detalhado sobre o uso de Julia no Pluto.jl.\nVocê pode adicionar células de código Julia ou texto Markdown. A reatividade permite que qualquer alteração em uma célula atualize automaticamente as células dependentes. Isso elimina a necessidade de executar células manualmente para refletir alterações. Você pode ainda gerar gráficos e interações em tempo real com pacotes como Plots.jl, Makie.jl e InteractiveWidgets.jl. Além disso, pode ainda insira células Markdown para documentar o notebook, explicando seu código ou incluindo fórmulas LaTeX. Notebooks podem ser exportados como arquivos .jl para compartilhamento ou .html para visualização.\n\nPrincipais diferenças entre Jupyter e Pluto.jl.\n\n\n\n\n\n\n\nRecurso\nJupyter\nPluto.jl\n\n\n\nReatividade\nDependência de execução manual\nCélulas são automaticamente reativas\n\n\nInterface\nMais robusta e ampla\nSimplicidade e interatividade\n\n\nEstado Global\nDepende da ordem de execução\nNão possui estado global\n\n\nInteratividade\nWidgets configuráveis com pacotes adicionais\nSuporte nativo a widgets\n\n\nSintaxe\nA sintaxe da linguagem Julia é semelhante à de outras linguagens de alto nível, o que facilita sua adoção.\nEntretanto, ela possui algumas particularidades:\n\nComentários são feitos com # ou com #= e =# para linhas múltiplas.\n\n\n# julia\n\n#=\njulia1\njulia2\n=#\n\n\nOperadores matemáticos são familiares e a linguagem tem suporte a operações vetoriais.\n\n\na = 10 + 5     # Aritmética\nb = a &gt; 5      # Comparação\nc = a && b     # Lógico\n\n\nAtribuição com =, permitindo múltiplas variáveis.\n\n\nx = 10  # Atribui o valor 10 à variável x\nx, y = 10, 20  # Atribui 10 a x e 20 a y\n\n\n\nJulia oferece tipos básicos de dados como:\n\n\nInteiros: Int8, Int16, Int32, Int64, Int128, UInt8, UInt16, UInt32, UInt64, UInt128\n\n\nPonto flutuante: Float32, Float64\n\n\nBooleanos: true, false\n\n\nStrings: “texto”\n\n\nColeções: Arrays, Tuplas, Dicionários, etc. fbj #| eval: false a = 5          # Int64 b = 3.5        # Float64 c = true       # Booleano nome = \"Julia\" # String\n\n\n\nTipagem dinâmica, mas com suporte a tipagem explícita. ```fbj #| eval: false # tipagem dinamica x = 10 typeof(x)"
   },
   {
     "objectID": "blog/julia-intro/index.html#conclusão",
@@ -788,14 +788,14 @@
     "href": "blog/r-big-data/index.html",
     "title": "Big Data no R: como ler um conjunto de dados maior que a RAM",
     "section": "",
-    "text": "A Ciência de Dados (Data Science) é uma área de conhecimento que vem ganhando notoriedade, principalmente na era digital e pelo grande volume de dados gerados, com o uso de diversos algoritmos matemáticos para análise de dados. Podemos dizer que Ciência de Dados é composta por três componentes principais: Big Data, Machine Learning e Internet of Things.\nNeste post, vou falar sobre Big Data, que geralmente se refere a volumes massivos de dados que não são facilmente manipulados pelas ferramentas e práticas de dados usuais, como uma planilha eletrônica, por exemplo.\nNa Ecologia, diversos estudos (confira o final do post) têm abordado esse tema, mas aqui gostaria de falar especificamente de como trabalhar com esses dados no R.\nQuando importamos um conjunto de dados de uma planilha eletrônica para o R, ele aloca esses dados na memória RAM (espaço temporário de armazenamento).\nDessa forma, se eu tenho um computador com 16 Gb de RAM, em teoria eu poderia importar e manejar um conjunto de dados de 16 Gb. Entretanto, na prática, a quantidade de memória disponível para o R é menor do que a quantidade total de RAM, pois parte dela é usada pelo sistema operacional e outros processos. Uma parte da memória RAM está sempre sendo usada pelo sistema operacional, e além disso, cada nova atribuição de dados no R vai necessitar alocar o objeto em uma nova parte da RAM.\nVerifique a quantidade de memória RAM do seu computador no R:\n\n# install.packages(\"memuse\")\nmemuse::Sys.meminfo()\n\nTotalram:  15.459 GiB \nFreeram:    7.797 GiB \n\n\nHá diversas opções para contornar essa limitação e trabalhar com dados gigantes no R, mas aqui vou explorar um pacote específico e um conjunto de dados que tive que trabalhar recentemente."
+    "text": "A Ciência de Dados (Data Science) é uma área de conhecimento que vem ganhando notoriedade, principalmente na era digital e pelo grande volume de dados gerados, com o uso de diversos algoritmos matemáticos para análise de dados. Podemos dizer que Ciência de Dados é composta por três componentes principais: Big Data, Machine Learning e Internet of Things.\nNeste post, vou falar sobre Big Data, que geralmente se refere a volumes massivos de dados que não são facilmente manipulados pelas ferramentas e práticas de dados usuais, como uma planilha eletrônica, por exemplo.\nNa Ecologia, diversos estudos (confira o final do post) têm abordado esse tema, mas aqui gostaria de falar especificamente de como trabalhar com esses dados no R.\nQuando importamos um conjunto de dados de uma planilha eletrônica para o R, ele aloca esses dados na memória RAM (espaço temporário de armazenamento).\nDessa forma, se eu tenho um computador com 16 Gb de RAM, em teoria eu poderia importar e manejar um conjunto de dados de 16 Gb. Entretanto, na prática, a quantidade de memória disponível para o R é menor do que a quantidade total de RAM, pois parte dela é usada pelo sistema operacional e outros processos. Uma parte da memória RAM está sempre sendo usada pelo sistema operacional, e além disso, cada nova atribuição de dados no R vai necessitar alocar o objeto em uma nova parte da RAM.\nVerifique a quantidade de memória RAM do seu computador no R:\n\n# install.packages(\"memuse\")\nmemuse::Sys.meminfo()\n\nTotalram:  15.459 GiB \nFreeram:    8.306 GiB \n\n\nHá diversas opções para contornar essa limitação e trabalhar com dados gigantes no R, mas aqui vou explorar um pacote específico e um conjunto de dados que tive que trabalhar recentemente."
   },
   {
     "objectID": "blog/r-big-data/index.html#contextualização",
     "href": "blog/r-big-data/index.html#contextualização",
     "title": "Big Data no R: como ler um conjunto de dados maior que a RAM",
     "section": "",
-    "text": "A Ciência de Dados (Data Science) é uma área de conhecimento que vem ganhando notoriedade, principalmente na era digital e pelo grande volume de dados gerados, com o uso de diversos algoritmos matemáticos para análise de dados. Podemos dizer que Ciência de Dados é composta por três componentes principais: Big Data, Machine Learning e Internet of Things.\nNeste post, vou falar sobre Big Data, que geralmente se refere a volumes massivos de dados que não são facilmente manipulados pelas ferramentas e práticas de dados usuais, como uma planilha eletrônica, por exemplo.\nNa Ecologia, diversos estudos (confira o final do post) têm abordado esse tema, mas aqui gostaria de falar especificamente de como trabalhar com esses dados no R.\nQuando importamos um conjunto de dados de uma planilha eletrônica para o R, ele aloca esses dados na memória RAM (espaço temporário de armazenamento).\nDessa forma, se eu tenho um computador com 16 Gb de RAM, em teoria eu poderia importar e manejar um conjunto de dados de 16 Gb. Entretanto, na prática, a quantidade de memória disponível para o R é menor do que a quantidade total de RAM, pois parte dela é usada pelo sistema operacional e outros processos. Uma parte da memória RAM está sempre sendo usada pelo sistema operacional, e além disso, cada nova atribuição de dados no R vai necessitar alocar o objeto em uma nova parte da RAM.\nVerifique a quantidade de memória RAM do seu computador no R:\n\n# install.packages(\"memuse\")\nmemuse::Sys.meminfo()\n\nTotalram:  15.459 GiB \nFreeram:    7.797 GiB \n\n\nHá diversas opções para contornar essa limitação e trabalhar com dados gigantes no R, mas aqui vou explorar um pacote específico e um conjunto de dados que tive que trabalhar recentemente."
+    "text": "A Ciência de Dados (Data Science) é uma área de conhecimento que vem ganhando notoriedade, principalmente na era digital e pelo grande volume de dados gerados, com o uso de diversos algoritmos matemáticos para análise de dados. Podemos dizer que Ciência de Dados é composta por três componentes principais: Big Data, Machine Learning e Internet of Things.\nNeste post, vou falar sobre Big Data, que geralmente se refere a volumes massivos de dados que não são facilmente manipulados pelas ferramentas e práticas de dados usuais, como uma planilha eletrônica, por exemplo.\nNa Ecologia, diversos estudos (confira o final do post) têm abordado esse tema, mas aqui gostaria de falar especificamente de como trabalhar com esses dados no R.\nQuando importamos um conjunto de dados de uma planilha eletrônica para o R, ele aloca esses dados na memória RAM (espaço temporário de armazenamento).\nDessa forma, se eu tenho um computador com 16 Gb de RAM, em teoria eu poderia importar e manejar um conjunto de dados de 16 Gb. Entretanto, na prática, a quantidade de memória disponível para o R é menor do que a quantidade total de RAM, pois parte dela é usada pelo sistema operacional e outros processos. Uma parte da memória RAM está sempre sendo usada pelo sistema operacional, e além disso, cada nova atribuição de dados no R vai necessitar alocar o objeto em uma nova parte da RAM.\nVerifique a quantidade de memória RAM do seu computador no R:\n\n# install.packages(\"memuse\")\nmemuse::Sys.meminfo()\n\nTotalram:  15.459 GiB \nFreeram:    8.306 GiB \n\n\nHá diversas opções para contornar essa limitação e trabalhar com dados gigantes no R, mas aqui vou explorar um pacote específico e um conjunto de dados que tive que trabalhar recentemente."
   },
   {
     "objectID": "blog/r-big-data/index.html#ebird",
@@ -959,109 +959,298 @@
     "text": "Iniciação científica\n\nTítulo: Efeito da fragmentação sobre a persistência de anfíbios anuros (Amphibia: Anura) na Mata Atlântica\nAgência: Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)\nInstituição Sede: Universidade Estadual Paulista (UNESP) - Câmpus de Rio Claro\nBolsa: #2013/02883-7\nValor: R$ 10.539,87"
   },
   {
-    "objectID": "course/course-geor/index.html",
-    "href": "course/course-geor/index.html",
-    "title": "geoR: geoprocessamento no R",
+    "objectID": "course/course-reproductibility/index.html",
+    "href": "course/course-reproductibility/index.html",
+    "title": "ecoReproduc: reprodutibilidade na ecologia",
     "section": "",
     "text": "website Code"
   },
   {
-    "objectID": "course/course-geor/index.html#descrição",
-    "href": "course/course-geor/index.html#descrição",
-    "title": "geoR: geoprocessamento no R",
+    "objectID": "course/course-reproductibility/index.html#descrição",
+    "href": "course/course-reproductibility/index.html#descrição",
+    "title": "ecoReproduc: reprodutibilidade na ecologia",
     "section": "Descrição",
-    "text": "Descrição\nNa geoR, os alunos serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o geoprocessamento. Serão abordados temas como estrutura e fonte, e visualização de dados geoespaciais."
+    "text": "Descrição\nNa ecoReproduc, os alunos serão apresentados aos principais conceitos de reprodutibilidade na ecologia."
   },
   {
-    "objectID": "course/course-geor/index.html#oferecimento",
-    "href": "course/course-geor/index.html#oferecimento",
-    "title": "geoR: geoprocessamento no R",
+    "objectID": "course/course-reproductibility/index.html#oferecimento",
+    "href": "course/course-reproductibility/index.html#oferecimento",
+    "title": "ecoReproduc: reprodutibilidade na ecologia",
     "section": "Oferecimento",
-    "text": "Oferecimento\n\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2021). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2020). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nPrograma de Pós-graduação em Etnobiologia e Conservação da Biodiversidade. (2019). Universidade Federal Rural de Pernambuco (UFRPE), Recife, PE, Brasil."
+    "text": "Oferecimento"
   },
   {
-    "objectID": "course/course-sdmr/index.html",
-    "href": "course/course-sdmr/index.html",
-    "title": "sdmR: modelagem de distribuição de espécies no R",
+    "objectID": "course/index.html",
+    "href": "course/index.html",
+    "title": "Ensino",
+    "section": "",
+    "text": "Ordenar por\n      Padrão\n      \n        Título\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\necoReproduc: reprodutibilidade na ecologia\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\necostatR: ecologia estatística no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nespR: ecologia espacial no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\ngeoR: geoprocessamento no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nintroR: introdução à linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nsdmR: modelagem de distribuição de espécies no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\nSem itens correspondentes\n\n\n\n↑ Topo"
+  },
+  {
+    "objectID": "course/course-ecostatr/index.html",
+    "href": "course/course-ecostatr/index.html",
+    "title": "ecostatR: ecologia estatística no R",
     "section": "",
     "text": "website Code"
   },
   {
-    "objectID": "course/course-sdmr/index.html#descrição",
-    "href": "course/course-sdmr/index.html#descrição",
-    "title": "sdmR: modelagem de distribuição de espécies no R",
+    "objectID": "course/course-ecostatr/index.html#descrição",
+    "href": "course/course-ecostatr/index.html#descrição",
+    "title": "ecostatR: ecologia estatística no R",
     "section": "Descrição",
-    "text": "Descrição\nNa sdmR, os alunos serão apresentados aos principais conceitos teóricos e práticos sobre modelagem de distribuição de espécies utilizando a linguagem R. Serão abordados os temas: (1) conceituação teórica, (2) dados de ocorrências e variáveis ambientais, (3) ajustes dos modelos, (4) avaliação dos modelos, (5) predição dos modelos e (6) aplicações."
+    "text": "Descrição\nNa ecostatR, os alunos serão apresentados aos principais da ecologia estatística."
   },
   {
-    "objectID": "course/course-sdmr/index.html#oferecimento",
-    "href": "course/course-sdmr/index.html#oferecimento",
-    "title": "sdmR: modelagem de distribuição de espécies no R",
+    "objectID": "course/course-ecostatr/index.html#oferecimento",
+    "href": "course/course-ecostatr/index.html#oferecimento",
+    "title": "ecostatR: ecologia estatística no R",
     "section": "Oferecimento",
-    "text": "Oferecimento\n\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2016). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nPrograma de Pós-graduação em Ecologia. (2016). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil.\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2017). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil."
+    "text": "Oferecimento"
   },
   {
-    "objectID": "course/course-intror/index.html",
-    "href": "course/course-intror/index.html",
-    "title": "introR: introdução à linguagem R",
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "Licença",
     "section": "",
-    "text": "website Code"
+    "text": "Meus posts, palestras e ensino são distribuídos sob a licença Creative Commons Attribution-ShareAlike 4.0 International License.\nVocê tem o direito de:\n\nCompartilhar — copiar e redistribuir o material em qualquer suporte ou formato para qualquer fim, mesmo que comercial.\nAdaptar — remixar, transformar, e criar a partir do material para qualquer fim, mesmo que comercial.\nO licenciante não pode revogar estes direitos desde que você respeite os termos da licença.\n\nDe acordo com os termos seguintes:\n\nAtribuição — Você deve dar o crédito apropriado , prover um link para a licença e indicar se mudanças foram feitas. Você deve fazê-lo em qualquer circunstância razoável, mas de nenhuma maneira que sugira que o licenciante apoia você ou o seu uso.\nCompartilha Igual — Se você remixar, transformar, ou criar a partir do material, tem de distribuir as suas contribuições sob a mesma licença que o original.\nSem restrições adicionais — Você não pode aplicar termos jurídicos ou medidas de caráter tecnológico que restrinjam legalmente outros de fazerem algo que a licença permita."
   },
   {
-    "objectID": "course/course-intror/index.html#resumo",
-    "href": "course/course-intror/index.html#resumo",
-    "title": "introR: introdução à linguagem R",
-    "section": "Resumo",
-    "text": "Resumo\nA disciplina introR apresenta os principais conceitos de controle de versão através do git e GitHub e da linguagem R para o manejo e visualização de dados através do Base R e tidyverse."
-  },
-  {
-    "objectID": "course/course-intror/index.html#descrição",
-    "href": "course/course-intror/index.html#descrição",
-    "title": "introR: introdução à linguagem R",
-    "section": "Descrição",
-    "text": "Descrição\nA disciplina tem como foco principal o controle de versão com git/GitHub e a introdução à programação em R, ambos aplicados a dados ecológicos. São abordados os principais aspectos teóricos e práticos do controle de versão, incluindo o uso do software git e de repositórios remotos no GitHub. Além disso, são apresentados os principais tópicos de programação em R, desde recursos do Base R até o tidyverse, com ênfase no manejo e na visualização de dados ecológicos, bem como em tópicos avançados de programação nessa linguagem. Serão abordados os seguintes temas: (1) controle de versão com git e GitHub, (2) introdução à programação em R (Base R), (3) introdução à programação em R (tidyverse), (4) tópicos avançados em programação no R e (5) reprodutibilidade em R e GitHub. A carga horária total será de 30 horas, onde nos três dias iniciais serão ministrados 20 horas de aulas teórico-práticas. As 10 horas restantes serão direcionadas à formulação e execução de um projeto com dados reais, como forma de avaliação para compor a nota final da disciplina. Ao final da disciplina, os alunos devem ser capazes de utilizar git/GitHub para trabalho colaborativo, e aplicar fundamentos e técnicas avançadas de programação em R para o manejo e visualização de dados ecológicos."
-  },
-  {
-    "objectID": "course/course-intror/index.html#oferecimento",
-    "href": "course/course-intror/index.html#oferecimento",
-    "title": "introR: introdução à linguagem R",
-    "section": "Oferecimento",
-    "text": "Oferecimento\n\nPós-Graduação em Ciências Biológicas. (2025). Universidade Federal da Paraíba (UFPB), Centro de Ciências Exatas e da Natureza, João Pessoa, PB, Brasil."
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contato",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Maurício Vancine",
     "section": "",
-    "text": "Este formulário é para entrar em contato sobre oportunidades de trabalhos e solicitações de orientação ou palestras.\nEste não é um formulário para solicitar ajuda, mas podemos conversar…\n\n\n\n\n\n\n\nNome \nEmail \nMessagem\n\n\nEnviar"
+    "text": "Sou ecólogo, cientista de dados, mestre em zoologia e doutor em ecologia. Tenho experiência em ecologia espacial, com ênfase em efeitos da perda e fragmentação de habitat, modelagem de distribuição de espécies (SDM), ecologia de anfíbios, análise de dados ecológicos e geoespaciais.\nSaiba mais →"
   },
   {
-    "objectID": "project/gymnophiona/index.html",
-    "href": "project/gymnophiona/index.html",
-    "title": "Gymnophiona",
+    "objectID": "project/amphibr/index.html",
+    "href": "project/amphibr/index.html",
+    "title": "amphiBR",
     "section": "",
-    "text": "Gymnophiona"
+    "text": "Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.\nO dataset foi extraído da publicação por Segalla et al. (2021) na Revista Brasileira de Herpetologia, e disponível também no link https://zenodo.org/record/4716176\nO objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.\nDúvidas, críticas e sugestões são sempre bem-vindas!\n\n\nO pacote pode ser instalado diretamente do github:\n# install.packages(\"devtools\")\ndevtools::install_github(\"paulobarros/amphiBR\")\nlibrary(amphiBR)\n\n\n\nO dataset consiste de 1188 linhas com 49 colunas:\norder - Ordem\nfamily - Família\nsubfamily - Subfamília\nsp_num - Número da espécie na lista\ngenus - Gênero\nepithet - Epíteto específico\nspecies - Nome científico\nauthor - Autoria\nstatus - Observações\ncategory - Cateogoria de Ameaça pela Portaria MMA 300/2022\nO dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:\n&gt; segalla2021\n# A tibble: 1,188 × 49\n   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA\n        &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1          1 Anura Alloph… NA        Allo… relicta Alloph… Caram… NA     NA             DD       Yes            0     0     0     0     1\n 2          2 Anura Alloph… NA        Allo… resple… Alloph… Castr… NA     Resplendent F… LC       No             0     0     0     1     0\n 3          3 Anura Alloph… NA        Allo… ruthve… Alloph… Gaige… NA     NA             LC       No             0     0     1     1     0\n 4          4 Anura Alsodi… NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co… LC       No             0     0     0     0     0\n 5          5 Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… NA     NA             LC       Yes            0     0     0     1     0\n 6          6 Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke… NT       Yes            0     0     0     0     0\n 7          7 Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… NA     NA             LC       Yes            0     0     0     1     0\n 8          8 Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA             NA       NA            NA    NA    NA    NA    NA\n 9          9 Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… NA     NA             NA       NA            NA    NA    NA    NA    NA\n10         10 Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… NA     NA             LC       No             1     0     0     0     0\n# ℹ 1,178 more rows\n# ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,\n#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,\n#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
-    "objectID": "project/gere/index.html",
-    "href": "project/gere/index.html",
-    "title": "Grupo de Estudos em R e Estatística (GERE)",
+    "objectID": "project/amphibr/index.html#instalação",
+    "href": "project/amphibr/index.html#instalação",
+    "title": "amphiBR",
     "section": "",
-    "text": "Através da difusão e capacitação no uso da linguagem R e sua aplicação em abordagem quantitativas e estatísticas, o GERE busca aprimorar a formação técnico-científica e humanística dos graduandos e pós-graduandos, bem como fomentar um espaço de convivência e aprendizado entre os membros da comunidade unespiana."
+    "text": "O pacote pode ser instalado diretamente do github:\n# install.packages(\"devtools\")\ndevtools::install_github(\"paulobarros/amphiBR\")\nlibrary(amphiBR)"
   },
   {
-    "objectID": "project/gere/index.html#descrição-do-projeto",
-    "href": "project/gere/index.html#descrição-do-projeto",
-    "title": "Grupo de Estudos em R e Estatística (GERE)",
+    "objectID": "project/amphibr/index.html#dataset",
+    "href": "project/amphibr/index.html#dataset",
+    "title": "amphiBR",
     "section": "",
-    "text": "Através da difusão e capacitação no uso da linguagem R e sua aplicação em abordagem quantitativas e estatísticas, o GERE busca aprimorar a formação técnico-científica e humanística dos graduandos e pós-graduandos, bem como fomentar um espaço de convivência e aprendizado entre os membros da comunidade unespiana."
+    "text": "O dataset consiste de 1188 linhas com 49 colunas:\norder - Ordem\nfamily - Família\nsubfamily - Subfamília\nsp_num - Número da espécie na lista\ngenus - Gênero\nepithet - Epíteto específico\nspecies - Nome científico\nauthor - Autoria\nstatus - Observações\ncategory - Cateogoria de Ameaça pela Portaria MMA 300/2022\nO dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:\n&gt; segalla2021\n# A tibble: 1,188 × 49\n   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA\n        &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1          1 Anura Alloph… NA        Allo… relicta Alloph… Caram… NA     NA             DD       Yes            0     0     0     0     1\n 2          2 Anura Alloph… NA        Allo… resple… Alloph… Castr… NA     Resplendent F… LC       No             0     0     0     1     0\n 3          3 Anura Alloph… NA        Allo… ruthve… Alloph… Gaige… NA     NA             LC       No             0     0     1     1     0\n 4          4 Anura Alsodi… NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co… LC       No             0     0     0     0     0\n 5          5 Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… NA     NA             LC       Yes            0     0     0     1     0\n 6          6 Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke… NT       Yes            0     0     0     0     0\n 7          7 Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… NA     NA             LC       Yes            0     0     0     1     0\n 8          8 Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA             NA       NA            NA    NA    NA    NA    NA\n 9          9 Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… NA     NA             NA       NA            NA    NA    NA    NA    NA\n10         10 Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… NA     NA             LC       No             1     0     0     0     0\n# ℹ 1,178 more rows\n# ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,\n#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,\n#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
-    "objectID": "project/index.html",
-    "href": "project/index.html",
-    "title": "Projetos",
+    "objectID": "project/lsmetrics/index.html",
+    "href": "project/lsmetrics/index.html",
+    "title": "LandScape Metrics (LSMETRICS)",
     "section": "",
-    "text": "Ordenar por\n      Padrão\n      \n        Título\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAtlantic Amphibians\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nAtlantic Spatial\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nEcologia no R\n\n\n\nFernando Rodrigues da Silva, Thiago Gonçalves-Souza, Gustavo Brant Paterno, Diogo Borges Provete, Maurício Humberto Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrupo de Estudos em R e Estatística (GERE)\n\n\n\nVictor Casagrande Souza, Maurício Humberto Vancine, Milton Cesar Ribeiro\n\n\n\n\n\n\n\n\n\n\n\n\n\nGymnophiona\n\n\n\nLucas Almeida, Maurício Vancine, Célio Haddad\n\n\n\n\n\n\n\n\n\n\n\n\n\nLandScape Metrics (LSMETRICS)\n\n\n\nBernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapBiomas Degradação\n\n\n\nDhemerson, Maurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\namphiBR\n\n\n\nPaulo Barros de Abreu Junior, Diogo Provete, Maurício Vancine, Juliana Zina\n\n\n\n\n\n\n\n\n\n\n\n\n\natlanticr\n\n\n\nMaurício Vancine, Bernardo Niebuhr, Renata L. Muylaert, Mauro Galetti, Milton Cezar Ribeiro\n\n\n\n\n\n\nSem itens correspondentes\n\n\n\n↑ Topo"
+    "text": "Website\n\n\n\nLandScape Metrics (LSMETRICS)"
+  },
+  {
+    "objectID": "project/ecologia-r/index.html",
+    "href": "project/ecologia-r/index.html",
+    "title": "Ecologia no R",
+    "section": "",
+    "text": "A ideia do projeto é atualizar e ampliar o livro Análises Ecológicas no R ao longo do tempo. A ideia mais interessante é que não pretendemos investir somente na produção do livro, mas também oferecer cursos em universidades e regiões com pouco investimento e recursos, criar podcasts e vídeos no YouTube, entre outras ideias.\n\n\n\nÉ importante ressaltar que tudo isso é (e sempre será!) feito gratuitamente, em um projeto totalmente aberto e sem fins lucrativos. Além disso, para manter essa ideia funcionando, temos a necessidade de adquirir computadores e outros equipamentos como câmeras e microfones. Assim, para que esse nosso sonho vire realidade, usuários(as) que têm interesse em ajudar o projeto podem fazê-lo de diferentes formas.\n\nVocê pode recomendar o livro para outras pessoas e dizendo que essa iniciativa existe\nVocê pode divulgar o livro e o projeto em suas redes sociais por meio da hashtag #ecologiaR para ajudar a dar visibilidade ao projeto\nSe você é divulgador(a) científico(a) e pretende usar nosso livro em seu canal, fale brevemente do nosso projeto e indique para seus(suas) seguidores(as)\nVocê pode citar ou linkar o livro em seus trabalhos acadêmicos\nVocê pode marcar com um estretla (‘Starring’) o repositório GitHub livro_aer\nVocê pode se inscrever no nosso canal no YouTube, curtir os vídeos, comentar e compartilhar\nVocê pode adquirir o livro físico e, desse modo, ajudar com os direitos autorais que retornam para o projeto (ainda em produção)\nSe você tem condições de “adotar” uma universidade, é possível adquirir o livro físico nas plataformas indicadas, comprar o livro e indicar a biblioteca onde o livro será entregue/depositado\nVocê pode fazer doações diretas, em qualquer quantia, para o Pix analisesecologicasnor@gmail.com ou via PayPal (para Maurício Humberto Vancine, um dos coautores)\n\n\n\n\n  \n\n\nObservação: O valor arrecadado com a venda dos livros físicos e doações, bem como a forma como utilizaremos esses valores serão sempre informados no site do livro e nas mídias sociais com a hashtag #ecologiaR.\n\n\n\nCriamos um canal no YouTube para divulgar cursos, aulas e outros conteúdos. Inscreva-se para ter mais informações sobre o livro e o projeto."
+  },
+  {
+    "objectID": "project/ecologia-r/index.html#youtube",
+    "href": "project/ecologia-r/index.html#youtube",
+    "title": "Ecologia no R",
+    "section": "",
+    "text": "Criamos um canal no YouTube para divulgar cursos, aulas e outros conteúdos. Inscreva-se para ter mais informações sobre o livro e o projeto."
+  },
+  {
+    "objectID": "project/atlantic-amphibians/index.html",
+    "href": "project/atlantic-amphibians/index.html",
+    "title": "Atlantic Amphibians",
+    "section": "",
+    "text": "O conjunto de dados Atlantic Amphibians é uma base de dados ecológicos que reúne informações sobre comunidades de anfíbios anuros na Mata Atlântica no Brasil. Ele foi publicado como Data Paper na revista Ecology em 2018 e faz parte de uma iniciativa de disponibilização de dados ecológicos de alta qualidade para estudos em ecologia de comunidades, biogeografia, conservação e modelagem da biodiversidade.\nEste conjunto de dados representa uma das maiores compilações já realizadas sobre comunidades de anfíbios na Mata Atlântica da América do Sul. Os dados foram extraídos de 389 fontes bibliográficas, incluindo artigos científicos, livros, teses e dissertações, abrangendo o período de 1940 a 2017.\n\n\n\nTotal de registros: 17.619\nNúmero de espécies: 528 espécies de anuros com identificação taxonômica confiável\nLocalidades amostradas: 1.163 sítios distribuídos ao longo do bioma da Mata Atlântica\nEndemismo: Dos registros, 7.787 (44%) foram considerados endêmicos da Mata Atlântica\nMétodos de amostragem: Incluem buscas ativas (82,1%), amostragens em sítios reprodutivos (20%), armadilhas de queda (pitfall traps, 15,3%) e encontros ocasionais (14,5%)\nRiqueza média de espécies por localidade: 15,2 ± 11,3 (variando de 1 a 80 espécies)([Repositório Unesp][3], [ResearchGate][4], [ESAJournals][1], [mauriciovancine.github.io][5])\n\nAs espécies mais frequentes nas comunidades incluem Physalaemus cuvieri, Dendropsophus minutus, Boana faber, Scinax fuscovarius e Leptodactylus latrans .([GitHub][6])\n\n\n\nO conjunto de dados está disponível em acesso aberto e pode ser obtido nos seguintes repositórios:\n\nZenodo: https://doi.org/10.5281/zenodo.1233686\nGitHub: https://github.com/mauriciovancine/ATLANTIC-AMPHIBIANS([Zenodo][7], [GitHub][6])\n\nAlém disso, o pacote R atlanticr facilita o acesso e o manejo desses dados para análises ecológicas .([mauriciovancine.github.io][8])\n\n\n\nO dataset consiste de 1188 linhas com 49 colunas:\norder - Ordem\nfamily - Família\nsubfamily - Subfamília\nsp_num - Número da espécie na lista\ngenus - Gênero\nepithet - Epíteto específico\nspecies - Nome científico\nauthor - Autoria\nstatus - Observações\ncategory - Cateogoria de Ameaça pela Portaria MMA 300/2022\nO dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:\n&gt; segalla2021\n# A tibble: 1,188 × 49\n   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA\n        &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1          1 Anura Alloph… NA        Allo… relicta Alloph… Caram… NA     NA             DD       Yes            0     0     0     0     1\n 2          2 Anura Alloph… NA        Allo… resple… Alloph… Castr… NA     Resplendent F… LC       No             0     0     0     1     0\n 3          3 Anura Alloph… NA        Allo… ruthve… Alloph… Gaige… NA     NA             LC       No             0     0     1     1     0\n 4          4 Anura Alsodi… NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co… LC       No             0     0     0     0     0\n 5          5 Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… NA     NA             LC       Yes            0     0     0     1     0\n 6          6 Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke… NT       Yes            0     0     0     0     0\n 7          7 Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… NA     NA             LC       Yes            0     0     0     1     0\n 8          8 Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA             NA       NA            NA    NA    NA    NA    NA\n 9          9 Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… NA     NA             NA       NA            NA    NA    NA    NA    NA\n10         10 Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… NA     NA             LC       No             1     0     0     0     0\n# ℹ 1,178 more rows\n# ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,\n#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,\n#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\nVancine, M. H., Duarte, K. D. S., de Souza, Y. S., Giovanelli, J. G. R., Martins‐Sobrinho, P. M., López, A., … & Brassaloti, R. (2018). ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692-1692.\nAnunciação, P. A., Ernst, R., Martello, F., Vancine, M. H., Ribeiro, M. C., & Carvalho, L. M. T. (2023). Climate driven loss of taxonomic and functional richness in Atlantic Forest anurans. Perspectives in Ecology and Conservation, 21(4), 274-285."
+  },
+  {
+    "objectID": "project/atlantic-amphibians/index.html#dataset",
+    "href": "project/atlantic-amphibians/index.html#dataset",
+    "title": "Atlantic Amphibians",
+    "section": "",
+    "text": "O dataset consiste de 1188 linhas com 49 colunas:\norder - Ordem\nfamily - Família\nsubfamily - Subfamília\nsp_num - Número da espécie na lista\ngenus - Gênero\nepithet - Epíteto específico\nspecies - Nome científico\nauthor - Autoria\nstatus - Observações\ncategory - Cateogoria de Ameaça pela Portaria MMA 300/2022\nO dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:\n&gt; segalla2021\n# A tibble: 1,188 × 49\n   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA\n        &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1          1 Anura Alloph… NA        Allo… relicta Alloph… Caram… NA     NA             DD       Yes            0     0     0     0     1\n 2          2 Anura Alloph… NA        Allo… resple… Alloph… Castr… NA     Resplendent F… LC       No             0     0     0     1     0\n 3          3 Anura Alloph… NA        Allo… ruthve… Alloph… Gaige… NA     NA             LC       No             0     0     1     1     0\n 4          4 Anura Alsodi… NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co… LC       No             0     0     0     0     0\n 5          5 Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… NA     NA             LC       Yes            0     0     0     1     0\n 6          6 Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke… NT       Yes            0     0     0     0     0\n 7          7 Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… NA     NA             LC       Yes            0     0     0     1     0\n 8          8 Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA             NA       NA            NA    NA    NA    NA    NA\n 9          9 Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… NA     NA             NA       NA            NA    NA    NA    NA    NA\n10         10 Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… NA     NA             LC       No             1     0     0     0     0\n# ℹ 1,178 more rows\n# ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,\n#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,\n#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;\n# ℹ Use `print(n = ...)` to see more rows"
+  },
+  {
+    "objectID": "project/atlantic-amphibians/index.html#publicações",
+    "href": "project/atlantic-amphibians/index.html#publicações",
+    "title": "Atlantic Amphibians",
+    "section": "",
+    "text": "Vancine, M. H., Duarte, K. D. S., de Souza, Y. S., Giovanelli, J. G. R., Martins‐Sobrinho, P. M., López, A., … & Brassaloti, R. (2018). ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692-1692.\nAnunciação, P. A., Ernst, R., Martello, F., Vancine, M. H., Ribeiro, M. C., & Carvalho, L. M. T. (2023). Climate driven loss of taxonomic and functional richness in Atlantic Forest anurans. Perspectives in Ecology and Conservation, 21(4), 274-285."
+  },
+  {
+    "objectID": "project/mapbiomas_degradacao/index.html",
+    "href": "project/mapbiomas_degradacao/index.html",
+    "title": "MapBiomas Degradação",
+    "section": "",
+    "text": "Este módulo permite análisar os vetores de degradação da vegetação nativa nos biomas brasileiros entre 1986 a 2021. Os vetores de degradação foram calculados a partir dos mapas anuais de uso/cobertura da terra da Coleção 8 do MapBiomas Brasil e dos mapas anuais de cicatrizes de incêndio da Coleção 2 do MapBiomas Fogo.\nOs vetores de degradação considerados nesta primeira versão do módulo incluem: tamanho e isolamento dos fragmentos de vegetação nativa, área de borda, frequência do fogo e o tempo desde a última queimada, além da idade da vegetação secundária.\nMinha contribuição é ajudar a desenvolver métricas de paisagem associadas à conectividade da paisagem."
+  },
+  {
+    "objectID": "talk/talk-spatiotemporal-af-unesp/index.html",
+    "href": "talk/talk-spatiotemporal-af-unesp/index.html",
+    "title": "Dinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/talk-caeb-unicamp/index.html",
+    "href": "talk/talk-caeb-unicamp/index.html",
+    "title": "Entre pixels e espécies: como a Ecologia Espacial pode auxiliar no estudo da biodiversidade?",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/talk-sdm-ufpe/index.html",
+    "href": "talk/talk-sdm-ufpe/index.html",
+    "title": "Modelagem de Distribuição de Espécies e algumas aplicações",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/podcast-fmsr-geocast/index.html",
+    "href": "talk/podcast-fmsr-geocast/index.html",
+    "title": "Episódio 48 - GeoCast Brasil",
+    "section": "",
+    "text": "Spotify"
+  },
+  {
+    "objectID": "talk/video-werlive-16/index.html",
+    "href": "talk/video-werlive-16/index.html",
+    "title": "We R Live 16: R Markdown: usando o R para comunicar seus resultados",
+    "section": "",
+    "text": "YouTube Slides"
+  },
+  {
+    "objectID": "talk/talk-spatiotemporal-af-red/index.html",
+    "href": "talk/talk-spatiotemporal-af-red/index.html",
+    "title": "Dinámica espacio-temporal de la vegetación forestal y natural en el Bosque Atlántico e implicaciones para la conservación",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/talk-landscape-syneco/index.html",
+    "href": "talk/talk-landscape-syneco/index.html",
+    "title": "Unindo dados a modelos: como prever a distribuição da biodiversidade e serviços ecossistêmicos na escala da paisagem?",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/video-ecologia-r-lancamento/index.html",
+    "href": "talk/video-ecologia-r-lancamento/index.html",
+    "title": "Análises Ecológicas no R (Lançamento)",
+    "section": "",
+    "text": "YouTube"
+  },
+  {
+    "objectID": "talk/talk-spatiotemporal-af-unicamp/index.html",
+    "href": "talk/talk-spatiotemporal-af-unicamp/index.html",
+    "title": "Dinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/talk-r-book-uemg/index.html",
+    "href": "talk/talk-r-book-uemg/index.html",
+    "title": "Análises Ecológicas no R e a importância das análises estatísticas para a ecologia e a transdisciplinaridade",
+    "section": "",
+    "text": "Slides YouTube Spotify"
+  },
+  {
+    "objectID": "talk/talk-espacial-uff/index.html",
+    "href": "talk/talk-espacial-uff/index.html",
+    "title": "Aplicações da Cartografia para a Ecologia Espacial",
+    "section": "",
+    "text": "Slides YouTube"
+  },
+  {
+    "objectID": "talk/talk-enm-gggc/index.html",
+    "href": "talk/talk-enm-gggc/index.html",
+    "title": "Introdução à Modelagem de Nicho Ecológico",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/index.html",
+    "href": "talk/index.html",
+    "title": "Palestras",
+    "section": "",
+    "text": "Ordenar por\n      Padrão\n      \n        Título\n      \n      \n        Data - Mais antigo\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nEntre pixels e espécies: como a Ecologia Espacial pode auxiliar no estudo da biodiversidade?\n\n\n\n\n\n31 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCálculo e aplicações de métricas de paisagem através dos dados do MapBiomas\n\n\n\n\n\n7 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nAnálises Ecológicas no R e a importância das análises estatísticas para a ecologia e a transdisciplinaridade\n\n\n\n\n\n9 de dez. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nUnindo dados a modelos: como prever a distribuição da biodiversidade e serviços ecossistêmicos na escala da paisagem?\n\n\n\n\n\n28 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica\n\n\n\n\n\n1 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAnálises Ecológicas no R: um livro para ‘eRRar’ mais na Ecologia\n\n\n\n\n\n25 de abr. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDinámica espacio-temporal de la vegetación forestal y natural en el Bosque Atlántico e implicaciones para la conservación\n\n\n\n\n\n25 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise de dados geoespaciais no R\n\n\n\n\n\n12 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica\n\n\n\n\n\n14 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nModelagem de Distribuição de Espécies e algumas aplicações\n\n\n\n\n\n9 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nProfissão Ecólogo\n\n\n\n\n\n7 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n092 – Você tem medo de errar?\n\n\n\n\n\n15 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nEpisódio 48 - GeoCast Brasil\n\n\n\n\n\n15 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nAnálises Ecológicas no R (Lançamento)\n\n\n\n\n\n13 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nAplicações da Cartografia para a Ecologia Espacial\n\n\n\n\n\n2 de abr. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nWe R Live 16: R Markdown: usando o R para comunicar seus resultados\n\n\n\n\n\n29 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à Modelagem de Nicho Ecológico\n\n\n\n\n\n16 de jul. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nModelos de Distribuição de Espécies: uma visão geral\n\n\n\n\n\n5 de mar. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nMétricas de paisagem no R\n\n\n\n\n\n27 de set. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nATLANTIC AMPHIBIANS: Conjunto de Dados de Comunidades de Anfíbios da Mata Atlântica\n\n\n\n\n\n4 de ago. de 2018\n\n\n\n\n\nSem itens correspondentes\n\n  \n\n\n\n\n↑ Topo"
+  },
+  {
+    "objectID": "talk/talk-sdm-gggc/index.html",
+    "href": "talk/talk-sdm-gggc/index.html",
+    "title": "Modelos de Distribuição de Espécies: uma visão geral",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/podcast-desabracando-arvores-r/index.html",
+    "href": "talk/podcast-desabracando-arvores-r/index.html",
+    "title": "#092 – Você tem medo de errar?",
+    "section": "",
+    "text": "Spotify link"
+  },
+  {
+    "objectID": "talk/video-geocast-metricas-paisagem/index.html",
+    "href": "talk/video-geocast-metricas-paisagem/index.html",
+    "title": "Métricas de paisagem no R",
+    "section": "",
+    "text": "Slides GitLab YouTube"
+  },
+  {
+    "objectID": "talk/talk-data-paper-amphibians-anfoco/index.html",
+    "href": "talk/talk-data-paper-amphibians-anfoco/index.html",
+    "title": "ATLANTIC AMPHIBIANS: Conjunto de Dados de Comunidades de Anfíbios da Mata Atlântica",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/talk-mapbiomas-user-summit/index.html",
+    "href": "talk/talk-mapbiomas-user-summit/index.html",
+    "title": "Cálculo e aplicações de métricas de paisagem através dos dados do MapBiomas",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/talk-r-bioforum-unicamp/index.html",
+    "href": "talk/talk-r-bioforum-unicamp/index.html",
+    "title": "Análises Ecológicas no R: um livro para ‘eRRar’ mais na Ecologia",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/video-r-geospatial/index.html",
+    "href": "talk/video-r-geospatial/index.html",
+    "title": "Análise de dados geoespaciais no R",
+    "section": "",
+    "text": "Slides GitHub YouTube"
+  },
+  {
+    "objectID": "project/atlantic-spatial/index.html",
+    "href": "project/atlantic-spatial/index.html",
+    "title": "Atlantic Spatial",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "project/atlantic-spatial/index.html#publicações",
+    "href": "project/atlantic-spatial/index.html#publicações",
+    "title": "Atlantic Spatial",
+    "section": "Publicações",
+    "text": "Publicações\n\nVancine, M. H., Muylaert, R. L., Niebuhr, B. B., Oshima, J. E. F., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann C. H., & Ribeiro, M. C. (2024). The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation. Biological Conservation, 291, 110499."
+  },
+  {
+    "objectID": "project/atlantic-spatial/index.html#preprints",
+    "href": "project/atlantic-spatial/index.html#preprints",
+    "title": "Atlantic Spatial",
+    "section": "Preprints",
+    "text": "Preprints\n\nVancine, M. H., Niebuhr B. B., Muylaert R. L., Oshima J. E. F., Tonetti V., Bernardo R., Alves R. S. C., Zanette E. M., Souza V. C., Giovanelli J. G. R., Grohmann C. H., Galetti M., & Ribeiro, M. C. (2023). ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest. EcoEvoRxiv. DOI: https://doi.org/10.32942/X26P58."
   },
   {
     "objectID": "project/atlanticr/index.html",
@@ -1092,277 +1281,109 @@
     "text": "Como ajudar\nA melhor maneira de fornecer feedback sobre este pacote é abrir uma questão e atribuir a etiqueta feedback. Obrigado!"
   },
   {
-    "objectID": "project/atlantic-spatial/index.html",
-    "href": "project/atlantic-spatial/index.html",
-    "title": "Atlantic Spatial",
+    "objectID": "project/index.html",
+    "href": "project/index.html",
+    "title": "Projetos",
     "section": "",
-    "text": "Code"
+    "text": "Ordenar por\n      Padrão\n      \n        Título\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAtlantic Amphibians\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nAtlantic Spatial\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nEcologia no R\n\n\n\nFernando Rodrigues da Silva, Thiago Gonçalves-Souza, Gustavo Brant Paterno, Diogo Borges Provete, Maurício Humberto Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrupo de Estudos em R e Estatística (GERE)\n\n\n\nVictor Casagrande Souza, Maurício Humberto Vancine, Milton Cesar Ribeiro\n\n\n\n\n\n\n\n\n\n\n\n\n\nGymnophiona\n\n\n\nLucas Almeida, Maurício Vancine, Célio Haddad\n\n\n\n\n\n\n\n\n\n\n\n\n\nLandScape Metrics (LSMETRICS)\n\n\n\nBernardo Niebuhr, Maurício Vancine, Renata Muylaert, Jonh Wesley Ribeiro, Milton Cezar Ribeiro\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapBiomas Degradação\n\n\n\nDhemerson, Maurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\namphiBR\n\n\n\nPaulo Barros de Abreu Junior, Diogo Provete, Maurício Vancine, Juliana Zina\n\n\n\n\n\n\n\n\n\n\n\n\n\natlanticr\n\n\n\nMaurício Vancine, Bernardo Niebuhr, Renata L. Muylaert, Mauro Galetti, Milton Cezar Ribeiro\n\n\n\n\n\n\nSem itens correspondentes\n\n\n\n↑ Topo"
   },
   {
-    "objectID": "project/atlantic-spatial/index.html#publicações",
-    "href": "project/atlantic-spatial/index.html#publicações",
-    "title": "Atlantic Spatial",
-    "section": "Publicações",
-    "text": "Publicações\n\nVancine, M. H., Muylaert, R. L., Niebuhr, B. B., Oshima, J. E. F., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann C. H., & Ribeiro, M. C. (2024). The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation. Biological Conservation, 291, 110499."
-  },
-  {
-    "objectID": "project/atlantic-spatial/index.html#preprints",
-    "href": "project/atlantic-spatial/index.html#preprints",
-    "title": "Atlantic Spatial",
-    "section": "Preprints",
-    "text": "Preprints\n\nVancine, M. H., Niebuhr B. B., Muylaert R. L., Oshima J. E. F., Tonetti V., Bernardo R., Alves R. S. C., Zanette E. M., Souza V. C., Giovanelli J. G. R., Grohmann C. H., Galetti M., & Ribeiro, M. C. (2023). ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest. EcoEvoRxiv. DOI: https://doi.org/10.32942/X26P58."
-  },
-  {
-    "objectID": "talk/video-r-geospatial/index.html",
-    "href": "talk/video-r-geospatial/index.html",
-    "title": "Análise de dados geoespaciais no R",
+    "objectID": "project/gere/index.html",
+    "href": "project/gere/index.html",
+    "title": "Grupo de Estudos em R e Estatística (GERE)",
     "section": "",
-    "text": "Slides GitHub YouTube"
+    "text": "Através da difusão e capacitação no uso da linguagem R e sua aplicação em abordagem quantitativas e estatísticas, o GERE busca aprimorar a formação técnico-científica e humanística dos graduandos e pós-graduandos, bem como fomentar um espaço de convivência e aprendizado entre os membros da comunidade unespiana."
   },
   {
-    "objectID": "talk/talk-r-bioforum-unicamp/index.html",
-    "href": "talk/talk-r-bioforum-unicamp/index.html",
-    "title": "Análises Ecológicas no R: um livro para ‘eRRar’ mais na Ecologia",
+    "objectID": "project/gere/index.html#descrição-do-projeto",
+    "href": "project/gere/index.html#descrição-do-projeto",
+    "title": "Grupo de Estudos em R e Estatística (GERE)",
     "section": "",
-    "text": "Slides"
+    "text": "Através da difusão e capacitação no uso da linguagem R e sua aplicação em abordagem quantitativas e estatísticas, o GERE busca aprimorar a formação técnico-científica e humanística dos graduandos e pós-graduandos, bem como fomentar um espaço de convivência e aprendizado entre os membros da comunidade unespiana."
   },
   {
-    "objectID": "talk/talk-mapbiomas-user-summit/index.html",
-    "href": "talk/talk-mapbiomas-user-summit/index.html",
-    "title": "Cálculo e aplicações de métricas de paisagem através dos dados do MapBiomas",
+    "objectID": "project/gymnophiona/index.html",
+    "href": "project/gymnophiona/index.html",
+    "title": "Gymnophiona",
     "section": "",
-    "text": "Slides"
+    "text": "Gymnophiona"
   },
   {
-    "objectID": "talk/talk-data-paper-amphibians-anfoco/index.html",
-    "href": "talk/talk-data-paper-amphibians-anfoco/index.html",
-    "title": "ATLANTIC AMPHIBIANS: Conjunto de Dados de Comunidades de Anfíbios da Mata Atlântica",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contato",
     "section": "",
-    "text": "Slides"
+    "text": "Este formulário é para entrar em contato sobre oportunidades de trabalhos e solicitações de orientação ou palestras.\nEste não é um formulário para solicitar ajuda, mas podemos conversar…\n\n\n\n\n\n\n\nNome \nEmail \nMessagem\n\n\nEnviar"
   },
   {
-    "objectID": "talk/video-geocast-metricas-paisagem/index.html",
-    "href": "talk/video-geocast-metricas-paisagem/index.html",
-    "title": "Métricas de paisagem no R",
-    "section": "",
-    "text": "Slides GitLab YouTube"
-  },
-  {
-    "objectID": "talk/podcast-desabracando-arvores-r/index.html",
-    "href": "talk/podcast-desabracando-arvores-r/index.html",
-    "title": "#092 – Você tem medo de errar?",
-    "section": "",
-    "text": "Spotify link"
-  },
-  {
-    "objectID": "talk/talk-sdm-gggc/index.html",
-    "href": "talk/talk-sdm-gggc/index.html",
-    "title": "Modelos de Distribuição de Espécies: uma visão geral",
-    "section": "",
-    "text": "Slides"
-  },
-  {
-    "objectID": "talk/index.html",
-    "href": "talk/index.html",
-    "title": "Palestras",
-    "section": "",
-    "text": "Ordenar por\n      Padrão\n      \n        Título\n      \n      \n        Data - Mais antigo\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nEntre pixels e espécies: como a Ecologia Espacial pode auxiliar no estudo da biodiversidade?\n\n\n\n\n\n31 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCálculo e aplicações de métricas de paisagem através dos dados do MapBiomas\n\n\n\n\n\n7 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nAnálises Ecológicas no R e a importância das análises estatísticas para a ecologia e a transdisciplinaridade\n\n\n\n\n\n9 de dez. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nUnindo dados a modelos: como prever a distribuição da biodiversidade e serviços ecossistêmicos na escala da paisagem?\n\n\n\n\n\n28 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica\n\n\n\n\n\n1 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAnálises Ecológicas no R: um livro para ‘eRRar’ mais na Ecologia\n\n\n\n\n\n25 de abr. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDinámica espacio-temporal de la vegetación forestal y natural en el Bosque Atlántico e implicaciones para la conservación\n\n\n\n\n\n25 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise de dados geoespaciais no R\n\n\n\n\n\n12 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica\n\n\n\n\n\n14 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nModelagem de Distribuição de Espécies e algumas aplicações\n\n\n\n\n\n9 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nProfissão Ecólogo\n\n\n\n\n\n7 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n092 – Você tem medo de errar?\n\n\n\n\n\n15 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nEpisódio 48 - GeoCast Brasil\n\n\n\n\n\n15 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nAnálises Ecológicas no R (Lançamento)\n\n\n\n\n\n13 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nAplicações da Cartografia para a Ecologia Espacial\n\n\n\n\n\n2 de abr. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nWe R Live 16: R Markdown: usando o R para comunicar seus resultados\n\n\n\n\n\n29 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à Modelagem de Nicho Ecológico\n\n\n\n\n\n16 de jul. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nModelos de Distribuição de Espécies: uma visão geral\n\n\n\n\n\n5 de mar. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nMétricas de paisagem no R\n\n\n\n\n\n27 de set. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nATLANTIC AMPHIBIANS: Conjunto de Dados de Comunidades de Anfíbios da Mata Atlântica\n\n\n\n\n\n4 de ago. de 2018\n\n\n\n\n\nSem itens correspondentes\n\n  \n\n\n\n\n↑ Topo"
-  },
-  {
-    "objectID": "talk/talk-enm-gggc/index.html",
-    "href": "talk/talk-enm-gggc/index.html",
-    "title": "Introdução à Modelagem de Nicho Ecológico",
-    "section": "",
-    "text": "Slides"
-  },
-  {
-    "objectID": "talk/talk-espacial-uff/index.html",
-    "href": "talk/talk-espacial-uff/index.html",
-    "title": "Aplicações da Cartografia para a Ecologia Espacial",
-    "section": "",
-    "text": "Slides YouTube"
-  },
-  {
-    "objectID": "talk/talk-r-book-uemg/index.html",
-    "href": "talk/talk-r-book-uemg/index.html",
-    "title": "Análises Ecológicas no R e a importância das análises estatísticas para a ecologia e a transdisciplinaridade",
-    "section": "",
-    "text": "Slides YouTube Spotify"
-  },
-  {
-    "objectID": "talk/talk-spatiotemporal-af-unicamp/index.html",
-    "href": "talk/talk-spatiotemporal-af-unicamp/index.html",
-    "title": "Dinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica",
-    "section": "",
-    "text": "Slides"
-  },
-  {
-    "objectID": "talk/video-ecologia-r-lancamento/index.html",
-    "href": "talk/video-ecologia-r-lancamento/index.html",
-    "title": "Análises Ecológicas no R (Lançamento)",
-    "section": "",
-    "text": "YouTube"
-  },
-  {
-    "objectID": "talk/talk-landscape-syneco/index.html",
-    "href": "talk/talk-landscape-syneco/index.html",
-    "title": "Unindo dados a modelos: como prever a distribuição da biodiversidade e serviços ecossistêmicos na escala da paisagem?",
-    "section": "",
-    "text": "Slides"
-  },
-  {
-    "objectID": "talk/talk-spatiotemporal-af-red/index.html",
-    "href": "talk/talk-spatiotemporal-af-red/index.html",
-    "title": "Dinámica espacio-temporal de la vegetación forestal y natural en el Bosque Atlántico e implicaciones para la conservación",
-    "section": "",
-    "text": "Slides"
-  },
-  {
-    "objectID": "talk/video-werlive-16/index.html",
-    "href": "talk/video-werlive-16/index.html",
-    "title": "We R Live 16: R Markdown: usando o R para comunicar seus resultados",
-    "section": "",
-    "text": "YouTube Slides"
-  },
-  {
-    "objectID": "talk/podcast-fmsr-geocast/index.html",
-    "href": "talk/podcast-fmsr-geocast/index.html",
-    "title": "Episódio 48 - GeoCast Brasil",
-    "section": "",
-    "text": "Spotify"
-  },
-  {
-    "objectID": "talk/talk-sdm-ufpe/index.html",
-    "href": "talk/talk-sdm-ufpe/index.html",
-    "title": "Modelagem de Distribuição de Espécies e algumas aplicações",
-    "section": "",
-    "text": "Slides"
-  },
-  {
-    "objectID": "talk/talk-caeb-unicamp/index.html",
-    "href": "talk/talk-caeb-unicamp/index.html",
-    "title": "Entre pixels e espécies: como a Ecologia Espacial pode auxiliar no estudo da biodiversidade?",
-    "section": "",
-    "text": "Slides"
-  },
-  {
-    "objectID": "talk/talk-spatiotemporal-af-unesp/index.html",
-    "href": "talk/talk-spatiotemporal-af-unesp/index.html",
-    "title": "Dinâmica espaço-temporal dos remanescentes de vegetação florestal e natural na Mata Atlântica",
-    "section": "",
-    "text": "Slides"
-  },
-  {
-    "objectID": "project/mapbiomas_degradacao/index.html",
-    "href": "project/mapbiomas_degradacao/index.html",
-    "title": "MapBiomas Degradação",
-    "section": "",
-    "text": "Este módulo permite análisar os vetores de degradação da vegetação nativa nos biomas brasileiros entre 1986 a 2021. Os vetores de degradação foram calculados a partir dos mapas anuais de uso/cobertura da terra da Coleção 8 do MapBiomas Brasil e dos mapas anuais de cicatrizes de incêndio da Coleção 2 do MapBiomas Fogo.\nOs vetores de degradação considerados nesta primeira versão do módulo incluem: tamanho e isolamento dos fragmentos de vegetação nativa, área de borda, frequência do fogo e o tempo desde a última queimada, além da idade da vegetação secundária.\nMinha contribuição é ajudar a desenvolver métricas de paisagem associadas à conectividade da paisagem."
-  },
-  {
-    "objectID": "project/atlantic-amphibians/index.html",
-    "href": "project/atlantic-amphibians/index.html",
-    "title": "Atlantic Amphibians",
-    "section": "",
-    "text": "O conjunto de dados Atlantic Amphibians é uma base de dados ecológicos que reúne informações sobre comunidades de anfíbios anuros na Mata Atlântica no Brasil. Ele foi publicado como Data Paper na revista Ecology em 2018 e faz parte de uma iniciativa de disponibilização de dados ecológicos de alta qualidade para estudos em ecologia de comunidades, biogeografia, conservação e modelagem da biodiversidade.\nEste conjunto de dados representa uma das maiores compilações já realizadas sobre comunidades de anfíbios na Mata Atlântica da América do Sul. Os dados foram extraídos de 389 fontes bibliográficas, incluindo artigos científicos, livros, teses e dissertações, abrangendo o período de 1940 a 2017.\n\n\n\nTotal de registros: 17.619\nNúmero de espécies: 528 espécies de anuros com identificação taxonômica confiável\nLocalidades amostradas: 1.163 sítios distribuídos ao longo do bioma da Mata Atlântica\nEndemismo: Dos registros, 7.787 (44%) foram considerados endêmicos da Mata Atlântica\nMétodos de amostragem: Incluem buscas ativas (82,1%), amostragens em sítios reprodutivos (20%), armadilhas de queda (pitfall traps, 15,3%) e encontros ocasionais (14,5%)\nRiqueza média de espécies por localidade: 15,2 ± 11,3 (variando de 1 a 80 espécies)([Repositório Unesp][3], [ResearchGate][4], [ESAJournals][1], [mauriciovancine.github.io][5])\n\nAs espécies mais frequentes nas comunidades incluem Physalaemus cuvieri, Dendropsophus minutus, Boana faber, Scinax fuscovarius e Leptodactylus latrans .([GitHub][6])\n\n\n\nO conjunto de dados está disponível em acesso aberto e pode ser obtido nos seguintes repositórios:\n\nZenodo: https://doi.org/10.5281/zenodo.1233686\nGitHub: https://github.com/mauriciovancine/ATLANTIC-AMPHIBIANS([Zenodo][7], [GitHub][6])\n\nAlém disso, o pacote R atlanticr facilita o acesso e o manejo desses dados para análises ecológicas .([mauriciovancine.github.io][8])\n\n\n\nO dataset consiste de 1188 linhas com 49 colunas:\norder - Ordem\nfamily - Família\nsubfamily - Subfamília\nsp_num - Número da espécie na lista\ngenus - Gênero\nepithet - Epíteto específico\nspecies - Nome científico\nauthor - Autoria\nstatus - Observações\ncategory - Cateogoria de Ameaça pela Portaria MMA 300/2022\nO dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:\n&gt; segalla2021\n# A tibble: 1,188 × 49\n   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA\n        &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1          1 Anura Alloph… NA        Allo… relicta Alloph… Caram… NA     NA             DD       Yes            0     0     0     0     1\n 2          2 Anura Alloph… NA        Allo… resple… Alloph… Castr… NA     Resplendent F… LC       No             0     0     0     1     0\n 3          3 Anura Alloph… NA        Allo… ruthve… Alloph… Gaige… NA     NA             LC       No             0     0     1     1     0\n 4          4 Anura Alsodi… NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co… LC       No             0     0     0     0     0\n 5          5 Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… NA     NA             LC       Yes            0     0     0     1     0\n 6          6 Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke… NT       Yes            0     0     0     0     0\n 7          7 Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… NA     NA             LC       Yes            0     0     0     1     0\n 8          8 Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA             NA       NA            NA    NA    NA    NA    NA\n 9          9 Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… NA     NA             NA       NA            NA    NA    NA    NA    NA\n10         10 Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… NA     NA             LC       No             1     0     0     0     0\n# ℹ 1,178 more rows\n# ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,\n#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,\n#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\nVancine, M. H., Duarte, K. D. S., de Souza, Y. S., Giovanelli, J. G. R., Martins‐Sobrinho, P. M., López, A., … & Brassaloti, R. (2018). ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692-1692.\nAnunciação, P. A., Ernst, R., Martello, F., Vancine, M. H., Ribeiro, M. C., & Carvalho, L. M. T. (2023). Climate driven loss of taxonomic and functional richness in Atlantic Forest anurans. Perspectives in Ecology and Conservation, 21(4), 274-285."
-  },
-  {
-    "objectID": "project/atlantic-amphibians/index.html#dataset",
-    "href": "project/atlantic-amphibians/index.html#dataset",
-    "title": "Atlantic Amphibians",
-    "section": "",
-    "text": "O dataset consiste de 1188 linhas com 49 colunas:\norder - Ordem\nfamily - Família\nsubfamily - Subfamília\nsp_num - Número da espécie na lista\ngenus - Gênero\nepithet - Epíteto específico\nspecies - Nome científico\nauthor - Autoria\nstatus - Observações\ncategory - Cateogoria de Ameaça pela Portaria MMA 300/2022\nO dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:\n&gt; segalla2021\n# A tibble: 1,188 × 49\n   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA\n        &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1          1 Anura Alloph… NA        Allo… relicta Alloph… Caram… NA     NA             DD       Yes            0     0     0     0     1\n 2          2 Anura Alloph… NA        Allo… resple… Alloph… Castr… NA     Resplendent F… LC       No             0     0     0     1     0\n 3          3 Anura Alloph… NA        Allo… ruthve… Alloph… Gaige… NA     NA             LC       No             0     0     1     1     0\n 4          4 Anura Alsodi… NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co… LC       No             0     0     0     0     0\n 5          5 Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… NA     NA             LC       Yes            0     0     0     1     0\n 6          6 Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke… NT       Yes            0     0     0     0     0\n 7          7 Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… NA     NA             LC       Yes            0     0     0     1     0\n 8          8 Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA             NA       NA            NA    NA    NA    NA    NA\n 9          9 Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… NA     NA             NA       NA            NA    NA    NA    NA    NA\n10         10 Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… NA     NA             LC       No             1     0     0     0     0\n# ℹ 1,178 more rows\n# ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,\n#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,\n#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;\n# ℹ Use `print(n = ...)` to see more rows"
-  },
-  {
-    "objectID": "project/atlantic-amphibians/index.html#publicações",
-    "href": "project/atlantic-amphibians/index.html#publicações",
-    "title": "Atlantic Amphibians",
-    "section": "",
-    "text": "Vancine, M. H., Duarte, K. D. S., de Souza, Y. S., Giovanelli, J. G. R., Martins‐Sobrinho, P. M., López, A., … & Brassaloti, R. (2018). ATLANTIC AMPHIBIANS: a data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692-1692.\nAnunciação, P. A., Ernst, R., Martello, F., Vancine, M. H., Ribeiro, M. C., & Carvalho, L. M. T. (2023). Climate driven loss of taxonomic and functional richness in Atlantic Forest anurans. Perspectives in Ecology and Conservation, 21(4), 274-285."
-  },
-  {
-    "objectID": "project/ecologia-r/index.html",
-    "href": "project/ecologia-r/index.html",
-    "title": "Ecologia no R",
-    "section": "",
-    "text": "A ideia do projeto é atualizar e ampliar o livro Análises Ecológicas no R ao longo do tempo. A ideia mais interessante é que não pretendemos investir somente na produção do livro, mas também oferecer cursos em universidades e regiões com pouco investimento e recursos, criar podcasts e vídeos no YouTube, entre outras ideias.\n\n\n\nÉ importante ressaltar que tudo isso é (e sempre será!) feito gratuitamente, em um projeto totalmente aberto e sem fins lucrativos. Além disso, para manter essa ideia funcionando, temos a necessidade de adquirir computadores e outros equipamentos como câmeras e microfones. Assim, para que esse nosso sonho vire realidade, usuários(as) que têm interesse em ajudar o projeto podem fazê-lo de diferentes formas.\n\nVocê pode recomendar o livro para outras pessoas e dizendo que essa iniciativa existe\nVocê pode divulgar o livro e o projeto em suas redes sociais por meio da hashtag #ecologiaR para ajudar a dar visibilidade ao projeto\nSe você é divulgador(a) científico(a) e pretende usar nosso livro em seu canal, fale brevemente do nosso projeto e indique para seus(suas) seguidores(as)\nVocê pode citar ou linkar o livro em seus trabalhos acadêmicos\nVocê pode marcar com um estretla (‘Starring’) o repositório GitHub livro_aer\nVocê pode se inscrever no nosso canal no YouTube, curtir os vídeos, comentar e compartilhar\nVocê pode adquirir o livro físico e, desse modo, ajudar com os direitos autorais que retornam para o projeto (ainda em produção)\nSe você tem condições de “adotar” uma universidade, é possível adquirir o livro físico nas plataformas indicadas, comprar o livro e indicar a biblioteca onde o livro será entregue/depositado\nVocê pode fazer doações diretas, em qualquer quantia, para o Pix analisesecologicasnor@gmail.com ou via PayPal (para Maurício Humberto Vancine, um dos coautores)\n\n\n\n\n  \n\n\nObservação: O valor arrecadado com a venda dos livros físicos e doações, bem como a forma como utilizaremos esses valores serão sempre informados no site do livro e nas mídias sociais com a hashtag #ecologiaR.\n\n\n\nCriamos um canal no YouTube para divulgar cursos, aulas e outros conteúdos. Inscreva-se para ter mais informações sobre o livro e o projeto."
-  },
-  {
-    "objectID": "project/ecologia-r/index.html#youtube",
-    "href": "project/ecologia-r/index.html#youtube",
-    "title": "Ecologia no R",
-    "section": "",
-    "text": "Criamos um canal no YouTube para divulgar cursos, aulas e outros conteúdos. Inscreva-se para ter mais informações sobre o livro e o projeto."
-  },
-  {
-    "objectID": "project/lsmetrics/index.html",
-    "href": "project/lsmetrics/index.html",
-    "title": "LandScape Metrics (LSMETRICS)",
-    "section": "",
-    "text": "Website\n\n\n\nLandScape Metrics (LSMETRICS)"
-  },
-  {
-    "objectID": "project/amphibr/index.html",
-    "href": "project/amphibr/index.html",
-    "title": "amphiBR",
-    "section": "",
-    "text": "Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.\nO dataset foi extraído da publicação por Segalla et al. (2021) na Revista Brasileira de Herpetologia, e disponível também no link https://zenodo.org/record/4716176\nO objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.\nDúvidas, críticas e sugestões são sempre bem-vindas!\n\n\nO pacote pode ser instalado diretamente do github:\n# install.packages(\"devtools\")\ndevtools::install_github(\"paulobarros/amphiBR\")\nlibrary(amphiBR)\n\n\n\nO dataset consiste de 1188 linhas com 49 colunas:\norder - Ordem\nfamily - Família\nsubfamily - Subfamília\nsp_num - Número da espécie na lista\ngenus - Gênero\nepithet - Epíteto específico\nspecies - Nome científico\nauthor - Autoria\nstatus - Observações\ncategory - Cateogoria de Ameaça pela Portaria MMA 300/2022\nO dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:\n&gt; segalla2021\n# A tibble: 1,188 × 49\n   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA\n        &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1          1 Anura Alloph… NA        Allo… relicta Alloph… Caram… NA     NA             DD       Yes            0     0     0     0     1\n 2          2 Anura Alloph… NA        Allo… resple… Alloph… Castr… NA     Resplendent F… LC       No             0     0     0     1     0\n 3          3 Anura Alloph… NA        Allo… ruthve… Alloph… Gaige… NA     NA             LC       No             0     0     1     1     0\n 4          4 Anura Alsodi… NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co… LC       No             0     0     0     0     0\n 5          5 Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… NA     NA             LC       Yes            0     0     0     1     0\n 6          6 Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke… NT       Yes            0     0     0     0     0\n 7          7 Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… NA     NA             LC       Yes            0     0     0     1     0\n 8          8 Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA             NA       NA            NA    NA    NA    NA    NA\n 9          9 Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… NA     NA             NA       NA            NA    NA    NA    NA    NA\n10         10 Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… NA     NA             LC       No             1     0     0     0     0\n# ℹ 1,178 more rows\n# ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,\n#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,\n#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;\n# ℹ Use `print(n = ...)` to see more rows"
-  },
-  {
-    "objectID": "project/amphibr/index.html#instalação",
-    "href": "project/amphibr/index.html#instalação",
-    "title": "amphiBR",
-    "section": "",
-    "text": "O pacote pode ser instalado diretamente do github:\n# install.packages(\"devtools\")\ndevtools::install_github(\"paulobarros/amphiBR\")\nlibrary(amphiBR)"
-  },
-  {
-    "objectID": "project/amphibr/index.html#dataset",
-    "href": "project/amphibr/index.html#dataset",
-    "title": "amphiBR",
-    "section": "",
-    "text": "O dataset consiste de 1188 linhas com 49 colunas:\norder - Ordem\nfamily - Família\nsubfamily - Subfamília\nsp_num - Número da espécie na lista\ngenus - Gênero\nepithet - Epíteto específico\nspecies - Nome científico\nauthor - Autoria\nstatus - Observações\ncategory - Cateogoria de Ameaça pela Portaria MMA 300/2022\nO dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:\n&gt; segalla2021\n# A tibble: 1,188 × 49\n   species_id order family  subfamily genus epithet species author status common_name_br category endemic_br    AC    AL    AP    AM    BA\n        &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1          1 Anura Alloph… NA        Allo… relicta Alloph… Caram… NA     NA             DD       Yes            0     0     0     0     1\n 2          2 Anura Alloph… NA        Allo… resple… Alloph… Castr… NA     Resplendent F… LC       No             0     0     0     1     0\n 3          3 Anura Alloph… NA        Allo… ruthve… Alloph… Gaige… NA     NA             LC       No             0     0     1     1     0\n 4          4 Anura Alsodi… NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co… LC       No             0     0     0     0     0\n 5          5 Anura Aromob… Allobati… Allo… bacurau Alloba… Simõe… NA     NA             LC       Yes            0     0     0     1     0\n 6          6 Anura Aromob… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke… NT       Yes            0     0     0     0     0\n 7          7 Anura Aromob… Allobati… Allo… caerul… Alloba… (Lima… NA     NA             LC       Yes            0     0     0     1     0\n 8          8 Anura Aromob… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA             NA       NA            NA    NA    NA    NA    NA\n 9          9 Anura Aromob… Allobati… Allo… carajas Alloba… Simõe… NA     NA             NA       NA            NA    NA    NA    NA    NA\n10         10 Anura Aromob… Allobati… Allo… conspi… Alloba… (Mora… NA     NA             LC       No             1     0     0     0     0\n# ℹ 1,178 more rows\n# ℹ 32 more variables: CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;, MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;,\n#   PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;, RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;, AF &lt;dbl&gt;, PAN &lt;dbl&gt;,\n#   PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;, tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;\n# ℹ Use `print(n = ...)` to see more rows"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Maurício Vancine",
-    "section": "",
-    "text": "Sou ecólogo, cientista de dados, mestre em zoologia e doutor em ecologia. Tenho experiência em ecologia espacial, com ênfase em efeitos da perda e fragmentação de habitat, modelagem de distribuição de espécies (SDM), ecologia de anfíbios, análise de dados ecológicos e geoespaciais.\nSaiba mais →"
-  },
-  {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "Licença",
-    "section": "",
-    "text": "Meus posts, palestras e ensino são distribuídos sob a licença Creative Commons Attribution-ShareAlike 4.0 International License.\nVocê tem o direito de:\n\nCompartilhar — copiar e redistribuir o material em qualquer suporte ou formato para qualquer fim, mesmo que comercial.\nAdaptar — remixar, transformar, e criar a partir do material para qualquer fim, mesmo que comercial.\nO licenciante não pode revogar estes direitos desde que você respeite os termos da licença.\n\nDe acordo com os termos seguintes:\n\nAtribuição — Você deve dar o crédito apropriado , prover um link para a licença e indicar se mudanças foram feitas. Você deve fazê-lo em qualquer circunstância razoável, mas de nenhuma maneira que sugira que o licenciante apoia você ou o seu uso.\nCompartilha Igual — Se você remixar, transformar, ou criar a partir do material, tem de distribuir as suas contribuições sob a mesma licença que o original.\nSem restrições adicionais — Você não pode aplicar termos jurídicos ou medidas de caráter tecnológico que restrinjam legalmente outros de fazerem algo que a licença permita."
-  },
-  {
-    "objectID": "course/course-ecostatr/index.html",
-    "href": "course/course-ecostatr/index.html",
-    "title": "ecostatR: ecologia estatística no R",
+    "objectID": "course/course-intror/index.html",
+    "href": "course/course-intror/index.html",
+    "title": "introR: introdução à linguagem R",
     "section": "",
     "text": "website Code"
   },
   {
-    "objectID": "course/course-ecostatr/index.html#descrição",
-    "href": "course/course-ecostatr/index.html#descrição",
-    "title": "ecostatR: ecologia estatística no R",
+    "objectID": "course/course-intror/index.html#resumo",
+    "href": "course/course-intror/index.html#resumo",
+    "title": "introR: introdução à linguagem R",
+    "section": "Resumo",
+    "text": "Resumo\nA disciplina introR apresenta os principais conceitos de controle de versão através do git e GitHub e da linguagem R para o manejo e visualização de dados através do Base R e tidyverse."
+  },
+  {
+    "objectID": "course/course-intror/index.html#descrição",
+    "href": "course/course-intror/index.html#descrição",
+    "title": "introR: introdução à linguagem R",
     "section": "Descrição",
-    "text": "Descrição\nNa ecostatR, os alunos serão apresentados aos principais da ecologia estatística."
+    "text": "Descrição\nA disciplina tem como foco principal o controle de versão com git/GitHub e a introdução à programação em R, ambos aplicados a dados ecológicos. São abordados os principais aspectos teóricos e práticos do controle de versão, incluindo o uso do software git e de repositórios remotos no GitHub. Além disso, são apresentados os principais tópicos de programação em R, desde recursos do Base R até o tidyverse, com ênfase no manejo e na visualização de dados ecológicos, bem como em tópicos avançados de programação nessa linguagem. Serão abordados os seguintes temas: (1) controle de versão com git e GitHub, (2) introdução à programação em R (Base R), (3) introdução à programação em R (tidyverse), (4) tópicos avançados em programação no R e (5) reprodutibilidade em R e GitHub. A carga horária total será de 30 horas, onde nos três dias iniciais serão ministrados 20 horas de aulas teórico-práticas. As 10 horas restantes serão direcionadas à formulação e execução de um projeto com dados reais, como forma de avaliação para compor a nota final da disciplina. Ao final da disciplina, os alunos devem ser capazes de utilizar git/GitHub para trabalho colaborativo, e aplicar fundamentos e técnicas avançadas de programação em R para o manejo e visualização de dados ecológicos."
   },
   {
-    "objectID": "course/course-ecostatr/index.html#oferecimento",
-    "href": "course/course-ecostatr/index.html#oferecimento",
-    "title": "ecostatR: ecologia estatística no R",
+    "objectID": "course/course-intror/index.html#oferecimento",
+    "href": "course/course-intror/index.html#oferecimento",
+    "title": "introR: introdução à linguagem R",
     "section": "Oferecimento",
-    "text": "Oferecimento"
+    "text": "Oferecimento\n\nPós-Graduação em Ciências Biológicas. (2025). Universidade Federal da Paraíba (UFPB), Centro de Ciências Exatas e da Natureza, João Pessoa, PB, Brasil."
   },
   {
-    "objectID": "course/index.html",
-    "href": "course/index.html",
-    "title": "Ensino",
+    "objectID": "course/course-sdmr/index.html",
+    "href": "course/course-sdmr/index.html",
+    "title": "sdmR: modelagem de distribuição de espécies no R",
     "section": "",
-    "text": "Ordenar por\n      Padrão\n      \n        Título\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\necostatR: ecologia estatística no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nespR: ecologia espacial no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\ngeoR: geoprocessamento no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nintroR: introdução à linguagem R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\n\n\n\n\n\n\n\nsdmR: modelagem de distribuição de espécies no R\n\n\n\nMaurício Vancine\n\n\n\n\n\n\nSem itens correspondentes\n\n\n\n↑ Topo"
+    "text": "website Code"
+  },
+  {
+    "objectID": "course/course-sdmr/index.html#descrição",
+    "href": "course/course-sdmr/index.html#descrição",
+    "title": "sdmR: modelagem de distribuição de espécies no R",
+    "section": "Descrição",
+    "text": "Descrição\nNa sdmR, os alunos serão apresentados aos principais conceitos teóricos e práticos sobre modelagem de distribuição de espécies utilizando a linguagem R. Serão abordados os temas: (1) conceituação teórica, (2) dados de ocorrências e variáveis ambientais, (3) ajustes dos modelos, (4) avaliação dos modelos, (5) predição dos modelos e (6) aplicações."
+  },
+  {
+    "objectID": "course/course-sdmr/index.html#oferecimento",
+    "href": "course/course-sdmr/index.html#oferecimento",
+    "title": "sdmR: modelagem de distribuição de espécies no R",
+    "section": "Oferecimento",
+    "text": "Oferecimento\n\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2016). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nPrograma de Pós-graduação em Ecologia. (2016). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil.\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2017). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil."
+  },
+  {
+    "objectID": "course/course-geor/index.html",
+    "href": "course/course-geor/index.html",
+    "title": "geoR: geoprocessamento no R",
+    "section": "",
+    "text": "website Code"
+  },
+  {
+    "objectID": "course/course-geor/index.html#descrição",
+    "href": "course/course-geor/index.html#descrição",
+    "title": "geoR: geoprocessamento no R",
+    "section": "Descrição",
+    "text": "Descrição\nNa geoR, os alunos serão apresentados aos principais conceitos teóricos e práticos do funcionamento da linguagem R para o geoprocessamento. Serão abordados temas como estrutura e fonte, e visualização de dados geoespaciais."
+  },
+  {
+    "objectID": "course/course-geor/index.html#oferecimento",
+    "href": "course/course-geor/index.html#oferecimento",
+    "title": "geoR: geoprocessamento no R",
+    "section": "Oferecimento",
+    "text": "Oferecimento\n\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2021). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nPrograma de Pós-graduação em Ecologia, Evolução e Biodiversidade. (2020). Universidade Estadual Paulista (Unesp), Rio Claro, SP, Brasil.\nPrograma de Pós-graduação em Etnobiologia e Conservação da Biodiversidade. (2019). Universidade Federal Rural de Pernambuco (UFRPE), Recife, PE, Brasil."
   },
   {
     "objectID": "course/course-spar/index.html",

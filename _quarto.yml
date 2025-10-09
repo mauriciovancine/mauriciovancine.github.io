@@ -22,10 +22,10 @@ website:
       - text: Palestras
         aria-label: "Palestras"
         href: talk/index.qmd  
-      - text: Ensino
+      - text: Cursos
         aria-label: "Cursos"
         href: workshop/index.qmd
-      - text: Ensino
+      - text: Disciplinas
         aria-label: "Disciplinas"
         href: course/index.qmd
       - text: Projetos

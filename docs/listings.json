@@ -26,17 +26,14 @@
     ]
   },
   {
-    "listing": "/project/index.html",
+    "listing": "/course/index.html",
     "items": [
-      "/project/atlantic-amphibians/index.html",
-      "/project/atlantic-spatial/index.html",
-      "/project/ecologia-r/index.html",
-      "/project/gere/index.html",
-      "/project/gymnophiona/index.html",
-      "/project/lsmetrics/index.html",
-      "/project/mapbiomas_degradacao/index.html",
-      "/project/amphibr/index.html",
-      "/project/atlanticr/index.html"
+      "/course/course-reproductibility/index.html",
+      "/course/course-ecostatr/index.html",
+      "/course/course-spar/index.html",
+      "/course/course-geor/index.html",
+      "/course/course-intror/index.html",
+      "/course/course-sdmr/index.html"
     ]
   },
   {
@@ -65,13 +62,17 @@
     ]
   },
   {
-    "listing": "/course/index.html",
+    "listing": "/project/index.html",
     "items": [
-      "/course/course-ecostatr/index.html",
-      "/course/course-spar/index.html",
-      "/course/course-geor/index.html",
-      "/course/course-intror/index.html",
-      "/course/course-sdmr/index.html"
+      "/project/atlantic-amphibians/index.html",
+      "/project/atlantic-spatial/index.html",
+      "/project/ecologia-r/index.html",
+      "/project/gere/index.html",
+      "/project/gymnophiona/index.html",
+      "/project/lsmetrics/index.html",
+      "/project/mapbiomas_degradacao/index.html",
+      "/project/amphibr/index.html",
+      "/project/atlanticr/index.html"
     ]
   },
   {
