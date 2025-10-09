@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.9.2">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Maurício Vancine">
 <title>Big Data no R: como ler um conjunto de dados maior que a RAM – Maurício Vancine</title>
@@ -65,14 +65,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../img/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dcbfc9b4997259b7a423ce661e125a10.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cd3c9c2e6a7570597db7fcfacb1c1243.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b44a5a1ecd8e148dd4bf7172770127e6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e8b6ce8f6797ea4a9334ddb13506f06e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -107,6 +108,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Maurício Vancine</span>
     </a>
@@ -130,7 +133,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Palestras</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching/index.html"> 
+    <a class="nav-link" href="../../workshop/index.html"> 
+<span class="menu-text">Ensino</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../course/index.html"> 
 <span class="menu-text">Ensino</span></a>
   </li>  
   <li class="nav-item">
@@ -219,11 +226,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Dessa forma, se eu tenho um computador com 16 Gb de RAM, em teoria eu poderia importar e manejar um conjunto de dados de 16 Gb. Entretanto, na prática, a quantidade de memória disponível para o R é menor do que a quantidade total de RAM, pois parte dela é usada pelo sistema operacional e outros processos. Uma parte da memória RAM está sempre sendo usada pelo sistema operacional, e além disso, cada nova atribuição de dados no R vai necessitar alocar o objeto em uma nova parte da RAM.</p>
 <p>Verifique a quantidade de memória RAM do seu computador no R:</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># install.packages("memuse")</span></span>
-<span><span class="fu">memuse</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/memuse/man/meminfo.html">Sys.meminfo</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># install.packages("memuse")</span></span>
+<span><span class="fu">memuse</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/memuse/man/meminfo.html">Sys.meminfo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Totalram:  15.459 GiB 
-Freeram:    7.117 GiB </code></pre>
+Freeram:    7.797 GiB </code></pre>
 </div>
 </div>
 <p>Há diversas opções para contornar essa limitação e trabalhar com dados gigantes no R, mas aqui vou explorar um pacote específico e um conjunto de dados que tive que trabalhar recentemente.</p>
@@ -245,7 +252,7 @@ Freeram:    7.117 GiB </code></pre>
 <p>Para mais detalhes do funcionamento do pacote arrow, consultar o capítulo <a href="https://cienciadedatos.github.io/pt-r4ds/arrow.html">22 Arrow</a> do <a href="https://cienciadedatos.github.io/pt-r4ds/">R para Ciência de Dados 2ªed</a>.</p>
 <p>Vamos ler os dados:</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># packages</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/apache/arrow/">arrow</a></span><span class="op">)</span></span>
 <span></span>
@@ -257,28 +264,28 @@ Freeram:    7.117 GiB </code></pre>
 <span>                                        read_options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
 <span>                                            block_size <span class="op">=</span> <span class="fl">1000000000L</span>, </span>
 <span>                                            use_threads <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">ebird_data</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">ebird_data</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Esse banco de dados é cheio de problemas, então tive que fazer alguns testes com vários parâmetros para fazer com que a leitura funcionasse.</p>
 <p>O código acima apenas lê os dados sem carregá-los completamente na memória do R. Dessa forma, com os códigos abaixo é possível fazer um filtro dos dados que precisamos, por exemplo, para o joão-de-barro (<em>Furnarius rufus</em>) [adoro esse bicho], depois de 1985 e para algumas colunas de interesse.</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># filter</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># filter</span></span>
 <span><span class="va">ebird_data_filter</span> <span class="op">&lt;-</span> <span class="va">ebird_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">species</span> <span class="op">==</span> <span class="st">"Furnarius rufus"</span>,</span>
 <span>                  <span class="va">year</span> <span class="op">&gt;=</span> <span class="fl">1985</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">species</span>, <span class="va">decimalLongitude</span>, <span class="va">decimalLatitude</span>, <span class="va">year</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/compute.html">collect</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="va">ebird_data_filter</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">ebird_data_filter</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Entretanto, mesmo num notebook parrudo (Intel i7 e 64 Gb de RAM) demorou 2:45 h para fazer o filtro.</p>
 <p>Acabei atribuindo os dados a um objeto, mas talvez fosse mais interessante exportar o arquivo diretamente para evitar o uso excessivo de memória.</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># filter</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># filter</span></span>
 <span><span class="va">ebird_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">species</span> <span class="op">==</span> <span class="st">"Furnarius rufus"</span>,</span>
 <span>                  <span class="va">year</span> <span class="op">&gt;=</span> <span class="fl">1985</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">species</span>, <span class="va">decimalLongitude</span>, <span class="va">decimalLatitude</span>, <span class="va">year</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>    <span class="fu">readr</span><span class="fu">::</span><span class="fu">write</span><span class="op">(</span><span class="st">"ebird_furnarius_rufus.csv"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>    <span class="fu">readr</span><span class="fu">::</span><span class="fu">write</span><span class="op">(</span><span class="st">"ebird_furnarius_rufus.csv"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Há ainda muitos pontos para eu estudar do pacote arrow, como o formato <a href="https://parquet.apache.org/">parquet</a>, que parece ser muito mais interessante do que o CSV. Sendo assim, vale ler mais o capítulo <a href="https://cienciadedatos.github.io/pt-r4ds/arrow.html">22 Arrow</a> do <a href="https://cienciadedatos.github.io/pt-r4ds/">R para Ciência de Dados 2ªed</a>.</p>
 </section><section id="saiba-mais" class="level2"><h2 class="anchored" data-anchor-id="saiba-mais">Saiba mais</h2>
@@ -339,13 +346,14 @@ Freeram:    7.117 GiB </code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

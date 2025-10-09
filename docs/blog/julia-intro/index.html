@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.9.2">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Maurício Vancine com edições de textos do ChatGPT">
 <title>Introdução à linguagem Julia – Maurício Vancine</title>
@@ -65,14 +65,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../img/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dcbfc9b4997259b7a423ce661e125a10.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cd3c9c2e6a7570597db7fcfacb1c1243.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b44a5a1ecd8e148dd4bf7172770127e6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e8b6ce8f6797ea4a9334ddb13506f06e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -107,6 +108,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Maurício Vancine</span>
     </a>
@@ -130,7 +133,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Palestras</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching/index.html"> 
+    <a class="nav-link" href="../../workshop/index.html"> 
+<span class="menu-text">Ensino</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../course/index.html"> 
 <span class="menu-text">Ensino</span></a>
   </li>  
   <li class="nav-item">
@@ -267,11 +274,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section><section id="instalação" class="level3"><h3 class="anchored" data-anchor-id="instalação">Instalação</h3>
 <p>A instalação da linguagem <strong>Julia</strong> é simples e direta. Eu achei muito prático acessar o site oficial <a href="https://julialang.org">https://julialang.org/</a>, depois clicar em <em>Download</em>, copiar o código que eles fornecem e colar no terminal Linux ou MacOS.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>curl <span class="sc">-</span>fsSL https<span class="sc">:</span><span class="er">//</span>install.julialang.org <span class="sc">|</span> sh</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>curl <span class="sc">-</span>fsSL https<span class="sc">:</span><span class="er">//</span>install.julialang.org <span class="sc">|</span> sh</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>No Windows é igualmente simples, basta abrir o prompt de comando e colar.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>winget install julia <span class="sc">-</span>s msstore</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>winget install julia <span class="sc">-</span>s msstore</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Depois disso, para saber se a instalação deu certo, basta:</p>
 <ol type="1">
@@ -279,7 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Digitar:</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">julia</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">julia</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ol start="3" type="1">
 <li>O REPL (ambiente interativo, veja mais adiante) de Julia será carregado, exibindo algo como: <img src="img/julia_repl.png" class="img-fluid">
@@ -287,22 +294,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Assim que Julia estiver instalada, é uma boa prática atualizar os pacotes principais:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>using Pkg</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Pkg.update</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>using Pkg</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Pkg.update</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="editor-ide-e-notebooks" class="level3"><h3 class="anchored" data-anchor-id="editor-ide-e-notebooks">Editor, IDE e notebooks</h3>
 <p>A linguagem <strong>Julia</strong> não possui um editor ou um IDE próprio como o RStudio do R. Sendo assim, é preciso instalar funcionalidades extras. Os mais comuns são:</p>
 <p><strong>1. Visual Studio Code (VS Code):</strong> editor de código leve com suporte oficial para Julia via extensão. Instale o <a href="https://code.visualstudio.com/">VS Code</a>, adicione a <a href="https://www.julia-vscode.org/">extensão Julia</a>. Essa foi a opção que escolhi, apesar do Pluto sem bastante interessante.</p>
 <p><strong>2. Jupyter Notebook:</strong> Ambiente interativo usado com o pacote <code>IJulia</code>. Instale o <a href="https://jupyter.org/">Jupyter</a> com <code>pip install notebook</code> e adicione <code>IJulia</code> no Julia REPL.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>using Pkg</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Pkg.add</span>(<span class="st">"IJulia"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>using Pkg</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Pkg.add</span>(<span class="st">"IJulia"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>3. Pluto.jl:</strong> Notebook interativo para Julia com cálculos reativos. Instale o <code>Pluto</code> no REPL e inicie com <code>Pluto.run()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>using Pkg</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>using Pkg</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Pkg.add</span>(<span class="st">"Pluto"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>using Pluto; <span class="fu">Pluto.run</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>using Pluto; <span class="fu">Pluto.run</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>4. Emacs/Vim/Sublime:</strong> Editores avançados configuráveis com plugins para Julia (<code>julia-mode</code>, <code>vim-julia</code> ou <code>julia</code>). Configure manualmente adicionando os plugins apropriados.</p>
 </section><section id="usando-a-linguagem-julia-e-o-repl" class="level3"><h3 class="anchored" data-anchor-id="usando-a-linguagem-julia-e-o-repl">Usando a linguagem Julia e o REPL</h3>
@@ -321,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Por exemplo, se você abrir o REPL e digitar:</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">2</span> <span class="op">+</span> <span class="fl">3</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">2</span> <span class="op">+</span> <span class="fl">3</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>O REPL vai: - <strong>Ler</strong> o comando <code>2 + 3</code> - <strong>Avaliar</strong> o cálculo (somar os números) - <strong>Imprimir</strong> o resultado (<code>5</code>) - E então esperar pelo próximo comando</p>
 <p>O REPL do Julia é mais do que apenas um lugar para rodar comandos, ele tem <strong>modos especiais</strong> que facilitam tarefas diferentes, e que vão ficar com cores diferentes:</p>
@@ -422,7 +429,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="img/julia_vs_code.png" class="img-fluid"></p>
 <p>Há ainda a forma de executar o script todo de <strong>Julia</strong>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">include</span><span class="op">(</span><span class="st">"meu_script_julia.jl"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">include</span><span class="op">(</span><span class="st">"meu_script_julia.jl"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="jupyter-notebook-e-pluto" class="level3"><h3 class="anchored" data-anchor-id="jupyter-notebook-e-pluto">Jupyter notebook e Pluto</h3>
 <p>O uso do <strong>Julia</strong> no <a href="https://jupyter.org/">Jupyter Notebook</a> permite que você escreva e execute código <strong>Julia</strong> de forma interativa, com suporte para visualizações e documentação inline. Jupyter oferece um ambiente flexível para análise e experimentação, e o Julia pode ser integrado a ele de maneira simples.</p>
@@ -471,27 +478,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Comentários são feitos com <code>#</code> ou com <code>#=</code> e <code>=#</code> para linhas múltiplas.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># julia</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># julia</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#=</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>julia1</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>julia2</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ot">=</span><span class="co">#</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ot">=</span><span class="co">#</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Operadores matemáticos são familiares e a linguagem tem suporte a operações vetoriais.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">a</span> <span class="op">=</span> <span class="fl">10</span> <span class="op">+</span> <span class="fl">5</span>     <span class="co"># Aritmética</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">a</span> <span class="op">=</span> <span class="fl">10</span> <span class="op">+</span> <span class="fl">5</span>     <span class="co"># Aritmética</span></span>
 <span><span class="va">b</span> <span class="op">=</span> <span class="va">a</span> <span class="op">&gt;</span> <span class="fl">5</span>      <span class="co"># Comparação</span></span>
-<span><span class="va">c</span> <span class="op">=</span> <span class="va">a</span> <span class="op">&amp;&amp;</span> <span class="va">b</span>     <span class="co"># Lógico</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">c</span> <span class="op">=</span> <span class="va">a</span> <span class="op">&amp;&amp;</span> <span class="va">b</span>     <span class="co"># Lógico</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Atribuição com <code>=</code>, permitindo múltiplas variáveis.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">10</span>  <span class="co"># Atribui o valor 10 à variável x</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>x, y <span class="ot">=</span> <span class="dv">10</span>, <span class="dv">20</span>  <span class="co"># Atribui 10 a x e 20 a y</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">10</span>  <span class="co"># Atribui o valor 10 à variável x</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>x, y <span class="ot">=</span> <span class="dv">10</span>, <span class="dv">20</span>  <span class="co"># Atribui 10 a x e 20 a y</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>
@@ -510,11 +517,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <em>Strings</em>: “texto”<br>
 </li>
 <li>
-<em>Coleções</em>: Arrays, Tuplas, Dicionários, etc. <code>mwh #| eval: false a = 5          # Int64 b = 3.5        # Float64 c = true       # Booleano nome = "Julia" # String</code>
+<em>Coleções</em>: Arrays, Tuplas, Dicionários, etc. <code>lgk #| eval: false a = 5          # Int64 b = 3.5        # Float64 c = true       # Booleano nome = "Julia" # String</code>
 </li>
 </ul>
 </li>
-<li><p>Tipagem dinâmica, mas com suporte a tipagem explícita. ```mwh #| eval: false # tipagem dinamica x = 10 typeof(x)</p></li>
+<li><p>Tipagem dinâmica, mas com suporte a tipagem explícita. ```lgk #| eval: false # tipagem dinamica x = 10 typeof(x)</p></li>
 </ul></section></section><section id="tipagem-explicita" class="level1"><h1>tipagem explicita</h1>
 <p>y::Float64 = 10 # x é do tipo Int typeof(y)</p>
 <pre><code>
@@ -530,7 +537,7 @@ f(x) = x^2
 # usar a funcao
 f(10)</code></pre>
 <ul>
-<li>Condicionais e laços seguem a estrutura clássica de outras linguagens (como <code>if</code>, <code>for</code> e <code>while</code>). Atentar para o <code>end</code> para finalizar uma declaração. ```mwh #| eval: false # condicional if x &gt; 0 println(“Positivo”) elseif x &lt; 0 println(“Negativo”) else println(“Zero”) end</li>
+<li>Condicionais e laços seguem a estrutura clássica de outras linguagens (como <code>if</code>, <code>for</code> e <code>while</code>). Atentar para o <code>end</code> para finalizar uma declaração. ```lgk #| eval: false # condicional if x &gt; 0 println(“Positivo”) elseif x &lt; 0 println(“Negativo”) else println(“Zero”) end</li>
 </ul></section><section id="for" class="level1"><h1>for</h1>
 <p>for i in 1:5 println(i) end</p>
 </section><section id="while" class="level1"><h1>while</h1>
@@ -544,7 +551,7 @@ arr = [1, 2, 3, 4, 5]  # Vetor com 5 elementos
 # matriz
 matrix = [1 2 3; 4 5 6]  # Matriz 2x3</code></pre>
 <ul>
-<li>Tupla é uma estrutura de dados imutável e dicionário é uma estrutura de dados mutável que armazena pares chave-valor ```mwh #| eval: false # tupla t = (1, “Julia”, 3.14)</li>
+<li>Tupla é uma estrutura de dados imutável e dicionário é uma estrutura de dados mutável que armazena pares chave-valor ```lgk #| eval: false # tupla t = (1, “Julia”, 3.14)</li>
 </ul></section><section id="dicionario" class="level1"><h1>dicionario</h1>
 <p>d = Dict(“nome” =&gt; “Julia”, “idade” =&gt; 10, “linguagem” =&gt; “programação”)</p>
 <pre><code>
@@ -571,23 +578,23 @@ saudacao("Julia")</code></pre>
 <li>Instalação</li>
 </ol>
 <ul>
-<li>Via registro oficial: <code>mwh #| eval: false using Pkg Pkg.add("NomeDoPacote")</code>
+<li>Via registro oficial: <code>lgk #| eval: false using Pkg Pkg.add("NomeDoPacote")</code>
 </li>
-<li>De repositórios específicos: <code>mwh #| eval: false Pkg.add(url="https://github.com/usuario/pacote.git")</code>
+<li>De repositórios específicos: <code>lgk #| eval: false Pkg.add(url="https://github.com/usuario/pacote.git")</code>
 </li>
 </ul>
 <ol start="2" type="1">
-<li><p>Carregamento Depois de instalado, um pacote pode ser usado carregando-o, entretanto, nenhuma mensagem é devolvida no REPL: <code>mwh #| eval: false using NomeDoPacote</code></p></li>
+<li><p>Carregamento Depois de instalado, um pacote pode ser usado carregando-o, entretanto, nenhuma mensagem é devolvida no REPL: <code>lgk #| eval: false using NomeDoPacote</code></p></li>
 <li><p>Atualização<br>
-Atualiza todos os pacotes instalados para as versões mais recentes compatíveis: <code>mwh #| eval: false Pkg.update()</code></p></li>
+Atualiza todos os pacotes instalados para as versões mais recentes compatíveis: <code>lgk #| eval: false Pkg.update()</code></p></li>
 <li><p>Remoção<br>
-Remove um pacote do ambiente: <code>mwh #| eval: false Pkg.rm("NomeDoPacote")</code></p></li>
+Remove um pacote do ambiente: <code>lgk #| eval: false Pkg.rm("NomeDoPacote")</code></p></li>
 <li><p>Listagem de pacotes instalados<br>
-Exibe os pacotes no ambiente atual: <code>mwh #| eval: false Pkg.status()</code></p></li>
+Exibe os pacotes no ambiente atual: <code>lgk #| eval: false Pkg.status()</code></p></li>
 <li><p>Ativação de ambientes<br>
-Os ambientes controlam versões de pacotes e dependências para projetos específicos, veja mais logo em seguida: <code>mwh #| eval: false Pkg.activate("caminho/do/ambiente")</code></p></li>
+Os ambientes controlam versões de pacotes e dependências para projetos específicos, veja mais logo em seguida: <code>lgk #| eval: false Pkg.activate("caminho/do/ambiente")</code></p></li>
 <li><p>Criação de pacotes<br>
-Para criar pacotes personalizados: <code>mwh #| eval: false Pkg.generate("NomeDoPacote")</code> Alguns pacotes amplamente usados:</p></li>
+Para criar pacotes personalizados: <code>lgk #| eval: false Pkg.generate("NomeDoPacote")</code> Alguns pacotes amplamente usados:</p></li>
 </ol>
 <ul>
 <li>
@@ -608,21 +615,21 @@ Para criar pacotes personalizados: <code>mwh #| eval: false Pkg.generate("NomeDo
 <p>Para criar e gerenciar ambientes, utiliza-se o <strong>Pkg</strong>. O fluxo básico é o seguinte:</p>
 <ol type="1">
 <li><p>Criar um novo ambiente<br>
-Para iniciar um novo ambiente, basta ativá-lo em um diretório vazio ou específico: <code>mwh #| eval: false using Pkg Pkg.activate("caminho/do/ambiente")</code> Isso cria um novo ambiente com os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</p></li>
+Para iniciar um novo ambiente, basta ativá-lo em um diretório vazio ou específico: <code>lgk #| eval: false using Pkg Pkg.activate("caminho/do/ambiente")</code> Isso cria um novo ambiente com os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</p></li>
 <li><p>Instalar pacotes em um ambiente<br>
-Depois de ativar um ambiente, você pode adicionar pacotes que serão isolados nesse ambiente: <code>mwh #| eval: false Pkg.add("NomeDoPacote")</code></p></li>
+Depois de ativar um ambiente, você pode adicionar pacotes que serão isolados nesse ambiente: <code>lgk #| eval: false Pkg.add("NomeDoPacote")</code></p></li>
 <li><p>Listar pacotes no ambiente ativo<br>
-Para ver quais pacotes estão instalados no ambiente ativo: <code>mwh #| eval: false Pkg.status()</code></p></li>
+Para ver quais pacotes estão instalados no ambiente ativo: <code>lgk #| eval: false Pkg.status()</code></p></li>
 <li><p>Voltar ao ambiente global<br>
-Para voltar ao ambiente global (onde pacotes são instalados no diretório padrão), basta ativá-lo: <code>mwh #| eval: false Pkg.activate()  # Ativa o ambiente global</code></p></li>
+Para voltar ao ambiente global (onde pacotes são instalados no diretório padrão), basta ativá-lo: <code>lgk #| eval: false Pkg.activate()  # Ativa o ambiente global</code></p></li>
 <li><p>Ambientes em projetos<br>
 Para projetos específicos, você pode criar um ambiente no diretório do projeto, o que garante que o projeto use as versões exatas dos pacotes que você deseja. Isso também facilita a colaboração, pois outros usuários podem instalar as dependências exatas usando os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</p></li>
 </ol>
 <p>Ambientes isolam dependências, ou seja, ambientes diferentes podem ter diferentes versões de pacotes, o que evita conflitos entre projetos. Almentam a reprodutibilidade, isto é, os arquivos <code>Project.toml</code> e <code>Manifest.toml</code> garantem que o projeto pode ser facilmente replicado em outras máquinas ou por outras pessoas. E facilidade de gerenciamento, uma vez que trabalhar com ambientes separados permite que você organize e mantenha seus projetos de maneira mais eficiente, especialmente quando se lida com muitas dependências.</p>
-<p>Exemplo de Fluxo de Trabalho com Ambientes 1. Crie um diretório para o seu projeto e ative um novo ambiente: <code>mwh #| eval: false mkdir("meu_projeto") cd("meu_projeto") Pkg.activate(".")</code></p>
+<p>Exemplo de Fluxo de Trabalho com Ambientes 1. Crie um diretório para o seu projeto e ative um novo ambiente: <code>lgk #| eval: false mkdir("meu_projeto") cd("meu_projeto") Pkg.activate(".")</code></p>
 <ol start="2" type="1">
-<li><p>Adicione pacotes necessários para o projeto: <code>mwh #| eval: false Pkg.add("DataFrames") Pkg.add("Plots")</code></p></li>
-<li><p>Depois de terminar o trabalho, você pode gerar o arquivo <code>Manifest.toml</code> para garantir que qualquer pessoa que usar o projeto tenha as mesmas versões de pacotes: <code>mwh #| eval: false Pkg.instantiate()  # Para instalar as dependências listadas</code></p></li>
+<li><p>Adicione pacotes necessários para o projeto: <code>lgk #| eval: false Pkg.add("DataFrames") Pkg.add("Plots")</code></p></li>
+<li><p>Depois de terminar o trabalho, você pode gerar o arquivo <code>Manifest.toml</code> para garantir que qualquer pessoa que usar o projeto tenha as mesmas versões de pacotes: <code>lgk #| eval: false Pkg.instantiate()  # Para instalar as dependências listadas</code></p></li>
 </ol>
 <p>Em resumo, os ambientes em Julia proporcionam um controle flexível e eficiente sobre as dependências do projeto, melhorando a reprodutibilidade e o isolamento de pacotes, essenciais para trabalhar com projetos complexos ou múltiplos.</p>
 </section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
@@ -743,13 +750,14 @@ window.addEventListener("scroll", () => {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

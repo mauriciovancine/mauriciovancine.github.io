@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.9.2">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Maurício Vancine">
 <title>Corrigir coordenadas geográficas usando o R – Maurício Vancine</title>
@@ -65,14 +65,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../img/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dcbfc9b4997259b7a423ce661e125a10.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cd3c9c2e6a7570597db7fcfacb1c1243.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b44a5a1ecd8e148dd4bf7172770127e6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e8b6ce8f6797ea4a9334ddb13506f06e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -107,6 +108,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Maurício Vancine</span>
     </a>
@@ -130,7 +133,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Palestras</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching/index.html"> 
+    <a class="nav-link" href="../../workshop/index.html"> 
+<span class="menu-text">Ensino</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../course/index.html"> 
 <span class="menu-text">Ensino</span></a>
   </li>  
   <li class="nav-item">
@@ -218,19 +225,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>O pacote possui apenas 12 funções, que possuem a principal função de corrigir coordenadas geográficas de longitude e latitude (graus). Até onde entendi, não funcionam com coordenadas projetadas (metros).</p>
 <p>A instalação é usual de qualquer pacote:</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># instalar pacote</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"parzer"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># instalar pacote</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"parzer"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Depois basta carregar:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># carregar pacote</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/parzer">parzer</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># carregar pacote</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/parzer">parzer</a></span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="uso" class="level2"><h2 class="anchored" data-anchor-id="uso">Uso</h2>
 <p>A correção das coordenadas pode ser feito separadamente para longitude ou latitude. Para valores inválidos, i.e., fora do limites de longitude (-180 a 360) e de latitude (-90 a 90), há retorno de um aviso com o valor <code>NA</code>. Ainda há a possibilidade de extrair parte das coordenadas, adicionar ou subtrair coordenadas e informar o hemisfério.</p>
 <p>O interessante é que pacote reconhece toda confusão que existe com os valores de longitude.</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon.html">parse_lon</a></span><span class="op">(</span><span class="st">"45W54.2356"</span><span class="op">)</span></span>
 <span><span class="co">## [1] -45.90393</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon.html">parse_lon</a></span><span class="op">(</span><span class="st">"-45.98739874"</span><span class="op">)</span></span>
@@ -250,11 +257,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co"># varios valores</span></span>
 <span><span class="va">lon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"45W54.2356"</span>, <span class="st">"181"</span>, <span class="fl">45</span>, <span class="fl">45.234234</span>, <span class="st">"-45.98739874"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lon.html">parse_lon</a></span><span class="op">(</span><span class="va">lon</span><span class="op">)</span></span>
-<span><span class="co">## [1] -45.90393 181.00000  45.00000  45.23423 -45.98740</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## [1] -45.90393 181.00000  45.00000  45.23423 -45.98740</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>O mesmo vale para latitudes.</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># latitude</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># latitude</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lat.html">parse_lat</a></span><span class="op">(</span><span class="st">"45N54.2356"</span><span class="op">)</span></span>
 <span><span class="co">## [1] 45.90393</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_lat.html">parse_lat</a></span><span class="op">(</span><span class="st">"-45.98739874"</span><span class="op">)</span></span>
@@ -283,11 +290,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co">## Warning in base::.Call(...): invalid direction letter, got: 40.123n74.123w</span></span>
 <span><span class="co">## Warning in base::.Call(...): not within -90/90 range, got: 191.89</span></span>
 <span><span class="co">##   check that you did not invert lon and lat</span></span>
-<span><span class="co">## [1] 40.12300       NA       NA 12.00000 45.07096</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## [1] 40.12300       NA       NA 12.00000 45.07096</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Mas ainda é possível fazer as correções para longitude e latitude ao mesmo tempo.</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude e latitude</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude e latitude</span></span>
 <span><span class="va">lon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"45W54.2356"</span>, <span class="st">"181"</span>, <span class="fl">45</span>, <span class="fl">45.234234</span>, <span class="st">"-45.98739874"</span><span class="op">)</span></span>
 <span><span class="va">lat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"40.123°"</span>, <span class="st">"40.123N"</span>, <span class="fl">40</span>, <span class="fl">12</span>, <span class="st">"N45 04.25764"</span><span class="op">)</span></span>
 <span></span>
@@ -298,11 +305,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co">## 2 181.00000 40.12300</span></span>
 <span><span class="co">## 3  45.00000 40.00000</span></span>
 <span><span class="co">## 4  45.23423 12.00000</span></span>
-<span><span class="co">## 5 -45.98740 45.07096</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## 5 -45.98740 45.07096</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>E uma das funções mais interessantes, longitudes e latitudes na mesma sequência.</p>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude e latitude</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude e latitude</span></span>
 <span><span class="va">lat_lon_strings</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
 <span>  <span class="st">"40.123°, 45W54.2356"</span>,</span>
 <span>  <span class="st">"N40.123 E181.456"</span>,</span>
@@ -318,11 +325,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co">## 2 40.12300 181.45600</span></span>
 <span><span class="co">## 3 40.00000  45.00000</span></span>
 <span><span class="co">## 4 12.97860  45.23423</span></span>
-<span><span class="co">## 5 45.07096 -45.98740</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## 5 45.07096 -45.98740</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Separar em partes de graus, minutos e segundos.</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># uma coordenada</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># uma coordenada</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_parts.html">parse_parts_lon</a></span><span class="op">(</span><span class="st">"-74.6411133"</span><span class="op">)</span></span>
 <span><span class="co">##   deg min      sec</span></span>
 <span><span class="co">## 1 -74  38 28.00788</span></span>
@@ -351,11 +358,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co">## 2  NA  NA   NA</span></span>
 <span><span class="co">## 3 191  53 24.0</span></span>
 <span><span class="co">## 4  12   0  0.0</span></span>
-<span><span class="co">## 5  NA  NA   NA</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## 5  NA  NA   NA</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Obter graus, minutos ou segundos separadamente.</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude </span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># longitude </span></span>
 <span><span class="va">coords</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">15.23323</span>, <span class="st">"40:25:6E"</span>, <span class="st">"192° 25´ 5.994\" E"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># graus</span></span>
@@ -383,11 +390,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span></span>
 <span><span class="co"># segundos</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_second</a></span><span class="op">(</span>lat <span class="op">=</span> <span class="va">coords</span><span class="op">)</span></span>
-<span><span class="co">## [1] 59.628  6.000  5.994</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## [1] 59.628  6.000  5.994</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Adicionar ou subtrair graus, minutos ou segundos.</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># coordenada</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># coordenada</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_d</a></span><span class="op">(</span><span class="fl">31</span><span class="op">)</span></span>
 <span><span class="co">## 31</span></span>
 <span></span>
@@ -405,11 +412,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span></span>
 <span><span class="co"># adicao de minutos e segundos</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_d</a></span><span class="op">(</span><span class="op">-</span><span class="fl">121</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_m</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://docs.ropensci.org/parzer/reference/dms.html">pz_s</a></span><span class="op">(</span><span class="fl">33</span><span class="op">)</span></span>
-<span><span class="co">## -120.9742</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## -120.9742</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Obter hemisfério a partir das coordenadas.</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># hemisferios</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># hemisferios</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_hemisphere.html">parse_hemisphere</a></span><span class="op">(</span><span class="st">"74.123E"</span>, <span class="st">"45N54.2356"</span><span class="op">)</span></span>
 <span><span class="co">## [1] "NE"</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_hemisphere.html">parse_hemisphere</a></span><span class="op">(</span><span class="st">"-120"</span>, <span class="st">"40.4183318"</span><span class="op">)</span></span>
@@ -417,7 +424,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_hemisphere.html">parse_hemisphere</a></span><span class="op">(</span><span class="st">"-120"</span>, <span class="st">"-40.4183318"</span><span class="op">)</span></span>
 <span><span class="co">## [1] "SW"</span></span>
 <span><span class="fu"><a href="https://docs.ropensci.org/parzer/reference/parse_hemisphere.html">parse_hemisphere</a></span><span class="op">(</span><span class="st">"120"</span>, <span class="st">"-40.4183318"</span><span class="op">)</span></span>
-<span><span class="co">## [1] "SE"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## [1] "SE"</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Fonte da imagem: <a href="https://www.pexels.com/pt-br/foto/close-up-de-bussola-em-fundo-de-madeira-32563237/">Nancy Zjaba/Pexels</a>.</p>
 <style>
@@ -510,13 +517,14 @@ window.addEventListener("scroll", () => {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

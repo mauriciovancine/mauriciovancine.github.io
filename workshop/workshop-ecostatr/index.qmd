@@ -1,0 +1,40 @@
+---
+title: "ecostatR: análise estatística de dados no R"
+subtitle: "Curso de análise estatística de dados utilizando a linguagem R."
+author: Maurício Vancine
+image: featured-hex.png
+categories: ["R", "Estatística"]
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://mauriciovancine.github.io/workshop-r-data-analysis/slides/index.html" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-link me-1"></i>website</a>
+  <a href="https://github.com/mauriciovancine/workshop-r-data-analysis" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+# **spaR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+
+## Descrição
+
+Na spaR, os alunos serão apresentados aos principais conceitos teóricos da análise de dados. 
+
+## Oferecimento
+

@@ -23,8 +23,11 @@ website:
         aria-label: "Palestras"
         href: talk/index.qmd  
       - text: Ensino
-        aria-label: "Ensino"
-        href: teaching/index.qmd  
+        aria-label: "Cursos"
+        href: workshop/index.qmd
+      - text: Ensino
+        aria-label: "Disciplinas"
+        href: course/index.qmd
       - text: Projetos
         aria-label: "Projetos"
         href: project/index.qmd
