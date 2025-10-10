@@ -4,7 +4,7 @@ subtitle: ""
 author: Maurício Vancine
 date: 2025-05-01
 categories: ["QGIS", "Geoprocessamento", "R"]
-image: "featured.jpg"
+image: "featured.png"
 code-link: true
 execute:
   eval: false
