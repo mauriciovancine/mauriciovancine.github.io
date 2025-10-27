@@ -1,5 +1,37 @@
 [
   {
+    "listing": "/shiny/index.html",
+    "items": [
+      "/shiny/atlantic-forest-networks/index.html"
+    ]
+  },
+  {
+    "listing": "/talk/index.html",
+    "items": [
+      "/talk/talk-spatiotemporal-af-ufpb/index.html",
+      "/talk/talk-caeb-unicamp/index.html",
+      "/talk/talk-mapbiomas-user-summit/index.html",
+      "/talk/talk-r-book-uemg/index.html",
+      "/talk/talk-landscape-syneco/index.html",
+      "/talk/talk-spatiotemporal-af-unicamp/index.html",
+      "/talk/talk-r-bioforum-unicamp/index.html",
+      "/talk/talk-spatiotemporal-af-red/index.html",
+      "/talk/video-r-geospatial/index.html",
+      "/talk/talk-spatiotemporal-af-unesp/index.html",
+      "/talk/talk-sdm-ufpe/index.html",
+      "/talk/talk-ecologo-unesp/index.html",
+      "/talk/podcast-desabracando-arvores-r/index.html",
+      "/talk/podcast-fmsr-geocast/index.html",
+      "/talk/video-ecologia-r-lancamento/index.html",
+      "/talk/talk-espacial-uff/index.html",
+      "/talk/video-werlive-16/index.html",
+      "/talk/talk-enm-gggc/index.html",
+      "/talk/talk-sdm-gggc/index.html",
+      "/talk/video-geocast-metricas-paisagem/index.html",
+      "/talk/talk-data-paper-amphibians-anfoco/index.html"
+    ]
+  },
+  {
     "listing": "/project/index.html",
     "items": [
       "/project/atlantic-amphibians/index.html",
@@ -11,12 +43,6 @@
       "/project/mapbiomas_degradacao/index.html",
       "/project/amphibr/index.html",
       "/project/atlanticr/index.html"
-    ]
-  },
-  {
-    "listing": "/shiny/index.html",
-    "items": [
-      "/shiny/atlantic-forest-networks/index.html"
     ]
   },
   {
@@ -65,32 +91,6 @@
       "/workshop/workshop-sheet/index.html",
       "/workshop/workshop-progr/index.html",
       "/workshop/workshop-ecostatr/index.html"
-    ]
-  },
-  {
-    "listing": "/talk/index.html",
-    "items": [
-      "/talk/talk-spatiotemporal-af-ufpb/index.html",
-      "/talk/talk-caeb-unicamp/index.html",
-      "/talk/talk-mapbiomas-user-summit/index.html",
-      "/talk/talk-r-book-uemg/index.html",
-      "/talk/talk-landscape-syneco/index.html",
-      "/talk/talk-spatiotemporal-af-unicamp/index.html",
-      "/talk/talk-r-bioforum-unicamp/index.html",
-      "/talk/talk-spatiotemporal-af-red/index.html",
-      "/talk/video-r-geospatial/index.html",
-      "/talk/talk-spatiotemporal-af-unesp/index.html",
-      "/talk/talk-sdm-ufpe/index.html",
-      "/talk/talk-ecologo-unesp/index.html",
-      "/talk/podcast-desabracando-arvores-r/index.html",
-      "/talk/podcast-fmsr-geocast/index.html",
-      "/talk/video-ecologia-r-lancamento/index.html",
-      "/talk/talk-espacial-uff/index.html",
-      "/talk/video-werlive-16/index.html",
-      "/talk/talk-enm-gggc/index.html",
-      "/talk/talk-sdm-gggc/index.html",
-      "/talk/video-geocast-metricas-paisagem/index.html",
-      "/talk/talk-data-paper-amphibians-anfoco/index.html"
     ]
   }
 ]
