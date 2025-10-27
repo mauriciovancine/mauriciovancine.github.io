@@ -1,0 +1,36 @@
+---
+title: "Mata Atlântica: distribuição espaço-temporal da vegetação remanescente e implicações para a conservação"
+subtitle: "Palestra sobre a dinâmica espaço-temporal da vegetação florestal e natural da Mata Atlântica."
+author: Maurício Vancine 
+image: featured.jpg
+date: 2025-10-23
+location: UFPB, João Pessoa, PB
+categories: ["Palestra"]
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://docs.google.com/presentation/d/15eNDrx-rg-70RY0WcOpt7ftua9RYEO1sZqeok8C4o48" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br>
+
+![](featured.jpg)

@@ -85,6 +85,8 @@ editor: source
 
 1. da Silva, R. F. B., Millington, J. D. A., Yue, D., <u>**Vancine, M. H.**</u>, Magnago, L. F. S., Viña, A., Bin, F., Huesca, M., Viera, S. A., Garibaldi, L. A., Liu, J. (2025). [Secondary natural vegetation gains in the Atlantic Forest do not offset losses of carbon stocks and conservation of priority areas](/publication/2025-da-silva-etal){target="_blank"}. *Biological Conservation*, 312, 111512.
 
+1. Gonçalves-Souza, T., <u>**Vancine, M. H.**</u>, Paterno, G. B. (2025). [Computer vision uncovers trait-based insect responses to habitat loss](/publication/2025-goncalves-souza-vancine-paterno){target="_blank"}. *Journal of Animal Ecology*, doi: 10.1111/1365-2656.70165.
+
 ## Livros
 
 1. Da Silva, F. R., Gonçalves-Souza, T., Paterno, G. B., Provete, D. B., & <u>**Vancine, M. H.**</u> (2022). [Análises Ecológicas no R](/publication/2022-da-silva-etal){target="_blank"}. *Recife: Nupeea; Bauru, SP: Canal 6*. ISBN 978-85-7917-563-3.

@@ -1,0 +1,55 @@
+---
+title: "Computer vision uncovers trait-based insect responses to habitat loss"
+subtitle: "Colares et al. (2025) mostraram que a perda de habitat reduz insetos terrestres e favorece espécies aquáticas na Amazônia Central, com insetos maiores sendo mais resilientes à fragmentação."
+author: "Thiago Gonçalves-Souza, Maurício Humberto Vancine, Gustavo B. Paterno"
+date: 2025-10-23
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://doi.org/10.1111/1365-2656.70165" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2025-goncalves-souza-vancine-paterno.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.jpg)
+
+## Resumo
+
+Research Highlight: Colares, L. F., Peres, C. A., Dambros, C. S. (2025). Life history induces markedly divergent insect responses to habitat loss. Journal of Animal Ecology. [https://doi.org/10.1111/1365-2656.70117](https://doi.org/10.1111/1365-2656.70117). Habitat loss is driving biodiversity collapse worldwide. Although this phenomenon has been extensively studied across many taxa and regions, we still lack information about whether species with distinct life histories respond differently to habitat loss. This challenge is particularly critical for tropical insects, where knowledge gaps remain large due to the Linnean (taxonomy) and Raunkiæran (traits) shortfalls. In this issue, Colares et al. (2025) address these gaps by using 236 sticky traps across the world's largest man-made tropical forest archipelago in the Central Amazon (~360,000 ha), generating a dataset of ~23,000 individual insects. They combined these surveys of insect fauna with computer vision models to assess how habitat loss affects both α- and β-diversity in insects with contrasting life histories (terrestrial vs. aquatic). The study reveals that responses diverge strongly depending on whether taxa rely on terrestrial or aquatic environments during their ontogeny. Whereas low forest amount reduced the number of terrestrial species, it increased species with aquatic life histories. Importantly, the authors also linked insect responses to body size (a proxy for dispersal ability), suggesting that larger insects, which disperse more successfully across the water matrix, may be favoured as ‘winner’ species in fragmented habitats. The findings of Colares et al. (2025) have broad implications for animal ecology and insect conservation. First, they highlight that insect declines in response to habitat loss are largely driven by traits that confer high or low resilience to reductions in forest cover. Second, they underscore the potential of computer vision as a powerful tool for uncovering key information about insect populations, thereby facilitating applied research such as rapid biodiversity surveys and long-term monitoring.
+
+## Citação
+
+```
+@article{goncalves_souza_vancine_paterno_2025,
+    author = {Gonçalves-Souza, Thiago and Vancine, Maurício H. and Paterno, Gustavo B.},
+    title = {Computer vision uncovers trait-based insect responses to habitat loss},
+	  journal = {Journal of Animal Ecology},
+    volume = {},
+  	number = {},
+		pages = {},
+    year = {2025},
+    issn = {1365-2656},
+	  doi = {10.1111/1365-2656.70165},
+    url = {https://doi.org/10.1111/1365-2656.70165}
+    }
+```
