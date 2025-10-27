@@ -6,6 +6,38 @@
     ]
   },
   {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/eco-taxonomy/index.html",
+      "/blog/academic-research-internship-abroad/index.html",
+      "/blog/r-geo-fix-coordinates/index.html",
+      "/blog/r-parallel/index.html",
+      "/blog/r-shiny-github/index.html",
+      "/blog/r-shiny-intro/index.html",
+      "/blog/r-ten-topics/index.html",
+      "/blog/app-graphics-maps/index.html",
+      "/blog/julia-intro/index.html",
+      "/blog/r-big-data/index.html",
+      "/blog/r-color-palletes/index.html",
+      "/blog/r-reinstall-packages/index.html",
+      "/blog/geo-data-source/index.html",
+      "/blog/academic-online-courses/index.html",
+      "/blog/geo-crs-datum/index.html",
+      "/blog/r-error/index.html"
+    ]
+  },
+  {
+    "listing": "/course/index.html",
+    "items": [
+      "/course/course-reproductibility/index.html",
+      "/course/course-ecostatr/index.html",
+      "/course/course-spar/index.html",
+      "/course/course-geor/index.html",
+      "/course/course-intror/index.html",
+      "/course/course-sdmr/index.html"
+    ]
+  },
+  {
     "listing": "/talk/index.html",
     "items": [
       "/talk/talk-spatiotemporal-af-ufpb/index.html",
@@ -43,38 +75,6 @@
       "/project/mapbiomas_degradacao/index.html",
       "/project/amphibr/index.html",
       "/project/atlanticr/index.html"
-    ]
-  },
-  {
-    "listing": "/course/index.html",
-    "items": [
-      "/course/course-reproductibility/index.html",
-      "/course/course-ecostatr/index.html",
-      "/course/course-spar/index.html",
-      "/course/course-geor/index.html",
-      "/course/course-intror/index.html",
-      "/course/course-sdmr/index.html"
-    ]
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/eco-taxonomy/index.html",
-      "/blog/academic-research-internship-abroad/index.html",
-      "/blog/r-geo-fix-coordinates/index.html",
-      "/blog/r-parallel/index.html",
-      "/blog/r-shiny-github/index.html",
-      "/blog/r-shiny-intro/index.html",
-      "/blog/r-ten-topics/index.html",
-      "/blog/app-graphics-maps/index.html",
-      "/blog/julia-intro/index.html",
-      "/blog/r-big-data/index.html",
-      "/blog/r-color-palletes/index.html",
-      "/blog/r-reinstall-packages/index.html",
-      "/blog/geo-data-source/index.html",
-      "/blog/academic-online-courses/index.html",
-      "/blog/geo-crs-datum/index.html",
-      "/blog/r-error/index.html"
     ]
   },
   {
