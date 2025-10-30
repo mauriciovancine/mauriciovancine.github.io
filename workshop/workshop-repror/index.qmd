@@ -1,6 +1,6 @@
 ---
-title: "Programação em linguagem R"
-subtitle: "Curso de programação em linguagem R para controle de fluxo, repetições e funções."
+title: "Reprodutibilidade usando a linguagem R"
+subtitle: "Curso de reprodutibilidade em linguagem R para controle de versão, ambiente virtual e Quarto."
 author: Maurício Vancine
 image: featured-hex.png
 categories: ["R", "Programação"]
@@ -13,8 +13,8 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://mauriciovancine.github.io/workshop-r-programming/01_slides/slides" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
-  <a href="https://github.com/mauriciovancine/workshop-r-programming" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>GitHub</a>
+  <a href="https://mauriciovancine.github.io/workshop-quarto-git-github/00_slides/slides.html" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
+  <a href="https://github.com/mauriciovancine/workshop-quarto-git-github" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>GitHub</a>
 </div>
 
 <style>
@@ -30,11 +30,11 @@ editor: source
   }
 </style>
 
-# **progR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+# **reproR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
 
 ## Descrição
 
-Apresentação dos principais conceitos da programação na linguagem R. São abordados os seguintes temas: (1) controle de fluxo, (2) repetições e (3) criação de funções. Ao final do minicurso espera-se que os participantes adquiram conhecimentos básicos do funcionamento da em programação básica usando a linguagem R.
+Apresentação dos principais conceitos da reprodutibilidade usando controle de versão com git/GitHub e a linguagem R através do renv, Quarto e Shiny. São abordados os seguintes temas: (1) reprodutibilidade, (2) controle de versãro, (3) ambientes reprodutíveis, (4) documentos dinâmicos no R e (5) aplicações web (Shiny).
 
 ## Oferecimento
 

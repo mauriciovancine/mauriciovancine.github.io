@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Maurício Vancine">
 
-<title>Cursos – Maurício Vancine</title>
+<title>Manipulação de dados em linguagem R – Maurício Vancine</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,29 +24,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../img/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cd3c9c2e6a7570597db7fcfacb1c1243.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e8b6ce8f6797ea4a9334ddb13506f06e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cd3c9c2e6a7570597db7fcfacb1c1243.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e8b6ce8f6797ea4a9334ddb13506f06e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,68 +72,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-teaching .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-author','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 12,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-teaching'] = new List('listing-teaching', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -144,9 +85,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Maurício Vancine</span>
     </a>
   </div>
@@ -157,39 +98,39 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"> 
+    <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">Sobre</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../talk/index.html"> 
+    <a class="nav-link" href="../../talk/index.html"> 
 <span class="menu-text">Palestras</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../workshop/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../workshop/index.html"> 
 <span class="menu-text">Cursos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../course/index.html"> 
+    <a class="nav-link" href="../../course/index.html"> 
 <span class="menu-text">Disciplinas</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/index.html"> 
+    <a class="nav-link" href="../../project/index.html"> 
 <span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../shiny/index.html"> 
+    <a class="nav-link" href="../../shiny/index.html"> 
 <span class="menu-text">Shiny</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publication/index.html"> 
+    <a class="nav-link" href="../../publication/index.html"> 
 <span class="menu-text">Publicações</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../supervisions/index.html"> 
+    <a class="nav-link" href="../../supervisions/index.html"> 
 <span class="menu-text">Orientações</span></a>
   </li>  
   <li class="nav-item">
@@ -209,25 +150,45 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="QW5mJUMzJUFEYmlvcw=="><span class="quarto-category-count category-cloud-1">Anfíbios</span></div><div class="category" data-category="Q2FtcG8="><span class="quarto-category-count category-cloud-1">Campo</span></div><div class="category" data-category="Q29udHJvbGUlMjBkZSUyMHZlcnMlQzMlQTNv"><span class="quarto-category-count category-cloud-1">Controle de versão</span></div><div class="category" data-category="RXNwYWNpYWw="><span class="quarto-category-count category-cloud-1">Espacial</span></div><div class="category" data-category="RXN0YXQlQzMlQURzdGljYQ=="><span class="quarto-category-count category-cloud-1">Estatística</span></div><div class="category" data-category="R2VvcHJvY2Vzc2FtZW50bw=="><span class="quarto-category-count category-cloud-1">Geoprocessamento</span></div><div class="category" data-category="Z2l0"><span class="quarto-category-count category-cloud-1">git</span></div><div class="category" data-category="TW9kZWxhZ2VtJTIwZGUlMjBEaXN0cmlidWklQzMlQTclQzMlQTNvJTIwZGUlMjBFc3AlQzMlQTljaWVz"><span class="quarto-category-count category-cloud-1">Modelagem de Distribuição de Espécies</span></div><div class="category" data-category="UGFpc2FnZW0="><span class="quarto-category-count category-cloud-1">Paisagem</span></div><div class="category" data-category="UGxhbmlsaGFzJTIwZWxldHIlQzMlQjRuaWNhcw=="><span class="quarto-category-count category-cloud-1">Planilhas eletrônicas</span></div><div class="category" data-category="UHJvZ3JhbWElQzMlQTclQzMlQTNv"><span class="quarto-category-count category-cloud-3">Programação</span></div><div class="category" data-category="UUdJUw=="><span class="quarto-category-count category-cloud-1">QGIS</span></div><div class="category" data-category="Ug=="><span class="quarto-category-count category-cloud-7">R</span></div><div class="category" data-category="U2Vuc29yaWFtZW50byUyMHJldG9tbw=="><span class="quarto-category-count category-cloud-1">Sensoriamento retomo</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#progr" id="toc-progr" class="nav-link active" data-scroll-target="#progr"><strong>progR</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></a>
+  <ul class="collapse">
+  <li><a href="#descrição" id="toc-descrição" class="nav-link" data-scroll-target="#descrição">Descrição</a></li>
+  <li><a href="#oferecimento" id="toc-oferecimento" class="nav-link" data-scroll-target="#oferecimento">Oferecimento</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cursos</h1>
-<p class="subtitle lead">Cursos que ministrei.</p>
-</div>
+<h1 class="title">Manipulação de dados em linguagem R</h1>
+<p class="subtitle lead">Curso de manipulação de dados em linguagem R focado no tidyverse.</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Programação</div>
+  </div>
+  </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Maurício Vancine </p>
+          </div>
+  </div>
     
   
     
@@ -238,326 +199,37 @@ window.Quarto = {
 </header>
 
 
-<div id="listing-teaching" class="quarto-listing quarto-listing-container-grid">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-teaching-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-teaching'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Ordenar por</option>
-      <option value="index" data-direction="asc">Padrão</option>
-      <option value="listing-title" data-direction="asc">
-        Título
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Autor
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filtro">
-    </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RXNwYWNpYWwlMkNS" data-listing-file-modified-sort="1759974041054" data-listing-reading-time-sort="1" data-listing-word-count-sort="190">
-<a href="../workshop/workshop-spadivr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-spadivr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Análises espaciais da biodiversidade
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Q29udHJvbGUlMjBkZSUyMHZlcnMlQzMlQTNvJTJDZ2l0" data-listing-file-modified-sort="1759973947562" data-listing-reading-time-sort="2" data-listing-word-count-sort="214">
-<a href="../workshop/workshop-git/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-git/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Controle de versão com git, GitHub e RStudio
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Q2FtcG8lMkNBbmYlQzMlQURiaW9z" data-listing-file-modified-sort="1759973923456" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
-<a href="../workshop/workshop-frog/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-frog/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Curso de campo de anfíbios
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="UUdJUyUyQ0dlb3Byb2Nlc3NhbWVudG8=" data-listing-file-modified-sort="1759973997916" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
-<a href="../workshop/workshop-qgis/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-qgis/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Geoprocessamento com QGIS
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="U2Vuc29yaWFtZW50byUyMHJldG9tbw==" data-listing-file-modified-sort="1759973935748" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
-<a href="../workshop/workshop-gee/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-gee/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Introdução ao Google Earth Engine
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="Ug==" data-listing-file-modified-sort="1759973956096" data-listing-reading-time-sort="2" data-listing-word-count-sort="296">
-<a href="../workshop/workshop-intror/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-intror/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Introdução à linguagem R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1761735435860" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
-<a href="../workshop/workshop-data-manipr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-data-manipr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Manipulação de dados em linguagem R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="TW9kZWxhZ2VtJTIwZGUlMjBEaXN0cmlidWklQzMlQTclQzMlQTNvJTIwZGUlMjBFc3AlQzMlQTljaWVzJTJDUg==" data-listing-file-modified-sort="1759974014835" data-listing-reading-time-sort="2" data-listing-word-count-sort="237">
-<a href="../workshop/workshop-sdmr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-sdmr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Modelagem de distribuição de espécies com o R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="UGFpc2FnZW0lMkNS" data-listing-file-modified-sort="1759973966844" data-listing-reading-time-sort="1" data-listing-word-count-sort="192">
-<a href="../workshop/workshop-landr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-landr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Métricas de paisagem no R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="UGxhbmlsaGFzJTIwZWxldHIlQzMlQjRuaWNhcw==" data-listing-file-modified-sort="1759974028747" data-listing-reading-time-sort="1" data-listing-word-count-sort="154">
-<a href="../workshop/workshop-sheet/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-sheet/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Organização de dados em planilhas eletrônicas - Calc - LibreOffice
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1761822894189" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
-<a href="../workshop/workshop-progr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-progr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Programação em linguagem R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1761822869423" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
-<a href="../workshop/workshop-repror/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../workshop/workshop-repror/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Reprodutibilidade usando a linguagem R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1761735817082" data-listing-reading-time-sort="2" data-listing-word-count-sort="224">
-<a href="../workshop/workshop-data-visr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="../workshop/workshop-data-visr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Visualização de dados em linguagem R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="13" data-categories="UiUyQ0VzdGF0JUMzJUFEc3RpY2E=" data-listing-file-modified-sort="1759973910190" data-listing-reading-time-sort="1" data-listing-word-count-sort="113">
-<a href="../workshop/workshop-ecostatr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="../workshop/workshop-ecostatr/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-ecostatR: análise estatística de dados no R
-</h5>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-Maurício Vancine
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">Sem itens correspondentes</div>
-<nav id="teaching-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<p><a href="https://mauriciovancine.github.io/workshop-r-data-manipulation/01_slides/slides" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a> <a href="https://github.com/mauriciovancine/workshop-r-data-manipulation" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>GitHub</a></p>
 </div>
 <style>
-#topBtn {
-  display: none;
-  position: fixed;
-  bottom: 105px; /* um pouco acima do fundo */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 14px;
-  font-size: 20px;
-  border: none;
-  border-radius: 6px;
-  background-color: #2381df; 
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: background-color 0.3s;
-}
-#topBtn:hover {
-  background-color: rgba(0, 86, 179, 0.9);
-}
-</style>
-<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-↑ Topo
-</button>
-<script>
-const btn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", () => {
-  const scrollBottom = window.innerHeight + window.scrollY;
-  const docHeight = document.documentElement.scrollHeight;
-
-  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
   }
-});
-</script>
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+<section id="progr" class="level1">
+<h1><strong>progR</strong> <img src="featured-hex.png" align="right" width="30%" min-width="120px"></h1>
+<section id="descrição" class="level2">
+<h2 class="anchored" data-anchor-id="descrição">Descrição</h2>
+<p>Apresentação dos principais conceitos de manipulação de dados na linguagem R. São abordados os seguintes temas: (1) ciências de dados ambiental, (2) tidyverse, (3) leitura de dados, (4) pipe (%&gt;%), (5) tidyr, (6) dplyr, (7) stringr, (8) forcats, (9) lubridate e (10) purrr. Ao final do minicurso espera-se que os participantes adquiram conhecimentos básicos para manipulação de dados tabulares no R.</p>
+</section>
+<section id="oferecimento" class="level2">
+<h2 class="anchored" data-anchor-id="oferecimento">Oferecimento</h2>
+<ol type="1">
+<li><p><a href="https://www.ib.unicamp.br/pos_ecologia/disciplinas">NT265/NE441 - Análise de dados e apresentação de gráficos usando a linguagem R</a>. Programa de Pós-Graduação em Ecologia. (2024). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil.</p></li>
+<li><p><a href="https://www.ib.unicamp.br/pos_ecologia/disciplinas">NT265/NE441 - Análise de dados e apresentação de gráficos usando a linguagem R</a>. Programa de Pós-Graduação em Ecologia. (2025). Universidade Estadual de Campinas (Unicamp), Campinas, SP, Brasil.</p></li>
+</ol>
 
 
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1020,17 +692,17 @@ window.addEventListener("scroll", () => {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../contact.html">
+    <a class="nav-link" href="../../contact.html">
 <p>Contato</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../license.html">
+    <a class="nav-link" href="../../license.html">
 <p>Licença</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../contributors.html">
+    <a class="nav-link" href="../../contributors.html">
 <p>Financiamento</p>
 </a>
   </li>  
