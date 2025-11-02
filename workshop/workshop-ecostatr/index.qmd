@@ -30,11 +30,10 @@ editor: source
   }
 </style>
 
-# **spaR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+# **ecostatR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
 
 ## Descrição
 
-Na spaR, os alunos serão apresentados aos principais conceitos teóricos da análise de dados. 
+Na ecostatR, os alunos serão apresentados aos principais conceitos teóricos da análise de dados. 
 
 ## Oferecimento
-

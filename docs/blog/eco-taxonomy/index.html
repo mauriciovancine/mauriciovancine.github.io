@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Dados de taxonomia</h1>
-<p class="subtitle lead">Lista das principais fontes de dados e pacotes do R para correção de dados de taxonomia</p>
+<p class="subtitle lead">Lista das principais fontes de dados e pacotes do R para correção de dados taxonômicos</p>
   <div class="quarto-categories">
     <div class="quarto-category">Taxonomia</div>
   </div>
@@ -180,6 +180,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 </header><section id="contextualização" class="level2"><h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
+<p>Em um mundo onde o conhecimento sobre a biodiversidade cresce em ritmo acelerado, as bases de dados taxonômicas e de ocorrência se tornaram aliadas indispensáveis para ecólogose biólogos. Elas reúnem, em um só lugar, informações sobre nomenclatura científica, classificação, distribuição geográfica e registros de espécimes, permitindo análises mais robustas e reprodutíveis.</p>
+<p>Diversos grupos taxonômicos contam com iniciativas consolidadas, muitas delas mantidas por museus e sociedades científicas. Entre os <strong>vertebrados</strong>, destacam-se bases dedicadas a <strong>anfíbios</strong>, <strong>aves</strong>, <strong>mamíferos</strong>, <strong>répteis</strong> e <strong>peixes</strong>, que oferecem listas taxonômicas atualizadas e mapas de distribuição global.</p>
+<p>Já entre os <strong>invertebrados</strong>, há um notável esforço coletivo em organizar informações sobre <strong>formigas</strong>, <strong>lepidópteros</strong>, <strong>dípteros</strong>, <strong>aracnídeos</strong>, <strong>miriápodes</strong>, <strong>moluscos</strong> e <strong>anelídeos</strong>, frequentemente em colaboração com redes de especialistas.</p>
+<p>Esses repositórios são fundamentais não apenas para estudos sistemáticos e taxonômicos, mas também para aplicações em ecologia espacial, biogeografia, modelagem de nicho ecológico, e conservação da biodiversidade. Ao centralizar e padronizar dados de diferentes fontes, essas bases permitem integrar escalas locais e globais de análise, promovendo uma compreensão mais ampla dos padrões e processos ecológicos que moldam a vida na Terra.</p>
+<p>Abaixo reúno algumas das principais bases de dados para consulta e pesquisa sobre a diversidade e taxonomia de vertebrados e invertebrados.</p>
 </section><section id="taxonomia" class="level2"><h2 class="anchored" data-anchor-id="taxonomia">Taxonomia</h2>
 <p>Bases de dados de taxonomia.</p>
 <div class="cell">
@@ -194,127 +199,117 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td style="text-align: left;">Anfíbios</td>
 <td style="text-align: left;"><a href="https://amphibiansoftheworld.amnh.org">Amphibian Species of the World – Frost</a></td>
-<td style="text-align: left;">Banco de dados taxonômico e nomenclatural que reúne informações técnicas atualizadas sobre a taxonomia e distribuição de anfíbios, com curadoria de especialistas e foco em sistemática</td>
+<td style="text-align: left;">Banco taxonômico global de anfíbios mantido pelo American Museum of Natural History, com classificação e distribuição atualizadas.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Aves</td>
 <td style="text-align: left;"><a href="https://avibase.bsc-eoc.org/avibase.jsp">Avibase - The World Bird Database</a></td>
-<td style="text-align: left;">Permite criar e gerenciar lifelists e produzir relatórios úteis.</td>
+<td style="text-align: left;">Base de dados global de aves, com nomes científicos, sinônimos, taxonomias regionais e mapas de distribuição.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Aves</td>
-<td style="text-align: left;">[IOC World Bird List](https://www.worldbirdnames.org]</td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://www.worldbirdnames.org">IOC World Bird List</a></td>
+<td style="text-align: left;">Lista taxonômica global e padronizada de aves, mantida pelo International Ornithologists’ Union.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Aves</td>
 <td style="text-align: left;"><a href="https://www.birdlife.org">BirLife</a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Rede internacional voltada à conservação das aves e seus habitats, com dados sobre espécies e áreas importantes (IBAs e KBAs).</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Mamíferos</td>
 <td style="text-align: left;"><a href="https://www.mammaldiversity.org/index.html">The Mammal Diversity Database</a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Repositório taxonômico atualizado de mamíferos do mundo, mantido pela American Society of Mammalogists.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Répteis</td>
 <td style="text-align: left;"><a href="http://www.reptile-database.org/">The Reptile Database</a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Base global sobre a taxonomia, nomenclatura e distribuição de répteis.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Peixes</td>
 <td style="text-align: left;"><a href="https://www.fishdatabase.com/">FishDataBase</a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Plataforma com informações taxonômicas e ecológicas de espécies de peixes de todo o mundo.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Invertebrados</td>
 <td style="text-align: left;"><a href="https://emu-prod.amnh.org/imulive/iz/iz.html">Division of Invertebrate Zoology</a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Catálogo digital das coleções de invertebrados do American Museum of Natural History.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Hymenoptera</td>
-<td style="text-align: left;"><a href="https://www.antweb.org"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://www.antweb.org">AntWeb</a></td>
+<td style="text-align: left;">Repositório fotográfico e taxonômico de formigas, com registros de espécies e espécimes de coleções globais.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Hymenoptera</td>
-<td style="text-align: left;"><a href="https://www.globalants.org"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://www.globalants.org">The Global Ants Database</a></td>
+<td style="text-align: left;">Base de dados sobre a distribuição global de formigas, compilada a partir de registros científicos.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Hymenoptera</td>
-<td style="text-align: left;"><a href="https://antcat.org"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://antcat.org">AntCat</a></td>
+<td style="text-align: left;">Catálogo taxonômico global e nomenclatural de formigas, com referência às descrições originais.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Hymenoptera</td>
-<td style="text-align: left;"><a href="https://antmaps.org"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://antmaps.org">antmap</a></td>
+<td style="text-align: left;">Plataforma interativa para visualização geográfica da distribuição mundial de espécies de formigas.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Lepdoptera</td>
-<td style="text-align: left;"><a href="https://www.nhm.ac.uk/our-science/data/lepindex"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://www.nhm.ac.uk/our-science/data/lepindex">The Global Lepidoptera Names Index</a></td>
+<td style="text-align: left;">Índice taxonômico global de Lepidoptera (borboletas e mariposas), mantido pelo Natural History Museum de Londres.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Lepdoptera</td>
-<td style="text-align: left;"><a href="https://ftp.funet.fi/index/Tree_of_life/insecta/lepidoptera"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://ftp.funet.fi/index/Tree_of_life/insecta/lepidoptera">Tree of Life Insecta Lepidoptera</a></td>
+<td style="text-align: left;">Recurso taxonômico e sistemático de Lepidoptera, com hierarquias e distribuição global.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ortoptera</td>
-<td style="text-align: left;"><a href="https://orthoptera.speciesfile.org"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://orthoptera.speciesfile.org">Orthoptera Species File</a></td>
+<td style="text-align: left;">Banco taxonômico detalhado de Orthoptera (gafanhotos, grilos e afins), com dados nomenclaturais e de distribuição.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Diptera</td>
-<td style="text-align: left;"><a href="http://www.diptera.org"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="http://www.diptera.org">Systema Dipterorum</a></td>
+<td style="text-align: left;">Base de dados taxonômica global de Diptera (moscas e mosquitos), com histórico nomenclatural completo.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Diptera</td>
-<td style="text-align: left;"><a href="https://diptera.info/news.php"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://diptera.info/news.php">Diptera.info</a></td>
+<td style="text-align: left;">Comunidade e base de conhecimento colaborativa sobre Diptera, com informações taxonômicas e notícias.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Aracnídeos</td>
-<td style="text-align: left;"><a href="https://wac.nmbe.ch"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://wac.nmbe.ch">World Arachnida Catalog</a></td>
+<td style="text-align: left;">Catálogo global das espécies de aranhas e outros aracnídeos, mantido pelo Natural History Museum de Berna.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Miriápode</td>
-<td style="text-align: left;"><a href="https://www.millibase.org"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://www.millibase.org">MilliBase</a></td>
+<td style="text-align: left;">Banco taxonômico global de diplópodes (piolhos-de-cobra) e outros miriápodes relacionados.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Miriápode</td>
-<td style="text-align: left;"><a href="https://myriapodology.org/myrlit"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://myriapodology.org/myrlit">The Online Literature Database for Myriapoda</a></td>
+<td style="text-align: left;">Base de dados bibliográfica sobre literatura científica de miriápodes.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Molusco</td>
-<td style="text-align: left;"><a href="https://www.molluscabase.org"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://www.molluscabase.org">MolluscaBase</a></td>
+<td style="text-align: left;">Repositório taxonômico global de moluscos marinhos, terrestres e de água doce.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Anélida</td>
-<td style="text-align: left;"><a href="https://annelida.de/software"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://annelida.de/software">annelida.de</a></td>
+<td style="text-align: left;">Portal dedicado a recursos e softwares sobre a taxonomia e morfologia de anelídeos.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Anélida</td>
-<td style="text-align: left;"><a href="https://www.marinespecies.org/polychaeta/aphia.php?p=taxdetails&amp;id=882"></a></td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Coleoptera</td>
-<td style="text-align: left;"><a href="https://bugguide.net/node/view/60"></a></td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Coleoptera</td>
-<td style="text-align: left;"><a href="https://www.nhm.ac.uk/our-science/services/collections/entomology/coleoptera.html"></a></td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"><a href="https://www.marinespecies.org/polychaeta/aphia.php?p=taxdetails&amp;id=882">World Polychaeta Database – Annelida</a></td>
+<td style="text-align: left;">Banco taxonômico global de poliquetas (Annelida), parte do World Register of Marine Species (WoRMS).</td>
 </tr>
 </tbody>
 </table>

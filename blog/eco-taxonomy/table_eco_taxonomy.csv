@@ -1,26 +1,24 @@
 Grupo ,Base de dados,Descrição
-Anfíbios,[Amphibian Species of the World – Frost](https://amphibiansoftheworld.amnh.org),"Banco de dados taxonômico e nomenclatural que reúne informações técnicas atualizadas sobre a taxonomia e distribuição de anfíbios, com curadoria de especialistas e foco em sistemática"
-Aves,[Avibase - The World Bird Database](https://avibase.bsc-eoc.org/avibase.jsp),Permite criar e gerenciar lifelists e produzir relatórios úteis.
-Aves,[IOC World Bird List](https://www.worldbirdnames.org],
-Aves,[BirLife](https://www.birdlife.org),
-Mamíferos,[The Mammal Diversity Database](https://www.mammaldiversity.org/index.html),
-Répteis,[The Reptile Database](http://www.reptile-database.org/),
-Peixes,[FishDataBase](https://www.fishdatabase.com/),
-Invertebrados,[Division of Invertebrate Zoology](https://emu-prod.amnh.org/imulive/iz/iz.html),
-Hymenoptera,[](https://www.antweb.org),
-Hymenoptera,[](https://www.globalants.org),
-Hymenoptera,[](https://antcat.org),
-Hymenoptera,[](https://antmaps.org),
-Lepdoptera,[](https://www.nhm.ac.uk/our-science/data/lepindex),
-Lepdoptera,[](https://ftp.funet.fi/index/Tree_of_life/insecta/lepidoptera),
-Ortoptera,[](https://orthoptera.speciesfile.org),
-Diptera,[](http://www.diptera.org),
-Diptera,[](https://diptera.info/news.php),
-Aracnídeos,[](https://wac.nmbe.ch),
-Miriápode,[](https://www.millibase.org),
-Miriápode,[](https://myriapodology.org/myrlit),
-Molusco,[](https://www.molluscabase.org),
-Anélida,[](https://annelida.de/software),
-Anélida,[](https://www.marinespecies.org/polychaeta/aphia.php?p=taxdetails&id=882),
-Coleoptera,[](https://bugguide.net/node/view/60),
-Coleoptera,[](https://www.nhm.ac.uk/our-science/services/collections/entomology/coleoptera.html),
+Anfíbios,[Amphibian Species of the World – Frost](https://amphibiansoftheworld.amnh.org),"Banco taxonômico global de anfíbios mantido pelo American Museum of Natural History, com classificação e distribuição atualizadas."
+Aves,[Avibase - The World Bird Database](https://avibase.bsc-eoc.org/avibase.jsp),"Base de dados global de aves, com nomes científicos, sinônimos, taxonomias regionais e mapas de distribuição."
+Aves,[IOC World Bird List](https://www.worldbirdnames.org),"Lista taxonômica global e padronizada de aves, mantida pelo International Ornithologists’ Union."
+Aves,[BirLife](https://www.birdlife.org),"Rede internacional voltada à conservação das aves e seus habitats, com dados sobre espécies e áreas importantes (IBAs e KBAs)."
+Mamíferos,[The Mammal Diversity Database](https://www.mammaldiversity.org/index.html),"Repositório taxonômico atualizado de mamíferos do mundo, mantido pela American Society of Mammalogists."
+Répteis,[The Reptile Database](http://www.reptile-database.org/),"Base global sobre a taxonomia, nomenclatura e distribuição de répteis."
+Peixes,[FishDataBase](https://www.fishdatabase.com/),Plataforma com informações taxonômicas e ecológicas de espécies de peixes de todo o mundo.
+Invertebrados,[Division of Invertebrate Zoology](https://emu-prod.amnh.org/imulive/iz/iz.html),Catálogo digital das coleções de invertebrados do American Museum of Natural History.
+Hymenoptera,[AntWeb](https://www.antweb.org),"Repositório fotográfico e taxonômico de formigas, com registros de espécies e espécimes de coleções globais."
+Hymenoptera,[The Global Ants Database](https://www.globalants.org),"Base de dados sobre a distribuição global de formigas, compilada a partir de registros científicos."
+Hymenoptera,[AntCat](https://antcat.org),"Catálogo taxonômico global e nomenclatural de formigas, com referência às descrições originais."
+Hymenoptera,[antmap](https://antmaps.org),Plataforma interativa para visualização geográfica da distribuição mundial de espécies de formigas.
+Lepdoptera,[The Global Lepidoptera Names Index](https://www.nhm.ac.uk/our-science/data/lepindex),"Índice taxonômico global de Lepidoptera (borboletas e mariposas), mantido pelo Natural History Museum de Londres."
+Lepdoptera,[Tree of Life Insecta Lepidoptera](https://ftp.funet.fi/index/Tree_of_life/insecta/lepidoptera),"Recurso taxonômico e sistemático de Lepidoptera, com hierarquias e distribuição global."
+Ortoptera,[Orthoptera Species File](https://orthoptera.speciesfile.org),"Banco taxonômico detalhado de Orthoptera (gafanhotos, grilos e afins), com dados nomenclaturais e de distribuição."
+Diptera,[Systema Dipterorum](http://www.diptera.org),"Base de dados taxonômica global de Diptera (moscas e mosquitos), com histórico nomenclatural completo."
+Diptera,[Diptera.info](https://diptera.info/news.php),"Comunidade e base de conhecimento colaborativa sobre Diptera, com informações taxonômicas e notícias."
+Aracnídeos,[World Arachnida Catalog](https://wac.nmbe.ch),"Catálogo global das espécies de aranhas e outros aracnídeos, mantido pelo Natural History Museum de Berna."
+Miriápode,[MilliBase](https://www.millibase.org),Banco taxonômico global de diplópodes (piolhos-de-cobra) e outros miriápodes relacionados.
+Miriápode,[The Online Literature Database for Myriapoda](https://myriapodology.org/myrlit),Base de dados bibliográfica sobre literatura científica de miriápodes.
+Molusco,[MolluscaBase](https://www.molluscabase.org),"Repositório taxonômico global de moluscos marinhos, terrestres e de água doce."
+Anélida,[annelida.de](https://annelida.de/software),Portal dedicado a recursos e softwares sobre a taxonomia e morfologia de anelídeos.
+Anélida,[World Polychaeta Database – Annelida](https://www.marinespecies.org/polychaeta/aphia.php?p=taxdetails&id=882),"Banco taxonômico global de poliquetas (Annelida), parte do World Register of Marine Species (WoRMS)."

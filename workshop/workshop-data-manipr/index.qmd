@@ -13,7 +13,7 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://mauriciovancine.github.io/workshop-r-data-manipulation/01_slides/slides" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
+  <a href="https://mauriciovancine.github.io/workshop-r-data-manipulation/00_slides/slides.html" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-images me-1"></i>Slides</a>
   <a href="https://github.com/mauriciovancine/workshop-r-data-manipulation" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>GitHub</a>
 </div>
 
@@ -30,7 +30,7 @@ editor: source
   }
 </style>
 
-# **progR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+# **manipR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
 
 ## Descrição
 

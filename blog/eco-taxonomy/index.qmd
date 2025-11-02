@@ -1,6 +1,6 @@
 ---
 title: "Dados de taxonomia"
-subtitle: "Lista das principais fontes de dados e pacotes do R para correção de dados de taxonomia"
+subtitle: "Lista das principais fontes de dados e pacotes do R para correção de dados taxonômicos"
 author: Maurício Vancine
 date: 2025-08-20
 categories: ["Taxonomia"]
@@ -15,7 +15,15 @@ editor: source
 
 ## Contextualização
 
+Em um mundo onde o conhecimento sobre a biodiversidade cresce em ritmo acelerado, as bases de dados taxonômicas e de ocorrência se tornaram aliadas indispensáveis para ecólogose biólogos. Elas reúnem, em um só lugar, informações sobre nomenclatura científica, classificação, distribuição geográfica e registros de espécimes, permitindo análises mais robustas e reprodutíveis.
 
+Diversos grupos taxonômicos contam com iniciativas consolidadas, muitas delas mantidas por museus e sociedades científicas. Entre os **vertebrados**, destacam-se bases dedicadas a **anfíbios**, **aves**, **mamíferos**, **répteis** e **peixes**, que oferecem listas taxonômicas atualizadas e mapas de distribuição global. 
+
+Já entre os **invertebrados**, há um notável esforço coletivo em organizar informações sobre **formigas**, **lepidópteros**, **dípteros**, **aracnídeos**, **miriápodes**, **moluscos** e **anelídeos**, frequentemente em colaboração com redes de especialistas.
+
+Esses repositórios são fundamentais não apenas para estudos sistemáticos e taxonômicos, mas também para aplicações em ecologia espacial, biogeografia, modelagem de nicho ecológico, e conservação da biodiversidade. Ao centralizar e padronizar dados de diferentes fontes, essas bases permitem integrar escalas locais e globais de análise, promovendo uma compreensão mais ampla dos padrões e processos ecológicos que moldam a vida na Terra.
+
+Abaixo reúno algumas das principais bases de dados para consulta e pesquisa sobre a diversidade e taxonomia de vertebrados e invertebrados.
 
 ## Taxonomia
 
