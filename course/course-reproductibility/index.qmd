@@ -1,5 +1,5 @@
 ---
-title: "ecoReproduc: reprodutibilidade na ecologia"
+title: "reproducR: reprodutibilidade na ecologia"
 subtitle: "Disciplina de pós-graduação de reprodutibilidade na ecologia."
 author: Maurício Vancine
 image: featured-hex.png
@@ -30,11 +30,11 @@ editor: source
   }
 </style>
 
-# **ecoReproduc** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+# **reproducR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
 
 ## Descrição
 
-Na ecoReproduc, os alunos serão apresentados aos principais conceitos de reprodutibilidade na ecologia. 
+Na reproducR, os alunos serão apresentados aos principais conceitos de reprodutibilidade na Ecologia. 
 
 ## Oferecimento
 

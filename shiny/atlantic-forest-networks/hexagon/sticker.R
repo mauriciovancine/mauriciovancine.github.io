@@ -1,6 +1,7 @@
 
 # remotes::install_github("GuangchuangYu/hexSticker")
 
+library(tidyverse)
 library(hexSticker)
 library(magick)
 
@@ -10,14 +11,10 @@ imgurl <- magick::image_transparent(imgurl, "white")
 hexSticker::sticker(
   imgurl, 
   package = "afnetworks", 
-  p_size = 50, p_color = "#4f7476",
-  s_x = .9, s_y = .75, s_width = 1.5, s_height = 1.5,
+  p_size = 20, p_color = "#4f7476",
+  s_x = 1, s_y = .68, s_width = 1.2, s_height = 1.2,
   h_fill = "white",
-  h_color = "forestgreen",
-  filename = "shiny/atlantic-forest-networks/featured-hex.png") +
-  theme(
-    plot.margin = unit(c(1, 1, 1, 1), "cm") # topo, direita, baixo, esquerda
-  )
-
-ggsave(filename = "shiny/atlantic-forest-networks/featured-hex.png",
-       width = 20, height = 20, units = "cm", dpi = 300)
+  h_color = "forestgreen") +
+  theme(plot.margin = margin(5, 5, 5, 5)) +
+  ggsave(filename = "shiny/atlantic-forest-networks/featured-hex.png", 
+         width = 5, height = 5, units = "cm", dpi = 300)

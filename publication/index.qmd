@@ -245,6 +245,8 @@ editor: source
 
 1. [Protect one large forest, or many small ones? New study reignites conservation debate](https://news.mongabay.com/2025/06/protect-one-large-forest-or-many-small-ones-new-study-reignites-conservation-debate/){target="_blank"}. (2025). Mongabay.
 
+1. [Ganhos de vegetação secundária na Mata Atlântica são insuficientes para compensar perdas de estoque de carbono e áreas de   conservação](https://ufsb.edu.br/ufsb-ciencia/5195-ganhos-de-vegetacao-secundaria-na-mata-atlantica-sao-insuficientes-para-compensar-perdas-de-estoque-de-carbono-e-areas-de-conservacao?utm_source=chatgpt.com){target="_blank"}. (2025). UFSB Ciência.
+
 <style>
 #topBtn {
   display: none;

@@ -1,6 +1,6 @@
 ---
 title: "Atlantic Forest Networks"
-subtitle: "Compilação de redes de interação de dispersão de plantas e dispersores na Mata Atlântica."
+subtitle: "Compilação de redes de interação de dispersão potenciais de plantas e dispersores na Mata Atlântica."
 author: Maurício Vancine
 image: featured-hex.png
 format:
@@ -30,8 +30,8 @@ editor: source
 
 # **Atlantic Forest Networks** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
 
-Compilação de redes de interação de dispersão de plantas e dispersores na Mata Atlântica
+Compilação de redes de interação de dispersão potenciais de plantas e dispersores na Mata Atlântica.
 
 ## Publicações
 
-1. Morini, R. F. S., <u>**Vancine, M. H.**</u>, Martinez, A. N., Sales, L. P., Pires, M. M. Habitat degradation threatens the topological diversity of seed-dispersal networks in the Atlantic Forest hostspot. In prep.
+1. Morini, R. F. S., <u>**Vancine, M. H.**</u>, Martinez, A. N., Sales, L. P., Pires, M. M. Habitat degradation threatens the topological diversity of seed-dispersal networks in the Atlantic Forest hostspot. *Global Change Biology*. Under review.

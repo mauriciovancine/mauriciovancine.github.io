@@ -30,7 +30,7 @@ editor: source
   }
 </style>
 
-# **spaR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
+# **ecostatR** <img src="featured-hex.png" align="right" width="30%" min-width="120px"/>
 
 ## Descrição
 

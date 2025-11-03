@@ -1,6 +1,6 @@
 ---
 title: "Ensino"
-subtitle: "Disciplinas e cursos que ministrei."
+subtitle: "Disciplinas que ministrei."
 listing:
   - id: teaching
     contents: "**/*/index.qmd"

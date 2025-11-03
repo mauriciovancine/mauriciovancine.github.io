@@ -3,7 +3,7 @@ title: Introdução ao controle de versão com git, GitHub e RStudio
 subtitle: "Principais conceitos de controle de versão usando git"
 author: Maurício Vancine com edições de textos do ChatGPT
 date: 2025-05-01
-categories: ["git", "Versionamento"]
+categories: ["git", "Versionamento", "R"]
 image: "featured.jpg"
 code-link: true
 execute:
@@ -15,18 +15,19 @@ draft: true
 
 ## Contextualização
 
-Nas [disciplinas](/teaching) que ofereço, geralmente eu começo com uma parte de controle de versão usando [git](https://git-scm.com/). 
-Em 2021 ofereci um [minicurso](http://localhost:4321/teaching/workshop-git/) para o pessoal da [Universidade Federal Rural de Pernambuco (UFRPE)](https://www.ufrpe.br/). 
+Nas [disciplinas](/teaching) que ofereço, geralmente eu começo com uma parte de controle de versão usando [git](https://git-scm.com) e [GitHub](https://github.com/). 
 
-Falando com o [Prof. Diogo Provete](http://diogoprovete.weebly.com/) sobre disciplinas e como ensinar git, chegamos à conclusão que é fundamental ter um material didático sobre esse assunto.
+Em 2021 ofereci um [minicurso](workshop/workshop-git) para o pessoal da [Universidade Federal Rural de Pernambuco (UFRPE)](https://www.ufrpe.br). 
 
-Este tutorial aborda os conceitos gerais de controle de versão usando o [git](https://git-scm.com/) e sua integração com o [GitHub](https://github.com/) e o [RStudio](https://posit.co/download/rstudio-desktop/).
+Falando com o [Prof. Diogo Provete](http://diogoprovete.weebly.com) sobre disciplinas e como ensinar git, chegamos à conclusão que é fundamental ter um material didático sobre esse assunto.
 
-Recomendo também olhar o minicurso [gitR: controle de versão com git, GitHub e RStudio](/teaching/workshop-git/). Este post é a transcrição do mesmo.
+Este tutorial aborda os conceitos gerais de controle de versão usando o [git](https://git-scm.com), sua integração com o [GitHub](https://github.com) e o [RStudio](https://posit.co/download/rstudio-desktop).
+
+Recomendo também olhar o minicurso [gitR: controle de versão com git, GitHub e RStudio](/workshop/workshop-git). Este post é a transcrição do mesmo.
 
 ### 1. Conferindo os computadores
 
-É necessário verificar se os seguintes softwares estão instalados e atualizados:
+A primeira coisa a se faezr é verificar se os seguintes softwares estão instalados e atualizados:
 
 - [R](https://www.r-project.org/)
 - [RStudio](https://www.rstudio.com/)
@@ -34,19 +35,20 @@ Recomendo também olhar o minicurso [gitR: controle de versão com git, GitHub e
 
 Além disso, é interessante conhecer softwares que fazem o controle de versão usando uma interface:
 
-- [gitKraken](https://www.gitkraken.com/)
-- [GitHub Desktop](https://github.com/apps/desktop)
+- [gitKraken](https://www.gitkraken.com)
+- [Sublime](https://github.com/apps/desktop)
+- [Sublime Merge](https://www.sublimemerge.com)
 
 ### 2. Controle de versão
 
-O controle de versão permite manejar projetos de forma organizada e colaborativa. Por exemplo:
+O controle de versão permite **manejar projetos** de forma **organizada e colaborativa**. Por exemplo:
 
 - Versionamento de arquivos
 - Controle individual de projetos
 - Controle colaborativo de projetos
 - Controle de versões no tempo
 
-O git é uma principal ferramenta utilizada em grandes projetos científicos. Além disso, seu uso é cada vez mais necessário em colaborações internacionais.
+O [git](https://git-scm.com/) é uma principal ferramenta utilizada em grandes projetos científicos. Além disso, seu uso é cada vez mais necessário em colaborações internacionais.
 
 Dois manuscrito demonstram isso:
 

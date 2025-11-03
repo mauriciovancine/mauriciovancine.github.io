@@ -61,11 +61,11 @@
   {
     "listing": "/course/index.html",
     "items": [
-      "/course/course-reproductibility/index.html",
       "/course/course-ecostatr/index.html",
       "/course/course-spar/index.html",
       "/course/course-geor/index.html",
       "/course/course-intror/index.html",
+      "/course/course-reproductibility/index.html",
       "/course/course-sdmr/index.html"
     ]
   },
