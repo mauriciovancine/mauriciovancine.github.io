@@ -87,6 +87,8 @@ editor: source
 
 1. Gonçalves-Souza, T., <u>**Vancine, M. H.**</u>, Paterno, G. B. (2025). [Computer vision uncovers trait-based insect responses to habitat loss](/publication/2025-goncalves-souza-vancine-paterno){target="_blank"}. *Journal of Animal Ecology*, doi: 10.1111/1365-2656.70165.
 
+1. <u>**Vancine, M. H.**</u>, Niebuhr B. B., Muylaert R. L., Oshima J. E. F., Tonetti V., Bernardo R., Alves R. S. C., Zanette E. M., Souza V. C., Giovanelli J. G. R., Grohmann C. H., Galetti M., & Ribeiro, M. C. (2025). [ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological and anthropogenic metrics for the Atlantic Forest](/publication/2025-vancine-etal){target="_blank"}. *Ecology*.
+
 ## Livros
 
 1. Da Silva, F. R., Gonçalves-Souza, T., Paterno, G. B., Provete, D. B., & <u>**Vancine, M. H.**</u> (2022). [Análises Ecológicas no R](/publication/2022-da-silva-etal){target="_blank"}. *Recife: Nupeea; Bauru, SP: Canal 6*. ISBN 978-85-7917-563-3.
