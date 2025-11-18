@@ -1,0 +1,53 @@
+---
+title: "Expansion of açaí fruit and heart-of-palm production promotes hybridization and introgression in Euterpe palms"
+subtitle: "Encontramos alta diversidade genômica nos híbridos de *Euterpe* e evidências de introgressão onde *E. oleracea* foi introduzida. Seu nicho pode expandir-se sobre o de *E. edulis* e é estável frente a *E. precatoria*. A modelagem indica que *E. oleracea* é adequada ao litoral da Mata Atlântica e à Amazônia."
+author: "Ana Flávia Francisconi, Matheus Scaketti, Jonathan Andre Morales-Marroquín, Igor Araújo Santos de Carvalho, Gabriela de Oliveira Fornazier, Maurício Humberto Vancine, Matheus Sartori Moro, João Victor da Silva Rabelo Araujo, Santiago Linorio Ferreyra Ramos, Valeria Aparecida Modolo, Maria Teresa Gomes Lopes, Maria Imaculada Zucchi"
+date: 2025-11-17
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2025-francisconi-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+## Citação
+
+```
+@article{marques_etal_2025,
+    author = {Francisconi, Ana Flávia and Scaketti, Matheus and Morales-Marroquín, Jonathan Andre and Carvalho, Igor Araújo Santos and Fornazier, Gabriela de Oliveira and Vancine, Maurício Humberto and Moro, Matheus Sartori and Araujo, João Victor da Silva Rabelo and Ramos, Santiago Linorio Ferreyra and Modolo, Valeria Aparecida and Lopes, and Maria Teresa Gomes and Zucchi, Maria Imaculada},
+	  title = {Expansion of açaí fruit and heart-of-palm production promotes hybridization and introgression in Euterpe palms},
+	  journal = {BMC Plant Biology},
+    volume = {},
+  	number = {},
+		pages = {},
+    year = {2025},
+    issn = {},
+	  doi = {},
+    url = {}
+    }
+```
