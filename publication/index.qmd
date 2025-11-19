@@ -119,6 +119,10 @@ editor: source
 
 1. <u>**Vancine, M. H.**</u> (2024). [Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica](/publication/2024-vancine){target="_blank"}. *Universidade Estadual Paulista, Instituto de Biociências de Rio Claro*.
 
+1. Lahr, M. T. (2025). [Movimento e mortalidade: efeito das rodovias sobre a mastofauna e conservação ambiental no Brasil](/publication/2025-lahr){target="_blank"}. *Universidade Estadual Paulista, Instituto de Biociências de Rio Claro*. [Orientador]
+
+1. Furlan, M. E. (2025). [Inferindo a circulação do vírus da raiva e risco zoonótico com aplicações para a saúde pública](/publication/2025-furlan){target="_blank"}. *Universidade Estadual Paulista, Instituto de Biociências de Rio Claro*. [Orientador]
+
 ## Mídia
 
 1. [Grupo da Unesp divulga censo de mamíferos em florestas imersas na cana-de-açúcar](https://agencia.fapesp.br/grupo-da-unesp-divulga-censo-de-mamiferos-em-florestas-imersas-na-cana-de-acucar/24893/){target="_blank"}. (2017). Agência FAPESP.

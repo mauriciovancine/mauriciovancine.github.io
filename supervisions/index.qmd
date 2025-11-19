@@ -11,27 +11,27 @@ editor: source
 
 ## Alunos atuais de graduação
 
-- **Maria Eduarda Furlan**, Iniciação Científica (FAPESP), *Universidade Estadual Paulista (Unesp), Rio Claro*. [Coorientador com Milton Cezar Ribeiro]
-
-- **Maria Eduarda Furlan**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*. [Orientador com Milton Cezar Ribeiro]
-
-- **Mariana Trindade Lahr**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*. [Orientador com Marco Aurélio Pizo]
+- **Maria Eduarda Furlan**, [Iniciação Científica (FAPESP)](/publication/2025-furlan), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2024-2025. [Coorientador com Renata L. Muylaert e Milton Cezar Ribeiro]
 
 ## Alunos anteriores de pós-graduação
 
-- **Lucas de Souza Almeida**, Mestrado, *PPG de Ecologia, Evolução e Biodiversidade, Universidade Estadual Paulista (Unesp), Rio Claro*, 2022. [Coorientador com Célio Fernando Baptista Haddad].
+- **Lucas de Souza Almeida**, [Mestrado](/publication/2022-almeida), *PPG de Ecologia, Evolução e Biodiversidade, Universidade Estadual Paulista (Unesp), Rio Claro*, 2022. [Coorientador com Célio Fernando Baptista Haddad].
 
 ## Alunos anteriores de graduação
 
-- **Lucas de Toledo Lauretto**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*, 2017. [Coorientador com Milton Cezar Ribeiro].
+- **Lucas de Toledo Lauretto**, [Trabalho de Conclusão de Curso](/publication/2025-lauretto), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2017. [Coorientador com Milton Cezar Ribeiro].
 
-- **Lucas de Souza Almeida**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*, 2019. [Coorientador com Célio Fernando Baptista Haddad].
+- **Lucas de Souza Almeida**, [Trabalho de Conclusão de Curso](/publication/2019-almeida), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2019. [Coorientador com Célio Fernando Baptista Haddad].
 
-- **Helena Thereza Carvalho de Oliveira**, Iniciação Científica (PIBIC), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2020. [Orientador com Célio Fernando Baptista Haddad]
+- **Helena Thereza Carvalho de Oliveira**, [Iniciação Científica (PIBIC)](/publication/2021-oliveira), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2020-2021. [Coorientador com Célio Fernando Baptista Haddad]
 
-- **Helena Thereza Carvalho de Oliveira**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*, 2021. [Coorientador com Célio Fernando Baptista Haddad]
+- **Helena Thereza Carvalho de Oliveira**, [Trabalho de Conclusão de Curso](/publication/2021-oliveira), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2021. [Orientador com Célio Fernando Baptista Haddad]
 
-- **Bruno Eduardo Ribeiro Silva**, Trabalho de Conclusão de Curso, *Universidade Estadual Paulista (Unesp), Rio Claro*, 2022. [Orientador com Milton Cezar Ribeiro]
+- **Bruno Eduardo Ribeiro Silva**, [Trabalho de Conclusão de Curso](/publication/2022-silva), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2022. [Orientador com Milton Cezar Ribeiro]
+
+- **Maria Eduarda Furlan**, [Trabalho de Conclusão de Curso](/publication/2025-furlan), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2025. [Orientador com Milton Cezar Ribeiro]
+
+- **Mariana Trindade Lahr**, [Trabalho de Conclusão de Curso](/publication/2025-lahr), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2025. [Orientador com Marco Aurélio Pizo]
 
 <style>
 #topBtn {

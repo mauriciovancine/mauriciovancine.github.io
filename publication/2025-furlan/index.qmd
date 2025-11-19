@@ -1,0 +1,38 @@
+---
+title: "Inferindo a circulação do vírus da raiva e risco zoonótico com aplicações para a saúde pública"
+subtitle: "Trabalho de Conclusão de Curso visamos analisar o risco zoonótico da raiva, examinando a distribuição potencial do D. rotundus, correlacionando-a com casos de raiva em gado e seres humanos e com a estrutura da paisagem."
+author: Maria Eduarda Furlan
+date: 2025-11-25
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://repositorio.unesp.br/handle/" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-graduation-cap me-1"></i>biblioteca</a>
+  <a href="/publications/2025-furlan.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+As atividades econômicas nas regiões neotropicais, particularmente a expansão agrícola, têm levado à perda e fragmentação das paisagens, alterando os recursos disponíveis para a biodiversidade e afetando a dinâmica populacional das espécies. Essas mudanças ambientais podem influenciar a ascensão ou declínio populacional das espécies, o que pode impactar a transmissão de doenças zoonóticas. Os morcegos neotropicais, particularmente o *Desmodus rotundus*, são afetados por essas mudanças, mas se beneficiam das áreas fragmentadas, especialmente nas regiões de pecuária, o que tem contribuído para o crescimento de sua população e expansão geográfica. Isso tem implicações significativas para a saúde pública, pois o *D. rotundus* é um reservatório importante do vírus da raiva (*Lyssavirus* ssp.). Dessa forma, compreender a dinâmica espacial desses morcegos é crucial para avaliar a circulação da raiva e seu risco zoonótico. Este trabalho visou analisar o risco zoonótico da raiva, examinando a distribuição potencial do *D. rotundus*, correlacionando-a com casos de raiva em gado e seres humanos e com a estrutura da paisagem. Usamos modelagem de adequabilidade de habitat para prever a distribuição potencial de morcegos com rebanhos de gado e casos de raiva. Usamos dados atualizados sobre gado do Sistema de Transparência Pública do Governo Brasileiro, juntamente com dados publicamente disponíveis sobre casos de raiva em humanos, para estimar o risco zoonótico para todos os municípios do Brasil. O modelo de adequabilidade mostrou extensas áreas adequadas à ocorrência potencial do morcego principalmente na costa brasileira, mas também em porções do interior com menores valores de adequabilidade para a região amazônica. A compilação dos dados de raiva mostrou que a mesma ocorreu em cerca de 81 municípios entre 2001 a 2024, com predomínio da região Nordeste e região Norte do país. Por fim, nossa priorização espacial mostrou que 565 municípios foram sinalizados com alta classificação entre os componentes de risco, entretanto, apenas 19 dos 81 municípios com histórico de raiva estão classificados, demonstrando que o índice ainda carece de mais refinamento. Nossos resultados podem auxiliar na prevenção e controle da raiva, contribuindo para estratégias personalizadas de prevenção de doenças e desenvolvimento de políticas de saúde pública ao nível municipal.

@@ -1,0 +1,38 @@
+---
+title: "Movimento e mortalidade: efeito das rodovias sobre a mastofauna e conservação ambiental no Brasil"
+subtitle: "Trabalho de Conclusão de Curso que analisou se diferentes capacidades de movimento de três espécies de mamíferos e a estrutura da paisagem estavam relacionados à densidade de seus atropelamentos nas rodovias do Brasil, explorando dados de diversos eixos rodoviários."
+author: Mariana Trindade Lahr
+date: 2025-11-25
+format:
+  html:
+    include-in-header: 
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+editor: source
+---
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+  <a href="https://repositorio.unesp.br/handle/" class="btn btn-custom text-capitalize" target="_blank"><i class="fas fa-graduation-cap me-1"></i>biblioteca</a>
+  <a href="/publications/2025-lahr.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+</div>
+
+<style>
+  .btn-custom {
+    background-color: white;
+    border: 1px solid #1c6cbe; /* Borda azul */
+    color: #1c6cbe; /* Texto azul */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-custom:hover {
+    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
+    color: white; /* Texto branco */
+  }
+</style>
+
+<br> 
+
+![](featured.png)
+
+## Resumo
+
+A expansão das rodovias no Brasil foi um dos principais fatores que impulsionaram o desenvolvimento socioeconômico do país, facilitando a integração nacional, comércio e mobilidade. No entanto, essa expansão também gerou impactos ambientais significativos, alterando processos ecológicos e afetando negativamente a fauna e os ecossistemas. As estradas atuam como barreiras ao movimento natural dos animais, fragmentam habitats e aumentam a mortalidade devido a atropelamentos, o que pode resultar na extinção local de espécies, especialmente aquelas com baixa capacidade de movimentação e vulneráveis às exposições nas vias. Este estudo analisou se diferentes capacidades de movimento de três espécies de mamíferos: gambá-de-orelhas-brancas (*Didelphis albiventris*), gato-do-mato-grande (*Leopardus geoffroyi*) e tamanduá-bandeira (*Myrmecophaga tridactyla*), e a estrutura da paisagem estavam relacionados à densidade de seus atropelamentos nas rodovias do Brasil, explorando dados de diversos eixos rodoviários. Para o estudo, foi utilizado o conjunto de dados “BRAZIL ROAD-KILL”, que reúne registros de atropelamentos de animais entre 2002 e 2017. A análise incluiu a estimativa de densidade por meio do método de Kernel e a aplicação de buffers com diferentes raios, visando avaliar métricas de paisagem ao redor dos pontos de ocorrência de atropelamentos. Ao longo da pesquisa, identificou-se que a densidade de borda foi o principal fator associado aos atropelamentos de *Didelphis albiventris* e *Myrmecophaga tridactyla*, sendo *D. albiventris* a espécie com maior número de ocorrências registradas. Além disso, observou-se que áreas com maior cobertura vegetal apresentaram menor incidência de atropelamentos de *Leopardus geoffroyi*, o que indica que a proporção de habitat atua como um fator relevante na redução da vulnerabilidade dessa espécie a impactos viários. Os resultados reforçam a importância de considerar não apenas as métricas de paisagem, mas também os aspectos biológicos específicos de cada espécie, como a escala de efeito, ao elaborar estratégias de mitigação, contribuindo significativamente para políticas de planejamento e intervenções voltadas à segurança da mastofauna frente aos impactos rodoviários.
