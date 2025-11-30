@@ -72,6 +72,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/eco-biodiv-data/index.html",
       "/blog/eco-taxonomy/index.html",
       "/blog/academic-research-internship-abroad/index.html",
       "/blog/r-geo-fix-coordinates/index.html",

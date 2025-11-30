@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.2">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Maurício Vancine">
+<title>Fontes de dados de biodiversidade – Maurício Vancine</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cd3c9c2e6a7570597db7fcfacb1c1243.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e8b6ce8f6797ea4a9334ddb13506f06e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script><link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Maurício Vancine</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talk/index.html"> 
+<span class="menu-text">Palestras</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../workshop/index.html"> 
+<span class="menu-text">Cursos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../course/index.html"> 
+<span class="menu-text">Disciplinas</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project/index.html"> 
+<span class="menu-text">Projetos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../shiny/index.html"> 
+<span class="menu-text">Shiny</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publication/index.html"> 
+<span class="menu-text">Publicações</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../supervisions/index.html"> 
+<span class="menu-text">Orientações</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://mauriciovancine.github.io/cv/cv-academic.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://mauriciovancine.github.io/resume/resume.pdf" target="_blank"> 
+<span class="menu-text">Resumé</span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/mauriciovancine/mauriciovancine.github.io" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li><a href="#contextualiza%C3%A7%C3%A3o" id="toc-contextualização" class="nav-link active" data-scroll-target="#contextualiza%C3%A7%C3%A3o">Contextualização</a></li>
+  <li><a href="#dados-de-ocorr%C3%AAncias" id="toc-dados-de-ocorrências" class="nav-link" data-scroll-target="#dados-de-ocorr%C3%AAncias">Dados de ocorrências</a></li>
+  <li><a href="#dados-de-ci%C3%AAncia-cidad%C3%A3" id="toc-dados-de-ciência-cidadã" class="nav-link" data-scroll-target="#dados-de-ci%C3%AAncia-cidad%C3%A3">Dados de ciência cidadã</a></li>
+  <li><a href="#dados-de-comunidades-ecol%C3%B3gicas" id="toc-dados-de-comunidades-ecológicas" class="nav-link" data-scroll-target="#dados-de-comunidades-ecol%C3%B3gicas">Dados de comunidades ecológicas</a></li>
+  <li><a href="#dados-de-taxonomia" id="toc-dados-de-taxonomia" class="nav-link" data-scroll-target="#dados-de-taxonomia">Dados de taxonomia</a></li>
+  <li><a href="#dados-de-biogeografia" id="toc-dados-de-biogeografia" class="nav-link" data-scroll-target="#dados-de-biogeografia">Dados de biogeografia</a></li>
+  <li><a href="#dados-de-movimento" id="toc-dados-de-movimento" class="nav-link" data-scroll-target="#dados-de-movimento">Dados de movimento</a></li>
+  <li><a href="#dados-de-vocaliza%C3%A7%C3%A3o" id="toc-dados-de-vocalização" class="nav-link" data-scroll-target="#dados-de-vocaliza%C3%A7%C3%A3o">Dados de vocalização</a></li>
+  <li><a href="#dados-de-tra%C3%A7os-funcionais" id="toc-dados-de-traços-funcionais" class="nav-link" data-scroll-target="#dados-de-tra%C3%A7os-funcionais">Dados de traços funcionais</a></li>
+  <li><a href="#dados-filogen%C3%A9ticos" id="toc-dados-filogenéticos" class="nav-link" data-scroll-target="#dados-filogen%C3%A9ticos">Dados filogenéticos</a></li>
+  <li><a href="#dados-gen%C3%A9ticos" id="toc-dados-genéticos" class="nav-link" data-scroll-target="#dados-gen%C3%A9ticos">Dados genéticos</a></li>
+  <li><a href="#pacotes-no-r" id="toc-pacotes-no-r" class="nav-link" data-scroll-target="#pacotes-no-r">Pacotes no R</a></li>
+  <li><a href="#artigos" id="toc-artigos" class="nav-link" data-scroll-target="#artigos">Artigos</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Fontes de dados de biodiversidade</h1>
+<p class="subtitle lead">Lista das principais fontes e pacotes do R de dados de biodiversidade.</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Dados</div>
+    <div class="quarto-category">Biodiversidade</div>
+    <div class="quarto-category">Ocorrências</div>
+    <div class="quarto-category">Atributos funcionais</div>
+    <div class="quarto-category">Filogenia</div>
+    <div class="quarto-category">Genética</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Maurício Vancine </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">21 de dezembro de 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header><section id="contextualização" class="level2"><h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
+<p>Desde minha graduação, sempre trabalhei com dados secundários. Dados secundários são dados que alguém coletou em campo e que você organizou.</p>
+<p>Dados primários são dados que você mesmo coletou em campo. E como “dados são o novo ouro” como dizem por aí, nada melhor que ter isso junto num único lugar.</p>
+<p>Pensando nisso, escrevi esse post para reunir as bases de dados e artigos que conheço (<a href="#tbl-table1" class="quarto-xref">Tabela&nbsp;1</a>), com muita ajuda do <a href="https://lsa.umich.edu/eeb/people/postdoctoral-fellows/thiago-goncalves-souza.html">Thiago Gonçalvez Souza</a>. Também listei os pacotes no R que fazem essa busca.</p>
+<div class="cell" data-layout-align="center" data-tbl-cap-align="left">
+<div id="tbl-table1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-align="left" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-table1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;1: Lista das principais fontes e pacotes do R de dados de biodiversidade.
+</figcaption><div aria-describedby="tbl-table1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">APPs</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.graphica.app">Scimago Graphica</a></td>
+<td style="text-align: left;">Gráficos e mapas</td>
+<td style="text-align: left;">Software simples e intuitivo para criação de gráficos científicos e matemáticos; sendo muito útil para fins educacionais e acadêmicos</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.gnuplot.info">Gnuplot</a></td>
+<td style="text-align: left;">Gráficos</td>
+<td style="text-align: left;">Programa poderoso para criação de gráficos 2D e 3D; com suporte a várias saídas (PDF; PNG; SVG) e integração com linguagens como Python e LaTeX</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://scidavis.sourceforge.net">SciDAVis</a></td>
+<td style="text-align: left;">Gráficos</td>
+<td style="text-align: left;">Ferramenta focada em análise de dados e geração de gráficos científicos; com interface amigável</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://labplot.kde.org">LabPlot</a></td>
+<td style="text-align: left;">Gráficos</td>
+<td style="text-align: left;">Similar ao Origin; ideal para criar gráficos e analisar dados com suporte para scripts em Python</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://plotly.com">Plotly</a></td>
+<td style="text-align: left;">Gráficos</td>
+<td style="text-align: left;">Ferramenta interativa baseada em Python; R ou navegador; que pode ser usada offline para gráficos sofisticados</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://app.flourish.studio/projects">Flourish</a></td>
+<td style="text-align: left;">Gráficos</td>
+<td style="text-align: left;">Plataforma online gratuita que permite criar visualizações de dados interativas e atraentes; mesmo sem conhecimento prévio de programação</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://veusz.github.io">Veusz</a></td>
+<td style="text-align: left;">Gráficos</td>
+<td style="text-align: left;">Cria gráficos científicos de alta qualidade; projetado para ser fácil de usar; flexível e altamente configurável; atendendo às necessidades de pesquisadores; engenheiros e outros profissionais que precisam de gráficos precisos e visualmente atraentes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.rawgraphs.io">RAWGraphs</a></td>
+<td style="text-align: left;">Gráficos</td>
+<td style="text-align: left;">Estrutura de visualização de dados de código aberto construída com o objetivo de tornar a representação visual de dados complexos fácil para todos</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://saga-gis.sourceforge.io/">SAGA GIS</a></td>
+<td style="text-align: left;">Mapas</td>
+<td style="text-align: left;">Voltado para análises espaciais e visualização de dados geoespaciais; incluindo mapeamento temático</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://diva-gis.org/">DIVA-GIS</a></td>
+<td style="text-align: left;">Mapas</td>
+<td style="text-align: left;">Específico para mapeamento de biodiversidade e análise geográfica básica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://geodacenter.github.io/">GeoDa</a></td>
+<td style="text-align: left;">Mapas</td>
+<td style="text-align: left;">Ferramenta especializada em análises espaciais estatísticas; com suporte a mapas temáticos</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://orbisgis.org/">OrbisGIS</a></td>
+<td style="text-align: left;">Mapas</td>
+<td style="text-align: left;">Focado em SIG e criação de mapas com funcionalidades para análise espacial</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.itc.nl/ilwis/">ILWIS (Integrated Land and Water Information System)</a></td>
+<td style="text-align: left;">Mapas</td>
+<td style="text-align: left;">Excelente para processamento de imagens; análise geográfica e criação de mapas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://udig.refractions.net/">uDig (User-friendly Desktop Internet GIS)</a></td>
+<td style="text-align: left;">Mapas</td>
+<td style="text-align: left;">SIG open-source com foco em facilidade de uso e suporte a mapeamento interativo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://veusz.github.io">OpenJump GIS</a></td>
+<td style="text-align: left;">Mapas</td>
+<td style="text-align: left;">Ferramenta leve para análise espacial e criação de mapas básicos; compatível com diversos formatos</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.obt.inpe.br/OBT/assuntos/projetos/terralib-terraview">TerraView</a></td>
+<td style="text-align: left;">Mapas</td>
+<td style="text-align: left;">Desenvolvido pelo INPE; permite análise e visualização de dados espaciais com foco em mapas temáticos</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.mapwindow.org/">MapWindow GIS</a></td>
+<td style="text-align: left;">Mapas</td>
+<td style="text-align: left;">SIG focado em visualização e análise espacial; com funcionalidades básicas de edição de mapas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://marble.kde.org/">Marble</a></td>
+<td style="text-align: left;">Mapas</td>
+<td style="text-align: left;">Um globo virtual semelhante ao Google Earth; com recursos de visualização geoespacial</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section><section id="dados-de-ocorrências" class="level2"><h2 class="anchored" data-anchor-id="dados-de-ocorrências">Dados de ocorrências</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://specieslink.net/">speciesLink</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://salve.icmbio.gov.br">Plataforma SALVE</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://portaldabiodiversidade.icmbio.gov.br/portal/">Portal da Biodiversidade</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.sibbr.gov.br/">Plataforma de Biodiversidade do Brasil (SiBBr)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.gbif.org/">Global Biodiversity Information Facility (GBIF)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://ebird.org/home">eBird</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.antweb.org/">AntWeb</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.inaturalist.org">iNaturalist</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://vertnet.org">VertNet</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.idigbio.org">Integrated Digitized Biocollections (iDigBio)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://ecoengine.berkeley.edu">Berkeley Ecoinformatics Engine (EcoEngine)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://bien.nceas.ucsb.edu/bien/">BIEN</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.nybg.org">New York Botanical Garden</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.missouribotanicalgarden.org">Missouri Botanical Garden</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.salvias.net">SALVIAS (Enquist &amp; Boyle 2012)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.teamnetwork.org">Tropical Ecology Assessment and Monitoring Network (Fegraus 2012)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://ag.arizona.edu/herbarium">University of Arizona</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://vegbank.org">VegBank</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://prc-symbiota.tacc.utexas.edu">University of Texas at Austin</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.brit.org">Botanical Research Institute of Texas</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.fia.fs.fed.us">Forest Inventory and Analysis National Program (USA)(2013)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.naturalis.nl">Naturalis</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.biodiversity.ubc.ca/museum/herbarium">University of British Columbia</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://herbarium.acadiau.ca">Acadia University</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://winherbarium.weebly.com">University of Manitoba</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://cvs.bio.unc.edu">Carolina Vegetation Survey (Peetet al.&nbsp;2012a)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.herbarium.unc.edu">University of North Carolina</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.herbier.ulaval.ca">Université Laval</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://obis.org/">OBIS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="dados-de-ciência-cidadã" class="level2"><h2 class="anchored" data-anchor-id="dados-de-ciência-cidadã">Dados de ciência cidadã</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.taxeus.com.br">Táxeus</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://ebird.org/home">eBird</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.inaturalist.org">iNaturalist</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.wikiaves.com.br">Wikiaves</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://xeno-canto.org">Xeno-canto</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="dados-de-comunidades-ecológicas" class="level2"><h2 class="anchored" data-anchor-id="dados-de-comunidades-ecológicas">Dados de comunidades ecológicas</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1002/ecy.2392">ATLANTIC AMPHIBIANS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1002/ecy.3580">ATLANTIC ANTS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2007">ATLANTIC BATS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2119">ATLANTIC BIRDS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2647">ATLANTIC BIRD TRAITS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2507">ATLANTIC BUTTERFLIES</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.1998">ATLANTIC CAMTRAPS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1002/ecy.4298">Camera trap surveys of Atlantic Forest mammals</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2541">ATLANTIC EPIPHYTES</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2541">Atlantic flower–invertebrate interactions</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.1818">ATLANTIC FRUGIVORY</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://esajournals.doi/abs/10.1002/ecy.2785">ATLANTIC MAMMALS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2106">ATLANTIC MAMMAL TRAITS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2107">Non-volant mammals from the Upper Paraná River Basin</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi/abs/10.1002/ecy.3595">ATLANTIC POLLINATION</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2525">ATLANTIC PRIMATES</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.1893">ATLANTIC SMALL-MAMMAL</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2005">Abundance of small mammals in the Atlantic Forest (ASMAF)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi/abs/10.1002/ecy.3738">AMAZONIA CAMTRAP</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://bdj.pensoft.net/article/109785/">Amazonian amphibians</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1002/ecy.3149">Plant-galling insect interactions</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2464">BRAZIL ROAD‐KILL</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1002/ecy.3602">VTMaxHerp</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1111/geb.13449">SIA-BRA</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi/10.1002/ecy.2379">Jaguar movement database</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://esajournals.doi/abs/10.1002/ecy.3128">NEOTROPICAL CARNIVORES</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://esajournals.doi/abs/10.1002/ecy.3115">NEOTROPICAL ALIEN MAMMALS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://esajournals.doi/abs/10.1002/ecy.2663">NEOTROPICAL XENARTHRANS</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1002/ecy.3713">NEOTROPICAL FRESHWATER FISHES</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1890/11-0262.1">Species composition and abundance of mammalian communities</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1890/08-1494.1">PanTHERIA</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1890/11-1052.1">Matrix population models from 20 studies of perennial plant populations</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1002/ecy.3056">Global rheophytes data set</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="dados-de-taxonomia" class="level2"><h2 class="anchored" data-anchor-id="dados-de-taxonomia">Dados de taxonomia</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://amphibiansoftheworld.amnh.org/">Amphibian Species of the World</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://amphibiaweb.org/">AmphibiaWeb</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.reptile-database.org/">ReptileDB</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.antweb.org/">AntWeb</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://floradobrasil.jbrj.gov.br/reflora/PrincipalUC/PrincipalUC.do">Programa REFLORA</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.worldfloraonline.org/">World Flora Online</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://wfoplantlist.org/">The Plant List</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="dados-de-biogeografia" class="level2"><h2 class="anchored" data-anchor-id="dados-de-biogeografia">Dados de biogeografia</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://biogeo.inct.florabrasil.net/">Biogeografia da Flora e Fungos do Brasil</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://biodiversitymapping.org/">biodiversitymapping.org</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://mol.org/">Map of Life (MOL)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.gardinitiative.org/">Global Assessment of Reptile Distributions (GARD)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="dados-de-movimento" class="level2"><h2 class="anchored" data-anchor-id="dados-de-movimento">Dados de movimento</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td style="text-align: left;"><a href="https://www.movebank.org/cms/movebank-main">Movebank</a></td>
+<td style="text-align: left;"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</section><section id="dados-de-vocalização" class="level2"><h2 class="anchored" data-anchor-id="dados-de-vocalização">Dados de vocalização</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.wikiaves.com.br">Wikiaves</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://xeno-canto.org">Xeno-canto</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="dados-de-traços-funcionais" class="level2"><h2 class="anchored" data-anchor-id="dados-de-traços-funcionais">Dados de traços funcionais</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1038/sdata.2017.123">AmphiBIO</a></td>
+<td style="text-align: left;">Banco de dados de traits de plantas para os Andes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1093/database/baab064">SpiderTraits</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1111/icad.12211">GlobalAnts</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1111/gcb.14904">TRY</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1111/geb.12773">LizardTraits</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1890/13-1917.1">EltonTraits</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1371/journal.pbio.3002658">TetrapodTraits</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1111/geb.12398">Body sizes and diversification rates of lizards, snakes, amphisbaenians and the tuatara</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href=""></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href=""></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href=""></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href=""></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href=""></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.nature.com/articles/s41597-022-01626-6">FunAndes – A functional trait database of Andean plants</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://opentraits.org/datasets/avonet.html">AVONET</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="dados-filogenéticos" class="level2"><h2 class="anchored" data-anchor-id="dados-filogenéticos">Dados filogenéticos</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td style="text-align: left;"><a href="https://phylomedb.org">phylomeDB</a></td>
+<td style="text-align: left;"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</section><section id="dados-genéticos" class="level2"><h2 class="anchored" data-anchor-id="dados-genéticos">Dados genéticos</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.ncbi.nlm.nih.gov/genbank/">genbank</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://sicol.cria.org.br/">Sistema de Informação de Coleções de Interesse Biotecnológico (SICol)</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://genrefbr.itv.org/">GenRefBR</a></td>
+<td style="text-align: left;">Referências Genômicas de Espécies Brasileiras</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="pacotes-no-r" class="level2"><h2 class="anchored" data-anchor-id="pacotes-no-r">Pacotes no R</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">Bases de dados</th>
+<th style="text-align: left;">Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cloud.r-project.org/web/packages/spocc/index.html">spocc</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/rgbif/index.html">rgbif</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/rebird/index.html">rebird</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/rvertnet/index.html">rvertnet</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/ridigbio/index.html">ridigbio</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/ecoengine/index.html">ecoengine</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cloud.r-project.org/web/packages/robis/index.html">robis</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/BIEN/index.html">BIEN</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cloud.r-project.org/web/packages/taxize/index.html">taxize</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://github.com/hcliedtke/AmphiNom">AmphiNom</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/flora/index.html">flora</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://cran.r-project.org/web/packages/WorldFlora/index.html">WorldFlora</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="artigos" class="level2"><h2 class="anchored" data-anchor-id="artigos">Artigos</h2>
+<p>Bello, C., Galetti, M., Montan, D., Pizo, M. A., Mariguela, T. C., Culot, L., Bufalo, F., Labecca, F., Pedrosa, F., Constantini, R., Emer, C., Silva, W. R., da Silva, F. R., Ovaskainen, O., &amp; Jordano, P. (2017). Atlantic frugivory: A plant-frugivore interaction data set for the Atlantic Forest. Ecology, 98(6), 1729–1729. https://doi.org/10.1002/ecy.1818</p>
+<p>Boscolo, D., Nobrega Rodrigues, B., Ferreira, P. A., Lopes, L. E., Tonetti, V. R., Reis dos Santos, I. C., Hiruma-Lima, J. A., Nery, L., Baptista de Lima, K., Perozi, J., Freitas, A. V. L., Viana, B. F., Antunes-Carvalho, C., Amorim, D. de S., Freitas de Oliveira, F., Groppo, M., Absy, M. L., de Almeida-Scabbia, R. J., Alves-Araújo, A., … Ribeiro, M. C. (2023). Atlantic flower–invertebrate interactions: A data set of occurrence and frequency of floral visits. Ecology, 104(3), e3900. https://doi.org/10.1002/ecy.3900</p>
+<p>Bovendorp, R. S., Villar, N., de Abreu-Junior, E. F., Bello, C., Regolin, A. L., Percequillo, A. R., &amp; Galetti, M. (2017). Atlantic small-mammal: A dataset of communities of rodents and marsupials of the Atlantic forests of South America. Ecology, 98(8), 2226–2226. https://doi.org/10.1002/ecy.1893</p>
+<p>Culot, L., Pereira, L. A., Agostini, I., Almeida, M. A. B., Alves, R. S. C., Aximoff, I., Bager, A., Baldovino, M. C., Bella, T. R., Bicca‐Marques, J. C., Braga, C., Brocardo, C. R., Campelo, A. K. N., Canale, G. R., Cardoso, J. da C., Carrano, E., Casanova, D. C., Cassano, C. R., Castro, E., … Galetti, M. (2019). ATLANTIC PRIMATES: a dataset of communities and occurrences of primates in the Atlantic Forests of South America. Ecology, 100(1). https://doi.org/10.1002/ecy.2525</p>
+<p>Figueiredo, M. S. L., Barros, C. S., Delciellos, A. C., Guerra, E. B., Cordeiro-Estrela, P., Kajin, M., Alvarez, M. R., Asfora, P. H., Astúa, D., Bergallo, H. G., Cerqueira, R., Geise, L., Gentile, R., Grelle, C. E. V., Iack-Ximenes, G. E., Oliveira, L. C., Weksler, M., &amp; Vieira, M. V. (2017). Abundance of small mammals in the Atlantic Forest (ASMAF): A data set for analyzing tropical community patterns. Ecology, 98(11), 2981–2981. https://doi.org/10.1002/ecy.2005</p>
+<p>Franceschi, I. C., Dornas, R. A. da P., Lermen, I. S., Coelho, A. V. P., Vilas Boas, A. H., Chiarello, A. G., Paglia, A. P., de Souza, A. C., Borsekowsky, A. R., Rocha, A., Bager, A., de Souza, A. Z., Lopes, A. M. C., de Moura, A. S., Ferreira, A. S., García-Olaechea, A., Delciellos, A. C., Bacellar, A. E. de F., Campelo, A. K. N., … Coelho, I. P. (2024). Camera trap surveys of Atlantic Forest mammals: A data set for analyses considering imperfect detection (2004–2020). Ecology, n/a(n/a), e4298. https://doi.org/10.1002/ecy.4298</p>
+<p>Gonçalves, F., Bovendorp, R. S., Beca, G., Bello, C., Costa-Pereira, R., Muylaert, R. L., Rodarte, R. R., Villar, N., Souza, R., Graipel, M. E., Cherem, J. J., Faria, D., Baumgarten, J., Alvarez, M. R., Vieira, E. M., Cáceres, N., Pardini, R., Leite, Y. L. R., Costa, L. P., … Galetti, M. (2018). ATLANTIC MAMMAL TRAITS: A data set of morphological traits of mammals in the Atlantic Forest of South America. Ecology, 99(2), 498–498. https://doi.org/10.1002/ecy.2106 Gonçalves, F., Hannibal, W., Godoi, M. N., Martins, F. I., Oliveira, R. F., Figueiredo, V. V., Casella, J., &amp; de Sá, É. F. G. G. (2018). Non-volant mammals from the Upper Paraná River Basin: A data set from a critical region for conservation in Brazil. Ecology, 99(2), 499–499. https://doi.org/10.1002/ecy.2107</p>
+<p>Hasui, É., Metzger, J. P., Pimentel, R. G., Silveira, L. F., Bovo, A. A. d.&nbsp;A., Martensen, A. C., Uezu, A., Regolin, A. L., Bispo de Oliveira, A. Â., Gatto, C. A. F. R., Duca, C., Andretti, C. B., Banks-Leite, C., Luz, D., Mariz, D., Alexandrino, E. R., de Barros, F. M., Martello, F., Pereira, I. M. d.&nbsp;S., … Ribeiro, M. C. (2018). ATLANTIC BIRDS: A data set of bird species from the Brazilian Atlantic Forest. Ecology, 99(2), 497–497. https://doi.org/10.1002/ecy.2119 Iamara-Nogueira, J., Targhetta, N., Allain, G., Gambarini, A., Pinto, A. R., Rui, A. M., Araújo, A. C., Lopes, A., Pereira-Silva, B., de Camargo, B. B., Machado, C. G., Missagia, C., Scultori, C., Boscolo, D., Fischer, E., Araújo-Oliveira, E. S., Gava, H., Paulino-Neto, H. F., Machado, I. C., … Buzato, S. (2022). ATLANTIC POLLINATION: A data set of flowers and interaction with nectar-feeding vertebrates from the Atlantic Forest. Ecology, 103(2), e03595. https://doi.org/10.1002/ecy.3595</p>
+<p>Lima, F., Beca, G., Muylaert, R. L., Jenkins, C. N., Perilli, M. L. L., Paschoal, A. M. O., Massara, R. L., Paglia, A. P., Chiarello, A. G., Graipel, M. E., Cherem, J. J., Regolin, A. L., Oliveira Santos, L. G. R., Brocardo, C. R., Paviolo, A., Di Bitetti, M. S., Scoss, L. M., Rocha, F. L., Fusco-Costa, R., … Galetti, M. (2017). ATLANTIC-CAMTRAPS: A dataset of medium and large terrestrial mammal communities in the Atlantic Forest of South America. Ecology, 98(11), 2979–2979. https://doi.org/10.1002/ecy.1998</p>
+<p>Muylaert, R. d.&nbsp;L., Stevens, R. D., Esbérard, C. E. L., Mello, M. A. R., Garbino, G. S. T., Varzinczak, L. H., Faria, D., Weber, M. d.&nbsp;M., Kerches Rogeri, P., Regolin, A. L., Oliveira, H. F. M. d., Costa, L. d.&nbsp;M., Barros, M. A. S., Sabino-Santos, G., Crepaldi de Morais, M. A., Kavagutti, V. S., Passos, F. C., Marjakangas, E.-L., Maia, F. G. M., … Galetti, M. (2017). ATLANTIC BATS: A data set of bat communities from the Atlantic Forests of South America. Ecology, 98(12), 3227–3227. https://doi.org/10.1002/ecy.2007</p>
+<p>Ramos, F. N., Mortara, S. R., Monalisa‐Francisco, N., Elias, J. P. C., Neto, L. M., Freitas, L., Kersten, R., Amorim, A. M., Matos, F. B., Nunes‐Freitas, A. F., Alcantara, S., Alexandre, M. H. N., Almeida‐Scabbia, R. J., Almeida, O. J. G., Alves, F. E., Oliveira Alves, R. M., Alvim, F. S., Andrade, A. C. S., Andrade, S., … Ribeiro, M. C. (2019). ATLANTIC EPIPHYTES: a data set of vascular and non‐vascular epiphyte plants and lichens from the Atlantic Forest. Ecology, 100(2), e02541. https://doi.org/10.1002/ecy.2541</p>
+<p>Rodrigues, R. C., Hasui, É., Assis, J. C., Pena, J. C. C., Muylaert, R. L., Tonetti, V. R., Martello, F., Regolin, A. L., Costa, T. V. V. da, Pichorim, M., Carrano, E., Lopes, L. E., Vasconcelos, M. F. de, Fontana, C. S., Roos, A. L., Gonçalves, F., Banks‐Leite, C., Cavarzere, V., Efe, M. A., … Ribeiro, M. C. (2019). ATLANTIC BIRD TRAITS: a data set of bird morphological traits from the Atlantic forests of South America. Ecology, e02647. https://doi.org/10.1002/ecy.2647</p>
+<p>Santos, J. P. dos, Freitas, A. V. L., Brown, K. S., Carreira, J. Y. O., Gueratto, P. E., Rosa, A. H. B., Lourenço, G. M., Accacio, G. M., Uehara‐Prado, M., Iserhard, C. A., Richter, A., Gawlinski, K., Romanowski, H. P., Mega, N. O., Teixeira, M. O., Moser, A., Ribeiro, D. B., Araujo, P. F., Filgueiras, B. K. C., … Ribeiro, M. C. (2018). Atlantic butterflies: A data set of fruit‐feeding butterfly communities from the Atlantic forests. Ecology, 99(12), 2875–2875. https://doi.org/10.1002/ecy.2507</p>
+<p>Silva, R. R., Martello, F., Feitosa, R. M., Silva, O. G. M., do Prado, L. P., Brandão, C. R. F., de Albuquerque, E. Z., Morini, M. S. C., Delabie, J. H. C., dos Santos Monteiro, E. C., Emanuel Oliveira Alves, A., Wild, A. L., Christianini, A. V., Arnhold, A., Casadei Ferreira, A., Oliveira, A. M., Santos, A. D., Galbán, A., de Oliveira, A. A., … Ribeiro, M. C. (2022). ATLANTIC ANTS: A data set of ants in Atlantic Forests of South America. Ecology, 103(2), e03580. https://doi.org/10.1002/ecy.3580</p>
+<p>Souza, Y., Gonçalves, F., Lautenschlager, L., Akkawi, P., Mendes, C., Carvalho, M. M., Bovendorp, R. S., Fernandes-Ferreira, H., Rosa, C., Graipel, M. E., Peroni, N., Cherem, J. J., Bogoni, J. A., Brocardo, C. R., Miranda, J., Silva, L. Z. da, Melo, G., Cáceres, N., Sponchiado, J., … Galetti, M. (2019). ATLANTIC MAMMALS: A data set of assemblages of medium- and large-sized mammals of the Atlantic Forest of South America. Ecology, 100(10), e02785. https://doi.org/10.1002/ecy.2785</p>
+<p>Tobias, J. A., Sheard, C., Pigot, A. L., Devenish, A. J. M., Yang, J., Sayol, F., Neate‐Clegg, M. H. C., Alioravainen, N., Weeks, T. L., Barber, R. A., Walkden, P. A., MacGregor, H. E. A., Jones, S. E. I., Vincent, C., Phillips, A. G., Marples, N. M., Montaño‐Centellas, F. A., Leandro‐Silva, V., Claramunt, S., … Schleuning, M. (2022). AVONET: Morphological, ecological and geographical data for all birds. Ecology Letters, 25(3), 581–597. https://doi.org/10.1111/ele.13898</p>
+<p>Vancine, M. H., Duarte, K. da S., de Souza, Y. S., Giovanelli, J. G. R., Martins-Sobrinho, P. M., López, A., Bovo, R. P., Maffei, F., Lion, M. B., Ribeiro Júnior, J. W., Brassaloti, R., da Costa, C. O. R., Sawakuchi, H. O., Forti, L. R., Cacciali, P., Bertoluci, J., Haddad, C. F. B., &amp; Ribeiro, M. C. (2018). ATLANTIC AMPHIBIANS: A data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692–1692. https://doi.org/10.1002/ecy.2392</p>
+<p>Fonte da imagem: <a href="https://www.pexels.com/pt-br/foto/colecao-beetle-2694485">Diana/Pexels</a>.</p>
+<style>
+#topBtn {
+display: none;
+position: fixed;
+bottom: 105px; /* um pouco acima do fundo */
+left: 50%;
+transform: translateX(-50%);
+padding: 10px 14px;
+font-size: 20px;
+border: none;
+border-radius: 6px;
+background-color: rgba(28, 108, 190, 0.7); /* azul com transparência */
+color: white;
+cursor: pointer;
+box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+transition: background-color 0.3s;
+}
+#topBtn:hover {
+background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+↑ Topo
+</button>
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+const scrollBottom = window.innerHeight + window.scrollY;
+const docHeight = document.documentElement.scrollHeight;
+
+if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+btn.style.display = "block";
+} else {
+btn.style.display = "none";
+}
+});
+</script>
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/mauriciovancine">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-9650-7575">
+<p><i class="ai  ai-orcid" aria-label="orcid"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.webofscience.com/wos/author/record/837504">
+<p><i class="ai  ai-researcherid" aria-label="researcherid"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.scopus.com/authid/detail.uri?authorId=57193451888">
+<p><i class="ai  ai-scopus" aria-label="scopus"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=i-2xZBQAAAAJ">
+<p><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Mauricio_Vancine2">
+<p><i class="ai  ai-researchgate" aria-label="researchgate"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.zotero.org/mauriciovancine">
+<p><i class="ai  ai-zotero" aria-label="zotero"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="http://lattes.cnpq.br/9761288418931193">
+<p><i class="ai  ai-lattes" aria-label="lattes"></i></p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/mauricio-vancine/">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="../../contact.html">
+<p>Contato</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>Licença</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../contributors.html">
+<p>Financiamento</p>
+</a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

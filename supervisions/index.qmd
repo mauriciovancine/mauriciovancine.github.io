@@ -7,11 +7,11 @@ toc: true
 editor: source
 ---
 
+<!--
 ## Alunos atuais de pós-graduação
 
 ## Alunos atuais de graduação
-
-- **Maria Eduarda Furlan**, [Iniciação Científica (FAPESP)](/publication/2025-furlan), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2024-2025. [Coorientador com Renata L. Muylaert e Milton Cezar Ribeiro]
+-->
 
 ## Alunos anteriores de pós-graduação
 
@@ -30,6 +30,8 @@ editor: source
 - **Bruno Eduardo Ribeiro Silva**, [Trabalho de Conclusão de Curso](/publication/2022-silva), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2022. [Orientador com Milton Cezar Ribeiro]
 
 - **Maria Eduarda Furlan**, [Trabalho de Conclusão de Curso](/publication/2025-furlan), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2025. [Orientador com Milton Cezar Ribeiro]
+
+- **Maria Eduarda Furlan**, [Iniciação Científica (FAPESP)](/publication/2025-furlan), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2024-2025. [Coorientador com Renata L. Muylaert e Milton Cezar Ribeiro]
 
 - **Mariana Trindade Lahr**, [Trabalho de Conclusão de Curso](/publication/2025-lahr), *Universidade Estadual Paulista (Unesp), Rio Claro*, 2025. [Orientador com Marco Aurélio Pizo]
 
