@@ -31,7 +31,7 @@ editor: source
 
 <br> 
 
-![](featured.png)
+![](featured.webp)
 
 ## Resumo
 
@@ -42,12 +42,12 @@ editor: source
     author = {Francisconi, Ana Flávia and Scaketti, Matheus and Morales-Marroquín, Jonathan Andre and Carvalho, Igor Araújo Santos and Fornazier, Gabriela de Oliveira and Vancine, Maurício Humberto and Moro, Matheus Sartori and Araujo, João Victor da Silva Rabelo and Ramos, Santiago Linorio Ferreyra and Modolo, Valeria Aparecida and Lopes, and Maria Teresa Gomes and Zucchi, Maria Imaculada},
 	  title = {Expansion of açaí fruit and heart-of-palm production promotes hybridization and introgression in Euterpe palms},
 	  journal = {BMC Plant Biology},
-    volume = {},
+    volume = {25},
   	number = {},
-		pages = {},
+		pages = {1752},
     year = {2025},
     issn = {},
-	  doi = {},
-    url = {}
+	  doi = {10.1186/s12870-025-07775-1},
+    url = {https://doi.org/10.1186/s12870-025-07775-1}
     }
 ```
