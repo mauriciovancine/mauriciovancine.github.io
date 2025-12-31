@@ -34,4 +34,6 @@ Compilação de redes de interação de dispersão potenciais de plantas e dispe
 
 ## Publicações
 
-1. Morini, R. F. S., <u>**Vancine, M. H.**</u>, Martinez, A. N., Sales, L. P., Pires, M. M. Habitat degradation threatens the topological diversity of seed-dispersal networks in the Atlantic Forest hostspot. *Global Change Biology*. Under review.
+1. Morini, R. F. S.\*, <u>**Vancine, M. H.**\*</u>, Martinez, A. N., Sales, L. P., Pires, M. M. Habitat degradation threatens the topological diversity of seed-dispersal networks in the Atlantic Forest hostspot. *Global Change Biology*. Under review.
+
+\* Coautoria.
