@@ -46,7 +46,7 @@ Space is one of the main drivers of biodiversity as it regulates the underlying 
     author = {Maurício Humberto Vancine, Bernardo Brandão Niebuhr, Renata L. Muylaert, Júlia Emi de Faria Oshima, Vinicius Tonetti, Rodrigo Bernardo, Rafael Souza Cruz Alves, Eduardo Miguel Zanette, Victor Casagrande Souza, João Gabriel Ribeiro Giovanelli, Carlos Henrique Grohmann, Mauro Galetti, Milton Cezar Ribeiro},
     title = "{ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic 1metrics for the Atlantic Forest}",
     journal = {Ecology},
-    year = {2025},
+    year = {2026},
     month = {},
     issn = {},
     doi = {},
