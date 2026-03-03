@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,14 +35,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4faf44808c66243957c3082ea87d90f3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-707710bb7a0eddacf54b96aa728de139.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b44a5a1ecd8e148dd4bf7172770127e6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-21a3b59bbba337e5ef3fd12b4f99a285.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -117,7 +118,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -143,6 +144,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Maurício Vancine</span>
     </a>
@@ -256,7 +259,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RXNwYWNpYWwlMkNS" data-listing-file-modified-sort="1759974041054" data-listing-reading-time-sort="1" data-listing-word-count-sort="190">
+<div class="g-col-1" data-index="0" data-categories="RXNwYWNpYWwlMkNS" data-listing-file-modified-sort="1772567989982" data-listing-reading-time-sort="1" data-listing-word-count-sort="190">
 <a href="../workshop/workshop-spadivr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -274,7 +277,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Q29udHJvbGUlMjBkZSUyMHZlcnMlQzMlQTNvJTJDZ2l0" data-listing-file-modified-sort="1759973947562" data-listing-reading-time-sort="2" data-listing-word-count-sort="214">
+<div class="g-col-1" data-index="1" data-categories="Q29udHJvbGUlMjBkZSUyMHZlcnMlQzMlQTNvJTJDZ2l0" data-listing-file-modified-sort="1772567989938" data-listing-reading-time-sort="2" data-listing-word-count-sort="214">
 <a href="../workshop/workshop-git/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -292,7 +295,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Q2FtcG8lMkNBbmYlQzMlQURiaW9z" data-listing-file-modified-sort="1759973923456" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
+<div class="g-col-1" data-index="2" data-categories="Q2FtcG8lMkNBbmYlQzMlQURiaW9z" data-listing-file-modified-sort="1772567989929" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
 <a href="../workshop/workshop-frog/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -310,7 +313,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="UUdJUyUyQ0dlb3Byb2Nlc3NhbWVudG8=" data-listing-file-modified-sort="1759973997916" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
+<div class="g-col-1" data-index="3" data-categories="UUdJUyUyQ0dlb3Byb2Nlc3NhbWVudG8=" data-listing-file-modified-sort="1772567989960" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
 <a href="../workshop/workshop-qgis/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -328,7 +331,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="U2Vuc29yaWFtZW50byUyMHJldG9tbw==" data-listing-file-modified-sort="1759973935748" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
+<div class="g-col-1" data-index="4" data-categories="U2Vuc29yaWFtZW50byUyMHJldG9tbw==" data-listing-file-modified-sort="1772567989933" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
 <a href="../workshop/workshop-gee/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -346,7 +349,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="Ug==" data-listing-file-modified-sort="1759973956096" data-listing-reading-time-sort="2" data-listing-word-count-sort="296">
+<div class="g-col-1" data-index="5" data-categories="Ug==" data-listing-file-modified-sort="1772567989942" data-listing-reading-time-sort="2" data-listing-word-count-sort="296">
 <a href="../workshop/workshop-intror/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -364,7 +367,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1762086186028" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
+<div class="g-col-1" data-index="6" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1772567989914" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
 <a href="../workshop/workshop-data-manipr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -382,7 +385,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="TW9kZWxhZ2VtJTIwZGUlMjBEaXN0cmlidWklQzMlQTclQzMlQTNvJTIwZGUlMjBFc3AlQzMlQTljaWVzJTJDUg==" data-listing-file-modified-sort="1762087303998" data-listing-reading-time-sort="2" data-listing-word-count-sort="237">
+<div class="g-col-1" data-index="7" data-categories="TW9kZWxhZ2VtJTIwZGUlMjBEaXN0cmlidWklQzMlQTclQzMlQTNvJTIwZGUlMjBFc3AlQzMlQTljaWVzJTJDUg==" data-listing-file-modified-sort="1772567989971" data-listing-reading-time-sort="2" data-listing-word-count-sort="237">
 <a href="../workshop/workshop-sdmr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -400,7 +403,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="UGFpc2FnZW0lMkNS" data-listing-file-modified-sort="1759973966844" data-listing-reading-time-sort="1" data-listing-word-count-sort="192">
+<div class="g-col-1" data-index="8" data-categories="UGFpc2FnZW0lMkNS" data-listing-file-modified-sort="1772567989949" data-listing-reading-time-sort="1" data-listing-word-count-sort="192">
 <a href="../workshop/workshop-landr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -418,7 +421,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="UGxhbmlsaGFzJTIwZWxldHIlQzMlQjRuaWNhcw==" data-listing-file-modified-sort="1759974028747" data-listing-reading-time-sort="1" data-listing-word-count-sort="154">
+<div class="g-col-1" data-index="9" data-categories="UGxhbmlsaGFzJTIwZWxldHIlQzMlQjRuaWNhcw==" data-listing-file-modified-sort="1772567989977" data-listing-reading-time-sort="1" data-listing-word-count-sort="154">
 <a href="../workshop/workshop-sheet/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -436,7 +439,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1762091080667" data-listing-reading-time-sort="1" data-listing-word-count-sort="199">
+<div class="g-col-1" data-index="10" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1772567989953" data-listing-reading-time-sort="1" data-listing-word-count-sort="199">
 <a href="../workshop/workshop-progr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -454,7 +457,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1761822869423" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
+<div class="g-col-1" data-index="11" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1772567989964" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
 <a href="../workshop/workshop-repror/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -472,7 +475,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1762087461578" data-listing-reading-time-sort="2" data-listing-word-count-sort="224">
+<div class="g-col-1" data-index="12" data-categories="UiUyQ1Byb2dyYW1hJUMzJUE3JUMzJUEzbw==" data-listing-file-modified-sort="1772567989918" data-listing-reading-time-sort="2" data-listing-word-count-sort="224">
 <a href="../workshop/workshop-data-visr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -490,7 +493,7 @@ Maurício Vancine
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="13" data-categories="UiUyQ0VzdGF0JUMzJUFEc3RpY2E=" data-listing-file-modified-sort="1762087518252" data-listing-reading-time-sort="1" data-listing-word-count-sort="113">
+<div class="g-col-1" data-index="13" data-categories="UiUyQ0VzdGF0JUMzJUFEc3RpY2E=" data-listing-file-modified-sort="1772567989923" data-listing-reading-time-sort="1" data-listing-word-count-sort="113">
 <a href="../workshop/workshop-ecostatr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -608,13 +611,14 @@ window.addEventListener("scroll", () => {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -960,7 +964,7 @@ window.addEventListener("scroll", () => {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a>.</p>
+<p>© 2026 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
