@@ -494,7 +494,7 @@
     "href": "publication/index.html#preprints",
     "title": "Publicações",
     "section": "Preprints",
-    "text": "Preprints\n\nVancine, M. H., Muylaert, R. L., Niebuhr, B. B., Oshima, J. E. F., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann C. H., & Ribeiro, M. C. (2023). The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation. bioRxiv. DOI: https://doi.org/10.1101/2023.09.16.558076.\nVancine, M. H., Niebuhr B. B., Muylaert R. L., Oshima J. E. F., Tonetti V., Bernardo R., Alves R. S. C., Zanette E. M., Souza V. C., Giovanelli J. G. R., Grohmann C. H., Galetti M., & Ribeiro, M. C. (2023). ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological and anthropogenic metrics for the Atlantic Forest. EcoEvoRxiv. DOI: https://doi.org/10.32942/X26P58."
+    "text": "Preprints\n\nMuylaert, R. L., Kingston, T., Luo, J., Vancine, M. H., Galli, N., Carlson, C. J., … & Hayman, D. T. (2021). Present and future distribution of bat hosts of sarbecoviruses: implications for conservation and public health. bioRxiv. DOI: https://doi.org/10.1101/2021.12.09.471691.\nVancine, M. H., Muylaert, R. L., Niebuhr, B. B., Oshima, J. E. F., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann C. H., & Ribeiro, M. C. (2023). The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation. bioRxiv. DOI: https://doi.org/10.1101/2023.09.16.558076.\nVancine, M. H., Niebuhr B. B., Muylaert R. L., Oshima J. E. F., Tonetti V., Bernardo R., Alves R. S. C., Zanette E. M., Souza V. C., Giovanelli J. G. R., Grohmann C. H., Galetti M., & Ribeiro, M. C. (2023). ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological and anthropogenic metrics for the Atlantic Forest. EcoEvoRxiv. DOI: https://doi.org/10.32942/X26P58."
   },
   {
     "objectID": "publication/index.html#acadêmicas",
@@ -2763,5 +2763,26 @@
     "title": "The challenges and nuances of teaching the R programming language to ecologists",
     "section": "Citação",
     "text": "Citação\n@article{vancine_etal_2026b,\n    author = {Maurício Humberto Vancine, Pavel Dodonov, Bruno Vilela, Luisa Diele-Viegas, Victor Casagrande Souza, Felipe Alvarez Silva Nunes, Ana Julia Oliveira Silva, Beatriz Milz, Cristina A. Kita, Marco A. R. Mello, Renata L. Muylaert},\n    title = \"{The challenges and nuances of teaching the R programming language to ecologists}\",\n    journal = {Oecologia Australis},\n    year = {2026},\n    month = {01},\n    issn = {2177-6199},\n    doi = {},\n    url = {},\n    eprint = {},\n}"
+  },
+  {
+    "objectID": "publication/2021-muylaert-etal/index.html",
+    "href": "publication/2021-muylaert-etal/index.html",
+    "title": "Present and future distribution of bat hosts of sarbecoviruses: implications for conservation and public health",
+    "section": "",
+    "text": "DOI PDF"
+  },
+  {
+    "objectID": "publication/2021-muylaert-etal/index.html#resumo",
+    "href": "publication/2021-muylaert-etal/index.html#resumo",
+    "title": "Present and future distribution of bat hosts of sarbecoviruses: implications for conservation and public health",
+    "section": "Resumo",
+    "text": "Resumo\nGlobal changes in response to human encroachment into natural habitats and carbon emissions are driving the biodiversity extinction crisis and increasing disease emergence risk. Host distributions are one critical component to identify areas at risk of spillover, and bats act as reservoirs of diverse viruses. We developed a reproducible ecological niche modelling pipeline for bat hosts of SARS-like viruses (subgenus Sarbecovirus), given that since SARS-CoV-2 emergence several closely-related viruses have been discovered and sarbecovirus-host interactions have gained attention. We assess sampling biases and model bats’ current distributions based on climate and landscape relationships and project future scenarios. The most important predictors of species distribution were temperature seasonality and cave availability. We identified concentrated host hotspots in Myanmar and projected range contractions for most species by 2100. Our projections indicate hotspots will shift east in Southeast Asia in &gt;2 °C hotter locations in a fossil-fueled development future. Hotspot shifts have implications for conservation and public health, as loss of population connectivity can lead to local extinctions, and remaining hotspots may concentrate near human populations."
+  },
+  {
+    "objectID": "publication/2021-muylaert-etal/index.html#citação",
+    "href": "publication/2021-muylaert-etal/index.html#citação",
+    "title": "Present and future distribution of bat hosts of sarbecoviruses: implications for conservation and public health",
+    "section": "Citação",
+    "text": "Citação\n\n@article{muylaert_etal_2021,\n  title = {Present and future distribution of bat hosts of sarbecoviruses: implications for conservation and public health},\n  url = {https://www.biorxiv.org/content/10.1101/2021.12.09.471691v1},\n  doi = {10.1098/rspb.2022.0397},\n  language = {en},\n  publisher = {bioRxiv},\n  author = {Muylaert, Renata L. and Kingston, Tigga and Luo, Jinhong and Vancine, Maurício Humberto and Galli, Nikolas and Carlson, Colin J. and John, Reju Sam and Rulli, Maria Cristina and Hayman, David T. S.},\n  month = dec,\n  year = {2021},\n}"
   }
 ]

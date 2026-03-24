@@ -1,0 +1,35 @@
+---
+title: "Manejar arquivos PDF no R"
+subtitle: "Uma lista de pacotes e funções para manejar aquivos PDF no R."
+author: Maurício Vancine
+date: 2026-03-23
+categories: ["R", "PDF"]
+image: featured.jpg
+toc: true
+draft: true
+code-link: true
+editor: source
+---
+
+## Contextualização
+
+Manejar aquivos PDF é uma tarefa comum e várias ferramentas on-line, como [iLovePDF](https://www.ilovepdf.com) conseguem resolver quase tudo o que precisamos. Mas para arquivos grandes ou tarefas muito repetitivas pode demorar muito.
+
+Neste post, listo a maior parte das funções do [iLovePDF](https://www.ilovepdf.com) usando funções no R e listo alguns pacotes para isso.
+
+## Lista de pacotes
+
+```{r eval=FALSE}
+install.packages("qpdf")
+library(qpdf)
+
+# 
+pdf_subset(
+  input = "book_2026_03_10_sent_to_elsevier.pdf",
+  pages = c(703), 
+  output = "arquivo_final.pdf"
+)
+```
+
+
+Fonte da imagem: [serdar barış/Pexels](https://www.pexels.com/pt-br/foto/29534962/).
