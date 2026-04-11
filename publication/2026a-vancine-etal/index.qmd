@@ -1,8 +1,8 @@
 ---
-title: "ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic metrics for the Atlantic Forest"
+title: "ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological and anthropogenic metrics for the Atlantic Forest"
 subtitle: "Disponibilizamos informações espaciais integradas e em escala precisa (resolução = 30 m) para toda a extensão da Mata Atlântica para o ano de 2020."
 author: "Maurício Humberto Vancine, Bernardo Brandão Niebuhr, Renata L. Muylaert, Júlia Emi de Faria Oshima, Vinicius Tonetti, Rodrigo Bernardo, Rafael Souza Cruz Alves, Eduardo Miguel Zanette, Victor Casagrande Souza, João Gabriel Ribeiro Giovanelli, Carlos Henrique Grohmann, Mauro Galetti, Milton Cezar Ribeiro"
-date: 2023-11-16
+date: 2026-05-10
 format:
   html:
     include-in-header: 
@@ -12,9 +12,9 @@ editor: source
 ---
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-  <a href="https://doi.org/" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-biorxiv me-1"></i>EcoEvoRxiv</a>
-  <a href="/publications/2025-vancine-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
-  <a href="/publications/2025-vancine-etal_sm.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>Metadados</a>
+  <a href="https://doi.org/10.1002/ecy.70360" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
+  <a href="/publications/2026a-vancine-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+  <a href="/publications/2026a-vancine-etal_sm.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>Metadados</a>
   <a href="https://github.com/mauriciovancine/ATLANTIC-SPATIAL" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
 </div>
 
@@ -37,20 +37,22 @@ editor: source
 
 ## Resumo
 
-Space is one of the main drivers of biodiversity as it regulates the underlying processes affecting the distribution and dynamics of species and communities. It is a fundamental factor when we consider the rapid climate and land cover changes at local and global scales, which are linked to habitat loss and fragmentation and their impacts on various organisms. The Atlantic Forest of South America is among the global biodiversity hotspots because of its high species richness and endemism. Most of the threats to the Atlantic Forest biodiversity are due to the expansion of urbanization and industry, extensive agricultural and livestock production, and mining. Here, we make available integrated and fine-scale spatial information (resolution = 30 m) for the entire extent of the Atlantic Forest for the year 2020. The spatial data consider different vegetation classes (forest and forest plus other non-forest vegetation), effects of linear structure (roads and railways), and spatial metrics computed at multiple scales (radius buffer—moving window sizes—from 50 m to 2,500 m and up to 10 km for some metrics). The entire data set consists of the Atlantic Forest delimitation vector and over 500 rasters, available through a series of thematically grouped files in multiple Zenodo repositories. It is also possible to access this data set using the R package atlanticr, which we developed to facilitate the organization and acquisition of the data from Zenodo. The data set consists of a set of landscape, topographic, hydrological and anthropogenic metrics. The landscape metrics were calculated for two vegetation classes—Forest Vegetation (forest cover classes combined) and Natural Vegetation (forest and non-forest cover classes combined), and for a heterogeneous, multi-class classification of the landscape, with 31 land cover classes. The landscape metrics include: landscape morphology (classification as matrix, core, edge, corridor, branch, stepping stone, and perforation), fragment area and proportion, patch area and number of patches, edge and core areas and proportion, structural and functional connectivity (for different organisms’ gap-crossing capabilities), distance from and to fragment edges, fragment perimeter and perimeter-area ratio, and landscape diversity (heterogeneity). Topographic metrics include: elevation, slope, aspect, curvatures, and landform elements (peak, ridge, shoulder, spur, slope, hollow, footslope, valley, pit, and ﬂat). Hydrological metrics comprise potential springs and their kernel density, and potential streams and their respective distances. Anthropogenic metrics contain the original maps of roads, railways, protected areas, indigenous territories, and quilombola territories (Afro-Brazilian traditional communities descended from enslaved Africans who resisted slavery), and the respective distances to each of them. This data set can allow efficient integration of biodiversity and spatially explicit data for the Atlantic Forest in future research and serve as a reference and data source for research, landscape planning, biodiversity conservation, and forest restoration programs.
+Space is one of the main drivers of biodiversity, as it regulates the underlying processes affecting the distribution and dynamics of species and communities. It is a fundamental factor when considering the rapid climate and land cover changes occurring at local and global scales, which are linked to habitat loss and fragmentation, as well as their impacts on biodiversity. The Atlantic Forest of South America is among the world's biodiversity hotspots because of its exceptionally high species richness and endemism. Most of the threats to the Atlantic Forest's biodiversity stem from the expansion of urbanization and industry, extensive agricultural and livestock production, and mining. Here, we provide integrated and fine-scale spatial information (30-m resolution) for the entire extent of the Atlantic Forest for the years 2020 to 2022. The spatial data include different vegetation classes (forest, and forest combined with other non-forest vegetation), the effects of linear structures (roads and railways), and landscape metrics computed at multiple scales (radius buffers—moving window sizes—ranging from 50 to 2500 m, and up to 10 km for some metrics). The dataset comprises the Atlantic Forest delimitation vector and more than 500 rasters, available through a series of thematically grouped files in multiple Zenodo repositories. This data can also be accessed using the R package atlanticr, which we developed to facilitate data retrieval and organization from Zenodo. The dataset includes landscape, topographic, hydrological, and anthropogenic metrics. Landscape metrics were calculated for two vegetation classes—Forest Vegetation (which combined different forest cover classes) and Natural Vegetation (which combined forest and non-forest cover classes)—as well as for a heterogeneous, multi-class classification of the landscape (31 land cover classes). The landscape metrics include landscape morphology (classification as matrix, core, edge, corridor, branch, stepping stone, and perforation), fragment area and proportion, patch area and number, edge and core areas and proportions, structural and functional connectivity (for different organisms' gap-crossing capabilities), distance to and from fragment edges, fragment perimeter and perimeter–area ratio, and landscape diversity (heterogeneity). Topographic metrics include elevation, slope, aspect, curvature, and landform elements (peak, ridge, shoulder, spur, slope, hollow, footslope, valley, pit, and flat). Hydrological metrics comprise potential springs (and their kernel density) and streams (and distance to the nearest feature). Anthropogenic metrics include maps of roads, railways, protected areas, Indigenous territories, and quilombola territories (localities of self-defined Afro-Brazilian traditional communities), as well as the distance to each feature. This dataset facilitates the efficient integration of biodiversity and spatially explicit data for the Atlantic Forest, serving as a data source for studies, landscape planning, biodiversity conservation, and forest restoration programs. The data are released under a CC BY-NC 4.0: Creative Commons Attribution-Non-Commercial 4.0 International license and this data paper should be cited when the data are reused.
 
 ## Citação
 
 ```
-@article{vancine_etal_2025,
+@article{vancine_etal_2026a,
     author = {Maurício Humberto Vancine, Bernardo Brandão Niebuhr, Renata L. Muylaert, Júlia Emi de Faria Oshima, Vinicius Tonetti, Rodrigo Bernardo, Rafael Souza Cruz Alves, Eduardo Miguel Zanette, Victor Casagrande Souza, João Gabriel Ribeiro Giovanelli, Carlos Henrique Grohmann, Mauro Galetti, Milton Cezar Ribeiro},
-    title = "{ATLANTIC SPATIAL: a data set of landscape, topographic, hydrologic and anthropogenic 1metrics for the Atlantic Forest}",
+    title = "{ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological and anthropogenic metrics for the Atlantic Forest}",
     journal = {Ecology},
+  	volume = {107},
+    number = {4},
+    pages = {e70360},
     year = {2026},
-    month = {},
-    issn = {},
-    doi = {},
-    url = {},
-    eprint = {},
+    month = {04},
+   	issn = {0012-9658, 1939-9170},
+    doi = {10.1002/ecy.70360},
+    url = {https://doi.org/10.1002/ecy.70360}
 }
 ```
