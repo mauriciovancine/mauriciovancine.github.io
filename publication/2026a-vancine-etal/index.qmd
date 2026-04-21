@@ -14,7 +14,7 @@ editor: source
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
   <a href="https://doi.org/10.1002/ecy.70360" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
   <a href="/publications/2026a-vancine-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
-  <a href="/publications/2026a-vancine-etal_sm.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>Metadados</a>
+  <a href="/publications/2026a-vancine-etal-metadata.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>Metadados</a>
   <a href="https://github.com/mauriciovancine/ATLANTIC-SPATIAL" class="btn btn-custom text-capitalize" target="_blank"><i class="fab fa-github me-1"></i>Code</a>
 </div>
 
