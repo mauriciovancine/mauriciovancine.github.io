@@ -263,6 +263,8 @@ editor: source
 
 1. [Ensinando programação para quem fugiu da matemática](https://infloresciencia.wordpress.com/2026/03/27/ensinando-programacao-para-quem-fugiu-da-matematica){target="_blank"}. (2026). Blog InfloresCiência.
 
+1. [Como uma base de dados ambientais espacializados ajuda na conservação da Mata Atlântica](https://pp.nexojornal.com.br/academico/2026/04/27/como-uma-base-de-dados-ambientais-espacializados-ajuda-na-conservacao-da-mata-atlantica){target="_blank"}. (2026). NEXO Acadêmico.
+
 <style>
 #topBtn {
   display: none;
