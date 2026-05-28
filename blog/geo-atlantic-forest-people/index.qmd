@@ -26,10 +26,10 @@ Preparar o R.
 #| warning: false
 # packages
 library(tidyverse)
+library(janitor)
 library(sf)
 library(geobr)
 library(brpop) # remotes::install_github("rfsaldanha/brpop")
-library(atlanticr) # remotes::install_github("mauriciovancine/atlanticr")
 library(tmap)
 
 # options

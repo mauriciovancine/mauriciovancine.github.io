@@ -2,11 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.2">
+<meta name="generator" content="quarto-1.9.35">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Maurício Vancine com edições de textos do ChatGPT">
 <title>Introdução à linguagem Julia – Maurício Vancine</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -65,15 +68,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../img/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cd3c9c2e6a7570597db7fcfacb1c1243.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e8b6ce8f6797ea4a9334ddb13506f06e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-77704d8ee418af7c698dc567cbb7471e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -108,8 +109,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Maurício Vancine</span>
     </a>
@@ -191,16 +190,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#scripts" id="toc-scripts" class="nav-link" data-scroll-target="#scripts">Scripts</a></li>
   <li><a href="#jupyter-notebook-e-pluto" id="toc-jupyter-notebook-e-pluto" class="nav-link" data-scroll-target="#jupyter-notebook-e-pluto">Jupyter notebook e Pluto</a></li>
   <li><a href="#sintaxe" id="toc-sintaxe" class="nav-link" data-scroll-target="#sintaxe">Sintaxe</a></li>
+  <li><a href="#pacotes" id="toc-pacotes" class="nav-link" data-scroll-target="#pacotes">Pacotes</a></li>
+  <li><a href="#ambientes" id="toc-ambientes" class="nav-link" data-scroll-target="#ambientes">Ambientes</a></li>
   </ul>
 </li>
-  <li><a href="#tipagem-explicita" id="toc-tipagem-explicita" class="nav-link" data-scroll-target="#tipagem-explicita">tipagem explicita</a></li>
-  <li><a href="#for" id="toc-for" class="nav-link" data-scroll-target="#for">for</a></li>
-  <li><a href="#while" id="toc-while" class="nav-link" data-scroll-target="#while">while</a></li>
-  <li>
-<a href="#dicionario" id="toc-dicionario" class="nav-link" data-scroll-target="#dicionario">dicionario</a>
-  <ul class="collapse">
-<li><a href="#pacotes" id="toc-pacotes" class="nav-link" data-scroll-target="#pacotes">Pacotes</a></li>
-  <li><a href="#ambientes" id="toc-ambientes" class="nav-link" data-scroll-target="#ambientes">Ambientes</a></li>
   <li><a href="#conclus%C3%A3o" id="toc-conclusão" class="nav-link" data-scroll-target="#conclus%C3%A3o">Conclusão</a></li>
   <li>
 <a href="#para-saber-mais" id="toc-para-saber-mais" class="nav-link" data-scroll-target="#para-saber-mais">Para saber mais</a>
@@ -208,8 +201,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="#sites" id="toc-sites" class="nav-link" data-scroll-target="#sites">Sites</a></li>
   <li><a href="#livros" id="toc-livros" class="nav-link" data-scroll-target="#livros">Livros</a></li>
   <li><a href="#v%C3%ADdeos" id="toc-vídeos" class="nav-link" data-scroll-target="#v%C3%ADdeos">Vídeos</a></li>
-  </ul>
-</li>
   </ul>
 </li>
   </ul></nav>
@@ -517,59 +508,105 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <em>Strings</em>: “texto”<br>
 </li>
 <li>
-<em>Coleções</em>: Arrays, Tuplas, Dicionários, etc. <code>afr #| eval: false a = 5          # Int64 b = 3.5        # Float64 c = true       # Booleano nome = "Julia" # String</code>
-</li>
+<em>Coleções</em>: Arrays, Tuplas, Dicionários, etc.</li>
 </ul>
 </li>
-<li><p>Tipagem dinâmica, mas com suporte a tipagem explícita. ```afr #| eval: false # tipagem dinamica x = 10 typeof(x)</p></li>
-</ul></section></section><section id="tipagem-explicita" class="level1"><h1>tipagem explicita</h1>
-<p>y::Float64 = 10 # x é do tipo Int typeof(y)</p>
-<pre><code>
-- Funções podem ser definidas de forma concisa com `function` ou `=`.
-```{r} #| eval: false
-# definir funcao
-function f(x)
-    return x^2
-end
-
-f(x) = x^2
-
-# usar a funcao
-f(10)</code></pre>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">a</span> <span class="op">=</span> <span class="fl">5</span>          <span class="co"># Int64</span></span>
+<span><span class="va">b</span> <span class="op">=</span> <span class="fl">3.5</span>        <span class="co"># Float64</span></span>
+<span><span class="va">c</span> <span class="op">=</span> <span class="va">true</span>       <span class="co"># Booleano</span></span>
+<span><span class="va">nome</span> <span class="op">=</span> <span class="st">"Julia"</span> <span class="co"># String</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <ul>
-<li>Condicionais e laços seguem a estrutura clássica de outras linguagens (como <code>if</code>, <code>for</code> e <code>while</code>). Atentar para o <code>end</code> para finalizar uma declaração. ```afr #| eval: false # condicional if x &gt; 0 println(“Positivo”) elseif x &lt; 0 println(“Negativo”) else println(“Zero”) end</li>
-</ul></section><section id="for" class="level1"><h1>for</h1>
-<p>for i in 1:5 println(i) end</p>
-</section><section id="while" class="level1"><h1>while</h1>
-<p>x = 1 while x &lt;= 5 println(x) x += 1 # Equivalente a x = x + 1 end</p>
-<pre><code>
-- Arrays e matrizes são simples de declarar e acessar.
-```{r} #| eval: false
-# array
-arr = [1, 2, 3, 4, 5]  # Vetor com 5 elementos
-
-# matriz
-matrix = [1 2 3; 4 5 6]  # Matriz 2x3</code></pre>
+<li>Tipagem dinâmica, mas com suporte a tipagem explícita.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># tipagem dinamica</span></span>
+<span><span class="va">x</span> <span class="op">=</span> <span class="fl">10</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># tipagem explicita</span></span>
+<span><span class="fu">y</span><span class="fu">::</span><span class="va">Float64</span> <span class="op">=</span> <span class="fl">10</span>  <span class="co"># x é do tipo Int</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <ul>
-<li>Tupla é uma estrutura de dados imutável e dicionário é uma estrutura de dados mutável que armazena pares chave-valor ```afr #| eval: false # tupla t = (1, “Julia”, 3.14)</li>
-</ul></section><section id="dicionario" class="level1"><h1>dicionario</h1>
-<p>d = Dict(“nome” =&gt; “Julia”, “idade” =&gt; 10, “linguagem” =&gt; “programação”)</p>
-<pre><code>
-- Módulos em Julia são definidos com a palavra-chave `module` e permitem organizar código em partes reutilizáveis.
-```{r} #| eval: false
-# declarar
-module MeuModulo
-
-function saudacao(nome)
-    println("Olá, $nome!")
-end
-
-end
-
-# usar
-using MeuModulo
-saudacao("Julia")</code></pre>
-<section id="pacotes" class="level3"><h3 class="anchored" data-anchor-id="pacotes">Pacotes</h3>
+<li>Funções podem ser definidas de forma concisa com <code>function</code> ou <code>=</code>.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># definir funcao</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">f</span>(x)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    return x<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>end</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(x) <span class="ot">=</span> x<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># usar a funcao</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Condicionais e laços seguem a estrutura clássica de outras linguagens (como <code>if</code>, <code>for</code> e <code>while</code>). Atentar para o <code>end</code> para finalizar uma declaração.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># condicional</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="sc">&gt;</span> <span class="dv">0</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">"Positivo"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>elseif x <span class="sc">&lt;</span> <span class="dv">0</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">"Negativo"</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">"Zero"</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>end</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># for</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(i)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>end</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="co"># while</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x <span class="sc">&lt;=</span> <span class="dv">5</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(x)</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    x <span class="sc">+</span><span class="er">=</span> <span class="dv">1</span>  <span class="co"># Equivalente a x = x + 1</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>end</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Arrays e matrizes são simples de declarar e acessar.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># array</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>arr <span class="ot">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]  <span class="co"># Vetor com 5 elementos</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># matriz</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>matrix <span class="ot">=</span> [<span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span>; <span class="dv">4</span> <span class="dv">5</span> <span class="dv">6</span>]  <span class="co"># Matriz 2x3</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Tupla é uma estrutura de dados imutável e dicionário é uma estrutura de dados mutável que armazena pares chave-valor</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tupla</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> (<span class="dv">1</span>, <span class="st">"Julia"</span>, <span class="fl">3.14</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># dicionario</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>d <span class="ot">=</span> <span class="fu">Dict</span>(<span class="st">"nome"</span> <span class="sc">=&gt;</span> <span class="st">"Julia"</span>, <span class="st">"idade"</span> <span class="sc">=&gt;</span> <span class="dv">10</span>, <span class="st">"linguagem"</span> <span class="sc">=&gt;</span> <span class="st">"programação"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Módulos em Julia são definidos com a palavra-chave <code>module</code> e permitem organizar código em partes reutilizáveis.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># declarar</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>module MeuModulo</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">saudacao</span>(nome)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">"Olá, $nome!"</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>end</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>end</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># usar</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>using MeuModulo</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="fu">saudacao</span>(<span class="st">"Julia"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section id="pacotes" class="level3"><h3 class="anchored" data-anchor-id="pacotes">Pacotes</h3>
 <p>Os pacotes no <strong>Julia</strong> são fundamentais para expandir as funcionalidades da linguagem, oferecendo bibliotecas para diversas áreas como matemática, estatística, aprendizado de máquina, visualização de dados e processamento paralelo.</p>
 <p>O registro oficial dos pacotes, chamado <strong>Julia General Registry</strong> e uma listagem de todos os pacotes <a href="https://juliapackages.com/">juliapackages</a>, facilita o acesso a milhares de bibliotecas, mas também é possível adicionar pacotes de repositórios privados ou do GitHub com <code>Pkg.add(url)</code>.</p>
 <p>O sistema de pacotes do Julia é acessado pelo módulo <code>Pkg</code> ou pelo <strong>modo de pacotes</strong> no REPL (<code>]</code>). Se</p>
@@ -578,24 +615,60 @@ saudacao("Julia")</code></pre>
 <li>Instalação</li>
 </ol>
 <ul>
-<li>Via registro oficial: <code>afr #| eval: false using Pkg Pkg.add("NomeDoPacote")</code>
-</li>
-<li>De repositórios específicos: <code>afr #| eval: false Pkg.add(url="https://github.com/usuario/pacote.git")</code>
-</li>
+<li>Via registro oficial:</li>
 </ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>using Pkg</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Pkg.add</span>(<span class="st">"NomeDoPacote"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>De repositórios específicos:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.add</span><span class="op">(</span>url<span class="op">=</span><span class="st">"https://github.com/usuario/pacote.git"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <ol start="2" type="1">
-<li><p>Carregamento Depois de instalado, um pacote pode ser usado carregando-o, entretanto, nenhuma mensagem é devolvida no REPL: <code>afr #| eval: false using NomeDoPacote</code></p></li>
-<li><p>Atualização<br>
-Atualiza todos os pacotes instalados para as versões mais recentes compatíveis: <code>afr #| eval: false Pkg.update()</code></p></li>
-<li><p>Remoção<br>
-Remove um pacote do ambiente: <code>afr #| eval: false Pkg.rm("NomeDoPacote")</code></p></li>
-<li><p>Listagem de pacotes instalados<br>
-Exibe os pacotes no ambiente atual: <code>afr #| eval: false Pkg.status()</code></p></li>
-<li><p>Ativação de ambientes<br>
-Os ambientes controlam versões de pacotes e dependências para projetos específicos, veja mais logo em seguida: <code>afr #| eval: false Pkg.activate("caminho/do/ambiente")</code></p></li>
-<li><p>Criação de pacotes<br>
-Para criar pacotes personalizados: <code>afr #| eval: false Pkg.generate("NomeDoPacote")</code> Alguns pacotes amplamente usados:</p></li>
+<li>Carregamento Depois de instalado, um pacote pode ser usado carregando-o, entretanto, nenhuma mensagem é devolvida no REPL:</li>
 </ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>using NomeDoPacote</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="3" type="1">
+<li>Atualização<br>
+Atualiza todos os pacotes instalados para as versões mais recentes compatíveis:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.update</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="4" type="1">
+<li>Remoção<br>
+Remove um pacote do ambiente:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.rm</span><span class="op">(</span><span class="st">"NomeDoPacote"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="5" type="1">
+<li>Listagem de pacotes instalados<br>
+Exibe os pacotes no ambiente atual:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.status</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="6" type="1">
+<li>Ativação de ambientes<br>
+Os ambientes controlam versões de pacotes e dependências para projetos específicos, veja mais logo em seguida:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.activate</span><span class="op">(</span><span class="st">"caminho/do/ambiente"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="7" type="1">
+<li>Criação de pacotes<br>
+Para criar pacotes personalizados:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.generate</span><span class="op">(</span><span class="st">"NomeDoPacote"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Alguns pacotes amplamente usados:</p>
 <ul>
 <li>
 <strong>DataFrames.jl</strong>: manejo de tabelas de dados</li>
@@ -614,25 +687,61 @@ Para criar pacotes personalizados: <code>afr #| eval: false Pkg.generate("NomeDo
 <p>Um ambiente em Julia é um diretório que contém: - O arquivo <code>Project.toml</code>, que lista os pacotes e suas versões. - O arquivo <code>Manifest.toml</code>, que registra as versões exatas dos pacotes e suas dependências.</p>
 <p>Para criar e gerenciar ambientes, utiliza-se o <strong>Pkg</strong>. O fluxo básico é o seguinte:</p>
 <ol type="1">
-<li><p>Criar um novo ambiente<br>
-Para iniciar um novo ambiente, basta ativá-lo em um diretório vazio ou específico: <code>afr #| eval: false using Pkg Pkg.activate("caminho/do/ambiente")</code> Isso cria um novo ambiente com os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</p></li>
-<li><p>Instalar pacotes em um ambiente<br>
-Depois de ativar um ambiente, você pode adicionar pacotes que serão isolados nesse ambiente: <code>afr #| eval: false Pkg.add("NomeDoPacote")</code></p></li>
-<li><p>Listar pacotes no ambiente ativo<br>
-Para ver quais pacotes estão instalados no ambiente ativo: <code>afr #| eval: false Pkg.status()</code></p></li>
-<li><p>Voltar ao ambiente global<br>
-Para voltar ao ambiente global (onde pacotes são instalados no diretório padrão), basta ativá-lo: <code>afr #| eval: false Pkg.activate()  # Ativa o ambiente global</code></p></li>
-<li><p>Ambientes em projetos<br>
-Para projetos específicos, você pode criar um ambiente no diretório do projeto, o que garante que o projeto use as versões exatas dos pacotes que você deseja. Isso também facilita a colaboração, pois outros usuários podem instalar as dependências exatas usando os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</p></li>
+<li>Criar um novo ambiente<br>
+Para iniciar um novo ambiente, basta ativá-lo em um diretório vazio ou específico:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>using Pkg</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Pkg.activate</span>(<span class="st">"caminho/do/ambiente"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Isso cria um novo ambiente com os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</p>
+<ol start="2" type="1">
+<li>Instalar pacotes em um ambiente<br>
+Depois de ativar um ambiente, você pode adicionar pacotes que serão isolados nesse ambiente:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.add</span><span class="op">(</span><span class="st">"NomeDoPacote"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="3" type="1">
+<li>Listar pacotes no ambiente ativo<br>
+Para ver quais pacotes estão instalados no ambiente ativo:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.status</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="4" type="1">
+<li>Voltar ao ambiente global<br>
+Para voltar ao ambiente global (onde pacotes são instalados no diretório padrão), basta ativá-lo:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.activate</span><span class="op">(</span><span class="op">)</span>  <span class="co"># Ativa o ambiente global</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="5" type="1">
+<li>Ambientes em projetos<br>
+Para projetos específicos, você pode criar um ambiente no diretório do projeto, o que garante que o projeto use as versões exatas dos pacotes que você deseja. Isso também facilita a colaboração, pois outros usuários podem instalar as dependências exatas usando os arquivos <code>Project.toml</code> e <code>Manifest.toml</code>.</li>
 </ol>
 <p>Ambientes isolam dependências, ou seja, ambientes diferentes podem ter diferentes versões de pacotes, o que evita conflitos entre projetos. Almentam a reprodutibilidade, isto é, os arquivos <code>Project.toml</code> e <code>Manifest.toml</code> garantem que o projeto pode ser facilmente replicado em outras máquinas ou por outras pessoas. E facilidade de gerenciamento, uma vez que trabalhar com ambientes separados permite que você organize e mantenha seus projetos de maneira mais eficiente, especialmente quando se lida com muitas dependências.</p>
-<p>Exemplo de Fluxo de Trabalho com Ambientes 1. Crie um diretório para o seu projeto e ative um novo ambiente: <code>afr #| eval: false mkdir("meu_projeto") cd("meu_projeto") Pkg.activate(".")</code></p>
+<p>Exemplo de Fluxo de Trabalho com Ambientes 1. Crie um diretório para o seu projeto e ative um novo ambiente:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">mkdir</span><span class="op">(</span><span class="st">"meu_projeto"</span><span class="op">)</span></span>
+<span><span class="fu">cd</span><span class="op">(</span><span class="st">"meu_projeto"</span><span class="op">)</span></span>
+<span><span class="fu">Pkg.activate</span><span class="op">(</span><span class="st">"."</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <ol start="2" type="1">
-<li><p>Adicione pacotes necessários para o projeto: <code>afr #| eval: false Pkg.add("DataFrames") Pkg.add("Plots")</code></p></li>
-<li><p>Depois de terminar o trabalho, você pode gerar o arquivo <code>Manifest.toml</code> para garantir que qualquer pessoa que usar o projeto tenha as mesmas versões de pacotes: <code>afr #| eval: false Pkg.instantiate()  # Para instalar as dependências listadas</code></p></li>
+<li>Adicione pacotes necessários para o projeto:</li>
 </ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.add</span><span class="op">(</span><span class="st">"DataFrames"</span><span class="op">)</span></span>
+<span><span class="fu">Pkg.add</span><span class="op">(</span><span class="st">"Plots"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="3" type="1">
+<li>Depois de terminar o trabalho, você pode gerar o arquivo <code>Manifest.toml</code> para garantir que qualquer pessoa que usar o projeto tenha as mesmas versões de pacotes:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Pkg.instantiate</span><span class="op">(</span><span class="op">)</span>  <span class="co"># Para instalar as dependências listadas</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>Em resumo, os ambientes em Julia proporcionam um controle flexível e eficiente sobre as dependências do projeto, melhorando a reprodutibilidade e o isolamento de pacotes, essenciais para trabalhar com projetos complexos ou múltiplos.</p>
-</section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+</section></section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
 <p>A criação de <strong>Julia</strong> foi uma resposta direta às limitações percebidas em outras linguagens usadas para computação científica e análise numérica. Desde sua fundação, a linguagem tem sido bem-sucedida em cumprir a visão de oferecer alto desempenho sem sacrificar facilidade de uso.</p>
 <p>Sua combinação única de compilação JIT, tipagem dinâmica, concorrência nativa e integração com outras linguagens fez dela uma escolha popular entre cientistas, engenheiros e desenvolvedores de software que trabalham com grandes volumes de dados ou cálculos complexos. Ao longo dos anos, a linguagem tem se expandido rapidamente, conquistando espaço nas áreas de aprendizado de máquina, inteligência artificial e computação científica, tornando-se uma das linguagens de programação mais promissoras da atualidade.</p>
 <p>Em resumo, <strong>Julia</strong> é uma linguagem de programação poderosa, ideal para computação científica e tarefas que exigem alto desempenho. Com sua sintaxe amigável, suporte a paralelismo e grande potencial de integração com outras linguagens, <strong>Julia</strong> se torna uma opção atraente para aqueles que trabalham com grandes volumes de dados ou problemas computacionalmente exigentes, mesmo que ainda não tenha o mesmo ecossistema ou popularidade de linguagens como Python e R.</p>
@@ -699,7 +808,7 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
-</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1102,7 +1211,7 @@ window.addEventListener("scroll", () => {
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a>.</p>
+<p>© 2026 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">

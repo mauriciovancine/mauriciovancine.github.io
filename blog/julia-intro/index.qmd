@@ -221,6 +221,7 @@ A sintaxe da linguagem **Julia** é semelhante à de outras linguagens de alto n
 Entretanto, ela possui algumas particularidades:
 
 - Comentários são feitos com `#` ou com `#=` e `=#` para linhas múltiplas.
+
 ```{r}
 #| eval: false
 # julia
@@ -248,12 +249,14 @@ x, y = 10, 20  # Atribui 10 a x e 20 a y
 
 - Julia oferece tipos básicos de dados como:
 
-    - *Inteiros*: Int8, Int16, Int32, Int64, Int128, UInt8, UInt16, UInt32, UInt64, UInt128  
-    - *Ponto flutuante*: Float32, Float64  
-    - *Booleanos*: true, false  
-    - *Strings*: "texto"  
-    - *Coleções*: Arrays, Tuplas, Dicionários, etc.
-```{r} #| eval: false
+  - *Inteiros*: Int8, Int16, Int32, Int64, Int128, UInt8, UInt16, UInt32, UInt64, UInt128  
+  - *Ponto flutuante*: Float32, Float64  
+  - *Booleanos*: true, false  
+  - *Strings*: "texto"  
+  - *Coleções*: Arrays, Tuplas, Dicionários, etc.
+  
+```{r} 
+#| eval: false
 a = 5          # Int64
 b = 3.5        # Float64
 c = true       # Booleano
@@ -261,7 +264,8 @@ nome = "Julia" # String
 ```
 
 - Tipagem dinâmica, mas com suporte a tipagem explícita.
-```{r} #| eval: false
+```{r} 
+#| eval: false
 # tipagem dinamica
 x = 10
 typeof(x)
@@ -272,7 +276,8 @@ typeof(y)
 ```
 
 - Funções podem ser definidas de forma concisa com `function` ou `=`.
-```{r} #| eval: false
+```{r} 
+#| eval: false
 # definir funcao
 function f(x)
     return x^2
@@ -285,7 +290,8 @@ f(10)
 ```
 
 - Condicionais e laços seguem a estrutura clássica de outras linguagens (como `if`, `for` e `while`). Atentar para o `end` para finalizar uma declaração.
-```{r} #| eval: false
+```{r} 
+#| eval: false
 # condicional
 if x > 0
     println("Positivo")
@@ -309,7 +315,8 @@ end
 ```
 
 - Arrays e matrizes são simples de declarar e acessar.
-```{r} #| eval: false
+```{r} 
+#| eval: false
 # array
 arr = [1, 2, 3, 4, 5]  # Vetor com 5 elementos
 
@@ -318,7 +325,8 @@ matrix = [1 2 3; 4 5 6]  # Matriz 2x3
 ```
 
 - Tupla é uma estrutura de dados imutável e dicionário é uma estrutura de dados mutável que armazena pares chave-valor
-```{r} #| eval: false
+```{r} 
+#| eval: false
 # tupla
 t = (1, "Julia", 3.14)
 
@@ -327,7 +335,8 @@ d = Dict("nome" => "Julia", "idade" => 10, "linguagem" => "programação")
 ```
 
 - Módulos em Julia são definidos com a palavra-chave `module` e permitem organizar código em partes reutilizáveis.
-```{r} #| eval: false
+```{r} 
+#| eval: false
 # declarar
 module MeuModulo
 
@@ -355,48 +364,56 @@ As principais operações incluem:
 
 1. Instalação
 - Via registro oficial:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 using Pkg
 Pkg.add("NomeDoPacote")
 ```
 - De repositórios específicos:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 Pkg.add(url="https://github.com/usuario/pacote.git")
 ```
 
 2. Carregamento
 Depois de instalado, um pacote pode ser usado carregando-o, entretanto, nenhuma mensagem é devolvida no REPL:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 using NomeDoPacote
 ```
      
 3. Atualização  
 Atualiza todos os pacotes instalados para as versões mais recentes compatíveis:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 Pkg.update()
 ```
 
 4. Remoção  
 Remove um pacote do ambiente:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 Pkg.rm("NomeDoPacote")
 ```
 
 5. Listagem de pacotes instalados  
 Exibe os pacotes no ambiente atual:
-```{r} #| eval: false
+```{r}
+#| eval: false
 Pkg.status()
 ```
 
 6. Ativação de ambientes  
 Os ambientes controlam versões de pacotes e dependências para projetos específicos, veja mais logo em seguida:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 Pkg.activate("caminho/do/ambiente")
 ```
 
 7. Criação de pacotes  
 Para criar pacotes personalizados:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 Pkg.generate("NomeDoPacote")
 ```
 Alguns pacotes amplamente usados:
@@ -421,7 +438,8 @@ Para criar e gerenciar ambientes, utiliza-se o **Pkg**. O fluxo básico é o seg
 
 1. Criar um novo ambiente  
 Para iniciar um novo ambiente, basta ativá-lo em um diretório vazio ou específico:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 using Pkg
 Pkg.activate("caminho/do/ambiente")
 ```
@@ -429,19 +447,22 @@ Isso cria um novo ambiente com os arquivos `Project.toml` e `Manifest.toml`.
 
 2. Instalar pacotes em um ambiente  
 Depois de ativar um ambiente, você pode adicionar pacotes que serão isolados nesse ambiente:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 Pkg.add("NomeDoPacote")
 ```
 
 3. Listar pacotes no ambiente ativo  
 Para ver quais pacotes estão instalados no ambiente ativo:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 Pkg.status()
 ```
 
 4. Voltar ao ambiente global    
 Para voltar ao ambiente global (onde pacotes são instalados no diretório padrão), basta ativá-lo:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 Pkg.activate()  # Ativa o ambiente global
 ```
 
@@ -452,20 +473,23 @@ Ambientes isolam dependências, ou seja, ambientes diferentes podem ter diferent
 
 Exemplo de Fluxo de Trabalho com Ambientes
 1. Crie um diretório para o seu projeto e ative um novo ambiente:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 mkdir("meu_projeto")
 cd("meu_projeto")
 Pkg.activate(".")
 ```
 
 2. Adicione pacotes necessários para o projeto:
-```{r} #| eval: false
+```{r} 
+#| eval: false
 Pkg.add("DataFrames")
 Pkg.add("Plots")
 ```
 
 3. Depois de terminar o trabalho, você pode gerar o arquivo `Manifest.toml` para garantir que qualquer pessoa que usar o projeto tenha as mesmas versões de pacotes:
-```{r} #| eval: false
+```{r}
+#| eval: false
 Pkg.instantiate()  # Para instalar as dependências listadas
 ```
 

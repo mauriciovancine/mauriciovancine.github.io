@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.35">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="author" content="Maurício Vancine">
+
 <title>Quantas pessoas vivem de fato na Mata Atlântica? – Maurício Vancine</title>
 <style>
 /* Default styles provided by pandoc.
@@ -58,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
+
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -77,7 +81,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-84586ee1ee713bfede4da0382a04b4ae.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -103,12 +108,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
   }
-}</script><link rel="stylesheet" href="../../styles.css">
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
+
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Maurício Vancine</span>
@@ -120,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">Sobre</span></a>
   </li>  
@@ -165,27 +176,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Resumé</span></a>
   </li>  
 </ul>
-</div> <!-- /navcollapse -->
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
     <a href="https://www.github.com/mauriciovancine/mauriciovancine.github.io" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-<li><a href="#contextualiza%C3%A7%C3%A3o" id="toc-contextualização" class="nav-link active" data-scroll-target="#contextualiza%C3%A7%C3%A3o">Contextualização</a></li>
+  <li><a href="#contextualização" id="toc-contextualização" class="nav-link active" data-scroll-target="#contextualização">Contextualização</a></li>
   <li><a href="#pacotes-no-r" id="toc-pacotes-no-r" class="nav-link" data-scroll-target="#pacotes-no-r">Pacotes no R</a></li>
   <li><a href="#download-dos-dados" id="toc-download-dos-dados" class="nav-link" data-scroll-target="#download-dos-dados">Download dos dados</a></li>
-  <li><a href="#jun%C3%A7%C3%A3o-dos-dados" id="toc-junção-dos-dados" class="nav-link" data-scroll-target="#jun%C3%A7%C3%A3o-dos-dados">Junção dos dados</a></li>
-  <li><a href="#popula%C3%A7%C3%A3o-nos-biomas" id="toc-população-nos-biomas" class="nav-link" data-scroll-target="#popula%C3%A7%C3%A3o-nos-biomas">População nos biomas</a></li>
-  </ul></nav>
+  <li><a href="#junção-dos-dados" id="toc-junção-dos-dados" class="nav-link" data-scroll-target="#junção-dos-dados">Junção dos dados</a></li>
+  <li><a href="#população-nos-biomas" id="toc-população-nos-biomas" class="nav-link" data-scroll-target="#população-nos-biomas">População nos biomas</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
 <h1 class="title">Quantas pessoas vivem de fato na Mata Atlântica?</h1>
 <p class="subtitle lead">Cálculo estimado da população brasileira vivendo na Mata Atlântica</p>
   <div class="quarto-categories">
@@ -217,167 +236,183 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="contextualização" class="level2"><h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
+</header>
+
+
+<section id="contextualização" class="level2">
+<h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
 <p>Hoje é dia da Mata Atlântica e para comemorar, vou fazer o que mais gosto: uma análise espacial e mapas da Mata Atlântica usando o R.</p>
 <p>Vamos confirmar se realmente <a href="https://www.instagram.com/p/DYVidn0EcTr/?img_index=4">70% da população brasileira vive nesse bioma</a>.</p>
-</section><section id="pacotes-no-r" class="level2"><h2 class="anchored" data-anchor-id="pacotes-no-r">Pacotes no R</h2>
+</section>
+<section id="pacotes-no-r" class="level2">
+<h2 class="anchored" data-anchor-id="pacotes-no-r">Pacotes no R</h2>
 <p>Preparar o R.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># packages</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ipeagit.github.io/geobr/">geobr</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rfsaldanha.github.io/brpop/">brpop</a></span><span class="op">)</span> <span class="co"># remotes::install_github("rfsaldanha/brpop")</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mauriciovancine.github.io/atlanticr">atlanticr</a></span><span class="op">)</span> <span class="co"># remotes::install_github("mauriciovancine/atlanticr")</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-tmap/tmap">tmap</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># options</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>timeout <span class="op">=</span> <span class="fl">1e5</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(geobr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(brpop) <span class="co"># remotes::install_github("rfsaldanha/brpop")</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tmap)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># options</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">timeout =</span> <span class="fl">1e5</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section><section id="download-dos-dados" class="level2"><h2 class="anchored" data-anchor-id="download-dos-dados">Download dos dados</h2>
+</section>
+<section id="download-dos-dados" class="level2">
+<h2 class="anchored" data-anchor-id="download-dos-dados">Download dos dados</h2>
 <p>Limite dos biomas do Brasil, segundo o IBGE para 2019.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># download data -----------------------------------------------------------</span></span>
-<span></span>
-<span><span class="co">## biomas ----</span></span>
-<span><span class="va">biomas_2019</span> <span class="op">&lt;-</span> <span class="fu">geobr</span><span class="fu">::</span><span class="fu"><a href="https://ipeagit.github.io/geobr/reference/read_biomes.html">read_biomes</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2019</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">name_biome</span> <span class="op">!=</span> <span class="st">"Sistema Costeiro"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>area_biome_km2 <span class="op">=</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/geos_measures.html">st_area</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span><span class="op">/</span><span class="fl">1e6</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">biomas_2019</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_polygons.html">tm_fill</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"name_biome"</span>,</span>
-<span>          fill.legend <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_legend.html">tm_legend</a></span><span class="op">(</span></span>
-<span>            title <span class="op">=</span> <span class="st">"Biomas"</span>, </span>
-<span>            position <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_pos.html">tm_pos_in</a></span><span class="op">(</span><span class="st">"right"</span>, <span class="st">"bottom"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># download data -----------------------------------------------------------</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="do">## biomas ----</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>biomas_2019 <span class="ot">&lt;-</span> geobr<span class="sc">::</span><span class="fu">read_biomes</span>(<span class="at">year =</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(name_biome <span class="sc">!=</span> <span class="st">"Sistema Costeiro"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">area_biome_km2 =</span> sf<span class="sc">::</span><span class="fu">st_area</span>(.)<span class="sc">/</span><span class="fl">1e6</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(biomas_2019) <span class="sc">+</span> </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">fill =</span> <span class="st">"name_biome"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill.legend =</span> <span class="fu">tm_legend</span>(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">title =</span> <span class="st">"Biomas"</span>, </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="fu">tm_pos_in</span>(<span class="st">"right"</span>, <span class="st">"bottom"</span>)))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Limite dos municípios do Brasil.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## brasil ----</span></span>
-<span><span class="va">brasil_mun</span> <span class="op">&lt;-</span> <span class="fu">geobr</span><span class="fu">::</span><span class="fu"><a href="https://ipeagit.github.io/geobr/reference/read_municipality.html">read_municipality</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2021</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>code_muni <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html">str_sub</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">code_muni</span><span class="op">)</span>, <span class="fl">1</span>, <span class="fl">6</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">brasil_mun</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_polygons.html">tm_polygons</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## brasil ----</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>brasil_mun <span class="ot">&lt;-</span> geobr<span class="sc">::</span><span class="fu">read_municipality</span>(<span class="at">year =</span> <span class="dv">2021</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">code_muni =</span> <span class="fu">as.numeric</span>(<span class="fu">str_sub</span>(<span class="fu">as.character</span>(code_muni), <span class="dv">1</span>, <span class="dv">6</span>)))</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(brasil_mun) <span class="sc">+</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Dados da população do Brasil.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## populacao brasil</span></span>
-<span><span class="va">brasil_pop</span> <span class="op">&lt;-</span> <span class="fu">brpop</span><span class="fu">::</span><span class="fu"><a href="https://rfsaldanha.github.io/brpop/reference/mun_pop_totals.html">mun_pop_totals</a></span><span class="op">(</span>source <span class="op">=</span> <span class="st">"datasus"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2021</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"pop_"</span>, <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>id_cols <span class="op">=</span> <span class="va">code_muni</span>, names_from <span class="op">=</span> <span class="va">year</span>, values_from <span class="op">=</span> <span class="st">"pop"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## populacao brasil</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>brasil_pop <span class="ot">&lt;-</span> brpop<span class="sc">::</span><span class="fu">mun_pop_totals</span>(<span class="at">source =</span> <span class="st">"datasus"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2021</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">paste0</span>(<span class="st">"pop_"</span>, year)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> code_muni, <span class="at">names_from =</span> year, <span class="at">values_from =</span> <span class="st">"pop"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section><section id="junção-dos-dados" class="level2"><h2 class="anchored" data-anchor-id="junção-dos-dados">Junção dos dados</h2>
+</section>
+<section id="junção-dos-dados" class="level2">
+<h2 class="anchored" data-anchor-id="junção-dos-dados">Junção dos dados</h2>
 <p>Juntar os dados.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## join ----</span></span>
-<span><span class="va">brasil_mun_pop</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">brasil_mun</span>, <span class="va">brasil_pop</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## join ----</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>brasil_mun_pop <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">left_join</span>(brasil_mun, brasil_pop)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Associar os municípios aos biomas.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## filtrar municipios da mata atlantica ----</span></span>
-<span><span class="va">brasil_mun_pop_biomas_2019</span> <span class="op">&lt;-</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_join.html">st_join</a></span><span class="op">(</span><span class="va">brasil_mun_pop</span>, <span class="va">biomas_2019</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">brasil_mun_pop_biomas_2019</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_polygons.html">tm_polygons</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"name_biome"</span>,</span>
-<span>              lwd <span class="op">=</span> <span class="fl">.5</span>,</span>
-<span>              fill.legend <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_legend.html">tm_legend</a></span><span class="op">(</span></span>
-<span>                title <span class="op">=</span> <span class="st">"Municípios por biomas"</span>,</span>
-<span>                position <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_pos.html">tm_pos_in</a></span><span class="op">(</span><span class="st">"left"</span>, <span class="st">"bottom"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">biomas_2019</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_polygons.html">tm_borders</a></span><span class="op">(</span>col <span class="op">=</span> <span class="st">"name_biome"</span>,</span>
-<span>             col.scale <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_scale_categorical.html">tm_scale_categorical</a></span><span class="op">(</span></span>
-<span>               values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"tomato"</span>, <span class="st">"steelblue"</span>, <span class="st">"orange"</span>, <span class="st">"forestgreen"</span>, <span class="st">"purple"</span>, <span class="st">"lightblue"</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>             col.legend <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_legend.html">tm_legend</a></span><span class="op">(</span></span>
-<span>               title <span class="op">=</span> <span class="st">"Biomas"</span>,</span>
-<span>               position <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_pos.html">tm_pos_in</a></span><span class="op">(</span><span class="st">"right"</span>, <span class="st">"bottom"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## filtrar municipios da mata atlantica ----</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>brasil_mun_pop_biomas_2019 <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_join</span>(brasil_mun_pop, biomas_2019)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(brasil_mun_pop_biomas_2019) <span class="sc">+</span> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_polygons</span>(<span class="at">fill =</span> <span class="st">"name_biome"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">lwd =</span> .<span class="dv">5</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">fill.legend =</span> <span class="fu">tm_legend</span>(</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">title =</span> <span class="st">"Municípios por biomas"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">position =</span> <span class="fu">tm_pos_in</span>(<span class="st">"left"</span>, <span class="st">"bottom"</span>))) <span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_shape</span>(biomas_2019) <span class="sc">+</span> </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_borders</span>(<span class="at">col =</span> <span class="st">"name_biome"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>             <span class="at">col.scale =</span> <span class="fu">tm_scale_categorical</span>(</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>               <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"tomato"</span>, <span class="st">"steelblue"</span>, <span class="st">"orange"</span>, <span class="st">"forestgreen"</span>, <span class="st">"purple"</span>, <span class="st">"lightblue"</span>)),</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>             <span class="at">col.legend =</span> <span class="fu">tm_legend</span>(</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>               <span class="at">title =</span> <span class="st">"Biomas"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>               <span class="at">position =</span> <span class="fu">tm_pos_in</span>(<span class="st">"right"</span>, <span class="st">"bottom"</span>)))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>População para cada bioma.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">brasil_mun_pop_biomas_2019</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_polygons.html">tm_fill</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"pop_2021"</span>,</span>
-<span>          fill.scale <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_scale_continuous.html">tm_scale_continuous_log1p</a></span><span class="op">(</span></span>
-<span>            values <span class="op">=</span> <span class="st">"viridis"</span><span class="op">)</span>,</span>
-<span>          fill.legend <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_legend.html">tm_legend</a></span><span class="op">(</span></span>
-<span>            title <span class="op">=</span> <span class="st">"População 2021"</span>,</span>
-<span>            reverse <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>            position <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_pos.html">tm_pos_in</a></span><span class="op">(</span><span class="st">"left"</span>, <span class="st">"bottom"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">biomas_2019</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_polygons.html">tm_borders</a></span><span class="op">(</span>col <span class="op">=</span> <span class="st">"name_biome"</span>,</span>
-<span>             col.scale <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_scale_categorical.html">tm_scale_categorical</a></span><span class="op">(</span></span>
-<span>               values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"tomato"</span>, <span class="st">"steelblue"</span>, <span class="st">"orange"</span>, <span class="st">"forestgreen"</span>, <span class="st">"purple"</span>, <span class="st">"lightblue"</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>             col.legend <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_legend.html">tm_legend</a></span><span class="op">(</span></span>
-<span>               title <span class="op">=</span> <span class="st">"Biomas"</span>,</span>
-<span>               position <span class="op">=</span> <span class="fu"><a href="https://r-tmap.github.io/tmap/reference/tm_pos.html">tm_pos_in</a></span><span class="op">(</span><span class="st">"right"</span>, <span class="st">"bottom"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(brasil_mun_pop_biomas_2019) <span class="sc">+</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(<span class="at">fill =</span> <span class="st">"pop_2021"</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill.scale =</span> <span class="fu">tm_scale_continuous_log1p</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">values =</span> <span class="st">"viridis"</span>),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill.legend =</span> <span class="fu">tm_legend</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">title =</span> <span class="st">"População 2021"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">reverse =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="fu">tm_pos_in</span>(<span class="st">"left"</span>, <span class="st">"bottom"</span>))) <span class="sc">+</span> </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_shape</span>(biomas_2019) <span class="sc">+</span> </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_borders</span>(<span class="at">col =</span> <span class="st">"name_biome"</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>             <span class="at">col.scale =</span> <span class="fu">tm_scale_categorical</span>(</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"tomato"</span>, <span class="st">"steelblue"</span>, <span class="st">"orange"</span>, <span class="st">"forestgreen"</span>, <span class="st">"purple"</span>, <span class="st">"lightblue"</span>)),</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>             <span class="at">col.legend =</span> <span class="fu">tm_legend</span>(</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>               <span class="at">title =</span> <span class="st">"Biomas"</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>               <span class="at">position =</span> <span class="fu">tm_pos_in</span>(<span class="st">"right"</span>, <span class="st">"bottom"</span>)))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="população-nos-biomas" class="level2"><h2 class="anchored" data-anchor-id="população-nos-biomas">População nos biomas</h2>
+</section>
+<section id="população-nos-biomas" class="level2">
+<h2 class="anchored" data-anchor-id="população-nos-biomas">População nos biomas</h2>
 <p>Vamos agrupar os valores para os biomas.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## populacao na mata atlantica ----</span></span>
-<span><span class="va">brasil_mun_pop_dados</span> <span class="op">&lt;-</span> <span class="va">brasil_mun_pop_biomas_2019</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_geometry.html">st_drop_geometry</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">name_biome</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>pop_biome <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">pop_2021</span><span class="op">)</span>,</span>
-<span>                   muni_n <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>                   area_biome_km2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">area_biome_km2</span><span class="op">)</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>per <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">pop_biome</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">pop_biome</span><span class="op">)</span> <span class="op">*</span> <span class="fl">100</span>, <span class="fl">2</span><span class="op">)</span>,</span>
-<span>                dens <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">pop_biome</span><span class="op">/</span><span class="va">area_biome_km2</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/relocate.html">relocate</a></span><span class="op">(</span><span class="va">area_biome_km2</span>, .after <span class="op">=</span> <span class="fl">5</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/relocate.html">relocate</a></span><span class="op">(</span><span class="va">muni_n</span>, .after <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>Bioma <span class="op">=</span> <span class="fl">1</span>, </span>
-<span>                `População no bioma` <span class="op">=</span> <span class="fl">2</span>,</span>
-<span>                `Porcentagem da população no bioma (%)` <span class="op">=</span> <span class="fl">3</span>,</span>
-<span>                `Número de municípios` <span class="op">=</span> <span class="fl">4</span>,</span>
-<span>                `Área do bioma (km²)` <span class="op">=</span> <span class="fl">5</span>,</span>
-<span>                `Densidade populacional no bioma (pop/km²)` <span class="op">=</span> <span class="fl">6</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/adorn_totals.html">adorn_totals</a></span><span class="op">(</span><span class="st">"row"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">last_col</a></span><span class="op">(</span><span class="op">)</span>, <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/base/replace.html">replace</a></span><span class="op">(</span><span class="va">.x</span>, <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"-"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## visualizar a tabela</span></span>
-<span><span class="va">brasil_mun_pop_dados</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## populacao na mata atlantica ----</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>brasil_mun_pop_dados <span class="ot">&lt;-</span> brasil_mun_pop_biomas_2019 <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  sf<span class="sc">::</span><span class="fu">st_drop_geometry</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(name_biome) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">pop_biome =</span> <span class="fu">sum</span>(pop_2021),</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">muni_n =</span> <span class="fu">n</span>(),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">area_biome_km2 =</span> <span class="fu">round</span>(<span class="fu">as.numeric</span>(<span class="fu">mean</span>(area_biome_km2)), <span class="dv">2</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">per =</span> <span class="fu">round</span>(pop_biome<span class="sc">/</span><span class="fu">sum</span>(pop_biome) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>),</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">dens =</span> <span class="fu">round</span>(pop_biome<span class="sc">/</span>area_biome_km2, <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">relocate</span>(area_biome_km2, <span class="at">.after =</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">relocate</span>(muni_n, <span class="at">.after =</span> <span class="dv">4</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename</span>(<span class="at">Bioma =</span> <span class="dv">1</span>, </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span><span class="at">População no bioma</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">2</span>,</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span><span class="at">Porcentagem da população no bioma (%)</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">3</span>,</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span><span class="at">Número de municípios</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">4</span>,</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span><span class="at">Área do bioma (km²)</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">5</span>,</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span><span class="at">Densidade populacional no bioma (pop/km²)</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">6</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">adorn_totals</span>(<span class="st">"row"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">last_col</span>(), <span class="sc">~</span> <span class="fu">replace</span>(.x, <span class="fu">n</span>(), <span class="st">"-"</span>)))</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="do">## visualizar a tabela</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>brasil_mun_pop_dados <span class="sc">|&gt;</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">gt</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="agjdbyyvsc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#agjdbyyvsc table {
+<div id="divkicshaz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#divkicshaz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#agjdbyyvsc thead, #agjdbyyvsc tbody, #agjdbyyvsc tfoot, #agjdbyyvsc tr, #agjdbyyvsc td, #agjdbyyvsc th {
+#divkicshaz thead, #divkicshaz tbody, #divkicshaz tfoot, #divkicshaz tr, #divkicshaz td, #divkicshaz th {
   border-style: none;
 }
 
-#agjdbyyvsc p {
+#divkicshaz p {
   margin: 0;
   padding: 0;
 }
 
-#agjdbyyvsc .gt_table {
+#divkicshaz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -403,12 +438,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_caption {
+#divkicshaz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#agjdbyyvsc .gt_title {
+#divkicshaz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -420,7 +455,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#agjdbyyvsc .gt_subtitle {
+#divkicshaz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -432,7 +467,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#agjdbyyvsc .gt_heading {
+#divkicshaz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -444,13 +479,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_bottom_border {
+#divkicshaz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_col_headings {
+#divkicshaz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -465,7 +500,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_col_heading {
+#divkicshaz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -485,7 +520,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#agjdbyyvsc .gt_column_spanner_outer {
+#divkicshaz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -497,15 +532,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#agjdbyyvsc .gt_column_spanner_outer:first-child {
+#divkicshaz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#agjdbyyvsc .gt_column_spanner_outer:last-child {
+#divkicshaz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#agjdbyyvsc .gt_column_spanner {
+#divkicshaz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -517,11 +552,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#agjdbyyvsc .gt_spanner_row {
+#divkicshaz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#agjdbyyvsc .gt_group_heading {
+#divkicshaz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -547,7 +582,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#agjdbyyvsc .gt_empty_group_heading {
+#divkicshaz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -562,15 +597,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#agjdbyyvsc .gt_from_md > :first-child {
+#divkicshaz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#agjdbyyvsc .gt_from_md > :last-child {
+#divkicshaz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#agjdbyyvsc .gt_row {
+#divkicshaz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -589,7 +624,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#agjdbyyvsc .gt_stub {
+#divkicshaz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -602,7 +637,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#agjdbyyvsc .gt_stub_row_group {
+#divkicshaz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -616,15 +651,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#agjdbyyvsc .gt_row_group_first td {
+#divkicshaz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#agjdbyyvsc .gt_row_group_first th {
+#divkicshaz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#agjdbyyvsc .gt_summary_row {
+#divkicshaz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -634,16 +669,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#agjdbyyvsc .gt_first_summary_row {
+#divkicshaz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_first_summary_row.thick {
+#divkicshaz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#agjdbyyvsc .gt_last_summary_row {
+#divkicshaz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -653,7 +688,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_grand_summary_row {
+#divkicshaz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -663,7 +698,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#agjdbyyvsc .gt_first_grand_summary_row {
+#divkicshaz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -673,7 +708,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_last_grand_summary_row_top {
+#divkicshaz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -683,11 +718,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_striped {
+#divkicshaz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#agjdbyyvsc .gt_table_body {
+#divkicshaz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -696,7 +731,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_footnotes {
+#divkicshaz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -710,7 +745,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_footnote {
+#divkicshaz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -719,7 +754,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#agjdbyyvsc .gt_sourcenotes {
+#divkicshaz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -733,7 +768,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#agjdbyyvsc .gt_sourcenote {
+#divkicshaz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -741,84 +776,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#agjdbyyvsc .gt_left {
+#divkicshaz .gt_left {
   text-align: left;
 }
 
-#agjdbyyvsc .gt_center {
+#divkicshaz .gt_center {
   text-align: center;
 }
 
-#agjdbyyvsc .gt_right {
+#divkicshaz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#agjdbyyvsc .gt_font_normal {
+#divkicshaz .gt_font_normal {
   font-weight: normal;
 }
 
-#agjdbyyvsc .gt_font_bold {
+#divkicshaz .gt_font_bold {
   font-weight: bold;
 }
 
-#agjdbyyvsc .gt_font_italic {
+#divkicshaz .gt_font_italic {
   font-style: italic;
 }
 
-#agjdbyyvsc .gt_super {
+#divkicshaz .gt_super {
   font-size: 65%;
 }
 
-#agjdbyyvsc .gt_footnote_marks {
+#divkicshaz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#agjdbyyvsc .gt_asterisk {
+#divkicshaz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#agjdbyyvsc .gt_indent_1 {
+#divkicshaz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#agjdbyyvsc .gt_indent_2 {
+#divkicshaz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#agjdbyyvsc .gt_indent_3 {
+#divkicshaz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#agjdbyyvsc .gt_indent_4 {
+#divkicshaz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#agjdbyyvsc .gt_indent_5 {
+#divkicshaz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#agjdbyyvsc .katex-display {
+#divkicshaz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#agjdbyyvsc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#divkicshaz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
+
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
-<thead><tr class="gt_col_headings header">
+<thead>
+<tr class="gt_col_headings header">
 <th id="Bioma" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Bioma</th>
 <th id="População-no-bioma" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">População no bioma</th>
 <th id="Porcentagem-da-população-no-bioma-(%)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Porcentagem da população no bioma (%)</th>
 <th id="Número-de-municípios" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Número de municípios</th>
 <th id="aÁrea-do-bioma-(km²)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Área do bioma (km²)</th>
 <th id="Densidade-populacional-no-bioma-(pop/km²)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Densidade populacional no bioma (pop/km²)</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="Bioma">Amazônia</td>
@@ -878,6 +916,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -921,7 +960,11 @@ btn.style.display = "none";
 });
 </script>
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1322,13 +1365,14 @@ btn.style.display = "none";
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© 2026 Maurício Vancine ∙ Feito com<a href="https://quarto.org" target="_blank">Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
-<li class="nav-item compact">
+    <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/mauriciovancine">
       <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -1376,10 +1420,10 @@ btn.style.display = "none";
     </a>
   </li>  
 </ul>
-</div>
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="../../contact.html">
 <p>Contato</p>
 </a>
@@ -1395,9 +1439,11 @@ btn.style.display = "none";
 </a>
   </li>  
 </ul>
-</div>
+    </div>
   </div>
 </footer>
+
+
 
 
 </body></html>
