@@ -1,0 +1,159 @@
+---
+title: Quantas pessoas vivem de fato na Mata Atlântica? 
+subtitle: "Cálculo estimado da população brasileira vivendo na Mata Atlântica"
+author: Maurício Vancine
+date: "2026-05-27"
+categories: ["Geoprocessamento", "R"]
+image: "featured.gif"
+toc: true
+draft: false
+code-link: true
+editor: source
+---
+
+## Contextualização
+
+Hoje é dia da Mata Atlântica e para comemorar, vou fazer o que mais gosto: uma análise espacial e mapas da Mata Atlântica usando o R.
+
+Vamos confirmar se realmente [70% da população brasileira vive nesse bioma](https://www.instagram.com/p/DYVidn0EcTr/?img_index=4).
+
+## Pacotes no R
+
+Preparar o R.
+
+```{r}
+#| message: false
+#| warning: false
+# packages
+library(tidyverse)
+library(sf)
+library(geobr)
+library(brpop) # remotes::install_github("rfsaldanha/brpop")
+library(atlanticr) # remotes::install_github("mauriciovancine/atlanticr")
+library(tmap)
+
+# options
+options(timeout = 1e5)
+```
+
+## Download dos dados
+
+Limite da Mata Atlântica. 
+
+```{r}
+#| message: false
+#| warning: false
+# download data -----------------------------------------------------------
+
+## mata atlantica ----
+mata_atlantica_2019 <- geobr::read_biomes(year = 2019) %>% 
+    dplyr::filter(name_biome == "Mata Atlântica")
+
+tm_shape(mata_atlantica_2019) + 
+    tm_polygons()
+```
+
+Limite dos municípios do Brasil.
+
+```{r}
+#| message: false
+#| warning: false
+## brasil ----
+brasil_mun <- geobr::read_municipality(year = 2021) %>% 
+    dplyr::mutate(code_muni = as.numeric(str_sub(as.character(code_muni), 1, 6)))
+
+tm_shape(brasil_mun) + 
+    tm_polygons()
+```
+
+Dados da população do Brasil.
+
+```{r}
+#| message: false
+#| warning: false
+## populacao brasil
+brasil_pop <- brpop::mun_pop_totals(source = "datasus") %>% 
+    dplyr::filter(year == 2021) %>% 
+    dplyr::mutate(year = paste0("pop_", year)) %>% 
+    tidyr::pivot_wider(id_cols = code_muni, names_from = year, values_from = "pop")
+```
+
+## Junção dos dados
+
+Juntar os dados.
+
+```{r}
+#| message: false
+#| warning: false
+## join ----
+brasil_mun_pop <- dplyr::left_join(brasil_mun, brasil_pop)
+```
+
+Filtrar os municípios na Mata Atlântica.
+
+```{r}
+#| message: false
+#| warning: false
+## filtrar municipios da mata atlantica ----
+brasil_mun_pop_mata_atlantica_2019 <- brasil_mun_pop[mata_atlantica_2019, ]
+
+tm_shape(brasil_mun_pop_mata_atlantica_2019) + 
+    tm_fill(fill = "pop_2021",
+            fill.scale = tm_scale_continuous_log1p(values = "viridis"),
+            fill.legend = tm_legend(
+                title = "População 2021", 
+                position = tm_pos_in("right", "bottom"), 
+                frame = TRUE)) + 
+    tm_shape(mata_atlantica_2019) + 
+    tm_borders(col = "red")
+```
+
+## População na Mata Atlântica
+
+Esta análise mostrou que foi quase os 70% amplamente divulgado. Mas aqui, esse valor foi de 64%. Variações nos métodos, nos dados e limite do bioma podem fazer esse valor variar.
+
+```{r}
+## populacao na mata atlantica ----
+sum(brasil_mun_pop_mata_atlantica_2019$pop_2021)/sum(brasil_mun_pop$pop_2021) * 100
+```
+
+Fonte da imagem: [SOS Mata Atlântica](https://www.sosma.org.br/en/).
+
+<style>
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 105px; /* um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(28, 108, 190, 0.7); /* azul com transparência */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#topBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+}
+</style>
+
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑ Topo</button>
+
+<script>
+const btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>
