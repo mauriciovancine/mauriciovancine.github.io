@@ -4,7 +4,7 @@ subtitle: "Cálculo estimado da população brasileira vivendo na Mata Atlântic
 author: Maurício Vancine
 date: "2026-05-27"
 categories: ["Geoprocessamento", "R"]
-image: "featured.gif"
+image: "featured.png"
 toc: true
 draft: false
 code-link: true
@@ -38,19 +38,23 @@ options(timeout = 1e5)
 
 ## Download dos dados
 
-Limite da Mata Atlântica. 
+Limite dos biomas do Brasil, segundo o IBGE para 2019. 
 
 ```{r}
 #| message: false
 #| warning: false
 # download data -----------------------------------------------------------
 
-## mata atlantica ----
-mata_atlantica_2019 <- geobr::read_biomes(year = 2019) %>% 
-    dplyr::filter(name_biome == "Mata Atlântica")
+## biomas ----
+biomas_2019 <- geobr::read_biomes(year = 2019) %>% 
+  dplyr::filter(name_biome != "Sistema Costeiro") %>% 
+  dplyr::mutate(area_biome_km2 = sf::st_area(.)/1e6)
 
-tm_shape(mata_atlantica_2019) + 
-    tm_polygons()
+tm_shape(biomas_2019) + 
+  tm_fill(fill = "name_biome",
+          fill.legend = tm_legend(
+            title = "Biomas", 
+            position = tm_pos_in("right", "bottom")))
 ```
 
 Limite dos municípios do Brasil.
@@ -60,10 +64,10 @@ Limite dos municípios do Brasil.
 #| warning: false
 ## brasil ----
 brasil_mun <- geobr::read_municipality(year = 2021) %>% 
-    dplyr::mutate(code_muni = as.numeric(str_sub(as.character(code_muni), 1, 6)))
+  dplyr::mutate(code_muni = as.numeric(str_sub(as.character(code_muni), 1, 6)))
 
 tm_shape(brasil_mun) + 
-    tm_polygons()
+  tm_polygons()
 ```
 
 Dados da população do Brasil.
@@ -73,9 +77,9 @@ Dados da população do Brasil.
 #| warning: false
 ## populacao brasil
 brasil_pop <- brpop::mun_pop_totals(source = "datasus") %>% 
-    dplyr::filter(year == 2021) %>% 
-    dplyr::mutate(year = paste0("pop_", year)) %>% 
-    tidyr::pivot_wider(id_cols = code_muni, names_from = year, values_from = "pop")
+  dplyr::filter(year == 2021) %>% 
+  dplyr::mutate(year = paste0("pop_", year)) %>% 
+  tidyr::pivot_wider(id_cols = code_muni, names_from = year, values_from = "pop")
 ```
 
 ## Junção dos dados
@@ -89,55 +93,100 @@ Juntar os dados.
 brasil_mun_pop <- dplyr::left_join(brasil_mun, brasil_pop)
 ```
 
-Filtrar os municípios na Mata Atlântica.
+Associar os municípios aos biomas.
 
 ```{r}
 #| message: false
 #| warning: false
 ## filtrar municipios da mata atlantica ----
-brasil_mun_pop_mata_atlantica_2019 <- brasil_mun_pop[mata_atlantica_2019, ]
+brasil_mun_pop_biomas_2019 <- sf::st_join(brasil_mun_pop, biomas_2019)
 
-tm_shape(brasil_mun_pop_mata_atlantica_2019) + 
-    tm_fill(fill = "pop_2021",
-            fill.scale = tm_scale_continuous_log1p(values = "viridis"),
-            fill.legend = tm_legend(
-                title = "População 2021", 
-                position = tm_pos_in("right", "bottom"), 
-                frame = TRUE)) + 
-    tm_shape(mata_atlantica_2019) + 
-    tm_borders(col = "red")
+tm_shape(brasil_mun_pop_biomas_2019) + 
+  tm_polygons(fill = "name_biome",
+              lwd = .5,
+              fill.legend = tm_legend(
+                title = "Municípios por biomas",
+                position = tm_pos_in("left", "bottom"))) +
+  tm_shape(biomas_2019) + 
+  tm_borders(col = "name_biome",
+             col.scale = tm_scale_categorical(
+               values = c("tomato", "steelblue", "orange", "forestgreen", "purple", "lightblue")),
+             col.legend = tm_legend(
+               title = "Biomas",
+               position = tm_pos_in("right", "bottom")))
 ```
 
-## População na Mata Atlântica
+População para cada bioma.
 
-Esta análise mostrou que foi quase os 70% amplamente divulgado. Mas aqui, esse valor foi de 64%. Variações nos métodos, nos dados e limite do bioma podem fazer esse valor variar.
+```{r}
+tm_shape(brasil_mun_pop_biomas_2019) + 
+  tm_fill(fill = "pop_2021",
+          fill.scale = tm_scale_continuous_log1p(
+            values = "viridis"),
+          fill.legend = tm_legend(
+            title = "População 2021",
+            reverse = TRUE,
+            position = tm_pos_in("left", "bottom"))) + 
+  tm_shape(biomas_2019) + 
+  tm_borders(col = "name_biome",
+             col.scale = tm_scale_categorical(
+               values = c("tomato", "steelblue", "orange", "forestgreen", "purple", "lightblue")),
+             col.legend = tm_legend(
+               title = "Biomas",
+               position = tm_pos_in("right", "bottom")))
+```
+
+## População nos biomas
+
+Vamos agrupar os valores para os biomas.
 
 ```{r}
 ## populacao na mata atlantica ----
-sum(brasil_mun_pop_mata_atlantica_2019$pop_2021)/sum(brasil_mun_pop$pop_2021) * 100
+brasil_mun_pop_dados <- brasil_mun_pop_biomas_2019 %>% 
+  sf::st_drop_geometry() %>% 
+  dplyr::group_by(name_biome) %>% 
+  dplyr::summarise(pop_biome = sum(pop_2021),
+                   muni_n = n(),
+                   area_biome_km2 = round(as.numeric(mean(area_biome_km2)), 2)) %>% 
+  dplyr::mutate(per = round(pop_biome/sum(pop_biome) * 100, 2),
+                dens = round(pop_biome/area_biome_km2, 2)) %>%
+  dplyr::relocate(area_biome_km2, .after = 5) %>% 
+  dplyr::relocate(muni_n, .after = 4) %>% 
+  dplyr::rename(Bioma = 1, 
+                `População no bioma` = 2,
+                `Porcentagem da população no bioma (%)` = 3,
+                `Número de municípios` = 4,
+                `Área do bioma (km²)` = 5,
+                `Densidade populacional no bioma (pop/km²)` = 6) %>% 
+  janitor::adorn_totals("row") %>% 
+  dplyr::mutate(across(last_col(), ~ replace(.x, n(), "-")))
+
+## visualizar a tabela
+brasil_mun_pop_dados |>
+  gt::gt()
 ```
 
-Fonte da imagem: [SOS Mata Atlântica](https://www.sosma.org.br/en/).
+Esta análise mostrou que foi muito abaixo dos 70% amplamente divulgado. Esse valor foi de aproximadamente 55%, mas o valor foi de mais de 136 milhões de pessoas em 3080 municípios com uma densidade de 123 pessoas por km². Variações nos métodos, nos dados e limite do bioma podem fazer esse valor variar.
 
 <style>
 #topBtn {
-  display: none;
-  position: fixed;
-  bottom: 105px; /* um pouco acima do fundo */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 14px;
-  font-size: 20px;
-  border: none;
-  border-radius: 6px;
-  background-color: rgba(28, 108, 190, 0.7); /* azul com transparência */
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: background-color 0.3s;
+display: none;
+position: fixed;
+bottom: 105px; /* um pouco acima do fundo */
+left: 50%;
+transform: translateX(-50%);
+padding: 10px 14px;
+font-size: 20px;
+border: none;
+border-radius: 6px;
+background-color: rgba(28, 108, 190, 0.7); /* azul com transparência */
+color: white;
+cursor: pointer;
+box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+transition: background-color 0.3s;
 }
 #topBtn:hover {
-  background-color: rgba(0, 86, 179, 0.9);
+background-color: rgba(0, 86, 179, 0.9);
 }
 </style>
 
@@ -147,13 +196,13 @@ Fonte da imagem: [SOS Mata Atlântica](https://www.sosma.org.br/en/).
 const btn = document.getElementById("topBtn");
 
 window.addEventListener("scroll", () => {
-  const scrollBottom = window.innerHeight + window.scrollY;
-  const docHeight = document.documentElement.scrollHeight;
+const scrollBottom = window.innerHeight + window.scrollY;
+const docHeight = document.documentElement.scrollHeight;
 
-  if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
+if (scrollBottom >= docHeight - 200) { // aparece um pouco antes do final
+btn.style.display = "block";
+} else {
+btn.style.display = "none";
+}
 });
 </script>
