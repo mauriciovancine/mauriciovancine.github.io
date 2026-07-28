@@ -74,14 +74,10 @@
     "items": [
       "/blog/geo-atlantic-forest-people/index.html",
       "/blog/press-release-atlantic-spatial/index.html",
-      "/blog/r-pdf/index.html",
-      "/blog/eco-biodiv-data/index.html",
       "/blog/eco-taxonomy/index.html",
       "/blog/academic-research-internship-abroad/index.html",
       "/blog/r-geo-fix-coordinates/index.html",
       "/blog/r-parallel/index.html",
-      "/blog/git-intro/index.html",
-      "/blog/qgis-r/index.html",
       "/blog/r-shiny-github/index.html",
       "/blog/r-shiny-intro/index.html",
       "/blog/r-ten-topics/index.html",
@@ -90,7 +86,6 @@
       "/blog/r-big-data/index.html",
       "/blog/r-color-palletes/index.html",
       "/blog/r-reinstall-packages/index.html",
-      "/blog/geo-data-source/index.html",
       "/blog/academic-online-courses/index.html",
       "/blog/geo-crs-datum/index.html",
       "/blog/r-error/index.html"

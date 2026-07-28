@@ -18,6 +18,8 @@ editor: source
 
 https://hbctraining.github.io/Training-modules/RShiny/lessons/shinylive.html
 
+Fonte da imagem: [Daniil Komov/Pexels](https://www.pexels.com/pt-br/foto/codigo-colorido-na-tela-com-padroes-de-luz-34804022).
+
 <style>
 #topBtn {
   display: none;

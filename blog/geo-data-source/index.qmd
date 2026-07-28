@@ -1,5 +1,5 @@
 ---
-title: "Fonte de dados geoespaciais"
+title: "Fontes de dados geoespaciais"
 subtitle: "Lista das principais fontes de dados e pacotes do R de dados geoespaciais"
 author: Maurício Vancine
 date: 2022-01-18
@@ -11,6 +11,7 @@ execute:
   message: false
 toc: true
 editor: source
+draft: true
 ---
 
 ## Contextualização

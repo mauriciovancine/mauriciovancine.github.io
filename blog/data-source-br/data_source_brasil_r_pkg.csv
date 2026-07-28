@@ -1,0 +1,23 @@
+Pacotes,Descrição
+[geobr](https://ipeagit.github.io/geobr/),Carrega Shapefiles de Conjuntos de Dados Espaciais Oficiais do Brasil
+[sidrar](https://cran.r-project.org/web/packages/sidrar/index.html),Accessa os dados do SIDRA - Sistema IBGE de Recuperação Automática
+[censobr](https://ipeagit.github.io/censobr/),Pacote do R para baixar dados do Censo Demográfico do Brasil
+[ribge](https://github.com/tbrugz/ribge),Pacote R para download de dados do IBGE (Instituto Brasileiro de Geografia e Estatística)
+[ibger](https://strategicprojects.github.io/ibger/),"Interface compatível com o *tidyverse* para a API de Dados Agregados do IBGE (versão 3), que sustenta o SIDRA — o sistema de recuperação automática de dados de todas as pesquisas e censos realizados pelo IBGE (Instituto Brasileiro de Geografia e Estatística)."
+PNADcIBGE,
+ipeadatar,
+rbcb,
+GetBCBData,
+siconfir,
+dadosabertos / basedosdados,
+microdatasus,
+BrazilCrime,
+odbr,
+cepR,
+basedosdados,
+brasilapi,
+r5r,
+odbr,
+geocodebr,
+enderecobr,
+flightsbr,

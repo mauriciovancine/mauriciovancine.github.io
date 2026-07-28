@@ -14,8 +14,8 @@ editor: source
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
   <a href="https://revistas.ufrj.br/index.php/oa/article/view/64848" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a>
   <a href="/publications/2026b-vancine-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
-  <a href="/publications/2026b-vancine-etal_sm.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>Metadados</a>
-  <a href="/publications/2026b-vancine-etal_pt.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF - Português</a>
+  <a href="/publications/2026b-vancine-etal-sm.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>Metadados</a>
+  <a href="/publications/2026b-vancine-etal-pt.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF - Português</a>
 </div>
 
 <style>

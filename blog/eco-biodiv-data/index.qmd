@@ -11,6 +11,7 @@ execute:
   message: false
 toc: true
 editor: source
+draft: true
 ---
 
 ```{r setup, include=FALSE}
@@ -434,7 +435,7 @@ Tobias, J. A., Sheard, C., Pigot, A. L., Devenish, A. J. M., Yang, J., Sayol, F.
 
 Vancine, M. H., Duarte, K. da S., de Souza, Y. S., Giovanelli, J. G. R., Martins-Sobrinho, P. M., López, A., Bovo, R. P., Maffei, F., Lion, M. B., Ribeiro Júnior, J. W., Brassaloti, R., da Costa, C. O. R., Sawakuchi, H. O., Forti, L. R., Cacciali, P., Bertoluci, J., Haddad, C. F. B., & Ribeiro, M. C. (2018). ATLANTIC AMPHIBIANS: A data set of amphibian communities from the Atlantic Forests of South America. Ecology, 99(7), 1692–1692. https://doi.org/10.1002/ecy.2392
 
-Fonte da imagem: [Diana/Pexels](https://www.pexels.com/pt-br/foto/colecao-beetle-2694485).
+Fonte da imagem: [Vinícius Vieira ft/Pexels](https://www.pexels.com/pt-br/foto/pessoas-campo-area-trabalhando-17378356).
 
 <style>
 #topBtn {
