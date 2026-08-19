@@ -6,6 +6,7 @@ editor: source
 ## Pós-Doutorado - Estágio de Pesquisa no Exterior
 
 -   **Título**: Efeitos da degradação do habitat na inferência da dominância local de espécies arbóreas na floresta amazônica
+-   **Vigência**: 15 de janeiro de 2026 a 15 de julho de 2026
 -   **Agência**: [Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)](https://fapesp.br/)
 -   **Instituição Sede**: [Universidade Estadual de Campinas (Unicamp)](https://unicamp.br/)
 -   **Instituição Anfitriã**:	[Yale School Of The Environment, Estados Unidos](https://environment.yale.edu/) 
@@ -15,6 +16,7 @@ editor: source
 ## Pós-Doutorado
 
 -   **Título**: Impactos dos efeitos de borda, fogo e mudanças climáticas na composição da vegetação e diversidade funcional em diferentes escalas espaciais na Floresta Amazônica
+-   **Vigência**: 1º de dezembro de 2024 a 30 de maio de 2027
 -   **Agência**: [Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)](https://fapesp.br/)
 -   **Instituição Sede**: [Universidade Estadual de Campinas (Unicamp)](https://unicamp.br/)
 -   **Bolsa**: [#2024/19865-6](https://bv.fapesp.br/pt/bolsas/223203/impactos-dos-efeitos-de-borda-fogo-e-mudancas-climaticas-na-composicao-da-vegetacao-e-diversidade-fu/)
@@ -23,6 +25,7 @@ editor: source
 ## Doutorado
 
 -   **Título**: Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica
+-   **Vigência**: 1º de julho de 2022 a 29 de fevereiro de 2024
 -   **Agência**: [Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)](https://fapesp.br/)
 -   **Instituição Sede**: [Universidade Estadual Paulista (UNESP) - Câmpus de Rio Claro](https://www.rc.unesp.br/)
 -   **Bolsa**: [#2022/01899-6](https://bv.fapesp.br/pt/bolsas/203713/estrutura-da-paisagem-como-preditor-da-diversidade-taxonomica-e-funcional-de-anfibios-na-mata-atlant/)
@@ -31,6 +34,7 @@ editor: source
 ## Mestrado
 
 -   **Título**: Efeito das modificações da paisagem e das mudanças climáticas sobre a persistência de anfíbios na Mata Atlântica
+-   **Vigência**: 1º de agosto de 2017 a 28 de fevereiro de 2018
 -   **Agência**: [Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)](https://fapesp.br/)
 -   **Instituição Sede**: [Universidade Estadual Paulista (UNESP) - Câmpus de Rio Claro](https://www.rc.unesp.br/)
 -   **Bolsa**: [#2017/09676-8](https://bv.fapesp.br/pt/bolsas/172826/efeito-das-modificacoes-da-paisagem-e-das-mudancas-climaticas-sobre-a-persistencia-de-anfibios-na-ma/)
@@ -39,6 +43,7 @@ editor: source
 ## Iniciação científica
 
 -   **Título**: Efeito da fragmentação sobre a persistência de anfíbios anuros (Amphibia: Anura) na Mata Atlântica
+-   **Vigência**: 1º de julho de 2022 a 29 de fevereiro de 2024
 -   **Agência**: [Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)](https://fapesp.br/)
 -   **Instituição Sede**: [Universidade Estadual Paulista (UNESP) - Câmpus de Rio Claro](https://www.rc.unesp.br/)
 -   **Bolsa**: [#2013/02883-7](https://bv.fapesp.br/pt/bolsas/142421/efeito-da-fragmentacao-sobre-a-persistencia-de-anfibios-anuros-amphibia-anura-na-mata-atlantica/)
