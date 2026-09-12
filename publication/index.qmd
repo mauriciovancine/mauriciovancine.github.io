@@ -101,6 +101,8 @@ editor: source
 
 1. Da Silva, F. R., Gonçalves-Souza, T., Paterno, G. B., Provete, D. B., & <u>**Vancine, M. H.**</u> (2022). [Análises Ecológicas no R](/publication/2022-da-silva-etal){target="_blank"}. *Recife: Nupeea; Bauru, SP: Canal 6*. ISBN 978-85-7917-563-3.
 
+1. Lecours, V., LeClerc, E., Moudrý, V., & <u>**Vancine, M. H.**</u> (2026). [Ecological applications of geomorphometry](). In Geomorphometry: Concepts, Software, Applications (Vol. 37, pp. 711–731). Elsevier.
+
 ## Preprints
 
 1. Muylaert, R. L., Kingston, T., Luo, J., <u>**Vancine, M. H.**</u>, Galli, N., Carlson, C. J., ... & Hayman, D. T. (2021). [Present and future distribution of bat hosts of sarbecoviruses: implications for conservation and public health](/publication/2021-muylaert-etal){target="_blank"}. *bioRxiv*. DOI: [10.1101/2021.12.09.471691](https://doi.org/10.1101/2021.12.09.471691).

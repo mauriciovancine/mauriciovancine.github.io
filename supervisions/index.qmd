@@ -10,15 +10,15 @@ editor: source
 
 ## Alunos atuais de pós-graduação
 
-- **Pâmela Rodrigues Braga**, [Doutorado](), *PPG de Ecologia, Universidade Estadual de Campinas (Unicamp), Campinas*, 2026. [Coorientador com Mathias Mistretta Pires].
+- **Pâmela Rodrigues Braga**, [Doutorado (FAPESP)](https://bv.fapesp.br/pt/bolsas/237569/padroes-de-frugivoria-e-dispersao-de-sementes-por-primatas-em-escala-local-e-regional-na-amazonia), *PPG de Ecologia, Universidade Estadual de Campinas (Unicamp), Campinas*, 2026. [Coorientador com Mathias Mistretta Pires].
 
 ## Alunos atuais de graduação
 
-- **Kayane Ferreira Santana Trindade**, [Iniciação Científica](), *Ciências Biológicas, Universidade Estadual de Campinas (Unicamp), Campinas*, 2026. [Orientador com Mathias Mistretta Pires].
+- **Kayane Ferreira Santana Trindade**, [Iniciação Científica (FAPESP)](), *Ciências Biológicas, Universidade Estadual de Campinas (Unicamp), Campinas*, 2026. [Orientador com Mathias Mistretta Pires].
 
 ## Alunos anteriores de pós-graduação
 
-- **Lucas de Souza Almeida**, [Mestrado](/publication/2022-almeida), *PPG de Ecologia, Evolução e Biodiversidade, Universidade Estadual Paulista (Unesp), Rio Claro*, 2022. [Coorientador com Célio Fernando Baptista Haddad].
+- **Lucas de Souza Almeida**, [Mestrado](/publication/2022-almeida), *PPG de Ecologia, Evolução e Biodiversidade, Universidade Estadual Paulista (Unesp), Rio Claro*, 2020-2022. [Coorientador com Célio Fernando Baptista Haddad].
 
 ## Alunos anteriores de graduação
 

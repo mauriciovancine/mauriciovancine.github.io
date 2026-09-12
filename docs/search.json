@@ -445,7 +445,7 @@
     "href": "publication/2022-da-silva-etal/index.html#citação",
     "title": "Análises Ecológicas no R",
     "section": "Citação",
-    "text": "Citação\n@book{da_silva_etal_r_2022,\n    address = {Recife, PE},\n    edition = {Primeira edição},\n    title = {Análises ecológicas no R},\n    isbn = {9788579175640},\n    shorttitle = {Análises ecológicas no R},\n    publisher = {Nupeea},\n    author = {Da Silva FR, Gonçalves-Souza T, Paterno GB, Provete DB, Vancine MH},\n    year = {2022},\n    note = {},\n    keywords = {Análises dados – Ecologia, Linguagem de programação (Computadores), Métodos científicos, Tecnologia – Aspectos ambientais},\n}"
+    "text": "Citação\n@book{da_silva_etal_r_2022,\n    address = {Recife, PE},\n    edition = {Primeira edição},\n    title = {Análises ecológicas no R},\n    isbn = {9788579175640},\n    shorttitle = {Análises ecológicas no R},\n    publisher = {Nupeea},\n    author = {Da Silva FR, Gonçalves-Souza T, Paterno GB, Provete DB, Vancine MH},\n    year = {2022},\n    keywords = {Análises dados – Ecologia, Linguagem de programação (Computadores), Métodos científicos, Tecnologia – Aspectos ambientais},\n}"
   },
   {
     "objectID": "publication/2025-alves-ferreira-vancine-etal/index.html",
@@ -487,7 +487,7 @@
     "href": "publication/index.html#livros",
     "title": "Publicações",
     "section": "Livros",
-    "text": "Livros\n\nDa Silva, F. R., Gonçalves-Souza, T., Paterno, G. B., Provete, D. B., & Vancine, M. H. (2022). Análises Ecológicas no R. Recife: Nupeea; Bauru, SP: Canal 6. ISBN 978-85-7917-563-3."
+    "text": "Livros\n\nDa Silva, F. R., Gonçalves-Souza, T., Paterno, G. B., Provete, D. B., & Vancine, M. H. (2022). Análises Ecológicas no R. Recife: Nupeea; Bauru, SP: Canal 6. ISBN 978-85-7917-563-3.\nLecours, V., LeClerc, E., Moudrý, V., & Vancine, M. H. (2026). Ecological applications of geomorphometry. In Geomorphometry: Concepts, Software, Applications (Vol. 37, pp. 711–731). Elsevier."
   },
   {
     "objectID": "publication/index.html#preprints",
@@ -1537,14 +1537,14 @@
     "href": "supervisions/index.html#alunos-atuais-de-graduação",
     "title": "Orientações",
     "section": "Alunos atuais de graduação",
-    "text": "Alunos atuais de graduação\n\nKayane Ferreira Santana Trindade, Iniciação Científica, Ciências Biológicas, Universidade Estadual de Campinas (Unicamp), Campinas, 2026. [Orientador com Mathias Mistretta Pires]."
+    "text": "Alunos atuais de graduação\n\nKayane Ferreira Santana Trindade, Iniciação Científica (FAPESP), Ciências Biológicas, Universidade Estadual de Campinas (Unicamp), Campinas, 2026. [Orientador com Mathias Mistretta Pires]."
   },
   {
     "objectID": "supervisions/index.html#alunos-anteriores-de-pós-graduação",
     "href": "supervisions/index.html#alunos-anteriores-de-pós-graduação",
     "title": "Orientações",
     "section": "Alunos anteriores de pós-graduação",
-    "text": "Alunos anteriores de pós-graduação\n\nLucas de Souza Almeida, Mestrado, PPG de Ecologia, Evolução e Biodiversidade, Universidade Estadual Paulista (Unesp), Rio Claro, 2022. [Coorientador com Célio Fernando Baptista Haddad]."
+    "text": "Alunos anteriores de pós-graduação\n\nLucas de Souza Almeida, Mestrado, PPG de Ecologia, Evolução e Biodiversidade, Universidade Estadual Paulista (Unesp), Rio Claro, 2020-2022. [Coorientador com Célio Fernando Baptista Haddad]."
   },
   {
     "objectID": "supervisions/index.html#alunos-anteriores-de-graduação",
@@ -2664,7 +2664,7 @@
     "href": "supervisions/index.html",
     "title": "Orientações",
     "section": "",
-    "text": "Pâmela Rodrigues Braga, Doutorado, PPG de Ecologia, Universidade Estadual de Campinas (Unicamp), Campinas, 2026. [Coorientador com Mathias Mistretta Pires]."
+    "text": "Pâmela Rodrigues Braga, Doutorado (FAPESP), PPG de Ecologia, Universidade Estadual de Campinas (Unicamp), Campinas, 2026. [Coorientador com Mathias Mistretta Pires]."
   },
   {
     "objectID": "publication/2026-goncalves-souza-vancine-paterno/index.html",
@@ -2867,7 +2867,7 @@
     "href": "supervisions/index.html#alunos-atuais-de-pós-graduação",
     "title": "Orientações",
     "section": "",
-    "text": "Pâmela Rodrigues Braga, Doutorado, PPG de Ecologia, Universidade Estadual de Campinas (Unicamp), Campinas, 2026. [Coorientador com Mathias Mistretta Pires]."
+    "text": "Pâmela Rodrigues Braga, Doutorado (FAPESP), PPG de Ecologia, Universidade Estadual de Campinas (Unicamp), Campinas, 2026. [Coorientador com Mathias Mistretta Pires]."
   },
   {
     "objectID": "publication/2026-furlan-etal/index.html",
@@ -2889,5 +2889,47 @@
     "title": "Optimizing human rabies prevention in Brazil through spatial prioritization and a One Health approach",
     "section": "Citação",
     "text": "Citação\n@article{furlan_etal_2026,\n    author = {Maria Eduarda Furlan, David T. S. Hayman, Masako Wada, Milton Cezar Ribeiro, Renata L. Muylaert, Maurício Humberto Vancine},\n    title = \"{Optimizing human rabies prevention in Brazil through spatial prioritization and a One Health approach}\",\n    journal = {Scientific Reports},\n    volume = {},\n    number = {},\n    pages = {},\n    year = {2026},\n    month = {},\n    issn = {},\n    doi = {10.1038/s41598-026-60843-w},\n    url = {https://doi.org/10.1038/s41598-026-60843-w}\n}"
+  },
+  {
+    "objectID": "publication/2026-lecours-etal/index.html",
+    "href": "publication/2026-lecours-etal/index.html",
+    "title": "Ecological applications of geomorphometry",
+    "section": "",
+    "text": "link Amazon"
+  },
+  {
+    "objectID": "publication/2026-lecours-etal/index.html#visão-geral",
+    "href": "publication/2026-lecours-etal/index.html#visão-geral",
+    "title": "Análises Ecológicas no R",
+    "section": "Visão geral",
+    "text": "Visão geral\nO livro é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R. Ele descreve como os códigos devem ser consequências das perguntas que a pesquisa pretende responder. Essa visão tem como consequência um livro que do começo ao fim conecta teoria ecológica, métodos científicos, análises quantitativas e programação.\nIsso é feito de modo explícito através de exemplos claros e didáticos que apresentam contexto e dados reais, um ou mais exemplos de perguntas que poderiam ser feitas, predições relacionadas às perguntas e a teoria em questão, além das variáveis que poderiam ser utilizadas nas análises.\nO texto que descreve essas partes é intercalado com pedaços organizados e claros de código e gráficos, o que torna a leitura dos capítulos bastante fluida e dinâmica, principalmente para quem gosta de executar os códigos no seu computador conforme lê os capítulos. É como uma aula prática guiada."
+  },
+  {
+    "objectID": "publication/2026-lecours-etal/index.html#conteúdo",
+    "href": "publication/2026-lecours-etal/index.html#conteúdo",
+    "title": "Análises Ecológicas no R",
+    "section": "Conteúdo",
+    "text": "Conteúdo\nCapítulo 1: Introdução\nCapítulo 2: Voltando ao básico: como dominar a arte de fazer perguntas cientificamente relevantes\nParte 1: Funcionamento da linguagem R\nCapítulo 3: Pré-requisitos\nCapítulo 4: Introdução ao R\nCapítulo 5: Tidyverse\nCapítulo 6: Visualização de dados\nParte 2: Análise de dados ecológicos\nCapítulo 7: Modelos lineares\nCapítulo 8: Modelos Lineares Generalizados\nCapítulo 9: Análises Multidimensionais\nCapítulo 10: Rarefação\nCapítulo 11: Estimadores de riqueza\nCapítulo 12: Diversidade Taxonômica\nCapítulo 13: Diversidade Filogenética\nCapítulo 14: Diversidade Funcional\nCapítulo 15: Dados geoespaciais"
+  },
+  {
+    "objectID": "publication/2026-lecours-etal/index.html#código-e-dados",
+    "href": "publication/2026-lecours-etal/index.html#código-e-dados",
+    "title": "Análises Ecológicas no R",
+    "section": "Código e dados",
+    "text": "Código e dados\nA maioria dos exemplos do livro utilizam dados reais extraídos de artigos científicos que já foram publicados ou dados que foram coletados por um dos autores deste livro. Todos os dados, publicados ou simulados, estão disponíveis no pacote ecodados.\nAlém disso, em cada capítulo fazemos uma breve descrição dos dados para facilitar a compreensão sobre o que é variável resposta ou preditora, como essas variáveis estão relacionadas com as perguntas e predições do exemplo."
+  },
+  {
+    "objectID": "publication/2026-lecours-etal/index.html#citação",
+    "href": "publication/2026-lecours-etal/index.html#citação",
+    "title": "Ecological applications of geomorphometry",
+    "section": "Citação",
+    "text": "Citação\n@incollection{lecours_ecological_2026,\n    title = {Ecological applications of geomorphometry},\n    volume = {37},\n    copyright = {https://www.elsevier.com/tdm/userlicense/1.0/},\n    isbn = {978-0-443-33376-7},\n    url = {https://linkinghub.elsevier.com/retrieve/pii/B9780443333767000379},\n    doi = {10.1016/B978-0-44-333376-7.00037-9},\n    language = {en},\n    urldate = {2026-09-07},\n    booktitle = {Geomorphometry: {Concepts}, {Software}, {Applications}},\n    publisher = {Elsevier},\n    author = {Lecours, Vincent and LeClerc, Emma and Moudrý, Vítězslav and Vancine, Maurício Humberto},\n    year = {2026},\n    pages = {711--731},\n}"
+  },
+  {
+    "objectID": "publication/2026-lecours-etal/index.html#resumo",
+    "href": "publication/2026-lecours-etal/index.html#resumo",
+    "title": "Ecological applications of geomorphometry",
+    "section": "Resumo",
+    "text": "Resumo\nGeology, topography, and geomorphology play a crucial role in shaping the Earth’s ecological patterns and processes at multiple spatial scales (Anderson and Ferree, 2010). Among other elements, they influence soil characteristics and properties, water availability, climatic conditions, and energy fluxes (e.g., solar radiation, wind exposure, and water regimes), which, in turn, shape habitats and affect biodiversity. Quantifying terrain characteristics and describing the geomorphology of an area help ecologists link these characteristics and features to species’ habitat requirements and distribution patterns. When such relationships are established, they can be used to model different ecological variables (e.g., species distribution, diversity, habitat suitability) in space and time, for example to predict a species’distribution in unsampled areas or to predict its future hypothesized distribution based on different climate-change scenarios. In addition, the topography can be modified by plants and animals; for example, vegetation influences slope stability, and many animals alter the micro-landscape by burrowing or digging.\nThe interest in ecological mapping has existed for centuries. Most early ecological maps focused on vegetation mapping using coarse thematic resolutions—classes such as forests, pastures, and crops—and as supplementary information for topographic, military, or settlement maps (Jelaska, 2009). By the 20th century, various hierarchical systems for vegetation classification had been developed, offering standardized methods for producing ecological maps (see Jelaska, 2009). After the Second World War, this type of mapping gained even more traction, boosted by developments in aerial photography. Since then, new means for Earth observation (i.e., satellite remote sensing, uncrewed aerial vehicles) and accurate positioning, and developments in Geographic Information Systems (GIS) have facilitated the integration of other aspects of the natural environment—beyond vegetation and including terrain, soil, and climate—into ecological maps. This results in more holistic representations useful for natural resources management, environmental impact assessments, and as a spatial decision-support tool in conservation, for example. In general, contemporary ecological mapping focuses on the structure, function, and spatial arrangement of living and nonliving elements that form ecosystems.\nBy deriving variables such as slope, aspect, curvature, and a topographic wetness index from digital elevation models (DEMs), geomorphometry enables ecologists to model environmental gradients and spatial heterogeneity critical for species distributions, habitat delineation, and ecological processes. For example, terrain-derived indices were used to map habitat suitability for ground-nesting birds (e.g., Korne et al., 2020) or to delineate microrefugia under climate-change scenarios (Hoffrén and García, 2023). This chapter provides an overview of general mapping approaches used in ecology that can integrate geomorphometric elements. Two broad types of approaches are presented: ecological classifications and distribution models. Then, case studies for each approach, based on the common dataset for this book (see Chapter 1), are presented."
   }
 ]

@@ -1,6 +1,7 @@
 ---
 title: "Análises Ecológicas no R"
 subtitle: "O livro Análises Ecológicas no R é uma contribuição para o contínuo avanço do ensino de métodos computacionais, com um foco específico em análise de dados ecológicos através da linguagem R"
+author: "Fernando Rodrigues da Silva, Thiago Gonçalves-Souza, Gustavo Brant Paterno, Diogo Borges Provete, Maurício Humberto Vancine"
 format:
   html:
     include-in-header: 
@@ -84,7 +85,6 @@ Além disso, em cada capítulo fazemos uma breve descrição dos dados para faci
 	publisher = {Nupeea},
 	author = {Da Silva FR, Gonçalves-Souza T, Paterno GB, Provete DB, Vancine MH},
 	year = {2022},
-	note = {},
 	keywords = {Análises dados – Ecologia, Linguagem de programação (Computadores), Métodos científicos, Tecnologia – Aspectos ambientais},
 }
 ```

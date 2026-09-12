@@ -22,7 +22,7 @@ editor: source
 -   **Bolsa**: [#2024/19865-6](https://bv.fapesp.br/pt/bolsas/223203/impactos-dos-efeitos-de-borda-fogo-e-mudancas-climaticas-na-composicao-da-vegetacao-e-diversidade-fu/)
 -   **Valor**: R\$ 316.800,00
 
-## Doutorado
+## Doutorado 
 
 -   **Título**: Estrutura da paisagem como preditor da diversidade taxonômica e funcional de anfíbios na Mata Atlântica
 -   **Vigência**: 1º de julho de 2022 a 29 de fevereiro de 2024
