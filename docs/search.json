@@ -1201,7 +1201,7 @@
     "href": "project/atlantic-spatial/index.html#publicações",
     "title": "Atlantic Spatial",
     "section": "Publicações",
-    "text": "Publicações\n\nVancine, M. H., Muylaert, R. L., Niebuhr, B. B., Oshima, J. E. F., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann C. H., & Ribeiro, M. C. (2024). The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation. Biological Conservation, 291, 110499."
+    "text": "Publicações\n\nVancine, M. H., Muylaert, R. L., Niebuhr, B. B., Oshima, J. E. F., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann C. H., & Ribeiro, M. C. (2024). The Atlantic Forest of South America: spatiotemporal dynamics of vegetation and implications for conservation. Biological Conservation, 291, 110499.\nVancine, M. H.*, Niebuhr, B. B.*, Muylaert, R. L., Oshima, J. E. F., Tonetti, V., Bernardo, R., Alves, R. S. C., Zanette, E. M., Souza, V. C., Giovanelli, J. G. R., Grohmann, C. H., Galetti, M., & Ribeiro, M. C. (2026). ATLANTIC SPATIAL: a data set of landscape, topographic, hydrological and anthropogenic metrics for the Atlantic Forest. Ecology, 107(4), e70360."
   },
   {
     "objectID": "project/atlantic-spatial/index.html#preprints",
@@ -2931,5 +2931,19 @@
     "title": "Ecological applications of geomorphometry",
     "section": "Resumo",
     "text": "Resumo\nGeology, topography, and geomorphology play a crucial role in shaping the Earth’s ecological patterns and processes at multiple spatial scales (Anderson and Ferree, 2010). Among other elements, they influence soil characteristics and properties, water availability, climatic conditions, and energy fluxes (e.g., solar radiation, wind exposure, and water regimes), which, in turn, shape habitats and affect biodiversity. Quantifying terrain characteristics and describing the geomorphology of an area help ecologists link these characteristics and features to species’ habitat requirements and distribution patterns. When such relationships are established, they can be used to model different ecological variables (e.g., species distribution, diversity, habitat suitability) in space and time, for example to predict a species’distribution in unsampled areas or to predict its future hypothesized distribution based on different climate-change scenarios. In addition, the topography can be modified by plants and animals; for example, vegetation influences slope stability, and many animals alter the micro-landscape by burrowing or digging.\nThe interest in ecological mapping has existed for centuries. Most early ecological maps focused on vegetation mapping using coarse thematic resolutions—classes such as forests, pastures, and crops—and as supplementary information for topographic, military, or settlement maps (Jelaska, 2009). By the 20th century, various hierarchical systems for vegetation classification had been developed, offering standardized methods for producing ecological maps (see Jelaska, 2009). After the Second World War, this type of mapping gained even more traction, boosted by developments in aerial photography. Since then, new means for Earth observation (i.e., satellite remote sensing, uncrewed aerial vehicles) and accurate positioning, and developments in Geographic Information Systems (GIS) have facilitated the integration of other aspects of the natural environment—beyond vegetation and including terrain, soil, and climate—into ecological maps. This results in more holistic representations useful for natural resources management, environmental impact assessments, and as a spatial decision-support tool in conservation, for example. In general, contemporary ecological mapping focuses on the structure, function, and spatial arrangement of living and nonliving elements that form ecosystems.\nBy deriving variables such as slope, aspect, curvature, and a topographic wetness index from digital elevation models (DEMs), geomorphometry enables ecologists to model environmental gradients and spatial heterogeneity critical for species distributions, habitat delineation, and ecological processes. For example, terrain-derived indices were used to map habitat suitability for ground-nesting birds (e.g., Korne et al., 2020) or to delineate microrefugia under climate-change scenarios (Hoffrén and García, 2023). This chapter provides an overview of general mapping approaches used in ecology that can integrate geomorphometric elements. Two broad types of approaches are presented: ecological classifications and distribution models. Then, case studies for each approach, based on the common dataset for this book (see Chapter 1), are presented."
+  },
+  {
+    "objectID": "project/atlantic-spatial/index.html#midia",
+    "href": "project/atlantic-spatial/index.html#midia",
+    "title": "Atlantic Spatial",
+    "section": "Midia",
+    "text": "Midia\n\nComo uma base de dados ambientais espacializados ajuda na conservação da Mata Atlântica. (2026). NEXO Acadêmico."
+  },
+  {
+    "objectID": "project/atlantic-spatial/index.html#press-release",
+    "href": "project/atlantic-spatial/index.html#press-release",
+    "title": "Atlantic Spatial",
+    "section": "Press release",
+    "text": "Press release\n\nNovo conjunto de dados sobre as características ambientais da Mata Atlântica pode auxiliar futuros trabalhos de restauração florestal e conservação da biodiversidade."
   }
 ]
