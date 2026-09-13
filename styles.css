@@ -12,13 +12,24 @@ body {
 }
 
 /* Cor do texto da navbar */
-.navbar a, .navbar-brand {
+.navbar a, 
+.navbar-brand {
   color: #ffffff !important;
 }
 
 /* Cor dos links ao passar o mouse */
 .navbar a:hover {
   color: #aeafb3 !important;
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar .nav-link,
+.navbar-brand {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 /* Rodapé gerado pelo Quarto */
@@ -49,3 +60,25 @@ footer {
   font-size: 20px;  /* Tamanho geral do texto do rodapé */
 }
 
+a {
+  color: var(--bs-link-color);
+}
+
+a:hover {
+  color: var(--bs-link-hover-color);
+}
+
+/* Fonte global */
+:root {
+  --bs-body-font-family: "Ubuntu", sans-serif;
+}
+
+/* garantir consistência */
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu", sans-serif;
+}

@@ -1,0 +1,77 @@
+/* =========================
+   DARK MODE (Quarto)
+   ========================= */
+
+/* Fundo geral */
+body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1c6cbe !important;
+}
+
+/* Links navbar */
+.navbar a,
+.navbar-brand {
+  color: #ffffff !important;
+}
+
+.navbar a:hover {
+  color: #aeafb3 !important;
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar .nav-link,
+.navbar-brand {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Footer (Quarto usa .footer, não footer.footer) */
+footer.footer {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  padding: 1rem 0;
+}
+
+/* Links no footer */
+footer.footer a {
+  color: #1c6cbe;
+  text-decoration: none;
+}
+
+footer.footer a:hover {
+  color: #aeafb3;
+}
+
+/* Título */
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--bs-body-color);
+}
+
+/* Footer geral (evita conflito com footer.footer) */
+footer {
+  font-size: 20px;
+}
+
+a {
+  color: #1c6cbe;
+}
+
+a:hover {
+  color: #aeafb3;
+}
+
+:root {
+  --bs-body-font-family: "Ubuntu", sans-serif;
+}
+
+

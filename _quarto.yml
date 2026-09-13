@@ -92,10 +92,11 @@ website:
 
 format:
   html:
-    theme: 
-      - cosmo
-    highlight-style: default
-    css: styles.css
-    toc: true
+    theme:
+      light: cosmo
+      dark: darkly
+    css:
+      - styles.css
+      - styles-dark.css
 
 editor: visual
