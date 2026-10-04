@@ -32,9 +32,12 @@ about:
     - text: "{{< ai lattes >}}"
       aria-label: "Lattes"
       href: http://lattes.cnpq.br/9761288418931193
+    - icon: bluesky
+      aria-label: Bluesky
+      href: https://bsky.app/profile/mauriciovancine.bsky.social
     - icon: linkedin
       aria-label: LinkedIn
-      href: https://www.linkedin.com/in/mauricio-vancine/
+      href: https://www.linkedin.com/in/mauricio-vancine
 page-layout: full
 
 execute: 
