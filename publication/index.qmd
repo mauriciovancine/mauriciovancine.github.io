@@ -92,8 +92,7 @@ editor: source
 
 1. <u>**Vancine, M. H.**</u>, Dodonov, P., Vilela, B., Diele-Viegas, L., Souza, V. C., Nunes, F. A. S., Silva, A. J. O., Milz, B., Kita, C. A., Mello, M. A. R., & Muylaert, R. L. (2026). [The challenges and nuances of teaching the R programming language to ecologists](/publication/2026b-vancine-etal){target="_blank"}. *Oecologia Australis*. in press.
 
-1. Furlan, M. E., Hayman, D. T. S.^§^, Wada, M., Ribeiro^§^, M. C., Muylaert^§^, R. L., <u>**Vancine, M. H.**^§^</u> (2026). [Optimizing human rabies prevention in Brazil through spatial prioritization and a One Health approach](/publication/2026-furlan-etal){target="_blank"}. *Scientific Reports*. in press.
-
+1. Furlan, M. E., Hayman, D. T. S.^§^, Wada, M., Ribeiro^§^, M. C., Muylaert^§^, R. L., <u>**Vancine, M. H.**^§^</u> (2026). [Optimizing human rabies prevention in Brazil through spatial prioritization and a One Health approach](/publication/2026-furlan-etal){target="_blank"}. *Scientific Reports*, 16, 31009.
 \* Coautoria.  
 ^§^ Co-sênior.
 

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Maria Eduarda Furlan, David T. S. Hayman, Masako Wada, Milton Cezar Ribeiro, Renata L. Muylaert, Maurício Humberto Vancine">
+<meta name="author" content="Maurício Vancine">
 
-<title>Optimizing human rabies prevention in Brazil through spatial prioritization and a One Health approach – Maurício Vancine</title>
+<title>Paletas de cores no R – Maurício Vancine</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -78,14 +78,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../../styles-dark.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -321,16 +320,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#contextualização" id="toc-contextualização" class="nav-link active" data-scroll-target="#contextualização">Contextualização</a></li>
+  <li><a href="#lista-de-pacotes-de-paletas-de-cores-no-r" id="toc-lista-de-pacotes-de-paletas-de-cores-no-r" class="nav-link" data-scroll-target="#lista-de-pacotes-de-paletas-de-cores-no-r">Lista de pacotes de paletas de cores no R</a></li>
+  <li><a href="#principais-artigos-de-r-e-ecologia" id="toc-principais-artigos-de-r-e-ecologia" class="nav-link" data-scroll-target="#principais-artigos-de-r-e-ecologia">Principais artigos de R e Ecologia</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Optimizing human rabies prevention in Brazil through spatial prioritization and a One Health approach</h1>
-<p class="subtitle lead">Analisamos áreas prioritárias para a prevenção da raiva para os municípios brasileiros utilizando a distribuição potencial de <em>D. rotundus</em>, casos de raiva humana, raiva em cães e gatos, e descritores ambientais e socioeconômicos.</p>
-</div>
+<h1 class="title">Paletas de cores no R</h1>
+<p class="subtitle lead">Importar e manejar grandes volumes de dados no R</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Visualização</div>
+    <div class="quarto-category">Paleta</div>
+    <div class="quarto-category">Cor</div>
+  </div>
+  </div>
 
 
 
@@ -339,14 +354,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Autor</div>
     <div class="quarto-title-meta-contents">
-             <p>Maria Eduarda Furlan, David T. S. Hayman, Masako Wada, Milton Cezar Ribeiro, Renata L. Muylaert, Maurício Humberto Vancine </p>
+             <p>Maurício Vancine </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">6 de julho de 2026</p>
+      <p class="date">24 de agosto de 2024</p>
     </div>
   </div>
   
@@ -358,42 +373,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-<p><a href="https://doi.org/10.1038/s41598-026-60843-w" class="btn btn-custom text-capitalize" target="_blank"><i class="ai ai-doi me-1"></i>DOI</a> <a href="../../publications/2026-furlan-etal.pdf" class="btn btn-custom text-capitalize" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a></p>
-</div>
-<style>
-  .btn-custom {
-    background-color: white;
-    border: 1px solid #1c6cbe; /* Borda azul */
-    color: #1c6cbe; /* Texto azul */
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .btn-custom:hover {
-    background-color: #1c6cbe; /* Cor de fundo azul ao passar o mouse */
-    color: white; /* Texto branco */
-  }
-</style>
-<p><br></p>
-<p><img src="featured.png" class="img-fluid"></p>
-<section id="resumo" class="level2">
-<h2 class="anchored" data-anchor-id="resumo">Resumo</h2>
-<p>Agricultural expansion and urbanization create fragmented landscapes that alter resources for wildlife. These changes influence populations of key pathogen reservoirs, affecting zoonotic disease risk. In the Neotropics, common vampire bats (<em>Desmodus rotundus</em>) often benefit from fragmented areas where cattle pastures replace their native habitat with cattle acting as a food source and contributing to their population growth and geographic expansion. Because <em>D. rotundus</em> is a key reservoir of the rabies virus, understanding its distribution is essential for anticipating and mitigating rabies risk. We analyzed priority areas for rabies prevention across Brazil’s 5,570 municipalities using vulnerability, exposure, and hazard indicators, including <em>D. rotundus</em> potential distribution, human rabies cases, rabies in dogs and cats, and environmental and socioeconomic descriptors available from the Brazilian government and open datasets. Using spatial prioritization methods, we ranked municipalities to identify priority areas for prevention and control. From 2001 to 2024, an average of six human rabies cases occurred annually in 1.45% of municipalities (N = 81). For cats and dogs (N = 240), cases occurred in 122(2.19%) of municipalities, not overlapping with human cases. Priority areas included the municipalities of Ouricuri (Pernambuco), Viseu (Pará), and several cities in Maranhão, including those where no cases were reported. These findings can support targeted One Health interventions by identifying municipalities with elevated structural and historical susceptibility to rabies risk, supporting 2030 rabies-elimination goals.</p>
+<section id="contextualização" class="level2">
+<h2 class="anchored" data-anchor-id="contextualização">Contextualização</h2>
+<p>Leia.</p>
 </section>
-<section id="citação" class="level2">
-<h2 class="anchored" data-anchor-id="citação">Citação</h2>
-<pre><code>@article{furlan_etal_2026,
-    author = {Maria Eduarda Furlan, David T. S. Hayman, Masako Wada, Milton Cezar Ribeiro, Renata L. Muylaert, Maurício Humberto Vancine},
-    title = "{Optimizing human rabies prevention in Brazil through spatial prioritization and a One Health approach}",
-    journal = {Scientific Reports},
-    volume = {16},
-    number = {},
-    pages = {31009},
-    year = {2026},
-    month = {},
-    issn = {},
-    doi = {10.1038/s41598-026-60843-w},
-    url = {https://doi.org/10.1038/s41598-026-60843-w}
-}</code></pre>
+<section id="lista-de-pacotes-de-paletas-de-cores-no-r" class="level2">
+<h2 class="anchored" data-anchor-id="lista-de-pacotes-de-paletas-de-cores-no-r">Lista de pacotes de paletas de cores no R</h2>
+</section>
+<section id="principais-artigos-de-r-e-ecologia" class="level2">
+<h2 class="anchored" data-anchor-id="principais-artigos-de-r-e-ecologia">Principais artigos de R e Ecologia</h2>
+<p><strong>Base R</strong></p>
+<ul>
+<li><a href="https://doi.org/10.2307/1390807">Ihaka, R., &amp; Gentleman, R. (1996). R: A Language for Data Analysis and Graphics. Journal of Computational and Graphical Statistics, 5(3), 299.</a></li>
+<li><a href="https://doi.org/10.1007/s00180-010-0205-5">Wickham, H. (2011). R and S. Computational Statistics, 26(3), 395–404.</a></li>
+</ul>
+<p><strong>tidyverse</strong></p>
+<ul>
+<li><a href="https://doi.org/10.18637/jss.v059.i10">Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10).</a></li>
+<li><a href="https://doi.org/10.21105/joss.01686">Wickham, H., … Yutani, H. (2019). Welcome to the Tidyverse. Journal of Open Source Software, 4(43), 1686.</a></li>
+</ul>
+<p><strong>R e Ecologia</strong></p>
+<ul>
+<li><a href="https://doi.org/10.1093/jpe/rtaf010">Gao, M., Ye, Y., Zheng, Y., &amp; Lai, J. (2025). A comprehensive analysis of R’s application in ecological research from 2008 to 2023. Journal of Plant Ecology, 18(1), rtaf010.</a></li>
+<li><a href="https://doi.org/10.3390/life12050648">Giorgi, F. M., Ceraolo, C., &amp; Mercatelli, D. (2022). The R Language: An Engine for Bioinformatics and Data Science. Life, 12(5), Article 5.</a></li>
+<li><a href="https://doi.org/10.3390/d15121202">Lai, J., Cui, D., Zhu, W., &amp; Mao, L. (2023). The Use of R and R Packages in Biodiversity Conservation Research. Diversity, 15(12), Article 12.</a></li>
+<li><a href="https://doi.org/10.1002/ecs2.2567">Lai, J., Lortie, C. J., Muenchen, R. A., Yang, J., &amp; Ma, K. (2019). Evaluating the popularity of R in ecology. Ecosphere, 10(1), e02567.</a></li>
+<li><a href="https://doi.org/10.1002/ece3.5970">Lortie, C. J., Braun, J., Filazzola, A., &amp; Miguel, F. (2020). A checklist for choosing between R packages in ecology and evolution. Ecology and Evolution, 10(3), 1098–1105.</a></li>
+<li><a href="https://doi.org/10.1038/517109a">Tippmann, S. (2015). Programming tools: Adventures with R. Nature, 517(7532), Article 7532.</a></li>
+</ul>
+<p><strong>Comunidade de usuários</strong></p>
+<ul>
+<li><a href="https://doi.org/10.5167/uzh-233651">Bollmann, S. S., … Debelak, R. (2017). A First Survey on the Diversity of the R Community. The R Journal, 9(2), Article 2.</a></li>
+<li><a href="https://doi.org/10.32614/RJ-2009-014">Fox, J. (2009). Aspects of the Social Organization and Trajectory of the R Project. The R Journal, 1(2), 5–13.</a></li>
+<li><a href="https://doi.org/10.1073/pnas.1506047112">Mair, P., … Hornik, K. (2015). Motivation, values, and work design as drivers of participation in the R open source project for statistical computing. Proceedings of the National Academy of Sciences, 112(48), 14788–14792.</a></li>
+</ul>
+<p>Fonte da imagem: <a href="https://www.pexels.com/pt-br/foto/lantejoulas-de-cores-sortidas-1191710/">Alexander Grey/Pexels</a>.</p>
 
 
 </section>

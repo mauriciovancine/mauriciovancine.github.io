@@ -1,0 +1,47 @@
+---
+title: "Paletas de cores no R"
+subtitle: Importar e manejar grandes volumes de dados no R
+author: Maurício Vancine
+date: 2024-08-24
+categories: ["R", "Visualização", "Paleta", "Cor"]
+image: featured.jpg
+toc: true
+draft: false
+code-link: true
+editor: source
+---
+
+## Contextualização
+
+Leia.
+
+## Lista de pacotes de paletas de cores no R
+
+## Principais artigos de R e Ecologia
+
+**Base R**
+
+- [Ihaka, R., & Gentleman, R. (1996). R: A Language for Data Analysis and Graphics. Journal of Computational and Graphical Statistics, 5(3), 299.](https://doi.org/10.2307/1390807)
+- [Wickham, H. (2011). R and S. Computational Statistics, 26(3), 395–404.](https://doi.org/10.1007/s00180-010-0205-5) 
+
+**tidyverse**
+
+- [Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10).](https://doi.org/10.18637/jss.v059.i10)
+- [Wickham, H., … Yutani, H. (2019). Welcome to the Tidyverse. Journal of Open Source Software, 4(43), 1686.](https://doi.org/10.21105/joss.01686)
+
+**R e Ecologia**
+
+- [Gao, M., Ye, Y., Zheng, Y., & Lai, J. (2025). A comprehensive analysis of R’s application in ecological research from 2008 to 2023. Journal of Plant Ecology, 18(1), rtaf010.](https://doi.org/10.1093/jpe/rtaf010) 
+- [Giorgi, F. M., Ceraolo, C., & Mercatelli, D. (2022). The R Language: An Engine for Bioinformatics and Data Science. Life, 12(5), Article 5.](https://doi.org/10.3390/life12050648)
+- [Lai, J., Cui, D., Zhu, W., & Mao, L. (2023). The Use of R and R Packages in Biodiversity Conservation Research. Diversity, 15(12), Article 12.](https://doi.org/10.3390/d15121202)
+- [Lai, J., Lortie, C. J., Muenchen, R. A., Yang, J., & Ma, K. (2019). Evaluating the popularity of R in ecology. Ecosphere, 10(1), e02567.](https://doi.org/10.1002/ecs2.2567)
+- [Lortie, C. J., Braun, J., Filazzola, A., & Miguel, F. (2020). A checklist for choosing between R packages in ecology and evolution. Ecology and Evolution, 10(3), 1098–1105.](https://doi.org/10.1002/ece3.5970) 
+- [Tippmann, S. (2015). Programming tools: Adventures with R. Nature, 517(7532), Article 7532.](https://doi.org/10.1038/517109a)
+
+**Comunidade de usuários**
+
+- [Bollmann, S. S., ... Debelak, R. (2017). A First Survey on the Diversity of the R Community. The R Journal, 9(2), Article 2.](https://doi.org/10.5167/uzh-233651)
+- [Fox, J. (2009). Aspects of the Social Organization and Trajectory of the R Project. The R Journal, 1(2), 5–13.](https://doi.org/10.32614/RJ-2009-014)
+- [Mair, P., ... Hornik, K. (2015). Motivation, values, and work design as drivers of participation in the R open source project for statistical computing. Proceedings of the National Academy of Sciences, 112(48), 14788–14792.](https://doi.org/10.1073/pnas.1506047112)
+
+Fonte da imagem: [Alexander Grey/Pexels](https://www.pexels.com/pt-br/foto/lantejoulas-de-cores-sortidas-1191710/).
